@@ -1,5 +1,6 @@
 import com.era.logger.LoggerUtility;
 import com.era.views.CreatingDatabaseWaitJFrame;
+import com.era.views.ViewsFactory;
 import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
@@ -26,8 +27,8 @@ public class CreatingDatabaseWaitJFrameJUnitTest  {
     public void setVisibleCreatingDatabaseWaitJFrameTest() {
         
         try{
-            
-            final CreatingDatabaseWaitJFrame CreatingDatabaseWaitJFrame = new CreatingDatabaseWaitJFrame();
+                        
+            final CreatingDatabaseWaitJFrame CreatingDatabaseWaitJFrame = ViewsFactory.getSingleton().getCreatingDatabaseWaitJFrame();
             CreatingDatabaseWaitJFrame.setVisible(true);
             
             new Thread(new Runnable() {

@@ -17,8 +17,10 @@ public class SearchJFrame extends BaseJFrame {
         jPanelTable = new javax.swing.JPanel();
         jP1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        labelLoading = new javax.swing.JLabel();
         jBCarg = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
+        labelPaginacion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -57,6 +59,13 @@ public class SearchJFrame extends BaseJFrame {
             }
         });
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        labelLoading.setBackground(new java.awt.Color(255, 255, 255));
+        labelLoading.setMaximumSize(new java.awt.Dimension(10, 10));
+        labelLoading.setMinimumSize(new java.awt.Dimension(10, 10));
+        jPanel2.add(labelLoading);
 
         jBCarg.setBackground(new java.awt.Color(255, 255, 255));
         jBCarg.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -113,7 +122,10 @@ public class SearchJFrame extends BaseJFrame {
         });
         jPanel2.add(jBSal);
 
-        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, -1, -1));
+        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, -1, -1));
+
+        labelPaginacion.setText("Paginación:");
+        jP1.add(labelPaginacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, -1));
 
         getContentPane().add(jP1, java.awt.BorderLayout.PAGE_END);
 
@@ -183,6 +195,8 @@ public class SearchJFrame extends BaseJFrame {
     protected javax.swing.JPanel jP1;
     private javax.swing.JPanel jPanel2;
     protected javax.swing.JPanel jPanelTable;
+    protected javax.swing.JLabel labelLoading;
+    protected javax.swing.JLabel labelPaginacion;
     // End of variables declaration//GEN-END:variables
         
 }

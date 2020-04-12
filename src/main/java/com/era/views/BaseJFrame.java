@@ -6,7 +6,9 @@
 package com.era.views;
 
 import com.era.logger.LoggerUtility;
+import com.era.utilities.DialogPropertiesUitlity;
 import com.era.views.utils.JComponentUtils;
+import java.util.Properties;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
@@ -36,6 +38,16 @@ public class BaseJFrame extends JFrame {
     }
     
     
+    public void setPropertyTitle(final String propertyId) throws Exception{
+        
+        final Properties props = DialogPropertiesUitlity.getSingleton().getProperties();
+        String title = props.getProperty(propertyId);
+        if(title==null){
+            title = "";
+        }
+        this.setTitle(title);
+    }
+    
     public void setVisible(){                
         this.setVisible(true);
     }
@@ -57,6 +69,15 @@ public class BaseJFrame extends JFrame {
     public void exitSystemOnCloseWindow(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
+    @Override
+    public void pack() {
+        super.pack(); //To change body of generated methods, choose Tools | Templates.
+        
+        JComponentUtils.initAllListenersComponentes(baseJFrame);
+    }
+    
+    
     
     @Override
     public void setVisible(boolean b) {
@@ -64,8 +85,6 @@ public class BaseJFrame extends JFrame {
                 
         if(b){
             
-            JComponentUtils.initAllListenersComponentes(baseJFrame);
-                    
             if(setVisibleWithEfect){
                 
                 float opacity = (float) 0.1;

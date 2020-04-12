@@ -19,7 +19,7 @@ public class OKDialog extends BaseDialog {
     
     
     
-    public OKDialog(JFrame jFrame) {
+    protected OKDialog(JFrame jFrame) throws Exception {
         super(jFrame);
     }
 

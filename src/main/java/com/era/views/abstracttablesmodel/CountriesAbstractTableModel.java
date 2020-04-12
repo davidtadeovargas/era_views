@@ -5,45 +5,35 @@
  */
 package com.era.views.abstracttablesmodel;
 
-import com.era.models.Country;
+import com.era.models.CCountry;
 import java.util.List;
-import javax.swing.table.AbstractTableModel;
 
 /**
  *
  * @author PC
  */
-public class CountriesAbstractTableModel extends AbstractTableModel {
+public class CountriesAbstractTableModel extends BaseAbstractTableModel {
 
-    private List<Country> deliveries;
-    private String[] header;
-    
-    public CountriesAbstractTableModel(List<Country> deliveries, String[] header) {
-        this.header = header;
-        this.deliveries = deliveries;        
+    public CountriesAbstractTableModel(List<CCountry> deliveries, String[] header) {
+        super(deliveries,header);        
     }
     
-    @Override
-    public int getRowCount() {
-        return deliveries.size();
-    }
-
-    @Override
-    public int getColumnCount() {
-        return this.header.length;
-    }
-
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.deliveries.get(rowIndex);
-    }
-    
-    final public Country getModel(int rowIndex){
-        return this.deliveries.get(rowIndex);
-    }
-    
-    final public void removeRow(int rowIndex){
-        this.deliveries.remove(rowIndex);
-        fireTableRowsDeleted(rowIndex, rowIndex);
+        
+        final CCountry CCountry = (CCountry) this.items.get(rowIndex);
+        
+        String returnValue = "undefined";
+        if(columnIndex==0){
+            returnValue = CCountry.getCode();
+        }
+        else if(columnIndex==1){            
+            returnValue = CCountry.getDescription();
+        }
+        else if(columnIndex==2){
+            returnValue = CCountry.getFalt().toString();
+        }
+        
+        return returnValue;
     }
 }

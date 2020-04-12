@@ -19,11 +19,11 @@ public class YesNoDialog extends BaseDialog {
     
     
     
-    public YesNoDialog(JFrame jFrame) {
+    protected YesNoDialog(JFrame jFrame) throws Exception {
         super(jFrame);
         
         //Show the dialog
-        int n = JOptionPane.showConfirmDialog(jFrame,text,tittle,JOptionPane.YES_NO_OPTION);
+        int n = JOptionPane.showConfirmDialog(jFrame,text,title,JOptionPane.YES_NO_OPTION);
 
         //If the user clicked on Yes
         if(n==JOptionPane.OK_OPTION){

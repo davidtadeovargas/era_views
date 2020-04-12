@@ -44,6 +44,9 @@ public class JComponentUtils {
     protected F4Event F4Event;
     protected EnterEvent EnterEvent;
     private boolean alreadyAddedKeylisteners;
+    private boolean F2EventFired;
+    private boolean F4EventFired;
+    private int f4EventsFired = 0;
     
     
     public void addComponentToKeyPress(Component Component){
@@ -91,6 +94,7 @@ public class JComponentUtils {
             LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "KeyEvent.VK_F2 pressed");
             
             if(F2Event!=null){
+                F2EventFired = true;
                 F2Event.onEvent();
             }
         }
@@ -99,7 +103,15 @@ public class JComponentUtils {
             LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "KeyEvent.VK_F4 pressed");
             
             if(F4Event!=null){
-                F4Event.onEvent();
+                
+                if(f4EventsFired==1){
+                    f4EventsFired = 0;
+                }
+                else{
+                    F4EventFired = true;
+                    ++f4EventsFired;
+                    F4Event.onEvent();
+                }   
             }
         }
         else if(evt.getKeyCode() == KeyEvent.VK_ENTER){
@@ -110,6 +122,18 @@ public class JComponentUtils {
                 EnterEvent.onEvent();
             }
         }
+    }
+    
+    public boolean F2EventFired(){
+        final boolean val = F2EventFired;
+        F2EventFired = false;
+        return val;
+    }
+    
+    public boolean F4EventFired(){
+        final boolean val = F4EventFired;
+        F4EventFired = false;        
+        return val;
     }
     
     public void onlyNumbers(final JComponent JComponent){

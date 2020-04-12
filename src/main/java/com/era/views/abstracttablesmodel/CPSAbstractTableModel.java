@@ -7,43 +7,33 @@ package com.era.views.abstracttablesmodel;
 
 import com.era.models.CCodigopostal;
 import java.util.List;
-import javax.swing.table.AbstractTableModel;
 
 /**
  *
  * @author PC
  */
-public class CPSAbstractTableModel extends AbstractTableModel {
-
-    private List<CCodigopostal> deliveries;
-    private String[] header;
-    
+public class CPSAbstractTableModel extends BaseAbstractTableModel {
+        
     public CPSAbstractTableModel(List<CCodigopostal> deliveries, String[] header) {
-        this.header = header;
-        this.deliveries = deliveries;        
-    }
-    
-    @Override
-    public int getRowCount() {
-        return deliveries.size();
-    }
-
-    @Override
-    public int getColumnCount() {
-        return this.header.length;
+        super(deliveries,header);
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.deliveries.get(rowIndex);
-    }
-    
-    final public CCodigopostal getModel(int rowIndex){
-        return this.deliveries.get(rowIndex);
-    }
-    
-    final public void removeRow(int rowIndex){
-        this.deliveries.remove(rowIndex);
-        fireTableRowsDeleted(rowIndex, rowIndex);
+        
+        final CCodigopostal CCodigopostal = (CCodigopostal) this.items.get(rowIndex);
+        
+        String returnValue = "undefined";
+        if(columnIndex==0){
+            returnValue = String.valueOf(CCodigopostal.getId());
+        }
+        else if(columnIndex==1){            
+            returnValue = CCodigopostal.getEstate() + "/Loc:" + CCodigopostal.getLocality() + "/Mun:" + CCodigopostal.getMunicipio();
+        }
+        else if(columnIndex==2){
+            returnValue = CCodigopostal.getMunicipio();
+        }
+        
+        return returnValue;
     }
 }

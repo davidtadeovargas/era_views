@@ -19,7 +19,7 @@ public class CreatingDatabaseWaitJFrame extends javax.swing.JFrame {
     /**
      * Creates new form WaitJFrame
      */
-    public CreatingDatabaseWaitJFrame() {
+    protected CreatingDatabaseWaitJFrame() {
         
         setUndecorated(true);
         

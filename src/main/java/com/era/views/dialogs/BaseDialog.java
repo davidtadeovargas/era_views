@@ -5,6 +5,8 @@
  */
 package com.era.views.dialogs;
 
+import com.era.utilities.DialogPropertiesUitlity;
+import java.util.Properties;
 import javax.swing.JFrame;
 
 /**
@@ -14,18 +16,20 @@ import javax.swing.JFrame;
 public abstract class BaseDialog {
     
     protected JFrame jFrame;
-    protected String tittle;
+    protected String title;
     protected String text;
+    protected Properties props;
     
     
-    
-    protected BaseDialog(final JFrame jFrame){
+    protected BaseDialog(final JFrame jFrame) throws Exception {
         
         //Init the frame instance
         this.jFrame = jFrame;
         
+        props = DialogPropertiesUitlity.getSingleton().getProperties();
+        
         //Set the tittle of the dialog
-        this.tittle = "Mensjae de Sistema";
+        this.title = props.getProperty("system_dialog_title");
     }
 
     //Show the dialog
@@ -34,5 +38,15 @@ public abstract class BaseDialog {
     //Set the text of the dialog
     public void setText(String text) {
         this.text = text;
+    }
+    
+    //Set the text of the dialog
+    public void setPropertyText(String propertyId) throws Exception {
+        
+        final String value = props.getProperty(propertyId);
+        if(value==null){
+            throw new Exception("Property does not exists");
+        }
+        this.setText(value);
     }
 }
