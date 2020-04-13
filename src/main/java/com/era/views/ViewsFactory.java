@@ -18,6 +18,7 @@ public class ViewsFactory {
     private RegisterWebsiteJFrame RegisterWebsiteJFrame;
     private DialogJFrame DialogJFrame;
     private CreatingDatabaseWaitJFrame CreatingDatabaseWaitJFrame;
+    private PrincipJFrame PrincipJFrame;
     
     
     
@@ -64,6 +65,13 @@ public class ViewsFactory {
             CreatingDatabaseWaitJFrame = new CreatingDatabaseWaitJFrame();
         }
         return CreatingDatabaseWaitJFrame;
+    }
+    
+    public PrincipJFrame getPrincipJFrame(){
+        if(PrincipJFrame==null){
+            PrincipJFrame = new PrincipJFrame();
+        }
+        return PrincipJFrame;
     }
     
     @Override

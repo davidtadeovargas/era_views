@@ -36,6 +36,7 @@ public abstract class BaseJTable extends JTable {
     private int lastRowIndex = 0;
     private int pagination = 0;    
     private long count = 0;
+    protected boolean tableInitialized;
     
     
     public abstract void initTable(final List<?> items);
@@ -252,5 +253,8 @@ public abstract class BaseJTable extends JTable {
     public interface ITableRowSelected{
         public void onRowSelected(final ListSelectionEvent lse);
     }
-    
+
+    public boolean isTableInitialized() {
+        return tableInitialized;
+    }
 }

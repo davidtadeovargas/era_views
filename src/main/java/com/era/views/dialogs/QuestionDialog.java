@@ -32,8 +32,7 @@ public class QuestionDialog extends BaseDialog {
         
         //Show the dialog
         Object[] op = {"Si","No"};
-        int iRes    = JOptionPane.showOptionDialog(jFrame, text, this.title, JOptionPane.YES_NO_OPTION,  JOptionPane.QUESTION_MESSAGE, null, op, op[0]);
-        JOptionPane.showMessageDialog(jFrame, text);
+        int iRes    = JOptionPane.showOptionDialog(jFrame, text, this.title, JOptionPane.YES_NO_OPTION,  JOptionPane.QUESTION_MESSAGE, null, op, op[0]);        
         if(iRes==JOptionPane.YES_OPTION) {
             //If the interface response is not null call the method OnOkClicked()
             if(OKDialogInterface!=null){

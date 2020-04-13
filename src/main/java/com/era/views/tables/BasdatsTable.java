@@ -55,5 +55,7 @@ public class BasdatsTable extends BaseJTable {
         
         final BasdatsTableModel BasdatsTableModel = new BasdatsTableModel(items,columns);        
         this.setModel(BasdatsTableModel);
+        
+        tableInitialized = true;
     }
 }
