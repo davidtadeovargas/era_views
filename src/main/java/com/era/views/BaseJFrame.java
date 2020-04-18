@@ -40,7 +40,7 @@ public class BaseJFrame extends JFrame {
     public void maximizedWindow(){
         GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.setMaximizedBounds(env.getMaximumWindowBounds());
-        this.setExtendedState(this.getExtendedState() | javax.swing.JFrame.MAXIMIZED_BOTH);
+        this.setExtendedState(this.getExtendedState() | javax.swing.JFrame.MAXIMIZED_BOTH);                
     }
     
     public void setPropertyTitle(final String propertyId) throws Exception{
