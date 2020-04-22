@@ -17,9 +17,4 @@ public class SucursalsAbstractTableModel extends BaseAbstractTableModel {
     public SucursalsAbstractTableModel(List<Sucursal> deliveries, String[] header) {
         super(deliveries,header);        
     }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
-    }
 }

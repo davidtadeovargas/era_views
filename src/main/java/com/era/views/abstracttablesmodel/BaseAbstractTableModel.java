@@ -37,6 +37,11 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
     }
     
     @Override
+    public Object getValueAt(int rowIndex, int columnIndex) {
+        return this.items.get(rowIndex);
+    }
+    
+    @Override
     public String getColumnName(int col) {
         return this.header[col];
     }

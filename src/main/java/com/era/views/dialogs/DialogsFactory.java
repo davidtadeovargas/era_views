@@ -37,6 +37,7 @@ public class DialogsFactory {
     
     public ExceptionDialog getExceptionDialog(final JFrame JFrame,Exception Exception) throws Exception{
         ExceptionDialog = new ExceptionDialog(JFrame,Exception);
+        ExceptionDialog.setText(Exception.getMessage());
         return ExceptionDialog;
     }
     

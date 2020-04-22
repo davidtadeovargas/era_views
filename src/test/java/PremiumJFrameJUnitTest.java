@@ -1,5 +1,5 @@
 import com.era.logger.LoggerUtility;
-import com.era.views.CreatingDatabaseWaitJFrame;
+import com.era.views.LoadingWaitJFrame;
 import com.era.views.PremiumJFrame;
 import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertTrue;

@@ -17,9 +17,4 @@ public class FabricsAbstractTableModel extends BaseAbstractTableModel {
     public FabricsAbstractTableModel(List<Fabs> deliveries, String[] header) {
         super(deliveries,header);
     }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
-    }
 }

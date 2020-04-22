@@ -10,7 +10,9 @@ import com.era.views.abstracttablesmodel.getvaluesat.BasdatsIGetValueAt1;
 import com.era.views.abstracttablesmodel.getvaluesat.CPSIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CountriesIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CustomersIGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.ExpeditionPlaceIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.IGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.RegimenFiscalIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SectoresIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SeriesCustomersIGetValueAt;
 import java.util.List;
@@ -38,136 +40,144 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
         switch(SearchCommonTypeEnum){
             
             case CUSTOMERS:           
-                    IGetValueAt = new CustomersIGetValueAt();
-                    break;
+                IGetValueAt = new CustomersIGetValueAt();
+                break;
                     
-                case BASDATS:
-                    IGetValueAt = new BasdatsIGetValueAt1();
-                    break;
+            case BASDATS:
+                IGetValueAt = new BasdatsIGetValueAt1();
+                break;
 
-                case PRODUCTS:
-                    break;
+            case PRODUCTS:
+                break;
 
-                case SUPPLIERS:
-                    break;
+            case SUPPLIERS:
+                break;
 
-               case USERS:
-                    break;
+            case USERS:
+                break;
 
-               case KITS:
-                    break;
+            case KITS:
+                break;
 
-               case CONCEPTS:
-                    break;
+            case CONCEPTS:
+                break;
 
-               case PAYMENT_TYPES:
-                    break;
+            case PAYMENT_TYPES:
+                break;
 
-               case COINS:
-                    break;
+            case COINS:
+                break;
 
-               case WAREHOUSES:
-                    break;
+            case WAREHOUSES:
+                break;
 
-               case CLASSIFICATIONS:
-                    break;
+            case CLASSIFICATIONS:
+                break;
 
-               case SUPPLIERS_CLASIFICATION:
-                    break;
+            case SUPPLIERS_CLASIFICATION:
+                break;
 
-                case ANAQS:
-                    break;
+            case ANAQS:
+                break;
 
-                case GENERAL_PLACES:
-                    break;
+            case GENERAL_PLACES:
+                break;
 
-                case BRANDS:
-                    break;
+            case BRANDS:
+                break;
 
-                case LINES:
-                    break;
+            case LINES:
+                break;
 
-                case TAXES:
-                    break;
+            case TAXES:
+                break;
 
-                case UNIDS:
-                    break;
+            case UNIDS:
+                break;
 
-                case PESOS:
-                    break;
+            case PESOS:
+                break;
 
-                case COLORS:
-                    break;
+            case COLORS:
+                break;
 
-                case ADITIONAL_UBIQS:
-                    break;
+            case ADITIONAL_UBIQS:
+                break;
 
-                case MEASURES:
-                    break;
+            case MEASURES:
+                break;
 
-                case FABRICANTES:
-                    break;
+            case FABRICANTES:
+                break;
 
-                case SALES_MAN:
-                    break;
+            case SALES_MAN:
+                break;
 
-                case MODELS:
-                    break;
+            case MODELS:
+                break;
 
-                case ALL_COMPUESTS_PRODUCTS: // AND prods.COMPUE = 0
-                    break;
+            case ALL_COMPUESTS_PRODUCTS: // AND prods.COMPUE = 0
+                break;
 
-                case TYPES:
-                    break;
+            case TYPES:
+                break;
 
-                case ZONES:
-                    break;
+            case ZONES:
+                break;
 
-                case GIROS:
-                    break;
+            case GIROS:
+                break;
 
-                case PRODDS_SERIE:
-                    break;
+            case PRODDS_SERIE:
+                break;
 
-                case PRODS_NOT_SERIE:
-                    break;
+            case PRODS_NOT_SERIE:
+                break;
 
-                case RUBROS:
-                    break;
+            case RUBROS:
+                break;
 
-                case CREDIT_NOTES:
-                    break;
+            case CREDIT_NOTES:
+                break;
 
-                case TALLAS:
-                    break;
+            case TALLAS:
+                break;
 
-                case PAYMENT_CONCEPTS:
-                    break;
+            case PAYMENT_CONCEPTS:
+                break;
 
-                case BANKS:
-                    break;
+            case BANKS:
+                break;
 
-                case SUCURSALS:
-                    break;
+            case SUCURSALS:
+                break;
 
-                case RESPONSABLES:                    
-                    break;
+            case RESPONSABLES:                    
+                break;
 
-                case CUSTOMERS_SERIE:
-                    IGetValueAt = new SeriesCustomersIGetValueAt();
-                    break;
+            case CUSTOMERS_SERIE:
+                IGetValueAt = new SeriesCustomersIGetValueAt();
+                break;
 
-                case CPS:
-                    IGetValueAt = new CPSIGetValueAt();
-                    break;
-                            
-                case COUNTRIES:
-                    IGetValueAt = new CountriesIGetValueAt();
-                    break;                   
-                    
-               case SECTORS:                   
-                    IGetValueAt = new SectoresIGetValueAt();
-                   break;
+            case CPS:
+                IGetValueAt = new CPSIGetValueAt();
+                break;
+            
+            case EXPEDITION_PLACE:
+                IGetValueAt = new ExpeditionPlaceIGetValueAt();
+                break;
+            
+            case COUNTRIES:
+                IGetValueAt = new CountriesIGetValueAt();
+                break;                   
+
+            case SECTORS:                   
+                IGetValueAt = new SectoresIGetValueAt();
+               break;
+
+            case FISCAL_REGIMEN:
+               IGetValueAt = new RegimenFiscalIGetValueAt();
+               break;
         }
         
         String returnValue;

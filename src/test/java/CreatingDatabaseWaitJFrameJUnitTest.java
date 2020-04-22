@@ -1,5 +1,5 @@
 import com.era.logger.LoggerUtility;
-import com.era.views.CreatingDatabaseWaitJFrame;
+import com.era.views.LoadingWaitJFrame;
 import com.era.views.ViewsFactory;
 import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -26,9 +26,9 @@ public class CreatingDatabaseWaitJFrameJUnitTest  {
     @Order(1)
     public void setVisibleCreatingDatabaseWaitJFrameTest() {
         
-        try{
+        /*try{
                         
-            final CreatingDatabaseWaitJFrame CreatingDatabaseWaitJFrame = ViewsFactory.getSingleton().getCreatingDatabaseWaitJFrame();
+            final LoadingWaitJFrame CreatingDatabaseWaitJFrame = ViewsFactory.getSingleton().getCreatingDatabaseWaitJFrame();
             CreatingDatabaseWaitJFrame.setVisible(true);
             
             new Thread(new Runnable() {
@@ -49,6 +49,6 @@ public class CreatingDatabaseWaitJFrameJUnitTest  {
             LoggerUtility.getSingleton().logError(CreatingDatabaseWaitJFrameJUnitTest.class, e);
             
             Assertions.fail();
-        }
+        }*/
     }
 }

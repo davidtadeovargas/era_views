@@ -69,6 +69,11 @@ public class JComponentUtils {
             
         });
     }
+
+    public void setDisposeInEscapeEvent(boolean disposeInEscapeEvent) {
+        this.disposeInEscapeEvent = disposeInEscapeEvent;
+    }
+        
     
     //When a key is pressed
     private void vKeyPreEsc(java.awt.event.KeyEvent evt){
@@ -78,7 +83,7 @@ public class JComponentUtils {
             LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "KeyEvent.VK_ESCAPE pressed");
             
             System.gc();
-            if(JFrame!=null){
+            if(JFrame!=null && disposeInEscapeEvent){
                 JFrame.dispose();
             }
             if(JDialog!=null){
@@ -237,6 +242,42 @@ public class JComponentUtils {
         });
     }
     
+    public void addFocusLost(final JTextComponent JTextComponent, final Focus Focus){
+        
+        JTextComponent.addFocusListener(new FocusListener(){
+            @Override
+            public void focusGained(FocusEvent e) {
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                if(Focus!=null){
+                    Focus.onFocus(e);
+                }
+            }
+        });
+    }
+    
+    public void addFocusGained(final JTextComponent JTextComponent, final Focus Focus){
+        
+        JTextComponent.addFocusListener(new FocusListener(){
+            @Override
+            public void focusGained(FocusEvent e) {
+                if(Focus!=null){
+                    Focus.onFocus(e);
+                }
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {                
+            }
+        });
+    }
+    
+    public interface Focus{
+        public void onFocus(FocusEvent e);
+    }
+    
     public void limitTextField(JTextComponent JTextComponent, int limit){
                 
         JTextComponent.addKeyListener(new KeyListener(){
@@ -309,6 +350,27 @@ public class JComponentUtils {
         });        
     }
     
+    public void disableAllComponents(final Container c){
+        
+        Component[] comps = c.getComponents();
+        for (Component comp : comps) {
+            comp.setEnabled(false);
+            if (comp instanceof Container){
+                disableAllComponents((Container) comp);
+            }
+        }
+    }
+    
+    public void enableAllComponents(final Container c){
+        Component[] comps = c.getComponents();
+        for (Component comp : comps) {
+            comp.setEnabled(true);
+            if (comp instanceof Container){
+                enableAllComponents((Container) comp);
+            }
+        }
+    }
+    
     public void initAllListenersComponentes(final Container c){
         if(!alreadyAddedKeylisteners){
             initAllBaseComponentsListeners(c);
@@ -340,7 +402,7 @@ public class JComponentUtils {
                     selectAllTextInControlOnFocus((JTextComponent) comp);
                 }
                 
-                compList.addAll(initAllBaseComponentsListeners((Container) comp));                
+                compList.addAll(initAllBaseComponentsListeners((Container) comp));
             }
         }
         return compList;        

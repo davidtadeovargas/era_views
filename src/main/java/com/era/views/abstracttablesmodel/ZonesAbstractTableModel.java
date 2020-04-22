@@ -17,9 +17,4 @@ public class ZonesAbstractTableModel extends BaseAbstractTableModel {
     public ZonesAbstractTableModel(List<Zona> deliveries, String[] header) {
         super(deliveries,header);
     }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
-    }
 }

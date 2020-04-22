@@ -17,9 +17,4 @@ public class RubrosAbstractTableModel extends BaseAbstractTableModel {
     public RubrosAbstractTableModel(List<Rubr> deliveries, String[] header) {
         super(deliveries,header);
     }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
-    }
 }

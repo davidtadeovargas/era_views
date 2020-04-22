@@ -17,9 +17,4 @@ public class PaymentTypesAbstractTableModel extends BaseAbstractTableModel {
     public PaymentTypesAbstractTableModel(List<Payment> deliveries, String[] header) {
         super(deliveries,header);
     }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
-    }
 }

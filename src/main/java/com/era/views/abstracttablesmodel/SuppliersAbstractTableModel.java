@@ -17,9 +17,4 @@ public class SuppliersAbstractTableModel extends BaseAbstractTableModel {
     public SuppliersAbstractTableModel(List<Supplier> deliveries, String[] header) {
         super(deliveries,header);        
     }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
-    }
 }

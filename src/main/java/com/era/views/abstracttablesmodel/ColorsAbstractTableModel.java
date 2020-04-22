@@ -17,9 +17,4 @@ public class ColorsAbstractTableModel extends BaseAbstractTableModel {
     public ColorsAbstractTableModel(List<Colos> deliveries, String[] header) {
         super(deliveries,header);        
     }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
-    }
 }

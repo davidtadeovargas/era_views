@@ -8,6 +8,7 @@ package com.era.views;
 import com.era.logger.LoggerUtility;
 import com.era.utilities.DialogPropertiesUitlity;
 import com.era.views.utils.JComponentUtils;
+import java.awt.GraphicsEnvironment;
 import java.util.Properties;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -19,7 +20,7 @@ import javax.swing.UIManager;
  */
 public class BaseJFrame extends JFrame {
     
-    protected final JFrame baseJFrame = this;
+    protected final BaseJFrame baseJFrame = this;
     protected boolean setVisibleWithEfect;
     protected boolean closeSystemOnClose;
     protected JComponentUtils JComponentUtils = new JComponentUtils();
@@ -41,6 +42,10 @@ public class BaseJFrame extends JFrame {
         GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.setMaximizedBounds(env.getMaximumWindowBounds());
         this.setExtendedState(this.getExtendedState() | javax.swing.JFrame.MAXIMIZED_BOTH);                
+    }
+
+    public JComponentUtils getJComponentUtils() {
+        return JComponentUtils;
     }
     
     public void setPropertyTitle(final String propertyId) throws Exception{
@@ -75,6 +80,10 @@ public class BaseJFrame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    public void onCloseWindowDoNothing(){
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+    }
+    
     @Override
     public void pack() {
         super.pack(); //To change body of generated methods, choose Tools | Templates.

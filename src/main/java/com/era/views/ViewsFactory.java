@@ -13,12 +13,7 @@ public class ViewsFactory {
     
     private static ViewsFactory RenderViewManager;
     
-    private PremiumJFrame PremiumJFrame;
-    private PushNotificationJFrame PushNotificationJFrame;
-    private RegisterWebsiteJFrame RegisterWebsiteJFrame;
-    private DialogJFrame DialogJFrame;
-    private CreatingDatabaseWaitJFrame CreatingDatabaseWaitJFrame;
-    private PrincipJFrame PrincipJFrame;
+    private PremiumJFrame PremiumJFrame;    
     
     
     
@@ -40,38 +35,95 @@ public class ViewsFactory {
     }
     
     public PushNotificationJFrame getPushNotificationJFrame(final String urlBanner, final String urlBannerAction) throws Exception{
-        if(PushNotificationJFrame==null){
-            PushNotificationJFrame = new PushNotificationJFrame(urlBanner,urlBannerAction);
-        }
-        return PushNotificationJFrame;
+        return new PushNotificationJFrame(urlBanner,urlBannerAction);
     }
     
     public RegisterWebsiteJFrame getRegisterWebsiteJFrame(){
-        if(RegisterWebsiteJFrame==null){
-            RegisterWebsiteJFrame = new RegisterWebsiteJFrame();
-        }
-        return RegisterWebsiteJFrame;
+        return new RegisterWebsiteJFrame();
     }
     
     public DialogJFrame getDialogJFrame(final String message){
-        if(DialogJFrame==null){
-            DialogJFrame = new DialogJFrame(message);
-        }
-        return DialogJFrame;
+        return new DialogJFrame(message);
     }
     
-    public CreatingDatabaseWaitJFrame getCreatingDatabaseWaitJFrame(){
-        if(CreatingDatabaseWaitJFrame==null){
-            CreatingDatabaseWaitJFrame = new CreatingDatabaseWaitJFrame();
-        }
-        return CreatingDatabaseWaitJFrame;
+    public LoadingWaitJFrame getLoadingWaitJFrame(){
+        return new LoadingWaitJFrame();
     }
     
     public PrincipJFrame getPrincipJFrame(){
-        if(PrincipJFrame==null){
-            PrincipJFrame = new PrincipJFrame();
-        }
-        return PrincipJFrame;
+        return new PrincipJFrame();
+    }
+    
+    public ProdsJFrame getProdsJFrame(){
+        return new ProdsJFrame();
+    }
+    
+    public MonsJFrame getMonsJFrame(){
+        return new MonsJFrame();
+    }
+    
+    public MaxsMinsJFrame getMaxsMinsJFrame(){
+        return new MaxsMinsJFrame();
+    }
+    
+    public CuentasContablesJFrame getCuentasContablesJFrame(){
+        return new CuentasContablesJFrame();
+    }
+    
+    public LotPedCatJFrame getLotPedCatJFrame(){
+        return new LotPedCatJFrame();
+    }
+    
+    public Impuestos_X_productos_nuevoJFrame getImpuestos_X_productos_nuevoJFrame(){
+        return new Impuestos_X_productos_nuevoJFrame();
+    }
+    
+    public ImpsJFrame getImpuestos_X_productos_nuevoImpsJFrame(){
+        return new ImpsJFrame();
+    }
+    
+    public CatalBancosJFrame getCatalBancosJFrame(){
+        return new CatalBancosJFrame();
+    }
+    
+    public ConceptosPagoJFrame getConceptosPagoJFrame(){
+        return new ConceptosPagoJFrame();
+    }
+    
+    public CompsJFrame getCompsJFrame(){
+        return new CompsJFrame();
+    }
+    
+    public ClientsJFrame getClientsJFrame(){
+        return new ClientsJFrame();
+    }
+    
+    public VerCtaContJFrame getVerCtaContJFrame(){
+        return new VerCtaContJFrame();
+    }
+    
+    public UsrsJFrame getUsrsJFrame(){
+        return new UsrsJFrame();
+    }
+    
+    public UnidadesJFrame getUnidadesJFrame(){        
+        return new UnidadesJFrame();        
+    }
+    
+    public TipsPagsJFrame getTipsPagsJFrame(){
+        return new TipsPagsJFrame();
+    }
+    
+    public SubramosJFrame getSubramosJFrame(){
+        return new SubramosJFrame();
+    }
+    
+    public SeriesJFrame getSeriesJFrame(){
+        return new SeriesJFrame();        
+    }
+    
+    public SectoresJFrame getSectoresJFrame(){        
+        return new SectoresJFrame();               
     }
     
     @Override

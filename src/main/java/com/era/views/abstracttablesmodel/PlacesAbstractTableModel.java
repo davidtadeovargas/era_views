@@ -17,9 +17,4 @@ public class PlacesAbstractTableModel extends BaseAbstractTableModel {
     public PlacesAbstractTableModel(List<Lugs> deliveries, String[] header) {
         super(deliveries,header);
     }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
-    }
 }

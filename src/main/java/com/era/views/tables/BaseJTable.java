@@ -8,6 +8,8 @@ package com.era.views.tables;
 import com.era.logger.LoggerUtility;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 import java.awt.event.AdjustmentEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.List;
@@ -37,6 +39,7 @@ public abstract class BaseJTable extends JTable {
     private int pagination = 0;    
     private long count = 0;
     protected boolean tableInitialized;
+    protected JTableEnterKeyPressed JTableEnterKeyPressed;
     
     
     public abstract void initTable(final List<?> items);
@@ -53,6 +56,10 @@ public abstract class BaseJTable extends JTable {
         init();
     }
 
+    public void setJTableEnterKeyPressed(JTableEnterKeyPressed JTableEnterKeyPressed) {
+        this.JTableEnterKeyPressed = JTableEnterKeyPressed;
+    }
+    
     public void reloadTable(){
         final BaseAbstractTableModel model = (BaseAbstractTableModel)getModel();
         model.fireTableDataChanged();
@@ -133,7 +140,32 @@ public abstract class BaseJTable extends JTable {
             if(ITableRowSelected!=null){
                 ITableRowSelected.onRowSelected(lse);
             }
-        });        
+        });
+        
+        //Listener for keys
+        this.addKeyListener(new KeyListener(){
+
+            @Override
+            public void keyTyped(KeyEvent e) {
+                
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if(e.getKeyCode()==KeyEvent.VK_ENTER){
+                    if(JTableEnterKeyPressed!=null){
+                        final int selectedRow = getSelectedRow();
+                        JTableEnterKeyPressed.onKeyPressed(selectedRow);
+                    }
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                
+            }
+            
+        });
     }
 
     public void setITableRowSelected(ITableRowSelected ITableRowSelected) {
@@ -195,6 +227,10 @@ public abstract class BaseJTable extends JTable {
     
     public interface JTableDoubleClic{
         public void onDoubleClic(int selectedRow);
+    }
+    
+    public interface JTableEnterKeyPressed {
+        public void onKeyPressed(int selectedRow);
     }
     
     public interface OnScrollStart{
