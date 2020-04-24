@@ -9,7 +9,7 @@ package com.era.views;
  *
  * @author Vanessa
  */
-public class CatalogoMonedaJFrame extends javax.swing.JFrame {
+public class CatalogoMonedaJFrame extends BaseJFrame {
 
     /**
      * Creates new form CatalogoMoneda
