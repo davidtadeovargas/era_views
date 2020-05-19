@@ -1,6 +1,5 @@
 import com.era.logger.LoggerUtility;
 import com.era.views.LoadingWaitJFrame;
-import com.era.views.ViewsFactory;
 import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
