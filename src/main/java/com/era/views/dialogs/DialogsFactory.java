@@ -18,7 +18,9 @@ public class DialogsFactory {
     private ExceptionDialog ExceptionDialog;
     private YesNoDialog YesNoDialog;
     private ErrorOKDialog ErrorOKDialog;
-    private QuestionDialog QuestionDialog;
+    private QuestionDialog QuestionDialog;    
+    
+    
     
     
     public static DialogsFactory getSingleton(){
@@ -59,5 +61,12 @@ public class DialogsFactory {
             ErrorOKDialog = new ErrorOKDialog(JFrame);
         }
         return ErrorOKDialog;
+    }
+    
+    public void getErrorDialogJFrame(final  String text, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
+        final ErrorDialogJFrame ErrorDialogJFrame = new ErrorDialogJFrame();
+        ErrorDialogJFrame.setText(text);
+        ErrorDialogJFrame.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);
+        ErrorDialogJFrame.setVisible();
     }
 }
