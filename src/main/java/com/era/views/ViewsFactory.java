@@ -14,7 +14,7 @@ public class ViewsFactory {
     private static ViewsFactory RenderViewManager;
     
     private PremiumJFrame PremiumJFrame;    
-    
+    private LoadingWaitJFrame LoadingWaitJFrame;
     
     
     private ViewsFactory(){        
@@ -47,7 +47,10 @@ public class ViewsFactory {
     }
     
     public LoadingWaitJFrame getLoadingWaitJFrame(){
-        return new LoadingWaitJFrame();
+        if(LoadingWaitJFrame == null){
+            LoadingWaitJFrame = new LoadingWaitJFrame();
+        }
+        return LoadingWaitJFrame;
     }
     
     @Override
