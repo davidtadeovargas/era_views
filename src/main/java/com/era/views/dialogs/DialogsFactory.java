@@ -63,7 +63,14 @@ public class DialogsFactory {
         return ErrorOKDialog;
     }
     
-    public void getErrorDialogJFrame(final  String text, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
+    public void getErrorDialogByIdTextJFrame(final  String idText, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
+        final ErrorDialogJFrame ErrorDialogJFrame = new ErrorDialogJFrame();
+        ErrorDialogJFrame.setIdText(idText);
+        ErrorDialogJFrame.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);
+        ErrorDialogJFrame.setVisible();
+    }
+    
+    public void getErrorDialogByTextJFrame(final  String text, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
         final ErrorDialogJFrame ErrorDialogJFrame = new ErrorDialogJFrame();
         ErrorDialogJFrame.setText(text);
         ErrorDialogJFrame.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);

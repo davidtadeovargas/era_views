@@ -37,9 +37,13 @@ public class ErrorDialogJFrame extends BaseJFrame {
         });
     }
     
-    public void setText(final String idText) {
+    public void setIdText(final String idText) {
         final String finalString = props.getProperty(idText);
         this.mainText.setText(finalString);
+    }
+    
+    public void setText(final String text) {
+        this.mainText.setText(text);
     }
     
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {

@@ -1,2 +1,4 @@
 
 *.class
+target/classes/com/era/views/dialogs/DialogsFactory.class
+target/classes/com/era/views/dialogs/ErrorDialogJFrame.class
