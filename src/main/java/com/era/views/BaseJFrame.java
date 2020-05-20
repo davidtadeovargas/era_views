@@ -13,6 +13,11 @@ import java.util.Properties;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+import com.era.views.interfaces.OnJFrameVisible;
+
 
 /**
  *
@@ -24,6 +29,7 @@ public class BaseJFrame extends JFrame {
     protected boolean setVisibleWithEfect;
     protected boolean closeSystemOnClose;
     protected JComponentUtils JComponentUtils = new JComponentUtils();
+    protected OnJFrameVisible OnJFrameVisible;
     
     
     
@@ -36,6 +42,17 @@ public class BaseJFrame extends JFrame {
         JComponentUtils.setIconFrame();
         
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        //When the jframe is visible
+        final ComponentListener listener = new ComponentAdapter() {
+            @Override
+            public void componentShown(ComponentEvent evt) {
+              if(OnJFrameVisible != null){
+                  OnJFrameVisible.onVisible();
+              }
+            }
+        };
+        this.addComponentListener(listener);
     }
     
     public void maximizedWindow(){
@@ -129,5 +146,5 @@ public class BaseJFrame extends JFrame {
 
     public void setSetVisibleWithEfect(boolean setVisibleWithEfect) {
         this.setVisibleWithEfect = setVisibleWithEfect;
-    }
+    }        
 }

@@ -6,7 +6,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class CotsJFrame extends javax.swing.JFrame 
+public class CotsJFrame extends BaseJFrame
 {
     public CotsJFrame() 
     {

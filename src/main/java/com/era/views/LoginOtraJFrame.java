@@ -24,9 +24,9 @@ public class LoginOtraJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jCMostC = new javax.swing.JCheckBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -100,14 +100,14 @@ public class LoginOtraJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBIng;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JCheckBox jCMostC;
+    protected javax.swing.JButton jBIng;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JCheckBox jCMostC;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPasswordField jPContra;
-    private javax.swing.JTextField jTUsr;
+    protected javax.swing.JPasswordField jPContra;
+    protected javax.swing.JTextField jTUsr;
     // End of variables declaration//GEN-END:variables
 
 }
