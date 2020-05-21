@@ -43,6 +43,10 @@ public abstract class BaseDialog {
     //Set the text of the dialog
     public void setPropertyText(String propertyId) throws Exception {
         
+        if(propertyId == null){
+            throw new Exception("Property does not exists");
+        }
+        
         final String value = props.getProperty(propertyId);
         if(value==null){
             throw new Exception("Property does not exists");

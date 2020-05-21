@@ -19,8 +19,6 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -154,12 +152,14 @@ public abstract class BaseJTable extends JTable {
             if(ITableRowSelected!=null){
                 
                 //Get the selected model
-                final int selectedRow = this.getSelectedRow();                
-                BaseAbstractTableModel BaseAbstractTableModel = (BaseAbstractTableModel) this.getModel();
-                final Object Object = BaseAbstractTableModel.getItems().get(selectedRow);
-                
-                //Callback
-                ITableRowSelected.onRowSelected(lse,Object);
+                final int selectedRow = this.getSelectedRow();
+                if(selectedRow != -1){
+                    BaseAbstractTableModel BaseAbstractTableModel = (BaseAbstractTableModel) this.getModel();
+                    final Object Object = BaseAbstractTableModel.getItems().get(selectedRow);
+
+                    //Callback
+                    ITableRowSelected.onRowSelected(lse,Object);
+                }                
             }
         });
         
@@ -205,6 +205,10 @@ public abstract class BaseJTable extends JTable {
         BaseAbstractTableModel.setItems(items);
         
         BaseAbstractTableModel.fireTableDataChanged();
+    }
+    
+    public boolean cointainsRows(){
+        return this.getRowCount() > 0;
     }
     
     public void addRows(final List<?> items){

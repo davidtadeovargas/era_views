@@ -15,6 +15,7 @@ import com.era.views.abstracttablesmodel.getvaluesat.IGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.RegimenFiscalIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SectoresIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SeriesCustomersIGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.WarehousesIGetValueAt;
 import java.util.List;
 
 /**
@@ -69,6 +70,7 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                 break;
 
             case WAREHOUSES:
+                IGetValueAt = new WarehousesIGetValueAt();
                 break;
 
             case CLASSIFICATIONS:

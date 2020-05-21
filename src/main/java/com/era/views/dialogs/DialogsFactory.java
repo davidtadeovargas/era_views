@@ -36,6 +36,11 @@ public class DialogsFactory {
         }
         return OKDialog;
     }
+    public void showOKDialog(final JFrame JFrame, final String propertyText) throws Exception{
+        final OKDialog OKDialog_ = this.getOKDialog(JFrame);
+        OKDialog_.setPropertyText(propertyText);
+        OKDialog_.show();
+    }
     
     public ExceptionDialog getExceptionDialog(final JFrame JFrame,Exception Exception) throws Exception{
         ExceptionDialog = new ExceptionDialog(JFrame,Exception);
@@ -56,11 +61,23 @@ public class DialogsFactory {
         }
         return QuestionDialog;
     }
+    public void showQuestionContinueDialog(final JFrame JFrame, final com.era.views.dialogs.QuestionDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final QuestionDialog QuestionDialog_ = this.getQuestionDialog(JFrame);
+        QuestionDialog_.setPropertyText("question_continue");
+        QuestionDialog_.setOKDialogInterface(OKDialogInterface);
+        QuestionDialog_.show();
+    }    
+    
     public ErrorOKDialog getErrorOKDialog(final JFrame JFrame) throws Exception {
         if(ErrorOKDialog==null){
             ErrorOKDialog = new ErrorOKDialog(JFrame);
         }
         return ErrorOKDialog;
+    }    
+    public void showErrorOKDialog(final JFrame JFrame, final String propertyText) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText(propertyText);
+        ErrorOKDialog_.show();
     }
     
     public void getErrorDialogByIdTextJFrame(final  String idText, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{

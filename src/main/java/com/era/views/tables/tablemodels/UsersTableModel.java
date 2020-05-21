@@ -29,7 +29,7 @@ public class UsersTableModel extends BaseAbstractTableModel {
            returnValue = String.valueOf(rowIndex + 1);
         }
         else if (columnIndex == 1) {
-           returnValue = User.getStation();
+           returnValue = User.getCode();
         }
         else if (columnIndex == 2) {
            returnValue = User.getName();
