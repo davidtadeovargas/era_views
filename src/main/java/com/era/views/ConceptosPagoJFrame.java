@@ -15,7 +15,9 @@ import javax.swing.table.TableRowSorter;
 public class ConceptosPagoJFrame extends BaseJFrame {
     
     
-    public ConceptosPagoJFrame() {
+    public ConceptosPagoJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

@@ -3,8 +3,10 @@ package com.era.views;
 
 public class AlmasJFrame extends BaseJFrame 
 {    
-    public AlmasJFrame() 
-    {                        
+    public AlmasJFrame(final String idTextTitleWindow) 
+    {                 
+        super(idTextTitleWindow);
+        
         initComponents();
                 
         jTab.setAutoResizeMode(0);

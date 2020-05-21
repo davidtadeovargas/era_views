@@ -7,8 +7,10 @@ import javax.swing.table.TableRowSorter;
 
 public class MonsJFrame extends BaseJFrame
 {    
-    public MonsJFrame() 
-    {                        
+    public MonsJFrame(final String idTextTitleWindow) 
+    {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBNew);

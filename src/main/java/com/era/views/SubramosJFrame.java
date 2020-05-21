@@ -12,7 +12,9 @@ import javax.swing.table.TableRowSorter;
 
 public class SubramosJFrame extends BaseJFrame {
 
-    public SubramosJFrame() {
+    public SubramosJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

@@ -8,8 +8,10 @@ import javax.swing.table.TableRowSorter;
 
 public class Impuestos_X_productos_nuevoJFrame extends BaseJFrame
 {
-    public Impuestos_X_productos_nuevoJFrame() 
+    public Impuestos_X_productos_nuevoJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();                
         
         this.getRootPane().setDefaultButton(jBNew);                

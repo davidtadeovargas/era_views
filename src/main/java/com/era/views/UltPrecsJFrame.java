@@ -3,8 +3,10 @@ package com.era.views;
 
 public class UltPrecsJFrame extends BaseJFrame 
 {
-    public UltPrecsJFrame() 
+    public UltPrecsJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

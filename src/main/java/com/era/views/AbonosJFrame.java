@@ -6,7 +6,9 @@ import javax.swing.table.TableRowSorter;
 public class AbonosJFrame extends BaseJFrame {
     
     
-    protected AbonosJFrame() {
+    protected AbonosJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

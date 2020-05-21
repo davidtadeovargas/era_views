@@ -4,8 +4,10 @@ package com.era.views;
 
 public class AcerDJFrame extends BaseJFrame
 {       
-    public AcerDJFrame() 
-    {                
+    public AcerDJFrame(final String idTextTitleWindow) 
+    {         
+        super(idTextTitleWindow);
+        
         initComponents();
         
         serial.grabFocus();

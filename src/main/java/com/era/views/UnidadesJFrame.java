@@ -14,7 +14,9 @@ import javax.swing.table.TableRowSorter;
  */
 public class UnidadesJFrame extends BaseJFrame {
     
-    public UnidadesJFrame() {
+    public UnidadesJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

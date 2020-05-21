@@ -7,8 +7,10 @@ import javax.swing.table.TableRowSorter;
 
 public class BuscCompJFrame extends BaseJFrame
 {
-    public BuscCompJFrame() 
+    public BuscCompJFrame(final String idTextTitleWindow) 
     {           
+        super(idTextTitleWindow);
+        
         initComponents();
 
         this.setAlwaysOnTop(true);

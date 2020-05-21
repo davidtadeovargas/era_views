@@ -1,14 +1,15 @@
 package com.era.views;
 
-import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
 
-public class CxcJFrame extends javax.swing.JFrame 
+public class CxcJFrame extends BaseJFrame
 {
-    public CxcJFrame() 
+    public CxcJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         jTab1.getColumnModel().getColumn(17).setMinWidth(0);

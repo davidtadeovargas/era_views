@@ -4,8 +4,10 @@ package com.era.views;
 
 public class LPrecsJFrame extends BaseJFrame 
 {
-    public LPrecsJFrame() 
+    public LPrecsJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
     
         this.getRootPane().setDefaultButton(jBGuar);

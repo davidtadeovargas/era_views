@@ -16,7 +16,10 @@ public class LoginLicenseJFrame extends BaseJFrame {
     /**
      * Creates new form LoginLicenseJFrame
      */
-    public LoginLicenseJFrame() {
+    public LoginLicenseJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+        
         initComponents();
         
         LoggerUtility.getSingleton().logInfo(LoginLicenseJFrame.class, "Views: Showing LoginLicenseJFrame");

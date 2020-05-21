@@ -7,8 +7,10 @@ import javax.swing.table.TableRowSorter;
 /*Clase para hacer una alta de producto*/
 public class ProdsJFrame extends BaseJFrame
 {
-    public ProdsJFrame()
+    public ProdsJFrame(final String idTextTitleWindow)
     {               
+        super(idTextTitleWindow);
+        
         initComponents();
         
         jTab.setAutoResizeMode(0);

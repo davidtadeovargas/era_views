@@ -7,8 +7,10 @@ import javax.swing.table.TableRowSorter;
 
 public class ProvsJFrame extends BaseJFrame 
 {
-    public ProvsJFrame() 
+    public ProvsJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
         
         jTab.getTableHeader().setReorderingAllowed(false);

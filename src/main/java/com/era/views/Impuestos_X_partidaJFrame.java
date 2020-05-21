@@ -8,8 +8,10 @@ import javax.swing.table.TableRowSorter;
 
 public class Impuestos_X_partidaJFrame extends BaseJFrame 
 {
-    public Impuestos_X_partidaJFrame() 
+    public Impuestos_X_partidaJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
         
         tabla.getTableHeader().setReorderingAllowed(false);

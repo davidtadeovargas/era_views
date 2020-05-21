@@ -5,8 +5,10 @@ package com.era.views;
 public class LotPedJFrame extends BaseJFrame
 {
     
-    public LotPedJFrame() 
+    public LotPedJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
     
         

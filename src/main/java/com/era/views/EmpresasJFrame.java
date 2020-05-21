@@ -10,7 +10,9 @@ public class EmpresasJFrame extends BaseJFrame {
     protected final javax.swing.ButtonGroup bgMetodoCosteo;
     protected final javax.swing.ButtonGroup bgTipoContribuyente;
     
-    public EmpresasJFrame() {
+    public EmpresasJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
                

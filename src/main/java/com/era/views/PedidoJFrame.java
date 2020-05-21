@@ -3,7 +3,9 @@ package com.era.views;
 
 public class PedidoJFrame extends BaseJFrame {
     
-    public PedidoJFrame() {
+    public PedidoJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

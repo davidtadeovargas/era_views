@@ -15,6 +15,7 @@ import java.util.List;
 public class UsersAbstractTableModel extends BaseAbstractTableModel {
 
     public UsersAbstractTableModel(List<User> deliveries, String[] header) {
+        
         super(deliveries,header);        
     }
 }

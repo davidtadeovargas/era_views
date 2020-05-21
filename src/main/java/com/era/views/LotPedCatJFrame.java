@@ -7,7 +7,9 @@ import javax.swing.table.TableRowSorter;
 
 public class LotPedCatJFrame extends BaseJFrame {
 
-    public LotPedCatJFrame() {
+    public LotPedCatJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
 

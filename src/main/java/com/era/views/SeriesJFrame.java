@@ -11,8 +11,10 @@ import javax.swing.table.TableRowSorter;
 public class SeriesJFrame extends BaseJFrame
 {
     
-    public SeriesJFrame() 
+    public SeriesJFrame(final String idTextTitleWindow) 
     {       
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBNew);

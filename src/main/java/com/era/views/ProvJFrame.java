@@ -2,8 +2,10 @@ package com.era.views;
 
 public class ProvJFrame extends BaseJFrame 
 {
-    public ProvJFrame() 
+    public ProvJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
 	}

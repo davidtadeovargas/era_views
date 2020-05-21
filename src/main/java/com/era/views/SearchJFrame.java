@@ -5,7 +5,9 @@ package com.era.views;
 //Search over catalogs
 public class SearchJFrame extends BaseJFrame {
         
-    public SearchJFrame() {
+    public SearchJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         //Init graphic componentes
         initComponents();

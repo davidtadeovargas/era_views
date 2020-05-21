@@ -3,8 +3,10 @@ package com.era.views;
 
 public class ProdExisAlmJFrame extends BaseJFrame 
 {
-    public ProdExisAlmJFrame() 
+    public ProdExisAlmJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

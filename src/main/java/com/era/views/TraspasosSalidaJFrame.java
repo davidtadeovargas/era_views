@@ -7,7 +7,10 @@ package com.era.views;
  */
 public class TraspasosSalidaJFrame extends BaseJFrame {
 
-    public TraspasosSalidaJFrame() {
+    public TraspasosSalidaJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+        
         initComponents();
         
     }

@@ -8,8 +8,10 @@ import javax.swing.table.TableRowSorter;
 
 public class BajsMinJFrame extends BaseJFrame
 {
-    public BajsMinJFrame() 
-    {                                        
+    public BajsMinJFrame(final String idTextTitleWindow) 
+    {           
+        super(idTextTitleWindow);
+        
         initComponents();
         
         jTab.getTableHeader().setReorderingAllowed(false);

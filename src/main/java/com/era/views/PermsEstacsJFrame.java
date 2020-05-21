@@ -4,8 +4,10 @@ package com.era.views;
 public class PermsEstacsJFrame extends BaseJFrame 
 {                
    
-    public PermsEstacsJFrame() 
+    public PermsEstacsJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

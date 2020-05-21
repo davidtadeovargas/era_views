@@ -3,8 +3,10 @@ package com.era.views;
 
 public class IngrInventJFrame extends BaseJFrame {
     
-    public IngrInventJFrame() 
+    public IngrInventJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
                 
         

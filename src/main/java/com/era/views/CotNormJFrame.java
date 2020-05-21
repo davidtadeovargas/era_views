@@ -7,10 +7,11 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class CotNormJFrame extends javax.swing.JFrame
+public class CotNormJFrame extends BaseJFrame
 {
-    public CotNormJFrame() 
+    public CotNormJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
         
         initComponents();
         

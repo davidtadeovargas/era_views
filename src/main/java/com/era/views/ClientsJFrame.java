@@ -9,8 +9,10 @@ import javax.swing.table.TableRowSorter;
 
 public class ClientsJFrame extends BaseJFrame
 {
-    public ClientsJFrame() 
+    public ClientsJFrame(final String idTextTitleWindow) 
     {        
+        super(idTextTitleWindow);
+        
         initComponents();
                 
         jTab.getTableHeader().setReorderingAllowed(false);

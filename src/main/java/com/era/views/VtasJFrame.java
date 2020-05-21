@@ -5,7 +5,9 @@ import java.awt.FlowLayout;
 
 public class VtasJFrame extends BaseJFrame {
     
-    public VtasJFrame(){
+    public VtasJFrame(final String idTextTitleWindow){
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

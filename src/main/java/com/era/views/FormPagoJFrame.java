@@ -3,7 +3,10 @@ package com.era.views;
 
 public class FormPagoJFrame extends BaseJFrame  {
         
-    protected FormPagoJFrame() {
+    protected FormPagoJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

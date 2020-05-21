@@ -8,8 +8,10 @@ import javax.swing.table.TableRowSorter;
 
 public class VerCtaContJFrame extends BaseJFrame
 {
-    public VerCtaContJFrame() 
+    public VerCtaContJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
     
         javax.swing.ButtonGroup bG = new javax.swing.ButtonGroup();

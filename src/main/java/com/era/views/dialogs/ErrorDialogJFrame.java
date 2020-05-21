@@ -24,13 +24,12 @@ public class ErrorDialogJFrame extends BaseJFrame {
      */
     public ErrorDialogJFrame() throws Exception {
         
+        super("system_dialog_title");
+        
         this.props = DialogPropertiesUitlity.getSingleton().getProperties();
         
         initComponents();
         
-        //Set window tittle
-        final String finalString = props.getProperty("system_dialog_title");
-        this.setTitle(finalString);
         
         okButton.addActionListener((java.awt.event.ActionEvent evt) -> {
             okButtonActionPerformed(evt);

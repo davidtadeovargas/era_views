@@ -4,8 +4,10 @@ package com.era.views;
 
 public class DevPVtaJFrame extends BaseJFrame 
 {            
-    public DevPVtaJFrame() 
-    {                                        
+    public DevPVtaJFrame(final String idTextTitleWindow) 
+    {                
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

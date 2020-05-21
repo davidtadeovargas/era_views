@@ -7,8 +7,10 @@ package com.era.views;
 public class NewClienExpJFrame extends BaseJFrame 
 {        
     
-    public NewClienExpJFrame() 
+    public NewClienExpJFrame(final String idTextTitleWindow)
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

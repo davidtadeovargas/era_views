@@ -10,8 +10,10 @@ import javax.swing.table.TableRowSorter;
 
 public class CompsJFrame extends BaseJFrame
 {
-    public CompsJFrame()
-    {                        
+    public CompsJFrame(final String idTextTitleWindow)
+    {              
+        super(idTextTitleWindow);
+        
         initComponents();
             
         this.getRootPane().setDefaultButton(jBNew);

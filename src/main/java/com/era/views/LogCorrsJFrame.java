@@ -3,8 +3,10 @@ package com.era.views;
 
 public class LogCorrsJFrame extends BaseJFrame 
 {
-    public LogCorrsJFrame() 
+    public LogCorrsJFrame(final String idTextTitleWindow) 
     {        
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

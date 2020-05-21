@@ -5,7 +5,10 @@ public class EntradasSalidasJFrame extends BaseJFrame {
 
     
     
-    public EntradasSalidasJFrame() {
+    public EntradasSalidasJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+        
         initComponents();
         
                 

@@ -44,6 +44,8 @@ public class PushNotificationJFrame extends BaseJFrame {
      */
     public PushNotificationJFrame(final String urlBanner, final String urlBannerAction) throws Exception {
         
+        super("");
+        
         setUndecorated(true);
         
         initComponents();

@@ -3,7 +3,10 @@ package com.era.views;
 public class TicketsFacturadosJFrame extends BaseJFrame {
     
     
-    public TicketsFacturadosJFrame() {
+    public TicketsFacturadosJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+        
         initComponents();
 		
         

@@ -7,8 +7,10 @@ import javax.swing.table.TableRowSorter;
 
 public class AltsMaxsJFrame extends BaseJFrame 
 {
-    public AltsMaxsJFrame() 
-    {                                       
+    public AltsMaxsJFrame(final String idTextTitleWindow) 
+    {        
+        super(idTextTitleWindow);
+        
         initComponents();
         
         jTab.getTableHeader().setReorderingAllowed(false);

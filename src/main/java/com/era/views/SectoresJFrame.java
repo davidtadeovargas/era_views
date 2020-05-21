@@ -9,7 +9,9 @@ import javax.swing.table.TableRowSorter;
  */
 public class SectoresJFrame extends BaseJFrame {
     
-    public SectoresJFrame() {
+    public SectoresJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
                 

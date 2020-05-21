@@ -13,9 +13,6 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
-  <Events>
-    
-  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -255,9 +252,6 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
               </Properties>
-              <Events>
-                
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
@@ -274,9 +268,6 @@
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
-              <Events>
-                
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
@@ -352,9 +343,6 @@
             <Property name="toolTipText" type="java.lang.String" value="Salir (ESC)"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
-          <Events>
-            
-          </Events>
         </Component>
       </SubComponents>
     </Container>

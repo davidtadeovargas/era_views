@@ -6,8 +6,10 @@ package com.era.views;
 
 public class IngrPrevComJFrame extends BaseJFrame 
 {
-    public IngrPrevComJFrame() 
+    public IngrPrevComJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
         jButtonGenerarPDF.setVisible(false);
         

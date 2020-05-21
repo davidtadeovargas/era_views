@@ -9,8 +9,10 @@ import javax.swing.table.TableRowSorter;
 public class ProdSerJFrame extends BaseJFrame
 {
     
-    public ProdSerJFrame() 
+    public ProdSerJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
             
         jTab.setAutoResizeMode(0);

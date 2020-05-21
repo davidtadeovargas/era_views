@@ -4,8 +4,10 @@ package com.era.views;
 
 public class LoginOtraJFrame extends BaseJFrame 
 {
-    public LoginOtraJFrame() 
+    public LoginOtraJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
     }

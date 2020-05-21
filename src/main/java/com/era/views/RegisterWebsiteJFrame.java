@@ -18,6 +18,9 @@ public class RegisterWebsiteJFrame extends javax.swing.JFrame {
      * Creates new form RegisterWebsiteJFrame
      */
     public RegisterWebsiteJFrame() {
+        
+        super("");
+        
         initComponents();
         
         this.setLocationRelativeTo(null);

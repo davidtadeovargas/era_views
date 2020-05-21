@@ -5,8 +5,10 @@ package com.era.views;
 
 public class RecibOrdJFrame extends BaseJFrame 
 {        
-    public RecibOrdJFrame() 
+    public RecibOrdJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         jTab.getColumnModel().getColumn(23).setMinWidth(0);

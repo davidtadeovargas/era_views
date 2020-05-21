@@ -10,7 +10,9 @@ import javax.swing.table.TableRowSorter;
 public class CuentasContablesJFrame extends BaseJFrame {
     
     
-    public CuentasContablesJFrame() {
+    public CuentasContablesJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

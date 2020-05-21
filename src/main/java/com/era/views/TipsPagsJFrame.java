@@ -9,8 +9,10 @@ import javax.swing.table.TableRowSorter;
 /*Clase para controlar los tipos de pags*/
 public class TipsPagsJFrame extends BaseJFrame
 {
-    public TipsPagsJFrame() 
+    public TipsPagsJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBNew);

@@ -4,8 +4,10 @@ package com.era.views;
 
 public class OptPtoVtaJFrame extends BaseJFrame 
 {
-    public OptPtoVtaJFrame() 
+    public OptPtoVtaJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
                 
     }

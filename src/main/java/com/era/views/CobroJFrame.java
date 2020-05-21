@@ -3,8 +3,10 @@ package com.era.views;
 
 public class CobroJFrame extends BaseJFrame
 {
-    public CobroJFrame() 
-    {                       
+    public CobroJFrame(final String idTextTitleWindow) 
+    {             
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBCob);

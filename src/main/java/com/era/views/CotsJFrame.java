@@ -8,8 +8,10 @@ import javax.swing.table.TableRowSorter;
 
 public class CotsJFrame extends BaseJFrame
 {
-    public CotsJFrame() 
+    public CotsJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
 
         jTab1.setAutoResizeMode(0);

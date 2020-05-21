@@ -14,7 +14,10 @@ public class CatalogoMonedaJFrame extends BaseJFrame {
     /**
      * Creates new form CatalogoMoneda
      */
-    public CatalogoMonedaJFrame() {
+    public CatalogoMonedaJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+        
         initComponents();
         
     }

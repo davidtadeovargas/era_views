@@ -2,8 +2,10 @@ package com.era.views;
 
 public class PtoVtaTouJFrame extends BaseJFrame 
 {
-    public PtoVtaTouJFrame() 
+    public PtoVtaTouJFrame(final String idTextTitleWindow) 
     {                                      
+        super(idTextTitleWindow);
+        
         initComponents();
 
         

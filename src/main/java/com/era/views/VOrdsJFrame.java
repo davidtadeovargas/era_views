@@ -4,8 +4,10 @@ package com.era.views;
 public class VOrdsJFrame extends BaseJFrame 
 {
     
-    public VOrdsJFrame() 
+    public VOrdsJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

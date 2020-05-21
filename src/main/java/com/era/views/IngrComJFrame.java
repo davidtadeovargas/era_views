@@ -2,7 +2,9 @@ package com.era.views;
 
 public class IngrComJFrame extends BaseJFrame 
 {
-    public IngrComJFrame(){
+    public IngrComJFrame(final String idTextTitleWindow){
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

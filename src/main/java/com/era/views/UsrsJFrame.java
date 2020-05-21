@@ -1,34 +1,21 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
 public class UsrsJFrame extends BaseJFrame {
     
 
     
-    public UsrsJFrame() {
+    public UsrsJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
         
         
         this.getRootPane().setDefaultButton(jBNew);
 
-        jTab.getTableHeader().setReorderingAllowed(false);
-
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel) jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-
-        jTab.getColumnModel().getColumn(0).setPreferredWidth(30);
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(200);
-
         jLImg.setVisible(false);
 
         jTEstac.grabFocus();
-
-        jTab.getColumnModel().getColumn(2).setPreferredWidth(200);
     }
 
 
@@ -46,7 +33,7 @@ public class UsrsJFrame extends BaseJFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.UsersTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
@@ -754,7 +741,7 @@ public class UsrsJFrame extends BaseJFrame {
                 jBTab1KeyPressed(evt);
             }
         });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 10, 20));
+        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 10, 20));
 
         jCVend.setBackground(new java.awt.Color(255, 255, 255));
         jCVend.setText("Vendedor");
@@ -1293,17 +1280,7 @@ public class UsrsJFrame extends BaseJFrame {
     }//GEN-LAST:event_jCAdmCajKeyPressed
 
    
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-
    
-    }//GEN-LAST:event_jBTab1ActionPerformed
-
-   
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
-
-   
-    }//GEN-LAST:event_jBTab1KeyPressed
-
    
     private void jBBuscMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseExited
 
@@ -1646,30 +1623,38 @@ public class UsrsJFrame extends BaseJFrame {
     private void jTCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCorreoKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTCorreoKeyPressed
+
+    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
+
+    }//GEN-LAST:event_jBTab1KeyPressed
+
+    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
+
+    }//GEN-LAST:event_jBTab1ActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField JTContrasenia;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBCargImg;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBDelImg;
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBLim;
-    private javax.swing.JButton jBMostT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBVe;
-    private javax.swing.JButton jBtnAlmacen;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCAdmCaj;
-    private javax.swing.JCheckBox jCHabDesc;
-    private javax.swing.JCheckBox jCPto;
-    private javax.swing.JCheckBox jCVend;
-    private javax.swing.JLabel jLImg;
+    protected javax.swing.JPasswordField JTContrasenia;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBCargImg;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBDelImg;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBLim;
+    protected javax.swing.JButton jBMostT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBTab1;
+    protected javax.swing.JButton jBTod;
+    protected javax.swing.JButton jBVe;
+    protected javax.swing.JButton jBtnAlmacen;
+    protected javax.swing.JButton jButton1;
+    protected javax.swing.JCheckBox jCAdmCaj;
+    protected javax.swing.JCheckBox jCHabDesc;
+    protected javax.swing.JCheckBox jCPto;
+    protected javax.swing.JCheckBox jCVend;
+    protected javax.swing.JLabel jLImg;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
+    protected javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1685,27 +1670,27 @@ public class UsrsJFrame extends BaseJFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanImg;
-    private javax.swing.JScrollPane jScrollImg;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTCP;
-    private javax.swing.JTextField jTCall;
-    private javax.swing.JTextField jTCel;
-    private javax.swing.JTextField jTCiu;
-    private javax.swing.JTextField jTCol;
-    private javax.swing.JTextField jTComi;
-    private javax.swing.JTextField jTCorreo;
-    private javax.swing.JTextField jTDesc;
-    private javax.swing.JTextField jTEstac;
-    private javax.swing.JTextField jTEstad;
-    private javax.swing.JTextField jTNoExt;
-    private javax.swing.JTextField jTNoInt;
-    private javax.swing.JTextField jTNom;
-    private javax.swing.JTextField jTPai;
-    private javax.swing.JTextField jTTel;
-    private javax.swing.JTable jTab;
-    private javax.swing.JTextField jTxtAlmacen;
+    protected javax.swing.JPanel jPanImg;
+    protected javax.swing.JScrollPane jScrollImg;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTCP;
+    protected javax.swing.JTextField jTCall;
+    protected javax.swing.JTextField jTCel;
+    protected javax.swing.JTextField jTCiu;
+    protected javax.swing.JTextField jTCol;
+    protected javax.swing.JTextField jTComi;
+    protected javax.swing.JTextField jTCorreo;
+    protected javax.swing.JTextField jTDesc;
+    protected javax.swing.JTextField jTEstac;
+    protected javax.swing.JTextField jTEstad;
+    protected javax.swing.JTextField jTNoExt;
+    protected javax.swing.JTextField jTNoInt;
+    protected javax.swing.JTextField jTNom;
+    protected javax.swing.JTextField jTPai;
+    protected javax.swing.JTextField jTTel;
+    protected com.era.views.tables.UsersTable jTab;
+    protected javax.swing.JTextField jTxtAlmacen;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

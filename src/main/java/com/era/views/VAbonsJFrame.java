@@ -6,8 +6,10 @@ package com.era.views;
 public class VAbonsJFrame extends BaseJFrame
 {
     
-    public VAbonsJFrame() 
+    public VAbonsJFrame(final String idTextTitleWindow) 
     {           
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

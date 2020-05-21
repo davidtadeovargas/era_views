@@ -3,8 +3,10 @@ package com.era.views;
 
 public class ImpresJFrame extends BaseJFrame 
 {
-    public ImpresJFrame() 
+    public ImpresJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

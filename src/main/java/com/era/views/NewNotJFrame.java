@@ -4,8 +4,10 @@ package com.era.views;
 
 public class NewNotJFrame extends BaseJFrame
 {        
-    public NewNotJFrame() 
-    {                                                               
+    public NewNotJFrame(final String idTextTitleWindow) 
+    {                                                 
+        super(idTextTitleWindow);
+        
         initComponents();
 
         jTTotCostF.setVisible(false);

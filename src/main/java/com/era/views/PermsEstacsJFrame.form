@@ -9,9 +9,6 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
-  <Events>
-    
-  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -64,9 +61,6 @@
           <Dimension value="[320, 500]"/>
         </Property>
       </Properties>
-      <Events>
-        
-      </Events>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -89,9 +83,6 @@
             <Property name="text" type="java.lang.String" value="Salir"/>
             <Property name="toolTipText" type="java.lang.String" value="Salir (ESC)"/>
           </Properties>
-          <Events>
-            
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="190" y="20" width="110" height="30"/>
@@ -115,9 +106,6 @@
             <Property name="text" type="java.lang.String" value="Guardar"/>
             <Property name="toolTipText" type="java.lang.String" value="Guardar"/>
           </Properties>
-          <Events>
-            
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="80" y="20" width="110" height="30"/>
@@ -218,9 +206,6 @@
                   <StringArray count="0"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
             </Component>
             <Container class="javax.swing.JPanel" name="jPanel3">
               <Properties>
@@ -297,54 +282,36 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbClieModificar">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbClieNuevo">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nuevo"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbClieBorrar">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbClieVer">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbClieEnviar">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Enviar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbClientesPermiso">
                   <Properties>
@@ -437,45 +404,30 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbProveModificar">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbProveNuevo">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nuevo"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbProveBorrar">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbProveVer">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbProveePermiso">
                   <Properties>
@@ -572,63 +524,42 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbConfDatos">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Datos generales de la empresa"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbConfCorreos">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Correos electronicos"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbConfImpresoras">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Impresoras"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbconfSeries">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Series y consecutivos"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbConfConfiguraciones">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Configuraciones generales"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbConfCambiarIcono">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cambiar icono aplicaci&#xf3;n"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbConfiguracionesPermiso">
                   <Properties>
@@ -725,63 +656,42 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbAbrirCotiza">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="abrir"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbNuevaCotiza">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nueva"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCancelarCotiza">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cancelar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbVerCotiza">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbVentaCotiza">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Venta"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbReenviarCotiza">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Reenviar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCotizaPermiso">
                   <Properties>
@@ -896,99 +806,66 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCancelarCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cancelar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbDevolCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Devoluci&#xf3;n"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbParcialCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Parcial"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbNotCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Not. cr&#xe9;dito"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbVerCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbBorrarArchivoCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCargarArchivoCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cargar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbArchivoCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Archivo"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbRecibirCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Recibir orden"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbNuevoCompra">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nuevo"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbComprasPermiso">
                   <Properties>
@@ -1130,18 +1007,12 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbUsuarios">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Usuarios"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbDefinirUsr">
                   <Properties>
@@ -1150,9 +1021,6 @@
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbUsrConectados">
                   <Properties>
@@ -1160,9 +1028,6 @@
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbPermisosUsr">
                   <Properties>
@@ -1170,27 +1035,18 @@
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbClaves">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Claves"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbBaseDatos">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Base de datos"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbConexionesBD">
                   <Properties>
@@ -1199,9 +1055,6 @@
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbArchivoConf">
                   <Properties>
@@ -1209,18 +1062,12 @@
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbReparar">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Reparar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbReparador">
                   <Properties>
@@ -1229,9 +1076,6 @@
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbRestaurar">
                   <Properties>
@@ -1239,18 +1083,12 @@
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbReportes">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Reportes"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbRepUsuarios">
                   <Properties>
@@ -1259,9 +1097,6 @@
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbRepRespaldos">
                   <Properties>
@@ -1270,9 +1105,6 @@
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbRepLog">
                   <Properties>
@@ -1281,9 +1113,6 @@
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbRepEstadisticas">
                   <Properties>
@@ -1292,27 +1121,18 @@
                     <Property name="horizontalAlignment" type="int" value="11"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbRevocacion">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Revocaci&#xf3;n"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbActivar">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Activar sistema"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbSistemaPermiso">
                   <Properties>
@@ -1414,72 +1234,48 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbContabilidad">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Contabilidad"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbConceptos">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Conceptos notas de cr&#xe9;ditos"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCatalogo">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cat&#xe1;logo garant&#xed;as"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbZonas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Zonas"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbGiros">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Giros"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbMonedas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Monedas"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbImpuestos">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Impuestos"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbModulosPermiso">
                   <Properties>
@@ -1581,18 +1377,12 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbModificarProd">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Modificar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbProductos">
                   <Properties>
@@ -1602,27 +1392,18 @@
                     <Property name="text" type="java.lang.String" value="Productos"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbBorrarProd">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbNuevoProd">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nuevo"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbInventarioPermiso">
                   <Properties>
@@ -1638,9 +1419,6 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBoxListaPrecios">
                   <Properties>
@@ -1738,63 +1516,42 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbAbrirPrevio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="abrir"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbNuevaPrevio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nueva"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCancelarPrevio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cancelar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbVerPrevio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCompraPrevio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Compra"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbSeriesPrevio">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Series"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbPrevioPermiso">
                   <Properties>
@@ -1810,9 +1567,6 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1929,153 +1683,102 @@
                     <Property name="borderPainted" type="boolean" value="true"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCancelarVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cancelar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbDevolVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Devoluci&#xf3;n"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbParcialVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Parcial"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbNotVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Not. cr&#xe9;dito"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbVerVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbBorrarArchivoVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Borrar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbCargarArchivoVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cargar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbArchivoVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Ver Archivo"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbNuevaVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nueva"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbEnviarVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Enviar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbTimbrarVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Timbrar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbEntregarVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Entregar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbComprobarVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Comprobar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbAcuseVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Acuse"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbObtenerXmlVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Obtener XML"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbFacturarVentas">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Facturar"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jcbVentasPermiso">
                   <Properties>

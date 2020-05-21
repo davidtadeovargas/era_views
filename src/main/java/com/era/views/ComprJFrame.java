@@ -6,8 +6,10 @@ import javax.swing.table.TableRowSorter;
 
 public class ComprJFrame extends BaseJFrame 
 {
-    public ComprJFrame() 
-    {                                        
+    public ComprJFrame(final String idTextTitleWindow) 
+    {       
+        super(idTextTitleWindow);
+        
         initComponents();
                 
         javax.swing.ButtonGroup bG = new javax.swing.ButtonGroup();

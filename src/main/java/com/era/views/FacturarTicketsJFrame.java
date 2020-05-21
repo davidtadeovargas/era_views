@@ -4,7 +4,10 @@ public class FacturarTicketsJFrame extends BaseJFrame {
     
     
     
-    public FacturarTicketsJFrame() {
+    public FacturarTicketsJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+                
         initComponents();
         
         this.setLocationRelativeTo(null);

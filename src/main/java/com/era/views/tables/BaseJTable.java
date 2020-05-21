@@ -19,6 +19,8 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -49,6 +51,10 @@ public abstract class BaseJTable extends JTable {
         
         init();
     }
+    
+    public void setColumnWidth(int indexColumn, int width){
+        getColumnModel().getColumn(indexColumn).setPreferredWidth(width);
+    }    
     
     public BaseJTable(){
         super();
@@ -122,6 +128,14 @@ public abstract class BaseJTable extends JTable {
     
     public final void init(){
     
+        //Prevent that columns move
+        getTableHeader().setReorderingAllowed(false);
+        
+        //That table be ordered and when clic in the column also order the rows
+        /*final TableRowSorter trs = new TableRowSorter<>((DefaultTableModel) getModel());
+        setRowSorter(trs);
+        trs.setSortsOnUpdates(true);*/
+        
         //Double clic on the table
         addMouseListener(new MouseAdapter() {
             @Override
@@ -138,7 +152,14 @@ public abstract class BaseJTable extends JTable {
         //Listener for row selection
         getSelectionModel().addListSelectionListener((ListSelectionEvent lse) -> {
             if(ITableRowSelected!=null){
-                ITableRowSelected.onRowSelected(lse);
+                
+                //Get the selected model
+                final int selectedRow = this.getSelectedRow();                
+                BaseAbstractTableModel BaseAbstractTableModel = (BaseAbstractTableModel) this.getModel();
+                final Object Object = BaseAbstractTableModel.getItems().get(selectedRow);
+                
+                //Callback
+                ITableRowSelected.onRowSelected(lse,Object);
             }
         });
         
@@ -174,7 +195,7 @@ public abstract class BaseJTable extends JTable {
     
     public void clearRows(){
         
-        BaseAbstractTableModel model = (BaseAbstractTableModel)getModel();
+        BaseAbstractTableModel model = (BaseAbstractTableModel)this.getModel();
         model.clearRows();
     }
 
@@ -213,6 +234,11 @@ public abstract class BaseJTable extends JTable {
         final int row = this.getSelectedRow();
         final BaseAbstractTableModel BaseAbstractTableModel = (BaseAbstractTableModel)this.getModel();
         return BaseAbstractTableModel.getItem(row);
+    }
+    
+    public boolean isRowSelected(){
+        final int row = this.getSelectedRow();
+        return row != -1;
     }
     
     public List<?> getRowItems() {
@@ -287,7 +313,7 @@ public abstract class BaseJTable extends JTable {
     }
     
     public interface ITableRowSelected{
-        public void onRowSelected(final ListSelectionEvent lse);
+        public void onRowSelected(final ListSelectionEvent lse, Object Object);
     }
 
     public boolean isTableInitialized() {

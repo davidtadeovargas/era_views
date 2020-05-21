@@ -3,7 +3,10 @@ package com.era.views;
 public class DocumentosTimbradosJFrame extends BaseJFrame {
     
     
-    public DocumentosTimbradosJFrame() {
+    public DocumentosTimbradosJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

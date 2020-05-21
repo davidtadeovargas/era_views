@@ -4,7 +4,10 @@ package com.era.views;
 public class ConfigBancosJFrame extends BaseJFrame {
 
     
-    public ConfigBancosJFrame() {
+    public ConfigBancosJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
+        
         initComponents();        
     }
 

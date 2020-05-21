@@ -3,8 +3,10 @@ package com.era.views;
 
 public class SelCorrJFrame extends BaseJFrame
 {
-    public SelCorrJFrame() 
+    public SelCorrJFrame(final String idTextTitleWindow) 
     {           
+        super(idTextTitleWindow);
+        
         initComponents();
 
         

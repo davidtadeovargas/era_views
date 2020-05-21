@@ -8,7 +8,7 @@ public class BuscarDatoJFrame extends javax.swing.JDialog {
     private TableRowSorter<TableModel> rowSorter; 
     
     public BuscarDatoJFrame() {
-                
+              
         initComponents();
         rowSorter = new TableRowSorter<TableModel>(jTabClientes.getModel());
         jTabClientes.setRowSorter(rowSorter);

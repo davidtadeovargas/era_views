@@ -6,8 +6,10 @@ package com.era.views;
 
 public class NewNotProvJFrame extends BaseJFrame
 {        
-    public NewNotProvJFrame() 
-    {                                                               
+    public NewNotProvJFrame(final String idTextTitleWindow) 
+    {                                                     
+        super(idTextTitleWindow);
+        
         initComponents();
 
         jTab.setAutoResizeMode(0);

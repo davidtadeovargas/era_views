@@ -3,7 +3,9 @@ package com.era.views;
 //Login to system view
 public class LoginJFrame extends BaseJFrame {
                 
-    public LoginJFrame() {
+    public LoginJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         //Init graphic components
         initComponents();

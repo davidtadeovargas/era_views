@@ -11,8 +11,10 @@ import javax.swing.table.TableRowSorter;
 /*Clase para controlar los impues*/
 public class ImpsJFrame extends BaseJFrame
 {
-    public ImpsJFrame() 
+    public ImpsJFrame(final String idTextTitleWindow) 
     {        
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBNew);

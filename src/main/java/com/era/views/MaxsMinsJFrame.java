@@ -10,8 +10,10 @@ import javax.swing.table.TableRowSorter;
 
 public class MaxsMinsJFrame extends BaseJFrame
 {    
-    public MaxsMinsJFrame() 
+    public MaxsMinsJFrame(final String idTextTitleWindow) 
     {                        
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBNew);

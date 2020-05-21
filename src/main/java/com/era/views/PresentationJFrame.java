@@ -6,6 +6,8 @@ public class PresentationJFrame extends BaseJFrame {
     
     public PresentationJFrame() {
         
+        super("");
+        
         //Init graphics components
         initComponents();
     }

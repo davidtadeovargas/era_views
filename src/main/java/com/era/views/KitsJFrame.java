@@ -4,8 +4,10 @@ package com.era.views;
 public class KitsJFrame extends BaseJFrame 
 {
     
-    public KitsJFrame() 
+    public KitsJFrame(final String idTextTitleWindow) 
     {                                
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

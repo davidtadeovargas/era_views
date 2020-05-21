@@ -2,8 +2,9 @@ package com.era.views;
 
 public class PrevCompJFrame extends BaseJFrame 
 {
-    public PrevCompJFrame() 
+    public PrevCompJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);        
         
         initComponents();
         

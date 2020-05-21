@@ -9,9 +9,6 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
-  <Events>
-    
-  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -38,9 +35,6 @@
           <Dimension value="[1292, 300]"/>
         </Property>
       </Properties>
-      <Events>
-        
-      </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="10" y="11" width="1292" height="540"/>
@@ -91,9 +85,6 @@
                   <ComponentRef name="jButtonNueva"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="0" width="130" height="30"/>
@@ -121,9 +112,6 @@
                   <ComponentRef name="jBVer"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="30" width="130" height="30"/>
@@ -148,9 +136,6 @@
                 <Property name="toolTipText" type="java.lang.String" value="Abrir (es) (Ctrl+A)"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="60" width="130" height="30"/>
@@ -178,9 +163,6 @@
                   <ComponentRef name="jButtonFacturar"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="90" width="130" height="30"/>
@@ -208,9 +190,6 @@
                   <ComponentRef name="jButtonActualizar"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="150" width="130" height="30"/>
@@ -238,9 +217,6 @@
                   <ComponentRef name="jTablePedidos"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="240" width="130" height="30"/>
@@ -263,9 +239,6 @@
                   <ComponentRef name="jButtonCancelar"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="120" width="130" height="30"/>
@@ -293,9 +266,6 @@
                   <ComponentRef name="jButtonVerPDF"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="180" width="130" height="30"/>
@@ -324,9 +294,6 @@
                   <ComponentRef name="jButtonSalir"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="210" width="130" height="30"/>
@@ -368,9 +335,6 @@
               <ComponentRef name="jTablePartidas"/>
             </Property>
           </Properties>
-          <Events>
-            
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="1020" y="230" width="140" height="20"/>
@@ -390,9 +354,6 @@
               <ComponentRef name="jBMosT"/>
             </Property>
           </Properties>
-          <Events>
-            
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="160" y="230" width="860" height="20"/>
@@ -418,9 +379,6 @@
               <ComponentRef name="jTBusc"/>
             </Property>
           </Properties>
-          <Events>
-            
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="20" y="230" width="140" height="20"/>
@@ -447,9 +405,6 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Mostrar Tabla en Grande"/>
           </Properties>
-          <Events>
-            
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="30" width="10" height="20"/>
@@ -463,9 +418,6 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Mostrar Tabla en Grande"/>
           </Properties>
-          <Events>
-            
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="10" y="290" width="10" height="20"/>
@@ -489,9 +441,6 @@
               <ComponentRef name="jTablePedidos"/>
             </Property>
           </Properties>
-          <Events>
-            
-          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="1030" y="12" width="130" height="18"/>
@@ -724,9 +673,6 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
-                  <Events>
-                    
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -898,10 +844,6 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
-                  <Events>
-                    
-                    
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>

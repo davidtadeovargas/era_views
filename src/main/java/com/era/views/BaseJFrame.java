@@ -7,6 +7,8 @@ package com.era.views;
 
 import com.era.logger.LoggerUtility;
 import com.era.utilities.DialogPropertiesUitlity;
+import com.era.utilities.UtilitiesFactory;
+import com.era.views.dialogs.DialogsFactory;
 import com.era.views.utils.JComponentUtils;
 import java.awt.GraphicsEnvironment;
 import java.util.Properties;
@@ -17,6 +19,8 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import com.era.views.interfaces.OnJFrameVisible;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -31,28 +35,65 @@ public class BaseJFrame extends JFrame {
     protected JComponentUtils JComponentUtils = new JComponentUtils();
     protected OnJFrameVisible OnJFrameVisible;
     
+    protected String titleWindow;
     
     
-    public BaseJFrame(){                
+    
+    public BaseJFrame(final String idTextTitleWindow) {                
         
-        //Init
-        JComponentUtils.setJFrame(baseJFrame);
-        
-        //Set icon frame
-        JComponentUtils.setIconFrame();
-        
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
-        //When the jframe is visible
-        final ComponentListener listener = new ComponentAdapter() {
-            @Override
-            public void componentShown(ComponentEvent evt) {
-              if(OnJFrameVisible != null){
-                  OnJFrameVisible.onVisible();
-              }
+        try{
+            
+            //Get the correct properties string
+            if(idTextTitleWindow.isEmpty() || idTextTitleWindow == null){
+                titleWindow = "window_title_undefined";
             }
-        };
-        this.addComponentListener(listener);
+            final Properties props = DialogPropertiesUitlity.getSingleton().getProperties();                        
+            this.titleWindow = props.getProperty(idTextTitleWindow);
+
+            //Init
+            JComponentUtils.setJFrame(baseJFrame);
+
+            //Set icon frame
+            JComponentUtils.setIconFrame();
+
+            //When window is visible
+            this.OnJFrameVisible = () -> {
+
+                //Refresh the actual user            
+                String sessionString = UtilitiesFactory.getSingleton().getUsersUtility().getSessionString();
+                sessionString = titleWindow + ": " + sessionString;
+                setTitle(sessionString);                
+            };
+
+            //All windows by default dispose
+            this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+            //When the jframe is visible
+            final ComponentListener listener = new ComponentAdapter() {
+                @Override
+                public void componentShown(ComponentEvent evt) {
+                  if(OnJFrameVisible != null){
+                      OnJFrameVisible.onVisible();
+                  }
+                }
+            };
+            this.addComponentListener(listener);
+            
+        }catch (Exception ex) {
+            LoggerUtility.getSingleton().logError(BaseJFrame.class, ex);
+            try {
+                DialogsFactory.getSingleton().getExceptionDialog(baseJFrame, ex).show();
+            } catch (Exception ex1) {
+                Logger.getLogger(BaseJFrame.class.getName()).log(Level.SEVERE, null, ex1);
+            }
+        }
+    }
+    
+    public void disposeButton(final JButton JButton){
+        
+        JButton.addActionListener((java.awt.event.ActionEvent evt) -> {
+            dispose();
+        });
     }
     
     public void maximizedWindow(){

@@ -7,8 +7,10 @@ import javax.swing.table.TableRowSorter;
 public class CatalBancosJFrame extends BaseJFrame
 {
     
-    public CatalBancosJFrame() 
+    public CatalBancosJFrame(final String idTextTitleWindow) 
     {        
+        super(idTextTitleWindow);
+        
         initComponents();                
         
         this.getRootPane().setDefaultButton(jBNew);

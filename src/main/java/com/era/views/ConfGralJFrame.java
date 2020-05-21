@@ -2,8 +2,10 @@ package com.era.views;
 
 public class ConfGralJFrame extends BaseJFrame
 {
-    public ConfGralJFrame() 
+    public ConfGralJFrame(final String idTextTitleWindow) 
     {                
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBGuar);

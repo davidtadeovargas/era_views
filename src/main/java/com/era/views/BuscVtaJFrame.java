@@ -8,8 +8,10 @@ import javax.swing.table.TableRowSorter;
 
 public class BuscVtaJFrame extends javax.swing.JFrame
 {
-    public BuscVtaJFrame() 
+    public BuscVtaJFrame(final String idTextTitleWindow) 
     {           
+        super(idTextTitleWindow);
+        
         initComponents();
 
         this.setAlwaysOnTop(true);

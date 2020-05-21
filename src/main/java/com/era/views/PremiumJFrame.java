@@ -36,6 +36,8 @@ public class PremiumJFrame extends BaseJFrame {
      */
     public PremiumJFrame() {
         
+        super("");
+        
         setUndecorated(true);
         
         initComponents();               

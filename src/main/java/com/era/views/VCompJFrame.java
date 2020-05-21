@@ -4,8 +4,10 @@ package com.era.views;
 public class VCompJFrame extends BaseJFrame 
 {        
     
-    public VCompJFrame() 
+    public VCompJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
     }

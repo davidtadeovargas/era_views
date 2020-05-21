@@ -4,10 +4,11 @@ package com.era.views;
 public class NewVtaJFrame extends BaseJFrame
 {        
     
-    public NewVtaJFrame() {
+    public NewVtaJFrame(final String idTextTitleWindow) {
         
-		initComponents();
+        super(idTextTitleWindow);
         
+        initComponents();        
     }
             
         

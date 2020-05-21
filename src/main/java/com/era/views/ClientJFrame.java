@@ -3,7 +3,9 @@ package com.era.views;
 
 public class ClientJFrame extends BaseJFrame
 {   
-    public ClientJFrame() {               
+    public ClientJFrame(final String idTextTitleWindow) {               
+        
+        super(idTextTitleWindow);
         
         initComponents();
 

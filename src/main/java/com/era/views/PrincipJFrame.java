@@ -2,7 +2,9 @@ package com.era.views;
 
 public class PrincipJFrame extends BaseJFrame {    
     
-    public PrincipJFrame() {
+    public PrincipJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();                
         
@@ -3446,7 +3448,9 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMenItEstacsKeyPressed
         
     private void jMenItEstacsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenItEstacsActionPerformed
-                    
+    
+        
+        
     }//GEN-LAST:event_jMenItEstacsActionPerformed
         
     private void jMenLoginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenLoginKeyPressed

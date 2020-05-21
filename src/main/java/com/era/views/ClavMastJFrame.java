@@ -4,8 +4,10 @@ package com.era.views;
 
 public class ClavMastJFrame extends BaseJFrame
 {
-    public ClavMastJFrame() 
+    public ClavMastJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         this.setAlwaysOnTop(true);
         
         initComponents();               

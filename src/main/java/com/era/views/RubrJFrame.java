@@ -6,8 +6,10 @@ import javax.swing.table.TableRowSorter;
 
 public class RubrJFrame extends BaseJFrame
 {
-    public RubrJFrame() 
+    public RubrJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBNew);

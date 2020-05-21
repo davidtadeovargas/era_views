@@ -3,8 +3,10 @@ package com.era.views;
 
 public class VVtasJFrame extends BaseJFrame 
 {
-    public VVtasJFrame() 
+    public VVtasJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         

@@ -4,7 +4,9 @@ package com.era.views;
 public class SalidaEntradaJFrame extends BaseJFrame {
     
         
-    public SalidaEntradaJFrame() {
+    public SalidaEntradaJFrame(final String idTextTitleWindow) {
+        
+        super(idTextTitleWindow);
         
         initComponents();
         

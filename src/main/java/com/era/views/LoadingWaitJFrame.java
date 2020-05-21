@@ -21,6 +21,8 @@ public class LoadingWaitJFrame extends javax.swing.JFrame {
      */
     protected LoadingWaitJFrame() {
         
+        super("");
+        
         setUndecorated(true);
         
         initComponents();

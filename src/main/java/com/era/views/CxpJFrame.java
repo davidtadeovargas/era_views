@@ -8,8 +8,10 @@ import javax.swing.table.TableRowSorter;
 
 public class CxpJFrame extends javax.swing.JFrame 
 {
-    public CxpJFrame() 
+    public CxpJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         jTab1.getColumnModel().getColumn(17).setMinWidth(0);

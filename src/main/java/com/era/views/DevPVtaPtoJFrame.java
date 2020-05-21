@@ -8,8 +8,10 @@ import javax.swing.table.TableRowSorter;
 
 public class DevPVtaPtoJFrame extends BaseJFrame 
 {
-    public DevPVtaPtoJFrame() 
+    public DevPVtaPtoJFrame(final String idTextTitleWindow) 
     {
+        super(idTextTitleWindow);
+        
         initComponents();
         
         this.getRootPane().setDefaultButton(jBDev);
