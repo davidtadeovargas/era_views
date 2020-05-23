@@ -8,12 +8,8 @@ public class PrincipJFrame extends BaseJFrame {
         
         initComponents();                
         
-        jMContra.setVisible(false);
-        jMTabCompa.setVisible(false);
         jMenMaxsMins.setVisible(false);
-        jMCosts.setVisible(false);
                                                                 
-        this.jMenCatGral.setVisible(false);
         jMenItTipsPags.setVisible(false);        
         
         this.maximizedWindow();
@@ -54,87 +50,26 @@ public class PrincipJFrame extends BaseJFrame {
         jMenItCamEmp = new javax.swing.JMenuItem();
         jMMUsr = new javax.swing.JMenu();
         jMenItEstacs = new javax.swing.JMenuItem();
-        jMUsr = new javax.swing.JMenuItem();
         jMenItPermEstacs = new javax.swing.JMenuItem();
-        jMen2 = new javax.swing.JMenu();
-        jMenItCambClavSeg = new javax.swing.JMenuItem();
-        jMMAplic = new javax.swing.JMenu();
-        jMCarpAp = new javax.swing.JMenuItem();
-        jMCatMsj = new javax.swing.JMenuItem();
-        jMMsj = new javax.swing.JMenuItem();
-        jMChatC = new javax.swing.JMenuItem();
-        jMChat = new javax.swing.JMenuItem();
-        jMNotic = new javax.swing.JMenuItem();
-        jMForLin = new javax.swing.JMenuItem();
         jMenLogs = new javax.swing.JMenu();
         jMenItLogCorr = new javax.swing.JMenuItem();
-        jMLogRes = new javax.swing.JMenuItem();
         jMLogSis = new javax.swing.JMenu();
         jMVLogSys = new javax.swing.JMenuItem();
         jMDelLog = new javax.swing.JMenuItem();
-        jMMLogR = new javax.swing.JMenu();
         jMLogProd = new javax.swing.JMenuItem();
-        jMLogK = new javax.swing.JMenuItem();
-        jMLogLin = new javax.swing.JMenuItem();
-        jMLogMarc = new javax.swing.JMenuItem();
-        jMLogFab = new javax.swing.JMenuItem();
-        jMLogColo = new javax.swing.JMenuItem();
-        jMLogClas = new javax.swing.JMenuItem();
-        jMLogPes = new javax.swing.JMenuItem();
-        jMLogMed = new javax.swing.JMenuItem();
-        jMLogUnid = new javax.swing.JMenuItem();
-        jMLogMon = new javax.swing.JMenuItem();
-        jMLogImpu = new javax.swing.JMenuItem();
-        jMLogConcep = new javax.swing.JMenuItem();
-        jMLogAlma = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMLogLug = new javax.swing.JMenuItem();
-        jMLogUbiE = new javax.swing.JMenuItem();
-        jMLogMod = new javax.swing.JMenuItem();
-        jMLogTall = new javax.swing.JMenuItem();
-        jMLogTip = new javax.swing.JMenuItem();
-        jMLogCatAct = new javax.swing.JMenuItem();
-        jMLogActFij = new javax.swing.JMenuItem();
-        jMLogCatGral = new javax.swing.JMenuItem();
-        jMLogClasCli = new javax.swing.JMenuItem();
-        jMLogClasProv = new javax.swing.JMenuItem();
-        jMLogConcepNot = new javax.swing.JMenuItem();
-        jMLogGara = new javax.swing.JMenuItem();
-        jMLogGir = new javax.swing.JMenuItem();
-        jMLogZon = new javax.swing.JMenuItem();
-        jMLogConcepPags = new javax.swing.JMenuItem();
         jMenBDs = new javax.swing.JMenu();
-        jMenItModBD = new javax.swing.JMenuItem();
         jMenConfigFil = new javax.swing.JMenuItem();
         jMMRep = new javax.swing.JMenu();
         jMEstacs = new javax.swing.JMenuItem();
         jMResp = new javax.swing.JMenuItem();
-        jMRepLogCo = new javax.swing.JMenuItem();
-        jMEstadisCor = new javax.swing.JMenuItem();
-        jMMUtil = new javax.swing.JMenu();
-        jMEnviA = new javax.swing.JMenuItem();
-        jMArchC = new javax.swing.JMenuItem();
-        jMCuade = new javax.swing.JMenuItem();
-        jMApFav = new javax.swing.JMenuItem();
-        jMCalc = new javax.swing.JMenuItem();
-        jMEasCon = new javax.swing.JMenuItem();
-        jMRevo = new javax.swing.JMenuItem();
-        jMActSis = new javax.swing.JMenuItem();
-        jMenItResps = new javax.swing.JMenuItem();
-        jMenIActualizacion = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenItSal = new javax.swing.JMenuItem();
         jMenInvents = new javax.swing.JMenu();
         jMenComps = new javax.swing.JMenu();
         jMenItManProvs = new javax.swing.JMenuItem();
-        jMClasProv = new javax.swing.JMenuItem();
-        jMRubr = new javax.swing.JMenuItem();
-        jMClasJerP = new javax.swing.JMenuItem();
         jMenItComps = new javax.swing.JMenuItem();
         jMCXP = new javax.swing.JMenuItem();
-        jMContra = new javax.swing.JMenuItem();
         jMImpProvs = new javax.swing.JMenuItem();
-        jMExpoProvs = new javax.swing.JMenuItem();
         jMPrevioComp = new javax.swing.JMenuItem();
         jMMRepCom = new javax.swing.JMenu();
         jMRepProv = new javax.swing.JMenuItem();
@@ -146,33 +81,21 @@ public class PrincipJFrame extends BaseJFrame {
         jMVProd = new javax.swing.JMenuItem();
         jMenItKits = new javax.swing.JMenuItem();
         jMLotPed = new javax.swing.JMenuItem();
-        jMTallCol = new javax.swing.JMenuItem();
-        jMenuMarcMod = new javax.swing.JMenuItem();
-        jMTabCompa = new javax.swing.JMenuItem();
         jMenItConceps = new javax.swing.JMenuItem();
         jMMInvenImpor = new javax.swing.JMenu();
         jMInvenImpo = new javax.swing.JMenuItem();
-        jMInvenImpoSer = new javax.swing.JMenuItem();
         jMImpExistAlm = new javax.swing.JMenuItem();
         jMImpAlma = new javax.swing.JMenuItem();
-        jMMInvenExpor = new javax.swing.JMenu();
-        jMInvenExpor = new javax.swing.JMenuItem();
-        jMExpoSer = new javax.swing.JMenuItem();
-        jMExpExisAlm = new javax.swing.JMenuItem();
-        jMExpAlma = new javax.swing.JMenuItem();
         jMMClas = new javax.swing.JMenu();
         jMenIt1 = new javax.swing.JMenuItem();
         jMTip = new javax.swing.JMenuItem();
         jMenItMarcs = new javax.swing.JMenuItem();
         jMenItFabs = new javax.swing.JMenuItem();
         jMenItCols = new javax.swing.JMenuItem();
-        jMClasProd = new javax.swing.JMenuItem();
-        jMJeraProd = new javax.swing.JMenuItem();
         jMenItPesos = new javax.swing.JMenuItem();
         jMenItMeds = new javax.swing.JMenuItem();
         jMenItUnids = new javax.swing.JMenuItem();
         jMModel = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenMaxsMins = new javax.swing.JMenu();
         jMenItProdsBajMin = new javax.swing.JMenuItem();
         jMenItProdsArrMax = new javax.swing.JMenuItem();
@@ -189,13 +112,10 @@ public class PrincipJFrame extends BaseJFrame {
         jMenItLugs = new javax.swing.JMenuItem();
         jMUbiAd = new javax.swing.JMenuItem();
         jMMRepProd = new javax.swing.JMenu();
-        jMCosts = new javax.swing.JMenuItem();
         jMenProds = new javax.swing.JMenuItem();
         jMKard = new javax.swing.JMenuItem();
         jMenVtas = new javax.swing.JMenu();
         jMMClien = new javax.swing.JMenuItem();
-        jMClasCli = new javax.swing.JMenuItem();
-        jMClasJer = new javax.swing.JMenuItem();
         jMenItVtas = new javax.swing.JMenuItem();
         jMenuItemRemisiones = new javax.swing.JMenuItem();
         jMenCotsT = new javax.swing.JMenuItem();
@@ -203,10 +123,8 @@ public class PrincipJFrame extends BaseJFrame {
         jMenItTipsPags = new javax.swing.JMenuItem();
         jMConcepPags = new javax.swing.JMenuItem();
         jMCXC = new javax.swing.JMenuItem();
-        jMenCatGral = new javax.swing.JMenuItem();
         jMenItTouch = new javax.swing.JMenuItem();
         jMImpCliens = new javax.swing.JMenuItem();
-        jMExpoCliens = new javax.swing.JMenuItem();
         jMMRepVta = new javax.swing.JMenu();
         jMRepCli = new javax.swing.JMenuItem();
         jMenVtasR = new javax.swing.JMenuItem();
@@ -214,23 +132,13 @@ public class PrincipJFrame extends BaseJFrame {
         jMRepCot = new javax.swing.JMenuItem();
         jMRepVend = new javax.swing.JMenuItem();
         jMFluj = new javax.swing.JMenuItem();
-        jMRepBackO = new javax.swing.JMenuItem();
-        jMAsoc = new javax.swing.JMenuItem();
         jMActivos = new javax.swing.JMenu();
         jMZon = new javax.swing.JMenuItem();
         jMSucursal = new javax.swing.JMenuItem();
         jMClasificacion = new javax.swing.JMenuItem();
         jMResponsable = new javax.swing.JMenuItem();
         jMActivo = new javax.swing.JMenuItem();
-        jMConta = new javax.swing.JMenu();
-        jMActFij = new javax.swing.JMenuItem();
-        jMCatActFij = new javax.swing.JMenuItem();
-        jMTipAct = new javax.swing.JMenuItem();
-        jMRepConta = new javax.swing.JMenuItem();
         jMConcepNot = new javax.swing.JMenuItem();
-        jMFlujAct = new javax.swing.JMenuItem();
-        jMCatGara = new javax.swing.JMenuItem();
-        jMGir = new javax.swing.JMenuItem();
         jMenItMons = new javax.swing.JMenuItem();
         jMeItImps = new javax.swing.JMenuItem();
         jMICuentaContable = new javax.swing.JMenuItem();
@@ -240,9 +148,7 @@ public class PrincipJFrame extends BaseJFrame {
         jMenItDatsGenEmp = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenItImpres = new javax.swing.JMenuItem();
-        jMenCambIco = new javax.swing.JMenuItem();
         jMConfAd = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
         jMMAyu = new javax.swing.JMenu();
         jMAcerc = new javax.swing.JMenuItem();
 
@@ -766,20 +672,6 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMMUsr.add(jMenItEstacs);
 
-        jMUsr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/usrcon.png"))); // NOI18N
-        jMUsr.setText("Usuarios conectados");
-        jMUsr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMUsrActionPerformed(evt);
-            }
-        });
-        jMUsr.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMUsrKeyPressed(evt);
-            }
-        });
-        jMMUsr.add(jMUsr);
-
         jMenItPermEstacs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/permusr.png"))); // NOI18N
         jMenItPermEstacs.setMnemonic('p');
         jMenItPermEstacs.setText("Permisos usuarios");
@@ -791,146 +683,6 @@ public class PrincipJFrame extends BaseJFrame {
         jMMUsr.add(jMenItPermEstacs);
 
         jMMSis.add(jMMUsr);
-
-        jMen2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/contra.png"))); // NOI18N
-        jMen2.setMnemonic('l');
-        jMen2.setText("Claves");
-        jMen2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMen2KeyPressed(evt);
-            }
-        });
-
-        jMenItCambClavSeg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cambclav.png"))); // NOI18N
-        jMenItCambClavSeg.setMnemonic('c');
-        jMenItCambClavSeg.setText("Cambiar clave de seguridad");
-        jMenItCambClavSeg.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenItCambClavSegActionPerformed(evt);
-            }
-        });
-        jMenItCambClavSeg.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMenItCambClavSegKeyPressed(evt);
-            }
-        });
-        jMen2.add(jMenItCambClavSeg);
-
-        jMMSis.add(jMen2);
-
-        jMMAplic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/aplica.png"))); // NOI18N
-        jMMAplic.setMnemonic('a');
-        jMMAplic.setText("Aplicación");
-        jMMAplic.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMMAplicKeyPressed(evt);
-            }
-        });
-
-        jMCarpAp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dirap.png"))); // NOI18N
-        jMCarpAp.setMnemonic('c');
-        jMCarpAp.setText("Directorio aplicación");
-        jMCarpAp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMCarpApActionPerformed(evt);
-            }
-        });
-        jMCarpAp.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMCarpApKeyPressed(evt);
-            }
-        });
-        jMMAplic.add(jMCarpAp);
-
-        jMCatMsj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/catmens2.png"))); // NOI18N
-        jMCatMsj.setText("Catálogo de mensajes");
-        jMCatMsj.setToolTipText("a");
-        jMCatMsj.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMCatMsjActionPerformed(evt);
-            }
-        });
-        jMCatMsj.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMCatMsjKeyPressed(evt);
-            }
-        });
-        jMMAplic.add(jMCatMsj);
-
-        jMMsj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/msjs.png"))); // NOI18N
-        jMMsj.setMnemonic('m');
-        jMMsj.setText("Mensajes");
-        jMMsj.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMMsjActionPerformed(evt);
-            }
-        });
-        jMMsj.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMMsjKeyPressed(evt);
-            }
-        });
-        jMMAplic.add(jMMsj);
-
-        jMChatC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/chatcorp.png"))); // NOI18N
-        jMChatC.setMnemonic('h');
-        jMChatC.setText("Easy message");
-        jMChatC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMChatCActionPerformed(evt);
-            }
-        });
-        jMChatC.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMChatCKeyPressed(evt);
-            }
-        });
-        jMMAplic.add(jMChatC);
-
-        jMChat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cht.png"))); // NOI18N
-        jMChat.setMnemonic('t');
-        jMChat.setText("Easy talk");
-        jMChat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMChatActionPerformed(evt);
-            }
-        });
-        jMChat.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMChatKeyPressed(evt);
-            }
-        });
-        jMMAplic.add(jMChat);
-
-        jMNotic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/news.png"))); // NOI18N
-        jMNotic.setText("Avisos y noticias");
-        jMNotic.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMNoticActionPerformed(evt);
-            }
-        });
-        jMNotic.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMNoticKeyPressed(evt);
-            }
-        });
-        jMMAplic.add(jMNotic);
-
-        jMForLin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/forlin.png"))); // NOI18N
-        jMForLin.setText("Foro en línea");
-        jMForLin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMForLinActionPerformed(evt);
-            }
-        });
-        jMForLin.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMForLinKeyPressed(evt);
-            }
-        });
-        jMMAplic.add(jMForLin);
-
-        jMMSis.add(jMMAplic);
 
         jMenLogs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log.png"))); // NOI18N
         jMenLogs.setMnemonic('g');
@@ -955,21 +707,6 @@ public class PrincipJFrame extends BaseJFrame {
             }
         });
         jMenLogs.add(jMenItLogCorr);
-
-        jMLogRes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logresp.png"))); // NOI18N
-        jMLogRes.setMnemonic('r');
-        jMLogRes.setText("Log respaldos");
-        jMLogRes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogResActionPerformed(evt);
-            }
-        });
-        jMLogRes.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogResKeyPressed(evt);
-            }
-        });
-        jMenLogs.add(jMLogRes);
 
         jMLogSis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logsist.png"))); // NOI18N
         jMLogSis.setMnemonic('g');
@@ -1012,15 +749,6 @@ public class PrincipJFrame extends BaseJFrame {
 
         jMenLogs.add(jMLogSis);
 
-        jMMLogR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/lograst.png"))); // NOI18N
-        jMMLogR.setMnemonic('o');
-        jMMLogR.setText("Logs rastreo");
-        jMMLogR.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMMLogRKeyPressed(evt);
-            }
-        });
-
         jMLogProd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
         jMLogProd.setMnemonic('l');
         jMLogProd.setText("Log productos");
@@ -1034,433 +762,7 @@ public class PrincipJFrame extends BaseJFrame {
                 jMLogProdKeyPressed(evt);
             }
         });
-        jMMLogR.add(jMLogProd);
-
-        jMLogK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogK.setMnemonic('o');
-        jMLogK.setText("Log kits");
-        jMLogK.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogKActionPerformed(evt);
-            }
-        });
-        jMLogK.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogKKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogK);
-
-        jMLogLin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogLin.setMnemonic('o');
-        jMLogLin.setText("Log líneas");
-        jMLogLin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogLinActionPerformed(evt);
-            }
-        });
-        jMLogLin.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogLinKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogLin);
-
-        jMLogMarc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogMarc.setMnemonic('m');
-        jMLogMarc.setText("Log marcas");
-        jMLogMarc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogMarcActionPerformed(evt);
-            }
-        });
-        jMLogMarc.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogMarcKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogMarc);
-
-        jMLogFab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogFab.setMnemonic('f');
-        jMLogFab.setText("Log fabricantes");
-        jMLogFab.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogFabActionPerformed(evt);
-            }
-        });
-        jMLogFab.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogFabKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogFab);
-
-        jMLogColo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogColo.setMnemonic('c');
-        jMLogColo.setText("Log colores");
-        jMLogColo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogColoActionPerformed(evt);
-            }
-        });
-        jMLogColo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogColoKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogColo);
-
-        jMLogClas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogClas.setMnemonic('a');
-        jMLogClas.setText("Log clasificación extra productos");
-        jMLogClas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogClasActionPerformed(evt);
-            }
-        });
-        jMLogClas.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogClasKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogClas);
-
-        jMLogPes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogPes.setMnemonic('p');
-        jMLogPes.setText("Log pesos");
-        jMLogPes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogPesActionPerformed(evt);
-            }
-        });
-        jMLogPes.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogPesKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogPes);
-
-        jMLogMed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogMed.setMnemonic('m');
-        jMLogMed.setText("Log medidas");
-        jMLogMed.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogMedActionPerformed(evt);
-            }
-        });
-        jMLogMed.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogMedKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogMed);
-
-        jMLogUnid.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogUnid.setMnemonic('u');
-        jMLogUnid.setText("Log unidades");
-        jMLogUnid.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogUnidActionPerformed(evt);
-            }
-        });
-        jMLogUnid.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogUnidKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogUnid);
-
-        jMLogMon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogMon.setMnemonic('m');
-        jMLogMon.setText("Log monedas");
-        jMLogMon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogMonActionPerformed(evt);
-            }
-        });
-        jMLogMon.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogMonKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogMon);
-
-        jMLogImpu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogImpu.setMnemonic('i');
-        jMLogImpu.setText("Log impuestos");
-        jMLogImpu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogImpuActionPerformed(evt);
-            }
-        });
-        jMLogImpu.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogImpuKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogImpu);
-
-        jMLogConcep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogConcep.setMnemonic('o');
-        jMLogConcep.setText("Log conceptos");
-        jMLogConcep.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogConcepActionPerformed(evt);
-            }
-        });
-        jMLogConcep.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogConcepKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogConcep);
-
-        jMLogAlma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogAlma.setMnemonic('l');
-        jMLogAlma.setText("Log almacenes");
-        jMLogAlma.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogAlmaActionPerformed(evt);
-            }
-        });
-        jMLogAlma.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogAlmaKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogAlma);
-
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMenuItem1.setMnemonic('q');
-        jMenuItem1.setText("Log anaqueles");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenuItem1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMenuItem1KeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMenuItem1);
-
-        jMLogLug.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogLug.setMnemonic('g');
-        jMLogLug.setText("Log lugares");
-        jMLogLug.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogLugActionPerformed(evt);
-            }
-        });
-        jMLogLug.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogLugKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogLug);
-
-        jMLogUbiE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogUbiE.setMnemonic('c');
-        jMLogUbiE.setText("Log ubicaciones extra");
-        jMLogUbiE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogUbiEActionPerformed(evt);
-            }
-        });
-        jMLogUbiE.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogUbiEKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogUbiE);
-
-        jMLogMod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogMod.setMnemonic('o');
-        jMLogMod.setText("Log modelos");
-        jMLogMod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogModActionPerformed(evt);
-            }
-        });
-        jMLogMod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogModKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogMod);
-
-        jMLogTall.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogTall.setMnemonic('l');
-        jMLogTall.setText("Log tallas");
-        jMLogTall.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogTallActionPerformed(evt);
-            }
-        });
-        jMLogTall.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogTallKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogTall);
-
-        jMLogTip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogTip.setText("Log tipos");
-        jMLogTip.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogTipActionPerformed(evt);
-            }
-        });
-        jMLogTip.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogTipKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogTip);
-
-        jMLogCatAct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogCatAct.setText("Log catálogo activo fijo");
-        jMLogCatAct.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogCatActActionPerformed(evt);
-            }
-        });
-        jMLogCatAct.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogCatActKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogCatAct);
-
-        jMLogActFij.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogActFij.setText("Log tipo activo fijo");
-        jMLogActFij.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogActFijActionPerformed(evt);
-            }
-        });
-        jMLogActFij.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogActFijKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogActFij);
-
-        jMLogCatGral.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogCatGral.setText("Log catálogo general");
-        jMLogCatGral.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogCatGralActionPerformed(evt);
-            }
-        });
-        jMLogCatGral.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogCatGralKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogCatGral);
-
-        jMLogClasCli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogClasCli.setText("Log clasificación clientes");
-        jMLogClasCli.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogClasCliActionPerformed(evt);
-            }
-        });
-        jMLogClasCli.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogClasCliKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogClasCli);
-
-        jMLogClasProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogClasProv.setText("Log clasificación proveedores");
-        jMLogClasProv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogClasProvActionPerformed(evt);
-            }
-        });
-        jMLogClasProv.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogClasProvKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogClasProv);
-
-        jMLogConcepNot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogConcepNot.setText("Log conceptos nota de crédito");
-        jMLogConcepNot.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogConcepNotActionPerformed(evt);
-            }
-        });
-        jMLogConcepNot.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogConcepNotKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogConcepNot);
-
-        jMLogGara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogGara.setText("Log garantías");
-        jMLogGara.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogGaraActionPerformed(evt);
-            }
-        });
-        jMLogGara.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogGaraKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogGara);
-
-        jMLogGir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogGir.setText("Log giros");
-        jMLogGir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogGirActionPerformed(evt);
-            }
-        });
-        jMLogGir.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogGirKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogGir);
-
-        jMLogZon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogZon.setText("Log zonas");
-        jMLogZon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogZonActionPerformed(evt);
-            }
-        });
-        jMLogZon.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogZonKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogZon);
-
-        jMLogConcepPags.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
-        jMLogConcepPags.setText("Log concepto pagos");
-        jMLogConcepPags.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMLogConcepPagsActionPerformed(evt);
-            }
-        });
-        jMLogConcepPags.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMLogConcepPagsKeyPressed(evt);
-            }
-        });
-        jMMLogR.add(jMLogConcepPags);
-
-        jMenLogs.add(jMMLogR);
+        jMenLogs.add(jMLogProd);
 
         jMMSis.add(jMenLogs);
 
@@ -1472,21 +774,6 @@ public class PrincipJFrame extends BaseJFrame {
                 jMenBDsKeyPressed(evt);
             }
         });
-
-        jMenItModBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/conect.png"))); // NOI18N
-        jMenItModBD.setMnemonic('m');
-        jMenItModBD.setText("Conexiones a bases de datos");
-        jMenItModBD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenItModBDActionPerformed(evt);
-            }
-        });
-        jMenItModBD.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMenItModBDKeyPressed(evt);
-            }
-        });
-        jMenBDs.add(jMenItModBD);
 
         jMenConfigFil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/archconfg.png"))); // NOI18N
         jMenConfigFil.setMnemonic('a');
@@ -1543,181 +830,7 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMMRep.add(jMResp);
 
-        jMRepLogCo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/replogcor.png"))); // NOI18N
-        jMRepLogCo.setMnemonic('l');
-        jMRepLogCo.setText("Log correos");
-        jMRepLogCo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMRepLogCoActionPerformed(evt);
-            }
-        });
-        jMRepLogCo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMRepLogCoKeyPressed(evt);
-            }
-        });
-        jMMRep.add(jMRepLogCo);
-
-        jMEstadisCor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/replogcor.png"))); // NOI18N
-        jMEstadisCor.setText("Estadísticas de correo");
-        jMEstadisCor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMEstadisCorActionPerformed(evt);
-            }
-        });
-        jMEstadisCor.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMEstadisCorKeyPressed(evt);
-            }
-        });
-        jMMRep.add(jMEstadisCor);
-
         jMMSis.add(jMMRep);
-
-        jMMUtil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/util.png"))); // NOI18N
-        jMMUtil.setText("Utilerías");
-        jMMUtil.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMMUtilKeyPressed(evt);
-            }
-        });
-
-        jMEnviA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/env.png"))); // NOI18N
-        jMEnviA.setMnemonic('e');
-        jMEnviA.setText("Enviar/Descargar archivo(s)");
-        jMEnviA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMEnviAActionPerformed(evt);
-            }
-        });
-        jMEnviA.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMEnviAKeyPressed(evt);
-            }
-        });
-        jMMUtil.add(jMEnviA);
-
-        jMArchC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/archcomp.png"))); // NOI18N
-        jMArchC.setMnemonic('h');
-        jMArchC.setText("Easy drive");
-        jMArchC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMArchCActionPerformed(evt);
-            }
-        });
-        jMArchC.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMArchCKeyPressed(evt);
-            }
-        });
-        jMMUtil.add(jMArchC);
-
-        jMCuade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cuade.png"))); // NOI18N
-        jMCuade.setMnemonic('u');
-        jMCuade.setText("Cuaderno");
-        jMCuade.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMCuadeActionPerformed(evt);
-            }
-        });
-        jMCuade.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMCuadeKeyPressed(evt);
-            }
-        });
-        jMMUtil.add(jMCuade);
-
-        jMApFav.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/apfav.png"))); // NOI18N
-        jMApFav.setMnemonic('a');
-        jMApFav.setText("Aplicación favorita");
-        jMApFav.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMApFavActionPerformed(evt);
-            }
-        });
-        jMApFav.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMApFavKeyPressed(evt);
-            }
-        });
-        jMMUtil.add(jMApFav);
-
-        jMCalc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/calc.png"))); // NOI18N
-        jMCalc.setMnemonic('c');
-        jMCalc.setText("Calculadora");
-        jMCalc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMCalcActionPerformed(evt);
-            }
-        });
-        jMCalc.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMCalcKeyPressed(evt);
-            }
-        });
-        jMMUtil.add(jMCalc);
-
-        jMEasCon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/easyconve.png"))); // NOI18N
-        jMEasCon.setText("Easy convertidor");
-        jMEasCon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMEasConActionPerformed(evt);
-            }
-        });
-        jMEasCon.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMEasConKeyPressed(evt);
-            }
-        });
-        jMMUtil.add(jMEasCon);
-
-        jMMSis.add(jMMUtil);
-
-        jMRevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/revosis.png"))); // NOI18N
-        jMRevo.setText("Revocación");
-        jMRevo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMRevoActionPerformed(evt);
-            }
-        });
-        jMRevo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMRevoKeyPressed(evt);
-            }
-        });
-        jMMSis.add(jMRevo);
-
-        jMActSis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actsis.png"))); // NOI18N
-        jMActSis.setText("Activar sistema");
-        jMActSis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMActSisActionPerformed(evt);
-            }
-        });
-        jMActSis.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMActSisKeyPressed(evt);
-            }
-        });
-        jMMSis.add(jMActSis);
-
-        jMenItResps.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/respal.png"))); // NOI18N
-        jMenItResps.setMnemonic('s');
-        jMenItResps.setText("Respaldos");
-        jMenItResps.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenItRespsActionPerformed(evt);
-            }
-        });
-        jMenItResps.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMenItRespsKeyPressed(evt);
-            }
-        });
-        jMMSis.add(jMenItResps);
-
-        jMenIActualizacion.setText("Actualización");
-        jMMSis.add(jMenIActualizacion);
 
         jMenuItem6.setText("Cerrar Sesión");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
@@ -1777,49 +890,6 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMenComps.add(jMenItManProvs);
 
-        jMClasProv.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/clasifs.png"))); // NOI18N
-        jMClasProv.setMnemonic('l');
-        jMClasProv.setText("Clasificaciones proveedores");
-        jMClasProv.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMClasProvActionPerformed(evt);
-            }
-        });
-        jMClasProv.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMClasProvKeyPressed(evt);
-            }
-        });
-        jMenComps.add(jMClasProv);
-
-        jMRubr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/clasrub.png"))); // NOI18N
-        jMRubr.setText("Clasificaciones rubro");
-        jMRubr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMRubrActionPerformed(evt);
-            }
-        });
-        jMRubr.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMRubrKeyPressed(evt);
-            }
-        });
-        jMenComps.add(jMRubr);
-
-        jMClasJerP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/clasjeraprov.png"))); // NOI18N
-        jMClasJerP.setText("Clasificaciones jerárquicas");
-        jMClasJerP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMClasJerPActionPerformed(evt);
-            }
-        });
-        jMClasJerP.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMClasJerPKeyPressed(evt);
-            }
-        });
-        jMenComps.add(jMClasJerP);
-
         jMenItComps.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, 0));
         jMenItComps.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ordcom.png"))); // NOI18N
         jMenItComps.setMnemonic('c');
@@ -1851,21 +921,6 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMenComps.add(jMCXP);
 
-        jMContra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/contracu.png"))); // NOI18N
-        jMContra.setMnemonic('c');
-        jMContra.setText("Contra recibos");
-        jMContra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMContraActionPerformed(evt);
-            }
-        });
-        jMContra.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMContraKeyPressed(evt);
-            }
-        });
-        jMenComps.add(jMContra);
-
         jMImpProvs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impexe.png"))); // NOI18N
         jMImpProvs.setText("Importar catálogo de proveedores desde excel");
         jMImpProvs.addActionListener(new java.awt.event.ActionListener() {
@@ -1879,20 +934,6 @@ public class PrincipJFrame extends BaseJFrame {
             }
         });
         jMenComps.add(jMImpProvs);
-
-        jMExpoProvs.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/expexe.png"))); // NOI18N
-        jMExpoProvs.setText("Exportar catálogo de proveedores a excel");
-        jMExpoProvs.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMExpoProvsActionPerformed(evt);
-            }
-        });
-        jMExpoProvs.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMExpoProvsKeyPressed(evt);
-            }
-        });
-        jMenComps.add(jMExpoProvs);
 
         jMPrevioComp.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, 0));
         jMPrevioComp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/Prevcom.png"))); // NOI18N
@@ -2039,50 +1080,6 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMInven.add(jMLotPed);
 
-        jMTallCol.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/tallcol.png"))); // NOI18N
-        jMTallCol.setMnemonic('t');
-        jMTallCol.setText("Tallas y colores");
-        jMTallCol.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMTallColActionPerformed(evt);
-            }
-        });
-        jMTallCol.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMTallColKeyPressed(evt);
-            }
-        });
-        jMInven.add(jMTallCol);
-
-        jMenuMarcMod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/modmarc.png"))); // NOI18N
-        jMenuMarcMod.setText("Marcas y modelos");
-        jMenuMarcMod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuMarcModActionPerformed(evt);
-            }
-        });
-        jMenuMarcMod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMenuMarcModKeyPressed(evt);
-            }
-        });
-        jMInven.add(jMenuMarcMod);
-
-        jMTabCompa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/tabcompa.png"))); // NOI18N
-        jMTabCompa.setMnemonic('v');
-        jMTabCompa.setText("Ver tabla de compatibilidades");
-        jMTabCompa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMTabCompaActionPerformed(evt);
-            }
-        });
-        jMTabCompa.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMTabCompaKeyPressed(evt);
-            }
-        });
-        jMInven.add(jMTabCompa);
-
         jMenItConceps.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/conceps.png"))); // NOI18N
         jMenItConceps.setMnemonic('t');
         jMenItConceps.setText("Conceptos");
@@ -2116,22 +1113,6 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMMInvenImpor.add(jMInvenImpo);
 
-        jMInvenImpoSer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impcatser.png"))); // NOI18N
-        jMInvenImpoSer.setMnemonic('m');
-        jMInvenImpoSer.setText("Importar catálogo de series y comentarios por producto");
-        jMInvenImpoSer.setToolTipText("");
-        jMInvenImpoSer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMInvenImpoSerActionPerformed(evt);
-            }
-        });
-        jMInvenImpoSer.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMInvenImpoSerKeyPressed(evt);
-            }
-        });
-        jMMInvenImpor.add(jMInvenImpoSer);
-
         jMImpExistAlm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impexe.png"))); // NOI18N
         jMImpExistAlm.setMnemonic('p');
         jMImpExistAlm.setText("Importar existencias por almacén");
@@ -2163,75 +1144,6 @@ public class PrincipJFrame extends BaseJFrame {
         jMMInvenImpor.add(jMImpAlma);
 
         jMInven.add(jMMInvenImpor);
-
-        jMMInvenExpor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/export.png"))); // NOI18N
-        jMMInvenExpor.setText("Exportaciones");
-        jMMInvenExpor.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMMInvenExporKeyPressed(evt);
-            }
-        });
-
-        jMInvenExpor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/expexe.png"))); // NOI18N
-        jMInvenExpor.setText("Exportar catálogo de productos a excel");
-        jMInvenExpor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMInvenExporActionPerformed(evt);
-            }
-        });
-        jMInvenExpor.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMInvenExporKeyPressed(evt);
-            }
-        });
-        jMMInvenExpor.add(jMInvenExpor);
-
-        jMExpoSer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/expexe.png"))); // NOI18N
-        jMExpoSer.setMnemonic('S');
-        jMExpoSer.setText("Exportar series por producto a excel");
-        jMExpoSer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMExpoSerActionPerformed(evt);
-            }
-        });
-        jMExpoSer.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMExpoSerKeyPressed(evt);
-            }
-        });
-        jMMInvenExpor.add(jMExpoSer);
-
-        jMExpExisAlm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/expexe.png"))); // NOI18N
-        jMExpExisAlm.setMnemonic('E');
-        jMExpExisAlm.setText("Exportar existencias por almacén a excel");
-        jMExpExisAlm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMExpExisAlmActionPerformed(evt);
-            }
-        });
-        jMExpExisAlm.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMExpExisAlmKeyPressed(evt);
-            }
-        });
-        jMMInvenExpor.add(jMExpExisAlm);
-
-        jMExpAlma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/expexe.png"))); // NOI18N
-        jMExpAlma.setMnemonic('X');
-        jMExpAlma.setText("Exportar almacenes a excel");
-        jMExpAlma.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMExpAlmaActionPerformed(evt);
-            }
-        });
-        jMExpAlma.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMExpAlmaKeyPressed(evt);
-            }
-        });
-        jMMInvenExpor.add(jMExpAlma);
-
-        jMInven.add(jMMInvenExpor);
 
         jMMClas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/clasifs.png"))); // NOI18N
         jMMClas.setText("Clasificaciones");
@@ -2316,35 +1228,6 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMMClas.add(jMenItCols);
 
-        jMClasProd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/clasext.png"))); // NOI18N
-        jMClasProd.setMnemonic('c');
-        jMClasProd.setText("Clasificación extra");
-        jMClasProd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMClasProdActionPerformed(evt);
-            }
-        });
-        jMClasProd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMClasProdKeyPressed(evt);
-            }
-        });
-        jMMClas.add(jMClasProd);
-
-        jMJeraProd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/clasjeraprod.png"))); // NOI18N
-        jMJeraProd.setText("Clasificaciones jerárquicas");
-        jMJeraProd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMJeraProdActionPerformed(evt);
-            }
-        });
-        jMJeraProd.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMJeraProdKeyPressed(evt);
-            }
-        });
-        jMMClas.add(jMJeraProd);
-
         jMenItPesos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/claspes.png"))); // NOI18N
         jMenItPesos.setMnemonic('p');
         jMenItPesos.setText("Pesos");
@@ -2404,21 +1287,6 @@ public class PrincipJFrame extends BaseJFrame {
             }
         });
         jMMClas.add(jMModel);
-
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/tall.png"))); // NOI18N
-        jMenuItem2.setMnemonic('t');
-        jMenuItem2.setText("Tallas");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenuItem2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMenuItem2KeyPressed(evt);
-            }
-        });
-        jMMClas.add(jMenuItem2);
 
         jMInven.add(jMMClas);
 
@@ -2619,21 +1487,6 @@ public class PrincipJFrame extends BaseJFrame {
             }
         });
 
-        jMCosts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/rptcost.png"))); // NOI18N
-        jMCosts.setMnemonic('t');
-        jMCosts.setText("Costeos");
-        jMCosts.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMCostsActionPerformed(evt);
-            }
-        });
-        jMCosts.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMCostsKeyPressed(evt);
-            }
-        });
-        jMMRepProd.add(jMCosts);
-
         jMenProds.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/repprods.png"))); // NOI18N
         jMenProds.setMnemonic('p');
         jMenProds.setText("Productos");
@@ -2692,36 +1545,6 @@ public class PrincipJFrame extends BaseJFrame {
             }
         });
         jMenVtas.add(jMMClien);
-
-        jMClasCli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/clasifs.png"))); // NOI18N
-        jMClasCli.setMnemonic('l');
-        jMClasCli.setText("Clasificaciones clientes");
-        jMClasCli.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMClasCliActionPerformed(evt);
-            }
-        });
-        jMClasCli.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMClasCliKeyPressed(evt);
-            }
-        });
-        jMenVtas.add(jMClasCli);
-
-        jMClasJer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/clasjeracli.png"))); // NOI18N
-        jMClasJer.setMnemonic('j');
-        jMClasJer.setText("Clasificaciones jerárquicas");
-        jMClasJer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMClasJerActionPerformed(evt);
-            }
-        });
-        jMClasJer.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMClasJerKeyPressed(evt);
-            }
-        });
-        jMenVtas.add(jMClasJer);
 
         jMenItVtas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, 0));
         jMenItVtas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/vtas.png"))); // NOI18N
@@ -2816,21 +1639,6 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMenVtas.add(jMCXC);
 
-        jMenCatGral.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/catgral.png"))); // NOI18N
-        jMenCatGral.setMnemonic('a');
-        jMenCatGral.setText("Catálogo general");
-        jMenCatGral.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenCatGralActionPerformed(evt);
-            }
-        });
-        jMenCatGral.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMenCatGralKeyPressed(evt);
-            }
-        });
-        jMenVtas.add(jMenCatGral);
-
         jMenItTouch.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, 0));
         jMenItTouch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pos.png"))); // NOI18N
         jMenItTouch.setMnemonic('t');
@@ -2861,21 +1669,6 @@ public class PrincipJFrame extends BaseJFrame {
             }
         });
         jMenVtas.add(jMImpCliens);
-
-        jMExpoCliens.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/expexe.png"))); // NOI18N
-        jMExpoCliens.setMnemonic('e');
-        jMExpoCliens.setText("Exportar catálogo de clientes desde excel");
-        jMExpoCliens.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMExpoCliensActionPerformed(evt);
-            }
-        });
-        jMExpoCliens.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMExpoCliensKeyPressed(evt);
-            }
-        });
-        jMenVtas.add(jMExpoCliens);
 
         jMMRepVta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/repgen.png"))); // NOI18N
         jMMRepVta.setText("Reportes");
@@ -2976,36 +1769,7 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMMRepVta.add(jMFluj);
 
-        jMRepBackO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/repback.png"))); // NOI18N
-        jMRepBackO.setText("Backorder");
-        jMRepBackO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMRepBackOActionPerformed(evt);
-            }
-        });
-        jMRepBackO.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMRepBackOKeyPressed(evt);
-            }
-        });
-        jMMRepVta.add(jMRepBackO);
-
         jMenVtas.add(jMMRepVta);
-
-        jMAsoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/asocprodcli.png"))); // NOI18N
-        jMAsoc.setMnemonic('a');
-        jMAsoc.setText("Reglas de negocio");
-        jMAsoc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMAsocActionPerformed(evt);
-            }
-        });
-        jMAsoc.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMAsocKeyPressed(evt);
-            }
-        });
-        jMenVtas.add(jMAsoc);
 
         jMenInvents.add(jMenVtas);
 
@@ -3065,77 +1829,6 @@ public class PrincipJFrame extends BaseJFrame {
 
         jMenInvents.add(jMActivos);
 
-        jMConta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/conta.png"))); // NOI18N
-        jMConta.setMnemonic('c');
-        jMConta.setText("Contabilidad");
-        jMConta.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMContaKeyPressed(evt);
-            }
-        });
-
-        jMActFij.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actfij.png"))); // NOI18N
-        jMActFij.setMnemonic('a');
-        jMActFij.setText("Activo fijo");
-        jMActFij.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMActFijActionPerformed(evt);
-            }
-        });
-        jMActFij.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMActFijKeyPressed(evt);
-            }
-        });
-        jMConta.add(jMActFij);
-
-        jMCatActFij.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/catactfij.png"))); // NOI18N
-        jMCatActFij.setMnemonic('c');
-        jMCatActFij.setText("Catálogo activo fijo");
-        jMCatActFij.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMCatActFijActionPerformed(evt);
-            }
-        });
-        jMCatActFij.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMCatActFijKeyPressed(evt);
-            }
-        });
-        jMConta.add(jMCatActFij);
-
-        jMTipAct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/catactfij.png"))); // NOI18N
-        jMTipAct.setMnemonic('t');
-        jMTipAct.setText("Catálogo de tipos de activo fijo");
-        jMTipAct.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMTipActActionPerformed(evt);
-            }
-        });
-        jMTipAct.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMTipActKeyPressed(evt);
-            }
-        });
-        jMConta.add(jMTipAct);
-
-        jMRepConta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/repcots.png"))); // NOI18N
-        jMRepConta.setMnemonic('r');
-        jMRepConta.setText("Reportes");
-        jMRepConta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMRepContaActionPerformed(evt);
-            }
-        });
-        jMRepConta.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMRepContaKeyPressed(evt);
-            }
-        });
-        jMConta.add(jMRepConta);
-
-        jMenInvents.add(jMConta);
-
         jMConcepNot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/concepnot.png"))); // NOI18N
         jMConcepNot.setText("Conceptos notas de crédito");
         jMConcepNot.addActionListener(new java.awt.event.ActionListener() {
@@ -3149,49 +1842,6 @@ public class PrincipJFrame extends BaseJFrame {
             }
         });
         jMenInvents.add(jMConcepNot);
-
-        jMFlujAct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/flujact.png"))); // NOI18N
-        jMFlujAct.setText("Flujo actividades");
-        jMFlujAct.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMFlujActActionPerformed(evt);
-            }
-        });
-        jMFlujAct.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMFlujActKeyPressed(evt);
-            }
-        });
-        jMenInvents.add(jMFlujAct);
-
-        jMCatGara.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/catgara.png"))); // NOI18N
-        jMCatGara.setText("Catálogo garantías");
-        jMCatGara.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMCatGaraActionPerformed(evt);
-            }
-        });
-        jMCatGara.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMCatGaraKeyPressed(evt);
-            }
-        });
-        jMenInvents.add(jMCatGara);
-
-        jMGir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/gir.png"))); // NOI18N
-        jMGir.setMnemonic('g');
-        jMGir.setText("Giros");
-        jMGir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMGirActionPerformed(evt);
-            }
-        });
-        jMGir.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMGirKeyPressed(evt);
-            }
-        });
-        jMenInvents.add(jMGir);
 
         jMenItMons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mons.png"))); // NOI18N
         jMenItMons.setMnemonic('o');
@@ -3306,21 +1956,6 @@ public class PrincipJFrame extends BaseJFrame {
         });
         jMSist.add(jMenItImpres);
 
-        jMenCambIco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cambico.png"))); // NOI18N
-        jMenCambIco.setMnemonic('p');
-        jMenCambIco.setText("Cambiar icono aplicación");
-        jMenCambIco.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenCambIcoActionPerformed(evt);
-            }
-        });
-        jMenCambIco.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jMenCambIcoKeyPressed(evt);
-            }
-        });
-        jMSist.add(jMenCambIco);
-
         jMConfAd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/confgral.png"))); // NOI18N
         jMConfAd.setMnemonic('n');
         jMConfAd.setText("Configuraciones generales");
@@ -3337,19 +1972,6 @@ public class PrincipJFrame extends BaseJFrame {
         jMSist.add(jMConfAd);
 
         jMenBar1.add(jMSist);
-
-        jMenu4.setText("Sincronizar");
-        jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu4MouseClicked(evt);
-            }
-        });
-        jMenu4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu4ActionPerformed(evt);
-            }
-        });
-        jMenBar1.add(jMenu4);
 
         jMMAyu.setMnemonic('y');
         jMMAyu.setText("Ayuda");
@@ -3414,11 +2036,7 @@ public class PrincipJFrame extends BaseJFrame {
     private void jMenIt4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenIt4KeyPressed
                         
     }//GEN-LAST:event_jMenIt4KeyPressed
-    
-    private void jMenItCambClavSegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenItCambClavSegActionPerformed
-                               
-    }//GEN-LAST:event_jMenItCambClavSegActionPerformed
-                
+                    
     private void jMMClienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMMClienActionPerformed
                         
     }//GEN-LAST:event_jMMClienActionPerformed
@@ -3438,11 +2056,7 @@ public class PrincipJFrame extends BaseJFrame {
     private void jMenItPermEstacsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenItPermEstacsActionPerformed
             
     }//GEN-LAST:event_jMenItPermEstacsActionPerformed
-        
-    private void jMen2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMen2KeyPressed
-                    
-    }//GEN-LAST:event_jMen2KeyPressed
-           
+                   
     private void jMenItEstacsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenItEstacsKeyPressed
                       
     }//GEN-LAST:event_jMenItEstacsKeyPressed
@@ -3464,11 +2078,7 @@ public class PrincipJFrame extends BaseJFrame {
     private void jMenItLogearKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenItLogearKeyPressed
                     
     }//GEN-LAST:event_jMenItLogearKeyPressed
-        
-    private void jMenItCambClavSegKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenItCambClavSegKeyPressed
-                        
-    }//GEN-LAST:event_jMenItCambClavSegKeyPressed
-        
+                
     private void jMenBDsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenBDsKeyPressed
                
     }//GEN-LAST:event_jMenBDsKeyPressed
@@ -3480,23 +2090,7 @@ public class PrincipJFrame extends BaseJFrame {
     private void jMenItSalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenItSalActionPerformed
                 
     }//GEN-LAST:event_jMenItSalActionPerformed
-        
-    private void jMenItModBDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenItModBDKeyPressed
-    
-    }//GEN-LAST:event_jMenItModBDKeyPressed
-    
-    private void jMenItModBDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenItModBDActionPerformed
-    
-    }//GEN-LAST:event_jMenItModBDActionPerformed
-        
-    private void jMenItRespsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenItRespsKeyPressed
-                
-    }//GEN-LAST:event_jMenItRespsKeyPressed
-        
-    private void jMenItRespsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenItRespsActionPerformed
-                        
-    }//GEN-LAST:event_jMenItRespsActionPerformed
-                
+                                            
     private void jMenCompsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenCompsKeyPressed
                         
     }//GEN-LAST:event_jMenCompsKeyPressed
@@ -3758,16 +2352,7 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMenItImpresActionPerformed
 
     
-    private void jMenCambIcoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenCambIcoKeyPressed
-            
         
-    }//GEN-LAST:event_jMenCambIcoKeyPressed
-
-        
-    private void jMenCambIcoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenCambIcoActionPerformed
-        
-    }//GEN-LAST:event_jMenCambIcoActionPerformed
-
                 
     private void jMVLogSysKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMVLogSysKeyPressed
                 
@@ -3809,15 +2394,7 @@ public class PrincipJFrame extends BaseJFrame {
     private void jMCXPKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMCXPKeyPressed
                         
     }//GEN-LAST:event_jMCXPKeyPressed
-        
-    private void jMContraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMContraKeyPressed
                     
-    }//GEN-LAST:event_jMContraKeyPressed
-    
-    private void jMContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMContraActionPerformed
-                     
-    }//GEN-LAST:event_jMContraActionPerformed
-        
     private void jMenConfigFilKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenConfigFilKeyPressed
                
     }//GEN-LAST:event_jMenConfigFilKeyPressed
@@ -3827,15 +2404,7 @@ public class PrincipJFrame extends BaseJFrame {
                      
     }//GEN-LAST:event_jMenConfigFilActionPerformed
             
-    private void jMenCatGralKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenCatGralKeyPressed
-                        
-    }//GEN-LAST:event_jMenCatGralKeyPressed
-
         
-    private void jMenCatGralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenCatGralActionPerformed
-               
-    }//GEN-LAST:event_jMenCatGralActionPerformed
-
         
     private void jMenItDeslogKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenItDeslogKeyPressed
                     
@@ -3938,16 +2507,7 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMInvenKeyPressed
 
         
-    private void jMClasProdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMClasProdKeyPressed
-                
-    }//GEN-LAST:event_jMClasProdKeyPressed
-
         
-    private void jMClasProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMClasProdActionPerformed
-             
-        
-    }//GEN-LAST:event_jMClasProdActionPerformed
-
         
     private void jMUbiAdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMUbiAdKeyPressed
             
@@ -3971,16 +2531,7 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMMUsrKeyPressed
 
     
-    private void jMUsrKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMUsrKeyPressed
-                
-    }//GEN-LAST:event_jMUsrKeyPressed
-
         
-    private void jMUsrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMUsrActionPerformed
-        
-        
-    }//GEN-LAST:event_jMUsrActionPerformed
-
     
     private void jMEstacsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMEstacsKeyPressed
             
@@ -4014,216 +2565,41 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMLogProdActionPerformed
 
         
-    private void jMMLogRKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMMLogRKeyPressed
-                
-    }//GEN-LAST:event_jMMLogRKeyPressed
-
-        
-    private void jMLogKKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogKKeyPressed
-            
-    }//GEN-LAST:event_jMLogKKeyPressed
-
-        
-    private void jMLogKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogKActionPerformed
-                
-    }//GEN-LAST:event_jMLogKActionPerformed
-
-        
-    private void jMLogLinKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogLinKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogLinKeyPressed
-
-        
-    private void jMLogLinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogLinActionPerformed
-               
-    }//GEN-LAST:event_jMLogLinActionPerformed
-
-        
-    private void jMLogMarcKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogMarcKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogMarcKeyPressed
-
-        
-    private void jMLogMarcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogMarcActionPerformed
-             
-        
-    }//GEN-LAST:event_jMLogMarcActionPerformed
-
-        
-    private void jMLogFabKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogFabKeyPressed
-                
-    }//GEN-LAST:event_jMLogFabKeyPressed
-
-        
-    private void jMLogFabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogFabActionPerformed
         
         
-    }//GEN-LAST:event_jMLogFabActionPerformed
-
         
-    private void jMLogColoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogColoKeyPressed
-            
         
-    }//GEN-LAST:event_jMLogColoKeyPressed
-
         
-    private void jMLogColoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogColoActionPerformed
-                        
         
-    }//GEN-LAST:event_jMLogColoActionPerformed
-
         
-    private void jMLogClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogClasKeyPressed
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
            
-        
-    }//GEN-LAST:event_jMLogClasKeyPressed
-
-        
-    private void jMLogClasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogClasActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogClasActionPerformed
-
-        
-    private void jMLogPesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogPesKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogPesKeyPressed
-
-        
-    private void jMLogPesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogPesActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogPesActionPerformed
-
-        
-    private void jMLogMedKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogMedKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogMedKeyPressed
 
     
-    private void jMLogMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogMedActionPerformed
-        
-        
-        
-    }//GEN-LAST:event_jMLogMedActionPerformed
-
-        
-    private void jMLogUnidKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogUnidKeyPressed
-                
-    }//GEN-LAST:event_jMLogUnidKeyPressed
-
-        
-    private void jMLogUnidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogUnidActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogUnidActionPerformed
-
-        
-    private void jMLogMonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogMonKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogMonKeyPressed
-
-        
-    private void jMLogMonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogMonActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogMonActionPerformed
-
-        
-    private void jMLogImpuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogImpuActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogImpuActionPerformed
-
-        
-    private void jMLogImpuKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogImpuKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogImpuKeyPressed
-
-        
-    private void jMLogConcepKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogConcepKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogConcepKeyPressed
-
-        
-    private void jMLogConcepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogConcepActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogConcepActionPerformed
-
-        
-    private void jMLogAlmaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogAlmaKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogAlmaKeyPressed
-
-        
-    private void jMLogAlmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogAlmaActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogAlmaActionPerformed
-
-        
-    private void jMenuItem1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenuItem1KeyPressed
-        
-        
-    }//GEN-LAST:event_jMenuItem1KeyPressed
-
-        
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        
-        
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-        
-    private void jMLogLugKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogLugKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogLugKeyPressed
-
-        
-    private void jMLogLugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogLugActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogLugActionPerformed
-
-        
-    private void jMLogUbiEKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogUbiEKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogUbiEKeyPressed
-
-        
-    private void jMLogUbiEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogUbiEActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogUbiEActionPerformed
-
-       
-    private void jMMAplicKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMMAplicKeyPressed
-        
-        
-    }//GEN-LAST:event_jMMAplicKeyPressed
-    
-
-    private void jMCarpApKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMCarpApKeyPressed
-        
-        
-    }//GEN-LAST:event_jMCarpApKeyPressed
-
-    
-    private void jMCarpApActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMCarpApActionPerformed
-               
-        
-    }//GEN-LAST:event_jMCarpApActionPerformed
-
         
     private void jMRepCotKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRepCotKeyPressed
         
@@ -4237,17 +2613,7 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMRepCotActionPerformed
 
         
-    private void jMCatMsjKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMCatMsjKeyPressed
         
-        
-    }//GEN-LAST:event_jMCatMsjKeyPressed
-
-        
-    private void jMCatMsjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMCatMsjActionPerformed
-                
-        
-    }//GEN-LAST:event_jMCatMsjActionPerformed
-
         
     private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
         
@@ -4255,89 +2621,20 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_formWindowStateChanged
 
         
-    private void jMMsjKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMMsjKeyPressed
-                
-        
-    }//GEN-LAST:event_jMMsjKeyPressed
-
-        
-    private void jMMsjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMMsjActionPerformed
         
         
-    }//GEN-LAST:event_jMMsjActionPerformed
-
-        
-    private void jMChatCKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMChatCKeyPressed
-                   
-        
-    }//GEN-LAST:event_jMChatCKeyPressed
-
-        
-    private void jMChatCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMChatCActionPerformed
         
         
-    }//GEN-LAST:event_jMChatCActionPerformed
-
         
-    private void jMChatKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMChatKeyPressed
-        
-        
-    }//GEN-LAST:event_jMChatKeyPressed
-
-        
-    private void jMChatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMChatActionPerformed
-                       
-    }//GEN-LAST:event_jMChatActionPerformed
-
-            
-    private void jMCalcKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMCalcKeyPressed
-        
-        
-    }//GEN-LAST:event_jMCalcKeyPressed
-
-        
-    private void jMCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMCalcActionPerformed
-        
-        
-    }//GEN-LAST:event_jMCalcActionPerformed
-
-        
-    private void jMCuadeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMCuadeKeyPressed
-        
-        
-    }//GEN-LAST:event_jMCuadeKeyPressed
-
-        
-    private void jMApFavKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMApFavKeyPressed
-        
-        
-    }//GEN-LAST:event_jMApFavKeyPressed
-
-    
-    
-    private void jMCuadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMCuadeActionPerformed
             
         
-    }//GEN-LAST:event_jMCuadeActionPerformed
-
-        
-    private void jMApFavActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMApFavActionPerformed
-            
-        
-    }//GEN-LAST:event_jMApFavActionPerformed
-
-        
-    private void jMEnviAKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMEnviAKeyPressed
         
         
-    }//GEN-LAST:event_jMEnviAKeyPressed
-
     
-    private void jMEnviAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMEnviAActionPerformed
     
         
-    }//GEN-LAST:event_jMEnviAActionPerformed
-
+        
+    
     
     private void jBPtoVtaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBPtoVtaKeyPressed
         
@@ -4420,16 +2717,7 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jBCotsActionPerformed
 
        
-    private void jMArchCKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMArchCKeyPressed
         
-        
-    }//GEN-LAST:event_jMArchCKeyPressed
-
-        
-    private void jMArchCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMArchCActionPerformed
-        
-    }//GEN-LAST:event_jMArchCActionPerformed
-
         
     private void jMRepVendKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRepVendKeyPressed
         
@@ -4578,30 +2866,9 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jBCotsMouseExited
 
         
-    private void jMCostsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMCostsKeyPressed
-        
-        
-    }//GEN-LAST:event_jMCostsKeyPressed
-
        
-    private void jMCostsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMCostsActionPerformed
-        
-     
-        
-    }//GEN-LAST:event_jMCostsActionPerformed
-
-        
-    private void jMLogResKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogResKeyPressed
         
         
-    }//GEN-LAST:event_jMLogResKeyPressed
-
-        
-    private void jMLogResActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogResActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogResActionPerformed
-
         
     private void jMRespKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRespKeyPressed
         
@@ -4640,41 +2907,11 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jLImgKeyPressed
         
     
-    private void jMClasCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMClasCliActionPerformed
-                
-        
-    }//GEN-LAST:event_jMClasCliActionPerformed
-
-        
-    private void jMClasCliKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMClasCliKeyPressed
         
         
-    }//GEN-LAST:event_jMClasCliKeyPressed
-
-        
-    private void jMClasProvKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMClasProvKeyPressed
         
         
-    }//GEN-LAST:event_jMClasProvKeyPressed
-
         
-    private void jMClasProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMClasProvActionPerformed
-        
-        
-    }//GEN-LAST:event_jMClasProvActionPerformed
-
-        
-    private void jMRepLogCoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRepLogCoKeyPressed
-        
-        
-    }//GEN-LAST:event_jMRepLogCoKeyPressed
-
-        
-    private void jMRepLogCoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMRepLogCoActionPerformed
-        
-        
-    }//GEN-LAST:event_jMRepLogCoActionPerformed
-
         
     private void jMModelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMModelKeyPressed
         
@@ -4688,65 +2925,15 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMModelActionPerformed
 
         
-    private void jMTabCompaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMTabCompaKeyPressed
         
         
-    }//GEN-LAST:event_jMTabCompaKeyPressed
-
-        
-    private void jMTabCompaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMTabCompaActionPerformed
         
         
-    }//GEN-LAST:event_jMTabCompaActionPerformed
-
-        
-    private void jMenuItem2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenuItem2KeyPressed
         
         
-    }//GEN-LAST:event_jMenuItem2KeyPressed
-
-        
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         
         
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
         
-    private void jMLogModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogModActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogModActionPerformed
-
-        
-    private void jMLogModKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogModKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogModKeyPressed
-
-        
-    private void jMLogTallKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogTallKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogTallKeyPressed
-
-        
-    private void jMLogTallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogTallActionPerformed
-        
-        
-    }//GEN-LAST:event_jMLogTallActionPerformed
-
-        
-    private void jMTallColKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMTallColKeyPressed
-        
-        
-    }//GEN-LAST:event_jMTallColKeyPressed
-
-        
-    private void jMTallColActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMTallColActionPerformed
-                
-        
-    }//GEN-LAST:event_jMTallColActionPerformed
-
         
     private void jMLotPedKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLotPedKeyPressed
             
@@ -4783,16 +2970,7 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMMRepKeyPressed
 
         
-    private void jMRepBackOKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRepBackOKeyPressed
         
-        
-    }//GEN-LAST:event_jMRepBackOKeyPressed
-
-        
-    private void jMRepBackOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMRepBackOActionPerformed
-               
-    }//GEN-LAST:event_jMRepBackOActionPerformed
-
         
     private void jMTipKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMTipKeyPressed
         
@@ -4806,16 +2984,7 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMTipActionPerformed
 
         
-    private void jMLogTipKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogTipKeyPressed
-        
-        
-    }//GEN-LAST:event_jMLogTipKeyPressed
-
       
-    private void jMLogTipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogTipActionPerformed
-              
-    }//GEN-LAST:event_jMLogTipActionPerformed
-
         
     private void jMMInvenImporKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMMInvenImporKeyPressed
         
@@ -4823,63 +2992,14 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMMInvenImporKeyPressed
 
         
-    private void jMMInvenExporKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMMInvenExporKeyPressed
-        
-        
-    }//GEN-LAST:event_jMMInvenExporKeyPressed
-
        
-    private void jMInvenExporKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMInvenExporKeyPressed
-            
-        
-    }//GEN-LAST:event_jMInvenExporKeyPressed
-
-        
-    private void jMInvenImpoSerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMInvenImpoSerKeyPressed
-        
-        
-    }//GEN-LAST:event_jMInvenImpoSerKeyPressed
-     
-    private void jMInvenExporActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMInvenExporActionPerformed
-        
-                
-    }//GEN-LAST:event_jMInvenExporActionPerformed
-
-        
-    private void jMInvenImpoSerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMInvenImpoSerActionPerformed
-                
-
-    }//GEN-LAST:event_jMInvenImpoSerActionPerformed
+             
+                                                
                                         
-                                        
-    private void jMExpoSerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMExpoSerKeyPressed
-                
-    }//GEN-LAST:event_jMExpoSerKeyPressed
-
-        
-    private void jMExpoSerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMExpoSerActionPerformed
-            
-        
-    }//GEN-LAST:event_jMExpoSerActionPerformed
-
-        
-    private void jMEstadisCorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMEstadisCorKeyPressed
         
         
-    }//GEN-LAST:event_jMEstadisCorKeyPressed
-
-        
-    private void jMEstadisCorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMEstadisCorActionPerformed
         
         
-    }//GEN-LAST:event_jMEstadisCorActionPerformed
-
-        
-    private void jMExpoCliensKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMExpoCliensKeyPressed
-        
-        
-    }//GEN-LAST:event_jMExpoCliensKeyPressed
-
        
     private void jMImpCliensKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMImpCliensKeyPressed
         
@@ -4893,10 +3013,6 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMImpCliensActionPerformed
 
         
-    private void jMExpoCliensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMExpoCliensActionPerformed
-            
-    }//GEN-LAST:event_jMExpoCliensActionPerformed
-
         
     private void jMImpProvsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMImpProvsKeyPressed
         
@@ -4904,11 +3020,6 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMImpProvsKeyPressed
 
        
-    private void jMExpoProvsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMExpoProvsKeyPressed
-        
-        
-    }//GEN-LAST:event_jMExpoProvsKeyPressed
-
         
     private void jMImpProvsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMImpProvsActionPerformed
         
@@ -4916,22 +3027,8 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMImpProvsActionPerformed
 
         
-    private void jMExpoProvsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMExpoProvsActionPerformed
-                
         
-    }//GEN-LAST:event_jMExpoProvsActionPerformed
-
         
-    private void jMAsocKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMAsocKeyPressed
-            
-        
-    }//GEN-LAST:event_jMAsocKeyPressed
-
-        
-    private void jMAsocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMAsocActionPerformed
-        
-    }//GEN-LAST:event_jMAsocActionPerformed
-
        
     private void jMZonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMZonKeyPressed
             
@@ -4939,11 +3036,6 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMZonKeyPressed
 
         
-    private void jMGirKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMGirKeyPressed
-        
-        
-    }//GEN-LAST:event_jMGirKeyPressed
-
         
     private void jMZonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMZonActionPerformed
         
@@ -4951,55 +3043,13 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMZonActionPerformed
 
         
-    private void jMGirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMGirActionPerformed
-        
-                
-    }//GEN-LAST:event_jMGirActionPerformed
-
-        
-    private void jMContaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMContaKeyPressed
-        
-        
-    }//GEN-LAST:event_jMContaKeyPressed
-    
-                
-    private void jMEasConKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMEasConKeyPressed
+            
                 
         
-    }//GEN-LAST:event_jMEasConKeyPressed
-
-        
-    private void jMEasConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMEasConActionPerformed
-        
-     
-        
-    }//GEN-LAST:event_jMEasConActionPerformed
-
-        
-    private void jMRubrKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRubrKeyPressed
         
         
-    }//GEN-LAST:event_jMRubrKeyPressed
-
-        
-    private void jMRubrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMRubrActionPerformed
         
         
-    }//GEN-LAST:event_jMRubrActionPerformed
-
-        
-    private void jMCatGaraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMCatGaraKeyPressed
-        
-        
-    }//GEN-LAST:event_jMCatGaraKeyPressed
-
-        
-    private void jMCatGaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMCatGaraActionPerformed
-        
-     
-        
-    }//GEN-LAST:event_jMCatGaraActionPerformed
-
         
     private void jMRepCliKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRepCliKeyPressed
         
@@ -5025,103 +3075,22 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMRepProvActionPerformed
 
         
-    private void jMClasJerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMClasJerKeyPressed
-                
-    }//GEN-LAST:event_jMClasJerKeyPressed
-
         
-    private void jMClasJerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMClasJerActionPerformed
-             
         
-    }//GEN-LAST:event_jMClasJerActionPerformed
-
         
-    private void jMClasJerPKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMClasJerPKeyPressed
-            
-    }//GEN-LAST:event_jMClasJerPKeyPressed
-
         
-    private void jMClasJerPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMClasJerPActionPerformed
-             
         
-    }//GEN-LAST:event_jMClasJerPActionPerformed
-
         
-    private void jMFlujActKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMFlujActKeyPressed
-            
         
-    }//GEN-LAST:event_jMFlujActKeyPressed
-
-        
-    private void jMFlujActActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMFlujActActionPerformed
-                    
-    }//GEN-LAST:event_jMFlujActActionPerformed
-
-        
-    private void jMMUtilKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMMUtilKeyPressed
-            
-        
-    }//GEN-LAST:event_jMMUtilKeyPressed
-
-        
-    private void jMRevoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRevoKeyPressed
-            
-        
-    }//GEN-LAST:event_jMRevoKeyPressed
-
-        
-    private void jMRevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMRevoActionPerformed
-                                
-    }//GEN-LAST:event_jMRevoActionPerformed
-
-       
-    private void jMActSisKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMActSisKeyPressed
         
        
-    }//GEN-LAST:event_jMActSisKeyPressed
-
       
-    private void jMActSisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMActSisActionPerformed
-            
         
-    }//GEN-LAST:event_jMActSisActionPerformed
-
         
-    private void jMNoticKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMNoticKeyPressed
-           
         
-    }//GEN-LAST:event_jMNoticKeyPressed
-
         
-    private void jMNoticActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMNoticActionPerformed
-            
-        
-    }//GEN-LAST:event_jMNoticActionPerformed
-
-        
-    private void jMForLinKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMForLinKeyPressed
-            
-        
-    }//GEN-LAST:event_jMForLinKeyPressed
-
-        
-    private void jMForLinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMForLinActionPerformed
-                
-        
-    }//GEN-LAST:event_jMForLinActionPerformed
-
     
-    private void jMJeraProdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMJeraProdKeyPressed
-                    
         
-    }//GEN-LAST:event_jMJeraProdKeyPressed
-
-        
-    private void jMJeraProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMJeraProdActionPerformed
-                
-        
-    }//GEN-LAST:event_jMJeraProdActionPerformed
-
         
     private void jMConcepNotKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMConcepNotKeyPressed
                   
@@ -5141,11 +3110,6 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMImpExistAlmKeyPressed
 
         
-    private void jMExpExisAlmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMExpExisAlmKeyPressed
-                
-        
-    }//GEN-LAST:event_jMExpExisAlmKeyPressed
-
         
     private void jMImpExistAlmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMImpExistAlmActionPerformed
         
@@ -5154,17 +3118,7 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMImpExistAlmActionPerformed
 
         
-    private void jMExpExisAlmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMExpExisAlmActionPerformed
-                
         
-    }//GEN-LAST:event_jMExpExisAlmActionPerformed
-
-        
-    private void jMExpAlmaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMExpAlmaKeyPressed
-            
-        
-    }//GEN-LAST:event_jMExpAlmaKeyPressed
-
     
     private void jMImpAlmaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMImpAlmaKeyPressed
            
@@ -5178,166 +3132,32 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMImpAlmaActionPerformed
 
         
-    private void jMExpAlmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMExpAlmaActionPerformed
-                
-    }//GEN-LAST:event_jMExpAlmaActionPerformed
-
-        
-    private void jMActFijKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMActFijKeyPressed
-           
-        
-    }//GEN-LAST:event_jMActFijKeyPressed
-
-        
-    private void jMActFijActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMActFijActionPerformed
         
         
-    }//GEN-LAST:event_jMActFijActionPerformed
-
        
-    private void jMCatActFijKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMCatActFijKeyPressed
-                    
         
-    }//GEN-LAST:event_jMCatActFijKeyPressed
-
         
-    private void jMCatActFijActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMCatActFijActionPerformed
-                
         
-    }//GEN-LAST:event_jMCatActFijActionPerformed
-
         
-    private void jMTipActKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMTipActKeyPressed
-               
-        
-    }//GEN-LAST:event_jMTipActKeyPressed
-
-        
-    private void jMTipActActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMTipActActionPerformed
-                
-        
-    }//GEN-LAST:event_jMTipActActionPerformed
-
-        
-    private void jMRepContaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMRepContaKeyPressed
-            
-        
-    }//GEN-LAST:event_jMRepContaKeyPressed
-
-        
-    private void jMRepContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMRepContaActionPerformed
-                
-        
-    }//GEN-LAST:event_jMRepContaActionPerformed
-
-    
-    private void jMLogCatActKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogCatActKeyPressed
-           
-        
-    }//GEN-LAST:event_jMLogCatActKeyPressed
-
-        
-    private void jMLogActFijKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogActFijKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogActFijKeyPressed
-
-        
-    private void jMLogCatGralKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogCatGralKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogCatGralKeyPressed
-
-        
-    private void jMLogClasCliKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogClasCliKeyPressed
-           
-        
-    }//GEN-LAST:event_jMLogClasCliKeyPressed
-
-        
-    private void jMLogClasProvKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogClasProvKeyPressed
-                
-        
-    }//GEN-LAST:event_jMLogClasProvKeyPressed
-
-        
-    private void jMLogConcepNotKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogConcepNotKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogConcepNotKeyPressed
-
-        
-    private void jMLogGaraKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogGaraKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogGaraKeyPressed
-
-        
-    private void jMLogGirKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogGirKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogGirKeyPressed
-
-            
-    private void jMLogZonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogZonKeyPressed
-            
-        
-    }//GEN-LAST:event_jMLogZonKeyPressed
-
-        
-    private void jMLogCatActActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogCatActActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogCatActActionPerformed
-
-        
-    private void jMLogActFijActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogActFijActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogActFijActionPerformed
-
-        
-    private void jMLogCatGralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogCatGralActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogCatGralActionPerformed
-
-        
-    private void jMLogClasCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogClasCliActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogClasCliActionPerformed
-
-        
-    private void jMLogClasProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogClasProvActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogClasProvActionPerformed
-
-        
-    private void jMLogConcepNotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogConcepNotActionPerformed
-             
-        
-    }//GEN-LAST:event_jMLogConcepNotActionPerformed
-
-        
-    private void jMLogGaraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogGaraActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogGaraActionPerformed
-
-        
-    private void jMLogGirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogGirActionPerformed
-        
-    }//GEN-LAST:event_jMLogGirActionPerformed
         
     
-    private void jMLogZonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogZonActionPerformed
         
         
         
-    }//GEN-LAST:event_jMLogZonActionPerformed
-
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
+        
+                
+    
         
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
             
@@ -5357,28 +3177,8 @@ public class PrincipJFrame extends BaseJFrame {
     }//GEN-LAST:event_jMConcepPagsActionPerformed
 
         
-    private void jMLogConcepPagsKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMLogConcepPagsKeyPressed
             
         
-    }//GEN-LAST:event_jMLogConcepPagsKeyPressed
-
-        
-    private void jMLogConcepPagsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMLogConcepPagsActionPerformed
-                
-        
-    }//GEN-LAST:event_jMLogConcepPagsActionPerformed
-    
-    private void jMenuMarcModKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jMenuMarcModKeyPressed
-    
-        
-    }//GEN-LAST:event_jMenuMarcModKeyPressed
-
-        
-    private void jMenuMarcModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuMarcModActionPerformed
-                
-        
-    }//GEN-LAST:event_jMenuMarcModActionPerformed
-
             
     private void jBPrevCompMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBPrevCompMouseEntered
                 
@@ -5411,16 +3211,7 @@ public class PrincipJFrame extends BaseJFrame {
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         
     }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
-        
-    }//GEN-LAST:event_jMenu4ActionPerformed
     
-    private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
-        
-          
-    }//GEN-LAST:event_jMenu4MouseClicked
-
     private void jMInvenImpoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMInvenImpoActionPerformed
         
     }//GEN-LAST:event_jMInvenImpoActionPerformed
@@ -5547,103 +3338,36 @@ public class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JButton jBVtas;
     protected javax.swing.JButton jButtonPedidos;
     protected javax.swing.JButton jButtonPedidos1;
-    protected javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox1;
     protected javax.swing.JLabel jLImg;
-    protected javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JLayeredPane jLayeredPane1;
     protected javax.swing.JMenuItem jMAcerc;
-    protected javax.swing.JMenuItem jMActFij;
-    protected javax.swing.JMenuItem jMActSis;
     protected javax.swing.JMenuItem jMActivo;
     protected javax.swing.JMenu jMActivos;
-    protected javax.swing.JMenuItem jMApFav;
-    protected javax.swing.JMenuItem jMArchC;
-    protected javax.swing.JMenuItem jMAsoc;
     protected javax.swing.JMenuItem jMCXC;
     protected javax.swing.JMenuItem jMCXP;
-    protected javax.swing.JMenuItem jMCalc;
-    protected javax.swing.JMenuItem jMCarpAp;
-    protected javax.swing.JMenuItem jMCatActFij;
-    protected javax.swing.JMenuItem jMCatGara;
-    protected javax.swing.JMenuItem jMCatMsj;
-    protected javax.swing.JMenuItem jMChat;
-    protected javax.swing.JMenuItem jMChatC;
-    protected javax.swing.JMenuItem jMClasCli;
-    protected javax.swing.JMenuItem jMClasJer;
-    protected javax.swing.JMenuItem jMClasJerP;
-    protected javax.swing.JMenuItem jMClasProd;
     protected javax.swing.JMenuItem jMClasificacion;
-    protected javax.swing.JMenuItem jMClasProv;
     protected javax.swing.JMenuItem jMConcepNot;
     protected javax.swing.JMenuItem jMConcepPags;
     protected javax.swing.JMenuItem jMConfAd;
-    protected javax.swing.JMenu jMConta;
-    protected javax.swing.JMenuItem jMContra;
-    protected javax.swing.JMenuItem jMCosts;
-    protected javax.swing.JMenuItem jMCuade;
     protected javax.swing.JMenuItem jMDelLog;
-    protected javax.swing.JMenuItem jMEasCon;
-    protected javax.swing.JMenuItem jMEnviA;
     protected javax.swing.JMenuItem jMEstacs;
-    protected javax.swing.JMenuItem jMEstadisCor;
-    protected javax.swing.JMenuItem jMExpAlma;
-    protected javax.swing.JMenuItem jMExpExisAlm;
-    protected javax.swing.JMenuItem jMExpoCliens;
-    protected javax.swing.JMenuItem jMExpoProvs;
-    protected javax.swing.JMenuItem jMExpoSer;
     protected javax.swing.JMenuItem jMFluj;
-    protected javax.swing.JMenuItem jMFlujAct;
-    protected javax.swing.JMenuItem jMForLin;
-    protected javax.swing.JMenuItem jMGir;
     protected javax.swing.JMenuItem jMICuentaContable;
     protected javax.swing.JMenuItem jMImpAlma;
     protected javax.swing.JMenuItem jMImpCliens;
     protected javax.swing.JMenuItem jMImpExistAlm;
     protected javax.swing.JMenuItem jMImpProvs;
     protected javax.swing.JMenu jMInven;
-    protected javax.swing.JMenuItem jMInvenExpor;
     protected javax.swing.JMenuItem jMInvenImpo;
-    protected javax.swing.JMenuItem jMInvenImpoSer;
-    protected javax.swing.JMenuItem jMJeraProd;
     protected javax.swing.JMenuItem jMKard;
-    protected javax.swing.JMenuItem jMLogActFij;
-    protected javax.swing.JMenuItem jMLogAlma;
-    protected javax.swing.JMenuItem jMLogCatAct;
-    protected javax.swing.JMenuItem jMLogCatGral;
-    protected javax.swing.JMenuItem jMLogClas;
-    protected javax.swing.JMenuItem jMLogClasCli;
-    protected javax.swing.JMenuItem jMLogClasProv;
-    protected javax.swing.JMenuItem jMLogColo;
-    protected javax.swing.JMenuItem jMLogConcep;
-    protected javax.swing.JMenuItem jMLogConcepNot;
-    protected javax.swing.JMenuItem jMLogConcepPags;
-    protected javax.swing.JMenuItem jMLogFab;
-    protected javax.swing.JMenuItem jMLogGara;
-    protected javax.swing.JMenuItem jMLogGir;
-    protected javax.swing.JMenuItem jMLogImpu;
-    protected javax.swing.JMenuItem jMLogK;
-    protected javax.swing.JMenuItem jMLogLin;
-    protected javax.swing.JMenuItem jMLogLug;
-    protected javax.swing.JMenuItem jMLogMarc;
-    protected javax.swing.JMenuItem jMLogMed;
-    protected javax.swing.JMenuItem jMLogMod;
-    protected javax.swing.JMenuItem jMLogMon;
-    protected javax.swing.JMenuItem jMLogPes;
     protected javax.swing.JMenuItem jMLogProd;
-    protected javax.swing.JMenuItem jMLogRes;
     protected javax.swing.JMenu jMLogSis;
-    protected javax.swing.JMenuItem jMLogTall;
-    protected javax.swing.JMenuItem jMLogTip;
-    protected javax.swing.JMenuItem jMLogUbiE;
-    protected javax.swing.JMenuItem jMLogUnid;
-    protected javax.swing.JMenuItem jMLogZon;
     protected javax.swing.JMenuItem jMLotPed;
-    protected javax.swing.JMenu jMMAplic;
     protected javax.swing.JMenu jMMAyu;
     protected javax.swing.JMenu jMMClas;
     protected javax.swing.JMenuItem jMMClien;
-    protected javax.swing.JMenu jMMInvenExpor;
     protected javax.swing.JMenu jMMInvenImpor;
-    protected javax.swing.JMenu jMMLogR;
     protected javax.swing.JMenu jMMRep;
     protected javax.swing.JMenu jMMRepCom;
     protected javax.swing.JMenu jMMRepProd;
@@ -5651,54 +3375,37 @@ public class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenu jMMSis;
     protected javax.swing.JMenu jMMUbic;
     protected javax.swing.JMenu jMMUsr;
-    protected javax.swing.JMenu jMMUtil;
     protected javax.swing.JMenuItem jMModel;
-    protected javax.swing.JMenuItem jMMsj;
-    protected javax.swing.JMenuItem jMNotic;
     protected javax.swing.JMenuItem jMPrevioComp;
-    protected javax.swing.JMenuItem jMRepBackO;
     protected javax.swing.JMenuItem jMRepCli;
     protected javax.swing.JMenuItem jMRepCom;
-    protected javax.swing.JMenuItem jMRepConta;
     protected javax.swing.JMenuItem jMRepCot;
-    protected javax.swing.JMenuItem jMRepLogCo;
     protected javax.swing.JMenuItem jMRepOr;
     protected javax.swing.JMenuItem jMRepProv;
     protected javax.swing.JMenuItem jMRepVend;
     protected javax.swing.JMenuItem jMResp;
     protected javax.swing.JMenuItem jMResponsable;
-    protected javax.swing.JMenuItem jMRevo;
-    protected javax.swing.JMenuItem jMRubr;
     protected javax.swing.JMenu jMSist;
     protected javax.swing.JMenuItem jMSucursal;
-    protected javax.swing.JMenuItem jMTabCompa;
-    protected javax.swing.JMenuItem jMTallCol;
     protected javax.swing.JMenuItem jMTip;
-    protected javax.swing.JMenuItem jMTipAct;
     protected javax.swing.JMenuItem jMUbiAd;
-    protected javax.swing.JMenuItem jMUsr;
     protected javax.swing.JMenuItem jMVLogSys;
     protected javax.swing.JMenuItem jMVProd;
     protected javax.swing.JMenuItem jMZon;
     protected javax.swing.JMenuItem jMeItImps;
-    protected javax.swing.JMenu jMen2;
     protected javax.swing.JMenu jMenBDs;
     protected javax.swing.JMenuBar jMenBar1;
     protected javax.swing.JMenuItem jMenCXCR;
     protected javax.swing.JMenuItem jMenCXP;
-    protected javax.swing.JMenuItem jMenCambIco;
-    protected javax.swing.JMenuItem jMenCatGral;
     protected javax.swing.JMenu jMenComps;
     protected javax.swing.JMenuItem jMenConfigFil;
     protected javax.swing.JMenuItem jMenCotsT;
-    protected javax.swing.JMenuItem jMenIActualizacion;
     protected javax.swing.JMenu jMenInvents;
     protected javax.swing.JMenuItem jMenIt1;
     protected javax.swing.JMenuItem jMenIt4;
     protected javax.swing.JMenuItem jMenIt5;
     protected javax.swing.JMenuItem jMenItAlmas;
     protected javax.swing.JMenuItem jMenItCamEmp;
-    protected javax.swing.JMenuItem jMenItCambClavSeg;
     protected javax.swing.JMenuItem jMenItCols;
     protected javax.swing.JMenuItem jMenItComps;
     protected javax.swing.JMenuItem jMenItConceps;
@@ -5716,13 +3423,11 @@ public class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenuItem jMenItManProvs;
     protected javax.swing.JMenuItem jMenItMarcs;
     protected javax.swing.JMenuItem jMenItMeds;
-    protected javax.swing.JMenuItem jMenItModBD;
     protected javax.swing.JMenuItem jMenItMons;
     protected javax.swing.JMenuItem jMenItPermEstacs;
     protected javax.swing.JMenuItem jMenItPesos;
     protected javax.swing.JMenuItem jMenItProdsArrMax;
     protected javax.swing.JMenuItem jMenItProdsBajMin;
-    protected javax.swing.JMenuItem jMenItResps;
     protected javax.swing.JMenuItem jMenItSal;
     protected javax.swing.JMenuItem jMenItTipsPags;
     protected javax.swing.JMenuItem jMenItTouch;
@@ -5739,11 +3444,8 @@ public class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenu jMenu1;
     protected javax.swing.JMenu jMenu2;
     protected javax.swing.JMenu jMenu3;
-    protected javax.swing.JMenu jMenu4;
     protected javax.swing.JMenu jMenu5;
     protected javax.swing.JMenuBar jMenuBar1;
-    protected javax.swing.JMenuItem jMenuItem1;
-    protected javax.swing.JMenuItem jMenuItem2;
     protected javax.swing.JMenuItem jMenuItem3;
     protected javax.swing.JMenuItem jMenuItem4;
     protected javax.swing.JMenuItem jMenuItem5;
@@ -5752,11 +3454,10 @@ public class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenuItem jMenuItem9;
     protected javax.swing.JMenuItem jMenuItemPedidos;
     protected javax.swing.JMenuItem jMenuItemRemisiones;
-    protected javax.swing.JMenuItem jMenuMarcMod;
-    protected javax.swing.JPanel jP1;
-    protected javax.swing.JPanel jPanel1;
-    protected javax.swing.JPopupMenu jPopupMenu1;
-    protected javax.swing.JPopupMenu jPopupMenu2;
+    private javax.swing.JPanel jP1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JPopupMenu jPopupMenu2;
     // End of variables declaration//GEN-END:variables
    
 }

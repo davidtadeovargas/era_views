@@ -44,7 +44,7 @@ public class BaseJFrame extends JFrame {
         try{
             
             //Get the correct properties string
-            if(idTextTitleWindow.isEmpty() || idTextTitleWindow == null){
+            if(idTextTitleWindow == null || idTextTitleWindow.isEmpty()){
                 titleWindow = "window_title_undefined";
             }
             final Properties props = DialogPropertiesUitlity.getSingleton().getProperties();                        

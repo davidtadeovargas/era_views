@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class OKDialog extends BaseDialog {
     
-    private OKDialogInterface OKDialogInterface;
+    protected OKDialogInterface OKDialogInterface;
     
     
     

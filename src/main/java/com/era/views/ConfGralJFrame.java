@@ -17,15 +17,14 @@ public class ConfGralJFrame extends BaseJFrame
         jTBP.setTitleAt(4, "Compras");                
         jTBP.setTitleAt(5, "Punto de venta");                
         jTBP.setTitleAt(6, "Remisiones");                
-        jTBP.setTitleAt(7, "Tickets");                
-        jTBP.setTitleAt(8, "Chat"); 
-        jTBP.setTitleAt(9, "Previos de compra"); 
+        jTBP.setTitleAt(7, "Tickets");                        
+        jTBP.setTitleAt(8, "Previos de compra"); 
         
         jBTBajCost.grabFocus();
                         
     }
     
-	// <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
@@ -219,9 +218,6 @@ public class ConfGralJFrame extends BaseJFrame
         jCCanTicPto = new javax.swing.JCheckBox();
         jCMosTicCanPto = new javax.swing.JCheckBox();
         jCGuaPDFCanPto = new javax.swing.JCheckBox();
-        jPChat = new javax.swing.JPanel();
-        jBDelHisCor = new javax.swing.JButton();
-        jBDelHisEstac = new javax.swing.JButton();
         jPPrevioCompra = new javax.swing.JPanel();
         jBPrevUsuario = new javax.swing.JCheckBox();
         jBPrevMonNacional = new javax.swing.JCheckBox();
@@ -233,8 +229,8 @@ public class ConfGralJFrame extends BaseJFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
-        
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
@@ -250,7 +246,7 @@ public class ConfGralJFrame extends BaseJFrame
         jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 440, -1));
 
         jTBP.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        
+
         jPInven.setName("tab01"); // NOI18N
         jPInven.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -461,7 +457,6 @@ public class ConfGralJFrame extends BaseJFrame
 
         jLabel31.setText("Plantilla");
         jPFac.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
-
         jPFac.add(jTextPlantilla, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 360, -1));
 
         jButton1.setText("jButton1");
@@ -844,7 +839,7 @@ public class ConfGralJFrame extends BaseJFrame
 
         jCHActivoVenta.setText("Activo");
         jCHActivoVenta.setName("vtas_activarActivo"); // NOI18N
-        
+
         jCHCuentaVenta.setText("Cuenta Contable");
         jCHCuentaVenta.setName("vtas_activarCuenta"); // NOI18N
 
@@ -870,7 +865,7 @@ public class ConfGralJFrame extends BaseJFrame
 
         jCHActivoCompra.setText("Activo");
         jCHActivoCompra.setName("comps_activarActivo"); // NOI18N
-        
+
         jCHCuentaCompra.setText("Cuenta Contable");
         jCHCuentaCompra.setName("comps_activarCuenta"); // NOI18N
 
@@ -1135,7 +1130,7 @@ public class ConfGralJFrame extends BaseJFrame
         jPPtoVta.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 452, 90, -1));
 
         jTAlma.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTAlma.setNextFocusableComponent(jBAlma);        
+        jTAlma.setNextFocusableComponent(jBAlma);
         jPPtoVta.add(jTAlma, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 100, 20));
 
         jBAlma.setBackground(new java.awt.Color(255, 255, 255));
@@ -1256,55 +1251,38 @@ public class ConfGralJFrame extends BaseJFrame
 
         jTBP.addTab("tab8", jPTic);
 
-        jPChat.setName("tab09"); // NOI18N
-        jPChat.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jBDelHisCor.setBackground(new java.awt.Color(255, 255, 255));
-        jBDelHisCor.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBDelHisCor.setText("Borrar historial chat corporativo");
-        jBDelHisCor.setNextFocusableComponent(jBDelHisEstac);
-        jPChat.add(jBDelHisCor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 190, -1));
-
-        jBDelHisEstac.setBackground(new java.awt.Color(255, 255, 255));
-        jBDelHisEstac.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBDelHisEstac.setText("Borrar historial de usuarios");
-        jBDelHisEstac.setNextFocusableComponent(jBDelHisCor);
-        jPChat.add(jBDelHisEstac, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 35, 190, -1));
-
-        jTBP.addTab("tab9", jPChat);
-
         jPPrevioCompra.setName("tab10"); // NOI18N
 
         jBPrevUsuario.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBPrevUsuario.setText("Mostrar solo previos de compra de usuario");
         jBPrevUsuario.setToolTipText("Mostrar solo previos de compra de usuario");
         jBPrevUsuario.setName("prev_prevporusuario"); // NOI18N
-        
+
         jBPrevMonNacional.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBPrevMonNacional.setText("Solo previos de compra en moneda nacional");
         jBPrevMonNacional.setToolTipText("Solo comprar en moneda nacional");
         jBPrevMonNacional.setName("prev_prevmonac"); // NOI18N
-        
+
         jBPrevModDesc.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBPrevModDesc.setText("Modificar descripción del producto");
         jBPrevModDesc.setToolTipText("Modificar descripción del producto");
         jBPrevModDesc.setName("prev_prevmodesc"); // NOI18N
-        
+
         jBPrevModPrec.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBPrevModPrec.setText("Modificar precio del producto");
         jBPrevModPrec.setToolTipText("Modificar precio del producto");
         jBPrevModPrec.setName("prev_prevmodprec"); // NOI18N
-        
+
         jBPrevCotunaSerie.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBPrevCotunaSerie.setText("Utilizar una sola vez una serie en previos de compra");
         jBPrevCotunaSerie.setToolTipText("Cotizar una sola vez una serie");
         jBPrevCotunaSerie.setName("prev_prevunavezser"); // NOI18N
-        
+
         jBPrevSerObli.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBPrevSerObli.setText("Es obligatorio el uso de series en previos de compra");
         jBPrevSerObli.setToolTipText("Es obligatorio el uso de series en cotizaciones");
         jBPrevSerObli.setName("prev_prevobligarser"); // NOI18N
-        
+
         javax.swing.GroupLayout jPPrevioCompraLayout = new javax.swing.GroupLayout(jPPrevioCompra);
         jPPrevioCompra.setLayout(jPPrevioCompraLayout);
         jPPrevioCompraLayout.setHorizontalGroup(
@@ -1399,8 +1377,6 @@ public class ConfGralJFrame extends BaseJFrame
     private javax.swing.JButton jBDelCXC2;
     private javax.swing.JButton jBDelCXC3;
     private javax.swing.JButton jBDelCum;
-    private javax.swing.JButton jBDelHisCor;
-    private javax.swing.JButton jBDelHisEstac;
     private javax.swing.JButton jBGuar;
     private javax.swing.JButton jBMaxMin;
     private javax.swing.JButton jBNoMaxMin;
@@ -1535,7 +1511,6 @@ public class ConfGralJFrame extends BaseJFrame
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPChat;
     private javax.swing.JPanel jPComp;
     private javax.swing.JPanel jPCot;
     private javax.swing.JPanel jPEnCompras;

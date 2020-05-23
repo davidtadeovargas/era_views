@@ -5,7 +5,7 @@
  */
 package com.era.views.abstracttablesmodel;
 
-import com.era.models.Almas;
+import com.era.models.Warehouse;
 import java.util.List;
 
 /**
@@ -14,24 +14,24 @@ import java.util.List;
  */
 public class WarehousesAbstractTableModel extends BaseAbstractTableModel {
 
-    public WarehousesAbstractTableModel(List<Almas> deliveries, String[] header) {
+    public WarehousesAbstractTableModel(List<Warehouse> deliveries, String[] header) {
         super(deliveries,header);
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         
-        final Almas Almas = (Almas) this.items.get(rowIndex);
+        final Warehouse Warehouse = (Warehouse) this.items.get(rowIndex);
         
         String returnValue = "undefined";
         if(columnIndex==0){
-            returnValue = Almas.getAlma();
+            returnValue = Warehouse.getCode();
         }
         else if(columnIndex==1){            
-            returnValue = Almas.getAlmadescrip();
+            returnValue = Warehouse.getDescription();
         }
         else if(columnIndex==2){
-            returnValue = Almas.getDir1();
+            returnValue = Warehouse.getResponsible();
         }
         
         return returnValue;

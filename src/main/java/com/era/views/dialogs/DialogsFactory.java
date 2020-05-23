@@ -41,6 +41,12 @@ public class DialogsFactory {
         OKDialog_.setPropertyText(propertyText);
         OKDialog_.show();
     }
+    public void showOKCallbackDialog(final JFrame JFrame, final String propertyText, final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception{
+        final OKDialog OKDialog_ = this.getOKDialog(JFrame);
+        OKDialog_.setPropertyText(propertyText);
+        OKDialog_.setOKDialogInterface(OKDialogInterface);
+        OKDialog_.show();
+    }
     
     public ExceptionDialog getExceptionDialog(final JFrame JFrame,Exception Exception) throws Exception{
         ExceptionDialog = new ExceptionDialog(JFrame,Exception);
@@ -77,6 +83,12 @@ public class DialogsFactory {
     public void showErrorOKDialog(final JFrame JFrame, final String propertyText) throws Exception {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText(propertyText);
+        ErrorOKDialog_.show();
+    }
+    public void showErrorOKCallbackDialog(final JFrame JFrame, final String propertyText, final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText(propertyText);
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
         ErrorOKDialog_.show();
     }
     

@@ -17,5 +17,5 @@ public class ErrorOKDialog extends OKDialog {
         super(jFrame);
         
         this.title = props.getProperty("system_dialog_title_error");
-    }    
+    }
 }

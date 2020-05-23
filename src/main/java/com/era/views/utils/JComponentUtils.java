@@ -389,6 +389,7 @@ public class JComponentUtils {
             if (comp instanceof Container){
                 LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "Component instance of Container");
                 
+                //All textfield componentes
                 if (comp instanceof JTextField){
                     LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "Component instance of JTextField");
                     selectAllTextInControlOnFocus((JTextComponent) comp);
