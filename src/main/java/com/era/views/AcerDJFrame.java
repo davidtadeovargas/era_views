@@ -9,8 +9,6 @@ public class AcerDJFrame extends BaseJFrame
         super(idTextTitleWindow);
         
         initComponents();
-        
-        serial.grabFocus();
     }
 
         
@@ -302,7 +300,7 @@ public class AcerDJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField estadJTextField;
+    protected javax.swing.JTextField estadJTextField;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -315,13 +313,13 @@ public class AcerDJFrame extends BaseJFrame
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField serial;
+    protected javax.swing.JTextField serial;
     private javax.swing.JPanel serialJTextField;
-    private javax.swing.JTextField txt_estado_asignadas;
-    private javax.swing.JTextField txt_estado_descripcion;
-    private javax.swing.JTextField txt_estado_fin;
-    private javax.swing.JTextField txt_estado_inicio;
-    private javax.swing.JTextField txt_estado_restantes;
+    protected javax.swing.JTextField txt_estado_asignadas;
+    protected javax.swing.JTextField txt_estado_descripcion;
+    protected javax.swing.JTextField txt_estado_fin;
+    protected javax.swing.JTextField txt_estado_inicio;
+    protected javax.swing.JTextField txt_estado_restantes;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */
