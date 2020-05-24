@@ -4,7 +4,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
 
-public class CxcJFrame extends BaseJFrame
+public abstract class CxcJFrame extends BaseJFrame
 {
     public CxcJFrame(final String idTextTitleWindow) 
     {

@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.models.Ubiad;
+import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class AditionalUbiqsAbstractTableModel extends BaseAbstractTableModel {
 
-    public AditionalUbiqsAbstractTableModel(List<Ubiad> deliveries, String[] header) {
+    public AditionalUbiqsAbstractTableModel(List<Ubiad> deliveries, List<ColumnTable> header) {
         super(deliveries,header);        
     }
 }

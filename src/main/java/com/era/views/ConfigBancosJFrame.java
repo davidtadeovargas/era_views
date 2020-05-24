@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class ConfigBancosJFrame extends BaseJFrame {
+public abstract class ConfigBancosJFrame extends BaseJFrame {
 
     
     public ConfigBancosJFrame(final String idTextTitleWindow) {

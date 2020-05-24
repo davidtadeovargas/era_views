@@ -4,7 +4,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
 
-public class CatalBancosJFrame extends BaseJFrame
+public abstract class CatalBancosJFrame extends BaseJFrame
 {
     
     public CatalBancosJFrame(final String idTextTitleWindow) 

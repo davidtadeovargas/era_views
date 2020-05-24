@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class DatsCartaPorJFrame extends BaseJFrame {
+public abstract class DatsCartaPorJFrame extends BaseJFrame {
     
     public DatsCartaPorJFrame(final String idTextTitleWindow) {
 

@@ -5,7 +5,7 @@ package com.era.views;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
-public class LotPedCatJFrame extends BaseJFrame {
+public abstract class LotPedCatJFrame extends BaseJFrame {
 
     public LotPedCatJFrame(final String idTextTitleWindow) {
         

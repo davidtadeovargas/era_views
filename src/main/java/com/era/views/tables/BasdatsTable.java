@@ -21,41 +21,7 @@ public class BasdatsTable extends BaseJTable {
     @Override
     public void initTable(final List<?> items) {
         
-        final String[] columns = {  "ID", 
-                                    "CódigoEmpresa", 
-                                    "Empresa", 
-                                    "Base de Datos", 
-                                    "Método Costeo", 
-                                    "Teléfono", 
-                                    "Ext", 
-                                    "Calle", 
-                                    "CP", 
-                                    "NoExt", 
-                                    "NoInt", 
-                                    "Colonia", 
-                                    "Ciudad", 
-                                    "Estado", 
-                                    "Pais", 
-                                    "RFC", 
-                                    "Correo", 
-                                    "Sucursal", 
-                                    "Caja", 
-                                    "Sitio Web", 
-                                    "Tipo Contribuyente", 
-                                    "Estación", 
-                                    "Lugar de Expedición", 
-                                    "Regimen Fiscal", 
-                                    "Ruta Certificado", 
-                                    "Ruta Key", 
-                                    "Password Certificado", 
-                                    "Ruta Aplicacion", 
-                                    "Plantilla", 
-                                    "Fecha Alta", 
-                                    "Fecha Modificacion"};
-        
-        final BasdatsTableModel BasdatsTableModel = new BasdatsTableModel(items,columns);        
+        final BasdatsTableModel BasdatsTableModel = new BasdatsTableModel(items,this.ShowColumns);
         this.setModel(BasdatsTableModel);
-        
-        tableInitialized = true;
     }
 }

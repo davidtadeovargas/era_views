@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel.getvaluesat;
 
 import com.era.models.BasDats;
+import com.era.views.tables.headers.TableHeaderFactory;
 
 /**
  *
@@ -14,19 +15,19 @@ import com.era.models.BasDats;
 public class BasdatsIGetValueAt1 implements IGetValueAt {
 
     @Override
-    public String getReturnValue(Object Object,int columnIndex) {
+    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
         
         final BasDats BasDats = (BasDats) Object;
         
         String returnValue = "undefined";
-        if(columnIndex==0){
+        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getNO().getValue())==0){
             returnValue = BasDats.getBd();
         }
-        else if(columnIndex==1){
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getCODE().getValue())==0){
             returnValue = BasDats.getNom();
         }
-        else if(columnIndex==2){
-            returnValue = BasDats.getCodemp();
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
+            returnValue = BasDats.getNom();
         }
         
         return returnValue;

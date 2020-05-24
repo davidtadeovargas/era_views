@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class correoTerminalJFrame extends BaseJFrame {
+public abstract class correoTerminalJFrame extends BaseJFrame {
 
     public correoTerminalJFrame(final String idTextTitleWindow) {
         

@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.models.Sucursal;
+import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class SucursalsAbstractTableModel extends BaseAbstractTableModel {
 
-    public SucursalsAbstractTableModel(List<Sucursal> deliveries, String[] header) {
+    public SucursalsAbstractTableModel(List<Sucursal> deliveries, List<ColumnTable> header) {
         super(deliveries,header);        
     }
 }

@@ -81,9 +81,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Probar"/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="80" y="290" width="140" height="-1"/>
@@ -94,9 +91,6 @@
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value="Correo electr&#xf3;nico de la terminal."/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="170" y="40" width="195" height="-1"/>
@@ -127,9 +121,6 @@
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value="Contrase&#xf1;a del correo electr&#xf3;nico de la terminal."/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="170" y="70" width="195" height="-1"/>
@@ -150,9 +141,6 @@
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value="Nombre que se muestra sobre su correo electr&#xf3;nico."/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="170" y="100" width="195" height="-1"/>
@@ -173,9 +161,6 @@
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value="Direcci&#xf3;n del servidor del correo electr&#xf3;nico."/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="170" y="130" width="195" height="-1"/>
@@ -196,9 +181,6 @@
               <Properties>
                 <Property name="toolTipText" type="java.lang.String" value="Puerto del servidor para el envio de correos electr&#xf3;nicos."/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="170" y="160" width="195" height="-1"/>
@@ -216,9 +198,6 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="correoCentral1">
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="170" y="220" width="195" height="-1"/>
@@ -229,9 +208,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Guardar"/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="240" y="290" width="140" height="-1"/>
@@ -311,9 +287,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Exportar Todo"/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="20" y="210" width="230" height="50"/>
@@ -324,9 +297,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Importar"/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="20" y="40" width="230" height="50"/>
@@ -364,9 +334,6 @@
                 <Property name="text" type="java.lang.String" value="Exportar Autom&#xe1;tico"/>
                 <Property name="toolTipText" type="java.lang.String" value="Exporte solo las ventas que no haya exportado antes."/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="20" y="150" width="230" height="50"/>
@@ -522,9 +489,6 @@
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="20" y="90" width="250" height="20"/>
@@ -558,9 +522,6 @@
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
                 </Property>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="20" y="160" width="250" height="20"/>
@@ -585,9 +546,6 @@
                 <Property name="text" type="java.lang.String" value="Sincronizar"/>
                 <Property name="toolTipText" type="java.lang.String" value="Envia el documento que usted le indique"/>
               </Properties>
-              <Events>
-                
-              </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="30" y="240" width="470" height="60"/>

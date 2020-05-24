@@ -14,7 +14,7 @@ import javax.swing.WindowConstants;
  *
  * @author PC
  */
-public class LoadingWaitJFrame extends javax.swing.JFrame {
+public abstract class LoadingWaitJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form WaitJFrame

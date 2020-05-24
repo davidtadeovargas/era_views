@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class EntradasSalidasJFrame extends BaseJFrame {
+public abstract class EntradasSalidasJFrame extends BaseJFrame {
 
     
     

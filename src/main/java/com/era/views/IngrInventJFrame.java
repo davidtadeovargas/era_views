@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class IngrInventJFrame extends BaseJFrame {
+public abstract class IngrInventJFrame extends BaseJFrame {
     
     public IngrInventJFrame(final String idTextTitleWindow) 
     {                

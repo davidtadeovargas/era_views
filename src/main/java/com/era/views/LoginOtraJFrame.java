@@ -2,7 +2,7 @@ package com.era.views;
 
 
 
-public class LoginOtraJFrame extends BaseJFrame 
+public abstract class LoginOtraJFrame extends BaseJFrame 
 {
     public LoginOtraJFrame(final String idTextTitleWindow) 
     {

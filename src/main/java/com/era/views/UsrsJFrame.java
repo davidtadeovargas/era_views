@@ -1,6 +1,6 @@
 package com.era.views;
 
-public class UsrsJFrame extends BaseJFrame {
+public abstract class UsrsJFrame extends BaseJFrame {
     
 
     
@@ -9,17 +9,7 @@ public class UsrsJFrame extends BaseJFrame {
         super(idTextTitleWindow);
         
         initComponents();
-        
-        
-        this.getRootPane().setDefaultButton(jBNew);
-
-        jLImg.setVisible(false);
-
-        jTEstac.grabFocus();
     }
-
-
-        
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

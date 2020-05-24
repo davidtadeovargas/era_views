@@ -2,7 +2,7 @@
 package com.era.views;
 
 //System presentation (first window shown)
-public class PresentationJFrame extends BaseJFrame {
+public abstract class PresentationJFrame extends BaseJFrame {
     
     public PresentationJFrame() {
         

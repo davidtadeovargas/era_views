@@ -1,7 +1,7 @@
 package com.era.views;
 
 //Config configuration database file
-public class DBFileConnectionConfigurationJFrame extends BaseJFrame {
+public abstract class DBFileConnectionConfigurationJFrame extends BaseJFrame {
     
     public DBFileConnectionConfigurationJFrame(final String idTextTitleWindow) {
         

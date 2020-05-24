@@ -1,6 +1,6 @@
 package com.era.views;
 
-public class FacturarTicketsJFrame extends BaseJFrame {
+public abstract class FacturarTicketsJFrame extends BaseJFrame {
     
     
     

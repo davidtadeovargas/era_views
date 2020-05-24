@@ -4,7 +4,7 @@ package com.era.views;
 
 
 
-public class IngrPrevComJFrame extends BaseJFrame 
+public abstract class IngrPrevComJFrame extends BaseJFrame 
 {
     public IngrPrevComJFrame(final String idTextTitleWindow) 
     {                

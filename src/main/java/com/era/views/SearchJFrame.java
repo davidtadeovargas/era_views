@@ -3,7 +3,7 @@ package com.era.views;
 
 
 //Search over catalogs
-public class SearchJFrame extends BaseJFrame {
+public abstract class SearchJFrame extends BaseJFrame {
         
     public SearchJFrame(final String idTextTitleWindow) {
         

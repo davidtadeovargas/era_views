@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class VOrdsJFrame extends BaseJFrame 
+public abstract class VOrdsJFrame extends BaseJFrame 
 {
     
     public VOrdsJFrame(final String idTextTitleWindow) 

@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class SalidaJFrame extends BaseJFrame {
+public abstract class SalidaJFrame extends BaseJFrame {
     
         public SalidaJFrame(final String idTextTitleWindow) {
             

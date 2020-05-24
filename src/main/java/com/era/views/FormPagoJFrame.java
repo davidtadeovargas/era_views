@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class FormPagoJFrame extends BaseJFrame  {
+public abstract class FormPagoJFrame extends BaseJFrame  {
         
     protected FormPagoJFrame(final String idTextTitleWindow) {
         

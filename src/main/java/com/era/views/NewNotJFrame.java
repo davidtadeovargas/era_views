@@ -2,7 +2,7 @@ package com.era.views;
 
 
 
-public class NewNotJFrame extends BaseJFrame
+public abstract class NewNotJFrame extends BaseJFrame
 {        
     public NewNotJFrame(final String idTextTitleWindow) 
     {                                                 

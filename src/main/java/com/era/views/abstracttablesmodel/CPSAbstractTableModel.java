@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.models.CCodigopostal;
+import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class CPSAbstractTableModel extends BaseAbstractTableModel {
         
-    public CPSAbstractTableModel(List<CCodigopostal> deliveries, String[] header) {
+    public CPSAbstractTableModel(List<CCodigopostal> deliveries, List<ColumnTable> header) {
         super(deliveries,header);
     }
 

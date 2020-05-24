@@ -9,7 +9,7 @@ package com.era.views;
  *
  * @author augus
  */
-public class MaximosMinimosJFrame extends BaseJFrame {
+public abstract class MaximosMinimosJFrame extends BaseJFrame {
 
     /**
      * Creates new form MaximosMinimos

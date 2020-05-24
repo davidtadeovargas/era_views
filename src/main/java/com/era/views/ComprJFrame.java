@@ -4,7 +4,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
 
-public class ComprJFrame extends BaseJFrame 
+public abstract class ComprJFrame extends BaseJFrame 
 {
     public ComprJFrame(final String idTextTitleWindow) 
     {       

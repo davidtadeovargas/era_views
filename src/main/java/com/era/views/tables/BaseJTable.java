@@ -7,11 +7,15 @@ package com.era.views.tables;
 
 import com.era.logger.LoggerUtility;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import com.era.views.tables.headers.ColumnTable;
+import com.era.views.tables.headers.UsersTableHeader;
+import com.era.views.tables.interfaces.ColumnsVisible;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
@@ -41,6 +45,7 @@ public abstract class BaseJTable extends JTable {
     protected boolean tableInitialized;
     protected JTableEnterKeyPressed JTableEnterKeyPressed;
     
+    protected List<ColumnTable> ShowColumns = new ArrayList<>();
     
     public abstract void initTable(final List<?> items);
     
@@ -58,6 +63,10 @@ public abstract class BaseJTable extends JTable {
         super();
         
         init();
+    }
+    
+    public void addShowColumn(final ColumnTable ColumnTable){
+        this.ShowColumns.add(ColumnTable);
     }
 
     public void setJTableEnterKeyPressed(JTableEnterKeyPressed JTableEnterKeyPressed) {

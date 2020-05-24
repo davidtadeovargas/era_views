@@ -5,7 +5,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class MonsJFrame extends BaseJFrame
+public abstract class MonsJFrame extends BaseJFrame
 {    
     public MonsJFrame(final String idTextTitleWindow) 
     {

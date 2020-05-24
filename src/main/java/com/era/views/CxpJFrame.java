@@ -6,7 +6,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class CxpJFrame extends javax.swing.JFrame 
+public abstract class CxpJFrame extends javax.swing.JFrame 
 {
     public CxpJFrame(final String idTextTitleWindow) 
     {

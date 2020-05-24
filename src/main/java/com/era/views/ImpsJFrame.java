@@ -9,7 +9,7 @@ import javax.swing.table.TableRowSorter;
 
 
 /*Clase para controlar los impues*/
-public class ImpsJFrame extends BaseJFrame
+public abstract class ImpsJFrame extends BaseJFrame
 {
     public ImpsJFrame(final String idTextTitleWindow) 
     {        

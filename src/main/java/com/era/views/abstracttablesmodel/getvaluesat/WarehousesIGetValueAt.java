@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel.getvaluesat;
 
 import com.era.models.Warehouse;
+import com.era.views.tables.headers.TableHeaderFactory;
 
 /**
  *
@@ -14,18 +15,18 @@ import com.era.models.Warehouse;
 public class WarehousesIGetValueAt implements IGetValueAt {
 
     @Override
-    public String getReturnValue(Object Object,int columnIndex) {
+    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
         
         final Warehouse Warehouse = (Warehouse) Object;
         
         String returnValue = "undefined";
-        if(columnIndex==0){
+        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getNO().getValue())==0){
             returnValue = Warehouse.getCode();
         }
-        else if(columnIndex==1){
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getCODE().getValue())==0){
             returnValue = Warehouse.getDescription();
         }
-        else if(columnIndex==2){
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
             returnValue = Warehouse.getResponsible();
         }
         

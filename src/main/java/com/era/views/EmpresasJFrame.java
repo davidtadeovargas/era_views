@@ -5,7 +5,7 @@
  */
 package com.era.views;
 
-public class EmpresasJFrame extends BaseJFrame {
+public abstract class EmpresasJFrame extends BaseJFrame {
 
     protected final javax.swing.ButtonGroup bgMetodoCosteo;
     protected final javax.swing.ButtonGroup bgTipoContribuyente;

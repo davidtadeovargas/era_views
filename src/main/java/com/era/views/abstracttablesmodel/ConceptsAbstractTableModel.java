@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.models.Conceps;
+import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class ConceptsAbstractTableModel extends BaseAbstractTableModel {
 
-    public ConceptsAbstractTableModel(List<Conceps> deliveries, String[] header) {
+    public ConceptsAbstractTableModel(List<Conceps> deliveries, List<ColumnTable> header) {
         super(deliveries,header);
     }
 }

@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.models.Giro;
+import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class GirosAbstractTableModel extends BaseAbstractTableModel {
 
-    public GirosAbstractTableModel(List<Giro> deliveries, String[] header) {
+    public GirosAbstractTableModel(List<Giro> deliveries, List<ColumnTable> header) {
         super(deliveries,header);
     }        
 }

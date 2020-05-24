@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class ProdExisAlmJFrame extends BaseJFrame 
+public abstract class ProdExisAlmJFrame extends BaseJFrame 
 {
     public ProdExisAlmJFrame(final String idTextTitleWindow) 
     {

@@ -6,7 +6,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class Impuestos_X_partidaJFrame extends BaseJFrame 
+public abstract class Impuestos_X_partidaJFrame extends BaseJFrame 
 {
     public Impuestos_X_partidaJFrame(final String idTextTitleWindow) 
     {                

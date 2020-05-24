@@ -1,6 +1,6 @@
 package com.era.views;
 
-public class DocumentosTimbradosJFrame extends BaseJFrame {
+public abstract class DocumentosTimbradosJFrame extends BaseJFrame {
     
     
     public DocumentosTimbradosJFrame(final String idTextTitleWindow) {

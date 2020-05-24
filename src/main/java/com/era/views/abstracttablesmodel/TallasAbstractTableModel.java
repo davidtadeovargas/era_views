@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.models.Tall;
+import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class TallasAbstractTableModel extends BaseAbstractTableModel {
 
-    public TallasAbstractTableModel(List<Tall> deliveries, String[] header) {
+    public TallasAbstractTableModel(List<Tall> deliveries, List<ColumnTable> header) {
         super(deliveries,header);
     }
 }

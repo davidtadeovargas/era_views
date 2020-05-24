@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.models.Payment;
+import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class PaymentTypesAbstractTableModel extends BaseAbstractTableModel {
 
-    public PaymentTypesAbstractTableModel(List<Payment> deliveries, String[] header) {
+    public PaymentTypesAbstractTableModel(List<Payment> deliveries, List<ColumnTable> header) {
         super(deliveries,header);
     }
 }

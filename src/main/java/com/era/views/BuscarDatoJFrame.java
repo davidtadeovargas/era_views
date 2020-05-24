@@ -3,7 +3,7 @@ package com.era.views;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-public class BuscarDatoJFrame extends javax.swing.JDialog {
+public abstract class BuscarDatoJFrame extends javax.swing.JDialog {
     
     private TableRowSorter<TableModel> rowSorter; 
     

@@ -3,7 +3,7 @@ package com.era.views;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
-public class AbonosJFrame extends BaseJFrame {
+public abstract class AbonosJFrame extends BaseJFrame {
     
     
     protected AbonosJFrame(final String idTextTitleWindow) {

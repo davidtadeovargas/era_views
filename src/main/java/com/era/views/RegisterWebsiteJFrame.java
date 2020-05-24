@@ -9,11 +9,8 @@ package com.era.views;
  *
  * @author PC
  */
-public class RegisterWebsiteJFrame extends javax.swing.JFrame {
-    
-    private OnURLLabelClicked OnURLLabelClicked;
-    private OnOKButtonClicked OnOKButtonClicked;
-    
+public abstract class RegisterWebsiteJFrame extends BaseJFrame {
+        
     /**
      * Creates new form RegisterWebsiteJFrame
      */
@@ -22,24 +19,6 @@ public class RegisterWebsiteJFrame extends javax.swing.JFrame {
         super("");
         
         initComponents();
-        
-        this.setLocationRelativeTo(null);
-    }
-
-    public OnURLLabelClicked getOnURLLabelClicked() {
-        return OnURLLabelClicked;
-    }
-
-    public void setOnURLLabelClicked(OnURLLabelClicked OnURLLabelClicked) {
-        this.OnURLLabelClicked = OnURLLabelClicked;
-    }
-
-    public OnOKButtonClicked getOnOKButtonClicked() {
-        return OnOKButtonClicked;
-    }
-
-    public void setOnOKButtonClicked(OnOKButtonClicked OnOKButtonClicked) {
-        this.OnOKButtonClicked = OnOKButtonClicked;
     }
     
     /**
@@ -107,34 +86,20 @@ public class RegisterWebsiteJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void OKjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKjButtonActionPerformed
-        
-        if(OnOKButtonClicked!=null){
-            OnOKButtonClicked.onClicked(evt);
-        }
-        
+                
     }//GEN-LAST:event_OKjButtonActionPerformed
 
     private void urlJLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_urlJLabelMouseClicked
-        
-        if(OnURLLabelClicked!=null){
-            OnURLLabelClicked.onClicked(evt);
-        }
+             
         
     }//GEN-LAST:event_urlJLabelMouseClicked
-            
-    public interface OnURLLabelClicked{
-        public void onClicked(java.awt.event.MouseEvent evt);
-    }
-    
-    public interface OnOKButtonClicked{
-        public void onClicked(java.awt.event.ActionEvent evt);
-    }
+                
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton OKjButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    protected javax.swing.JButton OKjButton;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel urlJLabel;
+    protected javax.swing.JLabel urlJLabel;
     // End of variables declaration//GEN-END:variables
 }

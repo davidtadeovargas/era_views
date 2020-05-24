@@ -1,6 +1,6 @@
 package com.era.views;
 
-public class ConfGralJFrame extends BaseJFrame
+public abstract class ConfGralJFrame extends BaseJFrame
 {
     public ConfGralJFrame(final String idTextTitleWindow) 
     {                

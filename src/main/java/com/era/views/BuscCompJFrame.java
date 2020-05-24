@@ -5,7 +5,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class BuscCompJFrame extends BaseJFrame
+public abstract class BuscCompJFrame extends BaseJFrame
 {
     public BuscCompJFrame(final String idTextTitleWindow) 
     {           

@@ -5,6 +5,7 @@
  */
 package com.era.views.abstracttablesmodel;
 
+import com.era.views.tables.headers.ColumnTable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
@@ -16,11 +17,12 @@ import javax.swing.table.AbstractTableModel;
 public abstract class BaseAbstractTableModel extends AbstractTableModel{
  
     protected List<?> items = new ArrayList<>();
-    protected String[] header;
+    protected List<ColumnTable> header;
+    protected GetValueAt GetValueAt;
     
     
     
-    public BaseAbstractTableModel(List<?> items, String[] header) {
+    public BaseAbstractTableModel(final List<?> items, final List<ColumnTable> header) {
         this.header = header;
         this.items = items;        
     }
@@ -35,20 +37,30 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
         this.items = items;
         this.fireTableDataChanged();
     }
-    
+        
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return this.items.get(rowIndex);
+        
+        final ColumnTable ColumnTable = this.header.get(columnIndex);
+        final String value = ColumnTable.getValue();
+        final Object Object = this.items.get(rowIndex);  
+        
+        if(GetValueAt != null){
+            return GetValueAt.getValueAt(rowIndex, columnIndex, value, Object);
+        }
+        else{
+            return "";
+        }
     }
     
     @Override
     public String getColumnName(int col) {
-        return this.header[col];
+        return this.header.get(col).getValue();
     }
     
     @Override
     public int getColumnCount() {
-        return this.header.length;
+        return this.header.size();
     }
     
     final public Object getItem(int rowIndex){
@@ -68,5 +80,9 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
     @Override
     public int getRowCount() {
         return items.size();
+    }
+    
+    public interface GetValueAt{        
+        public Object getValueAt(int rowIndex, int columnIndex, final String valueColumn, final Object model);
     }
 }

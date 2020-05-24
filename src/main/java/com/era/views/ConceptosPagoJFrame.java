@@ -12,7 +12,7 @@ import javax.swing.table.TableRowSorter;
  *
  * @author augus
  */
-public class ConceptosPagoJFrame extends BaseJFrame {
+public abstract class ConceptosPagoJFrame extends BaseJFrame {
     
     
     public ConceptosPagoJFrame(final String idTextTitleWindow) {

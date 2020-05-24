@@ -6,7 +6,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class VerCtaContJFrame extends BaseJFrame
+public abstract class VerCtaContJFrame extends BaseJFrame
 {
     public VerCtaContJFrame(final String idTextTitleWindow) 
     {                

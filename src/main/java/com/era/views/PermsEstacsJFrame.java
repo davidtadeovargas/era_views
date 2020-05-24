@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class PermsEstacsJFrame extends BaseJFrame 
+public abstract class PermsEstacsJFrame extends BaseJFrame 
 {                
    
     public PermsEstacsJFrame(final String idTextTitleWindow) 

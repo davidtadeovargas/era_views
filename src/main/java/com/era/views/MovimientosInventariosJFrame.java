@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class MovimientosInventariosJFrame extends BaseJFrame {
+public abstract class MovimientosInventariosJFrame extends BaseJFrame {
     
     public MovimientosInventariosJFrame(final String idTextTitleWindow) {
         

@@ -28,11 +28,11 @@ public class PremiumJFrameJUnitTest  {
         
         try{
             
-            final PremiumJFrame PremiumJFrame = new PremiumJFrame();
+            /*final PremiumJFrame PremiumJFrame = new PremiumJFrame();
             PremiumJFrame.setVisible(true);
                         
             //Never ends this program
-            Thread.currentThread().join();  
+            Thread.currentThread().join();  */
             
             assertTrue(true);
             

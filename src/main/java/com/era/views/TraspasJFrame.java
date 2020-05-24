@@ -1,6 +1,6 @@
 package com.era.views;
 
-public class TraspasJFrame extends BaseJFrame {
+public abstract class TraspasJFrame extends BaseJFrame {
 
     public TraspasJFrame(final String idTextTitleWindow) {
         

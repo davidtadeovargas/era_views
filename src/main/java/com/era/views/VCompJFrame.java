@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class VCompJFrame extends BaseJFrame 
+public abstract class VCompJFrame extends BaseJFrame 
 {        
     
     public VCompJFrame(final String idTextTitleWindow) 

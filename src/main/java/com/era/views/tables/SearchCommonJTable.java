@@ -15,8 +15,7 @@ import java.util.List;
  */
 public class SearchCommonJTable extends BaseJTable {
     
-    private SearchCommonTypeEnum SearchCommonTypeEnum;
-    
+    private SearchCommonTypeEnum SearchCommonTypeEnum;    
     
         
     public SearchCommonJTable(){
@@ -26,9 +25,7 @@ public class SearchCommonJTable extends BaseJTable {
     @Override
     public void initTable(final List<?> items) {
         
-        final String[] columns = new String[]{"Cod.","Descripción/Valor","Otros"};        
-        
-        final SearchCommonAbstractTableModel SearchCommonAbstractTableModel = new SearchCommonAbstractTableModel(items,columns,SearchCommonTypeEnum);
+        final SearchCommonAbstractTableModel SearchCommonAbstractTableModel = new SearchCommonAbstractTableModel(items,this.ShowColumns,SearchCommonTypeEnum);
         this.setModel(SearchCommonAbstractTableModel);
     }
 

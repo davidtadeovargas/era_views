@@ -6,7 +6,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class DevPVtaPtoJFrame extends BaseJFrame 
+public abstract class DevPVtaPtoJFrame extends BaseJFrame 
 {
     public DevPVtaPtoJFrame(final String idTextTitleWindow) 
     {

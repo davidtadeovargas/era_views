@@ -10,5 +10,5 @@ package com.era.views.abstracttablesmodel.getvaluesat;
  * @author PC
  */
 public interface IGetValueAt {
-    public String getReturnValue(Object Object,int columnIndex);
+    public String getReturnValue(Object Object,int rowIndex, int columnIndex, final String valueColumn);
 }

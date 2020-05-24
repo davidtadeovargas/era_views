@@ -5,7 +5,7 @@ import javax.swing.table.TableRowSorter;
 
 
 /*Clase para hacer una alta de producto*/
-public class ProdsJFrame extends BaseJFrame
+public abstract class ProdsJFrame extends BaseJFrame
 {
     public ProdsJFrame(final String idTextTitleWindow)
     {               

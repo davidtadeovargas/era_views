@@ -6,7 +6,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class BajsMinJFrame extends BaseJFrame
+public abstract class BajsMinJFrame extends BaseJFrame
 {
     public BajsMinJFrame(final String idTextTitleWindow) 
     {           

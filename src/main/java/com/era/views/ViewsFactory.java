@@ -5,6 +5,12 @@
  */
 package com.era.views;
 
+import com.era.views.viewscontrollers.ErrorDialogViewController;
+import com.era.views.viewscontrollers.PremiumViewController;
+import com.era.views.viewscontrollers.LoadingWaitViewController;
+import com.era.views.viewscontrollers.PushNotificationViewController;
+import com.era.views.viewscontrollers.RegisterWebsiteViewController;
+
 /**
  *
  * @author PC
@@ -13,8 +19,8 @@ public class ViewsFactory {
     
     private static ViewsFactory RenderViewManager;
     
-    private PremiumJFrame PremiumJFrame;    
-    private LoadingWaitJFrame LoadingWaitJFrame;
+    private PremiumViewController PremiumViewController;    
+    private LoadingWaitViewController LoadingWaitViewController;    
     
     
     private ViewsFactory(){        
@@ -28,31 +34,31 @@ public class ViewsFactory {
     }
     
     public PremiumJFrame getPremiumJFrame(){
-        if(PremiumJFrame==null){
-            PremiumJFrame = new PremiumJFrame();
+        if(PremiumViewController==null){
+            PremiumViewController = new PremiumViewController();
         }
-        return PremiumJFrame;
+        return PremiumViewController;
     }
     
-    public PushNotificationJFrame getPushNotificationJFrame(final String urlBanner, final String urlBannerAction) throws Exception{
-        return new PushNotificationJFrame(urlBanner,urlBannerAction);
+    public PushNotificationViewController getPushNotificationViewController(final String urlBanner, final String urlBannerAction) throws Exception{
+        return new PushNotificationViewController(urlBanner,urlBannerAction);
     }
     
     public RegisterWebsiteJFrame getRegisterWebsiteJFrame(){
-        return new RegisterWebsiteJFrame();
+        return new RegisterWebsiteViewController();
     }
     
     public DialogJFrame getDialogJFrame(final String message){
         return new DialogJFrame(message);
     }
     
-    public LoadingWaitJFrame getLoadingWaitJFrame(){
-        if(LoadingWaitJFrame == null){
-            LoadingWaitJFrame = new LoadingWaitJFrame();
+    public LoadingWaitViewController getLoadingWaitJFrame(){
+        if(LoadingWaitViewController == null){
+            LoadingWaitViewController = new LoadingWaitViewController();
         }
-        return LoadingWaitJFrame;
+        return LoadingWaitViewController;
     }
-    
+        
     @Override
     protected Object clone() throws CloneNotSupportedException {
         throw new CloneNotSupportedException();

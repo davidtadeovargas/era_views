@@ -1,6 +1,6 @@
 package com.era.views;
 
-public class PrevCompJFrame extends BaseJFrame 
+public abstract class PrevCompJFrame extends BaseJFrame 
 {
     public PrevCompJFrame(final String idTextTitleWindow) 
     {

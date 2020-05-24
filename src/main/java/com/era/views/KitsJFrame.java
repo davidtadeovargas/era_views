@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class KitsJFrame extends BaseJFrame 
+public abstract class KitsJFrame extends BaseJFrame 
 {
     
     public KitsJFrame(final String idTextTitleWindow) 

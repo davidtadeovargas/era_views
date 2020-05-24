@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class UltPrecsJFrame extends BaseJFrame 
+public abstract class UltPrecsJFrame extends BaseJFrame 
 {
     public UltPrecsJFrame(final String idTextTitleWindow) 
     {                

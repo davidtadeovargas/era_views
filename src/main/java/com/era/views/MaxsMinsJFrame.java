@@ -8,7 +8,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class MaxsMinsJFrame extends BaseJFrame
+public abstract class MaxsMinsJFrame extends BaseJFrame
 {    
     public MaxsMinsJFrame(final String idTextTitleWindow) 
     {                        

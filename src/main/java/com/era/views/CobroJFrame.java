@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class CobroJFrame extends BaseJFrame
+public abstract class CobroJFrame extends BaseJFrame
 {
     public CobroJFrame(final String idTextTitleWindow) 
     {             

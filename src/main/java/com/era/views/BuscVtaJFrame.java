@@ -6,7 +6,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class BuscVtaJFrame extends javax.swing.JFrame
+public abstract class BuscVtaJFrame extends javax.swing.JFrame
 {
     public BuscVtaJFrame(final String idTextTitleWindow) 
     {           

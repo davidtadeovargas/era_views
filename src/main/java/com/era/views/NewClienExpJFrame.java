@@ -4,7 +4,7 @@ package com.era.views;
 
 
 
-public class NewClienExpJFrame extends BaseJFrame 
+public abstract class NewClienExpJFrame extends BaseJFrame 
 {        
     
     public NewClienExpJFrame(final String idTextTitleWindow)

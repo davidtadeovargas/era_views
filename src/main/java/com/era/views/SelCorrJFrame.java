@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class SelCorrJFrame extends BaseJFrame
+public abstract class SelCorrJFrame extends BaseJFrame
 {
     public SelCorrJFrame(final String idTextTitleWindow) 
     {           

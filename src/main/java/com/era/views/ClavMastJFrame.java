@@ -2,7 +2,7 @@ package com.era.views;
 
 
 
-public class ClavMastJFrame extends BaseJFrame
+public abstract class ClavMastJFrame extends BaseJFrame
 {
     public ClavMastJFrame(final String idTextTitleWindow) 
     {

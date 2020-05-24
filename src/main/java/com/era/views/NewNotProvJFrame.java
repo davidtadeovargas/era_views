@@ -4,7 +4,7 @@ package com.era.views;
 
 
 
-public class NewNotProvJFrame extends BaseJFrame
+public abstract class NewNotProvJFrame extends BaseJFrame
 {        
     public NewNotProvJFrame(final String idTextTitleWindow) 
     {                                                     

@@ -1,6 +1,6 @@
 package com.era.views;
 
-public class TicketsFacturadosJFrame extends BaseJFrame {
+public abstract class TicketsFacturadosJFrame extends BaseJFrame {
     
     
     public TicketsFacturadosJFrame(final String idTextTitleWindow) {

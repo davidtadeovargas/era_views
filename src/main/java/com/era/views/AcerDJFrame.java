@@ -2,7 +2,7 @@ package com.era.views;
 
 
 
-public class AcerDJFrame extends BaseJFrame
+public abstract class AcerDJFrame extends BaseJFrame
 {       
     public AcerDJFrame(final String idTextTitleWindow) 
     {         

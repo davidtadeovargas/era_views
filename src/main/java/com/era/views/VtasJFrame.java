@@ -3,7 +3,7 @@ package com.era.views;
 import java.awt.FlowLayout;
 
 
-public class VtasJFrame extends BaseJFrame {
+public abstract class VtasJFrame extends BaseJFrame {
     
     public VtasJFrame(final String idTextTitleWindow){
         

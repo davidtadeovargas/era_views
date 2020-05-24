@@ -11,7 +11,7 @@ import com.era.logger.LoggerUtility;
  *
  * @author PC
  */
-public class LoginLicenseJFrame extends BaseJFrame {
+public abstract class LoginLicenseJFrame extends BaseJFrame {
     
     /**
      * Creates new form LoginLicenseJFrame

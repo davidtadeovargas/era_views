@@ -14,16 +14,14 @@ import java.util.List;
  */
 public class EmpresasTable extends BaseJTable {
     
-    public EmpresasTable(){
-     
+    public EmpresasTable(){     
         super();
     }
 
     @Override
     public void initTable(List<?> items) {
         
-        final String[] columns = {"ID", "CódigoEmpresa", "Empresa", "Base de Datos", "Método Costeo", "Teléfono", "Ext", "Calle", "CP", "NoExt", "NoInt", "Colonia", "Ciudad", "Estado", "Pais", "RFC", "Correo", "Sucursal", "Caja", "Sitio Web", "Tipo Contribuyente", "Estación", "Lugar de Expedición", "Regimen Fiscal", "Ruta Certificado", "Ruta Key", "Password Certificado", "Ruta Aplicacion", "Plantilla", "Fecha Alta", "Fecha Modificacion"};        
-        final EmpresasTableModel EmpresasTableModel = new EmpresasTableModel(items,columns);
+        final EmpresasTableModel EmpresasTableModel = new EmpresasTableModel(items,this.ShowColumns);
         this.setModel(EmpresasTableModel);
     }
 }

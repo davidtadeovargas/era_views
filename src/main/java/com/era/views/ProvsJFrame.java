@@ -5,7 +5,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class ProvsJFrame extends BaseJFrame 
+public abstract class ProvsJFrame extends BaseJFrame 
 {
     public ProvsJFrame(final String idTextTitleWindow) 
     {                

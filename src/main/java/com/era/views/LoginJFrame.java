@@ -1,7 +1,7 @@
 package com.era.views;
 
 //Login to system view
-public class LoginJFrame extends BaseJFrame {
+public abstract class LoginJFrame extends BaseJFrame {
                 
     public LoginJFrame(final String idTextTitleWindow) {
         

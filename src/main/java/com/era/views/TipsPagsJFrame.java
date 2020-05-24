@@ -7,7 +7,7 @@ import javax.swing.table.TableRowSorter;
 
 
 /*Clase para controlar los tipos de pags*/
-public class TipsPagsJFrame extends BaseJFrame
+public abstract class TipsPagsJFrame extends BaseJFrame
 {
     public TipsPagsJFrame(final String idTextTitleWindow) 
     {                

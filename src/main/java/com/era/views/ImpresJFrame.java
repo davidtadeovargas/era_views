@@ -1,15 +1,12 @@
 package com.era.views;
 
-
-public class ImpresJFrame extends BaseJFrame 
+public abstract class ImpresJFrame extends BaseJFrame 
 {
     public ImpresJFrame(final String idTextTitleWindow) 
     {                
         super(idTextTitleWindow);
         
-        initComponents();
-        
-        
+        initComponents();                
         
     }
 
@@ -28,25 +25,23 @@ public class ImpresJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.UsersTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
-        jComImpTick = new javax.swing.JComboBox();
+        jComImpTick = new com.era.views.comboboxes.PrinterCombobox();
         jTEstacs = new javax.swing.JTextField();
         jBBusEsta = new javax.swing.JButton();
         jBProbTick = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jComImpFact = new javax.swing.JComboBox();
+        jComImpFact = new com.era.views.comboboxes.PrinterCombobox();
         jBProbFac = new javax.swing.JButton();
         jC52m = new javax.swing.JCheckBox();
         jCCort = new javax.swing.JCheckBox();
-        jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -148,17 +143,12 @@ public class ImpresJFrame extends BaseJFrame
         jBBusEsta.setText("...");
         jBBusEsta.setToolTipText("Buscar Usuario(s)");
         jBBusEsta.setNextFocusableComponent(jComImpTick);
-        
-        
         jP1.add(jBBusEsta, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 30, 20));
 
         jBProbTick.setBackground(new java.awt.Color(255, 255, 255));
         jBProbTick.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jBProbTick.setText("Probar");
         jBProbTick.setNextFocusableComponent(jComImpFact);
-        
-        
-        
         jP1.add(jBProbTick, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, -1, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -166,8 +156,6 @@ public class ImpresJFrame extends BaseJFrame
         jP1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 170, -1));
 
         jComImpFact.setNextFocusableComponent(jBProbFac);
-        
-        
         jP1.add(jComImpFact, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 160, 20));
 
         jBProbFac.setBackground(new java.awt.Color(255, 255, 255));
@@ -179,26 +167,12 @@ public class ImpresJFrame extends BaseJFrame
         jC52m.setBackground(new java.awt.Color(255, 255, 255));
         jC52m.setText("52mm");
         jC52m.setNextFocusableComponent(jCCort);
-        
         jP1.add(jC52m, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 55, 70, 20));
 
         jCCort.setBackground(new java.awt.Color(255, 255, 255));
         jCCort.setText("Corte");
         jCCort.setNextFocusableComponent(jBProbTick);
-        
         jP1.add(jCCort, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 55, 80, 20));
-
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");        
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar Todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, 130, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -225,29 +199,27 @@ public class ImpresJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBBusEsta;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBProbFac;
-    private javax.swing.JButton jBProbTick;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JCheckBox jC52m;
-    private javax.swing.JCheckBox jCCort;
-    private javax.swing.JComboBox jComImpFact;
-    private javax.swing.JComboBox jComImpTick;
+    protected javax.swing.JButton jBBusEsta;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBProbFac;
+    protected javax.swing.JButton jBProbTick;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JCheckBox jC52m;
+    protected javax.swing.JCheckBox jCCort;
+    protected com.era.views.comboboxes.PrinterCombobox jComImpFact;
+    protected com.era.views.comboboxes.PrinterCombobox jComImpTick;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jP1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTEstacs;
-    private javax.swing.JTable jTab;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTEstacs;
+    protected com.era.views.tables.UsersTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

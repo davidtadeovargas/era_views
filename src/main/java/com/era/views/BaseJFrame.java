@@ -19,6 +19,8 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import com.era.views.interfaces.OnJFrameVisible;
+import com.era.views.tables.BaseJTable;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,13 +29,15 @@ import java.util.logging.Logger;
  *
  * @author PC
  */
-public class BaseJFrame extends JFrame {
+public abstract class BaseJFrame extends JFrame {
     
     protected final BaseJFrame baseJFrame = this;
     protected boolean setVisibleWithEfect;
     protected boolean closeSystemOnClose;
     protected JComponentUtils JComponentUtils = new JComponentUtils();
     protected OnJFrameVisible OnJFrameVisible;
+    
+    protected BaseJTable BaseJTable;
     
     protected String titleWindow;
     
@@ -94,6 +98,20 @@ public class BaseJFrame extends JFrame {
         JButton.addActionListener((java.awt.event.ActionEvent evt) -> {
             dispose();
         });
+    }
+    
+    public abstract List<?> getItemsToLoadInTable() throws Exception;
+    
+    protected void loadItemsInTable() throws Exception {
+        
+        //Load all the items in the table        
+        if(this.BaseJTable != null){               
+            if(this.BaseJTable.cointainsRows()){
+                this.BaseJTable.clearRows();
+            }
+            final List<?> items = getItemsToLoadInTable();
+            this.BaseJTable.initTable(items);
+        }
     }
     
     public void maximizedWindow(){
@@ -187,5 +205,5 @@ public class BaseJFrame extends JFrame {
 
     public void setSetVisibleWithEfect(boolean setVisibleWithEfect) {
         this.setVisibleWithEfect = setVisibleWithEfect;
-    }        
+    }
 }

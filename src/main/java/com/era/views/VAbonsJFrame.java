@@ -3,7 +3,7 @@ package com.era.views;
 
 
 
-public class VAbonsJFrame extends BaseJFrame
+public abstract class VAbonsJFrame extends BaseJFrame
 {
     
     public VAbonsJFrame(final String idTextTitleWindow) 

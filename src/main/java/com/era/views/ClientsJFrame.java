@@ -7,7 +7,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class ClientsJFrame extends BaseJFrame
+public abstract class ClientsJFrame extends BaseJFrame
 {
     public ClientsJFrame(final String idTextTitleWindow) 
     {        

@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class NewVtaJFrame extends BaseJFrame
+public abstract class NewVtaJFrame extends BaseJFrame
 {        
     
     public NewVtaJFrame(final String idTextTitleWindow) {

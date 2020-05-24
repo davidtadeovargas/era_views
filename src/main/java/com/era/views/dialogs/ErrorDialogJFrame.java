@@ -5,54 +5,23 @@
  */
 package com.era.views.dialogs;
 
-import com.era.utilities.DialogPropertiesUitlity;
 import com.era.views.BaseJFrame;
-import java.util.Properties;
 
 /**
  *
  * @author PC
  */
-public class ErrorDialogJFrame extends BaseJFrame {
-
-    private OnOkButtonActionPerformed OnOkButtonActionPerformed;
-    final Properties props;
+public abstract class ErrorDialogJFrame extends BaseJFrame {
+    
     
     /**
-     * Creates new form ErrorDialogJFrame
-     * @throws java.lang.Exception
+     * Creates new form ErrorDialogJFrame     
      */
-    public ErrorDialogJFrame() throws Exception {
+    public ErrorDialogJFrame() {
         
-        super("system_dialog_title");
-        
-        this.props = DialogPropertiesUitlity.getSingleton().getProperties();
+        super("system_dialog_title");                
         
         initComponents();
-        
-        
-        okButton.addActionListener((java.awt.event.ActionEvent evt) -> {
-            okButtonActionPerformed(evt);
-        });
-    }
-    
-    public void setIdText(final String idText) {
-        final String finalString = props.getProperty(idText);
-        this.mainText.setText(finalString);
-    }
-    
-    public void setText(final String text) {
-        this.mainText.setText(text);
-    }
-    
-    private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        if(OnOkButtonActionPerformed != null){
-            OnOkButtonActionPerformed.okButtonActionPerformed(evt);
-        }     
-    }
-
-    public void setOnOkButtonActionPerformed(OnOkButtonActionPerformed OnOkButtonActionPerformed) {
-        this.OnOkButtonActionPerformed = OnOkButtonActionPerformed;
     }        
     
     /**
@@ -129,7 +98,7 @@ public class ErrorDialogJFrame extends BaseJFrame {
     private javax.swing.JPanel bottomPanel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea mainText;
+    protected javax.swing.JTextArea mainText;
     protected javax.swing.JButton okButton;
     // End of variables declaration//GEN-END:variables
 }

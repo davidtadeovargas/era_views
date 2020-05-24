@@ -4,7 +4,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 
 
-public class RubrJFrame extends BaseJFrame
+public abstract class RubrJFrame extends BaseJFrame
 {
     public RubrJFrame(final String idTextTitleWindow) 
     {

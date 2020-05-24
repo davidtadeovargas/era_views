@@ -2,7 +2,7 @@ package com.era.views;
 
 
 
-public class LotPedJFrame extends BaseJFrame
+public abstract class LotPedJFrame extends BaseJFrame
 {
     
     public LotPedJFrame(final String idTextTitleWindow) 

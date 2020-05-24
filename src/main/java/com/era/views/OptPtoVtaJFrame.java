@@ -2,7 +2,7 @@ package com.era.views;
 
 
 
-public class OptPtoVtaJFrame extends BaseJFrame 
+public abstract class OptPtoVtaJFrame extends BaseJFrame 
 {
     public OptPtoVtaJFrame(final String idTextTitleWindow) 
     {                

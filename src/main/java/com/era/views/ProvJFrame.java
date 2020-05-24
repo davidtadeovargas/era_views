@@ -1,6 +1,6 @@
 package com.era.views;
 
-public class ProvJFrame extends BaseJFrame 
+public abstract class ProvJFrame extends BaseJFrame 
 {
     public ProvJFrame(final String idTextTitleWindow) 
     {

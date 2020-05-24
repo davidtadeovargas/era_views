@@ -3,7 +3,7 @@ package com.era.views;
 
 
 
-public class RecibOrdJFrame extends BaseJFrame 
+public abstract class RecibOrdJFrame extends BaseJFrame 
 {        
     public RecibOrdJFrame(final String idTextTitleWindow) 
     {

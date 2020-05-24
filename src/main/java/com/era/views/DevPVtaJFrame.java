@@ -2,7 +2,7 @@ package com.era.views;
 
 
 
-public class DevPVtaJFrame extends BaseJFrame 
+public abstract class DevPVtaJFrame extends BaseJFrame 
 {            
     public DevPVtaJFrame(final String idTextTitleWindow) 
     {                

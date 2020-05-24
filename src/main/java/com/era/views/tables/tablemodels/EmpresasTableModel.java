@@ -7,6 +7,8 @@ package com.era.views.tables.tablemodels;
 
 import com.era.models.Company;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import com.era.views.tables.headers.ColumnTable;
+import com.era.views.tables.headers.TableHeaderFactory;
 import java.util.List;
 
 /**
@@ -15,113 +17,74 @@ import java.util.List;
  */
 public class EmpresasTableModel extends BaseAbstractTableModel {
     
-    public EmpresasTableModel(List<?> items, String[] header) {
+    public EmpresasTableModel(List<?> items, List<ColumnTable> header) {
         super(items,header);
-    }
-    
-    @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
         
-        final Company Company = (Company) this.items.get(rowIndex);
-        
-        String returnValue = "undefined";
-        if (columnIndex == 0) {
-           returnValue = String.valueOf(Company.getId());
-        }
-        else if (columnIndex == 1) {
-           returnValue = Company.getCompanyCode();
-        }
-        else if (columnIndex == 2) {
-           returnValue = Company.getNom();
-        }
-        else if (columnIndex == 3) {
-           returnValue = Company.getNameDB();
-        }
-        else if (columnIndex == 4) {
-           returnValue = Company.getMetcost();
-        }
-        else if (columnIndex == 5) {
-           returnValue = Company.getTel();
-        }
-        else if (columnIndex == 6) {
-           returnValue = Company.getExten();
-        }
-        else if (columnIndex == 7) {
-           returnValue = Company.getCalle();
-        }
-        else if (columnIndex == 8) {
-           returnValue = Company.getCP();
-        }
-        else if (columnIndex == 9) {
-           returnValue = Company.getNoext();
-        }
-        else if (columnIndex == 10) {
-           returnValue = Company.getNoint();
-        }
-        else if (columnIndex == 11) {
-           returnValue = Company.getCol();
-        }
-        else if (columnIndex == 12) {
-           returnValue = Company.getCiu();
-        }
-        else if (columnIndex == 13) {
-           returnValue = Company.getEstad();
-        }
-        else if (columnIndex == 14) {
-           returnValue = Company.getPai();
-        }
-        else if (columnIndex == 15) {
-           returnValue = Company.getRFC();
-        }
-        else if (columnIndex == 16) {
-           returnValue = Company.getCo1();
-        }
-        else if (columnIndex == 17) {
-           returnValue = Company.getSucu();
-        }
-        else if (columnIndex == 18) {
-           returnValue = Company.getNocaj();
-        }
-        else if (columnIndex == 19) {
-           returnValue = Company.getPagweb1();
-        }
-        else if (columnIndex == 20) {
-           returnValue = Company.getContribuyentType();
-        }
-        else if (columnIndex == 21) {
-           returnValue = Company.getEstac();
-        }
-        else if (columnIndex == 22) {
-           returnValue = Company.getExpeditionPlace();
-        }
-        else if (columnIndex == 23) {
-           returnValue = Company.getExpeditionPlace();
-        }
-        else if (columnIndex == 24) {
-           returnValue = Company.getFiscalRegimen();
-        }
-        else if (columnIndex == 25) {
-           returnValue = Company.getCertificatePath();
-        }
-        else if (columnIndex == 26) {
-           returnValue = Company.getKeyPath();
-        }
-        else if (columnIndex == 27) {
-           returnValue = Company.getCertificatePassword();
-        }
-        else if (columnIndex == 28) {
-           returnValue = Company.getAppPath();
-        }
-        else if (columnIndex == 29) {
-           returnValue = Company.getTemplate();
-        }
-        else if (columnIndex == 30) {
-           returnValue = Company.getFalt().toString();
-        }
-        else if (columnIndex == 31) {
-           returnValue = Company.getFmod().toString();
-        }
-        
-        return returnValue;
+        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
+            
+            //Cast the moel
+            final Company Company = (Company) model;
+            
+            String returnValue = "";
+            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getID().getValue())==0){
+                returnValue = String.valueOf(rowIndex + 1);
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getCOMPANY_CODE().getValue())==0){
+                returnValue = Company.getCompanyCode();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getCOMPANY().getValue())==0){
+                returnValue = Company.getNom();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getCOST_METHOD().getValue())==0){
+                returnValue = Company.getMetcost();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getPHONE().getValue())==0){
+                returnValue = Company.getTel();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getEXTENTION().getValue())==0){
+                returnValue = Company.getExten();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getSTREET().getValue())==0){
+                returnValue = Company.getCalle();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getCP().getValue())==0){
+                returnValue = Company.getCP();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getNOEXT().getValue())==0){
+                returnValue = Company.getNoext();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getNOINT().getValue())==0){
+                returnValue = Company.getNoint();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getCOLONY().getValue())==0){
+                returnValue = Company.getCol();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getCITY().getValue())==0){
+                returnValue = Company.getCiu();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getESTATE().getValue())==0){
+                returnValue = Company.getEstad();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getCOUNTRY().getValue())==0){
+                returnValue = Company.getPai();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getRFC().getValue())==0){
+                returnValue = Company.getRFC();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getEMAIL().getValue())==0){
+                returnValue = Company.getCo1();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getAPP_PATH().getValue())==0){
+                returnValue = Company.getAppPath();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getCREATION_DATE().getValue())==0){
+                returnValue = Company.getFalt().toString();
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompaniesTableHeader().getMODIFICATION_DATE().getValue())==0){
+                returnValue = Company.getFmod().toString();
+            }
+            
+            return returnValue;            
+        };
     }
 }

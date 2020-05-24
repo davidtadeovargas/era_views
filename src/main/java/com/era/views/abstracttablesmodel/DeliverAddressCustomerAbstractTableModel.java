@@ -6,6 +6,7 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.models.DeliverAddressCustomer;
+import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
 /**
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class DeliverAddressCustomerAbstractTableModel extends BaseAbstractTableModel {
 
-    public DeliverAddressCustomerAbstractTableModel(List<DeliverAddressCustomer> deliveries, String[] header) {
+    public DeliverAddressCustomerAbstractTableModel(List<DeliverAddressCustomer> deliveries, List<ColumnTable> header) {
         super(deliveries,header);
     }
 }

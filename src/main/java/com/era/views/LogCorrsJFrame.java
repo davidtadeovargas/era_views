@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class LogCorrsJFrame extends BaseJFrame 
+public abstract class LogCorrsJFrame extends BaseJFrame 
 {
     public LogCorrsJFrame(final String idTextTitleWindow) 
     {        

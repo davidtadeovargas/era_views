@@ -1,7 +1,7 @@
 package com.era.views;
 
 
-public class VVtasJFrame extends BaseJFrame 
+public abstract class VVtasJFrame extends BaseJFrame 
 {
     public VVtasJFrame(final String idTextTitleWindow) 
     {

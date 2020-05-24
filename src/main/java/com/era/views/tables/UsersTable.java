@@ -20,9 +20,7 @@ public class UsersTable extends BaseJTable {
 
     @Override
     public void initTable(List<?> items) {
-        
-        final String[] columns = {"No", "Usuario", "Nombre"};
-        final UsersTableModel UsersTableModel = new UsersTableModel(items,columns);
+        final UsersTableModel UsersTableModel = new UsersTableModel(items,this.ShowColumns);
         this.setModel(UsersTableModel);
     }
 }

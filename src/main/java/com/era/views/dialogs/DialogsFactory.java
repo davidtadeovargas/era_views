@@ -5,6 +5,7 @@
  */
 package com.era.views.dialogs;
 
+import com.era.views.viewscontrollers.ErrorDialogViewController;
 import javax.swing.JFrame;
 
 /**
@@ -93,16 +94,16 @@ public class DialogsFactory {
     }
     
     public void getErrorDialogByIdTextJFrame(final  String idText, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
-        final ErrorDialogJFrame ErrorDialogJFrame = new ErrorDialogJFrame();
-        ErrorDialogJFrame.setIdText(idText);
-        ErrorDialogJFrame.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);
-        ErrorDialogJFrame.setVisible();
+        final ErrorDialogViewController ErrorDialogViewController = new ErrorDialogViewController();
+        ErrorDialogViewController.setIdText(idText);
+        ErrorDialogViewController.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);
+        ErrorDialogViewController.setVisible();
     }
     
     public void getErrorDialogByTextJFrame(final  String text, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
-        final ErrorDialogJFrame ErrorDialogJFrame = new ErrorDialogJFrame();
-        ErrorDialogJFrame.setText(text);
-        ErrorDialogJFrame.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);
-        ErrorDialogJFrame.setVisible();
+        final ErrorDialogViewController ErrorDialogViewController = new ErrorDialogViewController();
+        ErrorDialogViewController.setText(text);
+        ErrorDialogViewController.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);
+        ErrorDialogViewController.setVisible();
     }
 }

@@ -5,7 +5,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public class AltsMaxsJFrame extends BaseJFrame 
+public abstract class AltsMaxsJFrame extends BaseJFrame 
 {
     public AltsMaxsJFrame(final String idTextTitleWindow) 
     {        

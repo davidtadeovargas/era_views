@@ -2,7 +2,7 @@ package com.era.views;
 
 
 
-public class LPrecsJFrame extends BaseJFrame 
+public abstract class LPrecsJFrame extends BaseJFrame 
 {
     public LPrecsJFrame(final String idTextTitleWindow) 
     {
