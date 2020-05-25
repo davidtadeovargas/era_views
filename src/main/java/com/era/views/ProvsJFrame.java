@@ -1,33 +1,16 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
 
 public abstract class ProvsJFrame extends BaseJFrame 
 {
-    public ProvsJFrame(final String idTextTitleWindow) 
+    public ProvsJFrame(final String idTextTitleWindow)
     {                
         super(idTextTitleWindow);
         
         initComponents();
         
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        jTab.getColumnModel().getColumn(0).setPreferredWidth(50);
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(170);
-        jTab.getColumnModel().getColumn(2).setPreferredWidth(130);
-        jTab.getColumnModel().getColumn(3).setPreferredWidth(500);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
-        jBNew.grabFocus();
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
+        //Post inicialization
+        postInitComponents();
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -617,7 +600,7 @@ public abstract class ProvsJFrame extends BaseJFrame
     private javax.swing.JButton jBBusc;
     private javax.swing.JButton jBDel;
     private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBNew;
     private javax.swing.JButton jBSal;
     private javax.swing.JButton jBTab1;
     private javax.swing.JButton jBTod;

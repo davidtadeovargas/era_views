@@ -8,8 +8,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         
         initComponents();
 
-        
-        
+        postInitComponents();
     }
 
 

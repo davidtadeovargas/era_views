@@ -1,8 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
 
 /*Clase para hacer una alta de producto*/
 public abstract class ProdsJFrame extends BaseJFrame
@@ -13,40 +10,11 @@ public abstract class ProdsJFrame extends BaseJFrame
         
         initComponents();
         
-        jTab.setAutoResizeMode(0);
+        postInitComponents();
         
         this.getRootPane().setDefaultButton(jBGuar);
         
-        jTAlmaG.setVisible(false);
-        jCMostrarXml.setVisible(false);
-        
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        jTADescrip.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTADescrip.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-        
-        jTAInfor.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTAInfor.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-        
-        jTab.getColumnModel().getColumn(0).setPreferredWidth(30);
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(190);
-        jTab.getColumnModel().getColumn(2).setPreferredWidth(300);        
-
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
-        jLImg.setVisible(false);
-
         jBGuar.setEnabled(false);
-        
-        jComLin.setSelectedItem("");        
-        jComMeds.setSelectedItem("");
-        jComUni.setSelectedItem("");
-        jComUAd.setSelectedItem("");
     }
 
     

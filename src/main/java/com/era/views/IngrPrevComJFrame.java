@@ -2,8 +2,6 @@ package com.era.views;
 
 
 
-
-
 public abstract class IngrPrevComJFrame extends BaseJFrame 
 {
     public IngrPrevComJFrame(final String idTextTitleWindow) 
@@ -11,33 +9,10 @@ public abstract class IngrPrevComJFrame extends BaseJFrame
         super(idTextTitleWindow);
         
         initComponents();
-        jButtonGenerarPDF.setVisible(false);
         
-        jTSerProd.setVisible (false);
-        jTComenSer.setVisible(false);
-        
-        jTab.getColumnModel().getColumn(20).setMinWidth(0);
-        jTab.getColumnModel().getColumn(20).setMaxWidth(0);
-        
-        jTab.setAutoResizeMode(0);
-        
-		jTab.getColumnModel().getColumn(1).setPreferredWidth(100);
-        jTab.getColumnModel().getColumn(5).setPreferredWidth(500);
-        jTab.getColumnModel().getColumn(8).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(10).setPreferredWidth(120);
-        jTab.getColumnModel().getColumn(16).setPreferredWidth(120);
-        jTab.getColumnModel().getColumn(17).setPreferredWidth(190);
-        jTab.getColumnModel().getColumn(18).setPreferredWidth(230);
-        jTab.getColumnModel().getColumn(19).setPreferredWidth(230);
-        
-        jTAlma2.setVisible(false);
+        postInitComponents();
         
         this.getRootPane().setDefaultButton(jBGuar);
-        
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        
-                
     }
         
             

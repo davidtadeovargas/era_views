@@ -16,6 +16,8 @@ public abstract class EmpresasJFrame extends BaseJFrame {
         
         initComponents();
                
+        postInitComponents();
+        
         bgMetodoCosteo  = new javax.swing.ButtonGroup();
         bgMetodoCosteo.add(JRBPEPS);
         bgMetodoCosteo.add(JRBUEPS);

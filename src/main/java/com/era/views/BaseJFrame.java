@@ -45,6 +45,8 @@ public abstract class BaseJFrame extends JFrame {
     
     public BaseJFrame(final String idTextTitleWindow) {                
         
+        super();
+        
         try{
             
             //Get the correct properties string
@@ -68,9 +70,6 @@ public abstract class BaseJFrame extends JFrame {
                 sessionString = titleWindow + ": " + sessionString;
                 setTitle(sessionString);                
             };
-
-            //All windows by default dispose
-            this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
             //When the jframe is visible
             final ComponentListener listener = new ComponentAdapter() {
@@ -101,6 +100,13 @@ public abstract class BaseJFrame extends JFrame {
     }
     
     public abstract List<?> getItemsToLoadInTable() throws Exception;
+    
+    //Called per each jframe to do postinicialization to not change initComponents(); functionality
+    protected void postInitComponents(){
+        
+        //All windows by default dispose
+        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
     
     protected void loadItemsInTable() throws Exception {
         
@@ -174,6 +180,8 @@ public abstract class BaseJFrame extends JFrame {
         super.setVisible(b); //To change body of generated methods, choose Tools | Templates.
                 
         if(b){
+            
+            LoggerUtility.getSingleton().logInfo(LoginLicenseJFrame.class, "Showing window " + this.getClass().getName());
             
             if(setVisibleWithEfect){
                 

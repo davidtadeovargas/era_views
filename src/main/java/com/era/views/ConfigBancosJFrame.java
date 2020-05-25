@@ -8,7 +8,10 @@ public abstract class ConfigBancosJFrame extends BaseJFrame {
         
         super(idTextTitleWindow);
         
-        initComponents();        
+        initComponents();
+        
+        //Post inicialization
+        postInitComponents();
     }
 
     @SuppressWarnings("unchecked")

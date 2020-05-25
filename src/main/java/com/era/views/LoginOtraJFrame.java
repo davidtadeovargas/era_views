@@ -10,6 +10,7 @@ public abstract class LoginOtraJFrame extends BaseJFrame
         
         initComponents();
         
+        postInitComponents();
     }
 
     

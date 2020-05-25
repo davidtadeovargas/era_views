@@ -11,8 +11,7 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
         
         initComponents();
         
-                
-        
+        postInitComponents();
     }
     
     

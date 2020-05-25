@@ -12,8 +12,10 @@ public abstract class ClavMastJFrame extends BaseJFrame
         
         initComponents();               
         
-        this.getRootPane().setDefaultButton(jBGuar);
+        //Post inicialization
+        postInitComponents();
         
+        this.getRootPane().setDefaultButton(jBGuar);
     }
 
     

@@ -10,6 +10,7 @@ public abstract class VCompJFrame extends BaseJFrame
         
         initComponents();
         
+        postInitComponents();
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

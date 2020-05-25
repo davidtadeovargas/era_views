@@ -9,7 +9,7 @@ public abstract class PedidosJFrame extends BaseJFrame {
         
         initComponents();
         
-        
+        postInitComponents();
     }
     
     

@@ -8,9 +8,7 @@ public abstract class PrincipJFrame extends BaseJFrame {
         
         initComponents();                
         
-        jMenMaxsMins.setVisible(false);
-                                                                
-        jMenItTipsPags.setVisible(false);        
+        postInitComponents();
         
         this.maximizedWindow();
     }

@@ -10,8 +10,7 @@ public abstract class VOrdsJFrame extends BaseJFrame
         
         initComponents();
         
-        
-        
+        postInitComponents();
     }
            
     

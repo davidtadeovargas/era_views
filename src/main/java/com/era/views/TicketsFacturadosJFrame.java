@@ -9,8 +9,7 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
         
         initComponents();
 		
-        
-        
+        postInitComponents();
     }
 
     /**

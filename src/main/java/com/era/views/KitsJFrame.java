@@ -9,9 +9,8 @@ public abstract class KitsJFrame extends BaseJFrame
         super(idTextTitleWindow);
         
         initComponents();
-        
-        
-        
+               
+        postInitComponents();
     }
         
     

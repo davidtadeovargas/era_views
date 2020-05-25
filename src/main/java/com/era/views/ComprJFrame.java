@@ -1,9 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
 public abstract class ComprJFrame extends BaseJFrame 
 {
     public ComprJFrame(final String idTextTitleWindow) 
@@ -12,56 +8,15 @@ public abstract class ComprJFrame extends BaseJFrame
         
         initComponents();
                 
+        //Post inicialization
+        postInitComponents();
+        
         javax.swing.ButtonGroup bG = new javax.swing.ButtonGroup();
         bG.add(jRComp);
         bG.add(jROrd);
         bG.add(jRTod);
                 
-        jTableCompras.getTableHeader().setReorderingAllowed(false);
-        tabla_partidas.getTableHeader().setReorderingAllowed(false);
-        
-        jTableCompras.setAutoResizeMode(0);
-        
-        tabla_partidas.setAutoResizeMode(0);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTableCompras.getModel());
-        jTableCompras.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
         jBNew.grabFocus();
-        
-        jTableCompras.getColumnModel().getColumn(0).setPreferredWidth(77);
-        jTableCompras.getColumnModel().getColumn(1).setPreferredWidth(81);
-        jTableCompras.getColumnModel().getColumn(4).setPreferredWidth(130);
-        jTableCompras.getColumnModel().getColumn(5).setPreferredWidth(150);
-        jTableCompras.getColumnModel().getColumn(6).setPreferredWidth(350);
-        jTableCompras.getColumnModel().getColumn(8).setPreferredWidth(150);
-        jTableCompras.getColumnModel().getColumn(9).setPreferredWidth(150);
-        jTableCompras.getColumnModel().getColumn(10).setPreferredWidth(150);
-        jTableCompras.getColumnModel().getColumn(11).setPreferredWidth(150);
-        jTableCompras.getColumnModel().getColumn(12).setPreferredWidth(150);
-        jTableCompras.getColumnModel().getColumn(14).setPreferredWidth(120);
-        jTableCompras.getColumnModel().getColumn(15).setPreferredWidth(120);
-        jTableCompras.getColumnModel().getColumn(16).setPreferredWidth(170);
-        jTableCompras.getColumnModel().getColumn(17).setPreferredWidth(170);
-        jTableCompras.getColumnModel().getColumn(19).setPreferredWidth(150);
-        jTableCompras.getColumnModel().getColumn(22).setPreferredWidth(150);
-        
-        tabla_partidas.getColumnModel().getColumn(3).setPreferredWidth(400);        
-        tabla_partidas.getColumnModel().getColumn(4).setPreferredWidth(40);
-        tabla_partidas.getColumnModel().getColumn(5).setPreferredWidth(110);
-        tabla_partidas.getColumnModel().getColumn(10).setPreferredWidth(110);
-        tabla_partidas.getColumnModel().getColumn(11).setPreferredWidth(120);
-        tabla_partidas.getColumnModel().getColumn(14).setPreferredWidth(140);
-        tabla_partidas.getColumnModel().getColumn(17).setPreferredWidth(140);
-        tabla_partidas.getColumnModel().getColumn(18).setPreferredWidth(190);
-        tabla_partidas.getColumnModel().getColumn(19).setPreferredWidth(190);
-        tabla_partidas.getColumnModel().getColumn(20).setPreferredWidth(190);
-        
-        jTableCompras.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTableCompras.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);                
-        tabla_partidas.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        tabla_partidas.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);                                       
     }
         
     

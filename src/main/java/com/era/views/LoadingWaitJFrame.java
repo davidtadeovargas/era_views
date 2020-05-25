@@ -5,41 +5,24 @@
  */
 package com.era.views;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import javax.swing.ImageIcon;
-import javax.swing.WindowConstants;
-
 /**
  *
  * @author PC
  */
-public abstract class LoadingWaitJFrame extends javax.swing.JFrame {
+public abstract class LoadingWaitJFrame extends BaseJFrame {
 
     /**
      * Creates new form WaitJFrame
      */
-    protected LoadingWaitJFrame() {
+    protected LoadingWaitJFrame(final String idTextTitleWindow) {
         
-        super("");
+        super(idTextTitleWindow);
         
         setUndecorated(true);
         
         initComponents();
         
-        java.net.URL imgURL = getClass().getResource("/imgs/loading.gif");
-        if (imgURL != null) {
-            labelLoading.setIcon(new ImageIcon(imgURL, ""));            
-        } else {
-            System.err.println("Couldn't find file: ");            
-        }
-            
-        setAlwaysOnTop( true );
-        setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        toFront();
-        
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        postInitComponents();
     }
 
     /**
@@ -91,7 +74,7 @@ public abstract class LoadingWaitJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel labelLoading;
-    private javax.swing.JLabel textLabel;
+    protected javax.swing.JLabel labelLoading;
+    protected javax.swing.JLabel textLabel;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,12 +1,8 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
 
 
-
-
-public abstract class CxpJFrame extends javax.swing.JFrame 
+public abstract class CxpJFrame extends BaseJFrame 
 {
     public CxpJFrame(final String idTextTitleWindow) 
     {
@@ -14,38 +10,9 @@ public abstract class CxpJFrame extends javax.swing.JFrame
         
         initComponents();
         
-        jTab1.getColumnModel().getColumn(17).setMinWidth(0);
-        jTab1.getColumnModel().getColumn(17).setMaxWidth(0);
-        
-        jTab1.getColumnModel().getColumn(3).setPreferredWidth(160);
-        jTab1.getColumnModel().getColumn(4).setPreferredWidth(300);
-        jTab1.getColumnModel().getColumn(10).setPreferredWidth(160);
-        jTab1.getColumnModel().getColumn(11).setPreferredWidth(160);
-        jTab1.getColumnModel().getColumn(15).setPreferredWidth(300);
-        
-        jTab2.getColumnModel().getColumn(1).setPreferredWidth(150);
-        jTab2.getColumnModel().getColumn(7).setPreferredWidth(400);
+        postInitComponents();
         
         this.getRootPane().setDefaultButton(jBAbon);
-        
-        jTab1.getTableHeader().setReorderingAllowed(false);
-        jTab2.getTableHeader().setReorderingAllowed(false);
-        
-        this.setLocationRelativeTo(null);
-        
-        jTab1.setAutoResizeMode(0);
-        jTab2.setAutoResizeMode(0);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab1.getModel());
-        jTab1.setRowSorter      (trs);
-        trs.setSortsOnUpdates   (true);
-        
-        jTProv.grabFocus();
-        
-        jTab1.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS,       null);
-        jTab1.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS,      null);
-        jTab2.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS,       null);
-        jTab2.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS,      null);
     }
 
     

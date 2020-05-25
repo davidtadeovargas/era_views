@@ -1,11 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
-
-
 
 public abstract class CotNormJFrame extends BaseJFrame
 {
@@ -15,67 +9,12 @@ public abstract class CotNormJFrame extends BaseJFrame
         
         initComponents();
         
-        jTextFieldReferencia.setVisible(false);
-
-        jButtonListaPrecio.setVisible(false);
-        jTextFieldListaPrecio.setEditable(false);
+        //Post inicialization
+        postInitComponents();
         
         jTextFieldCliente.grabFocus();
                 
-        jTCantLot.setVisible(false);
-        jTId.setVisible     (false);
-        jTLot.setVisible    (false);
-        jTPedimen.setVisible(false);
-        jTCadu.setVisible   (false);
-        
-        jTablePartidas.getColumnModel().getColumn(20).setMinWidth(0);
-        jTablePartidas.getColumnModel().getColumn(20).setMaxWidth(0);
-                
-        jTComenSer.setVisible(false);        
-        
-        jTAlma2.setVisible(false);
-        
         this.getRootPane().setDefaultButton(jBGuar);
-        
-        jTablePartidas.setAutoResizeMode(0);
-        
-        jTablePartidas.getTableHeader().setReorderingAllowed(false);
-        
-        jTablePartidas.setAutoResizeMode(0);
-        
-        jTablePartidas.getColumnModel().getColumn(0).setPreferredWidth(45);
-        jTablePartidas.getColumnModel().getColumn(1).setPreferredWidth(50);
-        jTablePartidas.getColumnModel().getColumn(2).setPreferredWidth(130);
-        jTablePartidas.getColumnModel().getColumn(3).setPreferredWidth(160);
-        jTablePartidas.getColumnModel().getColumn(5).setPreferredWidth(450);
-        jTablePartidas.getColumnModel().getColumn(8).setPreferredWidth(110);        
-        jTablePartidas.getColumnModel().getColumn(9).setPreferredWidth(100);
-        jTablePartidas.getColumnModel().getColumn(10).setPreferredWidth(110);
-        jTablePartidas.getColumnModel().getColumn(11).setPreferredWidth(110);
-        jTablePartidas.getColumnModel().getColumn(12).setPreferredWidth(110);
-        jTablePartidas.getColumnModel().getColumn(13).setPreferredWidth(130);
-        jTablePartidas.getColumnModel().getColumn(14).setPreferredWidth(180);
-        jTablePartidas.getColumnModel().getColumn(15).setPreferredWidth(140);
-        jTablePartidas.getColumnModel().getColumn(16).setPreferredWidth(140);
-        jTablePartidas.getColumnModel().getColumn(17).setPreferredWidth(140);
-        jTablePartidas.getColumnModel().getColumn(18).setPreferredWidth(140);
-        jTablePartidas.getColumnModel().getColumn(19).setPreferredWidth(140);
-        jTablePartidas.getColumnModel().getColumn(22).setPreferredWidth(140);
-        jTablePartidas.getColumnModel().getColumn(23).setPreferredWidth(140);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTablePartidas.getModel());
-        jTablePartidas.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
-        jTAObserv.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTAObserv.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-        
-        jTADescrip.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTADescrip.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-        
-        jTablePartidas.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTablePartidas.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-                        
     }
     
           

@@ -8,10 +8,8 @@ public abstract class IngrInventJFrame extends BaseJFrame {
         super(idTextTitleWindow);
         
         initComponents();
-                
-        
-        
-                             
+                        
+        postInitComponents();
     }
         
     

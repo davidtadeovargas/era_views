@@ -19,6 +19,8 @@ public abstract class MaximosMinimosJFrame extends BaseJFrame {
         super(idTextTitleWindow);
         
         initComponents();
+        
+        postInitComponents();
     }
 
     /**

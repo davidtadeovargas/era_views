@@ -1,10 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
-
 
 public abstract class VerCtaContJFrame extends BaseJFrame
 {
@@ -14,27 +9,15 @@ public abstract class VerCtaContJFrame extends BaseJFrame
         
         initComponents();
     
+        postInitComponents();
+        
         javax.swing.ButtonGroup bG = new javax.swing.ButtonGroup();
         bG.add(jRCli);
         bG.add(jRProv);        
         
         this.getRootPane().setDefaultButton(jBNew);
         
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
         jTCta.grabFocus();
-        
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(170);
-        jTab.getColumnModel().getColumn(2).setPreferredWidth(350);
-        
-        jTab.setAutoResizeMode(0);
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
     }
         
     

@@ -8,7 +8,7 @@ public abstract class PrevCompJFrame extends BaseJFrame
         
         initComponents();
         
-        
+        postInitComponents();
     }
     
     

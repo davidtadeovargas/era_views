@@ -9,7 +9,7 @@ public abstract class VVtasJFrame extends BaseJFrame
         
         initComponents();
         
-        
+        postInitComponents();
         
     }
 

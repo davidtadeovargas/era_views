@@ -1,10 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
-
 
 public abstract class CotsJFrame extends BaseJFrame
 {
@@ -14,47 +9,11 @@ public abstract class CotsJFrame extends BaseJFrame
         
         initComponents();
 
-        jTab1.setAutoResizeMode(0);
-        jTab2.setAutoResizeMode(0);
-        
-        jTab1.getColumnModel().getColumn(1).setPreferredWidth(120);
-        jTab1.getColumnModel().getColumn(3).setPreferredWidth(120);
-        jTab1.getColumnModel().getColumn(4).setPreferredWidth(200);
-        jTab1.getColumnModel().getColumn(5).setPreferredWidth(200);
-        jTab1.getColumnModel().getColumn(8).setPreferredWidth(120);
-        jTab1.getColumnModel().getColumn(9).setPreferredWidth(120);
-        jTab1.getColumnModel().getColumn(10).setPreferredWidth(200);
-        jTab1.getColumnModel().getColumn(11).setPreferredWidth(130);
-        jTab1.getColumnModel().getColumn(12).setPreferredWidth(130);
-        jTab1.getColumnModel().getColumn(13).setPreferredWidth(130);
-        jTab1.getColumnModel().getColumn(14).setPreferredWidth(130);
-        jTab1.getColumnModel().getColumn(16).setPreferredWidth(150);
-                        
-        jTab2.getColumnModel().getColumn(1).setPreferredWidth(120);
-        jTab2.getColumnModel().getColumn(3).setPreferredWidth(140);
-        jTab2.getColumnModel().getColumn(6).setPreferredWidth(400);
-        jTab2.getColumnModel().getColumn(7).setPreferredWidth(120);
-        jTab2.getColumnModel().getColumn(13).setPreferredWidth(120);
-        jTab2.getColumnModel().getColumn(14).setPreferredWidth(120);
-        jTab2.getColumnModel().getColumn(15).setPreferredWidth(130);
-        jTab2.getColumnModel().getColumn(16).setPreferredWidth(130);
-        jTab2.getColumnModel().getColumn(18).setPreferredWidth(130);
-        jTab2.getColumnModel().getColumn(19).setPreferredWidth(130);
-        jTab2.getColumnModel().getColumn(20).setPreferredWidth(130);
-        
-        jTab1.getTableHeader().setReorderingAllowed(false);
-        jTab2.getTableHeader().setReorderingAllowed(false);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab1.getModel());
-        jTab1.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
+        //Post inicialization
+        postInitComponents();
         
         jBNew.grabFocus();
-        
-        jTab1.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab1.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-                
-        
+                        
     }
     
     

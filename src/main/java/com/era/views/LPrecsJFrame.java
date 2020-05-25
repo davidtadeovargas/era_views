@@ -12,7 +12,7 @@ public abstract class LPrecsJFrame extends BaseJFrame
     
         this.getRootPane().setDefaultButton(jBGuar);
         
-        
+        postInitComponents();
     }
 
         

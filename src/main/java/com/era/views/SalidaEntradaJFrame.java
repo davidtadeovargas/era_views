@@ -10,8 +10,7 @@ public abstract class SalidaEntradaJFrame extends BaseJFrame {
         
         initComponents();
         
-        
-                         
+        postInitComponents();
     }
 
     @SuppressWarnings("unchecked")

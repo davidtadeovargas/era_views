@@ -3,14 +3,13 @@ package com.era.views;
 
 public abstract class SalidaJFrame extends BaseJFrame {
     
-        public SalidaJFrame(final String idTextTitleWindow) {
+    public SalidaJFrame(final String idTextTitleWindow) {
             
-            super(idTextTitleWindow);
+        super(idTextTitleWindow);
             
         initComponents();
          
-        
-                         
+        postInitComponents();
     }
 
     @SuppressWarnings("unchecked")

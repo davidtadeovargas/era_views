@@ -9,7 +9,7 @@ public abstract class DatsCartaPorJFrame extends BaseJFrame {
 
         initComponents();
         
-        
+        postInitComponents();
     }
 
     /**

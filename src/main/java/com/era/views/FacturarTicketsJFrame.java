@@ -10,10 +10,9 @@ public abstract class FacturarTicketsJFrame extends BaseJFrame {
                 
         initComponents();
         
-        this.setLocationRelativeTo(null);
-        this.getRootPane().setDefaultButton(jBtnFacturar);
-                
+        postInitComponents();
         
+        this.getRootPane().setDefaultButton(jBtnFacturar);
     }
     
     

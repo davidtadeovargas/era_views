@@ -7,8 +7,9 @@ public abstract class ProvJFrame extends BaseJFrame
         super(idTextTitleWindow);
         
         initComponents();
-        
-	}
+    
+        postInitComponents();
+    }
    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

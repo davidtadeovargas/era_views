@@ -9,7 +9,7 @@ public abstract class UltPrecsJFrame extends BaseJFrame
         
         initComponents();
         
-        
+        postInitComponents();
     }
 
         

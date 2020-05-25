@@ -1,10 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
-
 
 public abstract class Impuestos_X_partidaJFrame extends BaseJFrame 
 {
@@ -14,19 +9,9 @@ public abstract class Impuestos_X_partidaJFrame extends BaseJFrame
         
         initComponents();
         
-        tabla.getTableHeader().setReorderingAllowed(false);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)tabla.getModel());
-        tabla.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
+        postInitComponents();
         
         combo_impuesto.grabFocus();
-        
-        tabla.getColumnModel().getColumn(0).setPreferredWidth(50);
-        tabla.getColumnModel().getColumn(1).setPreferredWidth(50);        
-        
-        tabla.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        tabla.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
     }
     
     

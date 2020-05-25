@@ -8,6 +8,9 @@ public abstract class ConfGralJFrame extends BaseJFrame
         
         initComponents();
         
+        //Post inicialization
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBGuar);
         
         jTBP.setTitleAt(0, "Inventarios");

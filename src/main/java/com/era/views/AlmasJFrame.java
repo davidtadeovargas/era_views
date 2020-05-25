@@ -9,26 +9,11 @@ public abstract class AlmasJFrame extends BaseJFrame
         
         initComponents();
                 
-        jTab.setAutoResizeMode(0);
-                
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBNew);
                
-        jTab.getTableHeader().setReorderingAllowed(false);
-                
-        this.setLocationRelativeTo(null);
-                                
         jTCod.grabFocus();
-                
-        jTab.getColumnModel().getColumn(0).setPreferredWidth(60);
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(2).setPreferredWidth(450);
-        jTab.getColumnModel().getColumn(3).setPreferredWidth(200);
-        jTab.getColumnModel().getColumn(4).setPreferredWidth(300);
-        jTab.getColumnModel().getColumn(5).setPreferredWidth(300);
-        jTab.getColumnModel().getColumn(6).setPreferredWidth(300);
-                
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
     }
        
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

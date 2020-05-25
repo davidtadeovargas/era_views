@@ -9,7 +9,7 @@ public abstract class correoTerminalJFrame extends BaseJFrame {
         
         initComponents();
 
-        
+        postInitComponents();
     }
 
     

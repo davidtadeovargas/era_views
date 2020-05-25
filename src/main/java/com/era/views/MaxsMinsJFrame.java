@@ -1,9 +1,4 @@
-//Paquete
 package com.era.views;
-
-//Importaciones
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
 
 
 
@@ -16,20 +11,11 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
         
         initComponents();
         
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBNew);
         
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
         jTEsta.grabFocus();
-        
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(200);
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
     }
 
         

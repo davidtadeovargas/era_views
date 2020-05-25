@@ -11,9 +11,8 @@ public abstract class VAbonsJFrame extends BaseJFrame
         super(idTextTitleWindow);
         
         initComponents();
-        
-        
-        
+                
+        postInitComponents();
     }
 
     

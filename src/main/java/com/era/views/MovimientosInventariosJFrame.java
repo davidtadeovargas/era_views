@@ -9,8 +9,7 @@ public abstract class MovimientosInventariosJFrame extends BaseJFrame {
         
         initComponents();
         
-        
-       
+        postInitComponents();
     }
     
     

@@ -10,6 +10,8 @@ public abstract class PresentationJFrame extends BaseJFrame {
         
         //Init graphics components
         initComponents();
+        
+        postInitComponents();
     }
 
         

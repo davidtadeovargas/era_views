@@ -9,12 +9,12 @@ public abstract class CobroJFrame extends BaseJFrame
         
         initComponents();
         
+        //Post inicialization
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBCob);
         
         jTEfeCant.grabFocus();                
-        
-        jTAObserv.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTAObserv.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
         
         jTSald.setText("$0.00");
         

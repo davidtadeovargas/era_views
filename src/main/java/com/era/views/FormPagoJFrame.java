@@ -9,7 +9,7 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
         
         initComponents();
         
-        
+        postInitComponents();
     }
     
     

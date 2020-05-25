@@ -9,6 +9,8 @@ public abstract class AcerDJFrame extends BaseJFrame
         super(idTextTitleWindow);
         
         initComponents();
+        
+        postInitComponents();
     }
 
         

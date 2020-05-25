@@ -9,7 +9,7 @@ public abstract class SelCorrJFrame extends BaseJFrame
         
         initComponents();
 
-        
+        postInitComponents();
     }
 
     

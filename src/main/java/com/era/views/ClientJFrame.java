@@ -9,6 +9,9 @@ public abstract class ClientJFrame extends BaseJFrame
         
         initComponents();
 
+        //Post inicialization
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBGuar);
 
         jTRazSoc.grabFocus();

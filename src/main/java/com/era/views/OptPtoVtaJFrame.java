@@ -9,7 +9,8 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
         super(idTextTitleWindow);
         
         initComponents();
-                
+        
+        postInitComponents();
     }
 
             

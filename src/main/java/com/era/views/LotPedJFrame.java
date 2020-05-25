@@ -11,8 +11,7 @@ public abstract class LotPedJFrame extends BaseJFrame
         
         initComponents();
     
-        
-            
+        postInitComponents();            
     }
                 
     

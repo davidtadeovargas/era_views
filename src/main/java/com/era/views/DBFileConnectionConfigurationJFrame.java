@@ -9,6 +9,8 @@ public abstract class DBFileConnectionConfigurationJFrame extends BaseJFrame {
         
         //Init graphic components
         initComponents();
+        
+        postInitComponents();
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

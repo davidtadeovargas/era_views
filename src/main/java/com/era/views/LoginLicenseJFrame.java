@@ -22,11 +22,7 @@ public abstract class LoginLicenseJFrame extends BaseJFrame {
         
         initComponents();
         
-        LoggerUtility.getSingleton().logInfo(LoginLicenseJFrame.class, "Views: Showing LoginLicenseJFrame");
-        
-        this.setLocationRelativeTo(null); //Center in screen
-        
-        this.setTitle("Login de Licencieminto");               
+        postInitComponents();
     }
     
     /**

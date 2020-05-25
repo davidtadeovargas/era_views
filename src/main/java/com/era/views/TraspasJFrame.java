@@ -8,7 +8,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
         
         initComponents();
 
-        
+        postInitComponents();        
     }
 	
     

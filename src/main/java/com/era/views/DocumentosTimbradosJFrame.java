@@ -9,7 +9,7 @@ public abstract class DocumentosTimbradosJFrame extends BaseJFrame {
         
         initComponents();
         
-        
+        postInitComponents();
     }
     
     

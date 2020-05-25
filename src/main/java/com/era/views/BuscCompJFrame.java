@@ -1,9 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
 
 public abstract class BuscCompJFrame extends BaseJFrame
 {
@@ -13,32 +9,14 @@ public abstract class BuscCompJFrame extends BaseJFrame
         
         initComponents();
 
+        //Post inicialization
+        postInitComponents();
+        
         this.setAlwaysOnTop(true);
-        
-        jTab.setAutoResizeMode(0);
-        
-        jTab.getColumnModel().getColumn(3).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(5).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(6).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(8).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(9).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(15).setPreferredWidth(250);
         
         this.getRootPane().setDefaultButton(jBCarg);
                         
-        jTab.setAutoResizeMode(0);
-        
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
         jTab.grabFocus();
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);                
-                
     }
 
     

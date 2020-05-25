@@ -1,10 +1,6 @@
 package com.era.views;
 
 import com.era.models.DocumentOrigin;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
 
 
 
@@ -17,23 +13,11 @@ public abstract class SeriesJFrame extends BaseJFrame
         
         initComponents();
         
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBNew);
         
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        this.setLocationRelativeTo(null);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
         jTSer.grabFocus();
-        
-        jTab.getColumnModel().getColumn(0).setPreferredWidth(20);
-        jTab.getColumnModel().getColumn(3).setPreferredWidth(250);
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
     }
         
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

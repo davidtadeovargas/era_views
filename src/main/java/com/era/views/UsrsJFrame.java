@@ -9,6 +9,8 @@ public abstract class UsrsJFrame extends BaseJFrame {
         super(idTextTitleWindow);
         
         initComponents();
+        
+        postInitComponents();
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

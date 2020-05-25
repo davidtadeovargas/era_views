@@ -8,6 +8,7 @@ public abstract class ImpresJFrame extends BaseJFrame
         
         initComponents();                
         
+        postInitComponents();
     }
 
     

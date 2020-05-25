@@ -1,10 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
-
 
 public abstract class DevPVtaPtoJFrame extends BaseJFrame 
 {
@@ -14,24 +9,9 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         
         initComponents();
         
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBDev);
-        
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        jTab.setAutoResizeMode(0);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(5).setPreferredWidth(250);
-        jTab.getColumnModel().getColumn(7).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(12).setPreferredWidth(200);
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-                
     }
 
         

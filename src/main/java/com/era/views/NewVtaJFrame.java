@@ -8,15 +8,11 @@ public abstract class NewVtaJFrame extends BaseJFrame
         
         super(idTextTitleWindow);
         
-        initComponents();        
+        initComponents();
+        
+        postInitComponents();
     }
-            
-        
-    
-    
-        
-    
-    
+                    
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

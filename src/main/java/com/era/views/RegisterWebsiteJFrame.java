@@ -19,6 +19,8 @@ public abstract class RegisterWebsiteJFrame extends BaseJFrame {
         super("");
         
         initComponents();
+        
+        postInitComponents();
     }
     
     /**

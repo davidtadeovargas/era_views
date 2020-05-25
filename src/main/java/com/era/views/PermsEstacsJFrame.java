@@ -10,7 +10,7 @@ public abstract class PermsEstacsJFrame extends BaseJFrame
         
         initComponents();
         
-        
+        postInitComponents();
     }
 
        

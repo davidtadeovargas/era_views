@@ -20,6 +20,8 @@ public abstract class CatalogoMonedaJFrame extends BaseJFrame {
         
         initComponents();
         
+        //Post inicialization
+        postInitComponents();
     }
 
     /**

@@ -12,34 +12,14 @@ public abstract class NewNotProvJFrame extends BaseJFrame
         
         initComponents();
 
-        jTab.setAutoResizeMode(0);
-        
-        jTTotCost.setVisible    (false);
-        
-        jTConcep.setVisible     (false);
-        jTCodConcep.setVisible  (false);
+        postInitComponents();
         
         this.getRootPane().setDefaultButton(jBGuar);
-        
-        jTab.getColumnModel().getColumn(0).setPreferredWidth(60);
-        jTab.getColumnModel().getColumn(5).setPreferredWidth(300);
-        jTab.getColumnModel().getColumn(6).setPreferredWidth(300);
-        
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        jTSaldDispo.setVisible(false);
-        jTLimCred.setVisible(false);
-        jTDiaCre.setVisible(false);
         
         jTAObserv.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
         jTAObserv.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
         
         jTProv.grabFocus();
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-        
-                
     }
     
     

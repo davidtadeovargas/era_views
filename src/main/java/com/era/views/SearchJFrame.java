@@ -11,6 +11,8 @@ public abstract class SearchJFrame extends BaseJFrame {
         
         //Init graphic componentes
         initComponents();
+        
+        postInitComponents();
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

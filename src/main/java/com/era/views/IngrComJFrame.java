@@ -8,39 +8,9 @@ public abstract class IngrComJFrame extends BaseJFrame
         
         initComponents();
         
-        jTSerProd.setVisible (false);
-        jTComenSer.setVisible(false);
-        jBGenPDF.setVisible(false);
-        
-        jTablePartidas.getColumnModel().getColumn(20).setMinWidth(0);
-        jTablePartidas.getColumnModel().getColumn(20).setMaxWidth(0);
-        
-        jTTotSald.setVisible(false);
-        
-        jLTipVta.setVisible(false);
-        
-        jTablePartidas.setAutoResizeMode(0);
-        
-        jTablePartidas.getColumnModel().getColumn(1).setPreferredWidth(100);
-        jTablePartidas.getColumnModel().getColumn(5).setPreferredWidth(500);
-        jTablePartidas.getColumnModel().getColumn(8).setPreferredWidth(150);
-        jTablePartidas.getColumnModel().getColumn(10).setPreferredWidth(120);
-        jTablePartidas.getColumnModel().getColumn(16).setPreferredWidth(120);
-        jTablePartidas.getColumnModel().getColumn(17).setPreferredWidth(190);
-        jTablePartidas.getColumnModel().getColumn(18).setPreferredWidth(230);
-        jTablePartidas.getColumnModel().getColumn(19).setPreferredWidth(230);
-        jTablePartidas.getColumnModel().getColumn(21).setPreferredWidth(170);
+        postInitComponents();
         
         this.getRootPane().setDefaultButton(jBGuar);
-        
-        jTablePartidas.getTableHeader().setReorderingAllowed(false);
-        
-        jTValImp.setVisible(false);
-        jComImp.setVisible(false);
-        jLabel17.setVisible(false);
-             
-        jTablePartidas.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTablePartidas.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);                                
     }
         
 

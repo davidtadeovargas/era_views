@@ -9,6 +9,8 @@ public abstract class LoginJFrame extends BaseJFrame {
         
         //Init graphic components
         initComponents();
+        
+        postInitComponents();
     }
         
     @SuppressWarnings("unchecked")

@@ -1,8 +1,6 @@
 package com.era.views;
 
 
-
-
 public abstract class RecibOrdJFrame extends BaseJFrame 
 {        
     public RecibOrdJFrame(final String idTextTitleWindow) 
@@ -11,32 +9,11 @@ public abstract class RecibOrdJFrame extends BaseJFrame
         
         initComponents();
         
-        jTab.getColumnModel().getColumn(23).setMinWidth(0);
-        jTab.getColumnModel().getColumn(23).setMaxWidth(0);
-        
-        jTab.getColumnModel().getColumn(14).setMinWidth(0);
-        jTab.getColumnModel().getColumn(14).setMaxWidth(0);
-        
-        jTab.setAutoResizeMode(0);
+        postInitComponents();
         
         this.getRootPane().setDefaultButton(jBGuar);
         
-        jTSerProv.setVisible(false);
-        
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(160);        
-        jTab.getColumnModel().getColumn(5).setPreferredWidth(400);        
-        jTab.getColumnModel().getColumn(8).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(19).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(20).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(21).setPreferredWidth(150);
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
-        
         jCRecibT.grabFocus();
-        
     }
     
     

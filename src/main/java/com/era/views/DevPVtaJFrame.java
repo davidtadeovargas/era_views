@@ -10,8 +10,7 @@ public abstract class DevPVtaJFrame extends BaseJFrame
         
         initComponents();
         
-        
-    
+        postInitComponents();
     }
     
     

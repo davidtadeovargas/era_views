@@ -1,9 +1,5 @@
-//Paquete
 package com.era.views;
 
-//Importaciones
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
 
 public abstract class LotPedCatJFrame extends BaseJFrame {
 
@@ -13,26 +9,9 @@ public abstract class LotPedCatJFrame extends BaseJFrame {
         
         initComponents();
 
-        jTab.setAutoResizeMode(0);
-
-        jTab.getTableHeader().setReorderingAllowed(false);
-
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel) jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-
-        jTab.grabFocus();
-
-        jTab.getColumnModel().getColumn(1).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(2).setPreferredWidth(400);
-        jTab.getColumnModel().getColumn(3).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(4).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(5).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(6).setPreferredWidth(150);
-
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
+        postInitComponents();
         
+        jTab.grabFocus();        
     }
 
 

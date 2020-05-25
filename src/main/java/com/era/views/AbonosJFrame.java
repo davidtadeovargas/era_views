@@ -1,7 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
 
 public abstract class AbonosJFrame extends BaseJFrame {
     
@@ -12,27 +10,7 @@ public abstract class AbonosJFrame extends BaseJFrame {
         
         initComponents();
         
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)table_pagos.getModel());
-        table_pagos.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
-        table_pagos.getColumnModel().getColumn(0).setMinWidth(0);
-        table_pagos.getColumnModel().getColumn(0).setMaxWidth(0);
-        table_pagos.getColumnModel().getColumn(1).setPreferredWidth(70);
-        table_pagos.getColumnModel().getColumn(2).setPreferredWidth(70);
-        table_pagos.getColumnModel().getColumn(3).setPreferredWidth(70);
-        table_pagos.getColumnModel().getColumn(4).setPreferredWidth(200);
-        table_pagos.getColumnModel().getColumn(5).setPreferredWidth(70);
-        table_pagos.getColumnModel().getColumn(6).setPreferredWidth(70);
-        table_pagos.getColumnModel().getColumn(7).setPreferredWidth(70);
-        table_pagos.getColumnModel().getColumn(8).setPreferredWidth(70);
-        table_partidas.getColumnModel().getColumn(0).setMinWidth(0);
-        table_partidas.getColumnModel().getColumn(0).setMaxWidth(0);
-        table_partidas.getColumnModel().getColumn(1).setPreferredWidth(120);
-        table_partidas.getColumnModel().getColumn(2).setPreferredWidth(120);
-        table_partidas.getColumnModel().getColumn(3).setPreferredWidth(120);
-        table_partidas.getColumnModel().getColumn(4).setPreferredWidth(120);
-        table_partidas.getColumnModel().getColumn(5).setPreferredWidth(120);
+        postInitComponents();
     }
     
     

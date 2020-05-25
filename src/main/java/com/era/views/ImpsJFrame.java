@@ -1,12 +1,5 @@
 package com.era.views;
 
-import javax.swing.DefaultCellEditor;
-import javax.swing.JComboBox;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
-import javax.swing.table.TableRowSorter;
-
-
 
 /*Clase para controlar los impues*/
 public abstract class ImpsJFrame extends BaseJFrame
@@ -17,31 +10,11 @@ public abstract class ImpsJFrame extends BaseJFrame
         
         initComponents();
         
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBNew);
         
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
         campo_impuesto.grabFocus();
-        
-        TableColumn colTipoImpuesto = jTab.getColumnModel().getColumn(3);
-        JComboBox tipoImpuesto = new JComboBox();
-        tipoImpuesto.addItem("Traslado IVA");
-        tipoImpuesto.addItem("Traslado IEPS");
-        tipoImpuesto.addItem("Retencion IVA");
-        tipoImpuesto.addItem("Retencion ISR");
-        colTipoImpuesto.setCellEditor(new DefaultCellEditor(tipoImpuesto));
-        
-        jTab.getColumnModel().getColumn(2).setPreferredWidth(150);
-        jTab.getColumnModel().getColumn(3).setPreferredWidth(100);
-        
-        jTab.setRowHeight(20);
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
     }
 
     

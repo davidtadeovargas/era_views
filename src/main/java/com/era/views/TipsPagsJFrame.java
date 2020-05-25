@@ -1,10 +1,5 @@
 package com.era.views;
 
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableRowSorter;
-
-
-
 
 /*Clase para controlar los tipos de pags*/
 public abstract class TipsPagsJFrame extends BaseJFrame
@@ -15,20 +10,11 @@ public abstract class TipsPagsJFrame extends BaseJFrame
         
         initComponents();
         
+        postInitComponents();
+        
         this.getRootPane().setDefaultButton(jBNew);
         
-        jTab.getTableHeader().setReorderingAllowed(false);
-        
-        TableRowSorter trs = new TableRowSorter<>((DefaultTableModel)jTab.getModel());
-        jTab.setRowSorter(trs);
-        trs.setSortsOnUpdates(true);
-        
         jTCod.grabFocus();
-        
-        jTab.getColumnModel().getColumn(2).setPreferredWidth(250);
-        
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, null);
-        jTab.setFocusTraversalKeys(java.awt.KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, null);
     }
           
     

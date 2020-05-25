@@ -21,6 +21,8 @@ public abstract class PremiumJFrame extends BaseJFrame {
         setUndecorated(true);
         
         initComponents();
+        
+        postInitComponents();
     }
 
     /**

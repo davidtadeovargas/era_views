@@ -9,7 +9,7 @@ public abstract class LogCorrsJFrame extends BaseJFrame
         
         initComponents();
         
-        
+        postInitComponents();
     }
 
     

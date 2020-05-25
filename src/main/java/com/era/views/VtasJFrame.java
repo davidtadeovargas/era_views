@@ -11,7 +11,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         
         initComponents();
         
-        
+        postInitComponents();
     }
     
 

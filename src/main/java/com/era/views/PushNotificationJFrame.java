@@ -21,7 +21,9 @@ public abstract class PushNotificationJFrame extends BaseJFrame {
         
         setUndecorated(true);
         
-        initComponents();                
+        initComponents();
+        
+        postInitComponents();
     }
 
     @Override

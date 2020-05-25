@@ -13,6 +13,7 @@ public abstract class TraspasosSalidaJFrame extends BaseJFrame {
         
         initComponents();
         
+        postInitComponents();
     }
 
     /**
