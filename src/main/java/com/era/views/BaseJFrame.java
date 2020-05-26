@@ -108,7 +108,7 @@ public abstract class BaseJFrame extends JFrame {
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
     
-    protected void loadItemsInTable() throws Exception {
+    public void loadAllItemsInTable() throws Exception {
         
         //Load all the items in the table        
         if(this.BaseJTable != null){               
