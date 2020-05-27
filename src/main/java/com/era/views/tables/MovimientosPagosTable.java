@@ -45,17 +45,17 @@ public class MovimientosPagosTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final MovimientosPagos MovimientosPagos = (MovimientosPagos)Model;
+       final MovimientosPagos MovimientosPagos = (MovimientosPagos)Model_;
 
-       RepositoryFactory.getInstance().getMovimientosPagossRepository().save(Model);
+       RepositoryFactory.getInstance().getMovimientosPagossRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

@@ -45,17 +45,17 @@ public class GiroTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Giro Giro = (Giro)Model;
+       final Giro Giro = (Giro)Model_;
 
-       RepositoryFactory.getInstance().getGirosRepository().save(Model);
+       RepositoryFactory.getInstance().getGirosRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

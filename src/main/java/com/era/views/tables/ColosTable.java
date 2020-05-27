@@ -45,17 +45,17 @@ public class ColosTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Colos Colos = (Colos)Model;
+       final Colos Colos = (Colos)Model_;
 
-       RepositoryFactory.getInstance().getColossRepository().save(Model);
+       RepositoryFactory.getInstance().getColossRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

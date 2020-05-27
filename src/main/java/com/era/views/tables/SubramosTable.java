@@ -45,17 +45,17 @@ public class SubramosTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Subramos Subramos = (Subramos)Model;
+       final Subramos Subramos = (Subramos)Model_;
 
-       RepositoryFactory.getInstance().getSubramossRepository().save(Model);
+       RepositoryFactory.getInstance().getSubramossRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

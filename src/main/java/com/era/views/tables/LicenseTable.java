@@ -45,17 +45,17 @@ public class LicenseTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final License License = (License)Model;
+       final License License = (License)Model_;
 
-       RepositoryFactory.getInstance().getLicensesRepository().save(Model);
+       RepositoryFactory.getInstance().getLicensesRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

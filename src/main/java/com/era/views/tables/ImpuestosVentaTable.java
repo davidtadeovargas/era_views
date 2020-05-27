@@ -45,17 +45,17 @@ public class ImpuestosVentaTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final ImpuestosVenta ImpuestosVenta = (ImpuestosVenta)Model;
+       final ImpuestosVenta ImpuestosVenta = (ImpuestosVenta)Model_;
 
-       RepositoryFactory.getInstance().getImpuestosVentasRepository().save(Model);
+       RepositoryFactory.getInstance().getImpuestosVentasRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

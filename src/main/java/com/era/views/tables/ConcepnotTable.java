@@ -45,17 +45,17 @@ public class ConcepnotTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Concepnot Concepnot = (Concepnot)Model;
+       final Concepnot Concepnot = (Concepnot)Model_;
 
-       RepositoryFactory.getInstance().getConcepnotsRepository().save(Model);
+       RepositoryFactory.getInstance().getConcepnotsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

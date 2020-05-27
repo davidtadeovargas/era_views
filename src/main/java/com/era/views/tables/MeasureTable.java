@@ -45,17 +45,17 @@ public class MeasureTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Measure Measure = (Measure)Model;
+       final Measure Measure = (Measure)Model_;
 
-       RepositoryFactory.getInstance().getMeasuresRepository().save(Model);
+       RepositoryFactory.getInstance().getMeasuresRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

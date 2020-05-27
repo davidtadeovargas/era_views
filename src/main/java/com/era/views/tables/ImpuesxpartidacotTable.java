@@ -45,17 +45,17 @@ public class ImpuesxpartidacotTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Impuesxpartidacot Impuesxpartidacot = (Impuesxpartidacot)Model;
+       final Impuesxpartidacot Impuesxpartidacot = (Impuesxpartidacot)Model_;
 
-       RepositoryFactory.getInstance().getImpuesxpartidacotsRepository().save(Model);
+       RepositoryFactory.getInstance().getImpuesxpartidacotsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

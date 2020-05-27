@@ -52,7 +52,7 @@ public abstract class BaseJTable extends JTable {
     public abstract void initTable(final List<?> items);
     public abstract void loadAllItemsInTable() throws Exception;
     public abstract List<?> getAllItemsInTable() throws Exception;
-    public abstract void insertNewObjectToTable(Object Model) throws Exception;
+    public abstract void insertNewObjectToTable(Object Model_) throws Exception;
     public abstract void deleteAllObjectsInTable() throws Exception;
     public abstract void deleteObjectInTable(Object Model) throws Exception;
     

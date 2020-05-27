@@ -45,17 +45,17 @@ public class PaymentFormTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final PaymentForm PaymentForm = (PaymentForm)Model;
+       final PaymentForm PaymentForm = (PaymentForm)Model_;
 
-       RepositoryFactory.getInstance().getPaymentFormsRepository().save(Model);
+       RepositoryFactory.getInstance().getPaymentFormsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

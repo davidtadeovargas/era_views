@@ -45,17 +45,17 @@ public class SupplierTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Supplier Supplier = (Supplier)Model;
+       final Supplier Supplier = (Supplier)Model_;
 
-       RepositoryFactory.getInstance().getSuppliersRepository().save(Model);
+       RepositoryFactory.getInstance().getSuppliersRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

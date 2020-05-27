@@ -45,17 +45,17 @@ public class CxpTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Cxp Cxp = (Cxp)Model;
+       final Cxp Cxp = (Cxp)Model_;
 
-       RepositoryFactory.getInstance().getCxpsRepository().save(Model);
+       RepositoryFactory.getInstance().getCxpsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

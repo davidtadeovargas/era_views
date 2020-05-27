@@ -45,17 +45,17 @@ public class DocumentosContabilizadosTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final DocumentosContabilizados DocumentosContabilizados = (DocumentosContabilizados)Model;
+       final DocumentosContabilizados DocumentosContabilizados = (DocumentosContabilizados)Model_;
 
-       RepositoryFactory.getInstance().getDocumentosContabilizadossRepository().save(Model);
+       RepositoryFactory.getInstance().getDocumentosContabilizadossRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

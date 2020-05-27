@@ -45,17 +45,17 @@ public class TarsTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Tars Tars = (Tars)Model;
+       final Tars Tars = (Tars)Model_;
 
-       RepositoryFactory.getInstance().getTarssRepository().save(Model);
+       RepositoryFactory.getInstance().getTarssRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

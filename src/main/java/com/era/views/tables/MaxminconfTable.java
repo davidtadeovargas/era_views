@@ -45,17 +45,17 @@ public class MaxminconfTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Maxminconf Maxminconf = (Maxminconf)Model;
+       final Maxminconf Maxminconf = (Maxminconf)Model_;
 
-       RepositoryFactory.getInstance().getMaxminconfsRepository().save(Model);
+       RepositoryFactory.getInstance().getMaxminconfsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

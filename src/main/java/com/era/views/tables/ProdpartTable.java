@@ -45,17 +45,17 @@ public class ProdpartTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Prodpart Prodpart = (Prodpart)Model;
+       final Prodpart Prodpart = (Prodpart)Model_;
 
-       RepositoryFactory.getInstance().getProdpartsRepository().save(Model);
+       RepositoryFactory.getInstance().getProdpartsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

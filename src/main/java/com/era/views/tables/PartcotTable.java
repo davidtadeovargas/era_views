@@ -45,17 +45,17 @@ public class PartcotTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Partcot Partcot = (Partcot)Model;
+       final Partcot Partcot = (Partcot)Model_;
 
-       RepositoryFactory.getInstance().getPartcotsRepository().save(Model);
+       RepositoryFactory.getInstance().getPartcotsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

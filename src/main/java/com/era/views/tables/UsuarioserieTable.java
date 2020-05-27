@@ -45,17 +45,17 @@ public class UsuarioserieTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Usuarioserie Usuarioserie = (Usuarioserie)Model;
+       final Usuarioserie Usuarioserie = (Usuarioserie)Model_;
 
-       RepositoryFactory.getInstance().getUsuarioseriesRepository().save(Model);
+       RepositoryFactory.getInstance().getUsuarioseriesRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

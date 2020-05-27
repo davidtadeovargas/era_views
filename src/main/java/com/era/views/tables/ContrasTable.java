@@ -45,17 +45,17 @@ public class ContrasTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Contras Contras = (Contras)Model;
+       final Contras Contras = (Contras)Model_;
 
-       RepositoryFactory.getInstance().getContrassRepository().save(Model);
+       RepositoryFactory.getInstance().getContrassRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

@@ -45,17 +45,17 @@ public class CortesTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Cortes Cortes = (Cortes)Model;
+       final Cortes Cortes = (Cortes)Model_;
 
-       RepositoryFactory.getInstance().getCortessRepository().save(Model);
+       RepositoryFactory.getInstance().getCortessRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

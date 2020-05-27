@@ -45,17 +45,17 @@ public class AduanaTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Aduana Aduana = (Aduana)Model;
+       final Aduana Aduana = (Aduana)Model_;
 
-       RepositoryFactory.getInstance().getAduanasRepository().save(Model);
+       RepositoryFactory.getInstance().getAduanasRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

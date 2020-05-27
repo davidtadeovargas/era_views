@@ -45,17 +45,17 @@ public class PushNotificationTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final PushNotification PushNotification = (PushNotification)Model;
+       final PushNotification PushNotification = (PushNotification)Model_;
 
-       RepositoryFactory.getInstance().getPushNotificationsRepository().save(Model);
+       RepositoryFactory.getInstance().getPushNotificationsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

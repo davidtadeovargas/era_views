@@ -45,17 +45,17 @@ public class SalesTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Sales Sales = (Sales)Model;
+       final Sales Sales = (Sales)Model_;
 
-       RepositoryFactory.getInstance().getSalessRepository().save(Model);
+       RepositoryFactory.getInstance().getSalessRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

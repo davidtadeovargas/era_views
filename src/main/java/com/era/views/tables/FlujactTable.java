@@ -45,17 +45,17 @@ public class FlujactTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Flujact Flujact = (Flujact)Model;
+       final Flujact Flujact = (Flujact)Model_;
 
-       RepositoryFactory.getInstance().getFlujactsRepository().save(Model);
+       RepositoryFactory.getInstance().getFlujactsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

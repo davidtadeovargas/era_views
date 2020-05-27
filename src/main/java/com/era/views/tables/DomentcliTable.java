@@ -45,17 +45,17 @@ public class DomentcliTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Domentcli Domentcli = (Domentcli)Model;
+       final Domentcli Domentcli = (Domentcli)Model_;
 
-       RepositoryFactory.getInstance().getDomentclisRepository().save(Model);
+       RepositoryFactory.getInstance().getDomentclisRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

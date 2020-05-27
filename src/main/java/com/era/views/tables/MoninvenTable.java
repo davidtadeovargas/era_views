@@ -45,17 +45,17 @@ public class MoninvenTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Moninven Moninven = (Moninven)Model;
+       final Moninven Moninven = (Moninven)Model_;
 
-       RepositoryFactory.getInstance().getMoninvensRepository().save(Model);
+       RepositoryFactory.getInstance().getMoninvensRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

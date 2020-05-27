@@ -45,17 +45,17 @@ public class OrdsTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Ords Ords = (Ords)Model;
+       final Ords Ords = (Ords)Model_;
 
-       RepositoryFactory.getInstance().getOrdssRepository().save(Model);
+       RepositoryFactory.getInstance().getOrdssRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

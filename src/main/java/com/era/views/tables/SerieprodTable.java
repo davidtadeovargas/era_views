@@ -45,17 +45,17 @@ public class SerieprodTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Serieprod Serieprod = (Serieprod)Model;
+       final Serieprod Serieprod = (Serieprod)Model_;
 
-       RepositoryFactory.getInstance().getSerieprodsRepository().save(Model);
+       RepositoryFactory.getInstance().getSerieprodsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

@@ -26,7 +26,7 @@ public abstract class ImpresJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new com.era.views.tables.UsersTable();
+        jTab = new com.era.views.tables.UserTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
@@ -220,7 +220,7 @@ public abstract class ImpresJFrame extends BaseJFrame
     private javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTEstacs;
-    protected com.era.views.tables.UsersTable jTab;
+    protected com.era.views.tables.UserTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

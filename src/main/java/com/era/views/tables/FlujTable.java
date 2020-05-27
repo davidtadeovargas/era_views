@@ -45,17 +45,17 @@ public class FlujTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Fluj Fluj = (Fluj)Model;
+       final Fluj Fluj = (Fluj)Model_;
 
-       RepositoryFactory.getInstance().getFlujsRepository().save(Model);
+       RepositoryFactory.getInstance().getFlujsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

@@ -45,17 +45,17 @@ public class ConceppagTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Conceppag Conceppag = (Conceppag)Model;
+       final Conceppag Conceppag = (Conceppag)Model_;
 
-       RepositoryFactory.getInstance().getConceppagsRepository().save(Model);
+       RepositoryFactory.getInstance().getConceppagsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

@@ -124,7 +124,7 @@ public abstract class EmpresasJFrame extends BaseJFrame {
         jBCargImg = new javax.swing.JButton();
         jBDelImg = new javax.swing.JButton();
         JPTabla = new javax.swing.JScrollPane();
-        jTabEmpresas = new com.era.views.tables.BasdatsTable();
+        jTabEmpresas = new com.era.views.tables.BasDatsTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Crear Empresa");
@@ -1156,6 +1156,6 @@ public abstract class EmpresasJFrame extends BaseJFrame {
     private javax.swing.JLabel jLabel9;
     protected javax.swing.JPanel jPanImg1;
     private javax.swing.JScrollPane jSImg1;
-    protected com.era.views.tables.BasdatsTable jTabEmpresas;
+    protected com.era.views.tables.BasDatsTable jTabEmpresas;
     // End of variables declaration//GEN-END:variables
 }

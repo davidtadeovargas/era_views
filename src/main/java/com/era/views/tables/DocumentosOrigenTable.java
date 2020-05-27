@@ -45,17 +45,17 @@ public class DocumentosOrigenTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final DocumentosOrigen DocumentosOrigen = (DocumentosOrigen)Model;
+       final DocumentosOrigen DocumentosOrigen = (DocumentosOrigen)Model_;
 
-       RepositoryFactory.getInstance().getDocumentosOrigensRepository().save(Model);
+       RepositoryFactory.getInstance().getDocumentosOrigensRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

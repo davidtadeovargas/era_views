@@ -45,17 +45,17 @@ public class CompaTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Compa Compa = (Compa)Model;
+       final Compa Compa = (Compa)Model_;
 
-       RepositoryFactory.getInstance().getCompasRepository().save(Model);
+       RepositoryFactory.getInstance().getCompasRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

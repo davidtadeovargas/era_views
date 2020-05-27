@@ -45,17 +45,17 @@ public class ERMmovimientosInventarioTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final ERMmovimientosInventario ERMmovimientosInventario = (ERMmovimientosInventario)Model;
+       final ERMmovimientosInventario ERMmovimientosInventario = (ERMmovimientosInventario)Model_;
 
-       RepositoryFactory.getInstance().getERMmovimientosInventariosRepository().save(Model);
+       RepositoryFactory.getInstance().getERMmovimientosInventariosRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

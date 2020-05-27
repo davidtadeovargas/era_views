@@ -45,17 +45,17 @@ public class ActfijTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Actfij Actfij = (Actfij)Model;
+       final Actfij Actfij = (Actfij)Model_;
 
-       RepositoryFactory.getInstance().getActfijsRepository().save(Model);
+       RepositoryFactory.getInstance().getActfijsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

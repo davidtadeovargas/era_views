@@ -45,17 +45,17 @@ public class CumpleTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Cumple Cumple = (Cumple)Model;
+       final Cumple Cumple = (Cumple)Model_;
 
-       RepositoryFactory.getInstance().getCumplesRepository().save(Model);
+       RepositoryFactory.getInstance().getCumplesRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

@@ -45,17 +45,17 @@ public class UbiadTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Ubiad Ubiad = (Ubiad)Model;
+       final Ubiad Ubiad = (Ubiad)Model_;
 
-       RepositoryFactory.getInstance().getUbiadsRepository().save(Model);
+       RepositoryFactory.getInstance().getUbiadsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

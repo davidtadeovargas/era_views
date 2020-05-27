@@ -45,17 +45,17 @@ public class CCoinTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final CCoin CCoin = (CCoin)Model;
+       final CCoin CCoin = (CCoin)Model_;
 
-       RepositoryFactory.getInstance().getCCoinsRepository().save(Model);
+       RepositoryFactory.getInstance().getCCoinsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

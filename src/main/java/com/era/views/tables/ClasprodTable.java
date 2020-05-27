@@ -45,17 +45,17 @@ public class ClasprodTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Clasprod Clasprod = (Clasprod)Model;
+       final Clasprod Clasprod = (Clasprod)Model_;
 
-       RepositoryFactory.getInstance().getClasprodsRepository().save(Model);
+       RepositoryFactory.getInstance().getClasprodsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

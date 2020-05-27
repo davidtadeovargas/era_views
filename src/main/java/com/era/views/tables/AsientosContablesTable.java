@@ -45,17 +45,17 @@ public class AsientosContablesTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final AsientosContables AsientosContables = (AsientosContables)Model;
+       final AsientosContables AsientosContables = (AsientosContables)Model_;
 
-       RepositoryFactory.getInstance().getAsientosContablessRepository().save(Model);
+       RepositoryFactory.getInstance().getAsientosContablessRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

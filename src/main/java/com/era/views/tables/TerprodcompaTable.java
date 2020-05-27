@@ -45,17 +45,17 @@ public class TerprodcompaTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Terprodcompa Terprodcompa = (Terprodcompa)Model;
+       final Terprodcompa Terprodcompa = (Terprodcompa)Model_;
 
-       RepositoryFactory.getInstance().getTerprodcompasRepository().save(Model);
+       RepositoryFactory.getInstance().getTerprodcompasRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

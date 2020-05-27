@@ -45,17 +45,17 @@ public class CorreoTerminalTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final CorreoTerminal CorreoTerminal = (CorreoTerminal)Model;
+       final CorreoTerminal CorreoTerminal = (CorreoTerminal)Model_;
 
-       RepositoryFactory.getInstance().getCorreoTerminalsRepository().save(Model);
+       RepositoryFactory.getInstance().getCorreoTerminalsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

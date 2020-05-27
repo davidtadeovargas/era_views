@@ -45,17 +45,17 @@ public class CAduanaTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final CAduana CAduana = (CAduana)Model;
+       final CAduana CAduana = (CAduana)Model_;
 
-       RepositoryFactory.getInstance().getCAduanasRepository().save(Model);
+       RepositoryFactory.getInstance().getCAduanasRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

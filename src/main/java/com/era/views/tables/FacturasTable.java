@@ -45,17 +45,17 @@ public class FacturasTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Facturas Facturas = (Facturas)Model;
+       final Facturas Facturas = (Facturas)Model_;
 
-       RepositoryFactory.getInstance().getFacturassRepository().save(Model);
+       RepositoryFactory.getInstance().getFacturassRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

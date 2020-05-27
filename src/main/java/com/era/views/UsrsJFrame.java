@@ -25,7 +25,7 @@ public abstract class UsrsJFrame extends BaseJFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new com.era.views.tables.UsersTable();
+        jTab = new com.era.views.tables.UserTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
@@ -1681,7 +1681,7 @@ public abstract class UsrsJFrame extends BaseJFrame {
     protected javax.swing.JTextField jTNom;
     protected javax.swing.JTextField jTPai;
     protected javax.swing.JTextField jTTel;
-    protected com.era.views.tables.UsersTable jTab;
+    protected com.era.views.tables.UserTable jTab;
     protected javax.swing.JTextField jTxtAlmacen;
     // End of variables declaration//GEN-END:variables
 

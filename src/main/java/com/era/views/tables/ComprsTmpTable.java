@@ -45,17 +45,17 @@ public class ComprsTmpTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final ComprsTmp ComprsTmp = (ComprsTmp)Model;
+       final ComprsTmp ComprsTmp = (ComprsTmp)Model_;
 
-       RepositoryFactory.getInstance().getComprsTmpsRepository().save(Model);
+       RepositoryFactory.getInstance().getComprsTmpsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

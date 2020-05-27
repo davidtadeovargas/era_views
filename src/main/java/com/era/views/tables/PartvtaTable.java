@@ -45,17 +45,17 @@ public class PartvtaTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Partvta Partvta = (Partvta)Model;
+       final Partvta Partvta = (Partvta)Model_;
 
-       RepositoryFactory.getInstance().getPartvtasRepository().save(Model);
+       RepositoryFactory.getInstance().getPartvtasRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

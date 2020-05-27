@@ -45,17 +45,17 @@ public class PartcomprsTmpTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final PartcomprsTmp PartcomprsTmp = (PartcomprsTmp)Model;
+       final PartcomprsTmp PartcomprsTmp = (PartcomprsTmp)Model_;
 
-       RepositoryFactory.getInstance().getPartcomprsTmpsRepository().save(Model);
+       RepositoryFactory.getInstance().getPartcomprsTmpsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

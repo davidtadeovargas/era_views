@@ -45,17 +45,17 @@ public class CClaveprodservTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final CClaveprodserv CClaveprodserv = (CClaveprodserv)Model;
+       final CClaveprodserv CClaveprodserv = (CClaveprodserv)Model_;
 
-       RepositoryFactory.getInstance().getCClaveprodservsRepository().save(Model);
+       RepositoryFactory.getInstance().getCClaveprodservsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

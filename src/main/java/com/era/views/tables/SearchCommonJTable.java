@@ -32,4 +32,29 @@ public class SearchCommonJTable extends BaseJTable {
     public void setSearchCommonTypeEnum(SearchCommonTypeEnum SearchCommonTypeEnum) {
         this.SearchCommonTypeEnum = SearchCommonTypeEnum;
     }
+
+    @Override
+    public void loadAllItemsInTable() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<?> getAllItemsInTable() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void insertNewObjectToTable(Object Model) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void deleteAllObjectsInTable() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void deleteObjectInTable(Object Model) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

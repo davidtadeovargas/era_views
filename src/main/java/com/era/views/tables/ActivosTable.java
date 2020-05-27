@@ -45,17 +45,17 @@ public class ActivosTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Activos Activos = (Activos)Model;
+       final Activos Activos = (Activos)Model_;
 
-       RepositoryFactory.getInstance().getActivossRepository().save(Model);
+       RepositoryFactory.getInstance().getActivossRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

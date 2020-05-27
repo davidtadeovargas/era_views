@@ -45,17 +45,17 @@ public class TipsTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Tips Tips = (Tips)Model;
+       final Tips Tips = (Tips)Model_;
 
-       RepositoryFactory.getInstance().getTipssRepository().save(Model);
+       RepositoryFactory.getInstance().getTipssRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

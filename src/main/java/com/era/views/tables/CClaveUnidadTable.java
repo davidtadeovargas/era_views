@@ -45,17 +45,17 @@ public class CClaveUnidadTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final CClaveUnidad CClaveUnidad = (CClaveUnidad)Model;
+       final CClaveUnidad CClaveUnidad = (CClaveUnidad)Model_;
 
-       RepositoryFactory.getInstance().getCClaveUnidadsRepository().save(Model);
+       RepositoryFactory.getInstance().getCClaveUnidadsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

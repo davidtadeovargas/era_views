@@ -45,17 +45,17 @@ public class MarcprodTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Marcprod Marcprod = (Marcprod)Model;
+       final Marcprod Marcprod = (Marcprod)Model_;
 
-       RepositoryFactory.getInstance().getMarcprodsRepository().save(Model);
+       RepositoryFactory.getInstance().getMarcprodsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

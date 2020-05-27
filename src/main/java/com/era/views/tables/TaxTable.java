@@ -45,17 +45,17 @@ public class TaxTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Tax Tax = (Tax)Model;
+       final Tax Tax = (Tax)Model_;
 
-       RepositoryFactory.getInstance().getTaxsRepository().save(Model);
+       RepositoryFactory.getInstance().getTaxsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

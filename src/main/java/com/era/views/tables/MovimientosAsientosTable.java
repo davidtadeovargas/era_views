@@ -45,17 +45,17 @@ public class MovimientosAsientosTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final MovimientosAsientos MovimientosAsientos = (MovimientosAsientos)Model;
+       final MovimientosAsientos MovimientosAsientos = (MovimientosAsientos)Model_;
 
-       RepositoryFactory.getInstance().getMovimientosAsientossRepository().save(Model);
+       RepositoryFactory.getInstance().getMovimientosAsientossRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

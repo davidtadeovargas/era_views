@@ -45,17 +45,17 @@ public class AsocdescTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Asocdesc Asocdesc = (Asocdesc)Model;
+       final Asocdesc Asocdesc = (Asocdesc)Model_;
 
-       RepositoryFactory.getInstance().getAsocdescsRepository().save(Model);
+       RepositoryFactory.getInstance().getAsocdescsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

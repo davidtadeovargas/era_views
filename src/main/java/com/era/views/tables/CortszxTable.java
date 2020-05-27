@@ -45,17 +45,17 @@ public class CortszxTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Cortszx Cortszx = (Cortszx)Model;
+       final Cortszx Cortszx = (Cortszx)Model_;
 
-       RepositoryFactory.getInstance().getCortszxsRepository().save(Model);
+       RepositoryFactory.getInstance().getCortszxsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

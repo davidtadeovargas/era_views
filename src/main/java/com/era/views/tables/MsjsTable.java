@@ -45,17 +45,17 @@ public class MsjsTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Msjs Msjs = (Msjs)Model;
+       final Msjs Msjs = (Msjs)Model_;
 
-       RepositoryFactory.getInstance().getMsjssRepository().save(Model);
+       RepositoryFactory.getInstance().getMsjssRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

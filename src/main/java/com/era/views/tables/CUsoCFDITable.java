@@ -45,17 +45,17 @@ public class CUsoCFDITable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final CUsoCFDI CUsoCFDI = (CUsoCFDI)Model;
+       final CUsoCFDI CUsoCFDI = (CUsoCFDI)Model_;
 
-       RepositoryFactory.getInstance().getCUsoCFDIsRepository().save(Model);
+       RepositoryFactory.getInstance().getCUsoCFDIsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

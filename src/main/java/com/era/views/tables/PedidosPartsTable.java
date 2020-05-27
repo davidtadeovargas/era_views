@@ -45,17 +45,17 @@ public class PedidosPartsTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final PedidosParts PedidosParts = (PedidosParts)Model;
+       final PedidosParts PedidosParts = (PedidosParts)Model_;
 
-       RepositoryFactory.getInstance().getPedidosPartssRepository().save(Model);
+       RepositoryFactory.getInstance().getPedidosPartssRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

@@ -45,17 +45,17 @@ public class CoinTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Coin Coin = (Coin)Model;
+       final Coin Coin = (Coin)Model_;
 
-       RepositoryFactory.getInstance().getCoinsRepository().save(Model);
+       RepositoryFactory.getInstance().getCoinsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

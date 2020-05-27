@@ -45,17 +45,17 @@ public class EREjerciciosTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final EREjercicios EREjercicios = (EREjercicios)Model;
+       final EREjercicios EREjercicios = (EREjercicios)Model_;
 
-       RepositoryFactory.getInstance().getEREjerciciossRepository().save(Model);
+       RepositoryFactory.getInstance().getEREjerciciossRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

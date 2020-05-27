@@ -45,17 +45,17 @@ public class HistAntiguedaddesaldoTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final HistAntiguedaddesaldo HistAntiguedaddesaldo = (HistAntiguedaddesaldo)Model;
+       final HistAntiguedaddesaldo HistAntiguedaddesaldo = (HistAntiguedaddesaldo)Model_;
 
-       RepositoryFactory.getInstance().getHistAntiguedaddesaldosRepository().save(Model);
+       RepositoryFactory.getInstance().getHistAntiguedaddesaldosRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

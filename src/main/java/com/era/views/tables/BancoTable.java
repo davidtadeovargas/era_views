@@ -45,17 +45,17 @@ public class BancoTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Banco Banco = (Banco)Model;
+       final Banco Banco = (Banco)Model_;
 
-       RepositoryFactory.getInstance().getBancosRepository().save(Model);
+       RepositoryFactory.getInstance().getBancosRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

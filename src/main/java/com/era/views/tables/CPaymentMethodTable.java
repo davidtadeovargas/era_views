@@ -45,17 +45,17 @@ public class CPaymentMethodTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final CPaymentMethod CPaymentMethod = (CPaymentMethod)Model;
+       final CPaymentMethod CPaymentMethod = (CPaymentMethod)Model_;
 
-       RepositoryFactory.getInstance().getCPaymentMethodsRepository().save(Model);
+       RepositoryFactory.getInstance().getCPaymentMethodsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

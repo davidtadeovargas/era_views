@@ -45,17 +45,17 @@ public class ResplogTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Resplog Resplog = (Resplog)Model;
+       final Resplog Resplog = (Resplog)Model_;
 
-       RepositoryFactory.getInstance().getResplogsRepository().save(Model);
+       RepositoryFactory.getInstance().getResplogsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

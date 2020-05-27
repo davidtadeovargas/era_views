@@ -45,17 +45,17 @@ public class DatoscpTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final Datoscp Datoscp = (Datoscp)Model;
+       final Datoscp Datoscp = (Datoscp)Model_;
 
-       RepositoryFactory.getInstance().getDatoscpsRepository().save(Model);
+       RepositoryFactory.getInstance().getDatoscpsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 

@@ -45,17 +45,17 @@ public class ImpuesXProductTable extends BaseJTable {
    }
 
    @Override
-   public void insertNewObjectToTable(Object Model) throws Exception {
+   public void insertNewObjectToTable(Object Model_) throws Exception {
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model);
+            IInsertNewObjectToTable.onPrevInsert(Model_);
         }
 
-       final ImpuesXProduct ImpuesXProduct = (ImpuesXProduct)Model;
+       final ImpuesXProduct ImpuesXProduct = (ImpuesXProduct)Model_;
 
-       RepositoryFactory.getInstance().getImpuesXProductsRepository().save(Model);
+       RepositoryFactory.getInstance().getImpuesXProductsRepository().save(Model_);
 
        if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model);
+            IInsertNewObjectToTable.onPostInsert(Model_);
         }
    }
 
