@@ -47,10 +47,6 @@ public class TableHeaderFactory {
        final BasDatssTableHeader BasDatssTableHeader = new BasDatssTableHeader();return BasDatssTableHeader;
    }
 
-   public BasdatsTableHeader getBasdatsTableHeader(){
-       final BasdatsTableHeader BasdatsTableHeader = new BasdatsTableHeader();return BasdatsTableHeader;
-   }
-
    public BaseTableHeader getBaseTableHeader(){
        final BaseTableHeader BaseTableHeader = new BaseTableHeader();return BaseTableHeader;
    }
