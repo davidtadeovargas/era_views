@@ -31,45 +31,4 @@ public class ImpuesxpartidacotTable extends BaseJTable {
        this.setModel(ImpuesxpartidacotTableModel);
    }
 
-   @Override
-   public void deleteObjectInTable(Object Model) throws Exception{
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPrevDelete(Model);
-        }
-
-       RepositoryFactory.getInstance().getImpuesxpartidacotsRepository().delete(Model);
-
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPostDelete(Model);
-        }
-   }
-
-   @Override
-   public void insertNewObjectToTable(Object Model_) throws Exception {
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model_);
-        }
-
-       final Impuesxpartidacot Impuesxpartidacot = (Impuesxpartidacot)Model_;
-
-       RepositoryFactory.getInstance().getImpuesxpartidacotsRepository().save(Model_);
-
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model_);
-        }
-   }
-
-   @Override
-   public void deleteAllObjectsInTable() throws Exception {
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPrevDelete();
-        }
-
-       RepositoryFactory.getInstance().getImpuesxpartidacotsRepository().deleteAll();
-
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPostDelete();
-        }
-   }
-
 }

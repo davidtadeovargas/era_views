@@ -31,45 +31,4 @@ public class FlujTable extends BaseJTable {
        this.setModel(FlujTableModel);
    }
 
-   @Override
-   public void deleteObjectInTable(Object Model) throws Exception{
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPrevDelete(Model);
-        }
-
-       RepositoryFactory.getInstance().getFlujsRepository().delete(Model);
-
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPostDelete(Model);
-        }
-   }
-
-   @Override
-   public void insertNewObjectToTable(Object Model_) throws Exception {
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model_);
-        }
-
-       final Fluj Fluj = (Fluj)Model_;
-
-       RepositoryFactory.getInstance().getFlujsRepository().save(Model_);
-
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model_);
-        }
-   }
-
-   @Override
-   public void deleteAllObjectsInTable() throws Exception {
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPrevDelete();
-        }
-
-       RepositoryFactory.getInstance().getFlujsRepository().deleteAll();
-
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPostDelete();
-        }
-   }
-
 }

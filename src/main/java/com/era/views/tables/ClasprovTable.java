@@ -31,45 +31,4 @@ public class ClasprovTable extends BaseJTable {
        this.setModel(ClasprovTableModel);
    }
 
-   @Override
-   public void deleteObjectInTable(Object Model) throws Exception{
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPrevDelete(Model);
-        }
-
-       RepositoryFactory.getInstance().getClasprovsRepository().delete(Model);
-
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPostDelete(Model);
-        }
-   }
-
-   @Override
-   public void insertNewObjectToTable(Object Model_) throws Exception {
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model_);
-        }
-
-       final Clasprov Clasprov = (Clasprov)Model_;
-
-       RepositoryFactory.getInstance().getClasprovsRepository().save(Model_);
-
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model_);
-        }
-   }
-
-   @Override
-   public void deleteAllObjectsInTable() throws Exception {
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPrevDelete();
-        }
-
-       RepositoryFactory.getInstance().getClasprovsRepository().deleteAll();
-
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPostDelete();
-        }
-   }
-
 }

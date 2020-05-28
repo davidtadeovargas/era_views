@@ -14,9 +14,33 @@ public class TipsTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Tips Tips = (Tips) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipssTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipssTableHeader().getCOD().getValue())==0){
+               returnValue = Tips.getCod();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipssTableHeader().getDESCRIP().getValue())==0){
+               returnValue = Tips.getDescrip();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipssTableHeader().getESTAC().getValue())==0){
+               returnValue = Tips.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipssTableHeader().getFALT().getValue())==0){
+               returnValue = Tips.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipssTableHeader().getFMOD().getValue())==0){
+               returnValue = Tips.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipssTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Tips.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipssTableHeader().getSUCU().getValue())==0){
+               returnValue = Tips.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

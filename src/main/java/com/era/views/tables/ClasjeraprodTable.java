@@ -31,45 +31,4 @@ public class ClasjeraprodTable extends BaseJTable {
        this.setModel(ClasjeraprodTableModel);
    }
 
-   @Override
-   public void deleteObjectInTable(Object Model) throws Exception{
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPrevDelete(Model);
-        }
-
-       RepositoryFactory.getInstance().getClasjeraprodsRepository().delete(Model);
-
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPostDelete(Model);
-        }
-   }
-
-   @Override
-   public void insertNewObjectToTable(Object Model_) throws Exception {
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model_);
-        }
-
-       final Clasjeraprod Clasjeraprod = (Clasjeraprod)Model_;
-
-       RepositoryFactory.getInstance().getClasjeraprodsRepository().save(Model_);
-
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model_);
-        }
-   }
-
-   @Override
-   public void deleteAllObjectsInTable() throws Exception {
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPrevDelete();
-        }
-
-       RepositoryFactory.getInstance().getClasjeraprodsRepository().deleteAll();
-
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPostDelete();
-        }
-   }
-
 }

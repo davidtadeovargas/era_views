@@ -14,9 +14,33 @@ public class ClasempTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Clasemp Clasemp = (Clasemp) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasempsTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasempsTableHeader().getCOD().getValue())==0){
+               returnValue = Clasemp.getCod();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasempsTableHeader().getDESCRIP().getValue())==0){
+               returnValue = Clasemp.getDescrip();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasempsTableHeader().getESTAC().getValue())==0){
+               returnValue = Clasemp.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasempsTableHeader().getFALT().getValue())==0){
+               returnValue = Clasemp.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasempsTableHeader().getFMOD().getValue())==0){
+               returnValue = Clasemp.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasempsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Clasemp.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasempsTableHeader().getSUCU().getValue())==0){
+               returnValue = Clasemp.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

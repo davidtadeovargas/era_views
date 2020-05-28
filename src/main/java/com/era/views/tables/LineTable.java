@@ -31,45 +31,4 @@ public class LineTable extends BaseJTable {
        this.setModel(LineTableModel);
    }
 
-   @Override
-   public void deleteObjectInTable(Object Model) throws Exception{
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPrevDelete(Model);
-        }
-
-       RepositoryFactory.getInstance().getLinesRepository().delete(Model);
-
-       if(IDeleteObjectInTable != null){
-            IDeleteObjectInTable.onPostDelete(Model);
-        }
-   }
-
-   @Override
-   public void insertNewObjectToTable(Object Model_) throws Exception {
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPrevInsert(Model_);
-        }
-
-       final Line Line = (Line)Model_;
-
-       RepositoryFactory.getInstance().getLinesRepository().save(Model_);
-
-       if(IInsertNewObjectToTable != null){
-            IInsertNewObjectToTable.onPostInsert(Model_);
-        }
-   }
-
-   @Override
-   public void deleteAllObjectsInTable() throws Exception {
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPrevDelete();
-        }
-
-       RepositoryFactory.getInstance().getLinesRepository().deleteAll();
-
-       if(this.IDeleteAllItemsInTable != null){
-            this.IDeleteAllItemsInTable.onPostDelete();
-        }
-   }
-
 }

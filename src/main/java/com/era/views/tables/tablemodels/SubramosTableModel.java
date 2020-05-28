@@ -14,9 +14,33 @@ public class SubramosTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Subramos Subramos = (Subramos) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getCODIGO().getValue())==0){
+               returnValue = Subramos.getCodigo();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getDESCRIPCION().getValue())==0){
+               returnValue = Subramos.getDescripcion();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getESTAC().getValue())==0){
+               returnValue = Subramos.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getFALT().getValue())==0){
+               returnValue = Subramos.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getFMOD().getValue())==0){
+               returnValue = Subramos.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Subramos.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getSUCU().getValue())==0){
+               returnValue = Subramos.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

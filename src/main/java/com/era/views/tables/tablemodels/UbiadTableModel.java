@@ -14,9 +14,33 @@ public class UbiadTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Ubiad Ubiad = (Ubiad) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUbiadsTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUbiadsTableHeader().getCOD().getValue())==0){
+               returnValue = Ubiad.getCod();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUbiadsTableHeader().getDESCRIP().getValue())==0){
+               returnValue = Ubiad.getDescrip();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUbiadsTableHeader().getESTAC().getValue())==0){
+               returnValue = Ubiad.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUbiadsTableHeader().getFALT().getValue())==0){
+               returnValue = Ubiad.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUbiadsTableHeader().getFMOD().getValue())==0){
+               returnValue = Ubiad.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUbiadsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Ubiad.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUbiadsTableHeader().getSUCU().getValue())==0){
+               returnValue = Ubiad.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

@@ -14,9 +14,33 @@ public class CompaTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Compa Compa = (Compa) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompasTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompasTableHeader().getCOMPA().getValue())==0){
+               returnValue = Compa.getCompa();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompasTableHeader().getESTAC().getValue())==0){
+               returnValue = Compa.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompasTableHeader().getFALT().getValue())==0){
+               returnValue = Compa.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompasTableHeader().getFMOD().getValue())==0){
+               returnValue = Compa.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompasTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Compa.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompasTableHeader().getPROD().getValue())==0){
+               returnValue = Compa.getProd();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompasTableHeader().getSUCU().getValue())==0){
+               returnValue = Compa.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

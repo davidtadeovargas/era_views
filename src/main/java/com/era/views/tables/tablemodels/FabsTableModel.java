@@ -14,9 +14,33 @@ public class FabsTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Fabs Fabs = (Fabs) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getFabssTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getFabssTableHeader().getCOD().getValue())==0){
+               returnValue = Fabs.getCod();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getFabssTableHeader().getDESCRIP().getValue())==0){
+               returnValue = Fabs.getDescrip();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getFabssTableHeader().getESTAC().getValue())==0){
+               returnValue = Fabs.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getFabssTableHeader().getFALT().getValue())==0){
+               returnValue = Fabs.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getFabssTableHeader().getFMOD().getValue())==0){
+               returnValue = Fabs.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getFabssTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Fabs.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getFabssTableHeader().getSUCU().getValue())==0){
+               returnValue = Fabs.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

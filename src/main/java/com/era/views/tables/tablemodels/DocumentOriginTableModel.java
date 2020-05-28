@@ -14,9 +14,33 @@ public class DocumentOriginTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final DocumentOrigin DocumentOrigin = (DocumentOrigin) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentOriginsTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentOriginsTableHeader().getESTAC().getValue())==0){
+               returnValue = DocumentOrigin.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentOriginsTableHeader().getFALT().getValue())==0){
+               returnValue = DocumentOrigin.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentOriginsTableHeader().getFMOD().getValue())==0){
+               returnValue = DocumentOrigin.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentOriginsTableHeader().getNAME().getValue())==0){
+               returnValue = DocumentOrigin.getName();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentOriginsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = DocumentOrigin.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentOriginsTableHeader().getSUCU().getValue())==0){
+               returnValue = DocumentOrigin.getSucu();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentOriginsTableHeader().getTYPE().getValue())==0){
+               returnValue = DocumentOrigin.getType();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

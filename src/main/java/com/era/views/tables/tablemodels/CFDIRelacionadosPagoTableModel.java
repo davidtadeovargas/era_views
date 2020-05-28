@@ -14,9 +14,33 @@ public class CFDIRelacionadosPagoTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final CFDIRelacionadosPago CFDIRelacionadosPago = (CFDIRelacionadosPago) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCFDIRelacionadosPagosTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCFDIRelacionadosPagosTableHeader().getESTAC().getValue())==0){
+               returnValue = CFDIRelacionadosPago.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCFDIRelacionadosPagosTableHeader().getFALT().getValue())==0){
+               returnValue = CFDIRelacionadosPago.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCFDIRelacionadosPagosTableHeader().getFMOD().getValue())==0){
+               returnValue = CFDIRelacionadosPago.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCFDIRelacionadosPagosTableHeader().getNOCAJ().getValue())==0){
+               returnValue = CFDIRelacionadosPago.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCFDIRelacionadosPagosTableHeader().getSUCU().getValue())==0){
+               returnValue = CFDIRelacionadosPago.getSucu();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCFDIRelacionadosPagosTableHeader().getTIPO_RELACION().getValue())==0){
+               returnValue = CFDIRelacionadosPago.getTipo_relacion();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCFDIRelacionadosPagosTableHeader().getUUID().getValue())==0){
+               returnValue = CFDIRelacionadosPago.getUuid();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

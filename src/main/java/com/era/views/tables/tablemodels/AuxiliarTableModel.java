@@ -14,9 +14,33 @@ public class AuxiliarTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Auxiliar Auxiliar = (Auxiliar) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAuxiliarsTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAuxiliarsTableHeader().getESTAC().getValue())==0){
+               returnValue = Auxiliar.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAuxiliarsTableHeader().getFALT().getValue())==0){
+               returnValue = Auxiliar.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAuxiliarsTableHeader().getFMOD().getValue())==0){
+               returnValue = Auxiliar.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAuxiliarsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Auxiliar.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAuxiliarsTableHeader().getPARTIDA().getValue())==0){
+               returnValue = String.valueOf(Auxiliar.getPartida());
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAuxiliarsTableHeader().getSUCU().getValue())==0){
+               returnValue = Auxiliar.getSucu();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAuxiliarsTableHeader().getVENTA().getValue())==0){
+               returnValue = String.valueOf(Auxiliar.getVenta());
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

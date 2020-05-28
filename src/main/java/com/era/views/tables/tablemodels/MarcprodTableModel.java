@@ -14,9 +14,33 @@ public class MarcprodTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Marcprod Marcprod = (Marcprod) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcprodsTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcprodsTableHeader().getESTAC().getValue())==0){
+               returnValue = Marcprod.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcprodsTableHeader().getFALT().getValue())==0){
+               returnValue = Marcprod.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcprodsTableHeader().getFMOD().getValue())==0){
+               returnValue = Marcprod.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcprodsTableHeader().getMARC().getValue())==0){
+               returnValue = Marcprod.getMarc();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcprodsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Marcprod.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcprodsTableHeader().getPROD().getValue())==0){
+               returnValue = Marcprod.getProd();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcprodsTableHeader().getSUCU().getValue())==0){
+               returnValue = Marcprod.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

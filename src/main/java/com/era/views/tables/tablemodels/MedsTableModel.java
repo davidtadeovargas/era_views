@@ -14,9 +14,33 @@ public class MedsTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Meds Meds = (Meds) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getCOD().getValue())==0){
+               returnValue = Meds.getCod();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getDESCRIP().getValue())==0){
+               returnValue = Meds.getDescrip();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getESTAC().getValue())==0){
+               returnValue = Meds.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getFALT().getValue())==0){
+               returnValue = Meds.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getFMOD().getValue())==0){
+               returnValue = Meds.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Meds.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getSUCU().getValue())==0){
+               returnValue = Meds.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

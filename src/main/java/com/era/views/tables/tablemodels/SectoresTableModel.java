@@ -14,9 +14,33 @@ public class SectoresTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Sectores Sectores = (Sectores) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getCODIGO().getValue())==0){
+               returnValue = Sectores.getCodigo();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getDESCRIPCION().getValue())==0){
+               returnValue = Sectores.getDescripcion();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getESTAC().getValue())==0){
+               returnValue = Sectores.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getFALT().getValue())==0){
+               returnValue = Sectores.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getFMOD().getValue())==0){
+               returnValue = Sectores.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Sectores.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getSUCU().getValue())==0){
+               returnValue = Sectores.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

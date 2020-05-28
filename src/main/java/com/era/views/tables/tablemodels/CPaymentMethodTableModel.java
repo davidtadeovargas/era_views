@@ -14,9 +14,36 @@ public class CPaymentMethodTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final CPaymentMethod CPaymentMethod = (CPaymentMethod) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getFECHA_INICIO_DE_VIGENCIA().getValue())==0){
+               returnValue = CPaymentMethod.getFecha_inicio_de_vigencia().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getCODE().getValue())==0){
+               returnValue = CPaymentMethod.getCode();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getDESCRIPTION().getValue())==0){
+               returnValue = CPaymentMethod.getDescription();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getESTAC().getValue())==0){
+               returnValue = CPaymentMethod.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getFALT().getValue())==0){
+               returnValue = CPaymentMethod.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getFMOD().getValue())==0){
+               returnValue = CPaymentMethod.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = CPaymentMethod.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCPaymentMethodsTableHeader().getSUCU().getValue())==0){
+               returnValue = CPaymentMethod.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

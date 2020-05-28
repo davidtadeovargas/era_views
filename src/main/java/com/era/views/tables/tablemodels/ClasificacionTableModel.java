@@ -14,9 +14,33 @@ public class ClasificacionTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Clasificacion Clasificacion = (Clasificacion) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasificacionsTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasificacionsTableHeader().getCOD().getValue())==0){
+               returnValue = Clasificacion.getCod();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasificacionsTableHeader().getDESCRIP().getValue())==0){
+               returnValue = Clasificacion.getDescrip();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasificacionsTableHeader().getESTAC().getValue())==0){
+               returnValue = Clasificacion.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasificacionsTableHeader().getFALT().getValue())==0){
+               returnValue = Clasificacion.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasificacionsTableHeader().getFMOD().getValue())==0){
+               returnValue = Clasificacion.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasificacionsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Clasificacion.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getClasificacionsTableHeader().getSUCU().getValue())==0){
+               returnValue = Clasificacion.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

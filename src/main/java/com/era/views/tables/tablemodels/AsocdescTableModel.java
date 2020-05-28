@@ -14,9 +14,51 @@ public class AsocdescTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Asocdesc Asocdesc = (Asocdesc) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getCLAS().getValue())==0){
+               returnValue = Asocdesc.getClas();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getCLASJERA().getValue())==0){
+               returnValue = Asocdesc.getClasjera();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getCLIEN().getValue())==0){
+               returnValue = Asocdesc.getClien();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getESTAC().getValue())==0){
+               returnValue = Asocdesc.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getFALT().getValue())==0){
+               returnValue = Asocdesc.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getFMOD().getValue())==0){
+               returnValue = Asocdesc.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getLIST().getValue())==0){
+               returnValue = String.valueOf(Asocdesc.getList());
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Asocdesc.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getPREC().getValue())==0){
+               returnValue = String.valueOf(Asocdesc.getPrec());
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getPROD().getValue())==0){
+               returnValue = Asocdesc.getProd();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getSUCU().getValue())==0){
+               returnValue = Asocdesc.getSucu();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getUSAR().getValue())==0){
+               returnValue = Asocdesc.getUsar();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAsocdescsTableHeader().getUTIL().getValue())==0){
+               returnValue = String.valueOf(Asocdesc.getUtil());
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

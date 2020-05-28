@@ -14,9 +14,33 @@ public class PesTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Pes Pes = (Pes) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getCOD().getValue())==0){
+               returnValue = Pes.getCod();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getDESCRIP().getValue())==0){
+               returnValue = Pes.getDescrip();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getESTAC().getValue())==0){
+               returnValue = Pes.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getFALT().getValue())==0){
+               returnValue = Pes.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getFMOD().getValue())==0){
+               returnValue = Pes.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Pes.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getSUCU().getValue())==0){
+               returnValue = Pes.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }

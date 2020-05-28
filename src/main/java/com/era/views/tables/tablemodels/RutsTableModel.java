@@ -14,9 +14,36 @@ public class RutsTableModel  extends BaseAbstractTableModel {
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
            final Ruts Ruts = (Ruts) model;
-           return null;
 
+           String returnValue = "";
+           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getROWNUMBER().getValue())==0){
+               returnValue = String.valueOf(rowIndex + 1);
+            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getESTAC().getValue())==0){
+               returnValue = Ruts.getEstac();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getFALT().getValue())==0){
+               returnValue = Ruts.getFalt().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getFMOD().getValue())==0){
+               returnValue = Ruts.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Ruts.getNocaj();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getNOM().getValue())==0){
+               returnValue = Ruts.getNom();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getPROGRAM().getValue())==0){
+               returnValue = Ruts.getProgram();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getRUT().getValue())==0){
+               returnValue = Ruts.getRut();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRutssTableHeader().getSUCU().getValue())==0){
+               returnValue = Ruts.getSucu();
+           }
+           return returnValue;
        };
-    }
-
+   }
 }
