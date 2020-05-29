@@ -36,7 +36,7 @@ public abstract class BaseJFrame extends JFrame {
     protected boolean closeSystemOnClose;
     protected JComponentUtils JComponentUtils = new JComponentUtils();
     protected OnJFrameVisible OnJFrameVisible;
-    
+    protected PostInitComponents PostInitComponents;
     protected BaseJTable BaseJTable;
     
     protected String titleWindow;
@@ -106,6 +106,11 @@ public abstract class BaseJFrame extends JFrame {
         
         //All windows by default dispose
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        
+        //Callback
+        if(PostInitComponents != null){
+            PostInitComponents.OnPostInitComponents();
+        }
     }
     
     public void loadAllItemsInTable() throws Exception {
@@ -213,5 +218,9 @@ public abstract class BaseJFrame extends JFrame {
 
     public void setSetVisibleWithEfect(boolean setVisibleWithEfect) {
         this.setVisibleWithEfect = setVisibleWithEfect;
+    }
+    
+    public interface PostInitComponents{
+        void OnPostInitComponents();
     }
 }

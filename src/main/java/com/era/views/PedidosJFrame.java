@@ -48,7 +48,7 @@ public abstract class PedidosJFrame extends BaseJFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setMinimumSize(new java.awt.Dimension(1292, 300));
@@ -271,8 +271,7 @@ public abstract class PedidosJFrame extends BaseJFrame {
         jP1.add(jPanel3);
         jPanel3.setBounds(20, 290, 1140, 190);
 
-        getContentPane().add(jP1);
-        jP1.setBounds(10, 11, 1292, 540);
+        getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 1292, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

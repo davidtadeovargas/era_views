@@ -86,7 +86,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jTBusc = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setMinimumSize(new java.awt.Dimension(100, 100));
@@ -224,7 +224,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBDirX.setText("Corte X");
         jBDirX.setToolTipText("Abrir directorio de cortes X");
         jBDirX.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDirX.setNextFocusableComponent(jBDirZ);
+        jBDirX.setNextFocusableComponent(jBDirZ);        
         jPanel1.add(jBDirX, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 130, 30));
 
         jBDev.setBackground(new java.awt.Color(255, 255, 255));
@@ -599,8 +599,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.add(jTBusc);
         jTBusc.setBounds(160, 230, 490, 20);
 
-        getContentPane().add(jP1);
-        jP1.setBounds(0, 0, 1080, 700);
+        getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
