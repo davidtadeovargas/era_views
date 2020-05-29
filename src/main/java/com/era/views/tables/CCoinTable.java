@@ -31,4 +31,11 @@ public class CCoinTable extends BaseJTable {
        this.setModel(CCoinTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CCoin> items_ = (List<CCoin>) RepositoryFactory.getInstance().getCCoinsRepository().getByLikeEncabezados(search);
+       final CCoinTableModel CCoinTableModel = new CCoinTableModel(items_,this.ShowColumns);
+       this.setModel(CCoinTableModel);
+   }
+
 }

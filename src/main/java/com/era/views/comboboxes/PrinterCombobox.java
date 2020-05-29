@@ -7,6 +7,8 @@ package com.era.views.comboboxes;
 
 import com.era.datamodels.PrinterDataModel;
 import com.era.utilities.UtilitiesFactory;
+import com.era.views.comboboxes.cellrenders.PrinterListCellRender;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,9 +17,21 @@ import java.util.List;
  */
 public class PrinterCombobox extends BaseComboBox<PrinterDataModel> {
 
+    public PrinterCombobox(){
+        super(new PrinterListCellRender());
+    }
+    
     @Override
-    List<PrinterDataModel> getItems() {        
-        final List<PrinterDataModel> printers = UtilitiesFactory.getSingleton().getPrintersUtility().getAllPrinters();
+    List<PrinterDataModel> getItems() {
+        
+        //Emtpy model
+        final PrinterDataModel PrinterDataModel = new PrinterDataModel();
+        PrinterDataModel.setName("");
+        
+        final List<PrinterDataModel> printers = new ArrayList<>();
+        printers.add(PrinterDataModel);
+        printers.addAll(UtilitiesFactory.getSingleton().getPrintersUtility().getAllPrinters());
+        
         return printers;
     }
 }

@@ -31,4 +31,11 @@ public class EREjerciciosTable extends BaseJTable {
        this.setModel(EREjerciciosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<EREjercicios> items_ = (List<EREjercicios>) RepositoryFactory.getInstance().getEREjerciciossRepository().getByLikeEncabezados(search);
+       final EREjerciciosTableModel EREjerciciosTableModel = new EREjerciciosTableModel(items_,this.ShowColumns);
+       this.setModel(EREjerciciosTableModel);
+   }
+
 }

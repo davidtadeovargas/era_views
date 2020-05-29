@@ -31,4 +31,11 @@ public class ImpuesxpartidapedTable extends BaseJTable {
        this.setModel(ImpuesxpartidapedTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Impuesxpartidaped> items_ = (List<Impuesxpartidaped>) RepositoryFactory.getInstance().getImpuesxpartidapedsRepository().getByLikeEncabezados(search);
+       final ImpuesxpartidapedTableModel ImpuesxpartidapedTableModel = new ImpuesxpartidapedTableModel(items_,this.ShowColumns);
+       this.setModel(ImpuesxpartidapedTableModel);
+   }
+
 }

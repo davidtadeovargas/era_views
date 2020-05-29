@@ -31,4 +31,11 @@ public class DocumentosOrigenTable extends BaseJTable {
        this.setModel(DocumentosOrigenTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<DocumentosOrigen> items_ = (List<DocumentosOrigen>) RepositoryFactory.getInstance().getDocumentosOrigensRepository().getByLikeEncabezados(search);
+       final DocumentosOrigenTableModel DocumentosOrigenTableModel = new DocumentosOrigenTableModel(items_,this.ShowColumns);
+       this.setModel(DocumentosOrigenTableModel);
+   }
+
 }

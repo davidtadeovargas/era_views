@@ -31,4 +31,11 @@ public class PartflujactTable extends BaseJTable {
        this.setModel(PartflujactTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Partflujact> items_ = (List<Partflujact>) RepositoryFactory.getInstance().getPartflujactsRepository().getByLikeEncabezados(search);
+       final PartflujactTableModel PartflujactTableModel = new PartflujactTableModel(items_,this.ShowColumns);
+       this.setModel(PartflujactTableModel);
+   }
+
 }

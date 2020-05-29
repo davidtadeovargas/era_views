@@ -31,4 +31,11 @@ public class UbiadTable extends BaseJTable {
        this.setModel(UbiadTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Ubiad> items_ = (List<Ubiad>) RepositoryFactory.getInstance().getUbiadsRepository().getByLikeEncabezados(search);
+       final UbiadTableModel UbiadTableModel = new UbiadTableModel(items_,this.ShowColumns);
+       this.setModel(UbiadTableModel);
+   }
+
 }

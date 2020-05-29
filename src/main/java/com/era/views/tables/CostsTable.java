@@ -31,4 +31,11 @@ public class CostsTable extends BaseJTable {
        this.setModel(CostsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Costs> items_ = (List<Costs>) RepositoryFactory.getInstance().getCostssRepository().getByLikeEncabezados(search);
+       final CostsTableModel CostsTableModel = new CostsTableModel(items_,this.ShowColumns);
+       this.setModel(CostsTableModel);
+   }
+
 }

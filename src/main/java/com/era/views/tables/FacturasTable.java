@@ -31,4 +31,11 @@ public class FacturasTable extends BaseJTable {
        this.setModel(FacturasTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Facturas> items_ = (List<Facturas>) RepositoryFactory.getInstance().getFacturassRepository().getByLikeEncabezados(search);
+       final FacturasTableModel FacturasTableModel = new FacturasTableModel(items_,this.ShowColumns);
+       this.setModel(FacturasTableModel);
+   }
+
 }

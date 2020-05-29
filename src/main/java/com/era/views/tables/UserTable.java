@@ -31,4 +31,11 @@ public class UserTable extends BaseJTable {
        this.setModel(UserTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<User> items_ = (List<User>) RepositoryFactory.getInstance().getUsersRepository().getByLikeEncabezados(search);
+       final UserTableModel UserTableModel = new UserTableModel(items_,this.ShowColumns);
+       this.setModel(UserTableModel);
+   }
+
 }

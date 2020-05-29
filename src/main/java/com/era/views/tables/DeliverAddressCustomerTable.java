@@ -31,4 +31,11 @@ public class DeliverAddressCustomerTable extends BaseJTable {
        this.setModel(DeliverAddressCustomerTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<DeliverAddressCustomer> items_ = (List<DeliverAddressCustomer>) RepositoryFactory.getInstance().getDeliverAddressCustomersRepository().getByLikeEncabezados(search);
+       final DeliverAddressCustomerTableModel DeliverAddressCustomerTableModel = new DeliverAddressCustomerTableModel(items_,this.ShowColumns);
+       this.setModel(DeliverAddressCustomerTableModel);
+   }
+
 }

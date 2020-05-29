@@ -31,4 +31,11 @@ public class PushNotificationTable extends BaseJTable {
        this.setModel(PushNotificationTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<PushNotification> items_ = (List<PushNotification>) RepositoryFactory.getInstance().getPushNotificationsRepository().getByLikeEncabezados(search);
+       final PushNotificationTableModel PushNotificationTableModel = new PushNotificationTableModel(items_,this.ShowColumns);
+       this.setModel(PushNotificationTableModel);
+   }
+
 }

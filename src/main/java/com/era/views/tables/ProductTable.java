@@ -31,4 +31,11 @@ public class ProductTable extends BaseJTable {
        this.setModel(ProductTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Product> items_ = (List<Product>) RepositoryFactory.getInstance().getProductsRepository().getByLikeEncabezados(search);
+       final ProductTableModel ProductTableModel = new ProductTableModel(items_,this.ShowColumns);
+       this.setModel(ProductTableModel);
+   }
+
 }

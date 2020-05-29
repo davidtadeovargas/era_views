@@ -31,4 +31,11 @@ public class ConcepsTable extends BaseJTable {
        this.setModel(ConcepsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Conceps> items_ = (List<Conceps>) RepositoryFactory.getInstance().getConcepssRepository().getByLikeEncabezados(search);
+       final ConcepsTableModel ConcepsTableModel = new ConcepsTableModel(items_,this.ShowColumns);
+       this.setModel(ConcepsTableModel);
+   }
+
 }

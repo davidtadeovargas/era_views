@@ -31,4 +31,11 @@ public class MedsTable extends BaseJTable {
        this.setModel(MedsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Meds> items_ = (List<Meds>) RepositoryFactory.getInstance().getMedssRepository().getByLikeEncabezados(search);
+       final MedsTableModel MedsTableModel = new MedsTableModel(items_,this.ShowColumns);
+       this.setModel(MedsTableModel);
+   }
+
 }

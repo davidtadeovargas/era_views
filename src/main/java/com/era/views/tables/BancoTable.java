@@ -31,4 +31,11 @@ public class BancoTable extends BaseJTable {
        this.setModel(BancoTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Banco> items_ = (List<Banco>) RepositoryFactory.getInstance().getBancosRepository().getByLikeEncabezados(search);
+       final BancoTableModel BancoTableModel = new BancoTableModel(items_,this.ShowColumns);
+       this.setModel(BancoTableModel);
+   }
+
 }

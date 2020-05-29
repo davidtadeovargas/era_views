@@ -31,4 +31,11 @@ public class MarcsTable extends BaseJTable {
        this.setModel(MarcsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Marcs> items_ = (List<Marcs>) RepositoryFactory.getInstance().getMarcssRepository().getByLikeEncabezados(search);
+       final MarcsTableModel MarcsTableModel = new MarcsTableModel(items_,this.ShowColumns);
+       this.setModel(MarcsTableModel);
+   }
+
 }

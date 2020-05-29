@@ -31,4 +31,11 @@ public class FlujTable extends BaseJTable {
        this.setModel(FlujTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Fluj> items_ = (List<Fluj>) RepositoryFactory.getInstance().getFlujsRepository().getByLikeEncabezados(search);
+       final FlujTableModel FlujTableModel = new FlujTableModel(items_,this.ShowColumns);
+       this.setModel(FlujTableModel);
+   }
+
 }

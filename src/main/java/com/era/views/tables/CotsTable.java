@@ -31,4 +31,11 @@ public class CotsTable extends BaseJTable {
        this.setModel(CotsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Cots> items_ = (List<Cots>) RepositoryFactory.getInstance().getCotssRepository().getByLikeEncabezados(search);
+       final CotsTableModel CotsTableModel = new CotsTableModel(items_,this.ShowColumns);
+       this.setModel(CotsTableModel);
+   }
+
 }

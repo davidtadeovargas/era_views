@@ -31,4 +31,11 @@ public class CompaTable extends BaseJTable {
        this.setModel(CompaTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Compa> items_ = (List<Compa>) RepositoryFactory.getInstance().getCompasRepository().getByLikeEncabezados(search);
+       final CompaTableModel CompaTableModel = new CompaTableModel(items_,this.ShowColumns);
+       this.setModel(CompaTableModel);
+   }
+
 }

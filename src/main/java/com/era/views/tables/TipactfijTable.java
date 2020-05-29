@@ -31,4 +31,11 @@ public class TipactfijTable extends BaseJTable {
        this.setModel(TipactfijTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Tipactfij> items_ = (List<Tipactfij>) RepositoryFactory.getInstance().getTipactfijsRepository().getByLikeEncabezados(search);
+       final TipactfijTableModel TipactfijTableModel = new TipactfijTableModel(items_,this.ShowColumns);
+       this.setModel(TipactfijTableModel);
+   }
+
 }

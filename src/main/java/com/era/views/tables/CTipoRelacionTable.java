@@ -31,4 +31,11 @@ public class CTipoRelacionTable extends BaseJTable {
        this.setModel(CTipoRelacionTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CTipoRelacion> items_ = (List<CTipoRelacion>) RepositoryFactory.getInstance().getCTipoRelacionsRepository().getByLikeEncabezados(search);
+       final CTipoRelacionTableModel CTipoRelacionTableModel = new CTipoRelacionTableModel(items_,this.ShowColumns);
+       this.setModel(CTipoRelacionTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class RubrTable extends BaseJTable {
        this.setModel(RubrTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Rubr> items_ = (List<Rubr>) RepositoryFactory.getInstance().getRubrsRepository().getByLikeEncabezados(search);
+       final RubrTableModel RubrTableModel = new RubrTableModel(items_,this.ShowColumns);
+       this.setModel(RubrTableModel);
+   }
+
 }

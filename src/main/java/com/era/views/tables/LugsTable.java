@@ -31,4 +31,11 @@ public class LugsTable extends BaseJTable {
        this.setModel(LugsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Lugs> items_ = (List<Lugs>) RepositoryFactory.getInstance().getLugssRepository().getByLikeEncabezados(search);
+       final LugsTableModel LugsTableModel = new LugsTableModel(items_,this.ShowColumns);
+       this.setModel(LugsTableModel);
+   }
+
 }

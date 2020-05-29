@@ -31,4 +31,11 @@ public class IngresosEncabTable extends BaseJTable {
        this.setModel(IngresosEncabTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<IngresosEncab> items_ = (List<IngresosEncab>) RepositoryFactory.getInstance().getIngresosEncabsRepository().getByLikeEncabezados(search);
+       final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(items_,this.ShowColumns);
+       this.setModel(IngresosEncabTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class GiroTable extends BaseJTable {
        this.setModel(GiroTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Giro> items_ = (List<Giro>) RepositoryFactory.getInstance().getGirosRepository().getByLikeEncabezados(search);
+       final GiroTableModel GiroTableModel = new GiroTableModel(items_,this.ShowColumns);
+       this.setModel(GiroTableModel);
+   }
+
 }

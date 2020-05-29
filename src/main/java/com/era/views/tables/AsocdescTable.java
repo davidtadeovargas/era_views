@@ -31,4 +31,11 @@ public class AsocdescTable extends BaseJTable {
        this.setModel(AsocdescTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Asocdesc> items_ = (List<Asocdesc>) RepositoryFactory.getInstance().getAsocdescsRepository().getByLikeEncabezados(search);
+       final AsocdescTableModel AsocdescTableModel = new AsocdescTableModel(items_,this.ShowColumns);
+       this.setModel(AsocdescTableModel);
+   }
+
 }

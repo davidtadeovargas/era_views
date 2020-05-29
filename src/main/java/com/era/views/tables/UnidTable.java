@@ -31,4 +31,11 @@ public class UnidTable extends BaseJTable {
        this.setModel(UnidTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Unid> items_ = (List<Unid>) RepositoryFactory.getInstance().getUnidsRepository().getByLikeEncabezados(search);
+       final UnidTableModel UnidTableModel = new UnidTableModel(items_,this.ShowColumns);
+       this.setModel(UnidTableModel);
+   }
+
 }

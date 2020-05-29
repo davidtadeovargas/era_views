@@ -31,4 +31,11 @@ public class CxpTable extends BaseJTable {
        this.setModel(CxpTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Cxp> items_ = (List<Cxp>) RepositoryFactory.getInstance().getCxpsRepository().getByLikeEncabezados(search);
+       final CxpTableModel CxpTableModel = new CxpTableModel(items_,this.ShowColumns);
+       this.setModel(CxpTableModel);
+   }
+
 }

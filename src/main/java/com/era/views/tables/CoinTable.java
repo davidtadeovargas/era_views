@@ -31,4 +31,11 @@ public class CoinTable extends BaseJTable {
        this.setModel(CoinTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Coin> items_ = (List<Coin>) RepositoryFactory.getInstance().getCoinsRepository().getByLikeEncabezados(search);
+       final CoinTableModel CoinTableModel = new CoinTableModel(items_,this.ShowColumns);
+       this.setModel(CoinTableModel);
+   }
+
 }

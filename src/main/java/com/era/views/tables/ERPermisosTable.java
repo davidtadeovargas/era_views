@@ -31,4 +31,11 @@ public class ERPermisosTable extends BaseJTable {
        this.setModel(ERPermisosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<ERPermisos> items_ = (List<ERPermisos>) RepositoryFactory.getInstance().getERPermisossRepository().getByLikeEncabezados(search);
+       final ERPermisosTableModel ERPermisosTableModel = new ERPermisosTableModel(items_,this.ShowColumns);
+       this.setModel(ERPermisosTableModel);
+   }
+
 }

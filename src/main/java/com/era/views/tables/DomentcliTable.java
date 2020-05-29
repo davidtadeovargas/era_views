@@ -31,4 +31,11 @@ public class DomentcliTable extends BaseJTable {
        this.setModel(DomentcliTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Domentcli> items_ = (List<Domentcli>) RepositoryFactory.getInstance().getDomentclisRepository().getByLikeEncabezados(search);
+       final DomentcliTableModel DomentcliTableModel = new DomentcliTableModel(items_,this.ShowColumns);
+       this.setModel(DomentcliTableModel);
+   }
+
 }

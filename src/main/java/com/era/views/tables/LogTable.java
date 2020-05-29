@@ -31,4 +31,11 @@ public class LogTable extends BaseJTable {
        this.setModel(LogTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Log> items_ = (List<Log>) RepositoryFactory.getInstance().getLogsRepository().getByLikeEncabezados(search);
+       final LogTableModel LogTableModel = new LogTableModel(items_,this.ShowColumns);
+       this.setModel(LogTableModel);
+   }
+
 }

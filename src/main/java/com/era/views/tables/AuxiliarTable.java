@@ -31,4 +31,11 @@ public class AuxiliarTable extends BaseJTable {
        this.setModel(AuxiliarTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Auxiliar> items_ = (List<Auxiliar>) RepositoryFactory.getInstance().getAuxiliarsRepository().getByLikeEncabezados(search);
+       final AuxiliarTableModel AuxiliarTableModel = new AuxiliarTableModel(items_,this.ShowColumns);
+       this.setModel(AuxiliarTableModel);
+   }
+
 }

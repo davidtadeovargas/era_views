@@ -31,4 +31,11 @@ public class FabsTable extends BaseJTable {
        this.setModel(FabsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Fabs> items_ = (List<Fabs>) RepositoryFactory.getInstance().getFabssRepository().getByLikeEncabezados(search);
+       final FabsTableModel FabsTableModel = new FabsTableModel(items_,this.ShowColumns);
+       this.setModel(FabsTableModel);
+   }
+
 }

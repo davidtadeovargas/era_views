@@ -31,4 +31,11 @@ public class SupplierTable extends BaseJTable {
        this.setModel(SupplierTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Supplier> items_ = (List<Supplier>) RepositoryFactory.getInstance().getSuppliersRepository().getByLikeEncabezados(search);
+       final SupplierTableModel SupplierTableModel = new SupplierTableModel(items_,this.ShowColumns);
+       this.setModel(SupplierTableModel);
+   }
+
 }

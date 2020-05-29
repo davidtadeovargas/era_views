@@ -31,4 +31,11 @@ public class MovimientosAsientosTable extends BaseJTable {
        this.setModel(MovimientosAsientosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<MovimientosAsientos> items_ = (List<MovimientosAsientos>) RepositoryFactory.getInstance().getMovimientosAsientossRepository().getByLikeEncabezados(search);
+       final MovimientosAsientosTableModel MovimientosAsientosTableModel = new MovimientosAsientosTableModel(items_,this.ShowColumns);
+       this.setModel(MovimientosAsientosTableModel);
+   }
+
 }

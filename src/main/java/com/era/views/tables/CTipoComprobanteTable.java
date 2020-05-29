@@ -31,4 +31,11 @@ public class CTipoComprobanteTable extends BaseJTable {
        this.setModel(CTipoComprobanteTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CTipoComprobante> items_ = (List<CTipoComprobante>) RepositoryFactory.getInstance().getCTipoComprobantesRepository().getByLikeEncabezados(search);
+       final CTipoComprobanteTableModel CTipoComprobanteTableModel = new CTipoComprobanteTableModel(items_,this.ShowColumns);
+       this.setModel(CTipoComprobanteTableModel);
+   }
+
 }

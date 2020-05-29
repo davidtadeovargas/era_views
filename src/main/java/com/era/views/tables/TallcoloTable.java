@@ -31,4 +31,11 @@ public class TallcoloTable extends BaseJTable {
        this.setModel(TallcoloTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Tallcolo> items_ = (List<Tallcolo>) RepositoryFactory.getInstance().getTallcolosRepository().getByLikeEncabezados(search);
+       final TallcoloTableModel TallcoloTableModel = new TallcoloTableModel(items_,this.ShowColumns);
+       this.setModel(TallcoloTableModel);
+   }
+
 }

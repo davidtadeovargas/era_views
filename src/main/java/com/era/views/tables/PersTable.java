@@ -31,4 +31,11 @@ public class PersTable extends BaseJTable {
        this.setModel(PersTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Pers> items_ = (List<Pers>) RepositoryFactory.getInstance().getPerssRepository().getByLikeEncabezados(search);
+       final PersTableModel PersTableModel = new PersTableModel(items_,this.ShowColumns);
+       this.setModel(PersTableModel);
+   }
+
 }

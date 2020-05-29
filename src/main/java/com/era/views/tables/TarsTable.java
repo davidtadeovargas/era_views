@@ -31,4 +31,11 @@ public class TarsTable extends BaseJTable {
        this.setModel(TarsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Tars> items_ = (List<Tars>) RepositoryFactory.getInstance().getTarssRepository().getByLikeEncabezados(search);
+       final TarsTableModel TarsTableModel = new TarsTableModel(items_,this.ShowColumns);
+       this.setModel(TarsTableModel);
+   }
+
 }

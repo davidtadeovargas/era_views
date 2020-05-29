@@ -11,6 +11,7 @@ package com.era.views.tables.headers;
  */
 public class CompaniesTableHeader extends BaseTableHeader {
  
+    private final ColumnTable ROWNUMBER = new ColumnTable("No");
     private final ColumnTable ID = new ColumnTable("ID");
     private final ColumnTable COMPANY_CODE = new ColumnTable("CódigoEmpresa");
     private final ColumnTable COMPANY = new ColumnTable("Empresa");    
@@ -43,7 +44,9 @@ public class CompaniesTableHeader extends BaseTableHeader {
     private final ColumnTable MODIFICATION_DATE = new ColumnTable("Fecha Modificacion");
 
     
-        
+    public ColumnTable getROWNUMBER() {
+       return this.ROWNUMBER;
+   }    
     public ColumnTable getID() {
         return ID;
     }

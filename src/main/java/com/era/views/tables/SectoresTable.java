@@ -31,4 +31,11 @@ public class SectoresTable extends BaseJTable {
        this.setModel(SectoresTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Sectores> items_ = (List<Sectores>) RepositoryFactory.getInstance().getSectoressRepository().getByLikeEncabezados(search);
+       final SectoresTableModel SectoresTableModel = new SectoresTableModel(items_,this.ShowColumns);
+       this.setModel(SectoresTableModel);
+   }
+
 }

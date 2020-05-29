@@ -52,6 +52,7 @@ public abstract class BaseJTable extends JTable {
     public abstract void initTable(final List<?> items);
     public abstract void loadAllItemsInTable() throws Exception;
     public abstract List<?> getAllItemsInTable() throws Exception;        
+    public abstract void getByLikeEncabezados(final String search) throws Exception;
     
     public BaseJTable(AbstractTableModel AbstractTableModel){
         super(AbstractTableModel);

@@ -31,4 +31,11 @@ public class GaranTable extends BaseJTable {
        this.setModel(GaranTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Garan> items_ = (List<Garan>) RepositoryFactory.getInstance().getGaransRepository().getByLikeEncabezados(search);
+       final GaranTableModel GaranTableModel = new GaranTableModel(items_,this.ShowColumns);
+       this.setModel(GaranTableModel);
+   }
+
 }

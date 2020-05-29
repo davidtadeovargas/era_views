@@ -31,4 +31,11 @@ public class LicenseTable extends BaseJTable {
        this.setModel(LicenseTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<License> items_ = (List<License>) RepositoryFactory.getInstance().getLicensesRepository().getByLikeEncabezados(search);
+       final LicenseTableModel LicenseTableModel = new LicenseTableModel(items_,this.ShowColumns);
+       this.setModel(LicenseTableModel);
+   }
+
 }

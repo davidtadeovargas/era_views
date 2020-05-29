@@ -31,4 +31,11 @@ public class CorrselecTable extends BaseJTable {
        this.setModel(CorrselecTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Corrselec> items_ = (List<Corrselec>) RepositoryFactory.getInstance().getCorrselecsRepository().getByLikeEncabezados(search);
+       final CorrselecTableModel CorrselecTableModel = new CorrselecTableModel(items_,this.ShowColumns);
+       this.setModel(CorrselecTableModel);
+   }
+
 }

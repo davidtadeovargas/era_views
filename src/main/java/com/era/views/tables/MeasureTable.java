@@ -31,4 +31,11 @@ public class MeasureTable extends BaseJTable {
        this.setModel(MeasureTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Measure> items_ = (List<Measure>) RepositoryFactory.getInstance().getMeasuresRepository().getByLikeEncabezados(search);
+       final MeasureTableModel MeasureTableModel = new MeasureTableModel(items_,this.ShowColumns);
+       this.setModel(MeasureTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class ZonaTable extends BaseJTable {
        this.setModel(ZonaTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Zona> items_ = (List<Zona>) RepositoryFactory.getInstance().getZonasRepository().getByLikeEncabezados(search);
+       final ZonaTableModel ZonaTableModel = new ZonaTableModel(items_,this.ShowColumns);
+       this.setModel(ZonaTableModel);
+   }
+
 }

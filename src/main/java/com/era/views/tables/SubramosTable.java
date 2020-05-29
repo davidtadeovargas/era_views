@@ -31,4 +31,11 @@ public class SubramosTable extends BaseJTable {
        this.setModel(SubramosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Subramos> items_ = (List<Subramos>) RepositoryFactory.getInstance().getSubramossRepository().getByLikeEncabezados(search);
+       final SubramosTableModel SubramosTableModel = new SubramosTableModel(items_,this.ShowColumns);
+       this.setModel(SubramosTableModel);
+   }
+
 }

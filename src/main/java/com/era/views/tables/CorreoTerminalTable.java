@@ -31,4 +31,11 @@ public class CorreoTerminalTable extends BaseJTable {
        this.setModel(CorreoTerminalTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CorreoTerminal> items_ = (List<CorreoTerminal>) RepositoryFactory.getInstance().getCorreoTerminalsRepository().getByLikeEncabezados(search);
+       final CorreoTerminalTableModel CorreoTerminalTableModel = new CorreoTerminalTableModel(items_,this.ShowColumns);
+       this.setModel(CorreoTerminalTableModel);
+   }
+
 }

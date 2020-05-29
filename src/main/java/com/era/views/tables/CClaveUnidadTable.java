@@ -31,4 +31,11 @@ public class CClaveUnidadTable extends BaseJTable {
        this.setModel(CClaveUnidadTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CClaveUnidad> items_ = (List<CClaveUnidad>) RepositoryFactory.getInstance().getCClaveUnidadsRepository().getByLikeEncabezados(search);
+       final CClaveUnidadTableModel CClaveUnidadTableModel = new CClaveUnidadTableModel(items_,this.ShowColumns);
+       this.setModel(CClaveUnidadTableModel);
+   }
+
 }

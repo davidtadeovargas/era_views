@@ -31,4 +31,11 @@ public class PesTable extends BaseJTable {
        this.setModel(PesTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Pes> items_ = (List<Pes>) RepositoryFactory.getInstance().getPessRepository().getByLikeEncabezados(search);
+       final PesTableModel PesTableModel = new PesTableModel(items_,this.ShowColumns);
+       this.setModel(PesTableModel);
+   }
+
 }

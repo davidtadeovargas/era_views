@@ -31,4 +31,11 @@ public class HistAntiguedaddesaldoTable extends BaseJTable {
        this.setModel(HistAntiguedaddesaldoTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<HistAntiguedaddesaldo> items_ = (List<HistAntiguedaddesaldo>) RepositoryFactory.getInstance().getHistAntiguedaddesaldosRepository().getByLikeEncabezados(search);
+       final HistAntiguedaddesaldoTableModel HistAntiguedaddesaldoTableModel = new HistAntiguedaddesaldoTableModel(items_,this.ShowColumns);
+       this.setModel(HistAntiguedaddesaldoTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class ResponsableTable extends BaseJTable {
        this.setModel(ResponsableTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Responsable> items_ = (List<Responsable>) RepositoryFactory.getInstance().getResponsablesRepository().getByLikeEncabezados(search);
+       final ResponsableTableModel ResponsableTableModel = new ResponsableTableModel(items_,this.ShowColumns);
+       this.setModel(ResponsableTableModel);
+   }
+
 }

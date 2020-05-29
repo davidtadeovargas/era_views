@@ -31,4 +31,11 @@ public class TallTable extends BaseJTable {
        this.setModel(TallTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Tall> items_ = (List<Tall>) RepositoryFactory.getInstance().getTallsRepository().getByLikeEncabezados(search);
+       final TallTableModel TallTableModel = new TallTableModel(items_,this.ShowColumns);
+       this.setModel(TallTableModel);
+   }
+
 }

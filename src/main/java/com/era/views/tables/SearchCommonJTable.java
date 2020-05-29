@@ -42,4 +42,9 @@ public class SearchCommonJTable extends BaseJTable {
     public List<?> getAllItemsInTable() throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void getByLikeEncabezados(String search) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

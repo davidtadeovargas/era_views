@@ -31,4 +31,11 @@ public class ConfgralTable extends BaseJTable {
        this.setModel(ConfgralTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Confgral> items_ = (List<Confgral>) RepositoryFactory.getInstance().getConfgralsRepository().getByLikeEncabezados(search);
+       final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(items_,this.ShowColumns);
+       this.setModel(ConfgralTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class WarehouseTable extends BaseJTable {
        this.setModel(WarehouseTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Warehouse> items_ = (List<Warehouse>) RepositoryFactory.getInstance().getWarehousesRepository().getByLikeEncabezados(search);
+       final WarehouseTableModel WarehouseTableModel = new WarehouseTableModel(items_,this.ShowColumns);
+       this.setModel(WarehouseTableModel);
+   }
+
 }

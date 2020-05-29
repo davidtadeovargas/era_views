@@ -31,4 +31,11 @@ public class TraspasTable extends BaseJTable {
        this.setModel(TraspasTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Traspas> items_ = (List<Traspas>) RepositoryFactory.getInstance().getTraspassRepository().getByLikeEncabezados(search);
+       final TraspasTableModel TraspasTableModel = new TraspasTableModel(items_,this.ShowColumns);
+       this.setModel(TraspasTableModel);
+   }
+
 }

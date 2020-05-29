@@ -31,4 +31,11 @@ public class RegistroemailTable extends BaseJTable {
        this.setModel(RegistroemailTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Registroemail> items_ = (List<Registroemail>) RepositoryFactory.getInstance().getRegistroemailsRepository().getByLikeEncabezados(search);
+       final RegistroemailTableModel RegistroemailTableModel = new RegistroemailTableModel(items_,this.ShowColumns);
+       this.setModel(RegistroemailTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class CAduanaTable extends BaseJTable {
        this.setModel(CAduanaTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CAduana> items_ = (List<CAduana>) RepositoryFactory.getInstance().getCAduanasRepository().getByLikeEncabezados(search);
+       final CAduanaTableModel CAduanaTableModel = new CAduanaTableModel(items_,this.ShowColumns);
+       this.setModel(CAduanaTableModel);
+   }
+
 }

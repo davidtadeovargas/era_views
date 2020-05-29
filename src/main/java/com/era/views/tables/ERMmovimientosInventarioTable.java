@@ -31,4 +31,11 @@ public class ERMmovimientosInventarioTable extends BaseJTable {
        this.setModel(ERMmovimientosInventarioTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<ERMmovimientosInventario> items_ = (List<ERMmovimientosInventario>) RepositoryFactory.getInstance().getERMmovimientosInventariosRepository().getByLikeEncabezados(search);
+       final ERMmovimientosInventarioTableModel ERMmovimientosInventarioTableModel = new ERMmovimientosInventarioTableModel(items_,this.ShowColumns);
+       this.setModel(ERMmovimientosInventarioTableModel);
+   }
+
 }

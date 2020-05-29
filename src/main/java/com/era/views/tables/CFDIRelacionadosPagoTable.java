@@ -31,4 +31,11 @@ public class CFDIRelacionadosPagoTable extends BaseJTable {
        this.setModel(CFDIRelacionadosPagoTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CFDIRelacionadosPago> items_ = (List<CFDIRelacionadosPago>) RepositoryFactory.getInstance().getCFDIRelacionadosPagosRepository().getByLikeEncabezados(search);
+       final CFDIRelacionadosPagoTableModel CFDIRelacionadosPagoTableModel = new CFDIRelacionadosPagoTableModel(items_,this.ShowColumns);
+       this.setModel(CFDIRelacionadosPagoTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class DatoscpTable extends BaseJTable {
        this.setModel(DatoscpTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Datoscp> items_ = (List<Datoscp>) RepositoryFactory.getInstance().getDatoscpsRepository().getByLikeEncabezados(search);
+       final DatoscpTableModel DatoscpTableModel = new DatoscpTableModel(items_,this.ShowColumns);
+       this.setModel(DatoscpTableModel);
+   }
+
 }

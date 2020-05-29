@@ -31,4 +31,11 @@ public class MoninvenTable extends BaseJTable {
        this.setModel(MoninvenTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Moninven> items_ = (List<Moninven>) RepositoryFactory.getInstance().getMoninvensRepository().getByLikeEncabezados(search);
+       final MoninvenTableModel MoninvenTableModel = new MoninvenTableModel(items_,this.ShowColumns);
+       this.setModel(MoninvenTableModel);
+   }
+
 }

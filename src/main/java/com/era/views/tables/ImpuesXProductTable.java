@@ -31,4 +31,11 @@ public class ImpuesXProductTable extends BaseJTable {
        this.setModel(ImpuesXProductTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<ImpuesXProduct> items_ = (List<ImpuesXProduct>) RepositoryFactory.getInstance().getImpuesXProductsRepository().getByLikeEncabezados(search);
+       final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(items_,this.ShowColumns);
+       this.setModel(ImpuesXProductTableModel);
+   }
+
 }

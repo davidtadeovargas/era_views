@@ -31,4 +31,11 @@ public class PetisTable extends BaseJTable {
        this.setModel(PetisTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Petis> items_ = (List<Petis>) RepositoryFactory.getInstance().getPetissRepository().getByLikeEncabezados(search);
+       final PetisTableModel PetisTableModel = new PetisTableModel(items_,this.ShowColumns);
+       this.setModel(PetisTableModel);
+   }
+
 }

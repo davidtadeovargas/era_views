@@ -31,4 +31,11 @@ public class LineTable extends BaseJTable {
        this.setModel(LineTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Line> items_ = (List<Line>) RepositoryFactory.getInstance().getLinesRepository().getByLikeEncabezados(search);
+       final LineTableModel LineTableModel = new LineTableModel(items_,this.ShowColumns);
+       this.setModel(LineTableModel);
+   }
+
 }

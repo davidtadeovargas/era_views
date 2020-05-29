@@ -31,4 +31,11 @@ public class ColosTable extends BaseJTable {
        this.setModel(ColosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Colos> items_ = (List<Colos>) RepositoryFactory.getInstance().getColossRepository().getByLikeEncabezados(search);
+       final ColosTableModel ColosTableModel = new ColosTableModel(items_,this.ShowColumns);
+       this.setModel(ColosTableModel);
+   }
+
 }

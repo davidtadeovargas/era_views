@@ -17,6 +17,6 @@ public class UsersAbstractTableModel extends BaseAbstractTableModel {
 
     public UsersAbstractTableModel(List<User> deliveries, List<ColumnTable> header) {
         
-        super(deliveries,header);        
+    super(deliveries,header);        
     }
 }

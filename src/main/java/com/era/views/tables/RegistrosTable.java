@@ -31,4 +31,11 @@ public class RegistrosTable extends BaseJTable {
        this.setModel(RegistrosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Registros> items_ = (List<Registros>) RepositoryFactory.getInstance().getRegistrossRepository().getByLikeEncabezados(search);
+       final RegistrosTableModel RegistrosTableModel = new RegistrosTableModel(items_,this.ShowColumns);
+       this.setModel(RegistrosTableModel);
+   }
+
 }

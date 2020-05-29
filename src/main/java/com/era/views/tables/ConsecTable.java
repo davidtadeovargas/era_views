@@ -31,4 +31,11 @@ public class ConsecTable extends BaseJTable {
        this.setModel(ConsecTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Consec> items_ = (List<Consec>) RepositoryFactory.getInstance().getConsecsRepository().getByLikeEncabezados(search);
+       final ConsecTableModel ConsecTableModel = new ConsecTableModel(items_,this.ShowColumns);
+       this.setModel(ConsecTableModel);
+   }
+
 }

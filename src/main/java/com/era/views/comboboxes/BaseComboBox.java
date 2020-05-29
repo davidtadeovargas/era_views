@@ -7,6 +7,7 @@ package com.era.views.comboboxes;
 
 import java.util.List;
 import javax.swing.JComboBox;
+import javax.swing.DefaultListCellRenderer;
 
 /**
  *
@@ -16,6 +17,10 @@ public abstract class BaseComboBox<T> extends JComboBox {
     
     abstract List<T> getItems();
     
+    public BaseComboBox(final DefaultListCellRenderer DefaultListCellRenderer){
+        this.setRenderer(DefaultListCellRenderer);
+    }
+    
     public T getSelectedObject(){
         if(this.getSelectedItem() != null){
             final T Item_ = (T) this.getSelectedItem();
@@ -24,6 +29,16 @@ public abstract class BaseComboBox<T> extends JComboBox {
         else{
             return null;
         }
+    }
+    
+    public void selectObject(final T Object){
+        if(Object != null){
+            this.setSelectedItem(Object);
+        }
+    }
+    
+    public void clearSelection(){
+        this.setSelectedIndex(0);
     }
     
     public void loadItems(){

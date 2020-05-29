@@ -31,4 +31,11 @@ public class UserPermissionTable extends BaseJTable {
        this.setModel(UserPermissionTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<UserPermission> items_ = (List<UserPermission>) RepositoryFactory.getInstance().getUserPermissionsRepository().getByLikeEncabezados(search);
+       final UserPermissionTableModel UserPermissionTableModel = new UserPermissionTableModel(items_,this.ShowColumns);
+       this.setModel(UserPermissionTableModel);
+   }
+
 }

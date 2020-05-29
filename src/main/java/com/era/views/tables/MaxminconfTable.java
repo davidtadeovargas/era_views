@@ -31,4 +31,11 @@ public class MaxminconfTable extends BaseJTable {
        this.setModel(MaxminconfTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Maxminconf> items_ = (List<Maxminconf>) RepositoryFactory.getInstance().getMaxminconfsRepository().getByLikeEncabezados(search);
+       final MaxminconfTableModel MaxminconfTableModel = new MaxminconfTableModel(items_,this.ShowColumns);
+       this.setModel(MaxminconfTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class ContrasTable extends BaseJTable {
        this.setModel(ContrasTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Contras> items_ = (List<Contras>) RepositoryFactory.getInstance().getContrassRepository().getByLikeEncabezados(search);
+       final ContrasTableModel ContrasTableModel = new ContrasTableModel(items_,this.ShowColumns);
+       this.setModel(ContrasTableModel);
+   }
+
 }

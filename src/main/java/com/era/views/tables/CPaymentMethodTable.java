@@ -31,4 +31,11 @@ public class CPaymentMethodTable extends BaseJTable {
        this.setModel(CPaymentMethodTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CPaymentMethod> items_ = (List<CPaymentMethod>) RepositoryFactory.getInstance().getCPaymentMethodsRepository().getByLikeEncabezados(search);
+       final CPaymentMethodTableModel CPaymentMethodTableModel = new CPaymentMethodTableModel(items_,this.ShowColumns);
+       this.setModel(CPaymentMethodTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class RutsTable extends BaseJTable {
        this.setModel(RutsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Ruts> items_ = (List<Ruts>) RepositoryFactory.getInstance().getRutssRepository().getByLikeEncabezados(search);
+       final RutsTableModel RutsTableModel = new RutsTableModel(items_,this.ShowColumns);
+       this.setModel(RutsTableModel);
+   }
+
 }

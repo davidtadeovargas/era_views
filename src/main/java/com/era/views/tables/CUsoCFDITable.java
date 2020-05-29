@@ -31,4 +31,11 @@ public class CUsoCFDITable extends BaseJTable {
        this.setModel(CUsoCFDITableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<CUsoCFDI> items_ = (List<CUsoCFDI>) RepositoryFactory.getInstance().getCUsoCFDIsRepository().getByLikeEncabezados(search);
+       final CUsoCFDITableModel CUsoCFDITableModel = new CUsoCFDITableModel(items_,this.ShowColumns);
+       this.setModel(CUsoCFDITableModel);
+   }
+
 }

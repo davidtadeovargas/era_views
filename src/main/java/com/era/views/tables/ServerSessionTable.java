@@ -31,4 +31,11 @@ public class ServerSessionTable extends BaseJTable {
        this.setModel(ServerSessionTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<ServerSession> items_ = (List<ServerSession>) RepositoryFactory.getInstance().getServerSessionsRepository().getByLikeEncabezados(search);
+       final ServerSessionTableModel ServerSessionTableModel = new ServerSessionTableModel(items_,this.ShowColumns);
+       this.setModel(ServerSessionTableModel);
+   }
+
 }

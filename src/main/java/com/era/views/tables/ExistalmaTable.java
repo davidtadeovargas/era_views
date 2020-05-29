@@ -31,4 +31,11 @@ public class ExistalmaTable extends BaseJTable {
        this.setModel(ExistalmaTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Existalma> items_ = (List<Existalma>) RepositoryFactory.getInstance().getExistalmasRepository().getByLikeEncabezados(search);
+       final ExistalmaTableModel ExistalmaTableModel = new ExistalmaTableModel(items_,this.ShowColumns);
+       this.setModel(ExistalmaTableModel);
+   }
+
 }

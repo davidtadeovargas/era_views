@@ -31,4 +31,11 @@ public class ActivosTable extends BaseJTable {
        this.setModel(ActivosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Activos> items_ = (List<Activos>) RepositoryFactory.getInstance().getActivossRepository().getByLikeEncabezados(search);
+       final ActivosTableModel ActivosTableModel = new ActivosTableModel(items_,this.ShowColumns);
+       this.setModel(ActivosTableModel);
+   }
+
 }

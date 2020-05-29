@@ -20,13 +20,13 @@ public class BasdatsIGetValueAt1 implements IGetValueAt {
         final BasDats BasDats = (BasDats) Object;
         
         String returnValue = "undefined";
-        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getNO().getValue())==0){
+        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getCODEMP().getValue())==0){
             returnValue = BasDats.getBd();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getCODE().getValue())==0){
-            returnValue = BasDats.getNom();
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getBD().getValue())==0){
+            returnValue = BasDats.getCodemp();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getNOM().getValue())==0){
             returnValue = BasDats.getNom();
         }
         

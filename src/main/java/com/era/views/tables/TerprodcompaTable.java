@@ -31,4 +31,11 @@ public class TerprodcompaTable extends BaseJTable {
        this.setModel(TerprodcompaTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Terprodcompa> items_ = (List<Terprodcompa>) RepositoryFactory.getInstance().getTerprodcompasRepository().getByLikeEncabezados(search);
+       final TerprodcompaTableModel TerprodcompaTableModel = new TerprodcompaTableModel(items_,this.ShowColumns);
+       this.setModel(TerprodcompaTableModel);
+   }
+
 }

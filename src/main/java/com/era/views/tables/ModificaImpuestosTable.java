@@ -31,4 +31,11 @@ public class ModificaImpuestosTable extends BaseJTable {
        this.setModel(ModificaImpuestosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<ModificaImpuestos> items_ = (List<ModificaImpuestos>) RepositoryFactory.getInstance().getModificaImpuestossRepository().getByLikeEncabezados(search);
+       final ModificaImpuestosTableModel ModificaImpuestosTableModel = new ModificaImpuestosTableModel(items_,this.ShowColumns);
+       this.setModel(ModificaImpuestosTableModel);
+   }
+
 }

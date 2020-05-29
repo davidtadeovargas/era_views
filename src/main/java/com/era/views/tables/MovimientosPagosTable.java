@@ -31,4 +31,11 @@ public class MovimientosPagosTable extends BaseJTable {
        this.setModel(MovimientosPagosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<MovimientosPagos> items_ = (List<MovimientosPagos>) RepositoryFactory.getInstance().getMovimientosPagossRepository().getByLikeEncabezados(search);
+       final MovimientosPagosTableModel MovimientosPagosTableModel = new MovimientosPagosTableModel(items_,this.ShowColumns);
+       this.setModel(MovimientosPagosTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class PartprevcomprsTmpTable extends BaseJTable {
        this.setModel(PartprevcomprsTmpTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<PartprevcomprsTmp> items_ = (List<PartprevcomprsTmp>) RepositoryFactory.getInstance().getPartprevcomprsTmpsRepository().getByLikeEncabezados(search);
+       final PartprevcomprsTmpTableModel PartprevcomprsTmpTableModel = new PartprevcomprsTmpTableModel(items_,this.ShowColumns);
+       this.setModel(PartprevcomprsTmpTableModel);
+   }
+
 }

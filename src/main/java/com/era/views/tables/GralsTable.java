@@ -31,4 +31,11 @@ public class GralsTable extends BaseJTable {
        this.setModel(GralsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Grals> items_ = (List<Grals>) RepositoryFactory.getInstance().getGralssRepository().getByLikeEncabezados(search);
+       final GralsTableModel GralsTableModel = new GralsTableModel(items_,this.ShowColumns);
+       this.setModel(GralsTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class DocumentosContabilizadosTable extends BaseJTable {
        this.setModel(DocumentosContabilizadosTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<DocumentosContabilizados> items_ = (List<DocumentosContabilizados>) RepositoryFactory.getInstance().getDocumentosContabilizadossRepository().getByLikeEncabezados(search);
+       final DocumentosContabilizadosTableModel DocumentosContabilizadosTableModel = new DocumentosContabilizadosTableModel(items_,this.ShowColumns);
+       this.setModel(DocumentosContabilizadosTableModel);
+   }
+
 }

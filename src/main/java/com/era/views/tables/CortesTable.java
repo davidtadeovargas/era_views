@@ -31,4 +31,11 @@ public class CortesTable extends BaseJTable {
        this.setModel(CortesTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Cortes> items_ = (List<Cortes>) RepositoryFactory.getInstance().getCortessRepository().getByLikeEncabezados(search);
+       final CortesTableModel CortesTableModel = new CortesTableModel(items_,this.ShowColumns);
+       this.setModel(CortesTableModel);
+   }
+
 }

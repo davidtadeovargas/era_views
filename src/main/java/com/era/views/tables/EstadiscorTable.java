@@ -31,4 +31,11 @@ public class EstadiscorTable extends BaseJTable {
        this.setModel(EstadiscorTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Estadiscor> items_ = (List<Estadiscor>) RepositoryFactory.getInstance().getEstadiscorsRepository().getByLikeEncabezados(search);
+       final EstadiscorTableModel EstadiscorTableModel = new EstadiscorTableModel(items_,this.ShowColumns);
+       this.setModel(EstadiscorTableModel);
+   }
+
 }

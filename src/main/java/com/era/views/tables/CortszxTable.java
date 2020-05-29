@@ -31,4 +31,11 @@ public class CortszxTable extends BaseJTable {
        this.setModel(CortszxTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Cortszx> items_ = (List<Cortszx>) RepositoryFactory.getInstance().getCortszxsRepository().getByLikeEncabezados(search);
+       final CortszxTableModel CortszxTableModel = new CortszxTableModel(items_,this.ShowColumns);
+       this.setModel(CortszxTableModel);
+   }
+
 }

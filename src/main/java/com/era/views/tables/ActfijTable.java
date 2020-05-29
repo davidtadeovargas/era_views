@@ -31,4 +31,11 @@ public class ActfijTable extends BaseJTable {
        this.setModel(ActfijTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Actfij> items_ = (List<Actfij>) RepositoryFactory.getInstance().getActfijsRepository().getByLikeEncabezados(search);
+       final ActfijTableModel ActfijTableModel = new ActfijTableModel(items_,this.ShowColumns);
+       this.setModel(ActfijTableModel);
+   }
+
 }

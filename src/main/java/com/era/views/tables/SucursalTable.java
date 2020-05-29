@@ -31,4 +31,11 @@ public class SucursalTable extends BaseJTable {
        this.setModel(SucursalTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Sucursal> items_ = (List<Sucursal>) RepositoryFactory.getInstance().getSucursalsRepository().getByLikeEncabezados(search);
+       final SucursalTableModel SucursalTableModel = new SucursalTableModel(items_,this.ShowColumns);
+       this.setModel(SucursalTableModel);
+   }
+
 }

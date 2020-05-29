@@ -31,4 +31,11 @@ public class TermarcamodeloTable extends BaseJTable {
        this.setModel(TermarcamodeloTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Termarcamodelo> items_ = (List<Termarcamodelo>) RepositoryFactory.getInstance().getTermarcamodelosRepository().getByLikeEncabezados(search);
+       final TermarcamodeloTableModel TermarcamodeloTableModel = new TermarcamodeloTableModel(items_,this.ShowColumns);
+       this.setModel(TermarcamodeloTableModel);
+   }
+
 }

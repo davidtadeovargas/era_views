@@ -31,4 +31,11 @@ public class GeneralConfigTable extends BaseJTable {
        this.setModel(GeneralConfigTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<GeneralConfig> items_ = (List<GeneralConfig>) RepositoryFactory.getInstance().getGeneralConfigsRepository().getByLikeEncabezados(search);
+       final GeneralConfigTableModel GeneralConfigTableModel = new GeneralConfigTableModel(items_,this.ShowColumns);
+       this.setModel(GeneralConfigTableModel);
+   }
+
 }

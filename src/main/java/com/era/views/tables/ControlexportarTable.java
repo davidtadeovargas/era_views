@@ -31,4 +31,11 @@ public class ControlexportarTable extends BaseJTable {
        this.setModel(ControlexportarTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Controlexportar> items_ = (List<Controlexportar>) RepositoryFactory.getInstance().getControlexportarsRepository().getByLikeEncabezados(search);
+       final ControlexportarTableModel ControlexportarTableModel = new ControlexportarTableModel(items_,this.ShowColumns);
+       this.setModel(ControlexportarTableModel);
+   }
+
 }

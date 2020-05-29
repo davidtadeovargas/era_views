@@ -31,4 +31,11 @@ public class MsjsTable extends BaseJTable {
        this.setModel(MsjsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Msjs> items_ = (List<Msjs>) RepositoryFactory.getInstance().getMsjssRepository().getByLikeEncabezados(search);
+       final MsjsTableModel MsjsTableModel = new MsjsTableModel(items_,this.ShowColumns);
+       this.setModel(MsjsTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class MetogoPagoTable extends BaseJTable {
        this.setModel(MetogoPagoTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<MetogoPago> items_ = (List<MetogoPago>) RepositoryFactory.getInstance().getMetogoPagosRepository().getByLikeEncabezados(search);
+       final MetogoPagoTableModel MetogoPagoTableModel = new MetogoPagoTableModel(items_,this.ShowColumns);
+       this.setModel(MetogoPagoTableModel);
+   }
+
 }

@@ -31,4 +31,11 @@ public class AnaqsTable extends BaseJTable {
        this.setModel(AnaqsTableModel);
    }
 
+   @Override
+   public void getByLikeEncabezados(final String search) throws Exception {
+       final List<Anaqs> items_ = (List<Anaqs>) RepositoryFactory.getInstance().getAnaqssRepository().getByLikeEncabezados(search);
+       final AnaqsTableModel AnaqsTableModel = new AnaqsTableModel(items_,this.ShowColumns);
+       this.setModel(AnaqsTableModel);
+   }
+
 }
