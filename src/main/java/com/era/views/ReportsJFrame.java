@@ -51,7 +51,7 @@ public abstract class ReportsJFrame extends BaseJFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -108,12 +108,12 @@ public abstract class ReportsJFrame extends BaseJFrame
    
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton generateButton;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JButton generateButton;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JComboBox jComboBox1;
+    protected javax.swing.JComboBox jComboBox2;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jP1;
     // End of variables declaration//GEN-END:variables
 

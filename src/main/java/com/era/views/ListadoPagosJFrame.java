@@ -120,24 +120,24 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jButtonTimbrar.setText("Timbrar");
         jButtonTimbrar.setToolTipText("Timbrar factura(s)");
         jButtonTimbrar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonTimbrar.setName(""); // NOI18N
-        
+        jButtonTimbrar.setName(""); // NOI18N        
+
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBSal.setForeground(new java.awt.Color(0, 102, 0));
         jBSal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sal.png"))); // NOI18N
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
-        jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+
         jBAbon.setBackground(new java.awt.Color(255, 255, 255));
         jBAbon.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBAbon.setForeground(new java.awt.Color(0, 102, 0));
         jBAbon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/abona.png"))); // NOI18N
         jBAbon.setText("Abonar");
         jBAbon.setToolTipText("Abonar a Venta");
-        jBAbon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jBAbon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+
         jTabPartidas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -161,48 +161,48 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBCarpetaPagos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dir.png"))); // NOI18N
         jBCarpetaPagos.setText("Pagos");
         jBCarpetaPagos.setToolTipText("Salir (ESC)");
-        jBCarpetaPagos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jBCarpetaPagos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+
         jBEnvCorr.setBackground(new java.awt.Color(255, 255, 255));
         jBEnvCorr.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBEnvCorr.setForeground(new java.awt.Color(0, 102, 0));
         jBEnvCorr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corrs.png"))); // NOI18N
         jBEnvCorr.setText("Enviar");
         jBEnvCorr.setToolTipText("Enviar por correo");
-        jBEnvCorr.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jBEnvCorr.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+
         jBPDF.setBackground(new java.awt.Color(255, 255, 255));
         jBPDF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBPDF.setForeground(new java.awt.Color(0, 102, 0));
         jBPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pdf.png"))); // NOI18N
         jBPDF.setText("Ver PDF");
         jBPDF.setToolTipText("Ver PDF (Alt+F)");
-        jBPDF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jBPDF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+
         jBActualizar.setBackground(new java.awt.Color(255, 255, 255));
         jBActualizar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBActualizar.setForeground(new java.awt.Color(0, 102, 0));
         jBActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actualizar.png"))); // NOI18N
         jBActualizar.setText("Actualizar");
         jBActualizar.setToolTipText("Actualizar");
-        jBActualizar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jBActualizar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+
         jBGenPDF1.setBackground(new java.awt.Color(255, 255, 255));
         jBGenPDF1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBGenPDF1.setForeground(new java.awt.Color(0, 102, 0));
         jBGenPDF1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impres.png"))); // NOI18N
         jBGenPDF1.setText("Imprimir Ticket");
         jBGenPDF1.setToolTipText("Generar PDF de venta");
-        jBGenPDF1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jBGenPDF1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+
         jBVerTicket.setBackground(new java.awt.Color(255, 255, 255));
         jBVerTicket.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBVerTicket.setForeground(new java.awt.Color(0, 102, 0));
         jBVerTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ojo.gif"))); // NOI18N
         jBVerTicket.setText("Ver Ticket");
         jBVerTicket.setToolTipText("Salir (ESC)");
-        jBVerTicket.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jBVerTicket.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -303,25 +303,25 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBAbon;
-    private javax.swing.JButton jBActualizar;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBCa;
-    private javax.swing.JButton jBCarpetaPagos;
-    private javax.swing.JButton jBEnvCorr;
-    private javax.swing.JButton jBGenPDF;
-    private javax.swing.JButton jBGenPDF1;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBPDF;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBVerTicket;
-    private javax.swing.JButton jButtonTimbrar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JButton jBAbon;
+    protected javax.swing.JButton jBActualizar;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBCa;
+    protected javax.swing.JButton jBCarpetaPagos;
+    protected javax.swing.JButton jBEnvCorr;
+    protected javax.swing.JButton jBGenPDF;
+    protected javax.swing.JButton jBGenPDF1;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBPDF;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBVerTicket;
+    protected javax.swing.JButton jButtonTimbrar;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTabPagos;
     private javax.swing.JTable jTabPartidas;
     // End of variables declaration//GEN-END:variables

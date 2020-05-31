@@ -48,12 +48,11 @@ public abstract class DevPVtaJFrame extends BaseJFrame
         jBGuar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTMot = new javax.swing.JTextField();
-        jBTabG = new javax.swing.JButton();
         jLNot = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -215,10 +214,6 @@ public abstract class DevPVtaJFrame extends BaseJFrame
         jTMot.setNextFocusableComponent(jTab);
         jP1.add(jTMot, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, 410, 20));
 
-        jBTabG.setBackground(new java.awt.Color(0, 153, 153));
-        jBTabG.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTabG, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 10, 20));
-
         jLNot.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         jLNot.setForeground(new java.awt.Color(204, 0, 0));
         jLNot.setText("DEVOLUCIÓN PARCIAL VENTA");
@@ -249,38 +244,37 @@ public abstract class DevPVtaJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTabG;
-    private javax.swing.JLabel jLNot;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel3;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLNot;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel21;
+    protected javax.swing.JLabel jLabel22;
+    protected javax.swing.JLabel jLabel26;
+    protected javax.swing.JLabel jLabel27;
+    protected javax.swing.JLabel jLabel28;
+    protected javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPEnca;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTCli;
-    private javax.swing.JTextField jTEst;
-    private javax.swing.JTextField jTFec;
-    private javax.swing.JTextField jTImp;
-    private javax.swing.JTextField jTMot;
-    private javax.swing.JTextField jTNoDoc;
-    private javax.swing.JTextField jTNoSer;
-    private javax.swing.JTextField jTNomEmp;
-    private javax.swing.JTextField jTSubTot;
-    private javax.swing.JTextField jTTipDoc;
-    private javax.swing.JTextField jTTot;
-    private javax.swing.JTextField jTVta;
+    protected javax.swing.JPanel jPEnca;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JTextField jTCli;
+    protected javax.swing.JTextField jTEst;
+    protected javax.swing.JTextField jTFec;
+    protected javax.swing.JTextField jTImp;
+    protected javax.swing.JTextField jTMot;
+    protected javax.swing.JTextField jTNoDoc;
+    protected javax.swing.JTextField jTNoSer;
+    protected javax.swing.JTextField jTNomEmp;
+    protected javax.swing.JTextField jTSubTot;
+    protected javax.swing.JTextField jTTipDoc;
+    protected javax.swing.JTextField jTTot;
+    protected javax.swing.JTextField jTVta;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

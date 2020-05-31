@@ -27,7 +27,7 @@ public abstract class ProdExisAlmJFrame extends BaseJFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -59,7 +59,7 @@ public abstract class ProdExisAlmJFrame extends BaseJFrame
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBSal);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jTab);
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 460, 250));
@@ -89,11 +89,11 @@ public abstract class ProdExisAlmJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBSal;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTab;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -10,13 +10,6 @@ public abstract class ComprJFrame extends BaseJFrame
                 
         //Post inicialization
         postInitComponents();
-        
-        javax.swing.ButtonGroup bG = new javax.swing.ButtonGroup();
-        bG.add(jRComp);
-        bG.add(jROrd);
-        bG.add(jRTod);
-                
-        jBNew.grabFocus();
     }
         
     
@@ -47,9 +40,7 @@ public abstract class ComprJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jBActua = new javax.swing.JButton();
         jBImp = new javax.swing.JButton();
-        jBTab1 = new javax.swing.JButton();
         jBTab2 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jBDirOr = new javax.swing.JButton();
         jBVePDF = new javax.swing.JButton();
         jBRecOr = new javax.swing.JButton();
@@ -60,11 +51,6 @@ public abstract class ComprJFrame extends BaseJFrame
         jLNot = new javax.swing.JLabel();
         jBGenPDF = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        boton_primera = new javax.swing.JButton();
-        boton_anterior = new javax.swing.JButton();
-        boton_siguiente = new javax.swing.JButton();
-        label_pagina = new javax.swing.JLabel();
-        boton_ultima = new javax.swing.JButton();
         jButtonAbrir1 = new javax.swing.JButton();
         jBNotC = new javax.swing.JButton();
 
@@ -221,7 +207,7 @@ public abstract class ComprJFrame extends BaseJFrame
         });
         jTableCompras.setGridColor(new java.awt.Color(255, 255, 255));
         jTableCompras.setNextFocusableComponent(jBBusc);
-        jTableCompras.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTableCompras.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTableCompras.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableComprasMouseClicked(evt);
@@ -489,7 +475,7 @@ public abstract class ComprJFrame extends BaseJFrame
         });
         tabla_partidas.setGridColor(new java.awt.Color(255, 255, 255));
         tabla_partidas.setNextFocusableComponent(jBCan);
-        tabla_partidas.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        tabla_partidas.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tabla_partidas.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 tabla_partidasKeyPressed(evt);
@@ -560,20 +546,6 @@ public abstract class ComprJFrame extends BaseJFrame
         });
         jP1.add(jBImp, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 300, 140, 30));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jBTab1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTab1ActionPerformed(evt);
-            }
-        });
-        jBTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTab1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 10, 20));
-
         jBTab2.setBackground(new java.awt.Color(0, 153, 153));
         jBTab2.setToolTipText("Mostrar Tabla en Grande");
         jBTab2.addActionListener(new java.awt.event.ActionListener() {
@@ -587,32 +559,6 @@ public abstract class ComprJFrame extends BaseJFrame
             }
         });
         jP1.add(jBTab2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros en la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTableCompras);
-        jBTod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBTodMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBTodMouseExited(evt);
-            }
-        });
-        jBTod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTodActionPerformed(evt);
-            }
-        });
-        jBTod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTodKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 12, 130, 18));
 
         jBDirOr.setBackground(new java.awt.Color(255, 255, 255));
         jBDirOr.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -793,68 +739,15 @@ public abstract class ComprJFrame extends BaseJFrame
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        boton_primera.setBackground(new java.awt.Color(255, 255, 255));
-        boton_primera.setText("<<");
-        boton_primera.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_primeraActionPerformed(evt);
-            }
-        });
-
-        boton_anterior.setBackground(new java.awt.Color(255, 255, 255));
-        boton_anterior.setText("<");
-        boton_anterior.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_anteriorActionPerformed(evt);
-            }
-        });
-
-        boton_siguiente.setBackground(new java.awt.Color(255, 255, 255));
-        boton_siguiente.setText(">");
-        boton_siguiente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_siguienteActionPerformed(evt);
-            }
-        });
-
-        label_pagina.setText("Página");
-
-        boton_ultima.setBackground(new java.awt.Color(255, 255, 255));
-        boton_ultima.setText(">>");
-        boton_ultima.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boton_ultimaActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(boton_primera)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(boton_anterior)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(boton_siguiente)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(boton_ultima)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(label_pagina)
-                .addContainerGap(106, Short.MAX_VALUE))
+            .addGap(0, 350, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boton_primera)
-                    .addComponent(boton_anterior)
-                    .addComponent(boton_siguiente)
-                    .addComponent(label_pagina)
-                    .addComponent(boton_ultima))
-                .addContainerGap())
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
         jP1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 350, 350, 50));
@@ -927,7 +820,7 @@ public abstract class ComprJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 579, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1157,19 +1050,7 @@ public abstract class ComprJFrame extends BaseJFrame
     }//GEN-LAST:event_formMouseMoved
 
       
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-
-    
-
-    }//GEN-LAST:event_jBTab1ActionPerformed
-
         
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
-
-    
-
-    }//GEN-LAST:event_jBTab1KeyPressed
-
         
     private void jBTab2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab2ActionPerformed
 
@@ -1201,18 +1082,7 @@ public abstract class ComprJFrame extends BaseJFrame
     
     
        
-    private void jBTodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTodActionPerformed
-
         
-    }//GEN-LAST:event_jBTodActionPerformed
-
-        
-    private void jBTodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTodKeyPressed
-
-    
-
-    }//GEN-LAST:event_jBTodKeyPressed
-
     
         
     private void jTableComprasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTableComprasKeyPressed
@@ -1447,19 +1317,7 @@ public abstract class ComprJFrame extends BaseJFrame
 
     
 
-    private void jBTodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseEntered
-        
-
-        
-    }//GEN-LAST:event_jBTodMouseEntered
-
     
-
-    private void jBTodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseExited
-        
-
-        
-    }//GEN-LAST:event_jBTodMouseExited
 
     
     private void jBMostTMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseExited
@@ -1664,22 +1522,6 @@ public abstract class ComprJFrame extends BaseJFrame
         
     }//GEN-LAST:event_formWindowGainedFocus
 
-    private void boton_ultimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_ultimaActionPerformed
-        
-    }//GEN-LAST:event_boton_ultimaActionPerformed
-
-    private void boton_siguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_siguienteActionPerformed
-        
-    }//GEN-LAST:event_boton_siguienteActionPerformed
-
-    private void boton_anteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_anteriorActionPerformed
-        
-    }//GEN-LAST:event_boton_anteriorActionPerformed
-
-    private void boton_primeraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_primeraActionPerformed
-        
-    }//GEN-LAST:event_boton_primeraActionPerformed
-
     private void jButtonAbrir1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButtonAbrir1KeyPressed
 
         
@@ -1704,46 +1546,39 @@ public abstract class ComprJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton boton_anterior;
-    private javax.swing.JButton boton_primera;
-    private javax.swing.JButton boton_siguiente;
-    private javax.swing.JButton boton_ultima;
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBCan;
-    private javax.swing.JButton jBCarg;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBDev;
-    private javax.swing.JButton jBDevPar;
-    private javax.swing.JButton jBDirOr;
-    private javax.swing.JButton jBGenPDF;
-    private javax.swing.JButton jBImp;
-    private javax.swing.JButton jBMostT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBNotC;
-    private javax.swing.JButton jBRecOr;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTab2;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBVe;
-    private javax.swing.JButton jBVePDF;
-    private javax.swing.JButton jBVer;
-    private javax.swing.JButton jButtonAbrir1;
-    private javax.swing.JLabel jLNot;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBCan;
+    protected javax.swing.JButton jBCarg;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBDev;
+    protected javax.swing.JButton jBDevPar;
+    protected javax.swing.JButton jBDirOr;
+    protected javax.swing.JButton jBGenPDF;
+    protected javax.swing.JButton jBImp;
+    protected javax.swing.JButton jBMostT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBNotC;
+    protected javax.swing.JButton jBRecOr;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBTab2;
+    protected javax.swing.JButton jBVe;
+    protected javax.swing.JButton jBVePDF;
+    protected javax.swing.JButton jBVer;
+    protected javax.swing.JButton jButtonAbrir1;
+    protected javax.swing.JLabel jLNot;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPRadio;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRComp;
-    private javax.swing.JRadioButton jROrd;
-    private javax.swing.JRadioButton jRTod;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JPanel jPRadio;
+    protected javax.swing.JPanel jPanel1;
+    protected javax.swing.JRadioButton jRComp;
+    protected javax.swing.JRadioButton jROrd;
+    protected javax.swing.JRadioButton jRTod;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTableCompras;
-    private javax.swing.JLabel label_pagina;
     private javax.swing.JTable tabla_partidas;
     // End of variables declaration//GEN-END:variables
 

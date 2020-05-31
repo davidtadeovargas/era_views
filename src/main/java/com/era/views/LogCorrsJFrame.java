@@ -27,7 +27,6 @@ public abstract class LogCorrsJFrame extends BaseJFrame
         jBMostT = new javax.swing.JButton();
         jBLimp = new javax.swing.JButton();
         jBActua = new javax.swing.JButton();
-        jBTab1 = new javax.swing.JButton();
         jBRep = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -115,10 +114,6 @@ public abstract class LogCorrsJFrame extends BaseJFrame
         jBActua.setNextFocusableComponent(jBRep);
         jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, 120, 30));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 10, 20));
-
         jBRep.setBackground(new java.awt.Color(255, 255, 255));
         jBRep.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBRep.setForeground(new java.awt.Color(0, 102, 0));
@@ -153,17 +148,16 @@ public abstract class LogCorrsJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBLimp;
-    private javax.swing.JButton jBMostT;
-    private javax.swing.JButton jBRep;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBLimp;
+    protected javax.swing.JButton jBMostT;
+    protected javax.swing.JButton jBRep;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

@@ -204,7 +204,7 @@
                       <Image iconType="3" name="/imgs/log2.png"/>
                     </Property>
                     <Property name="mnemonic" type="int" value="108"/>
-                    <Property name="text" type="java.lang.String" value="Log productos"/>
+                    <Property name="text" type="java.lang.String" value="Logs generales"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>

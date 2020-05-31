@@ -11,8 +11,6 @@ public abstract class ClientsJFrame extends BaseJFrame
                 
         //Post inicialization
         postInitComponents();
-        
-        jBNew.grabFocus();
     }
         
     
@@ -32,7 +30,6 @@ public abstract class ClientsJFrame extends BaseJFrame
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
-        jBTab1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -288,20 +285,6 @@ public abstract class ClientsJFrame extends BaseJFrame
         });
         jP1.add(jBMostT, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 140, 20));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jBTab1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTab1ActionPerformed(evt);
-            }
-        });
-        jBTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTab1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 10, 20));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -449,17 +432,7 @@ public abstract class ClientsJFrame extends BaseJFrame
     }//GEN-LAST:event_formMouseMoved
     
     
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
-        
-        
-    }//GEN-LAST:event_jBTab1KeyPressed
-
     
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-        
-                
-    }//GEN-LAST:event_jBTab1ActionPerformed
-
        
     private void jBBuscMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseEntered
 
@@ -556,17 +529,16 @@ public abstract class ClientsJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBAbr;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBMostT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JLabel jLabel1;
+    protected javax.swing.JButton jBAbr;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBMostT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

@@ -20,11 +20,10 @@ public abstract class UltPrecsJFrame extends BaseJFrame
         jBSal = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTab = new javax.swing.JTable();
-        jBTab1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -60,10 +59,6 @@ public abstract class UltPrecsJFrame extends BaseJFrame
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 310));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 10, 20));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,11 +77,10 @@ public abstract class UltPrecsJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
+    protected javax.swing.JButton jBSal;
     private javax.swing.JPanel jP1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTab;
+    protected javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

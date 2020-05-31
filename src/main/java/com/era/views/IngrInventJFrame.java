@@ -35,7 +35,6 @@ public abstract class IngrInventJFrame extends BaseJFrame {
         jLabel8 = new javax.swing.JLabel();
         jTextFieldExistenciaGral = new javax.swing.JTextField();
         jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jComboBoxUnidad = new javax.swing.JComboBox();
         jTUnid = new javax.swing.JTextField();
         jRadioButtonSalida = new javax.swing.JRadioButton();
@@ -75,7 +74,7 @@ public abstract class IngrInventJFrame extends BaseJFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -185,14 +184,6 @@ public abstract class IngrInventJFrame extends BaseJFrame {
         jBTab1.setBackground(new java.awt.Color(0, 153, 153));
         jBTab1.setToolTipText("Mostrar Tabla en Grande");
         jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTablePartidas);
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 180, 130, 18));
 
         jComboBoxUnidad.setNextFocusableComponent(jTUnid);
         jP1.add(jComboBoxUnidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 90, 20));
@@ -365,62 +356,61 @@ public abstract class IngrInventJFrame extends BaseJFrame {
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCarSer;
-    private javax.swing.JButton jBExisAlma;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBPrec;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBtnReferencia;
-    private javax.swing.JButton jButtonAceptar;
-    private javax.swing.JButton jButtonBuscarConceptos;
-    private javax.swing.JButton jButtonProducto;
-    private javax.swing.JButton jButtonQuitar;
-    private javax.swing.JButton jButtonSalir;
-    private javax.swing.JComboBox jComColo;
-    private javax.swing.JComboBox jComTall;
-    private javax.swing.JComboBox jComboBoxAlmacenes;
-    private javax.swing.JComboBox jComboBoxMonedas;
-    private javax.swing.JComboBox jComboBoxUnidad;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    protected javax.swing.JButton jBCarSer;
+    protected javax.swing.JButton jBExisAlma;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBPrec;
+    protected javax.swing.JButton jBTab1;
+    protected javax.swing.JButton jBtnReferencia;
+    protected javax.swing.JButton jButtonAceptar;
+    protected javax.swing.JButton jButtonBuscarConceptos;
+    protected javax.swing.JButton jButtonProducto;
+    protected javax.swing.JButton jButtonQuitar;
+    protected javax.swing.JButton jButtonSalir;
+    protected javax.swing.JComboBox jComColo;
+    protected javax.swing.JComboBox jComTall;
+    protected javax.swing.JComboBox jComboBoxAlmacenes;
+    protected javax.swing.JComboBox jComboBoxMonedas;
+    protected javax.swing.JComboBox jComboBoxUnidad;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel10;
+    protected javax.swing.JLabel jLabel11;
+    protected javax.swing.JLabel jLabel12;
+    protected javax.swing.JLabel jLabel13;
+    protected javax.swing.JLabel jLabel14;
+    protected javax.swing.JLabel jLabel15;
+    protected javax.swing.JLabel jLabel16;
+    protected javax.swing.JLabel jLabel17;
+    protected javax.swing.JLabel jLabel18;
+    protected javax.swing.JLabel jLabel19;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
-    private javax.swing.JRadioButton jRadioButtonEntrada;
-    private javax.swing.JRadioButton jRadioButtonSalida;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTCarSer;
-    private javax.swing.JTextField jTColo;
-    private javax.swing.JTextField jTComenSer;
-    private javax.swing.JTextField jTDescripAlma;
-    private javax.swing.JTextField jTSerProd;
-    private javax.swing.JTextField jTTall;
-    private javax.swing.JTextField jTUnid;
+    protected javax.swing.JRadioButton jRadioButtonEntrada;
+    protected javax.swing.JRadioButton jRadioButtonSalida;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTCarSer;
+    protected javax.swing.JTextField jTColo;
+    protected javax.swing.JTextField jTComenSer;
+    protected javax.swing.JTextField jTDescripAlma;
+    protected javax.swing.JTextField jTSerProd;
+    protected javax.swing.JTextField jTTall;
+    protected javax.swing.JTextField jTUnid;
     private javax.swing.JTable jTablePartidas;
-    private javax.swing.JTextField jTextFieldCantidad;
-    private javax.swing.JTextField jTextFieldConcepto;
-    private javax.swing.JTextField jTextFieldCosto;
-    private javax.swing.JTextField jTextFieldDescripcion;
-    private javax.swing.JTextField jTextFieldDescripcionConcepto;
-    private javax.swing.JTextField jTextFieldExistenciaGral;
-    private javax.swing.JTextField jTextFieldLote;
-    private javax.swing.JTextField jTextFieldPedimento;
-    private javax.swing.JTextField jTextFieldProducto;
-    private javax.swing.JTextField jTextFieldReferencia;
+    protected javax.swing.JTextField jTextFieldCantidad;
+    protected javax.swing.JTextField jTextFieldConcepto;
+    protected javax.swing.JTextField jTextFieldCosto;
+    protected javax.swing.JTextField jTextFieldDescripcion;
+    protected javax.swing.JTextField jTextFieldDescripcionConcepto;
+    protected javax.swing.JTextField jTextFieldExistenciaGral;
+    protected javax.swing.JTextField jTextFieldLote;
+    protected javax.swing.JTextField jTextFieldPedimento;
+    protected javax.swing.JTextField jTextFieldProducto;
+    protected javax.swing.JTextField jTextFieldReferencia;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

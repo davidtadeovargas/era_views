@@ -45,7 +45,6 @@ public abstract class CuentasContablesJFrame extends BaseJFrame {
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
         jBActua = new javax.swing.JButton();
-        jBTab1 = new javax.swing.JButton();
         jBTod = new javax.swing.JButton();
         jBImportar = new javax.swing.JButton();
         jBNew1 = new javax.swing.JButton();
@@ -311,20 +310,6 @@ public abstract class CuentasContablesJFrame extends BaseJFrame {
             }
         });
         jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 160, 30));
-
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jBTab1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTab1ActionPerformed(evt);
-            }
-        });
-        jBTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTab1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 10, 20));
 
         jBTod.setBackground(new java.awt.Color(255, 255, 255));
         jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -615,16 +600,6 @@ public abstract class CuentasContablesJFrame extends BaseJFrame {
 
     }//GEN-LAST:event_jBActuaKeyPressed
 
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-
-
-    }//GEN-LAST:event_jBTab1ActionPerformed
-
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
-
-
-    }//GEN-LAST:event_jBTab1KeyPressed
-
     private void jBTodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseEntered
 
 
@@ -692,24 +667,23 @@ public abstract class CuentasContablesJFrame extends BaseJFrame {
         
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBImportar;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBNew1;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JComboBox jCBancos;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBImportar;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBNew1;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBTod;
+    protected javax.swing.JComboBox jCBancos;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTCod;
-    private javax.swing.JTextField jTDescrip;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTCod;
+    protected javax.swing.JTextField jTDescrip;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 }

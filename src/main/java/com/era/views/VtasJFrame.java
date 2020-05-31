@@ -27,8 +27,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBBusc = new javax.swing.JButton();
         jBMosT = new javax.swing.JButton();
         jLabelRemisionFactura = new javax.swing.JLabel();
-        jBTab1 = new javax.swing.JButton();
-        jBTab2 = new javax.swing.JButton();
         jBTod = new javax.swing.JButton();
         jLNot = new javax.swing.JLabel();
         jLNotCli = new javax.swing.JLabel();
@@ -77,11 +75,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jLabel3 = new javax.swing.JLabel();
         label_total = new javax.swing.JLabel();
         navegacion = new javax.swing.JPanel(new FlowLayout(FlowLayout.RIGHT));
-        boton_primero = new javax.swing.JButton();
-        boton_anterior = new javax.swing.JButton();
-        boton_siguiente = new javax.swing.JButton();
-        boton_ultimo = new javax.swing.JButton();
-        label_pagina = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTBusc = new javax.swing.JTextField();
 
@@ -145,16 +138,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jLabelRemisionFactura.setText("?");
         jP1.add(jLabelRemisionFactura);
         jLabelRemisionFactura.setBounds(480, 10, 190, 17);
-
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1);
-        jBTab1.setBounds(10, 30, 10, 20);
-
-        jBTab2.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab2.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab2);
-        jBTab2.setBounds(10, 290, 10, 20);
 
         jBTod.setBackground(new java.awt.Color(255, 255, 255));
         jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -224,7 +207,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBDirX.setText("Corte X");
         jBDirX.setToolTipText("Abrir directorio de cortes X");
         jBDirX.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDirX.setNextFocusableComponent(jBDirZ);        
+        jBDirX.setNextFocusableComponent(jBDirZ);
         jPanel1.add(jBDirX, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 130, 30));
 
         jBDev.setBackground(new java.awt.Color(255, 255, 255));
@@ -566,26 +549,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         label_total.setBounds(200, 270, 310, 17);
 
         navegacion.setBackground(new java.awt.Color(255, 255, 255));
-
-        boton_primero.setBackground(new java.awt.Color(255, 255, 255));
-        boton_primero.setText("<<");
-        navegacion.add(boton_primero);
-
-        boton_anterior.setBackground(new java.awt.Color(255, 255, 255));
-        boton_anterior.setText("<");
-        navegacion.add(boton_anterior);
-
-        boton_siguiente.setBackground(new java.awt.Color(255, 255, 255));
-        boton_siguiente.setText(">");
-        navegacion.add(boton_siguiente);
-
-        boton_ultimo.setBackground(new java.awt.Color(255, 255, 255));
-        boton_ultimo.setText(">>");
-        navegacion.add(boton_ultimo);
-
-        label_pagina.setText("Página");
-        navegacion.add(label_pagina);
-
         jP1.add(navegacion);
         navegacion.setBounds(460, 250, 340, 40);
 
@@ -606,70 +569,63 @@ public abstract class VtasJFrame extends BaseJFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton boton_anterior;
-    private javax.swing.JButton boton_primero;
-    private javax.swing.JButton boton_siguiente;
-    private javax.swing.JButton boton_ultimo;
-    private javax.swing.JButton jBAbrNotCred;
-    private javax.swing.JButton jBAyu;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBCa;
-    private javax.swing.JButton jBCli;
-    private javax.swing.JButton jBDev;
-    private javax.swing.JButton jBDevP;
-    private javax.swing.JButton jBDirBack;
-    private javax.swing.JButton jBDirCan;
-    private javax.swing.JButton jBDirDev;
-    private javax.swing.JButton jBDirDevP;
-    private javax.swing.JButton jBDirX;
-    private javax.swing.JButton jBDirZ;
-    private javax.swing.JButton jBEntre;
-    private javax.swing.JButton jBGenPDF;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBPDF;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTab2;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBVer;
-    private javax.swing.JButton jButtonAbrir;
-    private javax.swing.JButton jButtonActualizar;
-    private javax.swing.JButton jButtonAcuse;
-    private javax.swing.JButton jButtonBorrarDocumento;
-    private javax.swing.JButton jButtonCargar;
-    private javax.swing.JButton jButtonComprobar;
-    private javax.swing.JButton jButtonDirectorioAcuses;
-    private javax.swing.JButton jButtonDirectorioCFDI;
-    private javax.swing.JButton jButtonDirectorioNotaCredito;
-    private javax.swing.JButton jButtonDirectorioRemisiones;
-    private javax.swing.JButton jButtonDirectorioTickets;
-    private javax.swing.JButton jButtonEnviar;
-    private javax.swing.JButton jButtonNotaCredito;
-    private javax.swing.JButton jButtonObtenerXML;
-    private javax.swing.JButton jButtonRelacionar;
-    private javax.swing.JButton jButtonTicketsFacturados;
-    private javax.swing.JButton jButtonTimbrar;
-    private javax.swing.JButton jButtonVerArchivos;
-    private javax.swing.JLabel jLNot;
-    private javax.swing.JLabel jLNotCli;
+    protected javax.swing.JButton jBAbrNotCred;
+    protected javax.swing.JButton jBAyu;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBCa;
+    protected javax.swing.JButton jBCli;
+    protected javax.swing.JButton jBDev;
+    protected javax.swing.JButton jBDevP;
+    protected javax.swing.JButton jBDirBack;
+    protected javax.swing.JButton jBDirCan;
+    protected javax.swing.JButton jBDirDev;
+    protected javax.swing.JButton jBDirDevP;
+    protected javax.swing.JButton jBDirX;
+    protected javax.swing.JButton jBDirZ;
+    protected javax.swing.JButton jBEntre;
+    protected javax.swing.JButton jBGenPDF;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBPDF;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBTod;
+    protected javax.swing.JButton jBVer;
+    protected javax.swing.JButton jButtonAbrir;
+    protected javax.swing.JButton jButtonActualizar;
+    protected javax.swing.JButton jButtonAcuse;
+    protected javax.swing.JButton jButtonBorrarDocumento;
+    protected javax.swing.JButton jButtonCargar;
+    protected javax.swing.JButton jButtonComprobar;
+    protected javax.swing.JButton jButtonDirectorioAcuses;
+    protected javax.swing.JButton jButtonDirectorioCFDI;
+    protected javax.swing.JButton jButtonDirectorioNotaCredito;
+    protected javax.swing.JButton jButtonDirectorioRemisiones;
+    protected javax.swing.JButton jButtonDirectorioTickets;
+    protected javax.swing.JButton jButtonEnviar;
+    protected javax.swing.JButton jButtonNotaCredito;
+    protected javax.swing.JButton jButtonObtenerXML;
+    protected javax.swing.JButton jButtonRelacionar;
+    protected javax.swing.JButton jButtonTicketsFacturados;
+    protected javax.swing.JButton jButtonTimbrar;
+    protected javax.swing.JButton jButtonVerArchivos;
+    protected javax.swing.JLabel jLNot;
+    protected javax.swing.JLabel jLNotCli;
     private javax.swing.JLabel jLTimb;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabelRemisionFactura;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabelRemisionFactura;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JComboBox jRadioBoxTipoDeVentas;
+    protected javax.swing.JPanel jPanel1;
+    protected javax.swing.JPanel jPanel2;
+    protected javax.swing.JPanel jPanel3;
+    protected javax.swing.JComboBox jRadioBoxTipoDeVentas;
     private javax.swing.JScrollPane jSTab1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab2;
     private javax.swing.JTable jTableVentas;
-    private javax.swing.JLabel label_pagina;
-    private javax.swing.JLabel label_total;
-    private javax.swing.JPanel navegacion;
+    protected javax.swing.JLabel label_total;
+    protected javax.swing.JPanel navegacion;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Empresas extends javax.swing.JFrame */

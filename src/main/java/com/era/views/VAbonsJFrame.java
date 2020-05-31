@@ -25,12 +25,11 @@ public abstract class VAbonsJFrame extends BaseJFrame
         jBSal = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTab = new javax.swing.JTable();
-        jBTab1 = new javax.swing.JButton();
         jBCan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -67,10 +66,6 @@ public abstract class VAbonsJFrame extends BaseJFrame
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 240));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 10, 20));
-
         jBCan.setBackground(new java.awt.Color(255, 255, 255));
         jBCan.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBCan.setForeground(new java.awt.Color(0, 102, 0));
@@ -99,11 +94,10 @@ public abstract class VAbonsJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCan;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
+    protected javax.swing.JButton jBCan;
+    protected javax.swing.JButton jBSal;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

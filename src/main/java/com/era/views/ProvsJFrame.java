@@ -27,8 +27,6 @@ public abstract class ProvsJFrame extends BaseJFrame
         jBMosT = new javax.swing.JButton();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
-        jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -198,7 +196,7 @@ public abstract class ProvsJFrame extends BaseJFrame
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTab.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabMouseClicked(evt);
@@ -282,46 +280,6 @@ public abstract class ProvsJFrame extends BaseJFrame
             }
         });
         jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 460, 190, 20));
-
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jBTab1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTab1ActionPerformed(evt);
-            }
-        });
-        jBTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTab1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jBTod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBTodMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBTodMouseExited(evt);
-            }
-        });
-        jBTod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTodActionPerformed(evt);
-            }
-        });
-        jBTod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTodKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 12, 130, 18));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -474,17 +432,7 @@ public abstract class ProvsJFrame extends BaseJFrame
     }//GEN-LAST:event_formMouseMoved
 
         
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-
-    
-    }//GEN-LAST:event_jBTab1ActionPerformed
-
         
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
-
-    
-    }//GEN-LAST:event_jBTab1KeyPressed
-
         
     private void jBBuscMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseEntered
             
@@ -499,17 +447,7 @@ public abstract class ProvsJFrame extends BaseJFrame
 
     
           
-    private void jBTodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTodActionPerformed
-        
-
-    }//GEN-LAST:event_jBTodActionPerformed
-
     
-    private void jBTodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTodKeyPressed
-
-    
-    }//GEN-LAST:event_jBTodKeyPressed
-
         
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         
@@ -517,11 +455,6 @@ public abstract class ProvsJFrame extends BaseJFrame
     }//GEN-LAST:event_formWindowClosing
 
             
-    private void jBTodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseEntered
-        
-        
-    }//GEN-LAST:event_jBTodMouseEntered
-
         
     private void jBDelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseEntered
         
@@ -554,11 +487,6 @@ public abstract class ProvsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBMosTMouseEntered
 
         
-    private void jBTodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseExited
-        
-        
-    }//GEN-LAST:event_jBTodMouseExited
-
         
     private void jBDelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseExited
         
@@ -596,19 +524,17 @@ public abstract class ProvsJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBAbr;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBAbr;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBMosT;
     protected javax.swing.JButton jBNew;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
+    protected javax.swing.JButton jBSal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    public javax.swing.JTable jTab;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

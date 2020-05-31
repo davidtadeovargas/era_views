@@ -338,13 +338,13 @@ public abstract class ClavMastJFrame extends BaseJFrame
                 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPasswordField jPClav;
-    private javax.swing.JTextField jTEsta;
+    protected javax.swing.JPasswordField jPClav;
+    protected javax.swing.JTextField jTEsta;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class NuevoCliente extends javax.swing.JFrame */

@@ -82,7 +82,7 @@ public abstract class NewClienExpJFrame extends BaseJFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Cliente Express");
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -305,7 +305,7 @@ public abstract class NewClienExpJFrame extends BaseJFrame
         jTExten.setNextFocusableComponent(jTCel);
         jP1.add(jTExten, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 230, 20));
 
-        jTCel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));        
+        jTCel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jP1.add(jTCel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 230, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -332,65 +332,65 @@ public abstract class NewClienExpJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JComboBox jComSer;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JComboBox jComSer;
+    protected javax.swing.JLabel jLabel10;
+    protected javax.swing.JLabel jLabel11;
+    protected javax.swing.JLabel jLabel13;
+    protected javax.swing.JLabel jLabel15;
+    protected javax.swing.JLabel jLabel17;
+    protected javax.swing.JLabel jLabel18;
+    protected javax.swing.JLabel jLabel19;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel20;
+    protected javax.swing.JLabel jLabel21;
+    protected javax.swing.JLabel jLabel22;
+    protected javax.swing.JLabel jLabel23;
+    protected javax.swing.JLabel jLabel28;
+    protected javax.swing.JLabel jLabel29;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel30;
+    protected javax.swing.JLabel jLabel31;
+    protected javax.swing.JLabel jLabel35;
+    protected javax.swing.JLabel jLabel36;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel41;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanel2;
+    protected javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRaFis;
     private javax.swing.JRadioButton jRaMor;
-    private javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTAObserv;
-    private javax.swing.JTextField jTCP;
-    private javax.swing.JTextField jTCall;
-    private javax.swing.JTextField jTCel;
-    private javax.swing.JTextField jTCiu;
-    private javax.swing.JTextField jTCo1;
-    private javax.swing.JTextField jTCo2;
-    private javax.swing.JTextField jTCo3;
-    private javax.swing.JTextField jTCodEmp;
-    private javax.swing.JTextField jTCol;
-    private javax.swing.JTextField jTCta;
-    private javax.swing.JTextField jTEstad;
-    private javax.swing.JTextField jTExten;
-    private javax.swing.JTextField jTLada;
-    private javax.swing.JTextField jTMetPag;
-    private javax.swing.JTextField jTNoExt;
-    private javax.swing.JTextField jTNoInt;
-    private javax.swing.JTextField jTNomb;
-    private javax.swing.JTextField jTPag1;
-    private javax.swing.JTextField jTPag2;
-    private javax.swing.JTextField jTPai;
-    private javax.swing.JTextField jTRFC;
-    private javax.swing.JTextField jTTel;
-    private javax.swing.JTextField jTTelPer1;
-    private javax.swing.JTextField jTTelPers2;
+    protected javax.swing.JTextField jTCP;
+    protected javax.swing.JTextField jTCall;
+    protected javax.swing.JTextField jTCel;
+    protected javax.swing.JTextField jTCiu;
+    protected javax.swing.JTextField jTCo1;
+    protected javax.swing.JTextField jTCo2;
+    protected javax.swing.JTextField jTCo3;
+    protected javax.swing.JTextField jTCodEmp;
+    protected javax.swing.JTextField jTCol;
+    protected javax.swing.JTextField jTCta;
+    protected javax.swing.JTextField jTEstad;
+    protected javax.swing.JTextField jTExten;
+    protected javax.swing.JTextField jTLada;
+    protected javax.swing.JTextField jTMetPag;
+    protected javax.swing.JTextField jTNoExt;
+    protected javax.swing.JTextField jTNoInt;
+    protected javax.swing.JTextField jTNomb;
+    protected javax.swing.JTextField jTPag1;
+    protected javax.swing.JTextField jTPag2;
+    protected javax.swing.JTextField jTPai;
+    protected javax.swing.JTextField jTRFC;
+    protected javax.swing.JTextField jTTel;
+    protected javax.swing.JTextField jTTelPer1;
+    protected javax.swing.JTextField jTTelPers2;
     // End of variables declaration//GEN-END:variables
 
 }

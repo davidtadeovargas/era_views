@@ -63,11 +63,11 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
-        
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jCmbSerie.setName(""); // NOI18N
-        
+
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setText("Serie:");
 
@@ -86,18 +86,17 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
 
         jTBanco.setToolTipText("Concepto del pago del abono");
         jTBanco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        
+
         jBBancos.setBackground(new java.awt.Color(255, 255, 255));
         jBBancos.setText("jButton1");
         jBBancos.setToolTipText("Buscar concepto");
-        
+
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("Método de pago:");
 
         jTFormPag.setToolTipText("Forma de pago del abono");
         jTFormPag.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        
-        
+
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setText("Folio de banco:");
 
@@ -108,18 +107,18 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
 
         jTConcep.setToolTipText("Concepto del pago del abono");
         jTConcep.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        
+
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("Concepto:");
 
         jBConcep.setBackground(new java.awt.Color(255, 255, 255));
         jBConcep.setText("jButton1");
-        jBConcep.setToolTipText("Buscar concepto");        
-        
+        jBConcep.setToolTipText("Buscar concepto");
+
         jBFormPag.setBackground(new java.awt.Color(255, 255, 255));
         jBFormPag.setText("jButton1");
         jBFormPag.setToolTipText("Buscar forma de pago");
-        
+
         jTComentario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
@@ -127,13 +126,13 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
         jButton1.setForeground(new java.awt.Color(0, 102, 0));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/agre.png"))); // NOI18N
         jButton1.setText("Agregar");
-        
+
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 102, 0));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/del.png"))); // NOI18N
         jButton2.setText("Borrar");
-        
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -220,7 +219,7 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
         jBAbon.setText("Abonar");
         jBAbon.setToolTipText("Abonar a Venta");
         jBAbon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBSal.setForeground(new java.awt.Color(0, 102, 0));
@@ -229,11 +228,11 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBSal.setName(""); // NOI18N
-        
+
         jBCliente.setBackground(new java.awt.Color(255, 255, 255));
         jBCliente.setText("jButton1");
         jBCliente.setToolTipText("Buscar concepto");
-        
+
         jCTimbrar.setText("Timbrar");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -393,41 +392,41 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
 
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBAbon;
-    private javax.swing.JButton jBBancos;
-    private javax.swing.JButton jBCliente;
-    private javax.swing.JButton jBConcep;
-    private javax.swing.JButton jBFormPag;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCImprimir;
-    private javax.swing.JCheckBox jCTimbrar;
+    protected javax.swing.JButton jBAbon;
+    protected javax.swing.JButton jBBancos;
+    protected javax.swing.JButton jBCliente;
+    protected javax.swing.JButton jBConcep;
+    protected javax.swing.JButton jBFormPag;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jButton1;
+    protected javax.swing.JButton jButton2;
+    protected javax.swing.JCheckBox jCImprimir;
+    protected javax.swing.JCheckBox jCTimbrar;
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JComboBox jCmbSerie;
-    private javax.swing.JFormattedTextField jForImporte;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLblCliente;
+    protected javax.swing.JComboBox jCmbSerie;
+    protected javax.swing.JFormattedTextField jForImporte;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel11;
+    protected javax.swing.JLabel jLabel12;
+    protected javax.swing.JLabel jLabel13;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel9;
+    protected javax.swing.JLabel jLblCliente;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
+    protected javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBanco;
-    private javax.swing.JTextField jTClienteProveedor;
-    private javax.swing.JTextField jTComentario;
-    private javax.swing.JTextField jTConcep;
-    private javax.swing.JTextField jTFolBanc;
-    private javax.swing.JTextField jTFormPag;
+    protected javax.swing.JTextField jTBanco;
+    protected javax.swing.JTextField jTClienteProveedor;
+    protected javax.swing.JTextField jTComentario;
+    protected javax.swing.JTextField jTConcep;
+    protected javax.swing.JTextField jTFolBanc;
+    protected javax.swing.JTextField jTFormPag;
     private javax.swing.JTable jTabDoctosRel;
     private javax.swing.JTable jTabDocumentos;
-    private javax.swing.JTextField jTxtConsecutivo;
-    private javax.swing.JTabbedPane tabs;
+    protected javax.swing.JTextField jTxtConsecutivo;
+    protected javax.swing.JTabbedPane tabs;
     // End of variables declaration//GEN-END:variables
 }

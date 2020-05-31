@@ -46,14 +46,13 @@ public abstract class VCompJFrame extends BaseJFrame
         jTImp = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
         jTTot = new javax.swing.JTextField();
-        jBTab1 = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
         jDesc = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -205,10 +204,6 @@ public abstract class VCompJFrame extends BaseJFrame
         jTTot.setNextFocusableComponent(jBSal);
         jP1.add(jTTot, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 480, 160, 30));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 10, 20));
-
         jLabel29.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel29.setText("Descuento:");
         jP1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 430, 110, -1));
@@ -234,8 +229,8 @@ public abstract class VCompJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 1062, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 1069, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,40 +247,39 @@ public abstract class VCompJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JTextField jDesc;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jButton1;
+    protected javax.swing.JTextField jDesc;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel20;
+    protected javax.swing.JLabel jLabel21;
+    protected javax.swing.JLabel jLabel22;
+    protected javax.swing.JLabel jLabel26;
+    protected javax.swing.JLabel jLabel27;
+    protected javax.swing.JLabel jLabel28;
+    protected javax.swing.JLabel jLabel29;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel47;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTCodCom;
-    private javax.swing.JTextField jTCodProv;
-    private javax.swing.JTextField jTEsta;
-    private javax.swing.JTextField jTFec;
-    private javax.swing.JTextField jTImp;
-    private javax.swing.JTextField jTNoDoc;
-    private javax.swing.JTextField jTNomProv;
-    private javax.swing.JTextField jTOrd;
-    private javax.swing.JTextField jTSubTot;
-    private javax.swing.JTextField jTTipD;
-    private javax.swing.JTextField jTTot;
+    protected javax.swing.JPanel jPanel4;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JTextField jTCodCom;
+    protected javax.swing.JTextField jTCodProv;
+    protected javax.swing.JTextField jTEsta;
+    protected javax.swing.JTextField jTFec;
+    protected javax.swing.JTextField jTImp;
+    protected javax.swing.JTextField jTNoDoc;
+    protected javax.swing.JTextField jTNomProv;
+    protected javax.swing.JTextField jTOrd;
+    protected javax.swing.JTextField jTSubTot;
+    protected javax.swing.JTextField jTTipD;
+    protected javax.swing.JTextField jTTot;
     private javax.swing.JTable jTab;
-    private javax.swing.JTextField jTextFieldReferencia;
+    protected javax.swing.JTextField jTextFieldReferencia;
     // End of variables declaration//GEN-END:variables
 
 }

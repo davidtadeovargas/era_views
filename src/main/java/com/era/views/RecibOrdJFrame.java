@@ -51,7 +51,6 @@ public abstract class RecibOrdJFrame extends BaseJFrame
         jBGuar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTObserv = new javax.swing.JTextField();
-        jBTabG = new javax.swing.JButton();
         jCRecibT = new javax.swing.JCheckBox();
         jLabel30 = new javax.swing.JLabel();
         jComSer = new javax.swing.JComboBox();
@@ -421,20 +420,6 @@ public abstract class RecibOrdJFrame extends BaseJFrame
         });
         jP1.add(jTObserv, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, 410, 20));
 
-        jBTabG.setBackground(new java.awt.Color(0, 153, 153));
-        jBTabG.setToolTipText("Mostrar Tabla en Grande");
-        jBTabG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTabGActionPerformed(evt);
-            }
-        });
-        jBTabG.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTabGKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTabG, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 10, 20));
-
         jCRecibT.setBackground(new java.awt.Color(255, 255, 255));
         jCRecibT.setSelected(true);
         jCRecibT.setText("Recibir todo");
@@ -581,8 +566,9 @@ public abstract class RecibOrdJFrame extends BaseJFrame
         });
         jP1.add(jDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 420, 160, 30));
 
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel13.setText("Forma pago:");
-        jP1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 100, -1));
+        jP1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 100, -1));
 
         jComFormPag.setNextFocusableComponent(jCConta);
         jComFormPag.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -616,7 +602,7 @@ public abstract class RecibOrdJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 1128, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -884,20 +870,8 @@ public abstract class RecibOrdJFrame extends BaseJFrame
 
     
   
-    private void jBTabGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTabGActionPerformed
-
-  
-
-    }//GEN-LAST:event_jBTabGActionPerformed
-
     
   
-    private void jBTabGKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTabGKeyPressed
-
-  
-
-    }//GEN-LAST:event_jBTabGKeyPressed
-
     
     
   
@@ -1163,51 +1137,50 @@ public abstract class RecibOrdJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCarg;
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBLimp;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTabG;
-    private javax.swing.JCheckBox jCConta;
-    private javax.swing.JCheckBox jCRecibT;
-    private javax.swing.JComboBox jComFormPag;
-    private javax.swing.JComboBox jComMon;
-    private javax.swing.JComboBox jComSer;
-    private javax.swing.JTextField jDesc;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
+    protected javax.swing.JButton jBCarg;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBLimp;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JCheckBox jCConta;
+    protected javax.swing.JCheckBox jCRecibT;
+    protected javax.swing.JComboBox jComFormPag;
+    protected javax.swing.JComboBox jComMon;
+    protected javax.swing.JComboBox jComSer;
+    protected javax.swing.JTextField jDesc;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel13;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel20;
+    protected javax.swing.JLabel jLabel26;
+    protected javax.swing.JLabel jLabel27;
+    protected javax.swing.JLabel jLabel28;
+    protected javax.swing.JLabel jLabel29;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel30;
+    protected javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jP2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTCod;
-    private javax.swing.JTextField jTCodProv;
-    private javax.swing.JTextField jTComenSer;
-    private javax.swing.JTextField jTEst;
-    private javax.swing.JTextField jTFEnt;
-    private javax.swing.JTextField jTFec;
-    private javax.swing.JTextField jTImp;
-    private javax.swing.JTextField jTNoDoc;
-    private javax.swing.JTextField jTNomProv;
-    private javax.swing.JTextField jTObserv;
-    private javax.swing.JTextField jTSerProd;
-    private javax.swing.JTextField jTSerProv;
-    private javax.swing.JTextField jTSubTot;
-    private javax.swing.JTextField jTTot;
+    protected javax.swing.JPanel jP2;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JTextField jTCod;
+    protected javax.swing.JTextField jTCodProv;
+    protected javax.swing.JTextField jTComenSer;
+    protected javax.swing.JTextField jTEst;
+    protected javax.swing.JTextField jTFEnt;
+    protected javax.swing.JTextField jTFec;
+    protected javax.swing.JTextField jTImp;
+    protected javax.swing.JTextField jTNoDoc;
+    protected javax.swing.JTextField jTNomProv;
+    protected javax.swing.JTextField jTObserv;
+    protected javax.swing.JTextField jTSerProd;
+    protected javax.swing.JTextField jTSerProv;
+    protected javax.swing.JTextField jTSubTot;
+    protected javax.swing.JTextField jTTot;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

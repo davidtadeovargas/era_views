@@ -33,6 +33,7 @@ public abstract class ConfigBancosJFrame extends BaseJFrame {
 
         jBGuardar.setText("Guardar");
         
+        
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("*Instancia de CONTPAQ I BANCOS:");
 
@@ -106,14 +107,14 @@ public abstract class ConfigBancosJFrame extends BaseJFrame {
       
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBGuardar;
-    private javax.swing.JButton jBSalir;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTInstancia;
-    private javax.swing.JTextField jTPassword;
-    private javax.swing.JTextField jTUsuario;
+    protected javax.swing.JButton jBGuardar;
+    protected javax.swing.JButton jBSalir;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JTextField jTInstancia;
+    protected javax.swing.JTextField jTPassword;
+    protected javax.swing.JTextField jTUsuario;
     // End of variables declaration//GEN-END:variables
 }

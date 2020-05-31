@@ -34,9 +34,6 @@ public abstract class PedidosJFrame extends BaseJFrame {
         jTBusc = new javax.swing.JTextField();
         jBBusc = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jBTab1 = new javax.swing.JButton();
-        jBTab2 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jLNot = new javax.swing.JLabel();
         jLNotCli = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -182,25 +179,6 @@ public abstract class PedidosJFrame extends BaseJFrame {
         jP1.add(jLabel2);
         jLabel2.setBounds(20, 270, 170, 17);
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1);
-        jBTab1.setBounds(10, 30, 10, 20);
-
-        jBTab2.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab2.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab2);
-        jBTab2.setBounds(10, 290, 10, 20);
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTablePedidos);
-        jP1.add(jBTod);
-        jBTod.setBounds(1030, 12, 130, 18);
-
         jLNot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLNot.setForeground(new java.awt.Color(204, 0, 0));
         jLNot.setFocusable(false);
@@ -271,7 +249,7 @@ public abstract class PedidosJFrame extends BaseJFrame {
         jP1.add(jPanel3);
         jPanel3.setBounds(20, 290, 1140, 190);
 
-        getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 1292, 540));
+        getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 1292, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -280,31 +258,28 @@ public abstract class PedidosJFrame extends BaseJFrame {
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTab2;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBVer;
-    private javax.swing.JButton jButtonAbrir;
-    private javax.swing.JButton jButtonActualizar;
-    private javax.swing.JButton jButtonCancelar;
-    private javax.swing.JButton jButtonFacturar;
-    private javax.swing.JButton jButtonGenerarPDF;
-    private javax.swing.JButton jButtonNueva;
-    private javax.swing.JButton jButtonSalir;
-    private javax.swing.JButton jButtonVerPDF;
-    private javax.swing.JLabel jLNot;
-    private javax.swing.JLabel jLNotCli;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBVer;
+    protected javax.swing.JButton jButtonAbrir;
+    protected javax.swing.JButton jButtonActualizar;
+    protected javax.swing.JButton jButtonCancelar;
+    protected javax.swing.JButton jButtonFacturar;
+    protected javax.swing.JButton jButtonGenerarPDF;
+    protected javax.swing.JButton jButtonNueva;
+    protected javax.swing.JButton jButtonSalir;
+    protected javax.swing.JButton jButtonVerPDF;
+    protected javax.swing.JLabel jLNot;
+    protected javax.swing.JLabel jLNotCli;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    protected javax.swing.JPanel jPanel1;
+    protected javax.swing.JPanel jPanel2;
+    protected javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTablePartidas;
     private javax.swing.JTable jTablePedidos;
     // End of variables declaration//GEN-END:variables

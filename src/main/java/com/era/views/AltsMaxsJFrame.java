@@ -28,7 +28,6 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
         jBMostT = new javax.swing.JButton();
         jBVis = new javax.swing.JButton();
         jBActua = new javax.swing.JButton();
-        jBTabG = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -256,20 +255,6 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
         });
         jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 60, 120, 30));
 
-        jBTabG.setBackground(new java.awt.Color(0, 153, 153));
-        jBTabG.setToolTipText("Mostrar Tabla en Grande");
-        jBTabG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTabGActionPerformed(evt);
-            }
-        });
-        jBTabG.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTabGKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTabG, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 10, 20));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -411,19 +396,7 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
         
     }//GEN-LAST:event_formMouseDragged
 
-    private void jBTabGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTabGActionPerformed
-
-    
-
-    }//GEN-LAST:event_jBTabGActionPerformed
-
         
-    private void jBTabGKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTabGKeyPressed
-
-    
-
-    }//GEN-LAST:event_jBTabGKeyPressed
-
     
     private void jSP1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jSP1KeyPressed
         
@@ -523,16 +496,15 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBMostT;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTabG;
-    private javax.swing.JButton jBVis;
-    private javax.swing.JLabel jLabel1;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBMostT;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBVis;
+    protected javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jSP1;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JScrollPane jSP1;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

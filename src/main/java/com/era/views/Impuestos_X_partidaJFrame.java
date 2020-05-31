@@ -25,14 +25,13 @@ public abstract class Impuestos_X_partidaJFrame extends BaseJFrame
         jBNew = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
-        jBTabG = new javax.swing.JButton();
         combo_impuesto = new javax.swing.JComboBox();
         jLabel5 = new javax.swing.JLabel();
         campo_valor_impuesto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -91,14 +90,10 @@ public abstract class Impuestos_X_partidaJFrame extends BaseJFrame
         });
         tabla.setGridColor(new java.awt.Color(255, 255, 255));
         tabla.setNextFocusableComponent(boton_borrar);
-        tabla.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        tabla.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(tabla);
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 380, 260));
-
-        jBTabG.setBackground(new java.awt.Color(0, 153, 153));
-        jBTabG.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTabG, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 10, 20));
 
         jP1.add(combo_impuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 160, 20));
 
@@ -128,15 +123,14 @@ public abstract class Impuestos_X_partidaJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton boton_borrar;
-    private javax.swing.JButton boton_salir;
-    private javax.swing.JTextField campo_valor_impuesto;
-    private javax.swing.JComboBox combo_impuesto;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBTabG;
-    private javax.swing.JLabel jLabel5;
+    protected javax.swing.JButton boton_borrar;
+    protected javax.swing.JButton boton_salir;
+    protected javax.swing.JTextField campo_valor_impuesto;
+    protected javax.swing.JComboBox combo_impuesto;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 

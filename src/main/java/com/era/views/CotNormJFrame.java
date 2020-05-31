@@ -60,7 +60,6 @@ public abstract class CotNormJFrame extends BaseJFrame
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jTTot = new javax.swing.JTextField();
-        jBTab1 = new javax.swing.JButton();
         jBTod = new javax.swing.JButton();
         jPOtr = new javax.swing.JPanel();
         jCMostA = new javax.swing.JCheckBox();
@@ -206,7 +205,7 @@ public abstract class CotNormJFrame extends BaseJFrame
         jTablePartidas.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         jTablePartidas.setGridColor(new java.awt.Color(255, 255, 255));
         jTablePartidas.setNextFocusableComponent(jBGuar);
-        jTablePartidas.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTablePartidas.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTablePartidas.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTablePartidasKeyPressed(evt);
@@ -651,20 +650,6 @@ public abstract class CotNormJFrame extends BaseJFrame
         });
         jP1.add(jTTot, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 580, 200, 20));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jBTab1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTab1ActionPerformed(evt);
-            }
-        });
-        jBTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTab1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 10, 20));
-
         jBTod.setBackground(new java.awt.Color(255, 255, 255));
         jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
@@ -703,6 +688,11 @@ public abstract class CotNormJFrame extends BaseJFrame
         jCMostA.setBackground(new java.awt.Color(255, 255, 255));
         jCMostA.setText("Mostrar archivos ");
         jCMostA.setNextFocusableComponent(jCImp);
+        jCMostA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCMostAActionPerformed(evt);
+            }
+        });
         jCMostA.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jCMostAKeyPressed(evt);
@@ -2114,20 +2104,8 @@ public abstract class CotNormJFrame extends BaseJFrame
 
             
     
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-
-    
-
-    }//GEN-LAST:event_jBTab1ActionPerformed
-
     
     
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
-
-    
-
-    }//GEN-LAST:event_jBTab1KeyPressed
-
     
     
     
@@ -2937,119 +2915,122 @@ public abstract class CotNormJFrame extends BaseJFrame
         
     
     }//GEN-LAST:event_jCCo3ItemStateChanged
+
+    private void jCMostAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCMostAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCMostAActionPerformed
     
                        
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCli;
-    private javax.swing.JButton jBComenSer;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBExisAlma;
-    private javax.swing.JButton jBGranDescrip;
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBProd;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTipCam;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBVeGran;
-    private javax.swing.JButton jButtonGenerarPDF;
-    private javax.swing.JButton jButtonImpuestos;
-    private javax.swing.JButton jButtonListaPrecio;
-    private javax.swing.JCheckBox jCCo1;
-    private javax.swing.JCheckBox jCCo2;
-    private javax.swing.JCheckBox jCCo3;
-    private javax.swing.JCheckBox jCGuaCo;
-    private javax.swing.JCheckBox jCImp;
-    private javax.swing.JCheckBox jCMand;
-    private javax.swing.JCheckBox jCMostA;
-    private javax.swing.JCheckBox jCheckBoxBackOrder;
-    private javax.swing.JComboBox jComColo;
-    private javax.swing.JComboBox jComTall;
-    private javax.swing.JComboBox jComUnid;
-    private javax.swing.JComboBox jComboBoxAlmacen;
-    private javax.swing.JComboBox jComboBoxSeries;
-    private javax.swing.JComboBox<String> jComboBoxVendedores;
-    private javax.swing.JComboBox jComboboxMonedas;
+    protected javax.swing.JButton jBCli;
+    protected javax.swing.JButton jBComenSer;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBExisAlma;
+    protected javax.swing.JButton jBGranDescrip;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBProd;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBTipCam;
+    protected javax.swing.JButton jBTod;
+    protected javax.swing.JButton jBVeGran;
+    protected javax.swing.JButton jButtonGenerarPDF;
+    protected javax.swing.JButton jButtonImpuestos;
+    protected javax.swing.JButton jButtonListaPrecio;
+    protected javax.swing.JCheckBox jCCo1;
+    protected javax.swing.JCheckBox jCCo2;
+    protected javax.swing.JCheckBox jCCo3;
+    protected javax.swing.JCheckBox jCGuaCo;
+    protected javax.swing.JCheckBox jCImp;
+    protected javax.swing.JCheckBox jCMand;
+    protected javax.swing.JCheckBox jCMostA;
+    protected javax.swing.JCheckBox jCheckBoxBackOrder;
+    protected javax.swing.JComboBox jComColo;
+    protected javax.swing.JComboBox jComTall;
+    protected javax.swing.JComboBox jComUnid;
+    protected javax.swing.JComboBox jComboBoxAlmacen;
+    protected javax.swing.JComboBox jComboBoxSeries;
+    protected javax.swing.JComboBox<String> jComboBoxVendedores;
+    protected javax.swing.JComboBox jComboboxMonedas;
     private javax.swing.JLabel jLImg;
-    private javax.swing.JLabel jLNot;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLblCodigoOpcional;
+    protected javax.swing.JLabel jLNot;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel10;
+    protected javax.swing.JLabel jLabel11;
+    protected javax.swing.JLabel jLabel12;
+    protected javax.swing.JLabel jLabel13;
+    protected javax.swing.JLabel jLabel14;
+    protected javax.swing.JLabel jLabel15;
+    protected javax.swing.JLabel jLabel16;
+    protected javax.swing.JLabel jLabel17;
+    protected javax.swing.JLabel jLabel18;
+    protected javax.swing.JLabel jLabel19;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel20;
+    protected javax.swing.JLabel jLabel21;
+    protected javax.swing.JLabel jLabel22;
+    protected javax.swing.JLabel jLabel23;
+    protected javax.swing.JLabel jLabel27;
+    protected javax.swing.JLabel jLabel28;
+    protected javax.swing.JLabel jLabel29;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel30;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel46;
+    protected javax.swing.JLabel jLabel47;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel50;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel9;
+    protected javax.swing.JLabel jLblCodigoOpcional;
     private javax.swing.JPanel jP1;
     private javax.swing.JPanel jPClien;
     private javax.swing.JPanel jPOtr;
     private javax.swing.JPanel jPParts;
     private javax.swing.JPanel jPanImg;
-    private javax.swing.JScrollPane jSImg;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
+    protected javax.swing.JScrollPane jSImg;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane3;
+    protected javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTADescrip;
     private javax.swing.JTextArea jTAObserv;
-    private javax.swing.JTextField jTAlma2;
-    private javax.swing.JTextField jTCadu;
-    private javax.swing.JTextField jTCant;
-    private javax.swing.JTextField jTCantLot;
-    private javax.swing.JTextField jTCo1;
-    private javax.swing.JTextField jTCo2;
-    private javax.swing.JTextField jTCo3;
+    protected javax.swing.JTextField jTAlma2;
+    protected javax.swing.JTextField jTCadu;
+    protected javax.swing.JTextField jTCant;
+    protected javax.swing.JTextField jTCantLot;
+    protected javax.swing.JTextField jTCo1;
+    protected javax.swing.JTextField jTCo2;
+    protected javax.swing.JTextField jTCo3;
     private javax.swing.JTextField jTComenSer;
-    private javax.swing.JTextField jTDesc;
-    private javax.swing.JTextField jTDescripAlma;
-    private javax.swing.JTextField jTDescripColo;
-    private javax.swing.JTextField jTDescripTall;
-    private javax.swing.JTextField jTExistAlmacen;
-    private javax.swing.JTextField jTGara;
-    private javax.swing.JTextField jTId;
-    private javax.swing.JTextField jTKit;
-    private javax.swing.JTextField jTLot;
-    private javax.swing.JTextField jTNom;
-    private javax.swing.JTextField jTPedimen;
-    private javax.swing.JTextField jTPre;
-    private javax.swing.JTextField jTSer;
-    private javax.swing.JTextField jTSerProd;
-    private javax.swing.JTextField jTSubTot;
-    private javax.swing.JTextField jTTot;
-    private javax.swing.JTextField jTUnid;
-    private javax.swing.JTable jTablePartidas;
-    private javax.swing.JTextField jTextFieldCliente;
-    private javax.swing.JTextField jTextFieldCodigoOpcional;
-    private javax.swing.JTextField jTextFieldDescripcion;
-    private javax.swing.JTextField jTextFieldExistenciaAlmacen;
-    private javax.swing.JTextField jTextFieldImpuesto;
-    private javax.swing.JTextField jTextFieldListaPrecio;
-    private javax.swing.JTextField jTextFieldReferencia;
-    private javax.swing.JTextField jTextFieldTotalDescuento;
-    private javax.swing.JTextField jTextFilelProducto;
+    protected javax.swing.JTextField jTDesc;
+    protected javax.swing.JTextField jTDescripAlma;
+    protected javax.swing.JTextField jTDescripColo;
+    protected javax.swing.JTextField jTDescripTall;
+    protected javax.swing.JTextField jTExistAlmacen;
+    protected javax.swing.JTextField jTGara;
+    protected javax.swing.JTextField jTId;
+    protected javax.swing.JTextField jTKit;
+    protected javax.swing.JTextField jTLot;
+    protected javax.swing.JTextField jTNom;
+    protected javax.swing.JTextField jTPedimen;
+    protected javax.swing.JTextField jTPre;
+    protected javax.swing.JTextField jTSer;
+    protected javax.swing.JTextField jTSerProd;
+    protected javax.swing.JTextField jTSubTot;
+    protected javax.swing.JTextField jTTot;
+    protected javax.swing.JTextField jTUnid;
+    protected javax.swing.JTable jTablePartidas;
+    protected javax.swing.JTextField jTextFieldCliente;
+    protected javax.swing.JTextField jTextFieldCodigoOpcional;
+    protected javax.swing.JTextField jTextFieldDescripcion;
+    protected javax.swing.JTextField jTextFieldExistenciaAlmacen;
+    protected javax.swing.JTextField jTextFieldImpuesto;
+    protected javax.swing.JTextField jTextFieldListaPrecio;
+    protected javax.swing.JTextField jTextFieldReferencia;
+    protected javax.swing.JTextField jTextFieldTotalDescuento;
+    protected javax.swing.JTextField jTextFilelProducto;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class NuevoCliente extends javax.swing.JFrame */

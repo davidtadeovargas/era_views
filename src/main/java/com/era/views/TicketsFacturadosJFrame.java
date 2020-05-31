@@ -48,7 +48,7 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
         setTitle("Tickets Facturados");
         setResizable(false);
         setType(java.awt.Window.Type.POPUP);
-        
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         table_tickets.setModel(new javax.swing.table.DefaultTableModel(
@@ -80,14 +80,14 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
         jLabel2.setText("Folio:");
 
         txtFolio.setEditable(false);
-        
+
         jLabel3.setText("Fecha:");
 
         txtFecha.setEditable(false);
 
         txtTotal.setEditable(false);
         txtTotal.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        
+
         jLabel5.setText("Total:");
 
         jLabel4.setText("Cliente:");
@@ -196,7 +196,7 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -252,27 +252,27 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBSal;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JPanel jPanel2;
+    protected javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table_tickets;
-    private javax.swing.JTextField txtCaja;
-    private javax.swing.JTextField txtCliente;
-    private javax.swing.JTextField txtFecha;
-    private javax.swing.JTextField txtFolio;
-    private javax.swing.JTextField txtSerie;
-    private javax.swing.JTextField txtSucursal;
-    private javax.swing.JTextField txtTotal;
-    private javax.swing.JTextField txtUsuario;
+    protected javax.swing.JTextField txtCaja;
+    protected javax.swing.JTextField txtCliente;
+    protected javax.swing.JTextField txtFecha;
+    protected javax.swing.JTextField txtFolio;
+    protected javax.swing.JTextField txtSerie;
+    protected javax.swing.JTextField txtSucursal;
+    protected javax.swing.JTextField txtTotal;
+    protected javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

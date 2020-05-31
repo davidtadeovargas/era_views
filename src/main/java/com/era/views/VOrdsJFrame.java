@@ -26,11 +26,10 @@ public abstract class VOrdsJFrame extends BaseJFrame
         jBSal = new javax.swing.JButton();
         jCVerT = new javax.swing.JCheckBox();
         jBActua = new javax.swing.JButton();
-        jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -103,18 +102,6 @@ public abstract class VOrdsJFrame extends BaseJFrame
         jBActua.setNextFocusableComponent(jBSal);
         jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, 110, 30));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar Todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 20, 130, 20));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,16 +128,14 @@ public abstract class VOrdsJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBAbr;
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JCheckBox jCVerT;
-    private javax.swing.JLabel jLabel22;
+    protected javax.swing.JButton jBAbr;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JCheckBox jCVerT;
+    protected javax.swing.JLabel jLabel22;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

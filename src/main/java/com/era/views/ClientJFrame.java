@@ -11,10 +11,6 @@ public abstract class ClientJFrame extends BaseJFrame
 
         //Post inicialization
         postInitComponents();
-        
-        this.getRootPane().setDefaultButton(jBGuar);
-
-        jTRazSoc.grabFocus();
     }
        
     
@@ -78,8 +74,6 @@ public abstract class ClientJFrame extends BaseJFrame
         jLabel42 = new javax.swing.JLabel();
         jTVend = new javax.swing.JTextField();
         jBVend = new javax.swing.JButton();
-        jBContac = new javax.swing.JButton();
-        jBDom = new javax.swing.JButton();
         jCOtraMon = new javax.swing.JCheckBox();
         jCCotOtrMon = new javax.swing.JCheckBox();
         pnlDireccion = new javax.swing.JPanel();
@@ -768,56 +762,6 @@ public abstract class ClientJFrame extends BaseJFrame
             }
         });
 
-        jBContac.setBackground(new java.awt.Color(255, 255, 255));
-        jBContac.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBContac.setForeground(new java.awt.Color(0, 102, 0));
-        jBContac.setText("Contactos F2");
-        jBContac.setNextFocusableComponent(jBDom);
-        jBContac.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBContacMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBContacMouseExited(evt);
-            }
-        });
-        jBContac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBContacActionPerformed(evt);
-            }
-        });
-        jBContac.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBContacKeyPressed(evt);
-            }
-        });
-
-        jBDom.setBackground(new java.awt.Color(255, 255, 255));
-        jBDom.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDom.setForeground(new java.awt.Color(0, 102, 0));
-        jBDom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/doment.png"))); // NOI18N
-        jBDom.setText("Entrega");
-        jBDom.setToolTipText("Domicilio de Entrega del Cliente");
-        jBDom.setNextFocusableComponent(jCOtraMon);
-        jBDom.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBDomMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBDomMouseExited(evt);
-            }
-        });
-        jBDom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBDomActionPerformed(evt);
-            }
-        });
-        jBDom.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBDomKeyPressed(evt);
-            }
-        });
-
         jCOtraMon.setBackground(new java.awt.Color(255, 255, 255));
         jCOtraMon.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jCOtraMon.setSelected(true);
@@ -904,10 +848,7 @@ public abstract class ClientJFrame extends BaseJFrame
                                 .addGap(0, 0, 0)
                                 .addComponent(jBVend, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
-                                .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jBDom, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jBContac, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(132, 132, 132)
                                 .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jCOtraMon, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
                                     .addComponent(jCCotOtrMon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -923,7 +864,7 @@ public abstract class ClientJFrame extends BaseJFrame
                                     .addComponent(jTCtaConta)
                                     .addComponent(jComUsoCfdi, 0, 200, Short.MAX_VALUE)
                                     .addComponent(jComFormPag, 0, 200, Short.MAX_VALUE))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 206, Short.MAX_VALUE))))
         );
         pnlDatosBancariosLayout.setVerticalGroup(
             pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -995,18 +936,13 @@ public abstract class ClientJFrame extends BaseJFrame
                     .addComponent(jTVend, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBVend, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBContac)
-                    .addComponent(jCOtraMon)
-                    .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jBDom, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCCotOtrMon))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addComponent(jCOtraMon)
+                .addGap(4, 4, 4)
+                .addComponent(jCCotOtrMon)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
-        jP1.add(pnlDatosBancarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 450, 540));
+        jP1.add(pnlDatosBancarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 370, 540));
 
         pnlDireccion.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1905,89 +1841,19 @@ public abstract class ClientJFrame extends BaseJFrame
     }//GEN-LAST:event_jPanel2KeyPressed
 
    
-    private void jTClasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasFocusGained
-
-   
-        
-    }//GEN-LAST:event_jTClasFocusGained
-
        
-    private void jTClasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasFocusLost
-    
-        
-    }//GEN-LAST:event_jTClasFocusLost
-
     
 
-    private void jTClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasKeyPressed
-
-
         
-    }//GEN-LAST:event_jTClasKeyPressed
-
         
-    private void jTClasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasKeyTyped
-
+        
     
-        
-    }//GEN-LAST:event_jTClasKeyTyped
-
-        
-    private void jBClasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBClasActionPerformed
-
-    
-        
-    }//GEN-LAST:event_jBClasActionPerformed
-
-        
-    private void jBClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBClasKeyPressed
-
-    
-        
-    }//GEN-LAST:event_jBClasKeyPressed
-
-    
-    
-    private void jBContacKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBContacKeyPressed
-        
     
             
-    }//GEN-LAST:event_jBContacKeyPressed
-
-        
-    private void jBContacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBContacActionPerformed
-            
-        
-    }//GEN-LAST:event_jBContacActionPerformed
-    
-    private void jComSerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComSerKeyPressed
-        
-    
-        
-    }//GEN-LAST:event_jComSerKeyPressed
-
     
     
-    private void jTCodEmpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodEmpKeyPressed
         
-    
         
-    }//GEN-LAST:event_jTCodEmpKeyPressed
-
-        
-    private void jTCodEmpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodEmpFocusGained
-        
-    
-        
-    }//GEN-LAST:event_jTCodEmpFocusGained
-
-        
-    private void jTCodEmpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodEmpKeyTyped
-        
-    
-        
-    }//GEN-LAST:event_jTCodEmpKeyTyped
-
         
     private void formMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_formMouseWheelMoved
         
@@ -2010,27 +1876,10 @@ public abstract class ClientJFrame extends BaseJFrame
     }//GEN-LAST:event_formMouseMoved
 
     
-    private void jCOtraMonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCOtraMonKeyPressed
         
-
-        
-    }//GEN-LAST:event_jCOtraMonKeyPressed
-
-        
-    private void jCCotOtrMonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCCotOtrMonKeyPressed
-        
-        
-    }//GEN-LAST:event_jCCotOtrMonKeyPressed
-
     
     
         
-    private void jComSerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComSerFocusLost
-                
-    
-        
-    }//GEN-LAST:event_jComSerFocusLost
-
        
     private void jTCURPFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCURPFocusGained
             
@@ -2058,69 +1907,15 @@ public abstract class ClientJFrame extends BaseJFrame
     }//GEN-LAST:event_jTCURPKeyTyped
 
         
-    private void jTVendFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTVendFocusGained
-
-    
-
-    }//GEN-LAST:event_jTVendFocusGained
-
         
-    private void jTVendFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTVendFocusLost
-
-    
-
-    }//GEN-LAST:event_jTVendFocusLost
-
         
-    private void jTVendKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTVendKeyPressed
-
-    
-
-    }//GEN-LAST:event_jTVendKeyPressed
-
         
-    private void jTVendKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTVendKeyTyped
-
-    
         
-    }//GEN-LAST:event_jTVendKeyTyped
-
         
-    private void jBVendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVendActionPerformed
-
-    
-
-    }//GEN-LAST:event_jBVendActionPerformed
-
         
-    private void jBVendKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBVendKeyPressed
-
-    
-
-    }//GEN-LAST:event_jBVendKeyPressed
-
-        
-    private void jTClasDescripFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasDescripFocusLost
-
-    
-        
-    }//GEN-LAST:event_jTClasDescripFocusLost
-
-        
-    private void jTClasDescripFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasDescripFocusGained
         
     
-        
-    }//GEN-LAST:event_jTClasDescripFocusGained
-
     
-    
-    private void jComListKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComListKeyPressed
-
-    
-
-    }//GEN-LAST:event_jComListKeyPressed
-
         
     private void jTLadaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTLadaFocusGained
 
@@ -2154,26 +1949,8 @@ public abstract class ClientJFrame extends BaseJFrame
     }//GEN-LAST:event_jBSalMouseEntered
 
     
-    private void jBContacMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBContacMouseEntered
         
-    
         
-    }//GEN-LAST:event_jBContacMouseEntered
-
-        
-    private void jBVendMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVendMouseEntered
-        
-    
-        
-    }//GEN-LAST:event_jBVendMouseEntered
-
-        
-    private void jBClasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBClasMouseEntered
-        
-    
-        
-    }//GEN-LAST:event_jBClasMouseEntered
-
     
     private void jBGuarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGuarMouseExited
         
@@ -2188,26 +1965,8 @@ public abstract class ClientJFrame extends BaseJFrame
     }//GEN-LAST:event_jBSalMouseExited
 
         
-    private void jBClasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBClasMouseExited
-        
     
         
-    }//GEN-LAST:event_jBClasMouseExited
-
-    
-    private void jBVendMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVendMouseExited
-        
-    
-        
-    }//GEN-LAST:event_jBVendMouseExited
-
-        
-    private void jBContacMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBContacMouseExited
-        
-    
-        
-    }//GEN-LAST:event_jBContacMouseExited
-
         
     private void jTExtenKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTExtenKeyTyped
         
@@ -2266,11 +2025,6 @@ public abstract class ClientJFrame extends BaseJFrame
     }//GEN-LAST:event_jTCelFocusLost
 
     
-    private void jTCodEmpFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodEmpFocusLost
- 
-        
-    }//GEN-LAST:event_jTCodEmpFocusLost
-
         
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
                 
@@ -2326,24 +2080,8 @@ public abstract class ClientJFrame extends BaseJFrame
 
     
     
-    private void jTCtaPredFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaPredFocusGained
-
         
-    }//GEN-LAST:event_jTCtaPredFocusGained
-
         
-    private void jTCtaPredFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaPredFocusLost
-
-    
-        
-    }//GEN-LAST:event_jTCtaPredFocusLost
-
-        
-    private void jTCtaPredKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCtaPredKeyPressed
-
-        
-    }//GEN-LAST:event_jTCtaPredKeyPressed
-
         
     private void jCBloqCredKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCBloqCredKeyPressed
 
@@ -2388,18 +2126,6 @@ public abstract class ClientJFrame extends BaseJFrame
     
     }//GEN-LAST:event_jTPaiKeyTyped
 
-    private void jTBeneficiarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBeneficiarioKeyPressed
-    
-    }//GEN-LAST:event_jTBeneficiarioKeyPressed
-
-    private void jComUsoCfdiFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComUsoCfdiFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComUsoCfdiFocusLost
-
-    private void jComUsoCfdiKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComUsoCfdiKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComUsoCfdiKeyPressed
-
     private void jBCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCPActionPerformed
     
         
@@ -2410,216 +2136,32 @@ public abstract class ClientJFrame extends BaseJFrame
     }//GEN-LAST:event_jBPaisActionPerformed
 
     
-    private void jTLimCredKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTLimCredKeyTyped
-
-    
-
-    }//GEN-LAST:event_jTLimCredKeyTyped
-
-    
-    private void jTLimCredKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTLimCredKeyPressed
-
-    
-
-    }//GEN-LAST:event_jTLimCredKeyPressed
-    
-    private void jTLimCredFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTLimCredFocusLost
         
 
-    }//GEN-LAST:event_jTLimCredFocusLost
 
-
-    private void jTLimCredFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTLimCredFocusGained
-
-
-    }//GEN-LAST:event_jTLimCredFocusGained
-
-
-    private void jTDCredKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDCredKeyTyped
-
-
-
-    }//GEN-LAST:event_jTDCredKeyTyped
-
-
-    private void jTDCredKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDCredKeyPressed
-
-
-
-    }//GEN-LAST:event_jTDCredKeyPressed
 
     
-    private void jTDCredFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDCredFocusLost
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
 
     
-
-    }//GEN-LAST:event_jTDCredFocusLost
-
-   
-    private void jTDCredFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDCredFocusGained
-
-   
-
-    }//GEN-LAST:event_jTDCredFocusGained
-
-   
-    private void jTDescKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDescKeyTyped
-
-   
-
-    }//GEN-LAST:event_jTDescKeyTyped
-
-   
-    private void jTDescKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDescKeyPressed
-
-   
-
-    }//GEN-LAST:event_jTDescKeyPressed
-
-   
-    private void jTDescFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescFocusLost
-
-   
-
-    }//GEN-LAST:event_jTDescFocusLost
-
-   
-    private void jTDescFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescFocusGained
-
-   
-
-    }//GEN-LAST:event_jTDescFocusGained
-
-   
-    private void jTClavBancKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClavBancKeyPressed
-
-   
-
-    }//GEN-LAST:event_jTClavBancKeyPressed
-
-   
-    private void jTClavBancFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClavBancFocusLost
-
-   
-    }//GEN-LAST:event_jTClavBancFocusLost
-
-   
-    private void jTClavBancFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClavBancFocusGained
-
-   
-
-    }//GEN-LAST:event_jTClavBancFocusGained
-
-   
-    private void jTBancKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBancKeyPressed
-
-   
-
-    }//GEN-LAST:event_jTBancKeyPressed
-
-   
-    private void jTBancFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBancFocusLost
-
-   
-
-    }//GEN-LAST:event_jTBancFocusLost
-
-   
-    private void jTBancFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBancFocusGained
-
-   
-
-    }//GEN-LAST:event_jTBancFocusGained
-
-   
-    private void jTCtaContaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCtaContaKeyPressed
-
-   
-
-    }//GEN-LAST:event_jTCtaContaKeyPressed
-
-   
-    private void jTCtaContaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaContaFocusLost
-
-   
-
-    }//GEN-LAST:event_jTCtaContaFocusLost
-
-   
-    private void jTCtaContaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaContaFocusGained
-
-   
-
-    }//GEN-LAST:event_jTCtaContaFocusGained
-
-   
-    private void jTCtaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCtaKeyTyped
-
-   
-
-    }//GEN-LAST:event_jTCtaKeyTyped
-
-   
-    private void jTCtaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCtaKeyPressed
-
-
-
-    }//GEN-LAST:event_jTCtaKeyPressed
-
-
-    private void jTCtaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaFocusLost
-
-
-
-    }//GEN-LAST:event_jTCtaFocusLost
-
-
-    private void jTCtaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaFocusGained
-
-
-
-    }//GEN-LAST:event_jTCtaFocusGained
-
-    private void jComFormPagKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComFormPagKeyPressed
-
-
-    }//GEN-LAST:event_jComFormPagKeyPressed
-
-    private void jComFormPagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComFormPagActionPerformed
-
-        
-    }//GEN-LAST:event_jComFormPagActionPerformed
-
-    private void jComFormPagFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComFormPagFocusLost
-
-    }//GEN-LAST:event_jComFormPagFocusLost
-
     
-    private void jBDomKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBDomKeyPressed
-
     
-    }//GEN-LAST:event_jBDomKeyPressed
-
-    
-    private void jBDomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDomActionPerformed
-
-    
-        
-    }//GEN-LAST:event_jBDomActionPerformed
-
-    
-    private void jBDomMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDomMouseExited
-
-
-
-    }//GEN-LAST:event_jBDomMouseExited
-
-
-    private void jBDomMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDomMouseEntered
-
-        
-
-    }//GEN-LAST:event_jBDomMouseEntered
 
     private void jTTelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTTelActionPerformed
         // TODO add your handling code here:
@@ -2629,111 +2171,351 @@ public abstract class ClientJFrame extends BaseJFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_jTTelPer1ActionPerformed
 
+    private void jCCotOtrMonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCCotOtrMonKeyPressed
+
+    }//GEN-LAST:event_jCCotOtrMonKeyPressed
+
+    private void jCOtraMonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCOtraMonKeyPressed
+
+    }//GEN-LAST:event_jCOtraMonKeyPressed
+
+    private void jBVendKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBVendKeyPressed
+
+    }//GEN-LAST:event_jBVendKeyPressed
+
+    private void jBVendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVendActionPerformed
+
+    }//GEN-LAST:event_jBVendActionPerformed
+
+    private void jBVendMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVendMouseExited
+
+    }//GEN-LAST:event_jBVendMouseExited
+
+    private void jBVendMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVendMouseEntered
+
+    }//GEN-LAST:event_jBVendMouseEntered
+
+    private void jTVendKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTVendKeyTyped
+
+    }//GEN-LAST:event_jTVendKeyTyped
+
+    private void jTVendKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTVendKeyPressed
+
+    }//GEN-LAST:event_jTVendKeyPressed
+
+    private void jTVendFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTVendFocusLost
+
+    }//GEN-LAST:event_jTVendFocusLost
+
+    private void jTVendFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTVendFocusGained
+
+    }//GEN-LAST:event_jTVendFocusGained
+
+    private void jTCodEmpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodEmpKeyTyped
+
+    }//GEN-LAST:event_jTCodEmpKeyTyped
+
+    private void jTCodEmpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodEmpKeyPressed
+
+    }//GEN-LAST:event_jTCodEmpKeyPressed
+
+    private void jTCodEmpFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodEmpFocusLost
+
+    }//GEN-LAST:event_jTCodEmpFocusLost
+
+    private void jTCodEmpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodEmpFocusGained
+
+    }//GEN-LAST:event_jTCodEmpFocusGained
+
+    private void jComSerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComSerKeyPressed
+
+    }//GEN-LAST:event_jComSerKeyPressed
+
+    private void jComSerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComSerActionPerformed
+
+    }//GEN-LAST:event_jComSerActionPerformed
+
+    private void jComSerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComSerFocusLost
+
+    }//GEN-LAST:event_jComSerFocusLost
+
+    private void jTClasDescripFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasDescripFocusLost
+
+    }//GEN-LAST:event_jTClasDescripFocusLost
+
+    private void jTClasDescripFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasDescripFocusGained
+
+    }//GEN-LAST:event_jTClasDescripFocusGained
+
+    private void jBClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBClasKeyPressed
+
+    }//GEN-LAST:event_jBClasKeyPressed
+
+    private void jBClasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBClasActionPerformed
+
+    }//GEN-LAST:event_jBClasActionPerformed
+
+    private void jBClasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBClasMouseExited
+
+    }//GEN-LAST:event_jBClasMouseExited
+
+    private void jBClasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBClasMouseEntered
+
+    }//GEN-LAST:event_jBClasMouseEntered
+
+    private void jTClasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasKeyTyped
+
+    }//GEN-LAST:event_jTClasKeyTyped
+
+    private void jTClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasKeyPressed
+
+    }//GEN-LAST:event_jTClasKeyPressed
+
+    private void jTClasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasFocusLost
+
+    }//GEN-LAST:event_jTClasFocusLost
+
+    private void jTClasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasFocusGained
+
+    }//GEN-LAST:event_jTClasFocusGained
+
+    private void jComListKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComListKeyPressed
+
+    }//GEN-LAST:event_jComListKeyPressed
+
+    private void jComUsoCfdiKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComUsoCfdiKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComUsoCfdiKeyPressed
+
     private void jComUsoCfdiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComUsoCfdiActionPerformed
 
     }//GEN-LAST:event_jComUsoCfdiActionPerformed
 
-    private void jComSerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComSerActionPerformed
-        
-        
-        
-    }//GEN-LAST:event_jComSerActionPerformed
+    private void jComUsoCfdiFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComUsoCfdiFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComUsoCfdiFocusLost
+
+    private void jTCtaPredKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCtaPredKeyPressed
+
+    }//GEN-LAST:event_jTCtaPredKeyPressed
+
+    private void jTCtaPredFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaPredFocusLost
+
+    }//GEN-LAST:event_jTCtaPredFocusLost
+
+    private void jTCtaPredFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaPredFocusGained
+
+    }//GEN-LAST:event_jTCtaPredFocusGained
+
+    private void jTBeneficiarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBeneficiarioKeyPressed
+
+    }//GEN-LAST:event_jTBeneficiarioKeyPressed
+
+    private void jTLimCredKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTLimCredKeyTyped
+
+    }//GEN-LAST:event_jTLimCredKeyTyped
+
+    private void jTLimCredKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTLimCredKeyPressed
+
+    }//GEN-LAST:event_jTLimCredKeyPressed
+
+    private void jTLimCredFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTLimCredFocusLost
+
+    }//GEN-LAST:event_jTLimCredFocusLost
+
+    private void jTLimCredFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTLimCredFocusGained
+
+    }//GEN-LAST:event_jTLimCredFocusGained
+
+    private void jTDCredKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDCredKeyTyped
+
+    }//GEN-LAST:event_jTDCredKeyTyped
+
+    private void jTDCredKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDCredKeyPressed
+
+    }//GEN-LAST:event_jTDCredKeyPressed
+
+    private void jTDCredFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDCredFocusLost
+
+    }//GEN-LAST:event_jTDCredFocusLost
+
+    private void jTDCredFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDCredFocusGained
+
+    }//GEN-LAST:event_jTDCredFocusGained
+
+    private void jTDescKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDescKeyTyped
+
+    }//GEN-LAST:event_jTDescKeyTyped
+
+    private void jTDescKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDescKeyPressed
+
+    }//GEN-LAST:event_jTDescKeyPressed
+
+    private void jTDescFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescFocusLost
+
+    }//GEN-LAST:event_jTDescFocusLost
+
+    private void jTDescFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescFocusGained
+
+    }//GEN-LAST:event_jTDescFocusGained
+
+    private void jTClavBancKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClavBancKeyPressed
+
+    }//GEN-LAST:event_jTClavBancKeyPressed
+
+    private void jTClavBancFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClavBancFocusLost
+
+    }//GEN-LAST:event_jTClavBancFocusLost
+
+    private void jTClavBancFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClavBancFocusGained
+
+    }//GEN-LAST:event_jTClavBancFocusGained
+
+    private void jTBancKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBancKeyPressed
+
+    }//GEN-LAST:event_jTBancKeyPressed
+
+    private void jTBancFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBancFocusLost
+
+    }//GEN-LAST:event_jTBancFocusLost
+
+    private void jTBancFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBancFocusGained
+
+    }//GEN-LAST:event_jTBancFocusGained
+
+    private void jTCtaContaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCtaContaKeyPressed
+
+    }//GEN-LAST:event_jTCtaContaKeyPressed
+
+    private void jTCtaContaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaContaFocusLost
+
+    }//GEN-LAST:event_jTCtaContaFocusLost
+
+    private void jTCtaContaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaContaFocusGained
+
+    }//GEN-LAST:event_jTCtaContaFocusGained
+
+    private void jTCtaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCtaKeyTyped
+
+    }//GEN-LAST:event_jTCtaKeyTyped
+
+    private void jTCtaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCtaKeyPressed
+
+    }//GEN-LAST:event_jTCtaKeyPressed
+
+    private void jTCtaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaFocusLost
+
+    }//GEN-LAST:event_jTCtaFocusLost
+
+    private void jTCtaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCtaFocusGained
+
+    }//GEN-LAST:event_jTCtaFocusGained
+
+    private void jComFormPagKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComFormPagKeyPressed
+
+    }//GEN-LAST:event_jComFormPagKeyPressed
+
+    private void jComFormPagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComFormPagActionPerformed
+
+    }//GEN-LAST:event_jComFormPagActionPerformed
+
+    private void jComFormPagFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComFormPagFocusLost
+
+    }//GEN-LAST:event_jComFormPagFocusLost
             
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCP;
-    private javax.swing.JButton jBClas;
-    private javax.swing.JButton jBContac;
-    private javax.swing.JButton jBDom;
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBPais;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBVend;
-    private javax.swing.JCheckBox jCBloq;
-    private javax.swing.JCheckBox jCBloqCred;
-    private javax.swing.JCheckBox jCCotOtrMon;
-    private javax.swing.JCheckBox jCOtraMon;
-    private javax.swing.JComboBox jComFormPag;
-    private javax.swing.JComboBox jComList;
-    private javax.swing.JComboBox jComSer;
-    private javax.swing.JComboBox jComUsoCfdi;
-    private javax.swing.JLabel jLUsoCfdi;
+    protected javax.swing.JButton jBCP;
+    protected javax.swing.JButton jBClas;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBPais;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBVend;
+    protected javax.swing.JCheckBox jCBloq;
+    protected javax.swing.JCheckBox jCBloqCred;
+    protected javax.swing.JCheckBox jCCotOtrMon;
+    protected javax.swing.JCheckBox jCOtraMon;
+    protected javax.swing.JComboBox jComFormPag;
+    protected javax.swing.JComboBox jComList;
+    protected javax.swing.JComboBox jComSer;
+    protected javax.swing.JComboBox jComUsoCfdi;
+    protected javax.swing.JLabel jLUsoCfdi;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel11;
+    protected javax.swing.JLabel jLabel12;
+    protected javax.swing.JLabel jLabel14;
+    protected javax.swing.JLabel jLabel15;
+    protected javax.swing.JLabel jLabel17;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel29;
+    protected javax.swing.JLabel jLabel23;
+    protected javax.swing.JLabel jLabel24;
+    protected javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
+    protected javax.swing.JLabel jLabel30;
+    protected javax.swing.JLabel jLabel31;
+    protected javax.swing.JLabel jLabel32;
+    protected javax.swing.JLabel jLabel35;
+    protected javax.swing.JLabel jLabel36;
+    protected javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
+    protected javax.swing.JLabel jLabel42;
+    protected javax.swing.JLabel jLabel44;
+    protected javax.swing.JLabel jLabel46;
+    protected javax.swing.JLabel jLabel47;
+    protected javax.swing.JLabel jLabel48;
+    protected javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanel2;
+    protected javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRaFis;
     private javax.swing.JRadioButton jRaMor;
-    private javax.swing.JTextField jTBanc;
-    private javax.swing.JTextField jTBeneficiario;
+    protected javax.swing.JTextField jTBanc;
+    protected javax.swing.JTextField jTBeneficiario;
     private javax.swing.JTextField jTCP;
-    private javax.swing.JTextField jTCURP;
+    protected javax.swing.JTextField jTCURP;
     private javax.swing.JTextField jTCall;
     private javax.swing.JTextField jTCel;
     private javax.swing.JTextField jTCiu;
-    private javax.swing.JTextField jTClas;
-    private javax.swing.JTextField jTClasDescrip;
-    private javax.swing.JTextField jTClavBanc;
-    private javax.swing.JTextField jTCo1;
-    private javax.swing.JTextField jTCo2;
-    private javax.swing.JTextField jTCodCli;
-    private javax.swing.JTextField jTCodEmp;
+    protected javax.swing.JTextField jTClas;
+    protected javax.swing.JTextField jTClasDescrip;
+    protected javax.swing.JTextField jTClavBanc;
+    protected javax.swing.JTextField jTCo1;
+    protected javax.swing.JTextField jTCo2;
+    protected javax.swing.JTextField jTCodCli;
+    protected javax.swing.JTextField jTCodEmp;
     private javax.swing.JTextField jTCol;
-    private javax.swing.JTextField jTCta;
-    private javax.swing.JTextField jTCtaConta;
-    private javax.swing.JTextField jTCtaPred;
-    private javax.swing.JTextField jTDCred;
-    private javax.swing.JTextField jTDepGar;
-    private javax.swing.JTextField jTDesc;
+    protected javax.swing.JTextField jTCta;
+    protected javax.swing.JTextField jTCtaConta;
+    protected javax.swing.JTextField jTCtaPred;
+    protected javax.swing.JTextField jTDCred;
+    protected javax.swing.JTextField jTDepGar;
+    protected javax.swing.JTextField jTDesc;
     private javax.swing.JTextField jTEstad;
     private javax.swing.JTextField jTExten;
     private javax.swing.JTextField jTLada;
-    private javax.swing.JTextField jTLimCred;
+    protected javax.swing.JTextField jTLimCred;
     private javax.swing.JTextField jTNoExt;
     private javax.swing.JTextField jTNoInt;
-    private javax.swing.JTextField jTPag1;
+    protected javax.swing.JTextField jTPag1;
     private javax.swing.JTextField jTPai;
-    private javax.swing.JTextField jTRFC;
-    private javax.swing.JTextField jTRazSoc;
+    protected javax.swing.JTextField jTRFC;
+    protected javax.swing.JTextField jTRazSoc;
     private javax.swing.JTextField jTTel;
     private javax.swing.JTextField jTTelPer1;
-    private javax.swing.JTextField jTVend;
-    private javax.swing.JPanel pnlDatosBancarios;
-    private javax.swing.JPanel pnlDireccion;
-    private javax.swing.JPanel pnlTelefonos;
+    protected javax.swing.JTextField jTVend;
+    protected javax.swing.JPanel pnlDatosBancarios;
+    protected javax.swing.JPanel pnlDireccion;
+    protected javax.swing.JPanel pnlTelefonos;
     // End of variables declaration//GEN-END:variables
    
 }

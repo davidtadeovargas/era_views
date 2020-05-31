@@ -27,14 +27,12 @@ public abstract class KitsJFrame extends BaseJFrame
         jBMostT = new javax.swing.JButton();
         jBAbr = new javax.swing.JButton();
         jBDel = new javax.swing.JButton();
-        jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jBImp = new javax.swing.JButton();
         jBExpor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -70,10 +68,10 @@ public abstract class KitsJFrame extends BaseJFrame
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jTab);
 
-        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 850, 520));
+        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 850, 290));
 
         jBBusc.setBackground(new java.awt.Color(255, 255, 255));
         jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -81,11 +79,11 @@ public abstract class KitsJFrame extends BaseJFrame
         jBBusc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/busc5.png"))); // NOI18N
         jBBusc.setText("Buscar F3");
         jBBusc.setNextFocusableComponent(jTBusc);
-        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 150, 20));
+        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 150, 20));
 
         jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTBusc.setNextFocusableComponent(jBMostT);
-        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 550, 560, 20));
+        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 560, 20));
 
         jBMostT.setBackground(new java.awt.Color(255, 255, 255));
         jBMostT.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -94,7 +92,7 @@ public abstract class KitsJFrame extends BaseJFrame
         jBMostT.setText("Mostrar F4");
         jBMostT.setToolTipText("Mostrar Nuevamente todos los Registros");
         jBMostT.setNextFocusableComponent(jBDel);
-        jP1.add(jBMostT, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 550, 140, 20));
+        jP1.add(jBMostT, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 320, 140, 20));
 
         jBAbr.setBackground(new java.awt.Color(255, 255, 255));
         jBAbr.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -115,18 +113,6 @@ public abstract class KitsJFrame extends BaseJFrame
         jBDel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBDel.setNextFocusableComponent(jBAbr);
         jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 30, 120, 30));
-
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 12, 130, 18));
 
         jBImp.setBackground(new java.awt.Color(255, 255, 255));
         jBImp.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -160,8 +146,8 @@ public abstract class KitsJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 586, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -172,19 +158,17 @@ public abstract class KitsJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBAbr;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBExpor;
-    private javax.swing.JButton jBImp;
-    private javax.swing.JButton jBMostT;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JLabel jLabel1;
+    protected javax.swing.JButton jBAbr;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBExpor;
+    protected javax.swing.JButton jBImp;
+    protected javax.swing.JButton jBMostT;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

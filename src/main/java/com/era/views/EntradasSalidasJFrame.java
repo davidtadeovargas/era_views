@@ -38,7 +38,6 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
         btnSalir = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
         txtBuscar = new javax.swing.JTextField();
-        jBAyu = new javax.swing.JButton();
         btnMostrar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblPartidas = new javax.swing.JTable();
@@ -65,17 +64,16 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
         btnSalida.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnSalida.setForeground(new java.awt.Color(0, 102, 0));
         btnSalida.setText("Salida");
-        
+
         btnEntrada.setBackground(new java.awt.Color(255, 255, 255));
         btnEntrada.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnEntrada.setForeground(new java.awt.Color(0, 102, 0));
         btnEntrada.setText("Entrada");
-        
+
         btnEditar.setBackground(new java.awt.Color(255, 255, 255));
         btnEditar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(0, 102, 0));
         btnEditar.setText("Editar");
-        
 
         btnVer.setBackground(new java.awt.Color(255, 255, 255));
         btnVer.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -96,12 +94,11 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
         btnEliminar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(0, 102, 0));
         btnEliminar.setText("Eliminar");
-        
+
         btnSalir.setBackground(new java.awt.Color(255, 255, 255));
         btnSalir.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(0, 102, 0));
         btnSalir.setText("Salir");
-        
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -109,14 +106,14 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnEntrada, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnGenerarPdf, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                     .addComponent(btnVerPdf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnEliminar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnVer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSalida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(5, 5, 5))
         );
         jPanel2Layout.setVerticalGroup(
@@ -148,9 +145,6 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
 
         txtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
 
-        jBAyu.setBackground(new java.awt.Color(0, 153, 153));
-        jBAyu.setToolTipText("Ayuda de búsqueda avanzada");
-
         btnMostrar.setBackground(new java.awt.Color(255, 255, 255));
         btnMostrar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnMostrar.setForeground(new java.awt.Color(0, 102, 0));
@@ -179,11 +173,9 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnBuscar)
-                                .addGap(0, 0, 0)
-                                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jBAyu, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtBuscar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnMostrar))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(5, 5, 5))
@@ -202,9 +194,9 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBAyu, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(10, 10, 10)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -234,23 +226,22 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnEliminar;
-    private javax.swing.JButton btnEntrada;
-    private javax.swing.JButton btnGenerarPdf;
-    private javax.swing.JButton btnMostrar;
-    private javax.swing.JButton btnSalida;
-    private javax.swing.JButton btnSalir;
-    private javax.swing.JButton btnVer;
-    private javax.swing.JButton btnVerPdf;
-    private javax.swing.JButton jBAyu;
+    protected javax.swing.JButton btnBuscar;
+    protected javax.swing.JButton btnEditar;
+    protected javax.swing.JButton btnEliminar;
+    protected javax.swing.JButton btnEntrada;
+    protected javax.swing.JButton btnGenerarPdf;
+    protected javax.swing.JButton btnMostrar;
+    protected javax.swing.JButton btnSalida;
+    protected javax.swing.JButton btnSalir;
+    protected javax.swing.JButton btnVer;
+    protected javax.swing.JButton btnVerPdf;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JPanel jPanel2;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tblEncabezados;
     private javax.swing.JTable tblPartidas;
-    private javax.swing.JTextField txtBuscar;
+    protected javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
 }

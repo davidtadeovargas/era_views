@@ -87,7 +87,6 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBPrec = new javax.swing.JButton();
         jLabel36 = new javax.swing.JLabel();
         jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jCServ = new javax.swing.JCheckBox();
         jTImpueVal = new javax.swing.JTextField();
         jBVeGran = new javax.swing.JButton();
@@ -99,7 +98,6 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBCompa = new javax.swing.JButton();
         jBPart = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
-        jBGranDescrip = new javax.swing.JButton();
         jBMasSer = new javax.swing.JButton();
         jBConsec = new javax.swing.JButton();
         jBConsecU = new javax.swing.JButton();
@@ -794,7 +792,7 @@ public abstract class ProdsJFrame extends BaseJFrame
                 jBBuscKeyPressed(evt);
             }
         });
-        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 130, 19));
+        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 130, 19));
 
         jTBusc.setNextFocusableComponent(jBMosT);
         jTBusc.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -810,7 +808,7 @@ public abstract class ProdsJFrame extends BaseJFrame
                 jTBuscKeyPressed(evt);
             }
         });
-        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, 180, -1));
+        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, 120, -1));
 
         jBMosT.setBackground(new java.awt.Color(255, 255, 255));
         jBMosT.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -836,7 +834,7 @@ public abstract class ProdsJFrame extends BaseJFrame
                 jBMosTKeyPressed(evt);
             }
         });
-        jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 230, 120, 19));
+        jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 130, 19));
 
         jCComp.setBackground(new java.awt.Color(255, 255, 255));
         jCComp.setText("Kit");
@@ -1161,32 +1159,6 @@ public abstract class ProdsJFrame extends BaseJFrame
         });
         jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 20, 20));
 
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jBTod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBTodMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBTodMouseExited(evt);
-            }
-        });
-        jBTod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTodActionPerformed(evt);
-            }
-        });
-        jBTod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTodKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 130, 18));
-
         jCServ.setBackground(new java.awt.Color(255, 255, 255));
         jCServ.setText("Servicio");
         jCServ.setNextFocusableComponent(jCInvent);
@@ -1325,20 +1297,6 @@ public abstract class ProdsJFrame extends BaseJFrame
 
         jLabel47.setText("Existencia general:");
         jP1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 590, 140, -1));
-
-        jBGranDescrip.setBackground(new java.awt.Color(0, 153, 153));
-        jBGranDescrip.setToolTipText("Ver/Modificar Descripción en Grande");
-        jBGranDescrip.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBGranDescripActionPerformed(evt);
-            }
-        });
-        jBGranDescrip.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBGranDescripKeyPressed(evt);
-            }
-        });
-        jP1.add(jBGranDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 10, 20));
 
         jBMasSer.setBackground(new java.awt.Color(255, 255, 255));
         jBMasSer.setText("+");
@@ -1634,13 +1592,13 @@ public abstract class ProdsJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 877, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -2286,17 +2244,7 @@ public abstract class ProdsJFrame extends BaseJFrame
 
     
                 
-    private void jBTodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTodActionPerformed
     
-
-    }//GEN-LAST:event_jBTodActionPerformed
-
-    
-    private void jBTodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTodKeyPressed
-
-    
-    }//GEN-LAST:event_jBTodKeyPressed
-
         
     private void jCServKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCServKeyPressed
         
@@ -2403,11 +2351,6 @@ public abstract class ProdsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBMosTMouseEntered
 
         
-    private void jBTodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseEntered
-        
-        
-    }//GEN-LAST:event_jBTodMouseEntered
-
         
     private void jBGuarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGuarMouseEntered
         
@@ -2666,17 +2609,7 @@ public abstract class ProdsJFrame extends BaseJFrame
     
     
     
-    private void jBGranDescripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGranDescripActionPerformed
-
         
-    }//GEN-LAST:event_jBGranDescripActionPerformed
-
-        
-    private void jBGranDescripKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBGranDescripKeyPressed
-
-    
-    }//GEN-LAST:event_jBGranDescripKeyPressed
-
     
            
     private void jBMasSerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBMasSerKeyPressed
@@ -2735,11 +2668,6 @@ public abstract class ProdsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBConsecActionPerformed
 
         
-    private void jBTodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseExited
-        
-        
-    }//GEN-LAST:event_jBTodMouseExited
-
         
     private void jBConsecUMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBConsecUMouseEntered
             
@@ -2931,103 +2859,101 @@ public abstract class ProdsJFrame extends BaseJFrame
             
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton button_impuestos;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBBusc2;
-    private javax.swing.JButton jBCargF;
-    private javax.swing.JButton jBCargImg;
-    private javax.swing.JButton jBClaveSat;
-    private javax.swing.JButton jBCompa;
-    private javax.swing.JButton jBComps;
-    private javax.swing.JButton jBConsec;
-    private javax.swing.JButton jBConsecU;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBDelF;
-    private javax.swing.JButton jBDelImg;
-    private javax.swing.JButton jBExisAlma;
-    private javax.swing.JButton jBFTec;
-    private javax.swing.JButton jBGen;
-    private javax.swing.JButton jBGranDescrip;
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBLim;
-    public javax.swing.JButton jBLim1;
-    private javax.swing.JButton jBMasSer;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBPart;
-    private javax.swing.JButton jBPrec;
-    private javax.swing.JButton jBProd;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBVeGran;
-    private javax.swing.JCheckBox jCBajCost;
-    private javax.swing.JCheckBox jCComp;
-    private javax.swing.JCheckBox jCEsParaVent;
-    private javax.swing.JCheckBox jCInvent;
-    private javax.swing.JCheckBox jCMostrarXml;
-    private javax.swing.JCheckBox jCNoSer;
-    private javax.swing.JCheckBox jCNoSolMaxMin;
-    private javax.swing.JCheckBox jCPed;
-    private javax.swing.JCheckBox jCServ;
-    private javax.swing.JComboBox jComAna;
-    private javax.swing.JComboBox jComImp;
-    private javax.swing.JComboBox<String> jComLin;
-    private javax.swing.JComboBox jComLug;
-    private javax.swing.JComboBox jComMeds;
-    private javax.swing.JComboBox jComUAd;
-    private javax.swing.JComboBox jComUni;
-    private javax.swing.JLabel jLClaveSat;
+    protected javax.swing.JButton button_impuestos;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBBusc2;
+    protected javax.swing.JButton jBCargF;
+    protected javax.swing.JButton jBCargImg;
+    protected javax.swing.JButton jBClaveSat;
+    protected javax.swing.JButton jBCompa;
+    protected javax.swing.JButton jBComps;
+    protected javax.swing.JButton jBConsec;
+    protected javax.swing.JButton jBConsecU;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBDelF;
+    protected javax.swing.JButton jBDelImg;
+    protected javax.swing.JButton jBExisAlma;
+    protected javax.swing.JButton jBFTec;
+    protected javax.swing.JButton jBGen;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBLim;
+    protected javax.swing.JButton jBLim1;
+    protected javax.swing.JButton jBMasSer;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBPart;
+    protected javax.swing.JButton jBPrec;
+    protected javax.swing.JButton jBProd;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBTab1;
+    protected javax.swing.JButton jBVeGran;
+    protected javax.swing.JCheckBox jCBajCost;
+    protected javax.swing.JCheckBox jCComp;
+    protected javax.swing.JCheckBox jCEsParaVent;
+    protected javax.swing.JCheckBox jCInvent;
+    protected javax.swing.JCheckBox jCMostrarXml;
+    protected javax.swing.JCheckBox jCNoSer;
+    protected javax.swing.JCheckBox jCNoSolMaxMin;
+    protected javax.swing.JCheckBox jCPed;
+    protected javax.swing.JCheckBox jCServ;
+    protected javax.swing.JComboBox jComAna;
+    protected javax.swing.JComboBox jComImp;
+    protected javax.swing.JComboBox<String> jComLin;
+    protected javax.swing.JComboBox jComLug;
+    protected javax.swing.JComboBox jComMeds;
+    protected javax.swing.JComboBox jComUAd;
+    protected javax.swing.JComboBox jComUni;
+    protected javax.swing.JLabel jLClaveSat;
     private javax.swing.JLabel jLImg;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel13;
+    protected javax.swing.JLabel jLabel15;
+    protected javax.swing.JLabel jLabel18;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel23;
+    protected javax.swing.JLabel jLabel25;
+    protected javax.swing.JLabel jLabel28;
+    protected javax.swing.JLabel jLabel29;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel30;
+    protected javax.swing.JLabel jLabel33;
+    protected javax.swing.JLabel jLabel35;
+    protected javax.swing.JLabel jLabel36;
+    protected javax.swing.JLabel jLabel37;
+    protected javax.swing.JLabel jLabel44;
+    protected javax.swing.JLabel jLabel47;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jP1;
     private javax.swing.JPanel jPanImg;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRPEPS;
-    private javax.swing.JRadioButton jRProm;
-    private javax.swing.JRadioButton jRUEPS;
-    private javax.swing.JRadioButton jRUltCost;
-    private javax.swing.JScrollPane jSImg;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    protected javax.swing.JPanel jPanel2;
+    protected javax.swing.JRadioButton jRPEPS;
+    protected javax.swing.JRadioButton jRProm;
+    protected javax.swing.JRadioButton jRUEPS;
+    protected javax.swing.JRadioButton jRUltCost;
+    protected javax.swing.JScrollPane jSImg;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTADescrip;
     private javax.swing.JTextArea jTAInfor;
-    private javax.swing.JTextField jTAlmaG;
-    private javax.swing.JTextField jTAnaq;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTClaveSat;
-    private javax.swing.JTextField jTCodProv;
-    private javax.swing.JTextField jTExist;
-    private javax.swing.JTextField jTImpueVal;
-    private javax.swing.JTextField jTLin;
-    private javax.swing.JTextField jTLug;
-    private javax.swing.JTextField jTMax;
-    private javax.swing.JTextField jTMedMan;
-    private javax.swing.JTextField jTMeds;
-    private javax.swing.JTextField jTMin;
-    private javax.swing.JTextField jTNom;
-    private javax.swing.JTextField jTProd;
-    private javax.swing.JTextField jTUbi;
-    private javax.swing.JTextField jTUnid;
+    protected javax.swing.JTextField jTAlmaG;
+    protected javax.swing.JTextField jTAnaq;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTClaveSat;
+    protected javax.swing.JTextField jTCodProv;
+    protected javax.swing.JTextField jTExist;
+    protected javax.swing.JTextField jTImpueVal;
+    protected javax.swing.JTextField jTLin;
+    protected javax.swing.JTextField jTLug;
+    protected javax.swing.JTextField jTMax;
+    protected javax.swing.JTextField jTMedMan;
+    protected javax.swing.JTextField jTMeds;
+    protected javax.swing.JTextField jTMin;
+    protected javax.swing.JTextField jTNom;
+    protected javax.swing.JTextField jTProd;
+    protected javax.swing.JTextField jTUbi;
+    protected javax.swing.JTextField jTUnid;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

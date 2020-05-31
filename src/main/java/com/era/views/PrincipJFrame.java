@@ -371,7 +371,7 @@ public abstract class PrincipJFrame extends BaseJFrame {
 
         jMLogProd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/log2.png"))); // NOI18N
         jMLogProd.setMnemonic('l');
-        jMLogProd.setText("Log productos");
+        jMLogProd.setText("Logs generales");
         jMenLogs.add(jMLogProd);
 
         jMMSis.add(jMenLogs);

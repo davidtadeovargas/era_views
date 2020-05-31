@@ -35,7 +35,6 @@ public abstract class SelCorrJFrame extends BaseJFrame
         jBEnvi = new javax.swing.JButton();
         jCGua = new javax.swing.JCheckBox();
         jLDat = new javax.swing.JLabel();
-        jBTab1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -133,10 +132,6 @@ public abstract class SelCorrJFrame extends BaseJFrame
         jLDat.setText("Datos de documento:");
         jP1.add(jLDat, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 530, -1));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 10, 20));
-
         getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 210));
 
         pack();
@@ -147,23 +142,22 @@ public abstract class SelCorrJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBEnvi;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JCheckBox jCCo1;
-    private javax.swing.JCheckBox jCCo2;
-    private javax.swing.JCheckBox jCCo3;
-    private javax.swing.JCheckBox jCGua;
-    private javax.swing.JLabel jLDat;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    protected javax.swing.JButton jBEnvi;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JCheckBox jCCo1;
+    protected javax.swing.JCheckBox jCCo2;
+    protected javax.swing.JCheckBox jCCo3;
+    protected javax.swing.JCheckBox jCGua;
+    protected javax.swing.JLabel jLDat;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jP1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTCo1;
-    private javax.swing.JTextField jTCo2;
-    private javax.swing.JTextField jTCo3;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTCo1;
+    protected javax.swing.JTextField jTCo2;
+    protected javax.swing.JTextField jTCo3;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

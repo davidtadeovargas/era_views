@@ -6,7 +6,7 @@ import javax.swing.table.TableRowSorter;
 
 
 
-public abstract class BuscVtaJFrame extends javax.swing.JFrame
+public abstract class BuscVtaJFrame extends BaseJFrame
 {
     public BuscVtaJFrame(final String idTextTitleWindow) 
     {           
@@ -335,12 +335,12 @@ public abstract class BuscVtaJFrame extends javax.swing.JFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCarg;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JLabel jLTot;
-    private javax.swing.JLabel jLabel1;
+    protected javax.swing.JButton jBCarg;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLTot;
+    protected javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

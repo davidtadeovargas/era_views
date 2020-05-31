@@ -39,8 +39,6 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jTExist = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jComUnid = new javax.swing.JComboBox();
         jLabel13 = new javax.swing.JLabel();
         jTUnid = new javax.swing.JTextField();
@@ -72,7 +70,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -87,7 +85,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBSal.setNextFocusableComponent(jTProd);
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 260, 120, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 240, 120, 30));
 
         jBTransfe.setBackground(new java.awt.Color(255, 255, 255));
         jBTransfe.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -97,7 +95,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jBTransfe.setToolTipText("Traspasar entra Almacén");
         jBTransfe.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBTransfe.setNextFocusableComponent(jBSal);
-        jP1.add(jBTransfe, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 230, 120, 30));
+        jP1.add(jBTransfe, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 210, 120, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Traspasos:");
@@ -121,7 +119,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jTab);
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 840, 230));
@@ -204,18 +202,6 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jLabel11.setText("Descripción:");
         jP1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 150, -1));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Seleccionar Todos los Elementos de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 130, 20));
-
         jComUnid.setNextFocusableComponent(jTUnid);
         jP1.add(jComUnid, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 90, 20));
 
@@ -295,6 +281,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
 
         jBconfirmar.setBackground(new java.awt.Color(255, 255, 255));
         jBconfirmar.setText("confirmar");
+
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 0, 1));
 
         jLabel3.setText("Cantidad a recibir:");
@@ -334,7 +321,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 102, 0));
         jButton1.setText("GenerarReporte");
-        jP1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 290, 120, 30));
+        jP1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, 120, 30));
         jP1.add(jTUsr, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 130, -1));
 
         jLabel19.setText("Usuario:");
@@ -349,12 +336,11 @@ public abstract class TraspasJFrame extends BaseJFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jP1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE)
+            .addComponent(jP1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
         );
 
         pack();
@@ -363,59 +349,57 @@ public abstract class TraspasJFrame extends BaseJFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnUsuario;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBConcep;
-    private javax.swing.JButton jBExisAlma;
-    private javax.swing.JButton jBExisAlma1;
-    private javax.swing.JButton jBMosTod;
-    private javax.swing.JButton jBPrec1;
-    private javax.swing.JButton jBProd;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBTransfe;
-    private javax.swing.JButton jBconfirmar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComAlma;
-    private javax.swing.JComboBox jComAlma2;
-    private javax.swing.JComboBox jComColo;
-    private javax.swing.JComboBox jComTall;
-    private javax.swing.JComboBox jComUnid;
-    private javax.swing.JLabel jLImg;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    protected javax.swing.JButton btnUsuario;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBConcep;
+    protected javax.swing.JButton jBExisAlma;
+    protected javax.swing.JButton jBExisAlma1;
+    protected javax.swing.JButton jBMosTod;
+    protected javax.swing.JButton jBPrec1;
+    protected javax.swing.JButton jBProd;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBTransfe;
+    protected javax.swing.JButton jBconfirmar;
+    protected javax.swing.JButton jButton1;
+    protected javax.swing.JComboBox jComAlma;
+    protected javax.swing.JComboBox jComAlma2;
+    protected javax.swing.JComboBox jComColo;
+    protected javax.swing.JComboBox jComTall;
+    protected javax.swing.JComboBox jComUnid;
+    protected javax.swing.JLabel jLImg;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel10;
+    protected javax.swing.JLabel jLabel11;
+    protected javax.swing.JLabel jLabel13;
+    protected javax.swing.JLabel jLabel14;
+    protected javax.swing.JLabel jLabel15;
+    protected javax.swing.JLabel jLabel16;
+    protected javax.swing.JLabel jLabel19;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTCant;
-    private javax.swing.JTextField jTColo;
-    private javax.swing.JTextField jTComenSer;
-    private javax.swing.JTextField jTConcep;
-    private javax.swing.JTextField jTDescrip;
-    private javax.swing.JTextField jTDescripAlma;
-    private javax.swing.JTextField jTDescripAlma2;
-    private javax.swing.JTextField jTDescripConcep;
-    private javax.swing.JTextField jTExist;
-    private javax.swing.JTextField jTProd;
-    private javax.swing.JTextField jTTall;
-    private javax.swing.JTextField jTUnid;
-    private javax.swing.JTextField jTUsr;
+    protected javax.swing.JPanel jPanel1;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JSpinner jSpinner1;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTCant;
+    protected javax.swing.JTextField jTColo;
+    protected javax.swing.JTextField jTComenSer;
+    protected javax.swing.JTextField jTConcep;
+    protected javax.swing.JTextField jTDescrip;
+    protected javax.swing.JTextField jTDescripAlma;
+    protected javax.swing.JTextField jTDescripAlma2;
+    protected javax.swing.JTextField jTDescripConcep;
+    protected javax.swing.JTextField jTExist;
+    protected javax.swing.JTextField jTProd;
+    protected javax.swing.JTextField jTTall;
+    protected javax.swing.JTextField jTUnid;
+    protected javax.swing.JTextField jTUsr;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

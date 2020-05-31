@@ -63,8 +63,6 @@ public abstract class CorrElecsJFrame extends BaseJFrame
         jTCuerFac = new javax.swing.JTextField();
         jTCuerCot = new javax.swing.JTextField();
         jTCuerContr = new javax.swing.JTextField();
-        jBTabG = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -74,11 +72,10 @@ public abstract class CorrElecsJFrame extends BaseJFrame
         jTAsunCXC1 = new javax.swing.JTextField();
         jTCuerCXC1 = new javax.swing.JTextField();
         jTCuerCXC2 = new javax.swing.JTextField();
-        jLAyu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -303,18 +300,6 @@ public abstract class CorrElecsJFrame extends BaseJFrame
         jTCuerContr.setNextFocusableComponent(jTAsunOrd);
         jPan1.add(jTCuerContr, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 280, 20));
 
-        jBTabG.setBackground(new java.awt.Color(0, 153, 153));
-        jBTabG.setToolTipText("Mostrar Tabla en Grande");
-        jPan1.add(jBTabG, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jPan1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 322, 130, 18));
-
         jLabel13.setText("*Asunto/Cuerpo Orden Compra:");
         jPan1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 200, 20));
 
@@ -358,12 +343,6 @@ public abstract class CorrElecsJFrame extends BaseJFrame
 
         jP1.add(jTabPan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 580));
 
-        jLAyu.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLAyu.setForeground(new java.awt.Color(0, 51, 204));
-        jLAyu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLAyu.setText("http://Ayuda en Lìnea");
-        jP1.add(jLAyu, new org.netbeans.lib.awtextra.AbsoluteConstraints(616, 590, 150, -1));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -388,59 +367,56 @@ public abstract class CorrElecsJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBGuar;
-    private javax.swing.JButton jBLim;
-    private javax.swing.JButton jBMosrT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBProbCon;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTabG;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBUsr;
-    private javax.swing.JCheckBox jCActSSLLog;
-    private javax.swing.JLabel jLAyu;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBGuar;
+    protected javax.swing.JButton jBLim;
+    protected javax.swing.JButton jBMosrT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBProbCon;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBUsr;
+    protected javax.swing.JCheckBox jCActSSLLog;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel10;
+    protected javax.swing.JLabel jLabel11;
+    protected javax.swing.JLabel jLabel12;
+    protected javax.swing.JLabel jLabel13;
+    protected javax.swing.JLabel jLabel14;
+    protected javax.swing.JLabel jLabel15;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPasswordField jPContra;
+    protected javax.swing.JPasswordField jPContra;
     private javax.swing.JPanel jPan1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTAsunCXC1;
-    private javax.swing.JTextField jTAsunCXC2;
-    private javax.swing.JTextField jTAsunCXC3;
-    private javax.swing.JTextField jTAsunContra;
-    private javax.swing.JTextField jTAsunCot;
-    private javax.swing.JTextField jTAsunFac;
-    private javax.swing.JTextField jTAsunOrd;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTCorAlter;
-    private javax.swing.JTextField jTCuerCXC1;
-    private javax.swing.JTextField jTCuerCXC2;
-    private javax.swing.JTextField jTCuerCXC3;
-    private javax.swing.JTextField jTCuerContr;
-    private javax.swing.JTextField jTCuerCot;
-    private javax.swing.JTextField jTCuerFac;
-    private javax.swing.JTextField jTCuerOrd;
-    private javax.swing.JTextField jTEsta;
-    private javax.swing.JTextField jTID;
-    private javax.swing.JTextField jTPortSMTP;
-    private javax.swing.JTextField jTServSMTPSal;
-    private javax.swing.JTextField jTUsr;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTAsunCXC1;
+    protected javax.swing.JTextField jTAsunCXC2;
+    protected javax.swing.JTextField jTAsunCXC3;
+    protected javax.swing.JTextField jTAsunContra;
+    protected javax.swing.JTextField jTAsunCot;
+    protected javax.swing.JTextField jTAsunFac;
+    protected javax.swing.JTextField jTAsunOrd;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTCorAlter;
+    protected javax.swing.JTextField jTCuerCXC1;
+    protected javax.swing.JTextField jTCuerCXC2;
+    protected javax.swing.JTextField jTCuerCXC3;
+    protected javax.swing.JTextField jTCuerContr;
+    protected javax.swing.JTextField jTCuerCot;
+    protected javax.swing.JTextField jTCuerFac;
+    protected javax.swing.JTextField jTCuerOrd;
+    protected javax.swing.JTextField jTEsta;
+    protected javax.swing.JTextField jTID;
+    protected javax.swing.JTextField jTPortSMTP;
+    protected javax.swing.JTextField jTServSMTPSal;
+    protected javax.swing.JTextField jTUsr;
     private javax.swing.JTable jTab;
     private javax.swing.JTabbedPane jTabPan1;
     // End of variables declaration//GEN-END:variables

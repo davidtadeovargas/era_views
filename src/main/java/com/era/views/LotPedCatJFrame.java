@@ -353,13 +353,13 @@ public abstract class LotPedCatJFrame extends BaseJFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

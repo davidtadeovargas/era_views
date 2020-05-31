@@ -96,6 +96,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
+
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jBNewVta.setBackground(new java.awt.Color(255, 255, 255));
@@ -235,7 +236,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jScrollProds.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollProds.setAutoscrolls(true);
         jScrollProds.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        
+
         jPanProds.setAutoscrolls(true);
         jPanProds.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanProds.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
@@ -319,6 +320,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jPanel1.add(jBVeGran, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 720, 200, 30));
 
         jPanImg.setBackground(new java.awt.Color(255, 255, 204));
+
         javax.swing.GroupLayout jPanImgLayout = new javax.swing.GroupLayout(jPanImg);
         jPanImg.setLayout(jPanImgLayout);
         jPanImgLayout.setHorizontalGroup(
@@ -341,7 +343,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
 
         jPCon.setBackground(new java.awt.Color(255, 255, 255));
         jPCon.setFocusable(false);
-        
+
         jBLed.setBackground(new java.awt.Color(255, 255, 255));
         jBLed.setForeground(new java.awt.Color(255, 255, 255));
         jBLed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/concon.png"))); // NOI18N
@@ -485,22 +487,22 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jB1;
-    private javax.swing.JButton jBBuscGral;
-    private javax.swing.JButton jBCli;
-    private javax.swing.JButton jBCob;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBLed;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBNewEmp;
-    private javax.swing.JButton jBNewVta;
-    private javax.swing.JButton jBProds;
-    private javax.swing.JButton jBSal;
-    public javax.swing.JButton jBScann;
-    private javax.swing.JButton jBSincronizar;
-    private javax.swing.JButton jBTecla;
-    private javax.swing.JButton jBVeGran;
-    private javax.swing.JComboBox jComUnid;
+    protected javax.swing.JButton jB1;
+    protected javax.swing.JButton jBBuscGral;
+    protected javax.swing.JButton jBCli;
+    protected javax.swing.JButton jBCob;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBLed;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBNewEmp;
+    protected javax.swing.JButton jBNewVta;
+    protected javax.swing.JButton jBProds;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBScann;
+    protected javax.swing.JButton jBSincronizar;
+    protected javax.swing.JButton jBTecla;
+    protected javax.swing.JButton jBVeGran;
+    protected javax.swing.JComboBox jComUnid;
     private javax.swing.JLabel jLImg;
     private javax.swing.JLabel jLTipVta;
     private javax.swing.JLabel jLabel2;
@@ -508,56 +510,56 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPCon;
-    private javax.swing.JPanel jPanImg;
-    private javax.swing.JPanel jPanProds;
+    protected javax.swing.JPanel jPCon;
+    protected javax.swing.JPanel jPanImg;
+    protected javax.swing.JPanel jPanProds;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanelLin;
+    protected javax.swing.JPanel jPanelLin;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPaneLin;
     private javax.swing.JScrollPane jScrollProds;
     private javax.swing.JTextField jTAlma;
-    private javax.swing.JTextField jTBuscGral;
+    protected javax.swing.JTextField jTBuscGral;
     private javax.swing.JTextField jTCadu;
-    private javax.swing.JTextField jTCant;
+    protected javax.swing.JTextField jTCant;
     private javax.swing.JTextField jTCantLot;
-    private javax.swing.JTextField jTCli;
+    protected javax.swing.JTextField jTCli;
     private javax.swing.JTextField jTCodProd;
     private javax.swing.JTextField jTColo;
     private javax.swing.JTextField jTColoAut;
     private javax.swing.JTextField jTComenSer;
-    private javax.swing.JTextField jTDesc;
+    protected javax.swing.JTextField jTDesc;
     private javax.swing.JTextField jTDirOfi;
     private javax.swing.JTextField jTDirPart;
     private javax.swing.JTextField jTFec;
     private javax.swing.JTextField jTGara;
     private javax.swing.JTextField jTId;
     private javax.swing.JTextField jTImpo;
-    private javax.swing.JTextField jTImpue;
+    protected javax.swing.JTextField jTImpue;
     private javax.swing.JTextField jTList;
     private javax.swing.JTextField jTLot;
     private javax.swing.JTextField jTMarc;
     private javax.swing.JTextField jTMod;
-    private javax.swing.JTextField jTMon;
+    protected javax.swing.JTextField jTMon;
     private javax.swing.JTextField jTNom;
-    private javax.swing.JTextField jTNomb;
+    protected javax.swing.JTextField jTNomb;
     private javax.swing.JTextField jTNumLic;
     private javax.swing.JTextField jTPedimen;
     private javax.swing.JTextField jTPlacs;
-    private javax.swing.JTextField jTProd;
+    protected javax.swing.JTextField jTProd;
     private javax.swing.JTextField jTQtyP;
     private javax.swing.JTextField jTRecib;
     private javax.swing.JTextField jTSer;
     private javax.swing.JTextField jTSerProd;
-    private javax.swing.JTextField jTSubTot;
+    protected javax.swing.JTextField jTSubTot;
     private javax.swing.JTextField jTTall;
     private javax.swing.JTextField jTTarCirc;
     private javax.swing.JTextField jTTel;
     private javax.swing.JTextField jTTelOfi;
-    private javax.swing.JTextField jTTot;
+    protected javax.swing.JTextField jTTot;
     private javax.swing.JTextField jTTotCost;
-    private javax.swing.JTextField jTTotDesc;
-    private javax.swing.JTable jTab;
+    protected javax.swing.JTextField jTTotDesc;
+    protected javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class PtoVtaTou extends javax.swing.JFrame */

@@ -179,21 +179,21 @@ public class GeneralCatalogsJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JComboBox jComboBox1;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTCod;
-    private javax.swing.JTextField jTDescrip;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTCod;
+    protected javax.swing.JTextField jTDescrip;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

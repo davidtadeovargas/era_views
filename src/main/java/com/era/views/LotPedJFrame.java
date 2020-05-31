@@ -30,9 +30,8 @@ public abstract class LotPedJFrame extends BaseJFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
-        
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
@@ -42,8 +41,6 @@ public abstract class LotPedJFrame extends BaseJFrame
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
-                
         jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 280, 110, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -82,9 +79,6 @@ public abstract class LotPedJFrame extends BaseJFrame
         jBBusc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/busc5.png"))); // NOI18N
         jBBusc.setText("Buscar F3");
         jBBusc.setNextFocusableComponent(jTBusc);
-        
-        
-        
         jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 140, 20));
 
         jBMosT.setBackground(new java.awt.Color(255, 255, 255));
@@ -93,14 +87,11 @@ public abstract class LotPedJFrame extends BaseJFrame
         jBMosT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
         jBMosT.setText("Mostrar F4");
         jBMosT.setToolTipText("Mostrar Nuevamente todos los Registros");
-        jBMosT.setNextFocusableComponent(jBCarg);        
-        
+        jBMosT.setNextFocusableComponent(jBCarg);
         jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 140, 20));
 
         jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTBusc.setNextFocusableComponent(jBMosT);
-        
-        
         jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 360, 20));
 
         jBCarg.setBackground(new java.awt.Color(255, 255, 255));
@@ -112,9 +103,6 @@ public abstract class LotPedJFrame extends BaseJFrame
         jBCarg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBCarg.setName(""); // NOI18N
         jBCarg.setNextFocusableComponent(jBSal);
-        
-        
-        
         jP1.add(jBCarg, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, 110, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,14 +126,14 @@ public abstract class LotPedJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBCarg;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBCarg;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

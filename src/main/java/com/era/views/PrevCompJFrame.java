@@ -35,9 +35,6 @@ public abstract class PrevCompJFrame extends BaseJFrame
         jTBusc = new javax.swing.JTextField();
         jBBusc = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jBTab1 = new javax.swing.JButton();
-        jBTab2 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jLNot = new javax.swing.JLabel();
         jLNotCli = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -205,25 +202,6 @@ public abstract class PrevCompJFrame extends BaseJFrame
         jP1.add(jLabel2);
         jLabel2.setBounds(20, 270, 170, 17);
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab1);
-        jBTab1.setBounds(10, 30, 10, 20);
-
-        jBTab2.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab2.setToolTipText("Mostrar Tabla en Grande");
-        jP1.add(jBTab2);
-        jBTab2.setBounds(10, 290, 10, 20);
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab1);
-        jP1.add(jBTod);
-        jBTod.setBounds(1030, 12, 130, 18);
-
         jLNot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLNot.setForeground(new java.awt.Color(204, 0, 0));
         jLNot.setFocusable(false);
@@ -258,7 +236,7 @@ public abstract class PrevCompJFrame extends BaseJFrame
         jTab1.setGridColor(new java.awt.Color(255, 255, 255));
         jTab1.setInheritsPopupMenu(true);
         jTab1.setNextFocusableComponent(jBBusc);
-        jTab1.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jTab1);
 
         jPanel2.add(jScrollPane2);
@@ -300,7 +278,7 @@ public abstract class PrevCompJFrame extends BaseJFrame
         jP1.add(jMostFalSer);
         jMostFalSer.setBounds(640, 10, 390, 20);
 
-        getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 1292, 540));
+        getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 1310, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -309,34 +287,31 @@ public abstract class PrevCompJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBAbr;
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBCan;
-    private javax.swing.JButton jBDirCots;
-    private javax.swing.JButton jBGenPDF;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBPDF;
-    private javax.swing.JButton jBPonSer;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTab2;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JButton jBVer;
-    private javax.swing.JButton jBVta;
-    private javax.swing.JLabel jLNot;
-    private javax.swing.JLabel jLNotCli;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jMostFalSer;
+    protected javax.swing.JButton jBAbr;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBCan;
+    protected javax.swing.JButton jBDirCots;
+    protected javax.swing.JButton jBGenPDF;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBPDF;
+    protected javax.swing.JButton jBPonSer;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBVer;
+    protected javax.swing.JButton jBVta;
+    protected javax.swing.JLabel jLNot;
+    protected javax.swing.JLabel jLNotCli;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jMostFalSer;
     private javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    protected javax.swing.JPanel jPanel1;
+    protected javax.swing.JPanel jPanel2;
+    protected javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab1;
     private javax.swing.JTable jTab2;
     // End of variables declaration//GEN-END:variables

@@ -43,8 +43,6 @@ public abstract class CompsJFrame extends BaseJFrame
         jTProd = new javax.swing.JTextField();
         jBBusc1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jBTabG = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -403,46 +401,6 @@ public abstract class CompsJFrame extends BaseJFrame
         jLabel7.setText("Descripción del producto:");
         jP1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 270, -1));
 
-        jBTabG.setBackground(new java.awt.Color(0, 153, 153));
-        jBTabG.setToolTipText("Mostrar Tabla en Grande");
-        jBTabG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTabGActionPerformed(evt);
-            }
-        });
-        jBTabG.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTabGKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTabG, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar Todo");
-        jBTod.setToolTipText("Marcar Todos los Registros en la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jBTod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBTodMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBTodMouseExited(evt);
-            }
-        });
-        jBTod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTodActionPerformed(evt);
-            }
-        });
-        jBTod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTodKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 162, 130, 18));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -672,17 +630,7 @@ public abstract class CompsJFrame extends BaseJFrame
     }//GEN-LAST:event_formMouseMoved
 
         
-    private void jBTabGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTabGActionPerformed
-
-    
-    }//GEN-LAST:event_jBTabGActionPerformed
-
         
-    private void jBTabGKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTabGKeyPressed
-
-    
-    }//GEN-LAST:event_jBTabGKeyPressed
-
         
     private void jBBuscMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseExited
         
@@ -697,17 +645,7 @@ public abstract class CompsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBBuscMouseEntered
 
                 
-    private void jBTodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTodActionPerformed
-        
-
-    }//GEN-LAST:event_jBTodActionPerformed
-
     
-    private void jBTodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTodKeyPressed
-
-    
-    }//GEN-LAST:event_jBTodKeyPressed
-
     
   
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -728,11 +666,6 @@ public abstract class CompsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBNewMouseEntered
 
         
-    private void jBTodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseEntered
-        
-        
-    }//GEN-LAST:event_jBTodMouseEntered
-
         
     private void jBDelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseEntered
         
@@ -764,11 +697,6 @@ public abstract class CompsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBNewMouseExited
 
         
-    private void jBTodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseExited
-        
-        
-    }//GEN-LAST:event_jBTodMouseExited
-
         
     private void jBDelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseExited
         
@@ -816,28 +744,26 @@ public abstract class CompsJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBBusc1;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBMostT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTabG;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBBusc1;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBMostT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTCant;
-    private javax.swing.JTextField jTDescrip;
-    private javax.swing.JTextField jTDescripKit;
-    private javax.swing.JTextField jTKit;
-    private javax.swing.JTextField jTProd;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTCant;
+    protected javax.swing.JTextField jTDescrip;
+    protected javax.swing.JTextField jTDescripKit;
+    protected javax.swing.JTextField jTKit;
+    protected javax.swing.JTextField jTProd;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

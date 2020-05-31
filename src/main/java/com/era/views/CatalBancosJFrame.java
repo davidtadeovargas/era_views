@@ -37,8 +37,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
         jBActua = new javax.swing.JButton();
-        jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jBImportar = new javax.swing.JButton();
         jBNew1 = new javax.swing.JButton();
         jCBancos = new javax.swing.JComboBox();
@@ -235,7 +233,7 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTab.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTabKeyPressed(evt);
@@ -342,46 +340,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
             }
         });
         jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 160, 30));
-
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jBTab1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTab1ActionPerformed(evt);
-            }
-        });
-        jBTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTab1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jBTod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBTodMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBTodMouseExited(evt);
-            }
-        });
-        jBTod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTodActionPerformed(evt);
-            }
-        });
-        jBTod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTodKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 130, 18));
 
         jBImportar.setBackground(new java.awt.Color(255, 255, 255));
         jBImportar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -623,16 +581,7 @@ public abstract class CatalBancosJFrame extends BaseJFrame
     }//GEN-LAST:event_formMouseWheelMoved
 
                 
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-        
-    }//GEN-LAST:event_jBTab1ActionPerformed
-
     
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
-
-    
-    }//GEN-LAST:event_jBTab1KeyPressed
-
         
     private void jBBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBBuscKeyPressed
         
@@ -659,18 +608,7 @@ public abstract class CatalBancosJFrame extends BaseJFrame
 
     
         
-    private void jBTodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTodActionPerformed
     
-
-    }//GEN-LAST:event_jBTodActionPerformed
-
-    
-    private void jBTodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTodKeyPressed
-
-    
-
-    }//GEN-LAST:event_jBTodKeyPressed
-
     
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         
@@ -684,11 +622,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
     }//GEN-LAST:event_jBNewMouseEntered
 
         
-    private void jBTodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseEntered
-        
-        
-    }//GEN-LAST:event_jBTodMouseEntered
-
         
     private void jBDelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseEntered
         
@@ -722,11 +655,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
     }//GEN-LAST:event_jBNewMouseExited
 
         
-    private void jBTodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseExited
-        
-        
-    }//GEN-LAST:event_jBTodMouseExited
-
         
     private void jBDelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseExited
         
@@ -803,28 +731,26 @@ public abstract class CatalBancosJFrame extends BaseJFrame
                        
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBImportar;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBNew1;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JComboBox jCBancos;
-    private javax.swing.JLabel jLabel1;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBImportar;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBNew1;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JComboBox jCBancos;
+    protected javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTCod;
-    private javax.swing.JTextField jTDescrip;
-    private javax.swing.JTable jTab;
-    private javax.swing.JTextField jTrfc;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTCod;
+    protected javax.swing.JTextField jTDescrip;
+    protected javax.swing.JTable jTab;
+    protected javax.swing.JTextField jTrfc;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

@@ -214,26 +214,26 @@ public abstract class FacturarTicketsJFrame extends BaseJFrame {
 
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscar;
-    private javax.swing.JButton btnLugExp;
-    private javax.swing.JButton jBtnCliente;
-    private javax.swing.JButton jBtnFacturar;
-    private javax.swing.JCheckBox jCBEnviarCorreo;
-    private javax.swing.JComboBox<String> jComMetodoPago;
-    private javax.swing.JComboBox<String> jComSerie;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JButton btnBuscar;
+    protected javax.swing.JButton btnLugExp;
+    protected javax.swing.JButton jBtnCliente;
+    protected javax.swing.JButton jBtnFacturar;
+    protected javax.swing.JCheckBox jCBEnviarCorreo;
+    protected javax.swing.JComboBox<String> jComMetodoPago;
+    protected javax.swing.JComboBox<String> jComSerie;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTxtArObservaciones;
-    private javax.swing.JTextField jTxtNomCliente;
-    private javax.swing.JLabel label_total;
-    private javax.swing.JTextField txtLugarExp;
+    protected javax.swing.JTextField jTxtNomCliente;
+    protected javax.swing.JLabel label_total;
+    protected javax.swing.JTextField txtLugarExp;
     // End of variables declaration//GEN-END:variables
 }

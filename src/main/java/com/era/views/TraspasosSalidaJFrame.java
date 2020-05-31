@@ -62,7 +62,7 @@ public abstract class TraspasosSalidaJFrame extends BaseJFrame {
 
         jBconfirmar.setBackground(new java.awt.Color(255, 255, 255));
         jBconfirmar.setText("confirmar");
-        
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -99,7 +99,7 @@ public abstract class TraspasosSalidaJFrame extends BaseJFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 748, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 748, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -116,11 +116,11 @@ public abstract class TraspasosSalidaJFrame extends BaseJFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBconfirmar;
-    private javax.swing.JLabel jLabel3;
+    protected javax.swing.JButton jBconfirmar;
+    protected javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSpinner jSpinner1;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JSpinner jSpinner1;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 }

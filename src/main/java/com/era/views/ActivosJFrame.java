@@ -26,8 +26,6 @@ public abstract class ActivosJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTab = new javax.swing.JTable();
-        jLAyu = new javax.swing.JLabel();
-        jBTod = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jCSucursal = new javax.swing.JComboBox();
         jCZona = new javax.swing.JComboBox();
@@ -55,7 +53,7 @@ public abstract class ActivosJFrame extends BaseJFrame
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -93,24 +91,10 @@ public abstract class ActivosJFrame extends BaseJFrame
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jTab);
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 780, 290));
-
-        jLAyu.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jLAyu.setForeground(new java.awt.Color(0, 51, 204));
-        jLAyu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLAyu.setText("http://Ayuda en Lìnea");
-        jP1.add(jLAyu, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 430, 120, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 122, 130, 18));
 
         jLabel14.setText("Sucursal:");
         jP1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 60, -1));
@@ -243,36 +227,34 @@ public abstract class ActivosJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBMosT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBSer;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JComboBox jCClasificacion;
-    private javax.swing.JComboBox jCResponsable;
-    private javax.swing.JComboBox jCSucursal;
-    private javax.swing.JComboBox jCZona;
-    private javax.swing.JLabel jLAyu;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBMosT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBSer;
+    protected javax.swing.JComboBox jCClasificacion;
+    protected javax.swing.JComboBox jCResponsable;
+    protected javax.swing.JComboBox jCSucursal;
+    protected javax.swing.JComboBox jCZona;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel14;
+    protected javax.swing.JLabel jLabel15;
+    protected javax.swing.JLabel jLabel17;
+    protected javax.swing.JLabel jLabel18;
+    protected javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTClasificacion;
-    private javax.swing.JTextField jTDescripcion;
-    private javax.swing.JTextField jTReferencia;
-    private javax.swing.JTextField jTResponsable;
-    private javax.swing.JTextField jTSerProd;
-    private javax.swing.JTextField jTSucursal;
-    private javax.swing.JTextField jTZona;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTClasificacion;
+    protected javax.swing.JTextField jTDescripcion;
+    protected javax.swing.JTextField jTReferencia;
+    protected javax.swing.JTextField jTResponsable;
+    protected javax.swing.JTextField jTSerProd;
+    protected javax.swing.JTextField jTSucursal;
+    protected javax.swing.JTextField jTZona;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

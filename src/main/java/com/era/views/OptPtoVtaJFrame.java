@@ -141,15 +141,15 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCanVtas;
-    private javax.swing.JButton jBCompa;
-    private javax.swing.JButton jBCortX;
-    private javax.swing.JButton jBCortZ;
-    private javax.swing.JButton jBDev;
-    private javax.swing.JButton jBDevP;
-    private javax.swing.JButton jBImpVtas;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBVtas;
+    protected javax.swing.JButton jBCanVtas;
+    protected javax.swing.JButton jBCompa;
+    protected javax.swing.JButton jBCortX;
+    protected javax.swing.JButton jBCortZ;
+    protected javax.swing.JButton jBDev;
+    protected javax.swing.JButton jBDevP;
+    protected javax.swing.JButton jBImpVtas;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBVtas;
     private javax.swing.JPanel jP1;
     // End of variables declaration//GEN-END:variables
 

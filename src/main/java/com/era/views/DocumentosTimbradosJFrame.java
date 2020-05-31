@@ -73,7 +73,7 @@ public abstract class DocumentosTimbradosJFrame extends BaseJFrame {
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+
         jBCarg.setBackground(new java.awt.Color(255, 255, 255));
         jBCarg.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBCarg.setForeground(new java.awt.Color(0, 102, 0));
@@ -81,7 +81,7 @@ public abstract class DocumentosTimbradosJFrame extends BaseJFrame {
         jBCarg.setText("Aceptar");
         jBCarg.setToolTipText("Aceptar (ENTER)");
         jBCarg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLabel2.setText("TOTAL:");
 
@@ -90,7 +90,7 @@ public abstract class DocumentosTimbradosJFrame extends BaseJFrame {
         jLTot.setFocusable(false);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Facturas", "Notas de Credito", "Pagos", "Tickets" }));
-        
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -164,15 +164,15 @@ public abstract class DocumentosTimbradosJFrame extends BaseJFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCarg;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLTot;
+    protected javax.swing.JButton jBCarg;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JComboBox<String> jComboBox1;
+    protected javax.swing.JLabel jLTot;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    protected javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBuscar;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBuscar;
     private javax.swing.JTable jTabDocumentos;
     // End of variables declaration//GEN-END:variables
 }

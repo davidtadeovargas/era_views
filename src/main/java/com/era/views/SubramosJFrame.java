@@ -45,8 +45,6 @@ public abstract class SubramosJFrame extends BaseJFrame {
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
         jBActua = new javax.swing.JButton();
-        jBTab1 = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -303,45 +301,6 @@ public abstract class SubramosJFrame extends BaseJFrame {
         });
         jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 120, 30));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jBTab1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTab1ActionPerformed(evt);
-            }
-        });
-        jBTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTab1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 10, 20));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros en la Tabla (Alt+T)");
-        jBTod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBTodMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBTodMouseExited(evt);
-            }
-        });
-        jBTod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTodActionPerformed(evt);
-            }
-        });
-        jBTod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTodKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 52, 130, 18));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -362,241 +321,165 @@ public abstract class SubramosJFrame extends BaseJFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBDelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseEntered
-        
+    private void jP1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jP1KeyPressed
 
-    }//GEN-LAST:event_jBDelMouseEntered
+    }//GEN-LAST:event_jP1KeyPressed
 
-    private void jBDelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseExited
+    private void jBActuaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBActuaKeyPressed
 
+    }//GEN-LAST:event_jBActuaKeyPressed
 
-    }//GEN-LAST:event_jBDelMouseExited
+    private void jBActuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBActuaActionPerformed
 
-    private void jBDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDelActionPerformed
-        
+    }//GEN-LAST:event_jBActuaActionPerformed
 
-    }//GEN-LAST:event_jBDelActionPerformed
+    private void jBActuaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseExited
 
-    private void jBDelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBDelKeyPressed
+    }//GEN-LAST:event_jBActuaMouseExited
 
+    private void jBActuaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseEntered
 
-    }//GEN-LAST:event_jBDelKeyPressed
+    }//GEN-LAST:event_jBActuaMouseEntered
 
-    private void jBSalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSalMouseEntered
+    private void jBMostTKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBMostTKeyPressed
 
+    }//GEN-LAST:event_jBMostTKeyPressed
 
+    private void jBMostTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMostTActionPerformed
 
-    }//GEN-LAST:event_jBSalMouseEntered
+    }//GEN-LAST:event_jBMostTActionPerformed
 
-    private void jBSalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSalMouseExited
+    private void jBMostTMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseExited
 
+    }//GEN-LAST:event_jBMostTMouseExited
 
-    }//GEN-LAST:event_jBSalMouseExited
+    private void jBMostTMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseEntered
 
-    private void jBSalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalActionPerformed
+    }//GEN-LAST:event_jBMostTMouseEntered
 
+    private void jTBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBuscKeyPressed
 
-    }//GEN-LAST:event_jBSalActionPerformed
+    }//GEN-LAST:event_jTBuscKeyPressed
 
-    private void jBSalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBSalKeyPressed
+    private void jTBuscFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBuscFocusLost
 
+    }//GEN-LAST:event_jTBuscFocusLost
 
-    }//GEN-LAST:event_jBSalKeyPressed
+    private void jTBuscFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBuscFocusGained
 
-    private void jTCodFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodFocusGained
+    }//GEN-LAST:event_jTBuscFocusGained
 
+    private void jBBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBBuscKeyPressed
 
-    }//GEN-LAST:event_jTCodFocusGained
+    }//GEN-LAST:event_jBBuscKeyPressed
 
-    private void jTCodFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodFocusLost
+    private void jBBuscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscActionPerformed
 
+    }//GEN-LAST:event_jBBuscActionPerformed
 
-    }//GEN-LAST:event_jTCodFocusLost
+    private void jBBuscMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseExited
 
-    private void jTCodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodKeyPressed
+    }//GEN-LAST:event_jBBuscMouseExited
 
+    private void jBBuscMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseEntered
 
-    }//GEN-LAST:event_jTCodKeyPressed
+    }//GEN-LAST:event_jBBuscMouseEntered
 
-    private void jTCodKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodKeyTyped
+    private void jTabKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTabKeyPressed
 
+    }//GEN-LAST:event_jTabKeyPressed
 
-    }//GEN-LAST:event_jTCodKeyTyped
+    private void jTDescripKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDescripKeyPressed
 
-    private void jBNewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseEntered
+    }//GEN-LAST:event_jTDescripKeyPressed
 
+    private void jTDescripFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescripFocusLost
 
-    }//GEN-LAST:event_jBNewMouseEntered
+    }//GEN-LAST:event_jTDescripFocusLost
 
-    private void jBNewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseExited
+    private void jTDescripFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescripFocusGained
 
+    }//GEN-LAST:event_jTDescripFocusGained
 
-    }//GEN-LAST:event_jBNewMouseExited
+    private void jBNewKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBNewKeyPressed
+
+    }//GEN-LAST:event_jBNewKeyPressed
 
     private void jBNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNewActionPerformed
 
     }//GEN-LAST:event_jBNewActionPerformed
 
-    private void jBNewKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBNewKeyPressed
+    private void jBNewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseExited
 
+    }//GEN-LAST:event_jBNewMouseExited
 
+    private void jBNewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseEntered
 
-    }//GEN-LAST:event_jBNewKeyPressed
+    }//GEN-LAST:event_jBNewMouseEntered
 
-    private void jTDescripFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescripFocusGained
+    private void jTCodKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodKeyTyped
 
+    }//GEN-LAST:event_jTCodKeyTyped
 
-    }//GEN-LAST:event_jTDescripFocusGained
+    private void jTCodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodKeyPressed
 
-    private void jTDescripFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescripFocusLost
+    }//GEN-LAST:event_jTCodKeyPressed
 
+    private void jTCodFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodFocusLost
 
+    }//GEN-LAST:event_jTCodFocusLost
 
-    }//GEN-LAST:event_jTDescripFocusLost
+    private void jTCodFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodFocusGained
 
-    private void jTDescripKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDescripKeyPressed
+    }//GEN-LAST:event_jTCodFocusGained
 
+    private void jBSalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBSalKeyPressed
 
+    }//GEN-LAST:event_jBSalKeyPressed
 
-    }//GEN-LAST:event_jTDescripKeyPressed
+    private void jBSalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalActionPerformed
 
-    private void jTabKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTabKeyPressed
-        
+    }//GEN-LAST:event_jBSalActionPerformed
 
-    }//GEN-LAST:event_jTabKeyPressed
+    private void jBSalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSalMouseExited
 
-    private void jBBuscMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseEntered
+    }//GEN-LAST:event_jBSalMouseExited
 
+    private void jBSalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSalMouseEntered
 
+    }//GEN-LAST:event_jBSalMouseEntered
 
-    }//GEN-LAST:event_jBBuscMouseEntered
+    private void jBDelKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBDelKeyPressed
 
-    private void jBBuscMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseExited
+    }//GEN-LAST:event_jBDelKeyPressed
 
+    private void jBDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDelActionPerformed
 
-    }//GEN-LAST:event_jBBuscMouseExited
+    }//GEN-LAST:event_jBDelActionPerformed
 
-    private void jBBuscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscActionPerformed
-        
+    private void jBDelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseExited
 
-    }//GEN-LAST:event_jBBuscActionPerformed
+    }//GEN-LAST:event_jBDelMouseExited
 
-    private void jBBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBBuscKeyPressed
+    private void jBDelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBDelMouseEntered
 
-
-    }//GEN-LAST:event_jBBuscKeyPressed
-
-    private void jTBuscFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBuscFocusGained
-
-
-    }//GEN-LAST:event_jTBuscFocusGained
-
-    private void jTBuscFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBuscFocusLost
-
-
-
-    }//GEN-LAST:event_jTBuscFocusLost
-
-    private void jTBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBuscKeyPressed
-
-
-    }//GEN-LAST:event_jTBuscKeyPressed
-
-    private void jBMostTMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseEntered
-
-
-    }//GEN-LAST:event_jBMostTMouseEntered
-
-    private void jBMostTMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseExited
-
-
-    }//GEN-LAST:event_jBMostTMouseExited
-
-    private void jBMostTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMostTActionPerformed
-
-
-    }//GEN-LAST:event_jBMostTActionPerformed
-
-    private void jBMostTKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBMostTKeyPressed
-
-
-    }//GEN-LAST:event_jBMostTKeyPressed
-
-    private void jBActuaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseEntered
-
-
-    }//GEN-LAST:event_jBActuaMouseEntered
-
-    private void jBActuaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseExited
-
-
-    }//GEN-LAST:event_jBActuaMouseExited
-
-    private void jBActuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBActuaActionPerformed
-
-
-    }//GEN-LAST:event_jBActuaActionPerformed
-
-    private void jBActuaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBActuaKeyPressed
-
-
-    }//GEN-LAST:event_jBActuaKeyPressed
-
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-
-
-    }//GEN-LAST:event_jBTab1ActionPerformed
-
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
-
-
-    }//GEN-LAST:event_jBTab1KeyPressed
-
-    private void jBTodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseEntered
-
-
-
-    }//GEN-LAST:event_jBTodMouseEntered
-
-    private void jBTodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseExited
-
-
-
-    }//GEN-LAST:event_jBTodMouseExited
-
-    private void jBTodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTodActionPerformed
-
-        
-    }//GEN-LAST:event_jBTodActionPerformed
-
-    private void jBTodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTodKeyPressed
-
-        
-    }//GEN-LAST:event_jBTodKeyPressed
-
-    private void jP1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jP1KeyPressed
-
-        
-
-    }//GEN-LAST:event_jP1KeyPressed
+    }//GEN-LAST:event_jBDelMouseEntered
    
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBActua;
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBMostT;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTab1;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    protected javax.swing.JButton jBActua;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBMostT;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
-    private javax.swing.JTextField jTCod;
-    private javax.swing.JTextField jTDescrip;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JTextField jTCod;
+    protected javax.swing.JTextField jTDescrip;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

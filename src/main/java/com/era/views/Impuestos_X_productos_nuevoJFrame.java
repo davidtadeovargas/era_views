@@ -37,7 +37,6 @@ public abstract class Impuestos_X_productos_nuevoJFrame extends BaseJFrame
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostTodViat = new javax.swing.JButton();
-        jBTabG = new javax.swing.JButton();
         jBTod = new javax.swing.JButton();
         jComImp = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
@@ -183,7 +182,7 @@ public abstract class Impuestos_X_productos_nuevoJFrame extends BaseJFrame
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTab.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTabKeyPressed(evt);
@@ -262,20 +261,6 @@ public abstract class Impuestos_X_productos_nuevoJFrame extends BaseJFrame
         });
         jP1.add(jBMostTodViat, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 140, 20));
 
-        jBTabG.setBackground(new java.awt.Color(0, 153, 153));
-        jBTabG.setToolTipText("Mostrar Tabla en Grande");
-        jBTabG.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTabGActionPerformed(evt);
-            }
-        });
-        jBTabG.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTabGKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTabG, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 10, 20));
-
         jBTod.setBackground(new java.awt.Color(255, 255, 255));
         jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
@@ -329,7 +314,7 @@ public abstract class Impuestos_X_productos_nuevoJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -455,17 +440,7 @@ public abstract class Impuestos_X_productos_nuevoJFrame extends BaseJFrame
     }//GEN-LAST:event_formMouseWheelMoved
 
     
-    private void jBTabGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTabGActionPerformed
-
-    
-    }//GEN-LAST:event_jBTabGActionPerformed
-
         
-    private void jBTabGKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTabGKeyPressed
-
-    
-    }//GEN-LAST:event_jBTabGKeyPressed
-
         
     private void jBBuscMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseExited
             
@@ -581,18 +556,17 @@ public abstract class Impuestos_X_productos_nuevoJFrame extends BaseJFrame
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBBusc;
-    private javax.swing.JButton jBDel;
-    private javax.swing.JButton jBMostTodViat;
-    private javax.swing.JButton jBNew;
-    private javax.swing.JButton jBSal;
-    private javax.swing.JButton jBTabG;
-    private javax.swing.JButton jBTod;
-    private javax.swing.JComboBox jComImp;
-    private javax.swing.JLabel jLabel4;
+    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton jBDel;
+    protected javax.swing.JButton jBMostTodViat;
+    protected javax.swing.JButton jBNew;
+    protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBTod;
+    protected javax.swing.JComboBox jComImp;
+    protected javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTBusc;
+    protected javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JTextField jTBusc;
     private javax.swing.JTable jTab;
     // End of variables declaration//GEN-END:variables
 

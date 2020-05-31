@@ -140,11 +140,11 @@ public abstract class AbonosJFrame extends BaseJFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBSal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane3;
+    protected javax.swing.JScrollPane jScrollPane1;
+    protected javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable table_pagos;
     private javax.swing.JTable table_partidas;
     // End of variables declaration//GEN-END:variables
