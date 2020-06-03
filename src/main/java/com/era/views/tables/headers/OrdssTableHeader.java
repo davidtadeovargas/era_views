@@ -47,11 +47,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.PROV;
    }
 
-   private final ColumnTable PROY = new ColumnTable("PROY");
-   public ColumnTable getPROY() {
-       return this.PROY;
-   }
-
    private final ColumnTable SUBTOT = new ColumnTable("SUBTOT");
    public ColumnTable getSUBTOT() {
        return this.SUBTOT;

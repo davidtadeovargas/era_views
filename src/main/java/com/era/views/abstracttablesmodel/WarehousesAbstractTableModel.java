@@ -32,7 +32,7 @@ public class WarehousesAbstractTableModel extends BaseAbstractTableModel {
             returnValue = Warehouse.getDescription();
         }
         else if(columnIndex==2){
-            returnValue = Warehouse.getResponsible();
+            returnValue = Warehouse.getResponsable();
         }
         
         return returnValue;

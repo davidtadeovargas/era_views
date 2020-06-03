@@ -70,11 +70,11 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMInven = new javax.swing.JMenu();
         jMVProd = new javax.swing.JMenuItem();
         jMenItKits = new javax.swing.JMenuItem();
+        warehousesMenu = new javax.swing.JMenuItem();
         jMLotPed = new javax.swing.JMenuItem();
         jMMInvenImpor = new javax.swing.JMenu();
         jMInvenImpo = new javax.swing.JMenuItem();
         jMImpExistAlm = new javax.swing.JMenuItem();
-        jMImpAlma = new javax.swing.JMenuItem();
         jMenMaxsMins = new javax.swing.JMenu();
         jMenItProdsBajMin = new javax.swing.JMenuItem();
         jMenItProdsArrMax = new javax.swing.JMenuItem();
@@ -452,6 +452,11 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMenItKits.setText("Kits");
         jMInven.add(jMenItKits);
 
+        warehousesMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/kits.png"))); // NOI18N
+        warehousesMenu.setMnemonic('i');
+        warehousesMenu.setText("Almacenes");
+        jMInven.add(warehousesMenu);
+
         jMLotPed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/lotped.png"))); // NOI18N
         jMLotPed.setText("Lotes y pedimentos");
         jMInven.add(jMLotPed);
@@ -468,11 +473,6 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMImpExistAlm.setMnemonic('p');
         jMImpExistAlm.setText("Importar existencias por almacén");
         jMMInvenImpor.add(jMImpExistAlm);
-
-        jMImpAlma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impexe.png"))); // NOI18N
-        jMImpAlma.setMnemonic('o');
-        jMImpAlma.setText("Importar almacenes");
-        jMMInvenImpor.add(jMImpAlma);
 
         jMInven.add(jMMInvenImpor);
 
@@ -675,9 +675,9 @@ public abstract class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JButton jBVtas;
     protected javax.swing.JButton jButtonPedidos;
     protected javax.swing.JButton jButtonPedidos1;
-    protected javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox1;
     protected javax.swing.JLabel jLImg;
-    protected javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JLayeredPane jLayeredPane1;
     protected javax.swing.JMenuItem jMAcerc;
     protected javax.swing.JMenuItem jMActivo;
     protected javax.swing.JMenuItem jMCXC;
@@ -686,7 +686,6 @@ public abstract class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenuItem jMConfAd;
     protected javax.swing.JMenuItem jMDelLog;
     protected javax.swing.JMenuItem jMICuentaContable;
-    protected javax.swing.JMenuItem jMImpAlma;
     protected javax.swing.JMenuItem jMImpCliens;
     protected javax.swing.JMenuItem jMImpExistAlm;
     protected javax.swing.JMenuItem jMImpProvs;
@@ -706,11 +705,11 @@ public abstract class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenuItem jMVProd;
     protected javax.swing.JMenuItem jMeItImps;
     protected javax.swing.JMenu jMenBDs;
-    protected javax.swing.JMenuBar jMenBar1;
+    private javax.swing.JMenuBar jMenBar1;
     protected javax.swing.JMenu jMenComps;
     protected javax.swing.JMenuItem jMenConfigFil;
     protected javax.swing.JMenuItem jMenCotsT;
-    protected javax.swing.JMenu jMenInvents;
+    private javax.swing.JMenu jMenInvents;
     protected javax.swing.JMenuItem jMenIt4;
     protected javax.swing.JMenuItem jMenItCamEmp;
     protected javax.swing.JMenuItem jMenItComps;
@@ -738,21 +737,22 @@ public abstract class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenu jMenMaxsMins;
     protected javax.swing.JMenu jMenTraspas;
     protected javax.swing.JMenu jMenVtas;
-    protected javax.swing.JMenu jMenu1;
-    protected javax.swing.JMenu jMenu2;
-    protected javax.swing.JMenu jMenu3;
-    protected javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
     protected javax.swing.JMenuItem jMenuItem3;
     protected javax.swing.JMenuItem jMenuItem5;
     protected javax.swing.JMenuItem jMenuItem6;
     protected javax.swing.JMenuItem jMenuItem7;
     protected javax.swing.JMenuItem jMenuItemPedidos;
     protected javax.swing.JMenuItem jMenuItemRemisiones;
-    protected javax.swing.JPanel jP1;
-    protected javax.swing.JPanel jPanel1;
-    protected javax.swing.JPopupMenu jPopupMenu1;
-    protected javax.swing.JPopupMenu jPopupMenu2;
+    private javax.swing.JPanel jP1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JPopupMenu jPopupMenu2;
     protected javax.swing.JMenuItem reportsMenu;
+    protected javax.swing.JMenuItem warehousesMenu;
     // End of variables declaration//GEN-END:variables
    
 }

@@ -34,6 +34,9 @@ public class TraspasTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTraspassTableHeader().getCANTSAL().getValue())==0){
                returnValue = String.valueOf(Traspas.getCantsal());
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTraspassTableHeader().getCODE().getValue())==0){
+               returnValue = Traspas.getCode();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTraspassTableHeader().getCONCEP().getValue())==0){
                returnValue = Traspas.getConcep();
            }
@@ -57,9 +60,6 @@ public class TraspasTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTraspassTableHeader().getNOCAJ().getValue())==0){
                returnValue = Traspas.getNocaj();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTraspassTableHeader().getPROD().getValue())==0){
-               returnValue = Traspas.getProd();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTraspassTableHeader().getREPORTEENTRADA().getValue())==0){
                returnValue = Traspas.getReporteEntrada();

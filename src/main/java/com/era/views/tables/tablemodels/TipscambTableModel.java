@@ -19,6 +19,9 @@ public class TipscambTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipscambsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipscambsTableHeader().getCODE().getValue())==0){
+               returnValue = Tipscamb.getCode();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipscambsTableHeader().getESTAC().getValue())==0){
                returnValue = Tipscamb.getEstac();
            }
@@ -27,9 +30,6 @@ public class TipscambTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipscambsTableHeader().getFMOD().getValue())==0){
                returnValue = Tipscamb.getFmod().toString();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipscambsTableHeader().getMON().getValue())==0){
-               returnValue = Tipscamb.getMon();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipscambsTableHeader().getNOCAJ().getValue())==0){
                returnValue = Tipscamb.getNocaj();

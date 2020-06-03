@@ -19,14 +19,14 @@ public class LineTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getCASHNUMBER().getValue())==0){
-               returnValue = Line.getCashNumber();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getCODE().getValue())==0){
                returnValue = Line.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getDESCRIPTION().getValue())==0){
                returnValue = Line.getDescription();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getESTAC().getValue())==0){
+               returnValue = Line.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getFALT().getValue())==0){
                returnValue = Line.getFalt().toString();
@@ -37,11 +37,11 @@ public class LineTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getIMAGE().getValue())==0){
                returnValue = Line.getImage();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getSTATION().getValue())==0){
-               returnValue = Line.getStation();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Line.getNocaj();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getSUCURSAL().getValue())==0){
-               returnValue = Line.getSucursal();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLinesTableHeader().getSUCU().getValue())==0){
+               returnValue = Line.getSucu();
            }
            return returnValue;
        };

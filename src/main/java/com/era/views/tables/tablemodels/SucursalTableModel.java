@@ -19,11 +19,11 @@ public class SucursalTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSucursalsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSucursalsTableHeader().getCOD().getValue())==0){
-               returnValue = Sucursal.getCod();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSucursalsTableHeader().getCODZONA().getValue())==0){
                returnValue = Sucursal.getCodZona();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSucursalsTableHeader().getCODE().getValue())==0){
+               returnValue = Sucursal.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSucursalsTableHeader().getDESCRIP().getValue())==0){
                returnValue = Sucursal.getDescrip();

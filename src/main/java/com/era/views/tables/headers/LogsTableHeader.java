@@ -12,9 +12,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ACCIO;
    }
 
-   private final ColumnTable COD = new ColumnTable("COD");
-   public ColumnTable getCOD() {
-       return this.COD;
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
    }
 
    private final ColumnTable DESCRIP = new ColumnTable("DESCRIP");

@@ -22,11 +22,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.CADORI;
    }
 
-   private final ColumnTable CASHNUMBER = new ColumnTable("CASHNUMBER");
-   public ColumnTable getCASHNUMBER() {
-       return this.CASHNUMBER;
-   }
-
    private final ColumnTable CATGRAL = new ColumnTable("CATGRAL");
    public ColumnTable getCATGRAL() {
        return this.CATGRAL;
@@ -62,11 +57,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.CORTNUMBER;
    }
 
-   private final ColumnTable CREATIONDATE = new ColumnTable("CREATIONDATE");
-   public ColumnTable getCREATIONDATE() {
-       return this.CREATIONDATE;
-   }
-
    private final ColumnTable CUT = new ColumnTable("CUT");
    public ColumnTable getCUT() {
        return this.CUT;
@@ -87,14 +77,14 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.DOCUMENTTYPE;
    }
 
-   private final ColumnTable EDITEDDATE = new ColumnTable("EDITEDDATE");
-   public ColumnTable getEDITEDDATE() {
-       return this.EDITEDDATE;
-   }
-
    private final ColumnTable EMISIONDATE = new ColumnTable("EMISIONDATE");
    public ColumnTable getEMISIONDATE() {
        return this.EMISIONDATE;
+   }
+
+   private final ColumnTable ESTAC = new ColumnTable("ESTAC");
+   public ColumnTable getESTAC() {
+       return this.ESTAC;
    }
 
    private final ColumnTable ESTATUS = new ColumnTable("ESTATUS");
@@ -117,6 +107,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.FACTURADO;
    }
 
+   private final ColumnTable FALT = new ColumnTable("FALT");
+   public ColumnTable getFALT() {
+       return this.FALT;
+   }
+
    private final ColumnTable FISCALFOLIO = new ColumnTable("FISCALFOLIO");
    public ColumnTable getFISCALFOLIO() {
        return this.FISCALFOLIO;
@@ -127,9 +122,24 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.FISCALREGIMEN;
    }
 
+   private final ColumnTable FMOD = new ColumnTable("FMOD");
+   public ColumnTable getFMOD() {
+       return this.FMOD;
+   }
+
+   private final ColumnTable FVENC = new ColumnTable("FVENC");
+   public ColumnTable getFVENC() {
+       return this.FVENC;
+   }
+
    private final ColumnTable INVOICED = new ColumnTable("INVOICED");
    public ColumnTable getINVOICED() {
        return this.INVOICED;
+   }
+
+   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   public ColumnTable getNOCAJ() {
+       return this.NOCAJ;
    }
 
    private final ColumnTable NOSER = new ColumnTable("NOSER");
@@ -227,11 +237,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.SERIE;
    }
 
-   private final ColumnTable STATION = new ColumnTable("STATION");
-   public ColumnTable getSTATION() {
-       return this.STATION;
-   }
-
    private final ColumnTable SUBRAMO = new ColumnTable("SUBRAMO");
    public ColumnTable getSUBRAMO() {
        return this.SUBRAMO;
@@ -242,9 +247,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.SUBTOTAL;
    }
 
-   private final ColumnTable SUCURSAL = new ColumnTable("SUCURSAL");
-   public ColumnTable getSUCURSAL() {
-       return this.SUCURSAL;
+   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   public ColumnTable getSUCU() {
+       return this.SUCU;
    }
 
    private final ColumnTable TAX = new ColumnTable("TAX");
@@ -310,11 +315,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable USOCFDI = new ColumnTable("USOCFDI");
    public ColumnTable getUSOCFDI() {
        return this.USOCFDI;
-   }
-
-   private final ColumnTable VENCIMIENTDATE = new ColumnTable("VENCIMIENTDATE");
-   public ColumnTable getVENCIMIENTDATE() {
-       return this.VENCIMIENTDATE;
    }
 
 }

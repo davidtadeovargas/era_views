@@ -19,8 +19,8 @@ public class PesTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getCOD().getValue())==0){
-               returnValue = Pes.getCod();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getCODE().getValue())==0){
+               returnValue = Pes.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPessTableHeader().getDESCRIP().getValue())==0){
                returnValue = Pes.getDescrip();

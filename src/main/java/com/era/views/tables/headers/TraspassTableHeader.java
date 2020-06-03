@@ -32,6 +32,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.CANTSAL;
    }
 
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
+   }
+
    private final ColumnTable CONCEP = new ColumnTable("CONCEP");
    public ColumnTable getCONCEP() {
        return this.CONCEP;
@@ -70,11 +75,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
-   }
-
-   private final ColumnTable PROD = new ColumnTable("PROD");
-   public ColumnTable getPROD() {
-       return this.PROD;
    }
 
    private final ColumnTable REPORTEENTRADA = new ColumnTable("REPORTEENTRADA");

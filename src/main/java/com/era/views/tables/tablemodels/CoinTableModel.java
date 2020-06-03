@@ -22,14 +22,14 @@ public class CoinTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getC_MONEDA().getValue())==0){
                returnValue = Coin.getC_moneda();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getCASHNUMBER().getValue())==0){
-               returnValue = Coin.getCashNumber();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getCODE().getValue())==0){
                returnValue = Coin.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getDESCRIPTION().getValue())==0){
                returnValue = Coin.getDescription();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getESTAC().getValue())==0){
+               returnValue = Coin.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getFALT().getValue())==0){
                returnValue = Coin.getFalt().toString();
@@ -40,14 +40,14 @@ public class CoinTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getNATIONAL().getValue())==0){
                returnValue = Coin.isNational()? "Si":"No";
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Coin.getNocaj();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getSIMBOL().getValue())==0){
                returnValue = Coin.getSimbol();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getSTATION().getValue())==0){
-               returnValue = Coin.getStation();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getSUCURSAL().getValue())==0){
-               returnValue = Coin.getSucursal();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getSUCU().getValue())==0){
+               returnValue = Coin.getSucu();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getVALUE().getValue())==0){
                returnValue = String.valueOf(Coin.getValue());

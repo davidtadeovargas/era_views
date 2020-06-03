@@ -19,6 +19,9 @@ public class TipactfijTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipactfijsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipactfijsTableHeader().getCODE().getValue())==0){
+               returnValue = Tipactfij.getCode();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipactfijsTableHeader().getDESCRIP().getValue())==0){
                returnValue = Tipactfij.getDescrip();
            }
@@ -36,9 +39,6 @@ public class TipactfijTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipactfijsTableHeader().getSUCU().getValue())==0){
                returnValue = Tipactfij.getSucu();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTipactfijsTableHeader().getTIP().getValue())==0){
-               returnValue = Tipactfij.getTip();
            }
            return returnValue;
        };

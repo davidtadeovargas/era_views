@@ -190,6 +190,10 @@ public class PushNotificationViewController extends PushNotificationJFrame {
     }
 
     @Override
+    public void clearFields(){
+    }
+    
+    @Override
     public List<?> getItemsToLoadInTable() throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

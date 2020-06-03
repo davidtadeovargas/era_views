@@ -19,11 +19,11 @@ public class TaxTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getCASHNUMBER().getValue())==0){
-               returnValue = Tax.getCashNumber();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getCODE().getValue())==0){
                returnValue = Tax.getCode();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getESTAC().getValue())==0){
+               returnValue = Tax.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getFALT().getValue())==0){
                returnValue = Tax.getFalt().toString();
@@ -31,14 +31,14 @@ public class TaxTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getFMOD().getValue())==0){
                returnValue = Tax.getFmod().toString();
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Tax.getNocaj();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getRETENTION().getValue())==0){
                returnValue = Tax.isRetention()? "Si":"No";
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getSTATION().getValue())==0){
-               returnValue = Tax.getStation();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getSUCURSAL().getValue())==0){
-               returnValue = Tax.getSucursal();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getSUCU().getValue())==0){
+               returnValue = Tax.getSucu();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getTaxsTableHeader().getVALUE().getValue())==0){
                returnValue = String.valueOf(Tax.getValue());

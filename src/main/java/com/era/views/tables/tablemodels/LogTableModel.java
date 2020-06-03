@@ -22,8 +22,8 @@ public class LogTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLogsTableHeader().getACCIO().getValue())==0){
                returnValue = Log.getAccio();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLogsTableHeader().getCOD().getValue())==0){
-               returnValue = Log.getCod();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLogsTableHeader().getCODE().getValue())==0){
+               returnValue = Log.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLogsTableHeader().getDESCRIP().getValue())==0){
                returnValue = Log.getDescrip();

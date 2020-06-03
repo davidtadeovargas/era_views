@@ -22,8 +22,8 @@ public class PrevcomprsTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPrevcomprssTableHeader().getCODCOMP().getValue())==0){
                returnValue = Prevcomprs.getCodcomp();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPrevcomprssTableHeader().getCODPREVCOMP().getValue())==0){
-               returnValue = Prevcomprs.getCodprevcomp();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPrevcomprssTableHeader().getCODE().getValue())==0){
+               returnValue = Prevcomprs.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPrevcomprssTableHeader().getESTAC().getValue())==0){
                returnValue = Prevcomprs.getEstac();

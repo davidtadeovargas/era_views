@@ -19,6 +19,9 @@ public class PaymentFormTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getCODE().getValue())==0){
+               returnValue = PaymentForm.getCode();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getDESCRIPTION().getValue())==0){
                returnValue = PaymentForm.getDescription();
            }
@@ -33,9 +36,6 @@ public class PaymentFormTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getNOCAJ().getValue())==0){
                returnValue = PaymentForm.getNocaj();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getPAYMENTFORM().getValue())==0){
-               returnValue = PaymentForm.getPaymentForm();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getSUCU().getValue())==0){
                returnValue = PaymentForm.getSucu();

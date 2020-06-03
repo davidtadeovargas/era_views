@@ -17,9 +17,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.CANT;
    }
 
-   private final ColumnTable CODKIT = new ColumnTable("CODKIT");
-   public ColumnTable getCODKIT() {
-       return this.CODKIT;
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
    }
 
    private final ColumnTable ESTAC = new ColumnTable("ESTAC");

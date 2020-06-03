@@ -19,8 +19,8 @@ public class ResponsableTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getResponsablesTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getResponsablesTableHeader().getCOD().getValue())==0){
-               returnValue = Responsable.getCod();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getResponsablesTableHeader().getCODE().getValue())==0){
+               returnValue = Responsable.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getResponsablesTableHeader().getDESCRIP().getValue())==0){
                returnValue = Responsable.getDescrip();

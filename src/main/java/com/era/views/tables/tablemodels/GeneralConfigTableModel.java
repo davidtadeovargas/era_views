@@ -19,9 +19,6 @@ public class GeneralConfigTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getCASHNUMBER().getValue())==0){
-               returnValue = GeneralConfig.getCashNumber();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getCASIFICATION().getValue())==0){
                returnValue = GeneralConfig.getCasification();
            }
@@ -30,6 +27,9 @@ public class GeneralConfigTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getDAY().getValue())==0){
                returnValue = String.valueOf(GeneralConfig.getDay());
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getESTAC().getValue())==0){
+               returnValue = GeneralConfig.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getEXTRA().getValue())==0){
                returnValue = GeneralConfig.getExtra();
@@ -40,6 +40,9 @@ public class GeneralConfigTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getFMOD().getValue())==0){
                returnValue = GeneralConfig.getFmod().toString();
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = GeneralConfig.getNocaj();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getNUMBER().getValue())==0){
                returnValue = String.valueOf(GeneralConfig.getNumber());
            }
@@ -49,11 +52,8 @@ public class GeneralConfigTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getRAZON().getValue())==0){
                returnValue = GeneralConfig.getRazon();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getSTATION().getValue())==0){
-               returnValue = GeneralConfig.getStation();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getSUCURSAL().getValue())==0){
-               returnValue = GeneralConfig.getSucursal();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getSUCU().getValue())==0){
+               returnValue = GeneralConfig.getSucu();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGeneralConfigsTableHeader().getVALUE().getValue())==0){
                returnValue = String.valueOf(GeneralConfig.getValue());

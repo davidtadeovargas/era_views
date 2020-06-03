@@ -44,6 +44,10 @@ public class ErrorDialogViewController extends ErrorDialogJFrame {
         }
     }
     
+    @Override
+    public void clearFields(){
+    }
+    
     public void setIdText(final String idText) {
         final String finalString = props.getProperty(idText);
         this.mainText.setText(finalString);

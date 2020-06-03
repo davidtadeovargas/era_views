@@ -19,8 +19,8 @@ public class MarcsTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcssTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcssTableHeader().getCOD().getValue())==0){
-               returnValue = Marcs.getCod();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcssTableHeader().getCODE().getValue())==0){
+               returnValue = Marcs.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMarcssTableHeader().getDESCRIP().getValue())==0){
                returnValue = Marcs.getDescrip();

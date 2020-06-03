@@ -7,9 +7,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
-   private final ColumnTable CODIGO = new ColumnTable("CODIGO");
-   public ColumnTable getCODIGO() {
-       return this.CODIGO;
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
    }
 
    private final ColumnTable DESCRIPCION = new ColumnTable("DESCRIPCION");

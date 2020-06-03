@@ -48,6 +48,9 @@
             <Property name="mnemonic" type="int" value="115"/>
             <Property name="text" type="java.lang.String" value="Sistema"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+          </AuxValues>
           <SubComponents>
             <Menu class="javax.swing.JMenu" name="jMenLogin">
               <Properties>
@@ -186,6 +189,9 @@
                         <Property name="mnemonic" type="int" value="118"/>
                         <Property name="text" type="java.lang.String" value="Ver log sistema"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                     <MenuItem class="javax.swing.JMenuItem" name="jMDelLog">
                       <Properties>
@@ -195,6 +201,9 @@
                         <Property name="mnemonic" type="int" value="98"/>
                         <Property name="text" type="java.lang.String" value="Borrar log"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                   </SubComponents>
                 </Menu>
@@ -400,6 +409,18 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
                   </AuxValues>
                 </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="warehousesMenu">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/imgs/kits.png"/>
+                    </Property>
+                    <Property name="mnemonic" type="int" value="105"/>
+                    <Property name="text" type="java.lang.String" value="Almacenes"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
+                </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMLotPed">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -430,6 +451,9 @@
                         <Property name="mnemonic" type="int" value="73"/>
                         <Property name="text" type="java.lang.String" value="Importar cat&#xe1;logo de productos desde excel"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                     <MenuItem class="javax.swing.JMenuItem" name="jMImpExistAlm">
                       <Properties>
@@ -439,15 +463,9 @@
                         <Property name="mnemonic" type="int" value="112"/>
                         <Property name="text" type="java.lang.String" value="Importar existencias por almac&#xe9;n"/>
                       </Properties>
-                    </MenuItem>
-                    <MenuItem class="javax.swing.JMenuItem" name="jMImpAlma">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/imgs/impexe.png"/>
-                        </Property>
-                        <Property name="mnemonic" type="int" value="111"/>
-                        <Property name="text" type="java.lang.String" value="Importar almacenes"/>
-                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                   </SubComponents>
                 </Menu>
@@ -471,6 +489,9 @@
                         <Property name="mnemonic" type="int" value="112"/>
                         <Property name="text" type="java.lang.String" value="Productos debajo del m&#xed;nimo"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                     <MenuItem class="javax.swing.JMenuItem" name="jMenItProdsArrMax">
                       <Properties>
@@ -480,6 +501,9 @@
                         <Property name="mnemonic" type="int" value="114"/>
                         <Property name="text" type="java.lang.String" value="Productos arriba del m&#xe1;ximo"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                     <MenuItem class="javax.swing.JMenuItem" name="jMenItDefEstacs">
                       <Properties>
@@ -489,6 +513,9 @@
                         <Property name="mnemonic" type="int" value="100"/>
                         <Property name="text" type="java.lang.String" value="Definir usuarios Max. Min."/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                   </SubComponents>
                 </Menu>
@@ -512,11 +539,17 @@
                         <Property name="mnemonic" type="int" value="116"/>
                         <Property name="text" type="java.lang.String" value="Traspasos"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                     <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Pendientes"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                     <MenuItem class="javax.swing.JMenuItem" name="jMenItIngr">
                       <Properties>
@@ -526,6 +559,9 @@
                         <Property name="mnemonic" type="int" value="105"/>
                         <Property name="text" type="java.lang.String" value="Entradas / Salidas"/>
                       </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                      </AuxValues>
                     </MenuItem>
                   </SubComponents>
                 </Menu>
@@ -554,6 +590,9 @@
                     <Property name="mnemonic" type="int" value="109"/>
                     <Property name="text" type="java.lang.String" value="Clientes"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenItVtas">
                   <Properties>
@@ -566,11 +605,17 @@
                     <Property name="mnemonic" type="int" value="118"/>
                     <Property name="text" type="java.lang.String" value="Ventas"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItemRemisiones">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Remisiones"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenCotsT">
                   <Properties>
@@ -583,11 +628,17 @@
                     <Property name="mnemonic" type="int" value="67"/>
                     <Property name="text" type="java.lang.String" value="Cotizaciones"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItemPedidos">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Pedidos"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenItTipsPags">
                   <Properties>
@@ -597,6 +648,9 @@
                     <Property name="mnemonic" type="int" value="116"/>
                     <Property name="text" type="java.lang.String" value="Tipos de pagos"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMConcepPags">
                   <Properties>
@@ -606,6 +660,9 @@
                     <Property name="mnemonic" type="int" value="110"/>
                     <Property name="text" type="java.lang.String" value="Conceptos de pagos"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMCXC">
                   <Properties>
@@ -615,6 +672,9 @@
                     <Property name="mnemonic" type="int" value="99"/>
                     <Property name="text" type="java.lang.String" value="CXC"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenItTouch">
                   <Properties>
@@ -627,6 +687,9 @@
                     <Property name="mnemonic" type="int" value="116"/>
                     <Property name="text" type="java.lang.String" value="Punto de venta"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMImpCliens">
                   <Properties>
@@ -636,6 +699,9 @@
                     <Property name="mnemonic" type="int" value="105"/>
                     <Property name="text" type="java.lang.String" value="Importar cat&#xe1;logo de clientes desde excel"/>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </MenuItem>
               </SubComponents>
             </Menu>
@@ -647,6 +713,9 @@
                 <Property name="mnemonic" type="int" value="108"/>
                 <Property name="text" type="java.lang.String" value="Cat&#xe1;logo General"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+              </AuxValues>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMActivo">
               <Properties>
@@ -712,6 +781,9 @@
             <Property name="mnemonic" type="int" value="99"/>
             <Property name="text" type="java.lang.String" value="Configuraciones"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+          </AuxValues>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenIt4">
               <Properties>

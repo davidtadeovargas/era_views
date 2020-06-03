@@ -25,9 +25,6 @@ public class ProductTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getASKSERIE().getValue())==0){
                returnValue = Product.isAskSerie()? "Si":"No";
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getBRANCHOFFICE().getValue())==0){
-               returnValue = Product.getBranchOffice();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getBRAND().getValue())==0){
                returnValue = Product.getBrand();
            }
@@ -37,6 +34,9 @@ public class ProductTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getCLASSJERARCHY().getValue())==0){
                returnValue = Product.getClassJerarchy();
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getCODE().getValue())==0){
+               returnValue = Product.getCode();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getCODEEXTRA().getValue())==0){
                returnValue = Product.getCodeExtra();
            }
@@ -45,9 +45,6 @@ public class ProductTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getCODEMEASURE().getValue())==0){
                returnValue = Product.getCodeMeasure();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getCODEPRODUCT().getValue())==0){
-               returnValue = Product.getCodeProduct();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getCODEPRODUCTOPTIONAL1().getValue())==0){
                returnValue = Product.getCodeProductOptional1();
@@ -88,8 +85,8 @@ public class ProductTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getDISCOUNTPROVIDER().getValue())==0){
                returnValue = Product.getDiscountProvider();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getESTATION().getValue())==0){
-               returnValue = Product.getEstation();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getESTAC().getValue())==0){
+               returnValue = Product.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getEXISTENCE().getValue())==0){
                returnValue = String.valueOf(Product.getExistence());
@@ -151,8 +148,8 @@ public class ProductTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getMODELID().getValue())==0){
                returnValue = String.valueOf(Product.getModelID());
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getNUMBERCASH().getValue())==0){
-               returnValue = Product.getNumberCash();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Product.getNocaj();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getPATHIMG().getValue())==0){
                returnValue = Product.getPathIMG();
@@ -219,6 +216,9 @@ public class ProductTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getSHORTDESCRIPTION().getValue())==0){
                returnValue = Product.getShortDescription();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getSUCU().getValue())==0){
+               returnValue = Product.getSucu();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getTIP().getValue())==0){
                returnValue = Product.getTip();

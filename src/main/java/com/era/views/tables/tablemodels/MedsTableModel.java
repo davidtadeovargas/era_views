@@ -19,8 +19,8 @@ public class MedsTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getCOD().getValue())==0){
-               returnValue = Meds.getCod();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getCODE().getValue())==0){
+               returnValue = Meds.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getMedssTableHeader().getDESCRIP().getValue())==0){
                returnValue = Meds.getDescrip();

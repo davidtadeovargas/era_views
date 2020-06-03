@@ -101,6 +101,8 @@ public abstract class BaseJFrame extends JFrame {
     
     public abstract List<?> getItemsToLoadInTable() throws Exception;
     
+    public abstract void clearFields();
+    
     //Called per each jframe to do postinicialization to not change initComponents(); functionality
     protected void postInitComponents(){
         

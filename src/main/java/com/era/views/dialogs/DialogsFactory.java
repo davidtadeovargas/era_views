@@ -53,9 +53,8 @@ public class DialogsFactory {
         OKDialog_.setPropertyText("empty_fields");
         OKDialog_.setOKDialogInterface(OKDialogInterface);
         OKDialog_.show();
-    }
-    
-   public void showOKOperationCompletedCallbackDialog(final JFrame JFrame, final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception{
+    }    
+    public void showOKOperationCompletedCallbackDialog(final JFrame JFrame, final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception{
         final OKDialog OKDialog_ = this.getOKDialog(JFrame);
         OKDialog_.setPropertyText("operation_completed");
         OKDialog_.setOKDialogInterface(OKDialogInterface);
@@ -86,7 +85,13 @@ public class DialogsFactory {
         QuestionDialog_.setPropertyText("question_continue");
         QuestionDialog_.setOKDialogInterface(OKDialogInterface);
         QuestionDialog_.show();
-    }    
+    }
+    public void showQuestionExitDialog(final JFrame JFrame, final com.era.views.dialogs.QuestionDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final QuestionDialog QuestionDialog_ = this.getQuestionDialog(JFrame);
+        QuestionDialog_.setPropertyText("question_exit");
+        QuestionDialog_.setOKDialogInterface(OKDialogInterface);
+        QuestionDialog_.show();
+    }
     
     public ErrorOKDialog getErrorOKDialog(final JFrame JFrame) throws Exception {
         if(ErrorOKDialog==null){
@@ -98,14 +103,36 @@ public class DialogsFactory {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText(propertyText);
         ErrorOKDialog_.show();
+    }    
+    public void showErrorTextOKDialog(final JFrame JFrame, final String text) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setText(text);
+        ErrorOKDialog_.show();
     }
-    
     public void showErrorOKCallbackDialog(final JFrame JFrame, final String propertyText, final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText(propertyText);
         ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
         ErrorOKDialog_.show();
-    }    
+    }        
+    public void showErrorRecordNotExistsOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("errors_not_record_exists");
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }
+    public void showErrorRecordExistsOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("errors_record_exists");
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }
+    public void showErrorUserNotExistsOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("errors_user_not_exists");
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }
     public void showErrorOKNoSelectionCallbackDialog(final JFrame JFrame, final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText("selection_first");

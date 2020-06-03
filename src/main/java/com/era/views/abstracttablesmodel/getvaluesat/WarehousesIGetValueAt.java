@@ -27,7 +27,7 @@ public class WarehousesIGetValueAt implements IGetValueAt {
             returnValue = Warehouse.getDescription();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
-            returnValue = Warehouse.getResponsible();
+            returnValue = Warehouse.getResponsable();
         }
         
         return returnValue;

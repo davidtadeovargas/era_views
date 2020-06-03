@@ -29,7 +29,7 @@ public abstract class AlmasJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.WarehouseTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
@@ -905,7 +905,7 @@ public abstract class AlmasJFrame extends BaseJFrame
     protected javax.swing.JTextField jTDir2;
     protected javax.swing.JTextField jTDir3;
     protected javax.swing.JTextField jTRespon;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.WarehouseTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

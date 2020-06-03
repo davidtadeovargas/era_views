@@ -19,8 +19,8 @@ public class SubramosTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getCODIGO().getValue())==0){
-               returnValue = Subramos.getCodigo();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getCODE().getValue())==0){
+               returnValue = Subramos.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSubramossTableHeader().getDESCRIPCION().getValue())==0){
                returnValue = Subramos.getDescripcion();

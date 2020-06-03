@@ -7,9 +7,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
-   private final ColumnTable CASHNUMBER = new ColumnTable("CASHNUMBER");
-   public ColumnTable getCASHNUMBER() {
-       return this.CASHNUMBER;
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
    }
 
    private final ColumnTable CONSECUTIVE = new ColumnTable("CONSECUTIVE");
@@ -22,9 +22,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.DESCRIPTION;
    }
 
-   private final ColumnTable ESTATION = new ColumnTable("ESTATION");
-   public ColumnTable getESTATION() {
-       return this.ESTATION;
+   private final ColumnTable ESTAC = new ColumnTable("ESTAC");
+   public ColumnTable getESTAC() {
+       return this.ESTAC;
    }
 
    private final ColumnTable FALT = new ColumnTable("FALT");
@@ -37,14 +37,14 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.FMOD;
    }
 
-   private final ColumnTable SERIE = new ColumnTable("SERIE");
-   public ColumnTable getSERIE() {
-       return this.SERIE;
+   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   public ColumnTable getNOCAJ() {
+       return this.NOCAJ;
    }
 
-   private final ColumnTable SUCURSAL = new ColumnTable("SUCURSAL");
-   public ColumnTable getSUCURSAL() {
-       return this.SUCURSAL;
+   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   public ColumnTable getSUCU() {
+       return this.SUCU;
    }
 
    private final ColumnTable TYPE = new ColumnTable("TYPE");

@@ -19,8 +19,8 @@ public class SectoresTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getCODIGO().getValue())==0){
-               returnValue = Sectores.getCodigo();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getCODE().getValue())==0){
+               returnValue = Sectores.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSectoressTableHeader().getDESCRIPCION().getValue())==0){
                returnValue = Sectores.getDescripcion();

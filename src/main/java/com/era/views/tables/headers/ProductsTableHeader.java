@@ -17,11 +17,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ASKSERIE;
    }
 
-   private final ColumnTable BRANCHOFFICE = new ColumnTable("BRANCHOFFICE");
-   public ColumnTable getBRANCHOFFICE() {
-       return this.BRANCHOFFICE;
-   }
-
    private final ColumnTable BRAND = new ColumnTable("BRAND");
    public ColumnTable getBRAND() {
        return this.BRAND;
@@ -37,6 +32,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.CLASSJERARCHY;
    }
 
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
+   }
+
    private final ColumnTable CODEEXTRA = new ColumnTable("CODEEXTRA");
    public ColumnTable getCODEEXTRA() {
        return this.CODEEXTRA;
@@ -50,11 +50,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable CODEMEASURE = new ColumnTable("CODEMEASURE");
    public ColumnTable getCODEMEASURE() {
        return this.CODEMEASURE;
-   }
-
-   private final ColumnTable CODEPRODUCT = new ColumnTable("CODEPRODUCT");
-   public ColumnTable getCODEPRODUCT() {
-       return this.CODEPRODUCT;
    }
 
    private final ColumnTable CODEPRODUCTOPTIONAL1 = new ColumnTable("CODEPRODUCTOPTIONAL1");
@@ -122,9 +117,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.DISCOUNTPROVIDER;
    }
 
-   private final ColumnTable ESTATION = new ColumnTable("ESTATION");
-   public ColumnTable getESTATION() {
-       return this.ESTATION;
+   private final ColumnTable ESTAC = new ColumnTable("ESTAC");
+   public ColumnTable getESTAC() {
+       return this.ESTAC;
    }
 
    private final ColumnTable EXISTENCE = new ColumnTable("EXISTENCE");
@@ -227,9 +222,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.MODELID;
    }
 
-   private final ColumnTable NUMBERCASH = new ColumnTable("NUMBERCASH");
-   public ColumnTable getNUMBERCASH() {
-       return this.NUMBERCASH;
+   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   public ColumnTable getNOCAJ() {
+       return this.NOCAJ;
    }
 
    private final ColumnTable PATHIMG = new ColumnTable("PATHIMG");
@@ -340,6 +335,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable SHORTDESCRIPTION = new ColumnTable("SHORTDESCRIPTION");
    public ColumnTable getSHORTDESCRIPTION() {
        return this.SHORTDESCRIPTION;
+   }
+
+   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   public ColumnTable getSUCU() {
+       return this.SUCU;
    }
 
    private final ColumnTable TIP = new ColumnTable("TIP");

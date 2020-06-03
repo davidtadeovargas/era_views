@@ -43,9 +43,6 @@ public class OrdsTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getOrdssTableHeader().getPROV().getValue())==0){
                returnValue = Ords.getProv();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getOrdssTableHeader().getPROY().getValue())==0){
-               returnValue = Ords.getProy();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getOrdssTableHeader().getSUBTOT().getValue())==0){
                returnValue = String.valueOf(Ords.getSubtot());
            }

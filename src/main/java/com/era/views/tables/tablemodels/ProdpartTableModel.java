@@ -19,6 +19,9 @@ public class ProdpartTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProdpartsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProdpartsTableHeader().getCODE().getValue())==0){
+               returnValue = Prodpart.getCode();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProdpartsTableHeader().getESTAC().getValue())==0){
                returnValue = Prodpart.getEstac();
            }
@@ -33,9 +36,6 @@ public class ProdpartTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProdpartsTableHeader().getPART().getValue())==0){
                returnValue = Prodpart.getPart();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProdpartsTableHeader().getPROD().getValue())==0){
-               returnValue = Prodpart.getProd();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProdpartsTableHeader().getSUCU().getValue())==0){
                returnValue = Prodpart.getSucu();

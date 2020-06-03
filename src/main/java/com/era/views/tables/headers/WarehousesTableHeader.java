@@ -22,11 +22,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ADDRESS3;
    }
 
-   private final ColumnTable CASHNUMBER = new ColumnTable("CASHNUMBER");
-   public ColumnTable getCASHNUMBER() {
-       return this.CASHNUMBER;
-   }
-
    private final ColumnTable CODE = new ColumnTable("CODE");
    public ColumnTable getCODE() {
        return this.CODE;
@@ -35,6 +30,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable DESCRIPTION = new ColumnTable("DESCRIPTION");
    public ColumnTable getDESCRIPTION() {
        return this.DESCRIPTION;
+   }
+
+   private final ColumnTable ESTAC = new ColumnTable("ESTAC");
+   public ColumnTable getESTAC() {
+       return this.ESTAC;
    }
 
    private final ColumnTable FALT = new ColumnTable("FALT");
@@ -47,19 +47,19 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.FMOD;
    }
 
-   private final ColumnTable RESPONSIBLE = new ColumnTable("RESPONSIBLE");
-   public ColumnTable getRESPONSIBLE() {
-       return this.RESPONSIBLE;
+   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   public ColumnTable getNOCAJ() {
+       return this.NOCAJ;
    }
 
-   private final ColumnTable STATION = new ColumnTable("STATION");
-   public ColumnTable getSTATION() {
-       return this.STATION;
+   private final ColumnTable RESPONSABLE = new ColumnTable("RESPONSABLE");
+   public ColumnTable getRESPONSABLE() {
+       return this.RESPONSABLE;
    }
 
-   private final ColumnTable SUCURSAL = new ColumnTable("SUCURSAL");
-   public ColumnTable getSUCURSAL() {
-       return this.SUCURSAL;
+   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   public ColumnTable getSUCU() {
+       return this.SUCU;
    }
 
 }

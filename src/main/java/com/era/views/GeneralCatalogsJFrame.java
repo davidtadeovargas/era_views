@@ -4,7 +4,7 @@ package com.era.views;
 
 import java.util.List;
 
-public class GeneralCatalogsJFrame extends BaseJFrame
+public abstract class GeneralCatalogsJFrame extends BaseJFrame
 {    
     public GeneralCatalogsJFrame(final String idTextTitleWindow) 
     {

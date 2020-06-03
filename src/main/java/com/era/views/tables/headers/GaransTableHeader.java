@@ -7,6 +7,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
+   }
+
    private final ColumnTable DESCRIP = new ColumnTable("DESCRIP");
    public ColumnTable getDESCRIP() {
        return this.DESCRIP;
@@ -25,11 +30,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable FMOD = new ColumnTable("FMOD");
    public ColumnTable getFMOD() {
        return this.FMOD;
-   }
-
-   private final ColumnTable GARA = new ColumnTable("GARA");
-   public ColumnTable getGARA() {
-       return this.GARA;
    }
 
    private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");

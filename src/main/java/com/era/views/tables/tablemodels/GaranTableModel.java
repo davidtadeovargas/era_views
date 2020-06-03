@@ -19,6 +19,9 @@ public class GaranTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGaransTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGaransTableHeader().getCODE().getValue())==0){
+               returnValue = Garan.getCode();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGaransTableHeader().getDESCRIP().getValue())==0){
                returnValue = Garan.getDescrip();
            }
@@ -30,9 +33,6 @@ public class GaranTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGaransTableHeader().getFMOD().getValue())==0){
                returnValue = Garan.getFmod().toString();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGaransTableHeader().getGARA().getValue())==0){
-               returnValue = Garan.getGara();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getGaransTableHeader().getNOCAJ().getValue())==0){
                returnValue = Garan.getNocaj();

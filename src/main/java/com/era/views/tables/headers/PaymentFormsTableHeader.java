@@ -7,6 +7,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
+   }
+
    private final ColumnTable DESCRIPTION = new ColumnTable("DESCRIPTION");
    public ColumnTable getDESCRIPTION() {
        return this.DESCRIPTION;
@@ -30,11 +35,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
-   }
-
-   private final ColumnTable PAYMENTFORM = new ColumnTable("PAYMENTFORM");
-   public ColumnTable getPAYMENTFORM() {
-       return this.PAYMENTFORM;
    }
 
    private final ColumnTable SUCU = new ColumnTable("SUCU");

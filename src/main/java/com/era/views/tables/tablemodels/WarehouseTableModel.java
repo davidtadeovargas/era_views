@@ -28,14 +28,14 @@ public class WarehouseTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getADDRESS3().getValue())==0){
                returnValue = Warehouse.getAddress3();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getCASHNUMBER().getValue())==0){
-               returnValue = Warehouse.getCashNumber();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getCODE().getValue())==0){
                returnValue = Warehouse.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getDESCRIPTION().getValue())==0){
                returnValue = Warehouse.getDescription();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getESTAC().getValue())==0){
+               returnValue = Warehouse.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getFALT().getValue())==0){
                returnValue = Warehouse.getFalt().toString();
@@ -43,14 +43,14 @@ public class WarehouseTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getFMOD().getValue())==0){
                returnValue = Warehouse.getFmod().toString();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getRESPONSIBLE().getValue())==0){
-               returnValue = Warehouse.getResponsible();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Warehouse.getNocaj();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getSTATION().getValue())==0){
-               returnValue = Warehouse.getStation();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getRESPONSABLE().getValue())==0){
+               returnValue = Warehouse.getResponsable();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getSUCURSAL().getValue())==0){
-               returnValue = Warehouse.getSucursal();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getWarehousesTableHeader().getSUCU().getValue())==0){
+               returnValue = Warehouse.getSucu();
            }
            return returnValue;
        };

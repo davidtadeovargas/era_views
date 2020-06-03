@@ -12,9 +12,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.CODCOMP;
    }
 
-   private final ColumnTable CODPREVCOMP = new ColumnTable("CODPREVCOMP");
-   public ColumnTable getCODPREVCOMP() {
-       return this.CODPREVCOMP;
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
    }
 
    private final ColumnTable ESTAC = new ColumnTable("ESTAC");

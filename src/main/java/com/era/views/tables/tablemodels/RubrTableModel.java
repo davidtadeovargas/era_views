@@ -19,8 +19,8 @@ public class RubrTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRubrsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRubrsTableHeader().getCOD().getValue())==0){
-               returnValue = Rubr.getCod();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRubrsTableHeader().getCODE().getValue())==0){
+               returnValue = Rubr.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getRubrsTableHeader().getDESCRIP().getValue())==0){
                returnValue = Rubr.getDescrip();

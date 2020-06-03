@@ -19,8 +19,8 @@ public class SerieTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getCASHNUMBER().getValue())==0){
-               returnValue = Serie.getCashNumber();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getCODE().getValue())==0){
+               returnValue = Serie.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getCONSECUTIVE().getValue())==0){
                returnValue = String.valueOf(Serie.getConsecutive());
@@ -28,8 +28,8 @@ public class SerieTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getDESCRIPTION().getValue())==0){
                returnValue = Serie.getDescription();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getESTATION().getValue())==0){
-               returnValue = Serie.getEstation();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getESTAC().getValue())==0){
+               returnValue = Serie.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getFALT().getValue())==0){
                returnValue = Serie.getFalt().toString();
@@ -37,11 +37,11 @@ public class SerieTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getFMOD().getValue())==0){
                returnValue = Serie.getFmod().toString();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getSERIE().getValue())==0){
-               returnValue = Serie.getSerie();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Serie.getNocaj();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getSUCURSAL().getValue())==0){
-               returnValue = Serie.getSucursal();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getSUCU().getValue())==0){
+               returnValue = Serie.getSucu();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getTYPE().getValue())==0){
                returnValue = Serie.getType();

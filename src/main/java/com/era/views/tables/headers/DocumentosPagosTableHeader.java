@@ -12,11 +12,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.CADENAORIGINAL;
    }
 
-   private final ColumnTable CAJA = new ColumnTable("CAJA");
-   public ColumnTable getCAJA() {
-       return this.CAJA;
-   }
-
    private final ColumnTable CERTIFICADOSAT = new ColumnTable("CERTIFICADOSAT");
    public ColumnTable getCERTIFICADOSAT() {
        return this.CERTIFICADOSAT;
@@ -45,6 +40,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable CUENTABANCO = new ColumnTable("CUENTABANCO");
    public ColumnTable getCUENTABANCO() {
        return this.CUENTABANCO;
+   }
+
+   private final ColumnTable ESTAC = new ColumnTable("ESTAC");
+   public ColumnTable getESTAC() {
+       return this.ESTAC;
    }
 
    private final ColumnTable ESTADO = new ColumnTable("ESTADO");
@@ -102,6 +102,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.LUGAREXPEDICION;
    }
 
+   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   public ColumnTable getNOCAJ() {
+       return this.NOCAJ;
+   }
+
    private final ColumnTable PENDIENTE = new ColumnTable("PENDIENTE");
    public ColumnTable getPENDIENTE() {
        return this.PENDIENTE;
@@ -127,9 +132,9 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.SERIE;
    }
 
-   private final ColumnTable SUCURSAL = new ColumnTable("SUCURSAL");
-   public ColumnTable getSUCURSAL() {
-       return this.SUCURSAL;
+   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   public ColumnTable getSUCU() {
+       return this.SUCU;
    }
 
    private final ColumnTable TIPO = new ColumnTable("TIPO");
@@ -140,11 +145,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable TRANSACTIONID = new ColumnTable("TRANSACTIONID");
    public ColumnTable getTRANSACTIONID() {
        return this.TRANSACTIONID;
-   }
-
-   private final ColumnTable USUARIO = new ColumnTable("USUARIO");
-   public ColumnTable getUSUARIO() {
-       return this.USUARIO;
    }
 
    private final ColumnTable UUID_FISCAL = new ColumnTable("UUID_FISCAL");

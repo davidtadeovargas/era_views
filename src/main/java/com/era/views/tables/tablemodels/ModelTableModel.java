@@ -19,8 +19,8 @@ public class ModelTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getModelsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getModelsTableHeader().getCOD().getValue())==0){
-               returnValue = Model.getCod();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getModelsTableHeader().getCODE().getValue())==0){
+               returnValue = Model.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getModelsTableHeader().getDESCRIP().getValue())==0){
                returnValue = Model.getDescrip();

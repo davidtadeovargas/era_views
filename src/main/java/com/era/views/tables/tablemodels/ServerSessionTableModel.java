@@ -19,6 +19,9 @@ public class ServerSessionTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getServerSessionsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getServerSessionsTableHeader().getCODE().getValue())==0){
+               returnValue = ServerSession.getCode();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getServerSessionsTableHeader().getESTAC().getValue())==0){
                returnValue = ServerSession.getEstac();
            }
@@ -27,9 +30,6 @@ public class ServerSessionTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getServerSessionsTableHeader().getFMOD().getValue())==0){
                returnValue = ServerSession.getFmod().toString();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getServerSessionsTableHeader().getGENERICSERIAL().getValue())==0){
-               returnValue = ServerSession.getGenericSerial();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getServerSessionsTableHeader().getNOCAJ().getValue())==0){
                returnValue = ServerSession.getNocaj();

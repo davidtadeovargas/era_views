@@ -22,9 +22,6 @@ public class DocumentosPagoTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getCADENAORIGINAL().getValue())==0){
                returnValue = DocumentosPago.getCadenaOriginal();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getCAJA().getValue())==0){
-               returnValue = DocumentosPago.getCaja();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getCERTIFICADOSAT().getValue())==0){
                returnValue = DocumentosPago.getCertificadosat();
            }
@@ -42,6 +39,9 @@ public class DocumentosPagoTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getCUENTABANCO().getValue())==0){
                returnValue = DocumentosPago.getCuentabanco();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getESTAC().getValue())==0){
+               returnValue = DocumentosPago.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getESTADO().getValue())==0){
                returnValue = DocumentosPago.getEstado();
@@ -76,6 +76,9 @@ public class DocumentosPagoTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getLUGAREXPEDICION().getValue())==0){
                returnValue = DocumentosPago.getLugarExpedicion();
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getNOCAJ().getValue())==0){
+               returnValue = DocumentosPago.getNocaj();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getPENDIENTE().getValue())==0){
                returnValue = DocumentosPago.getPendiente().toString();
            }
@@ -91,17 +94,14 @@ public class DocumentosPagoTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getSERIE().getValue())==0){
                returnValue = DocumentosPago.getSerie();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getSUCURSAL().getValue())==0){
-               returnValue = DocumentosPago.getSucursal();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getSUCU().getValue())==0){
+               returnValue = DocumentosPago.getSucu();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getTIPO().getValue())==0){
                returnValue = DocumentosPago.getTipo();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getTRANSACTIONID().getValue())==0){
                returnValue = DocumentosPago.getTransactionid();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getUSUARIO().getValue())==0){
-               returnValue = DocumentosPago.getUsuario();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getDocumentosPagosTableHeader().getUUID_FISCAL().getValue())==0){
                returnValue = DocumentosPago.getUuid_fiscal();

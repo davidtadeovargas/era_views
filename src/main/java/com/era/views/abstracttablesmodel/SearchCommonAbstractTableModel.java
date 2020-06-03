@@ -101,12 +101,6 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                 case PESOS:
                     break;
                     
-                case COLORS:
-                    break;
-                    
-                case ADITIONAL_UBIQS:
-                    break;
-                    
                 case MEASURES:
                     break;
                     
@@ -141,9 +135,6 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                     break;
                     
                 case CREDIT_NOTES:
-                    break;
-                    
-                case TALLAS:
                     break;
                     
                 case PAYMENT_CONCEPTS:

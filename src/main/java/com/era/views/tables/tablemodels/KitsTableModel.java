@@ -25,8 +25,8 @@ public class KitsTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getKitssTableHeader().getCANT().getValue())==0){
                returnValue = String.valueOf(Kits.getCant());
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getKitssTableHeader().getCODKIT().getValue())==0){
-               returnValue = Kits.getCodkit();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getKitssTableHeader().getCODE().getValue())==0){
+               returnValue = Kits.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getKitssTableHeader().getESTAC().getValue())==0){
                returnValue = Kits.getEstac();

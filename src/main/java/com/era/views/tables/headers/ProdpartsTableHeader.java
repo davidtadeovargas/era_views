@@ -7,6 +7,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
+   private final ColumnTable CODE = new ColumnTable("CODE");
+   public ColumnTable getCODE() {
+       return this.CODE;
+   }
+
    private final ColumnTable ESTAC = new ColumnTable("ESTAC");
    public ColumnTable getESTAC() {
        return this.ESTAC;
@@ -30,11 +35,6 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable PART = new ColumnTable("PART");
    public ColumnTable getPART() {
        return this.PART;
-   }
-
-   private final ColumnTable PROD = new ColumnTable("PROD");
-   public ColumnTable getPROD() {
-       return this.PROD;
    }
 
    private final ColumnTable SUCU = new ColumnTable("SUCU");

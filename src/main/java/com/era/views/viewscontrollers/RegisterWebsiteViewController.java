@@ -33,6 +33,10 @@ public class RegisterWebsiteViewController extends RegisterWebsiteJFrame {
         });
     }
     
+    @Override
+    public void clearFields(){
+    }
+    
     private void urlJLabelMouseClicked(java.awt.event.MouseEvent evt) {                                       
         
         if(OnURLLabelClicked!=null){

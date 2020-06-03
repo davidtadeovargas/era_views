@@ -28,9 +28,6 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCADORI().getValue())==0){
                returnValue = Sales.getCadori();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCASHNUMBER().getValue())==0){
-               returnValue = Sales.getCashNumber();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCATGRAL().getValue())==0){
                returnValue = Sales.getCatgral();
            }
@@ -52,9 +49,6 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCORTNUMBER().getValue())==0){
                returnValue = String.valueOf(Sales.getCortNumber());
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCREATIONDATE().getValue())==0){
-               returnValue = Sales.getCreationDate().toString();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCUT().getValue())==0){
                returnValue = Sales.getCut();
            }
@@ -67,11 +61,11 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getDOCUMENTTYPE().getValue())==0){
                returnValue = Sales.getDocumentType();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getEDITEDDATE().getValue())==0){
-               returnValue = Sales.getEditedDate().toString();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getEMISIONDATE().getValue())==0){
                returnValue = Sales.getEmisionDate().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getESTAC().getValue())==0){
+               returnValue = Sales.getEstac();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getESTATUS().getValue())==0){
                returnValue = Sales.getEstatus();
@@ -85,14 +79,26 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getFACTURADO().getValue())==0){
                returnValue = Sales.isFacturado()? "Si":"No";
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getFALT().getValue())==0){
+               returnValue = Sales.getFalt().toString();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getFISCALFOLIO().getValue())==0){
                returnValue = Sales.getFiscalFolio();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getFISCALREGIMEN().getValue())==0){
                returnValue = Sales.getFiscalRegimen();
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getFMOD().getValue())==0){
+               returnValue = Sales.getFmod().toString();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getFVENC().getValue())==0){
+               returnValue = Sales.getFvenc().toString();
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getINVOICED().getValue())==0){
                returnValue = Sales.isInvoiced()? "Si":"No";
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getNOCAJ().getValue())==0){
+               returnValue = Sales.getNocaj();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getNOSER().getValue())==0){
                returnValue = Sales.getNoser();
@@ -151,17 +157,14 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getSERIE().getValue())==0){
                returnValue = Sales.getSerie();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getSTATION().getValue())==0){
-               returnValue = Sales.getStation();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getSUBRAMO().getValue())==0){
                returnValue = Sales.getSubramo();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getSUBTOTAL().getValue())==0){
                returnValue = Sales.getSubtotal().toString();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getSUCURSAL().getValue())==0){
-               returnValue = Sales.getSucursal();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getSUCU().getValue())==0){
+               returnValue = Sales.getSucu();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getTAX().getValue())==0){
                returnValue = Sales.getTax().toString();
@@ -201,9 +204,6 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getUSOCFDI().getValue())==0){
                returnValue = Sales.getUsocfdi();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getVENCIMIENTDATE().getValue())==0){
-               returnValue = Sales.getVencimientDate().toString();
            }
            return returnValue;
        };
