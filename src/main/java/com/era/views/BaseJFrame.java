@@ -37,7 +37,7 @@ public abstract class BaseJFrame extends JFrame {
     protected JComponentUtils JComponentUtils = new JComponentUtils();
     protected OnJFrameVisible OnJFrameVisible;
     protected PostInitComponents PostInitComponents;
-    protected BaseJTable BaseJTable;
+    protected BaseJTable BaseJTable;    
     
     protected String titleWindow;
     
@@ -98,10 +98,15 @@ public abstract class BaseJFrame extends JFrame {
             dispose();
         });
     }
-    
+
+    public void setReadOnly(boolean readOnly) {
+        JComponentUtils.setReadOnly(readOnly);
+    }
+        
     public abstract List<?> getItemsToLoadInTable() throws Exception;
     
     public abstract void clearFields();
+    public abstract void loadModelInFields(Object ObjectModel) throws  Exception;
     
     //Called per each jframe to do postinicialization to not change initComponents(); functionality
     protected void postInitComponents(){
@@ -177,7 +182,8 @@ public abstract class BaseJFrame extends JFrame {
     public void pack() {
         super.pack(); //To change body of generated methods, choose Tools | Templates.
         
-        JComponentUtils.initAllListenersComponentes(baseJFrame);
+        //Init all the components with listeners and more ..
+        JComponentUtils.initAllComponents(baseJFrame);
     }
     
     

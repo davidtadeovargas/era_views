@@ -15,7 +15,7 @@ import javax.swing.DefaultListCellRenderer;
  */
 public abstract class BaseComboBox<T> extends JComboBox {
     
-    abstract List<T> getItems();
+    abstract List<T> getItems() throws Exception;
     
     public BaseComboBox(final DefaultListCellRenderer DefaultListCellRenderer){
         this.setRenderer(DefaultListCellRenderer);
@@ -41,7 +41,7 @@ public abstract class BaseComboBox<T> extends JComboBox {
         this.setSelectedIndex(0);
     }
     
-    public void loadItems(){
+    public void loadItems() throws Exception {
         
         final List<T> items_ = (List<T>) this.getItems();
         for(T Item : items_){

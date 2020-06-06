@@ -22,9 +22,6 @@ public class CompanyTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCP().getValue())==0){
                returnValue = Company.getCP();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC10().getValue())==0){
-               returnValue = Company.getContac10();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getRFC().getValue())==0){
                returnValue = Company.getRFC();
            }
@@ -33,9 +30,6 @@ public class CompanyTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getANIO().getValue())==0){
                returnValue = Company.getAnio();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getAPPPATH().getValue())==0){
-               returnValue = Company.getAppPath();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getBANC().getValue())==0){
                returnValue = Company.getBanc();
@@ -91,26 +85,8 @@ public class CompanyTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC().getValue())==0){
                returnValue = Company.getContac();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC3().getValue())==0){
-               returnValue = Company.getContac3();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC4().getValue())==0){
-               returnValue = Company.getContac4();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC5().getValue())==0){
-               returnValue = Company.getContac5();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC6().getValue())==0){
                returnValue = Company.getContac6();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC7().getValue())==0){
-               returnValue = Company.getContac7();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC8().getValue())==0){
-               returnValue = Company.getContac8();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC9().getValue())==0){
-               returnValue = Company.getContac9();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTACT2().getValue())==0){
                returnValue = Company.getContact2();
@@ -292,92 +268,17 @@ public class CompanyTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getREVIS().getValue())==0){
                returnValue = Company.getRevis();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getSER().getValue())==0){
-               returnValue = Company.getSer();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getSUCU().getValue())==0){
                returnValue = Company.getSucu();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTEL().getValue())==0){
                returnValue = Company.getTel();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELCON10().getValue())==0){
-               returnValue = Company.getTelcon10();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELCON3().getValue())==0){
-               returnValue = Company.getTelcon3();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELCON4().getValue())==0){
-               returnValue = Company.getTelcon4();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELCON5().getValue())==0){
-               returnValue = Company.getTelcon5();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELCON6().getValue())==0){
-               returnValue = Company.getTelcon6();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELCON7().getValue())==0){
-               returnValue = Company.getTelcon7();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELCON8().getValue())==0){
-               returnValue = Company.getTelcon8();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELCON9().getValue())==0){
-               returnValue = Company.getTelcon9();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER1().getValue())==0){
                returnValue = Company.getTelper1();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER10().getValue())==0){
-               returnValue = Company.getTelper10();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER100().getValue())==0){
-               returnValue = Company.getTelper100();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER2().getValue())==0){
                returnValue = Company.getTelper2();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER3().getValue())==0){
-               returnValue = Company.getTelper3();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER33().getValue())==0){
-               returnValue = Company.getTelper33();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER4().getValue())==0){
-               returnValue = Company.getTelper4();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER44().getValue())==0){
-               returnValue = Company.getTelper44();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER5().getValue())==0){
-               returnValue = Company.getTelper5();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER55().getValue())==0){
-               returnValue = Company.getTelper55();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER6().getValue())==0){
-               returnValue = Company.getTelper6();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER66().getValue())==0){
-               returnValue = Company.getTelper66();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER7().getValue())==0){
-               returnValue = Company.getTelper7();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER77().getValue())==0){
-               returnValue = Company.getTelper77();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER8().getValue())==0){
-               returnValue = Company.getTelper8();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER88().getValue())==0){
-               returnValue = Company.getTelper88();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER9().getValue())==0){
-               returnValue = Company.getTelper9();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER99().getValue())==0){
-               returnValue = Company.getTelper99();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTEMPLATE().getValue())==0){
                returnValue = Company.getTemplate();
@@ -396,5 +297,5 @@ public class CompanyTableModel  extends BaseAbstractTableModel {
            }
            return returnValue;
        };
-   }
+   }   
 }

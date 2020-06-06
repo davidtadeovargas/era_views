@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -43,10 +44,11 @@ public class JComponentUtils {
     protected F2Event F2Event;
     protected F4Event F4Event;
     protected EnterEvent EnterEvent;
-    private boolean alreadyAddedKeylisteners;
+    private boolean componentsAlreadyInit;
     private boolean F2EventFired;
     private boolean F4EventFired;
     private int f4EventsFired = 0;
+    private boolean readOnly;
     
     
     public void addComponentToKeyPress(Component Component){
@@ -70,6 +72,10 @@ public class JComponentUtils {
         });
     }
 
+    public void setReadOnly(boolean readOnly) {
+        this.readOnly = readOnly;
+    }
+    
     public void setDisposeInEscapeEvent(boolean disposeInEscapeEvent) {
         this.disposeInEscapeEvent = disposeInEscapeEvent;
     }
@@ -371,14 +377,14 @@ public class JComponentUtils {
         }
     }
     
-    public void initAllListenersComponentes(final Container c){
-        if(!alreadyAddedKeylisteners){
-            initAllBaseComponentsListeners(c);
-            alreadyAddedKeylisteners = true;
+    public void initAllComponents(final Container c){
+        if(!componentsAlreadyInit){
+            initAllBaseComponents(c);
+            componentsAlreadyInit = true;
         }        
     }
     
-    private List<Component> initAllBaseComponentsListeners(final Container c){
+    private List<Component> initAllBaseComponents(final Container c){
         
         Component[] comps = c.getComponents();
         List<Component> compList = new ArrayList<>();
@@ -391,19 +397,42 @@ public class JComponentUtils {
                 
                 //All textfield componentes
                 if (comp instanceof JTextField){
+                    if(readOnly){ //Read only
+                        comp.setEnabled(false);
+                    }
                     LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "Component instance of JTextField");
                     selectAllTextInControlOnFocus((JTextComponent) comp);
                 }
                 else if (comp instanceof JTextArea){
+                    if(readOnly){ //Read only
+                        comp.setEnabled(false);
+                    }
                     LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "Component instance of JTextArea");
                     selectAllTextInControlOnFocus((JTextComponent) comp);
                 }
                 else if (comp instanceof JPasswordField){
+                    if(readOnly){ //Read only
+                        comp.setEnabled(false);
+                    }
                     LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "Component instance of JPasswordField");
                     selectAllTextInControlOnFocus((JTextComponent) comp);
                 }
+                else if (comp instanceof JComboBox){
+                    if(readOnly){ //Read only
+                        comp.setEnabled(false);
+                    }
+                }
+                else if (comp instanceof JButton){
+                    if(readOnly){ //Read only
+                        final JButton JButton = (JButton)comp;
+                        if(JButton.getText().compareTo("...")==0){
+                            comp.setEnabled(false);
+                        }                        
+                    }
+                    LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "Component instance of JButton");                    
+                }
                 
-                compList.addAll(initAllBaseComponentsListeners((Container) comp));
+                compList.addAll(initAllBaseComponents((Container) comp));
             }
         }
         return compList;        

@@ -26,7 +26,7 @@ public abstract class ClientsJFrame extends BaseJFrame
         jBDel = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.CompanyTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
@@ -539,7 +539,7 @@ public abstract class ClientsJFrame extends BaseJFrame
     private javax.swing.JPanel jP1;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.CompanyTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clients extends javax.swing.JFrame */

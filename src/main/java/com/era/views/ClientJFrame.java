@@ -1,5 +1,6 @@
 package com.era.views;
 
+import javax.swing.ButtonGroup;
 
 public abstract class ClientJFrame extends BaseJFrame
 {   
@@ -8,6 +9,10 @@ public abstract class ClientJFrame extends BaseJFrame
         super(idTextTitleWindow);
         
         initComponents();
+
+        ButtonGroup g = new ButtonGroup();
+        g.add(jRaMor);
+        g.add(jRaFis);
 
         //Post inicialization
         postInitComponents();
@@ -34,13 +39,12 @@ public abstract class ClientJFrame extends BaseJFrame
         jRaMor = new javax.swing.JRadioButton();
         jLabel30 = new javax.swing.JLabel();
         jTCURP = new javax.swing.JTextField();
-        jTDepGar = new javax.swing.JTextField();
         jLabel49 = new javax.swing.JLabel();
         jTCodCli = new javax.swing.JTextField();
         jCBloqCred = new javax.swing.JCheckBox();
         pnlDatosBancarios = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
-        jComFormPag = new javax.swing.JComboBox();
+        jComFormPag = new com.era.views.comboboxes.PaymentFormCombobox();
         jLabel8 = new javax.swing.JLabel();
         jTCta = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
@@ -60,22 +64,14 @@ public abstract class ClientJFrame extends BaseJFrame
         jLabel14 = new javax.swing.JLabel();
         jTCtaPred = new javax.swing.JTextField();
         jLUsoCfdi = new javax.swing.JLabel();
-        jComUsoCfdi = new javax.swing.JComboBox();
+        jComUsoCfdi = new com.era.views.comboboxes.UsoCFDICombobox();
         jLabel31 = new javax.swing.JLabel();
-        jComList = new javax.swing.JComboBox();
-        jLabel32 = new javax.swing.JLabel();
-        jTClas = new javax.swing.JTextField();
-        jBClas = new javax.swing.JButton();
-        jTClasDescrip = new javax.swing.JTextField();
-        jLabel35 = new javax.swing.JLabel();
-        jComSer = new javax.swing.JComboBox();
+        jComList = new com.era.views.comboboxes.UsoCFDICombobox();
         jLabel36 = new javax.swing.JLabel();
         jTCodEmp = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
         jTVend = new javax.swing.JTextField();
         jBVend = new javax.swing.JButton();
-        jCOtraMon = new javax.swing.JCheckBox();
-        jCCotOtrMon = new javax.swing.JCheckBox();
         pnlDireccion = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jTCall = new javax.swing.JTextField();
@@ -221,13 +217,13 @@ public abstract class ClientJFrame extends BaseJFrame
                 jTRFCKeyTyped(evt);
             }
         });
-        jP1.add(jTRFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 230, 20));
+        jP1.add(jTRFC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 230, 20));
 
         jLabel11.setText("*RFC:");
-        jP1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        jP1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
         jLabel12.setText("CURP:");
-        jP1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 110, -1));
+        jP1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 110, -1));
 
         jTCo1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTCo1.setNextFocusableComponent(jTCo2);
@@ -312,7 +308,7 @@ public abstract class ClientJFrame extends BaseJFrame
                 jRaFisKeyPressed(evt);
             }
         });
-        jPanel2.add(jRaFis, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 5, 100, -1));
+        jPanel2.add(jRaFis, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 200, -1));
 
         jRaMor.setBackground(new java.awt.Color(255, 255, 255));
         jRaMor.setSelected(true);
@@ -323,9 +319,9 @@ public abstract class ClientJFrame extends BaseJFrame
                 jRaMorKeyPressed(evt);
             }
         });
-        jPanel2.add(jRaMor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 120, -1));
+        jPanel2.add(jRaMor, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 120, -1));
 
-        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 30));
+        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 30));
 
         jLabel30.setText("Correo1:");
         jP1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, 10));
@@ -349,35 +345,13 @@ public abstract class ClientJFrame extends BaseJFrame
                 jTCURPKeyTyped(evt);
             }
         });
-        jP1.add(jTCURP, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 230, 20));
+        jP1.add(jTCURP, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 230, 20));
 
-        jTDepGar.setText("$0.00");
-        jTDepGar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTDepGar.setFocusable(false);
-        jTDepGar.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTDepGarFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTDepGarFocusLost(evt);
-            }
-        });
-        jTDepGar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTDepGarKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTDepGarKeyTyped(evt);
-            }
-        });
-        jP1.add(jTDepGar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 10, 20));
+        jLabel49.setText("*Cod.cliente:");
+        jP1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 120, 20));
 
-        jLabel49.setText("Cod.cliente:");
-        jP1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 70, -1));
-
-        jTCodCli.setEditable(false);
         jTCodCli.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTCodCli.setNextFocusableComponent(jTCo1);
+        jTCodCli.setNextFocusableComponent(jTRazSoc);
         jTCodCli.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTCodCliFocusGained(evt);
@@ -391,7 +365,7 @@ public abstract class ClientJFrame extends BaseJFrame
                 jTCodCliKeyPressed(evt);
             }
         });
-        jP1.add(jTCodCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 50, 20));
+        jP1.add(jTCodCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 90, 20));
 
         jCBloqCred.setBackground(new java.awt.Color(255, 255, 255));
         jCBloqCred.setText("Bloquear crédito");
@@ -615,85 +589,9 @@ public abstract class ClientJFrame extends BaseJFrame
         jLabel31.setText("Lista Precio:");
 
         jComList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
-        jComList.setNextFocusableComponent(jTClas);
         jComList.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jComListKeyPressed(evt);
-            }
-        });
-
-        jLabel32.setText("Clasificación:");
-
-        jTClas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTClas.setNextFocusableComponent(jBClas);
-        jTClas.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTClasFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTClasFocusLost(evt);
-            }
-        });
-        jTClas.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTClasKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTClasKeyTyped(evt);
-            }
-        });
-
-        jBClas.setBackground(new java.awt.Color(255, 255, 255));
-        jBClas.setText("...");
-        jBClas.setToolTipText("Buscar Clasificación(es)");
-        jBClas.setNextFocusableComponent(jTClasDescrip);
-        jBClas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBClasMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBClasMouseExited(evt);
-            }
-        });
-        jBClas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBClasActionPerformed(evt);
-            }
-        });
-        jBClas.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBClasKeyPressed(evt);
-            }
-        });
-
-        jTClasDescrip.setEditable(false);
-        jTClasDescrip.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTClasDescrip.setNextFocusableComponent(jComSer);
-        jTClasDescrip.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTClasDescripFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTClasDescripFocusLost(evt);
-            }
-        });
-
-        jLabel35.setText("*Serie:");
-
-        jComSer.setNextFocusableComponent(jTCodEmp);
-        jComSer.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jComSerFocusLost(evt);
-            }
-        });
-        jComSer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComSerActionPerformed(evt);
-            }
-        });
-        jComSer.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jComSerKeyPressed(evt);
             }
         });
 
@@ -762,28 +660,6 @@ public abstract class ClientJFrame extends BaseJFrame
             }
         });
 
-        jCOtraMon.setBackground(new java.awt.Color(255, 255, 255));
-        jCOtraMon.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCOtraMon.setSelected(true);
-        jCOtraMon.setText("Se le puede vender en otra moneda");
-        jCOtraMon.setNextFocusableComponent(jCCotOtrMon);
-        jCOtraMon.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jCOtraMonKeyPressed(evt);
-            }
-        });
-
-        jCCotOtrMon.setBackground(new java.awt.Color(255, 255, 255));
-        jCCotOtrMon.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCCotOtrMon.setSelected(true);
-        jCCotOtrMon.setText("Se le puede cotizar en otra moneda");
-        jCCotOtrMon.setNextFocusableComponent(jRaMor);
-        jCCotOtrMon.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jCCotOtrMonKeyPressed(evt);
-            }
-        });
-
         javax.swing.GroupLayout pnlDatosBancariosLayout = new javax.swing.GroupLayout(pnlDatosBancarios);
         pnlDatosBancarios.setLayout(pnlDatosBancariosLayout);
         pnlDatosBancariosLayout.setHorizontalGroup(
@@ -826,18 +702,6 @@ public abstract class ClientJFrame extends BaseJFrame
                         .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel31)
                             .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
-                                .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
-                                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(jTClas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jTClasDescrip, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jBClas, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
-                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jComSer, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
                                 .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(jTCodEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -847,11 +711,6 @@ public abstract class ClientJFrame extends BaseJFrame
                                 .addComponent(jTVend, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(jBVend, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
-                                .addGap(132, 132, 132)
-                                .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jCOtraMon, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                    .addComponent(jCCotOtrMon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
                                 .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -863,7 +722,7 @@ public abstract class ClientJFrame extends BaseJFrame
                                     .addComponent(jTCta, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                                     .addComponent(jTCtaConta)
                                     .addComponent(jComUsoCfdi, 0, 200, Short.MAX_VALUE)
-                                    .addComponent(jComFormPag, 0, 200, Short.MAX_VALUE))))
+                                    .addComponent(jComFormPag, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))))
                         .addGap(0, 206, Short.MAX_VALUE))))
         );
         pnlDatosBancariosLayout.setVerticalGroup(
@@ -914,19 +773,7 @@ public abstract class ClientJFrame extends BaseJFrame
                 .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
-                .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel32)
-                    .addComponent(jBClas, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
-                        .addComponent(jTClas, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTClasDescrip, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel35)
-                    .addComponent(jComSer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36)
                     .addComponent(jTCodEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -935,14 +782,10 @@ public abstract class ClientJFrame extends BaseJFrame
                     .addComponent(jLabel42)
                     .addComponent(jTVend, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBVend, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCOtraMon)
-                .addGap(4, 4, 4)
-                .addComponent(jCCotOtrMon)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
         );
 
-        jP1.add(pnlDatosBancarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 370, 540));
+        jP1.add(pnlDatosBancarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 400, 540));
 
         pnlDireccion.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -993,6 +836,7 @@ public abstract class ClientJFrame extends BaseJFrame
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel9.setText("No. interior:");
 
         jTNoInt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
@@ -1422,11 +1266,11 @@ public abstract class ClientJFrame extends BaseJFrame
                 jTRazSocKeyTyped(evt);
             }
         });
-        jP1.add(jTRazSoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 230, 20));
+        jP1.add(jTRazSoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 230, 20));
 
         jLabel2.setText("*Razón social:");
         jLabel2.setToolTipText("Nombre de la Empresa o Nombnre del Cliente");
-        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 130, -1));
+        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 130, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1434,15 +1278,15 @@ public abstract class ClientJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -2031,34 +1875,10 @@ public abstract class ClientJFrame extends BaseJFrame
                 
     }//GEN-LAST:event_formWindowActivated
     
-    private void jTDepGarFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDepGarFocusGained
+        
         
     
-        
-    }//GEN-LAST:event_jTDepGarFocusGained
-
-        
-    private void jTDepGarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDepGarFocusLost
- 
     
-                
-    }//GEN-LAST:event_jTDepGarFocusLost
-
-        
-    private void jTDepGarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDepGarKeyPressed
-        
-    
-        
-    }//GEN-LAST:event_jTDepGarKeyPressed
-
-    
-    
-    private void jTDepGarKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDepGarKeyTyped
-        
-
-        
-    }//GEN-LAST:event_jTDepGarKeyTyped
-
     private void jTCodCliFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodCliFocusGained
 
 
@@ -2171,14 +1991,6 @@ public abstract class ClientJFrame extends BaseJFrame
         // TODO add your handling code here:
     }//GEN-LAST:event_jTTelPer1ActionPerformed
 
-    private void jCCotOtrMonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCCotOtrMonKeyPressed
-
-    }//GEN-LAST:event_jCCotOtrMonKeyPressed
-
-    private void jCOtraMonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCOtraMonKeyPressed
-
-    }//GEN-LAST:event_jCOtraMonKeyPressed
-
     private void jBVendKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBVendKeyPressed
 
     }//GEN-LAST:event_jBVendKeyPressed
@@ -2226,58 +2038,6 @@ public abstract class ClientJFrame extends BaseJFrame
     private void jTCodEmpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCodEmpFocusGained
 
     }//GEN-LAST:event_jTCodEmpFocusGained
-
-    private void jComSerKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComSerKeyPressed
-
-    }//GEN-LAST:event_jComSerKeyPressed
-
-    private void jComSerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComSerActionPerformed
-
-    }//GEN-LAST:event_jComSerActionPerformed
-
-    private void jComSerFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComSerFocusLost
-
-    }//GEN-LAST:event_jComSerFocusLost
-
-    private void jTClasDescripFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasDescripFocusLost
-
-    }//GEN-LAST:event_jTClasDescripFocusLost
-
-    private void jTClasDescripFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasDescripFocusGained
-
-    }//GEN-LAST:event_jTClasDescripFocusGained
-
-    private void jBClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBClasKeyPressed
-
-    }//GEN-LAST:event_jBClasKeyPressed
-
-    private void jBClasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBClasActionPerformed
-
-    }//GEN-LAST:event_jBClasActionPerformed
-
-    private void jBClasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBClasMouseExited
-
-    }//GEN-LAST:event_jBClasMouseExited
-
-    private void jBClasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBClasMouseEntered
-
-    }//GEN-LAST:event_jBClasMouseEntered
-
-    private void jTClasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasKeyTyped
-
-    }//GEN-LAST:event_jTClasKeyTyped
-
-    private void jTClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasKeyPressed
-
-    }//GEN-LAST:event_jTClasKeyPressed
-
-    private void jTClasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasFocusLost
-
-    }//GEN-LAST:event_jTClasFocusLost
-
-    private void jTClasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasFocusGained
-
-    }//GEN-LAST:event_jTClasFocusGained
 
     private void jComListKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComListKeyPressed
 
@@ -2426,21 +2186,17 @@ public abstract class ClientJFrame extends BaseJFrame
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBCP;
-    protected javax.swing.JButton jBClas;
     protected javax.swing.JButton jBGuar;
     protected javax.swing.JButton jBPais;
     protected javax.swing.JButton jBSal;
     protected javax.swing.JButton jBVend;
     protected javax.swing.JCheckBox jCBloq;
     protected javax.swing.JCheckBox jCBloqCred;
-    protected javax.swing.JCheckBox jCCotOtrMon;
-    protected javax.swing.JCheckBox jCOtraMon;
-    protected javax.swing.JComboBox jComFormPag;
-    protected javax.swing.JComboBox jComList;
-    protected javax.swing.JComboBox jComSer;
-    protected javax.swing.JComboBox jComUsoCfdi;
+    protected com.era.views.comboboxes.PaymentFormCombobox jComFormPag;
+    protected com.era.views.comboboxes.UsoCFDICombobox jComList;
+    protected com.era.views.comboboxes.UsoCFDICombobox jComUsoCfdi;
     protected javax.swing.JLabel jLUsoCfdi;
-    private javax.swing.JLabel jLabel10;
+    protected javax.swing.JLabel jLabel10;
     protected javax.swing.JLabel jLabel11;
     protected javax.swing.JLabel jLabel12;
     protected javax.swing.JLabel jLabel14;
@@ -2449,19 +2205,17 @@ public abstract class ClientJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
+    protected javax.swing.JLabel jLabel22;
     protected javax.swing.JLabel jLabel23;
     protected javax.swing.JLabel jLabel24;
     protected javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabel3;
     protected javax.swing.JLabel jLabel30;
     protected javax.swing.JLabel jLabel31;
-    protected javax.swing.JLabel jLabel32;
-    protected javax.swing.JLabel jLabel35;
     protected javax.swing.JLabel jLabel36;
     protected javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     protected javax.swing.JLabel jLabel42;
@@ -2470,48 +2224,45 @@ public abstract class ClientJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel47;
     protected javax.swing.JLabel jLabel48;
     protected javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
     protected javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    protected javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
     protected javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRaFis;
-    private javax.swing.JRadioButton jRaMor;
+    protected javax.swing.JRadioButton jRaFis;
+    protected javax.swing.JRadioButton jRaMor;
     protected javax.swing.JTextField jTBanc;
     protected javax.swing.JTextField jTBeneficiario;
-    private javax.swing.JTextField jTCP;
+    protected javax.swing.JTextField jTCP;
     protected javax.swing.JTextField jTCURP;
-    private javax.swing.JTextField jTCall;
-    private javax.swing.JTextField jTCel;
-    private javax.swing.JTextField jTCiu;
-    protected javax.swing.JTextField jTClas;
-    protected javax.swing.JTextField jTClasDescrip;
+    protected javax.swing.JTextField jTCall;
+    protected javax.swing.JTextField jTCel;
+    protected javax.swing.JTextField jTCiu;
     protected javax.swing.JTextField jTClavBanc;
     protected javax.swing.JTextField jTCo1;
     protected javax.swing.JTextField jTCo2;
     protected javax.swing.JTextField jTCodCli;
     protected javax.swing.JTextField jTCodEmp;
-    private javax.swing.JTextField jTCol;
+    protected javax.swing.JTextField jTCol;
     protected javax.swing.JTextField jTCta;
     protected javax.swing.JTextField jTCtaConta;
     protected javax.swing.JTextField jTCtaPred;
     protected javax.swing.JTextField jTDCred;
-    protected javax.swing.JTextField jTDepGar;
     protected javax.swing.JTextField jTDesc;
-    private javax.swing.JTextField jTEstad;
-    private javax.swing.JTextField jTExten;
-    private javax.swing.JTextField jTLada;
+    protected javax.swing.JTextField jTEstad;
+    protected javax.swing.JTextField jTExten;
+    protected javax.swing.JTextField jTLada;
     protected javax.swing.JTextField jTLimCred;
-    private javax.swing.JTextField jTNoExt;
-    private javax.swing.JTextField jTNoInt;
+    protected javax.swing.JTextField jTNoExt;
+    protected javax.swing.JTextField jTNoInt;
     protected javax.swing.JTextField jTPag1;
-    private javax.swing.JTextField jTPai;
+    protected javax.swing.JTextField jTPai;
     protected javax.swing.JTextField jTRFC;
     protected javax.swing.JTextField jTRazSoc;
-    private javax.swing.JTextField jTTel;
-    private javax.swing.JTextField jTTelPer1;
+    protected javax.swing.JTextField jTTel;
+    protected javax.swing.JTextField jTTelPer1;
     protected javax.swing.JTextField jTVend;
     protected javax.swing.JPanel pnlDatosBancarios;
     protected javax.swing.JPanel pnlDireccion;

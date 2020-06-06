@@ -25,8 +25,6 @@ public class BaseJDialog extends JDialog{
         this.setTitle("Easy Retail Admin");
         
         JComponentUtils.setJDialog(this);
-        
-        JComponentUtils.initAllListenersComponentes(this);
     }
     
     public void setVisible(){
@@ -42,7 +40,7 @@ public class BaseJDialog extends JDialog{
         super.setVisible(b);
         
         if(b){
-            JComponentUtils.initAllListenersComponentes(this);
+            JComponentUtils.initAllComponents(this);
         }
     }
 }

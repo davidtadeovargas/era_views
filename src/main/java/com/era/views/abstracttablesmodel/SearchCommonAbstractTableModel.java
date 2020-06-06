@@ -108,6 +108,7 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                     break;
                     
                 case SALES_MAN:
+                    IGetValueAt = new UsersIGetValueAt();
                     break;
                     
                 case MODELS:

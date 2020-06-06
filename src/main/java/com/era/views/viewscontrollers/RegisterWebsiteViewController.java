@@ -37,6 +37,10 @@ public class RegisterWebsiteViewController extends RegisterWebsiteJFrame {
     public void clearFields(){
     }
     
+    @Override
+    public void loadModelInFields(Object ObjectModel) throws  Exception {        
+    }
+    
     private void urlJLabelMouseClicked(java.awt.event.MouseEvent evt) {                                       
         
         if(OnURLLabelClicked!=null){

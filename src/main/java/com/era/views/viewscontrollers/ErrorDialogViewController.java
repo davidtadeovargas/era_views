@@ -53,6 +53,10 @@ public class ErrorDialogViewController extends ErrorDialogJFrame {
         this.mainText.setText(finalString);
     }
     
+    @Override
+    public void loadModelInFields(Object ObjectModel) throws  Exception {        
+    }
+    
     public void setText(final String text) {
         this.mainText.setText(text);
     }

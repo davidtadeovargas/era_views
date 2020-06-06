@@ -20,14 +20,17 @@ public class CountriesIGetValueAt implements IGetValueAt {
         final CCountry CCountry = (CCountry) Object;
         
         String returnValue = "undefined";
-        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getNO().getValue())==0){
+        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCCountriesTableHeader().getROWNUMBER().getValue())==0){
+            returnValue = String.valueOf(rowIndex);
+        }
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCCountriesTableHeader().getC_PAIS().getValue())==0){
             returnValue = CCountry.getCode();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getCODE().getValue())==0){
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCCountriesTableHeader().getDESCRIPTION().getValue())==0){
             returnValue = CCountry.getDescription();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
-            returnValue = CCountry.getFalt().toString();
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCCountriesTableHeader().getAGRUPACIONES().getValue())==0){
+            returnValue = CCountry.getAgrupaciones();
         }
         
         return returnValue;

@@ -22,7 +22,7 @@ public class PrinterCombobox extends BaseComboBox<PrinterDataModel> {
     }
     
     @Override
-    List<PrinterDataModel> getItems() {
+    List<PrinterDataModel> getItems() throws Exception {
         
         //Emtpy model
         final PrinterDataModel PrinterDataModel = new PrinterDataModel();

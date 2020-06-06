@@ -20,14 +20,17 @@ public class CPSIGetValueAt implements IGetValueAt {
         final CCodigopostal CCodigopostal = (CCodigopostal) Object;
         
         String returnValue = "";
-        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getNO().getValue())==0){
-            returnValue = String.valueOf(CCodigopostal.getId());
+        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCCodigoPostalsTableHeader().getROWNUMBER().getValue())==0){
+            returnValue = String.valueOf(rowIndex);
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getCODE().getValue())==0){           
-            returnValue = CCodigopostal.getEstate() + "/Loc:" + CCodigopostal.getLocality() + "/Mun:" + CCodigopostal.getMunicipio();
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCCodigoPostalsTableHeader().getC_CODIGO_POSTAL().getValue())==0){           
+            returnValue = CCodigopostal.getCp();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCCodigoPostalsTableHeader().getC_MUNICIPIO().getValue())==0){
             returnValue = CCodigopostal.getMunicipio();
+        }
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCCodigoPostalsTableHeader().getC_ESTADO().getValue())==0){
+            returnValue = CCodigopostal.getEstate();
         }
         
         return returnValue;
