@@ -6,10 +6,12 @@
 package com.era.views.comboboxes;
 
 import com.era.datamodels.PrinterDataModel;
+import com.era.models.UsoCFDI;
 import com.era.utilities.UtilitiesFactory;
 import com.era.views.comboboxes.cellrenders.PrinterListCellRender;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ComboBoxModel;
 
 /**
  *
@@ -33,5 +35,20 @@ public class PrinterCombobox extends BaseComboBox<PrinterDataModel> {
         printers.addAll(UtilitiesFactory.getSingleton().getPrintersUtility().getAllPrinters());
         
         return printers;
+    }
+    
+    @Override
+    protected boolean foundModel(Object ObjectItem, Object ObjectMethod){
+        
+        //Cast the models
+        final PrinterDataModel PrinterDataModelItem = (PrinterDataModel)ObjectItem;
+        final PrinterDataModel PrinterDataModelMethod = (PrinterDataModel)ObjectMethod;
+        
+        boolean  found = false;        
+        if(PrinterDataModelItem.getName() != null && PrinterDataModelItem.getName().compareTo(PrinterDataModelMethod.getName())==0){
+            found = true;
+        }
+        
+        return found;
     }
 }

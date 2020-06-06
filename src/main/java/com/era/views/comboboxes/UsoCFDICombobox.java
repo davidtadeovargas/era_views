@@ -39,4 +39,19 @@ public class UsoCFDICombobox extends BaseComboBox<UsoCFDI>{
         
         return usos;
     }
+    
+    @Override
+    protected boolean foundModel(Object ObjectItem, Object ObjectMethod){
+        
+        //Cast the models
+        final UsoCFDI UsoCFDIItem = (UsoCFDI)ObjectItem;
+        final UsoCFDI UsoCFDIMethod = (UsoCFDI)ObjectMethod;
+        
+        boolean  found = false;        
+        if(UsoCFDIItem.getCode() != null && UsoCFDIItem.getCode().compareTo(UsoCFDIMethod.getCode())==0){
+            found = true;
+        }
+        
+        return found;
+    }
 }

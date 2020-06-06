@@ -39,4 +39,19 @@ public class PaymentFormCombobox extends BaseComboBox<PaymentForm> {
         
         return payments;
     }
+    
+    @Override
+    protected boolean foundModel(Object ObjectItem, Object ObjectMethod){
+        
+        //Cast the models
+        final PaymentForm PaymentFormItem = (PaymentForm)ObjectItem;
+        final PaymentForm PaymentFormMethod = (PaymentForm)ObjectMethod;
+        
+        boolean  found = false;        
+        if(PaymentFormItem.getCode() != null && PaymentFormItem.getCode().compareTo(PaymentFormMethod.getCode())==0){
+            found = true;
+        }
+        
+        return found;
+    }
 }

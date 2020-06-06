@@ -5,7 +5,9 @@
  */
 package com.era.views.comboboxes;
 
+import com.era.models.PaymentForm;
 import java.util.List;
+import javax.swing.ComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.DefaultListCellRenderer;
 
@@ -16,6 +18,27 @@ import javax.swing.DefaultListCellRenderer;
 public abstract class BaseComboBox<T> extends JComboBox {
     
     abstract List<T> getItems() throws Exception;
+    abstract boolean foundModel(Object ObjectItem, Object ObjectMethod);
+    
+    
+    
+    public void selectByObject(Object Object) throws Exception{
+        
+        ComboBoxModel model = this.getModel();
+        int size = model.getSize();
+        for(int i=0;i<size;i++) {
+            
+            Object Object_ = model.getElementAt(i);
+            
+            //Found the selection model?
+            final boolean correctModel = foundModel(Object_, Object);
+            
+            if(correctModel){
+                this.selectObject(Object_);
+                break;
+            }
+        }
+    }
     
     public BaseComboBox(final DefaultListCellRenderer DefaultListCellRenderer){
         this.setRenderer(DefaultListCellRenderer);
@@ -31,9 +54,9 @@ public abstract class BaseComboBox<T> extends JComboBox {
         }
     }
     
-    public void selectObject(final T Object){
+    public void selectObject(final Object Object){
         if(Object != null){
-            this.setSelectedItem(Object);
+            this.setSelectedItem(Object);            
         }
     }
     
