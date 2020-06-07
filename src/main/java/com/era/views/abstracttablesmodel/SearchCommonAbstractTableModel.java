@@ -11,12 +11,14 @@ import com.era.views.abstracttablesmodel.getvaluesat.CPSIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CountriesIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CustomersIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.ExpeditionPlaceIGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.GirosIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.IGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.RegimenFiscalIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SectoresIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SeriesCustomersIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.UsersIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.WarehousesIGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.ZonesIGetValueAt;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 
@@ -121,9 +123,11 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                     break;
                     
                 case ZONES:
+                    IGetValueAt = new ZonesIGetValueAt();
                     break;
                     
                 case GIROS:
+                    IGetValueAt = new GirosIGetValueAt();
                     break;
                     
                 case PRODDS_SERIE:

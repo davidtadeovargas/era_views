@@ -7,18 +7,19 @@ package com.era.views.comboboxes;
 
 import com.era.models.UsoCFDI;
 import com.era.repositories.RepositoryFactory;
-import com.era.views.comboboxes.cellrenders.UsoCFDICellRender;
+import com.era.views.comboboxes.cellrenders.PrinterListCellRender;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
  *
  * @author PC
  */
-public class UsoCFDICombobox extends BaseComboBox<UsoCFDI>{
-    
+public class UsoCFDICombobox extends BaseComboBox<UsoCFDI> {
+
     public UsoCFDICombobox(){
-        super(new UsoCFDICellRender());
+        super(new PrinterListCellRender());
     }
     
     @Override
@@ -29,13 +30,8 @@ public class UsoCFDICombobox extends BaseComboBox<UsoCFDI>{
         UsoCFDI.setDescription("");
         
         final List<UsoCFDI> usos = new ArrayList<>();
-        usos.add(UsoCFDI); //Add the empty model
-        
-        //Get all the usos methods
-        final List<UsoCFDI> usosDB = (List<UsoCFDI>)RepositoryFactory.getInstance().getUsoCFDIsRepository().getAll();
-        
-        //Add them all to the list
-        usos.addAll(usosDB);
+        usos.add(UsoCFDI);
+        usos.addAll((Collection<? extends UsoCFDI>) RepositoryFactory.getInstance().getUsoCFDIsRepository().getAll());
         
         return usos;
     }

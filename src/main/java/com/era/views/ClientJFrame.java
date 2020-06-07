@@ -66,7 +66,7 @@ public abstract class ClientJFrame extends BaseJFrame
         jLUsoCfdi = new javax.swing.JLabel();
         jComUsoCfdi = new com.era.views.comboboxes.UsoCFDICombobox();
         jLabel31 = new javax.swing.JLabel();
-        jComList = new com.era.views.comboboxes.UsoCFDICombobox();
+        jComList = new javax.swing.JComboBox();
         jLabel36 = new javax.swing.JLabel();
         jTCodEmp = new javax.swing.JTextField();
         jLabel42 = new javax.swing.JLabel();
@@ -721,7 +721,7 @@ public abstract class ClientJFrame extends BaseJFrame
                                 .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jTCta, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                                     .addComponent(jTCtaConta)
-                                    .addComponent(jComUsoCfdi, 0, 200, Short.MAX_VALUE)
+                                    .addComponent(jComUsoCfdi, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                                     .addComponent(jComFormPag, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))))
                         .addGap(0, 206, Short.MAX_VALUE))))
         );
@@ -2192,7 +2192,7 @@ public abstract class ClientJFrame extends BaseJFrame
     protected javax.swing.JCheckBox jCBloq;
     protected javax.swing.JCheckBox jCBloqCred;
     protected com.era.views.comboboxes.PaymentFormCombobox jComFormPag;
-    protected com.era.views.comboboxes.UsoCFDICombobox jComList;
+    protected javax.swing.JComboBox jComList;
     protected com.era.views.comboboxes.UsoCFDICombobox jComUsoCfdi;
     protected javax.swing.JLabel jLUsoCfdi;
     protected javax.swing.JLabel jLabel10;

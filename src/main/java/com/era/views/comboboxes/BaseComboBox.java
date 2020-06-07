@@ -5,7 +5,7 @@
  */
 package com.era.views.comboboxes;
 
-import com.era.models.PaymentForm;
+import java.awt.event.ActionEvent;
 import java.util.List;
 import javax.swing.ComboBoxModel;
 import javax.swing.JComboBox;
@@ -19,9 +19,31 @@ public abstract class BaseComboBox<T> extends JComboBox {
     
     abstract List<T> getItems() throws Exception;
     abstract boolean foundModel(Object ObjectItem, Object ObjectMethod);
+    protected ChangeSelectionListener ChangeSelectionListener;
     
     
     
+    public void BaseComboBox(){
+        
+        //Change selection listener
+        this.addActionListener ((ActionEvent e) -> {
+            
+            //If the user has callback
+            if(ChangeSelectionListener != null){
+                
+                //Get selected object
+                final Object Object = getSelectedObject();
+                
+                //Calback to the user
+                ChangeSelectionListener.onChangeSelection(Object);
+            }
+        });
+    }
+
+    public void setChangeSelectionListener(ChangeSelectionListener ChangeSelectionListener) {
+        this.ChangeSelectionListener = ChangeSelectionListener;
+    }
+        
     public void selectByObject(Object Object) throws Exception{
         
         ComboBoxModel model = this.getModel();
@@ -44,9 +66,9 @@ public abstract class BaseComboBox<T> extends JComboBox {
         this.setRenderer(DefaultListCellRenderer);
     }
     
-    public T getSelectedObject(){
+    public Object getSelectedObject(){
         if(this.getSelectedItem() != null){
-            final T Item_ = (T) this.getSelectedItem();
+            final Object Item_ = this.getSelectedItem();
             return Item_;
         }   
         else{
@@ -74,5 +96,9 @@ public abstract class BaseComboBox<T> extends JComboBox {
     
     public void clear(){
         this.removeAllItems();
+    }
+    
+    public interface ChangeSelectionListener{
+        public void onChangeSelection(Object ObjectModel);
     }
 }

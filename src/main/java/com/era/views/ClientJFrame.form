@@ -1009,7 +1009,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
             </Component>
-            <Component class="com.era.views.comboboxes.UsoCFDICombobox" name="jComList">
+            <Component class="javax.swing.JComboBox" name="jComList">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="10">
