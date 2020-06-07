@@ -17,6 +17,9 @@ import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
+import java.text.NumberFormat;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
@@ -24,7 +27,11 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JDialog;
+import javax.swing.JFormattedTextField;
+import javax.swing.JFormattedTextField.AbstractFormatter;
+import javax.swing.JFormattedTextField.AbstractFormatterFactory;
 import javax.swing.JFrame;
+import javax.swing.text.InternationalFormatter;
 import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -162,6 +169,27 @@ public class JComponentUtils {
             @Override
             public void keyReleased(KeyEvent e) {                
             }            
+        });
+    }
+    
+    public void onlyDecimals(final JComponent JComponent){
+        
+        JComponent.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                
+                if(JComponent instanceof JTextField){
+                    
+                    final JTextField JTextField_ = (JTextField)JComponent;
+                    
+                    if(!Character.isDigit(evt.getKeyChar())&&evt.getKeyChar()!='.'){
+                        evt.consume();
+                    }
+                    if(evt.getKeyChar()=='.' && JTextField_.getText().contains(".")){
+                        evt.consume();
+                    } 
+                }
+            }
         });
     }
     

@@ -141,3 +141,18 @@ target/classes/com/era/views/abstracttablesmodel/SearchCommonAbstractTableModel.
 target/classes/com/era/views/dialogs/DialogsFactory.class
 target/era_views 1.0-SNAPSHOT.jar
 target/maven-archiver/pom.properties
+target/classes/com/era/views/BaseJDialog.class
+target/classes/com/era/views/BaseJFrame.class
+target/classes/com/era/views/utils/JComponentUtils$1.class
+target/classes/com/era/views/utils/JComponentUtils$10.class
+target/classes/com/era/views/utils/JComponentUtils$11.class
+target/classes/com/era/views/utils/JComponentUtils$2.class
+target/classes/com/era/views/utils/JComponentUtils$3.class
+target/classes/com/era/views/utils/JComponentUtils$4.class
+target/classes/com/era/views/utils/JComponentUtils$5.class
+target/classes/com/era/views/utils/JComponentUtils$6.class
+target/classes/com/era/views/utils/JComponentUtils$7.class
+target/classes/com/era/views/utils/JComponentUtils$8.class
+target/classes/com/era/views/utils/JComponentUtils$9.class
+target/classes/com/era/views/utils/JComponentUtils$Focus.class
+target/classes/com/era/views/utils/JComponentUtils.class
