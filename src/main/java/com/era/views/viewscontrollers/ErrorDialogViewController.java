@@ -62,6 +62,9 @@ public class ErrorDialogViewController extends ErrorDialogJFrame {
     }
     
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        
+        dispose();
+        
         if(OnOkButtonActionPerformed != null){
             OnOkButtonActionPerformed.okButtonActionPerformed(evt);
         }     

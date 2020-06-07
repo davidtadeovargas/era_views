@@ -145,14 +145,14 @@ public class DialogsFactory {
         ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
         ErrorOKDialog_.show();
     }
-    public void getErrorDialogByIdTextJFrame(final  String idText, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
+    public void showErrorDialogByIdTextJFrame(final  String idText, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
         final ErrorDialogViewController ErrorDialogViewController = new ErrorDialogViewController();
         ErrorDialogViewController.setIdText(idText);
         ErrorDialogViewController.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);
         ErrorDialogViewController.setVisible();
     }
     
-    public void getErrorDialogByTextJFrame(final  String text, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
+    public void showErrorDialogByTextJFrame(final  String text, final ErrorDialogJFrame.OnOkButtonActionPerformed OnOkButtonActionPerformed) throws Exception{
         final ErrorDialogViewController ErrorDialogViewController = new ErrorDialogViewController();
         ErrorDialogViewController.setText(text);
         ErrorDialogViewController.setOnOkButtonActionPerformed(OnOkButtonActionPerformed);

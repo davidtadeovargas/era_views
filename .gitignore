@@ -136,3 +136,8 @@ target/classes/com/era/views/ClientJFrame.class
 target/classes/com/era/views/tables/tablemodels/BasdatsTableModel.class
 target/era_views 1.0-SNAPSHOT.jar
 target/maven-archiver/pom.properties
+target/classes/com/era/views/abstracttablesmodel/SearchCommonAbstractTableModel$1.class
+target/classes/com/era/views/abstracttablesmodel/SearchCommonAbstractTableModel.class
+target/classes/com/era/views/dialogs/DialogsFactory.class
+target/era_views 1.0-SNAPSHOT.jar
+target/maven-archiver/pom.properties
