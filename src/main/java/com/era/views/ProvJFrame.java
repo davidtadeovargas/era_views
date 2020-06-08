@@ -223,6 +223,7 @@ public abstract class ProvJFrame extends BaseJFrame
         jP1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, -1, -1));
 
         jTPag1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        jTPag1.setNextFocusableComponent(jTEje);
         jP1.add(jTPag1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 230, 20));
 
         jTEje.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
@@ -233,12 +234,14 @@ public abstract class ProvJFrame extends BaseJFrame
         jP1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, -1, -1));
 
         jTCorreo2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        jTCorreo2.setNextFocusableComponent(jTPag1);
         jP1.add(jTCorreo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 230, 20));
 
         jLabel22.setText("Teléfono personal 1:");
         jP1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 130, -1));
 
         jTTelPerl11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        jTTelPerl11.setNextFocusableComponent(jTAObserv);
         jP1.add(jTTelPerl11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, 230, 20));
 
         jLabel27.setText("*CP:");
@@ -390,6 +393,7 @@ public abstract class ProvJFrame extends BaseJFrame
         jBZon.setBackground(new java.awt.Color(255, 255, 255));
         jBZon.setText("...");
         jBZon.setToolTipText("Buscar Clasificación(es)");
+        jBZon.setNextFocusableComponent(jCOtraMon);
         jP1.add(jBZon, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 370, 30, 20));
 
         jBGir.setBackground(new java.awt.Color(255, 255, 255));

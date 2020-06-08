@@ -552,6 +552,9 @@
                 </LineBorder>
               </Border>
             </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jTEje"/>
+            </Property>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -606,6 +609,9 @@
                 </LineBorder>
               </Border>
             </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jTPag1"/>
+            </Property>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -637,6 +643,9 @@
                   <Color PropertyName="color" blue="ff" green="cc" red="cc" type="rgb"/>
                 </LineBorder>
               </Border>
+            </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jTAObserv"/>
             </Property>
           </Properties>
           <AuxValues>
@@ -1309,7 +1318,7 @@
               <Connection code="&quot;Buscar Clasificaci&#xf3;n(es)&quot;" type="code"/>
             </Property>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="default"/>
+              <ComponentRef name="jCOtraMon"/>
             </Property>
           </Properties>
           <AuxValues>
