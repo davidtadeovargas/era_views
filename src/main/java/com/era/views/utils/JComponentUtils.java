@@ -14,6 +14,7 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
@@ -22,6 +23,7 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -165,6 +167,56 @@ public class JComponentUtils {
             @Override
             public void keyReleased(KeyEvent e) {                
             }            
+        });
+    }
+    
+    public void limitCharacters(final JTextComponent JTextComponent, int maxlength){
+        
+        JTextComponent.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) { 
+                if (JTextComponent.getText().length() >= maxlength ) // limit textfield to 3 characters
+                    e.consume(); 
+            }  
+        });
+    }
+    
+    public void moneyFormat(final JTextComponent JTextComponent){
+        JTextComponent.addFocusListener(new FocusListener(){
+            @Override
+            public void focusGained(FocusEvent e) {
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                
+                //Get the text
+                String text = JTextComponent.getText().replace(",", "").replace("$", "");
+                
+                //If empty just return
+                if(text.isEmpty()){
+                    return;
+                }
+                
+                //Try to parse to double to check is a valid number
+                try{
+                    double d = Double.parseDouble(text);
+                }
+                catch(NumberFormatException expnNumForm)
+                {
+                    text = "";
+                    JTextComponent.setText(text);
+                    return;
+                }
+                
+                //Money format
+                double dCant = Double.parseDouble(text);
+                NumberFormat n = NumberFormat.getCurrencyInstance(new Locale("es","MX"));
+                text = n.format(dCant);
+
+                //Set the new formatted value
+                JTextComponent.setText(text);
+            }
         });
     }
     

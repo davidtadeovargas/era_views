@@ -23,6 +23,7 @@ import com.era.views.tables.BaseJTable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JComponent;
 
 
 /**
@@ -90,6 +91,26 @@ public abstract class BaseJFrame extends JFrame {
                 Logger.getLogger(BaseJFrame.class.getName()).log(Level.SEVERE, null, ex1);
             }
         }
+    }
+    
+    public void addMouseListenerClicked(final JComponent JComponent, final MouseListenerClicked MouseListenerClicked){
+        
+        addMouseListener(new java.awt.event.MouseAdapter() {
+                @Override
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    if(MouseListenerClicked != null){
+                        MouseListenerClicked.OnClicked(evt);
+                    }
+                }
+                @Override
+                public void mouseEntered(java.awt.event.MouseEvent evt) {
+                    
+                }
+                @Override
+                public void mouseExited(java.awt.event.MouseEvent evt) {
+                    
+                }
+            });
     }
     
     public void disposeButton(final JButton JButton){
@@ -230,5 +251,9 @@ public abstract class BaseJFrame extends JFrame {
     
     public interface PostInitComponents{
         void OnPostInitComponents();
+    }
+    
+    public interface MouseListenerClicked{
+        void OnClicked(java.awt.event.MouseEvent evt);
     }
 }
