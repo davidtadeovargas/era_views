@@ -27,11 +27,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JDialog;
-import javax.swing.JFormattedTextField;
-import javax.swing.JFormattedTextField.AbstractFormatter;
-import javax.swing.JFormattedTextField.AbstractFormatterFactory;
 import javax.swing.JFrame;
-import javax.swing.text.InternationalFormatter;
 import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -379,9 +375,12 @@ public class JComponentUtils {
                 JTextComponent.setSelectionEnd(JTextComponent.getText().length());
             }
             @Override
-            public void focusLost(FocusEvent e) {               
+            public void focusLost(FocusEvent e) {
+                String content = JTextComponent.getText();
+                content = content.replace("|", "").replace("¬", "").replace("'", "''");
+                JTextComponent.setText(content);
             }
-        });        
+        });
     }
     
     public void disableAllComponents(final Container c){
