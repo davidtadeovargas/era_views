@@ -37,5 +37,15 @@ public class CoinTable extends BaseJTable {
        final CoinTableModel CoinTableModel = new CoinTableModel(items_,this.ShowColumns);
        this.setModel(CoinTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Coin ObjectIteration_ = (Coin)ObjectIteration;
+       final Coin ObjectToCompare_ = (Coin)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

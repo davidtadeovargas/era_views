@@ -37,5 +37,15 @@ public class ControlexportarTable extends BaseJTable {
        final ControlexportarTableModel ControlexportarTableModel = new ControlexportarTableModel(items_,this.ShowColumns);
        this.setModel(ControlexportarTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Controlexportar ObjectIteration_ = (Controlexportar)ObjectIteration;
+       final Controlexportar ObjectToCompare_ = (Controlexportar)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

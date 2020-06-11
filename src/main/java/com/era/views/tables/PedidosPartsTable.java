@@ -37,5 +37,15 @@ public class PedidosPartsTable extends BaseJTable {
        final PedidosPartsTableModel PedidosPartsTableModel = new PedidosPartsTableModel(items_,this.ShowColumns);
        this.setModel(PedidosPartsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final PedidosParts ObjectIteration_ = (PedidosParts)ObjectIteration;
+       final PedidosParts ObjectToCompare_ = (PedidosParts)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

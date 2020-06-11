@@ -37,5 +37,15 @@ public class CTipoRelacionTable extends BaseJTable {
        final CTipoRelacionTableModel CTipoRelacionTableModel = new CTipoRelacionTableModel(items_,this.ShowColumns);
        this.setModel(CTipoRelacionTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CTipoRelacion ObjectIteration_ = (CTipoRelacion)ObjectIteration;
+       final CTipoRelacion ObjectToCompare_ = (CTipoRelacion)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

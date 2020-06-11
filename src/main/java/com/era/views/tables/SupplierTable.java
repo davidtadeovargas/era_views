@@ -37,5 +37,15 @@ public class SupplierTable extends BaseJTable {
        final SupplierTableModel SupplierTableModel = new SupplierTableModel(items_,this.ShowColumns);
        this.setModel(SupplierTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Supplier ObjectIteration_ = (Supplier)ObjectIteration;
+       final Supplier ObjectToCompare_ = (Supplier)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

@@ -37,5 +37,15 @@ public class BancoTable extends BaseJTable {
        final BancoTableModel BancoTableModel = new BancoTableModel(items_,this.ShowColumns);
        this.setModel(BancoTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Banco ObjectIteration_ = (Banco)ObjectIteration;
+       final Banco ObjectToCompare_ = (Banco)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

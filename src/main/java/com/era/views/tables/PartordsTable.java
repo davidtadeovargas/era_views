@@ -37,5 +37,15 @@ public class PartordsTable extends BaseJTable {
        final PartordsTableModel PartordsTableModel = new PartordsTableModel(items_,this.ShowColumns);
        this.setModel(PartordsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Partords ObjectIteration_ = (Partords)ObjectIteration;
+       final Partords ObjectToCompare_ = (Partords)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

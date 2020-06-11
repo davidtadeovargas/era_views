@@ -37,5 +37,15 @@ public class SalesTable extends BaseJTable {
        final SalesTableModel SalesTableModel = new SalesTableModel(items_,this.ShowColumns);
        this.setModel(SalesTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Sales ObjectIteration_ = (Sales)ObjectIteration;
+       final Sales ObjectToCompare_ = (Sales)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

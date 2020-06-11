@@ -37,5 +37,15 @@ public class IngresosEncabTable extends BaseJTable {
        final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(items_,this.ShowColumns);
        this.setModel(IngresosEncabTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final IngresosEncab ObjectIteration_ = (IngresosEncab)ObjectIteration;
+       final IngresosEncab ObjectToCompare_ = (IngresosEncab)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

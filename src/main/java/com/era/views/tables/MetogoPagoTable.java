@@ -37,5 +37,15 @@ public class MetogoPagoTable extends BaseJTable {
        final MetogoPagoTableModel MetogoPagoTableModel = new MetogoPagoTableModel(items_,this.ShowColumns);
        this.setModel(MetogoPagoTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final MetogoPago ObjectIteration_ = (MetogoPago)ObjectIteration;
+       final MetogoPago ObjectToCompare_ = (MetogoPago)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

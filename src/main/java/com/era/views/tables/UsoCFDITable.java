@@ -37,5 +37,15 @@ public class UsoCFDITable extends BaseJTable {
        final UsoCFDITableModel UsoCFDITableModel = new UsoCFDITableModel(items_,this.ShowColumns);
        this.setModel(UsoCFDITableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final UsoCFDI ObjectIteration_ = (UsoCFDI)ObjectIteration;
+       final UsoCFDI ObjectToCompare_ = (UsoCFDI)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

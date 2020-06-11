@@ -37,5 +37,15 @@ public class MaxminconfTable extends BaseJTable {
        final MaxminconfTableModel MaxminconfTableModel = new MaxminconfTableModel(items_,this.ShowColumns);
        this.setModel(MaxminconfTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Maxminconf ObjectIteration_ = (Maxminconf)ObjectIteration;
+       final Maxminconf ObjectToCompare_ = (Maxminconf)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

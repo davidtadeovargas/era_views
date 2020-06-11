@@ -37,5 +37,15 @@ public class LineTable extends BaseJTable {
        final LineTableModel LineTableModel = new LineTableModel(items_,this.ShowColumns);
        this.setModel(LineTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Line ObjectIteration_ = (Line)ObjectIteration;
+       final Line ObjectToCompare_ = (Line)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

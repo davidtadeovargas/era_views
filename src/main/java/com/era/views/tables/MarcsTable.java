@@ -37,5 +37,15 @@ public class MarcsTable extends BaseJTable {
        final MarcsTableModel MarcsTableModel = new MarcsTableModel(items_,this.ShowColumns);
        this.setModel(MarcsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Marcs ObjectIteration_ = (Marcs)ObjectIteration;
+       final Marcs ObjectToCompare_ = (Marcs)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

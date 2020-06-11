@@ -37,5 +37,15 @@ public class ServerSessionTable extends BaseJTable {
        final ServerSessionTableModel ServerSessionTableModel = new ServerSessionTableModel(items_,this.ShowColumns);
        this.setModel(ServerSessionTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final ServerSession ObjectIteration_ = (ServerSession)ObjectIteration;
+       final ServerSession ObjectToCompare_ = (ServerSession)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

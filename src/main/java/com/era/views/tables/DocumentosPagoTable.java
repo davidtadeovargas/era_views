@@ -37,5 +37,15 @@ public class DocumentosPagoTable extends BaseJTable {
        final DocumentosPagoTableModel DocumentosPagoTableModel = new DocumentosPagoTableModel(items_,this.ShowColumns);
        this.setModel(DocumentosPagoTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final DocumentosPago ObjectIteration_ = (DocumentosPago)ObjectIteration;
+       final DocumentosPago ObjectToCompare_ = (DocumentosPago)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

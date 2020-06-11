@@ -37,5 +37,15 @@ public class LogTable extends BaseJTable {
        final LogTableModel LogTableModel = new LogTableModel(items_,this.ShowColumns);
        this.setModel(LogTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Log ObjectIteration_ = (Log)ObjectIteration;
+       final Log ObjectToCompare_ = (Log)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

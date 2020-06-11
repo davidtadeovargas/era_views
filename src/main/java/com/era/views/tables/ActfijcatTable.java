@@ -37,5 +37,15 @@ public class ActfijcatTable extends BaseJTable {
        final ActfijcatTableModel ActfijcatTableModel = new ActfijcatTableModel(items_,this.ShowColumns);
        this.setModel(ActfijcatTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Actfijcat ObjectIteration_ = (Actfijcat)ObjectIteration;
+       final Actfijcat ObjectToCompare_ = (Actfijcat)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

@@ -37,5 +37,15 @@ public class EREjerciciosTable extends BaseJTable {
        final EREjerciciosTableModel EREjerciciosTableModel = new EREjerciciosTableModel(items_,this.ShowColumns);
        this.setModel(EREjerciciosTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final EREjercicios ObjectIteration_ = (EREjercicios)ObjectIteration;
+       final EREjercicios ObjectToCompare_ = (EREjercicios)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

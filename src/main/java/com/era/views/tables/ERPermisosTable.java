@@ -37,5 +37,9 @@ public class ERPermisosTable extends BaseJTable {
        final ERPermisosTableModel ERPermisosTableModel = new ERPermisosTableModel(items_,this.ShowColumns);
        this.setModel(ERPermisosTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+       return false;
+    }
 }

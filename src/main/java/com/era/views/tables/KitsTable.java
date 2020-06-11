@@ -37,5 +37,15 @@ public class KitsTable extends BaseJTable {
        final KitsTableModel KitsTableModel = new KitsTableModel(items_,this.ShowColumns);
        this.setModel(KitsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Kits ObjectIteration_ = (Kits)ObjectIteration;
+       final Kits ObjectToCompare_ = (Kits)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

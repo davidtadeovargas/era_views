@@ -37,5 +37,15 @@ public class PersTable extends BaseJTable {
        final PersTableModel PersTableModel = new PersTableModel(items_,this.ShowColumns);
        this.setModel(PersTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Pers ObjectIteration_ = (Pers)ObjectIteration;
+       final Pers ObjectToCompare_ = (Pers)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

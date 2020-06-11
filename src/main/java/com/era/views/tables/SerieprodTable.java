@@ -38,4 +38,8 @@ public class SerieprodTable extends BaseJTable {
        this.setModel(SerieprodTableModel);
    }
 
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+       return false;
+    }
 }

@@ -37,5 +37,15 @@ public class CxpTable extends BaseJTable {
        final CxpTableModel CxpTableModel = new CxpTableModel(items_,this.ShowColumns);
        this.setModel(CxpTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Cxp ObjectIteration_ = (Cxp)ObjectIteration;
+       final Cxp ObjectToCompare_ = (Cxp)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

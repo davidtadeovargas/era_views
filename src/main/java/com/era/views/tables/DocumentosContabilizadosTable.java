@@ -37,5 +37,15 @@ public class DocumentosContabilizadosTable extends BaseJTable {
        final DocumentosContabilizadosTableModel DocumentosContabilizadosTableModel = new DocumentosContabilizadosTableModel(items_,this.ShowColumns);
        this.setModel(DocumentosContabilizadosTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final DocumentosContabilizados ObjectIteration_ = (DocumentosContabilizados)ObjectIteration;
+       final DocumentosContabilizados ObjectToCompare_ = (DocumentosContabilizados)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

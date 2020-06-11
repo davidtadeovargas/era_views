@@ -37,5 +37,15 @@ public class IngresTable extends BaseJTable {
        final IngresTableModel IngresTableModel = new IngresTableModel(items_,this.ShowColumns);
        this.setModel(IngresTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Ingres ObjectIteration_ = (Ingres)ObjectIteration;
+       final Ingres ObjectToCompare_ = (Ingres)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

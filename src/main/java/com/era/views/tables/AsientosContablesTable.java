@@ -38,4 +38,14 @@ public class AsientosContablesTable extends BaseJTable {
        this.setModel(AsientosContablesTableModel);
    }
 
+   @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final AsientosContables ObjectIteration_ = (AsientosContables)ObjectIteration;
+       final AsientosContables ObjectToCompare_ = (AsientosContables)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

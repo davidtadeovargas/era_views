@@ -37,5 +37,15 @@ public class DatoscpTable extends BaseJTable {
        final DatoscpTableModel DatoscpTableModel = new DatoscpTableModel(items_,this.ShowColumns);
        this.setModel(DatoscpTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Datoscp ObjectIteration_ = (Datoscp)ObjectIteration;
+       final Datoscp ObjectToCompare_ = (Datoscp)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

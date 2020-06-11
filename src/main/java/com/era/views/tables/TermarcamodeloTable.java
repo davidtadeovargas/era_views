@@ -37,5 +37,15 @@ public class TermarcamodeloTable extends BaseJTable {
        final TermarcamodeloTableModel TermarcamodeloTableModel = new TermarcamodeloTableModel(items_,this.ShowColumns);
        this.setModel(TermarcamodeloTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Termarcamodelo ObjectIteration_ = (Termarcamodelo)ObjectIteration;
+       final Termarcamodelo ObjectToCompare_ = (Termarcamodelo)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getMarc().compareTo(ObjectToCompare_.getMarc())==0;
+    }
 }

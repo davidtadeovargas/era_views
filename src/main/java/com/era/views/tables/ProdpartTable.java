@@ -37,5 +37,15 @@ public class ProdpartTable extends BaseJTable {
        final ProdpartTableModel ProdpartTableModel = new ProdpartTableModel(items_,this.ShowColumns);
        this.setModel(ProdpartTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Prodpart ObjectIteration_ = (Prodpart)ObjectIteration;
+       final Prodpart ObjectToCompare_ = (Prodpart)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

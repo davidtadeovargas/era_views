@@ -37,5 +37,15 @@ public class CotsTable extends BaseJTable {
        final CotsTableModel CotsTableModel = new CotsTableModel(items_,this.ShowColumns);
        this.setModel(CotsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Cots ObjectIteration_ = (Cots)ObjectIteration;
+       final Cots ObjectToCompare_ = (Cots)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

@@ -37,5 +37,15 @@ public class BasDatsTable extends BaseJTable {
        final BasDatsTableModel BasDatsTableModel = new BasDatsTableModel(items_,this.ShowColumns);
        this.setModel(BasDatsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final BasDats ObjectIteration_ = (BasDats)ObjectIteration;
+       final BasDats ObjectToCompare_ = (BasDats)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

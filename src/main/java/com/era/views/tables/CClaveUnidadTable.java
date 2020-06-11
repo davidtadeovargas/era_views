@@ -37,5 +37,15 @@ public class CClaveUnidadTable extends BaseJTable {
        final CClaveUnidadTableModel CClaveUnidadTableModel = new CClaveUnidadTableModel(items_,this.ShowColumns);
        this.setModel(CClaveUnidadTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CClaveUnidad ObjectIteration_ = (CClaveUnidad)ObjectIteration;
+       final CClaveUnidad ObjectToCompare_ = (CClaveUnidad)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

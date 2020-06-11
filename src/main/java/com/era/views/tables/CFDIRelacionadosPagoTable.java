@@ -37,5 +37,15 @@ public class CFDIRelacionadosPagoTable extends BaseJTable {
        final CFDIRelacionadosPagoTableModel CFDIRelacionadosPagoTableModel = new CFDIRelacionadosPagoTableModel(items_,this.ShowColumns);
        this.setModel(CFDIRelacionadosPagoTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CFDIRelacionadosPago ObjectIteration_ = (CFDIRelacionadosPago)ObjectIteration;
+       final CFDIRelacionadosPago ObjectToCompare_ = (CFDIRelacionadosPago)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

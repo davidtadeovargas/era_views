@@ -37,5 +37,15 @@ public class CuentasContablesTable extends BaseJTable {
        final CuentasContablesTableModel CuentasContablesTableModel = new CuentasContablesTableModel(items_,this.ShowColumns);
        this.setModel(CuentasContablesTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CuentasContables ObjectIteration_ = (CuentasContables)ObjectIteration;
+       final CuentasContables ObjectToCompare_ = (CuentasContables)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

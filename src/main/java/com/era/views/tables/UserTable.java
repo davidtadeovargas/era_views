@@ -37,5 +37,15 @@ public class UserTable extends BaseJTable {
        final UserTableModel UserTableModel = new UserTableModel(items_,this.ShowColumns);
        this.setModel(UserTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final User ObjectIteration_ = (User)ObjectIteration;
+       final User ObjectToCompare_ = (User)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

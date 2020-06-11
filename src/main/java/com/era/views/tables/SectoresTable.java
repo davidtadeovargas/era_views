@@ -37,5 +37,15 @@ public class SectoresTable extends BaseJTable {
        final SectoresTableModel SectoresTableModel = new SectoresTableModel(items_,this.ShowColumns);
        this.setModel(SectoresTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Sectores ObjectIteration_ = (Sectores)ObjectIteration;
+       final Sectores ObjectToCompare_ = (Sectores)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

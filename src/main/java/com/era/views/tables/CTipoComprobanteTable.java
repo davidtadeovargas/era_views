@@ -37,5 +37,15 @@ public class CTipoComprobanteTable extends BaseJTable {
        final CTipoComprobanteTableModel CTipoComprobanteTableModel = new CTipoComprobanteTableModel(items_,this.ShowColumns);
        this.setModel(CTipoComprobanteTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CTipoComprobante ObjectIteration_ = (CTipoComprobante)ObjectIteration;
+       final CTipoComprobante ObjectToCompare_ = (CTipoComprobante)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

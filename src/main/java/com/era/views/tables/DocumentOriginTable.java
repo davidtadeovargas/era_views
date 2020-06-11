@@ -37,5 +37,15 @@ public class DocumentOriginTable extends BaseJTable {
        final DocumentOriginTableModel DocumentOriginTableModel = new DocumentOriginTableModel(items_,this.ShowColumns);
        this.setModel(DocumentOriginTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final DocumentOrigin ObjectIteration_ = (DocumentOrigin)ObjectIteration;
+       final DocumentOrigin ObjectToCompare_ = (DocumentOrigin)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

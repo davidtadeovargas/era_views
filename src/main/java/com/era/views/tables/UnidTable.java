@@ -37,5 +37,15 @@ public class UnidTable extends BaseJTable {
        final UnidTableModel UnidTableModel = new UnidTableModel(items_,this.ShowColumns);
        this.setModel(UnidTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Unid ObjectIteration_ = (Unid)ObjectIteration;
+       final Unid ObjectToCompare_ = (Unid)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

@@ -1,6 +1,7 @@
 package com.era.views.tables;
 
 import com.era.models.Clasificacion;
+import com.era.models.Coin;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.tablemodels.ClasificacionTableModel;
 import java.util.List;
@@ -37,5 +38,15 @@ public class ClasificacionTable extends BaseJTable {
        final ClasificacionTableModel ClasificacionTableModel = new ClasificacionTableModel(items_,this.ShowColumns);
        this.setModel(ClasificacionTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Clasificacion ObjectIteration_ = (Clasificacion)ObjectIteration;
+       final Clasificacion ObjectToCompare_ = (Clasificacion)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

@@ -37,5 +37,15 @@ public class CUsoCFDITable extends BaseJTable {
        final CUsoCFDITableModel CUsoCFDITableModel = new CUsoCFDITableModel(items_,this.ShowColumns);
        this.setModel(CUsoCFDITableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CUsoCFDI ObjectIteration_ = (CUsoCFDI)ObjectIteration;
+       final CUsoCFDI ObjectToCompare_ = (CUsoCFDI)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

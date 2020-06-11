@@ -37,5 +37,15 @@ public class FlujactTable extends BaseJTable {
        final FlujactTableModel FlujactTableModel = new FlujactTableModel(items_,this.ShowColumns);
        this.setModel(FlujactTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Flujact ObjectIteration_ = (Flujact)ObjectIteration;
+       final Flujact ObjectToCompare_ = (Flujact)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

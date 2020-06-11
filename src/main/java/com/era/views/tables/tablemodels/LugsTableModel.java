@@ -20,7 +20,7 @@ public class LugsTableModel  extends BaseAbstractTableModel {
                returnValue = String.valueOf(rowIndex + 1);
             }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLugssTableHeader().getCOD().getValue())==0){
-               returnValue = Lugs.getCod();
+               returnValue = Lugs.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getLugssTableHeader().getDESCRIP().getValue())==0){
                returnValue = Lugs.getDescrip();

@@ -7,6 +7,7 @@ package com.era.views.abstracttablesmodel;
 
 import com.era.datamodels.enums.SearchCommonTypeEnum;
 import com.era.views.abstracttablesmodel.getvaluesat.BasdatsIGetValueAt1;
+import com.era.views.abstracttablesmodel.getvaluesat.CClaveprodservsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CPSIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CountriesIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CustomersIGetValueAt;
@@ -16,6 +17,7 @@ import com.era.views.abstracttablesmodel.getvaluesat.IGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.RegimenFiscalIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SectoresIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SeriesCustomersIGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.SuppliersIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.UsersIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.WarehousesIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.ZonesIGetValueAt;
@@ -28,13 +30,8 @@ import java.util.List;
  */
 public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
         
-    private final SearchCommonTypeEnum SearchCommonTypeEnum;
-    
-    
     public SearchCommonAbstractTableModel(List<?> deliveries, List<ColumnTable> header, final SearchCommonTypeEnum SearchCommonTypeEnum) {
         super(deliveries,header);
-        
-        this.SearchCommonTypeEnum = SearchCommonTypeEnum;
         
         this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, Object model) -> {
             
@@ -54,6 +51,11 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                     break;
                     
                 case SUPPLIERS:
+                    IGetValueAt = new SuppliersIGetValueAt();
+                    break;
+                
+                case CLAVES_PROD_SAT:
+                    IGetValueAt = new CClaveprodservsIGetValueAt();
                     break;
                     
                 case USERS:

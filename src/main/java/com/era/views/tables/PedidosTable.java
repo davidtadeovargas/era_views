@@ -1,6 +1,7 @@
 package com.era.views.tables;
 
 import com.era.models.Pedidos;
+import com.era.models.Pers;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.tablemodels.PedidosTableModel;
 import java.util.List;
@@ -37,5 +38,15 @@ public class PedidosTable extends BaseJTable {
        final PedidosTableModel PedidosTableModel = new PedidosTableModel(items_,this.ShowColumns);
        this.setModel(PedidosTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Pedidos ObjectIteration_ = (Pedidos)ObjectIteration;
+       final Pedidos ObjectToCompare_ = (Pedidos)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

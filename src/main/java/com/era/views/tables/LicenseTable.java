@@ -37,5 +37,15 @@ public class LicenseTable extends BaseJTable {
        final LicenseTableModel LicenseTableModel = new LicenseTableModel(items_,this.ShowColumns);
        this.setModel(LicenseTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final License ObjectIteration_ = (License)ObjectIteration;
+       final License ObjectToCompare_ = (License)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

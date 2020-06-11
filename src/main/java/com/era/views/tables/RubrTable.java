@@ -37,5 +37,15 @@ public class RubrTable extends BaseJTable {
        final RubrTableModel RubrTableModel = new RubrTableModel(items_,this.ShowColumns);
        this.setModel(RubrTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Rubr ObjectIteration_ = (Rubr)ObjectIteration;
+       final Rubr ObjectToCompare_ = (Rubr)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

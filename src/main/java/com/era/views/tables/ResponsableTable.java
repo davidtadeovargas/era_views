@@ -37,5 +37,15 @@ public class ResponsableTable extends BaseJTable {
        final ResponsableTableModel ResponsableTableModel = new ResponsableTableModel(items_,this.ShowColumns);
        this.setModel(ResponsableTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Responsable ObjectIteration_ = (Responsable)ObjectIteration;
+       final Responsable ObjectToCompare_ = (Responsable)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

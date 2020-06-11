@@ -37,5 +37,15 @@ public class ActivosTable extends BaseJTable {
        final ActivosTableModel ActivosTableModel = new ActivosTableModel(items_,this.ShowColumns);
        this.setModel(ActivosTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Activos ObjectIteration_ = (Activos)ObjectIteration;
+       final Activos ObjectToCompare_ = (Activos)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

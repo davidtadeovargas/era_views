@@ -20,7 +20,7 @@ public class AnaqsTableModel  extends BaseAbstractTableModel {
                returnValue = String.valueOf(rowIndex + 1);
             }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAnaqssTableHeader().getCOD().getValue())==0){
-               returnValue = Anaqs.getCod();
+               returnValue = Anaqs.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getAnaqssTableHeader().getDESCRIP().getValue())==0){
                returnValue = Anaqs.getDescrip();

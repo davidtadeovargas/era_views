@@ -37,5 +37,15 @@ public class AuxiliarTable extends BaseJTable {
        final AuxiliarTableModel AuxiliarTableModel = new AuxiliarTableModel(items_,this.ShowColumns);
        this.setModel(AuxiliarTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Auxiliar ObjectIteration_ = (Auxiliar)ObjectIteration;
+       final Auxiliar ObjectToCompare_ = (Auxiliar)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

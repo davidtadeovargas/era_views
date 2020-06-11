@@ -37,5 +37,15 @@ public class TraspasTable extends BaseJTable {
        final TraspasTableModel TraspasTableModel = new TraspasTableModel(items_,this.ShowColumns);
        this.setModel(TraspasTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Traspas ObjectIteration_ = (Traspas)ObjectIteration;
+       final Traspas ObjectToCompare_ = (Traspas)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

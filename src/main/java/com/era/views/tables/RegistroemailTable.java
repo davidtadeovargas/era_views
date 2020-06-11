@@ -37,5 +37,15 @@ public class RegistroemailTable extends BaseJTable {
        final RegistroemailTableModel RegistroemailTableModel = new RegistroemailTableModel(items_,this.ShowColumns);
        this.setModel(RegistroemailTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Registroemail ObjectIteration_ = (Registroemail)ObjectIteration;
+       final Registroemail ObjectToCompare_ = (Registroemail)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

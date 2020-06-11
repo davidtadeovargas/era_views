@@ -37,5 +37,15 @@ public class PartflujactTable extends BaseJTable {
        final PartflujactTableModel PartflujactTableModel = new PartflujactTableModel(items_,this.ShowColumns);
        this.setModel(PartflujactTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Partflujact ObjectIteration_ = (Partflujact)ObjectIteration;
+       final Partflujact ObjectToCompare_ = (Partflujact)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

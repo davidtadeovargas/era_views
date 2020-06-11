@@ -1,6 +1,7 @@
 package com.era.views.tables;
 
 import com.era.models.Measure;
+import com.era.models.Meds;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.tablemodels.MeasureTableModel;
 import java.util.List;
@@ -37,5 +38,15 @@ public class MeasureTable extends BaseJTable {
        final MeasureTableModel MeasureTableModel = new MeasureTableModel(items_,this.ShowColumns);
        this.setModel(MeasureTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Meds ObjectIteration_ = (Meds)ObjectIteration;
+       final Meds ObjectToCompare_ = (Meds)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

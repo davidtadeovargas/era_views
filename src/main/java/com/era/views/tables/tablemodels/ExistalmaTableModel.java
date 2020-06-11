@@ -3,6 +3,8 @@ package com.era.views.tables.tablemodels;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 import com.era.models.Existalma;
+import com.era.models.Warehouse;
+import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 
@@ -21,6 +23,14 @@ public class ExistalmaTableModel  extends BaseAbstractTableModel {
             }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getExistalmasTableHeader().getALMA().getValue())==0){
                returnValue = Existalma.getAlma();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getExistalmasTableHeader().getDESCRIPTION().getValue())==0){
+               
+               //Get the warehouse
+               final Warehouse Warehouse = (Warehouse)RepositoryFactory.getInstance().getWarehousesRepository().getByCode(Existalma.getAlma());
+               
+               //Return the value
+               returnValue = Warehouse.getDescription();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getExistalmasTableHeader().getESTAC().getValue())==0){
                returnValue = Existalma.getEstac();

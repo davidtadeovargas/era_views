@@ -154,9 +154,6 @@ public class ProductTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getPATHIMG().getValue())==0){
                returnValue = Product.getPathIMG();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getPEDIMENT().getValue())==0){
-               returnValue = Product.getPediment();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getPLACE().getValue())==0){
                returnValue = Product.getPlace();
            }

@@ -37,5 +37,15 @@ public class FlujTable extends BaseJTable {
        final FlujTableModel FlujTableModel = new FlujTableModel(items_,this.ShowColumns);
        this.setModel(FlujTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Fluj ObjectIteration_ = (Fluj)ObjectIteration;
+       final Fluj ObjectToCompare_ = (Fluj)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

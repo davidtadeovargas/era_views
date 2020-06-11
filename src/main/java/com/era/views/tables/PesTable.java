@@ -37,5 +37,15 @@ public class PesTable extends BaseJTable {
        final PesTableModel PesTableModel = new PesTableModel(items_,this.ShowColumns);
        this.setModel(PesTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Pes ObjectIteration_ = (Pes)ObjectIteration;
+       final Pes ObjectToCompare_ = (Pes)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

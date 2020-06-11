@@ -37,5 +37,15 @@ public class CAduanaTable extends BaseJTable {
        final CAduanaTableModel CAduanaTableModel = new CAduanaTableModel(items_,this.ShowColumns);
        this.setModel(CAduanaTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CAduana ObjectIteration_ = (CAduana)ObjectIteration;
+       final CAduana ObjectToCompare_ = (CAduana)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

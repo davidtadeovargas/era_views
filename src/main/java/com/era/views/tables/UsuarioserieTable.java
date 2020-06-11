@@ -13,7 +13,7 @@ public class UsuarioserieTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(items,this.ShowColumns);
+        final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(items,this.ShowColumns);
         this.setModel(UsuarioserieTableModel);
    }
 
@@ -37,5 +37,15 @@ public class UsuarioserieTable extends BaseJTable {
        final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(items_,this.ShowColumns);
        this.setModel(UsuarioserieTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Usuarioserie ObjectIteration_ = (Usuarioserie)ObjectIteration;
+       final Usuarioserie ObjectToCompare_ = (Usuarioserie)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getIdserie() == ObjectToCompare_.getIdserie();
+    }
 }

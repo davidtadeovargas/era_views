@@ -37,5 +37,15 @@ public class ComprsTable extends BaseJTable {
        final ComprsTableModel ComprsTableModel = new ComprsTableModel(items_,this.ShowColumns);
        this.setModel(ComprsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Comprs ObjectIteration_ = (Comprs)ObjectIteration;
+       final Comprs ObjectToCompare_ = (Comprs)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

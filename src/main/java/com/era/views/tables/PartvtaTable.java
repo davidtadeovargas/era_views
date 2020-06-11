@@ -37,5 +37,15 @@ public class PartvtaTable extends BaseJTable {
        final PartvtaTableModel PartvtaTableModel = new PartvtaTableModel(items_,this.ShowColumns);
        this.setModel(PartvtaTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Partvta ObjectIteration_ = (Partvta)ObjectIteration;
+       final Partvta ObjectToCompare_ = (Partvta)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

@@ -37,5 +37,15 @@ public class CortesTable extends BaseJTable {
        final CortesTableModel CortesTableModel = new CortesTableModel(items_,this.ShowColumns);
        this.setModel(CortesTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Cortes ObjectIteration_ = (Cortes)ObjectIteration;
+       final Cortes ObjectToCompare_ = (Cortes)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

@@ -37,5 +37,15 @@ public class TipscambTable extends BaseJTable {
        final TipscambTableModel TipscambTableModel = new TipscambTableModel(items_,this.ShowColumns);
        this.setModel(TipscambTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Tipscamb ObjectIteration_ = (Tipscamb)ObjectIteration;
+       final Tipscamb ObjectToCompare_ = (Tipscamb)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

@@ -37,5 +37,15 @@ public class TipactfijTable extends BaseJTable {
        final TipactfijTableModel TipactfijTableModel = new TipactfijTableModel(items_,this.ShowColumns);
        this.setModel(TipactfijTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Tipactfij ObjectIteration_ = (Tipactfij)ObjectIteration;
+       final Tipactfij ObjectToCompare_ = (Tipactfij)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

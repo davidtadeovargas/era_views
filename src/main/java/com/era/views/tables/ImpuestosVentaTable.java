@@ -38,4 +38,14 @@ public class ImpuestosVentaTable extends BaseJTable {
        this.setModel(ImpuestosVentaTableModel);
    }
 
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final ImpuestosVenta ObjectIteration_ = (ImpuestosVenta)ObjectIteration;
+       final ImpuestosVenta ObjectToCompare_ = (ImpuestosVenta)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getVenta() == ObjectToCompare_.getVenta();
+    }
 }

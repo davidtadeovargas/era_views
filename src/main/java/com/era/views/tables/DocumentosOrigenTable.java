@@ -37,5 +37,15 @@ public class DocumentosOrigenTable extends BaseJTable {
        final DocumentosOrigenTableModel DocumentosOrigenTableModel = new DocumentosOrigenTableModel(items_,this.ShowColumns);
        this.setModel(DocumentosOrigenTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final DocumentosOrigen ObjectIteration_ = (DocumentosOrigen)ObjectIteration;
+       final DocumentosOrigen ObjectToCompare_ = (DocumentosOrigen)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

@@ -37,5 +37,15 @@ public class LugsTable extends BaseJTable {
        final LugsTableModel LugsTableModel = new LugsTableModel(items_,this.ShowColumns);
        this.setModel(LugsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Lugs ObjectIteration_ = (Lugs)ObjectIteration;
+       final Lugs ObjectToCompare_ = (Lugs)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

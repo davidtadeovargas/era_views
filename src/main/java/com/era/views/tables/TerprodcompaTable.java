@@ -37,5 +37,15 @@ public class TerprodcompaTable extends BaseJTable {
        final TerprodcompaTableModel TerprodcompaTableModel = new TerprodcompaTableModel(items_,this.ShowColumns);
        this.setModel(TerprodcompaTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Terprodcompa ObjectIteration_ = (Terprodcompa)ObjectIteration;
+       final Terprodcompa ObjectToCompare_ = (Terprodcompa)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getMarc().compareTo(ObjectToCompare_.getMarc())==0;
+    }
 }

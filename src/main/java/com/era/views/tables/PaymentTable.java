@@ -37,5 +37,15 @@ public class PaymentTable extends BaseJTable {
        final PaymentTableModel PaymentTableModel = new PaymentTableModel(items_,this.ShowColumns);
        this.setModel(PaymentTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Payment ObjectIteration_ = (Payment)ObjectIteration;
+       final Payment ObjectToCompare_ = (Payment)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

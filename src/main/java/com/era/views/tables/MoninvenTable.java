@@ -37,5 +37,15 @@ public class MoninvenTable extends BaseJTable {
        final MoninvenTableModel MoninvenTableModel = new MoninvenTableModel(items_,this.ShowColumns);
        this.setModel(MoninvenTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Moninven ObjectIteration_ = (Moninven)ObjectIteration;
+       final Moninven ObjectToCompare_ = (Moninven)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

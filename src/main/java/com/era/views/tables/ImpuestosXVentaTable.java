@@ -37,5 +37,15 @@ public class ImpuestosXVentaTable extends BaseJTable {
        final ImpuestosXVentaTableModel ImpuestosXVentaTableModel = new ImpuestosXVentaTableModel(items_,this.ShowColumns);
        this.setModel(ImpuestosXVentaTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final ImpuestosXVenta ObjectIteration_ = (ImpuestosXVenta)ObjectIteration;
+       final ImpuestosXVenta ObjectToCompare_ = (ImpuestosXVenta)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId_partida() == ObjectToCompare_.getId_partida();
+    }
 }

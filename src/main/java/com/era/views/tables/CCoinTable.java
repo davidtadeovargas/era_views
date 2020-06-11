@@ -37,5 +37,15 @@ public class CCoinTable extends BaseJTable {
        final CCoinTableModel CCoinTableModel = new CCoinTableModel(items_,this.ShowColumns);
        this.setModel(CCoinTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CCoin ObjectIteration_ = (CCoin)ObjectIteration;
+       final CCoin ObjectToCompare_ = (CCoin)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

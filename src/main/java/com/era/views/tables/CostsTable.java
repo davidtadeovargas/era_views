@@ -37,5 +37,15 @@ public class CostsTable extends BaseJTable {
        final CostsTableModel CostsTableModel = new CostsTableModel(items_,this.ShowColumns);
        this.setModel(CostsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Costs ObjectIteration_ = (Costs)ObjectIteration;
+       final Costs ObjectToCompare_ = (Costs)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

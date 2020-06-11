@@ -38,4 +38,14 @@ public class SubramosTable extends BaseJTable {
        this.setModel(SubramosTableModel);
    }
 
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Subramos ObjectIteration_ = (Subramos)ObjectIteration;
+       final Subramos ObjectToCompare_ = (Subramos)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

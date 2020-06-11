@@ -37,5 +37,15 @@ public class MovimientosAsientosTable extends BaseJTable {
        final MovimientosAsientosTableModel MovimientosAsientosTableModel = new MovimientosAsientosTableModel(items_,this.ShowColumns);
        this.setModel(MovimientosAsientosTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final MovimientosAsientos ObjectIteration_ = (MovimientosAsientos)ObjectIteration;
+       final MovimientosAsientos ObjectToCompare_ = (MovimientosAsientos)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

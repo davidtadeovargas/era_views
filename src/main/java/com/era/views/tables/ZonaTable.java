@@ -38,4 +38,14 @@ public class ZonaTable extends BaseJTable {
        this.setModel(ZonaTableModel);
    }
 
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Zona ObjectIteration_ = (Zona)ObjectIteration;
+       final Zona ObjectToCompare_ = (Zona)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCod().compareTo(ObjectToCompare_.getCod())==0;
+    }
 }

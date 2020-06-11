@@ -38,4 +38,14 @@ public class GiroTable extends BaseJTable {
        this.setModel(GiroTableModel);
    }
 
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Giro ObjectIteration_ = (Giro)ObjectIteration;
+       final Giro ObjectToCompare_ = (Giro)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

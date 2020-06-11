@@ -37,5 +37,16 @@ public class AsocdescTable extends BaseJTable {
        final AsocdescTableModel AsocdescTableModel = new AsocdescTableModel(items_,this.ShowColumns);
        this.setModel(AsocdescTableModel);
    }
+   
+   @Override
+   public boolean equal(final Object ObjectIteration, final Object ObjectToCompare){
+       
+       //Cast the models
+       final Asocdesc ObjectIteration_ = (Asocdesc)ObjectIteration;
+       final Asocdesc ObjectToCompare_ = (Asocdesc)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+   }
 
 }

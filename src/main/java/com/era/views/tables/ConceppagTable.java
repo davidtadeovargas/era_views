@@ -1,6 +1,7 @@
 package com.era.views.tables;
 
 import com.era.models.Conceppag;
+import com.era.models.Conceps;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.tablemodels.ConceppagTableModel;
 import java.util.List;
@@ -37,5 +38,15 @@ public class ConceppagTable extends BaseJTable {
        final ConceppagTableModel ConceppagTableModel = new ConceppagTableModel(items_,this.ShowColumns);
        this.setModel(ConceppagTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Conceppag ObjectIteration_ = (Conceppag)ObjectIteration;
+       final Conceppag ObjectToCompare_ = (Conceppag)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

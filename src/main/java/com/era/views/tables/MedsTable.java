@@ -37,5 +37,15 @@ public class MedsTable extends BaseJTable {
        final MedsTableModel MedsTableModel = new MedsTableModel(items_,this.ShowColumns);
        this.setModel(MedsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Meds ObjectIteration_ = (Meds)ObjectIteration;
+       final Meds ObjectToCompare_ = (Meds)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

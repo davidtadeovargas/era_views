@@ -37,5 +37,15 @@ public class CortszxTable extends BaseJTable {
        final CortszxTableModel CortszxTableModel = new CortszxTableModel(items_,this.ShowColumns);
        this.setModel(CortszxTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Cortszx ObjectIteration_ = (Cortszx)ObjectIteration;
+       final Cortszx ObjectToCompare_ = (Cortszx)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

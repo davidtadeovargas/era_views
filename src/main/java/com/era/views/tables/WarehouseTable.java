@@ -37,5 +37,15 @@ public class WarehouseTable extends BaseJTable {
        final WarehouseTableModel WarehouseTableModel = new WarehouseTableModel(items_,this.ShowColumns);
        this.setModel(WarehouseTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Warehouse ObjectIteration_ = (Warehouse)ObjectIteration;
+       final Warehouse ObjectToCompare_ = (Warehouse)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

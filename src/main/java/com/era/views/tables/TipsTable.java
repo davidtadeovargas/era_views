@@ -1,6 +1,7 @@
 package com.era.views.tables;
 
 import com.era.models.Tips;
+import com.era.models.Tipscamb;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.tablemodels.TipsTableModel;
 import java.util.List;
@@ -14,7 +15,7 @@ public class TipsTable extends BaseJTable {
    @Override
    public void initTable(List<?> items) {
        final TipsTableModel TipsTableModel = new TipsTableModel(items,this.ShowColumns);
-        this.setModel(TipsTableModel);
+       this.setModel(TipsTableModel);
    }
 
    @Override
@@ -37,5 +38,15 @@ public class TipsTable extends BaseJTable {
        final TipsTableModel TipsTableModel = new TipsTableModel(items_,this.ShowColumns);
        this.setModel(TipsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Tipscamb ObjectIteration_ = (Tipscamb)ObjectIteration;
+       final Tipscamb ObjectToCompare_ = (Tipscamb)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

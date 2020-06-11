@@ -37,5 +37,15 @@ public class FacturasTable extends BaseJTable {
        final FacturasTableModel FacturasTableModel = new FacturasTableModel(items_,this.ShowColumns);
        this.setModel(FacturasTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Facturas ObjectIteration_ = (Facturas)ObjectIteration;
+       final Facturas ObjectToCompare_ = (Facturas)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getVenta() == ObjectToCompare_.getVenta();
+    }
 }

@@ -37,5 +37,15 @@ public class SerieTable extends BaseJTable {
        final SerieTableModel SerieTableModel = new SerieTableModel(items_,this.ShowColumns);
        this.setModel(SerieTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Serie ObjectIteration_ = (Serie)ObjectIteration;
+       final Serie ObjectToCompare_ = (Serie)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

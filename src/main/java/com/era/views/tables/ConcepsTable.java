@@ -37,5 +37,15 @@ public class ConcepsTable extends BaseJTable {
        final ConcepsTableModel ConcepsTableModel = new ConcepsTableModel(items_,this.ShowColumns);
        this.setModel(ConcepsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Conceps ObjectIteration_ = (Conceps)ObjectIteration;
+       final Conceps ObjectToCompare_ = (Conceps)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

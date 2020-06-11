@@ -38,4 +38,8 @@ public class UserPermissionTable extends BaseJTable {
        this.setModel(UserPermissionTableModel);
    }
 
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -5,6 +5,7 @@
  */
 package com.era.views.abstracttablesmodel;
 
+import com.era.logger.LoggerUtility;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,15 +42,22 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         
-        final ColumnTable ColumnTable = this.header.get(columnIndex);
-        final String value = ColumnTable.getValue();
-        final Object Object = this.items.get(rowIndex);  
-        
-        if(GetValueAt != null){
-            return GetValueAt.getValueAt(rowIndex, columnIndex, value, Object);
-        }
-        else{
-            return "";
+        try{
+         
+            final ColumnTable ColumnTable = this.header.get(columnIndex);
+            final String value = ColumnTable.getValue();
+            final Object Object = this.items.get(rowIndex);  
+
+            if(GetValueAt != null){
+                return GetValueAt.getValueAt(rowIndex, columnIndex, value, Object);            
+            }
+            else{
+                return "";
+            }
+            
+        }catch (Exception ex) {
+            LoggerUtility.getSingleton().logError(BaseAbstractTableModel.class, ex);
+            return null;
         }
     }
     
@@ -83,6 +91,6 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
     }
     
     public interface GetValueAt{        
-        public Object getValueAt(int rowIndex, int columnIndex, final String valueColumn, final Object model);
+        public Object getValueAt(int rowIndex, int columnIndex, final String valueColumn, final Object model) throws Exception;
     }
 }

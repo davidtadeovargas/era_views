@@ -37,5 +37,15 @@ public class HistAntiguedaddesaldoTable extends BaseJTable {
        final HistAntiguedaddesaldoTableModel HistAntiguedaddesaldoTableModel = new HistAntiguedaddesaldoTableModel(items_,this.ShowColumns);
        this.setModel(HistAntiguedaddesaldoTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final HistAntiguedaddesaldo ObjectIteration_ = (HistAntiguedaddesaldo)ObjectIteration;
+       final HistAntiguedaddesaldo ObjectToCompare_ = (HistAntiguedaddesaldo)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

@@ -37,5 +37,15 @@ public class AduanaTable extends BaseJTable {
        final AduanaTableModel AduanaTableModel = new AduanaTableModel(items_,this.ShowColumns);
        this.setModel(AduanaTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Aduana ObjectIteration_ = (Aduana)ObjectIteration;
+       final Aduana ObjectToCompare_ = (Aduana)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

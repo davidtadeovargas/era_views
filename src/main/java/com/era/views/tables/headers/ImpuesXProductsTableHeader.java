@@ -7,6 +7,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
+   private final ColumnTable VALUE = new ColumnTable("VALOR");
+   public ColumnTable getVALUE() {
+       return this.ESTAC;
+   }
+   
    private final ColumnTable ESTAC = new ColumnTable("ESTAC");
    public ColumnTable getESTAC() {
        return this.ESTAC;

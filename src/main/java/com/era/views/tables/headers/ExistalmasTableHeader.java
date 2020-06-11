@@ -22,6 +22,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.EXIST;
    }
 
+   private final ColumnTable DESCRIPTION = new ColumnTable("Descripción");
+   public ColumnTable getDESCRIPTION() {
+       return this.DESCRIPTION;
+   }
+   
    private final ColumnTable FALT = new ColumnTable("FALT");
    public ColumnTable getFALT() {
        return this.FALT;

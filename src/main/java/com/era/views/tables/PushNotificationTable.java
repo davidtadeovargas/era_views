@@ -37,5 +37,15 @@ public class PushNotificationTable extends BaseJTable {
        final PushNotificationTableModel PushNotificationTableModel = new PushNotificationTableModel(items_,this.ShowColumns);
        this.setModel(PushNotificationTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final PushNotification ObjectIteration_ = (PushNotification)ObjectIteration;
+       final PushNotification ObjectToCompare_ = (PushNotification)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

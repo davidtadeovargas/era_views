@@ -37,5 +37,15 @@ public class CompaTable extends BaseJTable {
        final CompaTableModel CompaTableModel = new CompaTableModel(items_,this.ShowColumns);
        this.setModel(CompaTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Compa ObjectIteration_ = (Compa)ObjectIteration;
+       final Compa ObjectToCompare_ = (Compa)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

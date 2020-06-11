@@ -37,5 +37,15 @@ public class CorrselecTable extends BaseJTable {
        final CorrselecTableModel CorrselecTableModel = new CorrselecTableModel(items_,this.ShowColumns);
        this.setModel(CorrselecTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Corrselec ObjectIteration_ = (Corrselec)ObjectIteration;
+       final Corrselec ObjectToCompare_ = (Corrselec)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

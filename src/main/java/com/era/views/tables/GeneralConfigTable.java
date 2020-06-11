@@ -37,5 +37,15 @@ public class GeneralConfigTable extends BaseJTable {
        final GeneralConfigTableModel GeneralConfigTableModel = new GeneralConfigTableModel(items_,this.ShowColumns);
        this.setModel(GeneralConfigTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final GeneralConfig ObjectIteration_ = (GeneralConfig)ObjectIteration;
+       final GeneralConfig ObjectToCompare_ = (GeneralConfig)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

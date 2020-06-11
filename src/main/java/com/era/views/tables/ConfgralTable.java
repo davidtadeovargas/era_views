@@ -1,6 +1,7 @@
 package com.era.views.tables;
 
 import com.era.models.Confgral;
+import com.era.models.Consec;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.tablemodels.ConfgralTableModel;
 import java.util.List;
@@ -37,5 +38,15 @@ public class ConfgralTable extends BaseJTable {
        final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(items_,this.ShowColumns);
        this.setModel(ConfgralTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Confgral ObjectIteration_ = (Confgral)ObjectIteration;
+       final Confgral ObjectToCompare_ = (Confgral)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

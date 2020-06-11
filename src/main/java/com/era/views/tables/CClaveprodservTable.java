@@ -37,5 +37,15 @@ public class CClaveprodservTable extends BaseJTable {
        final CClaveprodservTableModel CClaveprodservTableModel = new CClaveprodservTableModel(items_,this.ShowColumns);
        this.setModel(CClaveprodservTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CClaveprodserv ObjectIteration_ = (CClaveprodserv)ObjectIteration;
+       final CClaveprodserv ObjectToCompare_ = (CClaveprodserv)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

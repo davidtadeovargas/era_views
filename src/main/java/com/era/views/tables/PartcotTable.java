@@ -37,5 +37,15 @@ public class PartcotTable extends BaseJTable {
        final PartcotTableModel PartcotTableModel = new PartcotTableModel(items_,this.ShowColumns);
        this.setModel(PartcotTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Partcot ObjectIteration_ = (Partcot)ObjectIteration;
+       final Partcot ObjectToCompare_ = (Partcot)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

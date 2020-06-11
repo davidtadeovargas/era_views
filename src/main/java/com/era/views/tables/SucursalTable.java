@@ -37,5 +37,15 @@ public class SucursalTable extends BaseJTable {
        final SucursalTableModel SucursalTableModel = new SucursalTableModel(items_,this.ShowColumns);
        this.setModel(SucursalTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Sucursal ObjectIteration_ = (Sucursal)ObjectIteration;
+       final Sucursal ObjectToCompare_ = (Sucursal)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+    }
 }

@@ -37,5 +37,15 @@ public class FabsTable extends BaseJTable {
        final FabsTableModel FabsTableModel = new FabsTableModel(items_,this.ShowColumns);
        this.setModel(FabsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Fabs ObjectIteration_ = (Fabs)ObjectIteration;
+       final Fabs ObjectToCompare_ = (Fabs)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

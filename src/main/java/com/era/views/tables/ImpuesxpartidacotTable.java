@@ -37,5 +37,15 @@ public class ImpuesxpartidacotTable extends BaseJTable {
        final ImpuesxpartidacotTableModel ImpuesxpartidacotTableModel = new ImpuesxpartidacotTableModel(items_,this.ShowColumns);
        this.setModel(ImpuesxpartidacotTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Impuesxpartidacot ObjectIteration_ = (Impuesxpartidacot)ObjectIteration;
+       final Impuesxpartidacot ObjectToCompare_ = (Impuesxpartidacot)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

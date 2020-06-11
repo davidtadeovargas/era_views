@@ -37,5 +37,15 @@ public class TarsTable extends BaseJTable {
        final TarsTableModel TarsTableModel = new TarsTableModel(items_,this.ShowColumns);
        this.setModel(TarsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Tars ObjectIteration_ = (Tars)ObjectIteration;
+       final Tars ObjectToCompare_ = (Tars)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getTar() == ObjectToCompare_.getTar();
+    }
 }

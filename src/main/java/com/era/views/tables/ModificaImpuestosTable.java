@@ -37,5 +37,15 @@ public class ModificaImpuestosTable extends BaseJTable {
        final ModificaImpuestosTableModel ModificaImpuestosTableModel = new ModificaImpuestosTableModel(items_,this.ShowColumns);
        this.setModel(ModificaImpuestosTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final ModificaImpuestos ObjectIteration_ = (ModificaImpuestos)ObjectIteration;
+       final ModificaImpuestos ObjectToCompare_ = (ModificaImpuestos)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getVenta() == ObjectToCompare_.getVenta();
+    }
 }

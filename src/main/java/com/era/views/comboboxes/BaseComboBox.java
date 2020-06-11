@@ -94,6 +94,10 @@ public abstract class BaseComboBox<T> extends JComboBox {
         }
     }
     
+    public boolean isSelectedObject(){
+        return this.getSelectedItem()!=null?true:false;
+    }
+    
     public void clear(){
         this.removeAllItems();
     }

@@ -20,7 +20,7 @@ public abstract class ProdExisAlmJFrame extends BaseJFrame
         jP1 = new javax.swing.JPanel();
         jBSal = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.ExistalmaTable();
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("Utilidad %:");
@@ -93,7 +93,7 @@ public abstract class ProdExisAlmJFrame extends BaseJFrame
     private javax.swing.JLabel jLabel14;
     private javax.swing.JPanel jP1;
     protected javax.swing.JScrollPane jScrollPane2;
-    protected javax.swing.JTable jTab;
+    protected com.era.views.tables.ExistalmaTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

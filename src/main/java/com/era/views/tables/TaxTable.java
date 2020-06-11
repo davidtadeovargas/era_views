@@ -37,5 +37,15 @@ public class TaxTable extends BaseJTable {
        final TaxTableModel TaxTableModel = new TaxTableModel(items_,this.ShowColumns);
        this.setModel(TaxTableModel);
    }
-
+   
+   @Override
+   public boolean equal(final Object ObjectIteration, final Object ObjectToCompare){
+       
+       //Cast the models
+       final Tax ObjectIteration_ = (Tax)ObjectIteration;
+       final Tax ObjectToCompare_ = (Tax)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getCode().compareTo(ObjectToCompare_.getCode())==0;
+   }
 }

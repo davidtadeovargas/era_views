@@ -70,6 +70,66 @@ public abstract class BaseJTable extends JTable {
         init();
     }
     
+    public void addObject(final Object Object){
+        
+        //Get the items of the table
+        final BaseAbstractTableModel model = (BaseAbstractTableModel)getModel();
+        final List<Object> items = (List<Object>) model.getItems();
+        
+        //Add the new item to the list
+        items.add(Object);
+        
+        //Reload the table
+        this.initTable(items);
+    }
+    
+    public boolean objectExists(final Object Object){
+        
+        //Get the items of the table
+        final BaseAbstractTableModel model = (BaseAbstractTableModel)getModel();
+        final List<Object> items = (List<Object>) model.getItems();
+        
+        //Iterate the objects of the table
+        for(Object Object_:items){
+            
+            //Each table checks specifi type
+            final boolean isEqual = equal(Object,Object);
+            
+            //If is equual return and break
+            if(isEqual){
+                return true;
+            }
+        }
+        
+        //The object doesnt exists
+        return false;
+    }
+    
+    public void deleteObject(final Object Object){
+        
+        //Get the items of the table
+        final BaseAbstractTableModel model = (BaseAbstractTableModel)getModel();
+        final List<Object> items = (List<Object>) model.getItems();
+        
+        //Iterate the objects of the table
+        for(Object Object_:items){
+            
+            //Each table checks specifi type
+            final boolean isEqual = equal(Object,Object);
+            
+            //If is equual return and break
+            if(isEqual){
+                items.remove(Object);
+                break;
+            }
+        }
+        
+        //Reload the table
+        this.initTable(items);
+    }
+    
+    public abstract boolean equal(final Object ObjectIteration, final Object ObjectToCompare);
+    
     public void addShowColumn(final ColumnTable ColumnTable){
         this.ShowColumns.add(ColumnTable);
     }
@@ -104,24 +164,34 @@ public abstract class BaseJTable extends JTable {
                     int maximum = scrollBar.getModel().getMaximum();
                     int minimum = scrollBar.getModel().getMinimum();
                     int eval  = e.getValue();
+                    LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: extent = " + extent);
+                    LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: maximum = " + maximum);
+                    LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: minimum = " + minimum);
+                    LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: eval = " + eval);
                     int val = extent + eval;
-                    if( val == maximum){
+                    
+                    //If is real scroll
+                    if(extent != maximum){
                         
-                        if(OnScrollMinimum!=null){
-                            OnScrollMinimum.onScrollMinimum();
+                        if( val == maximum){
+                            if(OnScrollMinimum!=null){
+                                LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: Callback OnScrollMinimum.onScrollMinimum()");
+                                OnScrollMinimum.onScrollMinimum();
+                            }
+
+                            if(scrollAtStartWhenEnd){
+                                //Reset scrollbar                            
+                                JScrollPane.getVerticalScrollBar().setValue(SwingConstants.TOP);
+                            }
                         }
-                        
-                        if(scrollAtStartWhenEnd){
-                            //Reset scrollbar
-                            JScrollPane.getVerticalScrollBar().setValue(SwingConstants.TOP);
-                        }
+                        else if(val == extent){ //At the very beginning
+
+                            if(OnScrollBottom!=null){
+                                LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: Callback OnScrollBottom.onScrollBottom();");
+                                OnScrollBottom.onScrollBottom();
+                            }
+                        }                                         
                     }
-                    else if(val == extent){ //At the very beginning
-                        
-                        if(OnScrollBottom!=null){
-                            OnScrollBottom.onScrollBottom();
-                        }
-                    }                                         
                 }
                 
                 if(OnEndScrolls!=null){

@@ -37,5 +37,15 @@ public class ExistalmaTable extends BaseJTable {
        final ExistalmaTableModel ExistalmaTableModel = new ExistalmaTableModel(items_,this.ShowColumns);
        this.setModel(ExistalmaTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Existalma ObjectIteration_ = (Existalma)ObjectIteration;
+       final Existalma ObjectToCompare_ = (Existalma)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

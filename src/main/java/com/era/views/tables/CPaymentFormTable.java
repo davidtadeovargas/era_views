@@ -37,5 +37,15 @@ public class CPaymentFormTable extends BaseJTable {
        final CPaymentFormTableModel CPaymentFormTableModel = new CPaymentFormTableModel(items_,this.ShowColumns);
        this.setModel(CPaymentFormTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CPaymentForm ObjectIteration_ = (CPaymentForm)ObjectIteration;
+       final CPaymentForm ObjectToCompare_ = (CPaymentForm)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

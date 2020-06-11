@@ -37,5 +37,15 @@ public class CorreoTerminalTable extends BaseJTable {
        final CorreoTerminalTableModel CorreoTerminalTableModel = new CorreoTerminalTableModel(items_,this.ShowColumns);
        this.setModel(CorreoTerminalTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final CorreoTerminal ObjectIteration_ = (CorreoTerminal)ObjectIteration;
+       final CorreoTerminal ObjectToCompare_ = (CorreoTerminal)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

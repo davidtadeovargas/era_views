@@ -37,5 +37,15 @@ public class PrevcomprsTable extends BaseJTable {
        final PrevcomprsTableModel PrevcomprsTableModel = new PrevcomprsTableModel(items_,this.ShowColumns);
        this.setModel(PrevcomprsTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Prevcomprs ObjectIteration_ = (Prevcomprs)ObjectIteration;
+       final Prevcomprs ObjectToCompare_ = (Prevcomprs)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }

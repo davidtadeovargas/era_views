@@ -37,5 +37,15 @@ public class CompanyTable extends BaseJTable {
        final CompanyTableModel CompanyTableModel = new CompanyTableModel(items_,this.ShowColumns);
        this.setModel(CompanyTableModel);
    }
-
+   
+    @Override
+    public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
+        
+       //Cast the models
+       final Company ObjectIteration_ = (Company)ObjectIteration;
+       final Company ObjectToCompare_ = (Company)ObjectToCompare;
+       
+       //Validate if are equals
+       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+    }
 }
