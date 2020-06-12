@@ -5,7 +5,6 @@
  */
 package com.era.views.comboboxes.cellrenders;
 
-import com.era.models.Serie;
 import com.era.models.Tax;
 import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;
@@ -24,7 +23,7 @@ public class TaxCellRender extends DefaultListCellRenderer {
                                    int index,
                                    boolean isSelected,
                                    boolean cellHasFocus) {
-        if (value instanceof Serie) {
+        if (value instanceof Tax) {
             value = ((Tax)value).getCode();
         }
         super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);

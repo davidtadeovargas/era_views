@@ -1,6 +1,7 @@
 package com.era.views.tables;
 
 import com.era.models.ImpuesXProduct;
+import com.era.models.Tax;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.tablemodels.ImpuesXProductTableModel;
 import java.util.List;
@@ -13,7 +14,7 @@ public class ImpuesXProductTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(items,this.ShowColumns);
+        final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(items,this.ShowColumns);
         this.setModel(ImpuesXProductTableModel);
    }
 
@@ -24,8 +25,11 @@ public class ImpuesXProductTable extends BaseJTable {
        final ImpuesXProduct ObjectIteration_ = (ImpuesXProduct)ObjectIteration;
        final ImpuesXProduct ObjectToCompare_ = (ImpuesXProduct)ObjectToCompare;
        
+       final String objectIterationCode = ObjectIteration_.getImpue();
+       final String objectToCompareCode = ObjectToCompare_.getImpue();
+       
        //Validate if are equals
-       return ObjectIteration_.getImpue().compareTo(ObjectToCompare_.getImpue())==0;
+       return objectIterationCode.compareTo(objectToCompareCode)==0;
    }
    
    @Override

@@ -463,6 +463,9 @@
                         <Property name="mnemonic" type="int" value="112"/>
                         <Property name="text" type="java.lang.String" value="Importar existencias por almac&#xe9;n"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMImpExistAlmActionPerformed"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
                       </AuxValues>

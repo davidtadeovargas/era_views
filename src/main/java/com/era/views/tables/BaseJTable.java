@@ -93,7 +93,7 @@ public abstract class BaseJTable extends JTable {
         for(Object Object_:items){
             
             //Each table checks specifi type
-            final boolean isEqual = equal(Object,Object);
+            final boolean isEqual = equal(Object_,Object);
             
             //If is equual return and break
             if(isEqual){

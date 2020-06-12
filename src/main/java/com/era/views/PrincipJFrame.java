@@ -472,6 +472,11 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMImpExistAlm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impexe.png"))); // NOI18N
         jMImpExistAlm.setMnemonic('p');
         jMImpExistAlm.setText("Importar existencias por almacén");
+        jMImpExistAlm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMImpExistAlmActionPerformed(evt);
+            }
+        });
         jMMInvenImpor.add(jMImpExistAlm);
 
         jMInven.add(jMMInvenImpor);
@@ -658,6 +663,10 @@ public abstract class PrincipJFrame extends BaseJFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMImpExistAlmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMImpExistAlmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMImpExistAlmActionPerformed
                    
             
         
