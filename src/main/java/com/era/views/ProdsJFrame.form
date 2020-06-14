@@ -82,6 +82,9 @@
                 </LineBorder>
               </Border>
             </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jTNom"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jTProdFocusGained"/>
@@ -167,6 +170,9 @@
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jComAna"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="jComUniFocusLost"/>
@@ -186,6 +192,9 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
+            </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jComUni"/>
             </Property>
           </Properties>
           <Events>
@@ -222,6 +231,9 @@
                 <Property name="toolTipText" type="java.lang.String" value="Esta descripci&#xf3;n se utiliza en el punto de venta"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
+                </Property>
+                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="jTAInfor"/>
                 </Property>
               </Properties>
               <Events>
@@ -270,7 +282,7 @@
                   <Border info="null"/>
                 </Property>
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                  <ComponentRef name="jTMin"/>
+                  <ComponentRef name="jBCargImg"/>
                 </Property>
               </Properties>
               <Events>
@@ -309,7 +321,7 @@
               </Border>
             </Property>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jTCodProv"/>
+              <ComponentRef name="lprecsButton"/>
             </Property>
           </Properties>
           <Events>
@@ -439,6 +451,7 @@
             <Property name="text" type="java.lang.String" value="Guardar"/>
             <Property name="toolTipText" type="java.lang.String" value="Guardar cambios (Ctrl+G)"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
               <ComponentRef name="jBNew"/>
             </Property>
@@ -476,7 +489,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Borrar proucto(s) (Ctrl+SUPR)"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jBLim"/>
+              <ComponentRef name="jBLim1"/>
             </Property>
           </Properties>
           <Events>
@@ -740,7 +753,7 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Mostrar F4"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jTab"/>
+              <ComponentRef name="jComLin"/>
             </Property>
           </Properties>
           <Events>
@@ -765,7 +778,7 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Kit"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jCPed"/>
+              <ComponentRef name="jTADescrip"/>
             </Property>
           </Properties>
           <Events>
@@ -794,7 +807,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Agrega los componentes del kit"/>
             <Property name="enabled" type="boolean" value="false"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jTExist"/>
+              <ComponentRef name="button_impuestos"/>
             </Property>
           </Properties>
           <Events>
@@ -913,7 +926,7 @@
               </Border>
             </Property>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jTADescrip"/>
+              <ComponentRef name="jBGuar"/>
             </Property>
           </Properties>
           <Events>
@@ -1021,7 +1034,7 @@
               <Connection code="&quot;Ver Ficha T&#xe9;cnica Completa&quot;" type="code"/>
             </Property>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jBGuar"/>
+              <ComponentRef name="jTMin"/>
             </Property>
           </Properties>
           <Events>
@@ -1129,7 +1142,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Ver im&#xe1;gen  de producto completa"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jComAna"/>
+              <ComponentRef name="jTExist"/>
             </Property>
           </Properties>
           <Events>
@@ -1252,7 +1265,7 @@
             <Property name="text" type="java.lang.String" value="Exist. almacenes"/>
             <Property name="toolTipText" type="java.lang.String" value="Existencias del producto por almac&#xe9;n"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jBCargF"/>
+              <ComponentRef name="jTProd"/>
             </Property>
           </Properties>
           <Events>
@@ -1278,7 +1291,7 @@
             <Property name="text" type="java.lang.String" value="Pedimento"/>
             <Property name="toolTipText" type="java.lang.String" value="Manejar lote y pedimento para el producto"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jCNoSer"/>
+              <ComponentRef name="jCComp"/>
             </Property>
           </Properties>
           <Events>
@@ -1299,6 +1312,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="No. serie"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jCPed"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jCNoSerKeyPressed"/>
@@ -1329,7 +1345,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Abrir scaner"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jBSal"/>
+              <ComponentRef name="jBLim"/>
             </Property>
           </Properties>
           <Events>
@@ -1353,6 +1369,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Impuestos"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jBCargF"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_impuestosActionPerformed"/>
@@ -1455,7 +1474,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Salir (ESC)"/>
             <Property name="horizontalAlignment" type="int" value="2"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-              <ComponentRef name="jTProd"/>
+              <ComponentRef name="jBBusc"/>
             </Property>
           </Properties>
           <Events>
@@ -1491,6 +1510,9 @@
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jComMeds"/>
+            </Property>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.era.views.comboboxes.LinesCombobox()"/>
@@ -1509,6 +1531,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Mostrar componentes en XML"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jCNoSer"/>
+            </Property>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -1523,6 +1548,9 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
+            </Property>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jBComps"/>
             </Property>
           </Properties>
           <Events>
@@ -1596,6 +1624,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Lista de precios"/>
+            <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jTCodProv"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lprecsButtonActionPerformed"/>

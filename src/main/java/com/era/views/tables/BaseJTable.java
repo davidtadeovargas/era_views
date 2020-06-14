@@ -6,6 +6,7 @@
 package com.era.views.tables;
 
 import com.era.logger.LoggerUtility;
+import com.era.repositories.Repository;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 import com.era.views.tables.headers.ColumnTable;
 import java.awt.event.AdjustmentEvent;
@@ -41,7 +42,9 @@ public abstract class BaseJTable extends JTable {
     private int pagination = 0;    
     private long count = 0;
     protected boolean tableInitialized;
+    private boolean usePagination;
     protected JTableEnterKeyPressed JTableEnterKeyPressed;
+    protected Repository Repository;
     
     protected IDeleteObjectInTable IDeleteObjectInTable; 
     protected IDeleteAllItemsInTable IDeleteAllItemsInTable;
@@ -64,10 +67,50 @@ public abstract class BaseJTable extends JTable {
         getColumnModel().getColumn(indexColumn).setPreferredWidth(width);
     }    
     
+    public BaseJTable(Repository Repository){
+        super();
+        
+        //Connect the repository
+        this.Repository = Repository;
+        
+        init();
+    }
+
     public BaseJTable(){
         super();
         
         init();
+    }
+
+    public void setRepository(Repository Repository) {
+        this.Repository = Repository;
+    }
+    
+    public void initTableWithPagination() throws Exception {
+                
+        //Save globally flag for pagination
+        this.usePagination = true;
+        
+        //Get the repository items by pagination
+        final List<?> list = Repository.getAllByPage(0);
+        final long count_ = Repository.getCount();
+        setCount(count_);
+        setPagination(list.size());
+        
+        this.initTable(list);
+    }
+    
+    private void loadDataByPage(final int initialIndex) throws Exception{
+        
+        setPrevRowIndex(initialIndex);
+                
+        final int previusIndex = getPrevRowIndex();
+                
+        final List<?> rows = Repository.getAllByPage(previusIndex);
+        
+        clearRows();
+
+        addRows(rows);
     }
     
     public void addObject(final Object Object){
@@ -174,6 +217,12 @@ public abstract class BaseJTable extends JTable {
                     if(extent != maximum){
                         
                         if( val == maximum){
+                            
+                            //If use pagination
+                            if(usePagination){
+                                loadDataByPage(getLastRowIndex());
+                            }
+                            
                             if(OnScrollMinimum!=null){
                                 LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: Callback OnScrollMinimum.onScrollMinimum()");
                                 OnScrollMinimum.onScrollMinimum();
@@ -186,6 +235,11 @@ public abstract class BaseJTable extends JTable {
                         }
                         else if(val == extent){ //At the very beginning
 
+                            //If pagination
+                            if(usePagination){
+                                loadDataByPage(getPrevRowIndex() - getPagination());
+                            }
+                            
                             if(OnScrollBottom!=null){
                                 LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: Callback OnScrollBottom.onScrollBottom();");
                                 OnScrollBottom.onScrollBottom();

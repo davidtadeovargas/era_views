@@ -138,6 +138,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jTProd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTProd.setToolTipText("Ctrl+B búsqueda avanzada");
         jTProd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        jTProd.setNextFocusableComponent(jTNom);
         jTProd.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTProdFocusGained(evt);
@@ -198,6 +199,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jLabel13.setText("*Nombre:");
         jP1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 80, -1));
 
+        jComUni.setNextFocusableComponent(jComAna);
         jComUni.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jComUniFocusLost(evt);
@@ -215,6 +217,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         });
         jP1.add(jComUni, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 120, 20));
 
+        jComMeds.setNextFocusableComponent(jComUni);
         jComMeds.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComMedsActionPerformed(evt);
@@ -232,6 +235,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jTADescrip.setRows(5);
         jTADescrip.setToolTipText("Esta descripción se utiliza en el punto de venta");
         jTADescrip.setBorder(null);
+        jTADescrip.setNextFocusableComponent(jTAInfor);
         jTADescrip.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTADescripFocusGained(evt);
@@ -256,7 +260,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jTAInfor.setLineWrap(true);
         jTAInfor.setRows(5);
         jTAInfor.setBorder(null);
-        jTAInfor.setNextFocusableComponent(jTMin);
+        jTAInfor.setNextFocusableComponent(jBCargImg);
         jTAInfor.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTAInforFocusGained(evt);
@@ -280,7 +284,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jTMax.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTMax.setText("2");
         jTMax.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTMax.setNextFocusableComponent(jTCodProv);
+        jTMax.setNextFocusableComponent(lprecsButton);
         jTMax.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTMaxFocusGained(evt);
@@ -370,6 +374,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBGuar.setText("Guardar");
         jBGuar.setToolTipText("Guardar cambios (Ctrl+G)");
         jBGuar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jBGuar.setName(""); // NOI18N
         jBGuar.setNextFocusableComponent(jBNew);
         jBGuar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -398,7 +403,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBDel.setText("Borrar");
         jBDel.setToolTipText("Borrar proucto(s) (Ctrl+SUPR)");
         jBDel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDel.setNextFocusableComponent(jBLim);
+        jBDel.setNextFocusableComponent(jBLim1);
         jBDel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBDelMouseEntered(evt);
@@ -588,7 +593,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBMosT.setForeground(new java.awt.Color(0, 102, 0));
         jBMosT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
         jBMosT.setText("Mostrar F4");
-        jBMosT.setNextFocusableComponent(jTab);
+        jBMosT.setNextFocusableComponent(jComLin);
         jBMosT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBMosTMouseEntered(evt);
@@ -611,7 +616,7 @@ public abstract class ProdsJFrame extends BaseJFrame
 
         jCComp.setBackground(new java.awt.Color(255, 255, 255));
         jCComp.setText("Kit");
-        jCComp.setNextFocusableComponent(jCPed);
+        jCComp.setNextFocusableComponent(jTADescrip);
         jCComp.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jCCompStateChanged(evt);
@@ -634,7 +639,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBComps.setText("Componentes");
         jBComps.setToolTipText("Agrega los componentes del kit");
         jBComps.setEnabled(false);
-        jBComps.setNextFocusableComponent(jTExist);
+        jBComps.setNextFocusableComponent(button_impuestos);
         jBComps.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBCompsActionPerformed(evt);
@@ -707,7 +712,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jP1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 100, -1));
 
         jTNom.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTNom.setNextFocusableComponent(jTADescrip);
+        jTNom.setNextFocusableComponent(jBGuar);
         jTNom.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTNomFocusGained(evt);
@@ -781,7 +786,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBFTec.setBackground(new java.awt.Color(255, 255, 255));
         jBFTec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/img.png"))); // NOI18N
         jBFTec.setToolTipText("Ver Ficha Técnica Completa");
-        jBFTec.setNextFocusableComponent(jBGuar);
+        jBFTec.setNextFocusableComponent(jTMin);
         jBFTec.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBFTecMouseEntered(evt);
@@ -841,7 +846,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBVeGran.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/img.png"))); // NOI18N
         jBVeGran.setToolTipText("Ver imágen  de producto completa");
         jBVeGran.setName(""); // NOI18N
-        jBVeGran.setNextFocusableComponent(jComAna);
+        jBVeGran.setNextFocusableComponent(jTExist);
         jBVeGran.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBVeGranMouseEntered(evt);
@@ -912,7 +917,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBExisAlma.setForeground(new java.awt.Color(0, 102, 0));
         jBExisAlma.setText("Exist. almacenes");
         jBExisAlma.setToolTipText("Existencias del producto por almacén");
-        jBExisAlma.setNextFocusableComponent(jBCargF);
+        jBExisAlma.setNextFocusableComponent(jTProd);
         jBExisAlma.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBExisAlmaMouseEntered(evt);
@@ -936,7 +941,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jCPed.setBackground(new java.awt.Color(255, 255, 255));
         jCPed.setText("Pedimento");
         jCPed.setToolTipText("Manejar lote y pedimento para el producto");
-        jCPed.setNextFocusableComponent(jCNoSer);
+        jCPed.setNextFocusableComponent(jCComp);
         jCPed.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jCPedKeyPressed(evt);
@@ -946,6 +951,7 @@ public abstract class ProdsJFrame extends BaseJFrame
 
         jCNoSer.setBackground(new java.awt.Color(255, 255, 255));
         jCNoSer.setText("No. serie");
+        jCNoSer.setNextFocusableComponent(jCPed);
         jCNoSer.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jCNoSerKeyPressed(evt);
@@ -959,7 +965,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBLim1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/Activado-135x35px.png"))); // NOI18N
         jBLim1.setToolTipText("Abrir scaner");
         jBLim1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBLim1.setNextFocusableComponent(jBSal);
+        jBLim1.setNextFocusableComponent(jBLim);
         jBLim1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBLim1MouseEntered(evt);
@@ -982,6 +988,7 @@ public abstract class ProdsJFrame extends BaseJFrame
 
         button_impuestos.setBackground(new java.awt.Color(255, 255, 255));
         button_impuestos.setText("Impuestos");
+        button_impuestos.setNextFocusableComponent(jBCargF);
         button_impuestos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button_impuestosActionPerformed(evt);
@@ -1049,7 +1056,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBSal.setNextFocusableComponent(jTProd);
+        jBSal.setNextFocusableComponent(jBBusc);
         jBSal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBSalMouseEntered(evt);
@@ -1073,12 +1080,15 @@ public abstract class ProdsJFrame extends BaseJFrame
         jLabel3.setText("Linea");
         jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
+        jComLin.setNextFocusableComponent(jComMeds);
         jP1.add(jComLin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 120, 20));
 
         jCMostrarXml.setBackground(new java.awt.Color(255, 255, 255));
         jCMostrarXml.setText("Mostrar componentes en XML");
+        jCMostrarXml.setNextFocusableComponent(jCNoSer);
         jP1.add(jCMostrarXml, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 200, -1));
 
+        jComLug.setNextFocusableComponent(jBComps);
         jComLug.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jComLugFocusLost(evt);
@@ -1124,6 +1134,7 @@ public abstract class ProdsJFrame extends BaseJFrame
 
         lprecsButton.setBackground(new java.awt.Color(255, 255, 255));
         lprecsButton.setText("Lista de precios");
+        lprecsButton.setNextFocusableComponent(jTCodProv);
         lprecsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lprecsButtonActionPerformed(evt);

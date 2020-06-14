@@ -180,6 +180,11 @@ public class JComponentUtils {
     }
     
     public void moneyFormat(final JTextComponent JTextComponent){
+        
+        //Only decimals
+        onlyDecimals(JTextComponent);
+        
+        //Format money on focus lost
         JTextComponent.addFocusListener(new FocusListener(){
             @Override
             public void focusGained(FocusEvent e) {
