@@ -5,7 +5,6 @@
  */
 package com.era.views;
 
-import com.era.views.viewscontrollers.ErrorDialogViewController;
 import com.era.views.viewscontrollers.PremiumViewController;
 import com.era.views.viewscontrollers.LoadingWaitViewController;
 import com.era.views.viewscontrollers.PushNotificationViewController;

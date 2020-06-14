@@ -6,6 +6,7 @@
 package com.era.views.utils;
 
 import com.era.logger.LoggerUtility;
+import com.era.utilities.UtilitiesFactory;
 import com.era.views.BaseJFrame;
 import com.era.views.keysubscriptions.EnterKeyListener;
 import java.awt.Component;
@@ -18,12 +19,9 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
-import java.text.NumberFormat;
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -190,30 +188,15 @@ public class JComponentUtils {
             @Override
             public void focusLost(FocusEvent e) {
                 
-                //Get the text
-                String text = JTextComponent.getText().replace(",", "").replace("$", "");
-                
-                //If empty just return
-                if(text.isEmpty()){
-                    return;
-                }
-                
-                //Try to parse to double to check is a valid number
+                String text = "";
                 try{
-                    double d = Double.parseDouble(text);
-                }
-                catch(NumberFormatException expnNumForm)
-                {
-                    text = "";
+                    
+                    text = UtilitiesFactory.getSingleton().getNumbersUtility().toMoneyFormat(JTextComponent.getText());
+                    
+                }catch(Exception ex){
                     JTextComponent.setText(text);
-                    return;
                 }
                 
-                //Money format
-                double dCant = Double.parseDouble(text);
-                NumberFormat n = NumberFormat.getCurrencyInstance(new Locale("es","MX"));
-                text = n.format(dCant);
-
                 //Set the new formatted value
                 JTextComponent.setText(text);
             }

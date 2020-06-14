@@ -88,6 +88,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jComAna = new com.era.views.comboboxes.AnaqsCombobox();
         jLabel23 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
+        lprecsButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -1121,6 +1122,15 @@ public abstract class ProdsJFrame extends BaseJFrame
         jLabel37.setText("Lugar:");
         jP1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 60, -1));
 
+        lprecsButton.setBackground(new java.awt.Color(255, 255, 255));
+        lprecsButton.setText("Lista de precios");
+        lprecsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lprecsButtonActionPerformed(evt);
+            }
+        });
+        jP1.add(lprecsButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2082,6 +2092,10 @@ public abstract class ProdsJFrame extends BaseJFrame
     private void jCCompStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jCCompStateChanged
         
     }//GEN-LAST:event_jCCompStateChanged
+
+    private void lprecsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lprecsButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lprecsButtonActionPerformed
   
             
     
@@ -2152,6 +2166,7 @@ public abstract class ProdsJFrame extends BaseJFrame
     protected javax.swing.JTextField jTNom;
     protected javax.swing.JTextField jTProd;
     protected com.era.views.tables.ProductTable jTab;
+    protected javax.swing.JButton lprecsButton;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class NuevoCliente extends javax.swing.JFrame */
