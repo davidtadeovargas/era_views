@@ -45,6 +45,7 @@ public abstract class BaseJTable extends JTable {
     private boolean usePagination;
     protected JTableEnterKeyPressed JTableEnterKeyPressed;
     protected Repository Repository;
+    private OnScrollsChanges OnScrollsChanges;
     
     protected IDeleteObjectInTable IDeleteObjectInTable; 
     protected IDeleteAllItemsInTable IDeleteAllItemsInTable;
@@ -61,6 +62,10 @@ public abstract class BaseJTable extends JTable {
         super(AbstractTableModel);
         
         init();
+    }
+
+    public void setOnScrollsChanges(OnScrollsChanges OnScrollsChanges) {
+        this.OnScrollsChanges = OnScrollsChanges;
     }
     
     public void setColumnWidth(int indexColumn, int width){
@@ -95,17 +100,21 @@ public abstract class BaseJTable extends JTable {
         final List<?> list = Repository.getAllByPage(0);
         final long count_ = Repository.getCount();
         setCount(count_);
-        setPagination(list.size());
+        setPagination(Repository.getPaginationSize());
         
         this.initTable(list);
     }
     
     private void loadDataByPage(final int initialIndex) throws Exception{
         
-        setPrevRowIndex(initialIndex);
+        final int value = lastRowIndex + Repository.getPaginationSize();
+        
+        setPrevRowIndex(value);
                 
         final int previusIndex = getPrevRowIndex();
-                
+        
+        lastRowIndex = value;
+        
         final List<?> rows = Repository.getAllByPage(previusIndex);
         
         clearRows();
@@ -220,12 +229,18 @@ public abstract class BaseJTable extends JTable {
                             
                             //If use pagination
                             if(usePagination){
-                                loadDataByPage(getLastRowIndex());
+                                final int value = lastRowIndex;
+                                loadDataByPage(value);
                             }
                             
                             if(OnScrollMinimum!=null){
                                 LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: Callback OnScrollMinimum.onScrollMinimum()");
                                 OnScrollMinimum.onScrollMinimum();
+                            }
+                            
+                            //The scrollbar will afect visibility
+                            if(OnScrollsChanges!=null){
+                                OnScrollsChanges.onChange();
                             }
 
                             if(scrollAtStartWhenEnd){
@@ -237,12 +252,21 @@ public abstract class BaseJTable extends JTable {
 
                             //If pagination
                             if(usePagination){
-                                loadDataByPage(getPrevRowIndex() - getPagination());
+                                final int value = prevRowIndex - pagination;
+                                if(value<0){
+                                    return;
+                                }
+                                loadDataByPage(value);
                             }
                             
                             if(OnScrollBottom!=null){
                                 LoggerUtility.getSingleton().logInfo(BaseJTable.class, "Scroll: Callback OnScrollBottom.onScrollBottom();");
                                 OnScrollBottom.onScrollBottom();
+                            }
+                            
+                            //The scrollbar will afect visibility
+                            if(OnScrollsChanges!=null){
+                                OnScrollsChanges.onChange();
                             }
                         }                                         
                     }
@@ -261,6 +285,10 @@ public abstract class BaseJTable extends JTable {
     public JScrollPane getJScrollPane() {
         return JScrollPane;
     }        
+    
+    public interface OnScrollsChanges{
+        public void onChange();
+    }
     
     public final void init(){
     
