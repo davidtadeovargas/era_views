@@ -46,6 +46,6 @@ public class KitsTable extends BaseJTable {
        final Kits ObjectToCompare_ = (Kits)ObjectToCompare;
        
        //Validate if are equals
-       return ObjectIteration_.getId() == ObjectToCompare_.getId();
+       return ObjectIteration_.getProd().compareTo(ObjectToCompare_.getProd())==0;
     }
 }

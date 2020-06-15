@@ -31,10 +31,7 @@ public abstract class CompsJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
-        jBBusc = new javax.swing.JButton();
-        jTBusc = new javax.swing.JTextField();
-        jBMostT = new javax.swing.JButton();
+        jTab = new com.era.views.tables.KitsTable();
         jLabel4 = new javax.swing.JLabel();
         jTCant = new javax.swing.JTextField();
         jTKit = new javax.swing.JTextField();
@@ -43,6 +40,7 @@ public abstract class CompsJFrame extends BaseJFrame
         jTProd = new javax.swing.JTextField();
         jBBusc1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        buttonAcept = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -104,7 +102,7 @@ public abstract class CompsJFrame extends BaseJFrame
                 jBDelKeyPressed(evt);
             }
         });
-        jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, 110, 30));
+        jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 110, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Descripción del kit:");
@@ -136,7 +134,7 @@ public abstract class CompsJFrame extends BaseJFrame
                 jBSalKeyPressed(evt);
             }
         });
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 110, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 240, 110, 30));
 
         jBNew.setBackground(new java.awt.Color(255, 255, 255));
         jBNew.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -207,7 +205,6 @@ public abstract class CompsJFrame extends BaseJFrame
             }
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab.setNextFocusableComponent(jBBusc);
         jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
         jTab.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -217,76 +214,6 @@ public abstract class CompsJFrame extends BaseJFrame
         jScrollPane2.setViewportView(jTab);
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 640, 250));
-
-        jBBusc.setBackground(new java.awt.Color(255, 255, 255));
-        jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBBusc.setForeground(new java.awt.Color(0, 102, 0));
-        jBBusc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/busc5.png"))); // NOI18N
-        jBBusc.setText("Buscar F3");
-        jBBusc.setNextFocusableComponent(jTBusc);
-        jBBusc.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBBuscMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBBuscMouseExited(evt);
-            }
-        });
-        jBBusc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBBuscActionPerformed(evt);
-            }
-        });
-        jBBusc.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBBuscKeyPressed(evt);
-            }
-        });
-        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 140, 20));
-
-        jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTBusc.setNextFocusableComponent(jBMostT);
-        jTBusc.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTBuscFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTBuscFocusLost(evt);
-            }
-        });
-        jTBusc.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTBuscKeyPressed(evt);
-            }
-        });
-        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, 360, 20));
-
-        jBMostT.setBackground(new java.awt.Color(255, 255, 255));
-        jBMostT.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBMostT.setForeground(new java.awt.Color(0, 102, 0));
-        jBMostT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
-        jBMostT.setText("Mostrar F4");
-        jBMostT.setToolTipText("Mostrar Nuevamente todos los Registros");
-        jBMostT.setNextFocusableComponent(jBDel);
-        jBMostT.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBMostTMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBMostTMouseExited(evt);
-            }
-        });
-        jBMostT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBMostTActionPerformed(evt);
-            }
-        });
-        jBMostT.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBMostTKeyPressed(evt);
-            }
-        });
-        jP1.add(jBMostT, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, 140, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("*Producto:");
@@ -401,6 +328,13 @@ public abstract class CompsJFrame extends BaseJFrame
         jLabel7.setText("Descripción del producto:");
         jP1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 270, -1));
 
+        buttonAcept.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        buttonAcept.setForeground(new java.awt.Color(0, 102, 0));
+        buttonAcept.setText("Aceptar");
+        buttonAcept.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        buttonAcept.setNextFocusableComponent(jBDel);
+        jP1.add(buttonAcept, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 180, 110, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -488,43 +422,11 @@ public abstract class CompsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBNewActionPerformed
         
         
-    private void jBBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBBuscKeyPressed
-
         
-    }//GEN-LAST:event_jBBuscKeyPressed
-
-        
-    private void jTBuscFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBuscFocusGained
-
+    
     
         
-    }//GEN-LAST:event_jTBuscFocusGained
-
-    
-    private void jTBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBuscKeyPressed
-
-    
         
-    }//GEN-LAST:event_jTBuscKeyPressed
-
-    
-    private void jBMostTKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBMostTKeyPressed
-
-        
-    }//GEN-LAST:event_jBMostTKeyPressed
-
-        
-    private void jBBuscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscActionPerformed
-            
-        
-    }//GEN-LAST:event_jBBuscActionPerformed
-
-        
-    private void jBMostTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMostTActionPerformed
-            
-        
-    }//GEN-LAST:event_jBMostTActionPerformed
-
             
     private void jTCantFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTCantFocusGained
         
@@ -632,18 +534,7 @@ public abstract class CompsJFrame extends BaseJFrame
         
         
         
-    private void jBBuscMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseExited
-        
     
-        
-    }//GEN-LAST:event_jBBuscMouseExited
-
-    
-    private void jBBuscMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseEntered
-            
-        
-    }//GEN-LAST:event_jBBuscMouseEntered
-
                 
     
     
@@ -679,11 +570,6 @@ public abstract class CompsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBSalMouseEntered
 
         
-    private void jBMostTMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseEntered
-        
-        
-    }//GEN-LAST:event_jBMostTMouseEntered
-
         
     private void jBBusc1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBusc1MouseExited
         
@@ -710,17 +596,7 @@ public abstract class CompsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBSalMouseExited
 
         
-    private void jBMostTMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseExited
         
-        
-    }//GEN-LAST:event_jBMostTMouseExited
-
-        
-    private void jTBuscFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBuscFocusLost
-        
-        
-    }//GEN-LAST:event_jTBuscFocusLost
-
         
     private void jTDescripFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescripFocusLost
         
@@ -744,10 +620,9 @@ public abstract class CompsJFrame extends BaseJFrame
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JButton jBBusc;
+    protected javax.swing.JButton buttonAcept;
     protected javax.swing.JButton jBBusc1;
     protected javax.swing.JButton jBDel;
-    protected javax.swing.JButton jBMostT;
     protected javax.swing.JButton jBNew;
     protected javax.swing.JButton jBSal;
     protected javax.swing.JLabel jLabel1;
@@ -758,13 +633,12 @@ public abstract class CompsJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jP1;
     protected javax.swing.JScrollPane jScrollPane2;
-    protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTCant;
     protected javax.swing.JTextField jTDescrip;
     protected javax.swing.JTextField jTDescripKit;
     protected javax.swing.JTextField jTKit;
     protected javax.swing.JTextField jTProd;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.KitsTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

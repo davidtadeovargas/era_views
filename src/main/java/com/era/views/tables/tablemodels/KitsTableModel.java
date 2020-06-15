@@ -3,6 +3,8 @@ package com.era.views.tables.tablemodels;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 import com.era.models.Kits;
+import com.era.models.Product;
+import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 
@@ -19,8 +21,17 @@ public class KitsTableModel  extends BaseAbstractTableModel {
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getKitssTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getKitssTableHeader().getALMA().getValue())==0){
-               returnValue = Kits.getAlma();
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getKitssTableHeader().getPRODUCT_DESCRIPT().getValue())==0){
+               
+               //Get the product
+               final Product Product = (Product)RepositoryFactory.getInstance().getProductsRepository().getByCode(Kits.getProd());
+               
+               if(Product != null){
+                   returnValue = Product.getDescription();
+               }
+               else{
+                   returnValue = "";
+               }                              
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getKitssTableHeader().getCANT().getValue())==0){
                returnValue = String.valueOf(Kits.getCant());
