@@ -5,8 +5,7 @@
  */
 package com.era.views.abstracttablesmodel.getvaluesat;
 
-import com.era.models.Supplier;
-import com.era.views.tables.headers.TableHeaderFactory;
+import com.era.views.tables.tablemodels.GetValueAts.SupplierTableModelGetValueAt;
 
 /**
  *
@@ -16,20 +15,6 @@ public class SuppliersIGetValueAt implements IGetValueAt {
 
     @Override
     public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
-        
-        final Supplier Supplier = (Supplier) Object;
-        
-        String returnValue = "undefined";
-        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSuppliersTableHeader().getCODE().getValue())==0){
-            returnValue = Supplier.getCode();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSuppliersTableHeader().getNAME().getValue())==0){
-            returnValue = Supplier.getName();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSuppliersTableHeader().getRFC().getValue())==0){
-            returnValue = Supplier.getRfc();
-        }
-        
-        return returnValue;
+        return (String) new SupplierTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);
     }    
 }

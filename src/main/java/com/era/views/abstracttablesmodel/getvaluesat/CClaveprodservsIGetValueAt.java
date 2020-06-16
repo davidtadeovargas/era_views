@@ -5,8 +5,7 @@
  */
 package com.era.views.abstracttablesmodel.getvaluesat;
 
-import com.era.models.CClaveprodserv;
-import com.era.views.tables.headers.TableHeaderFactory;
+import com.era.views.tables.tablemodels.GetValueAts.CClaveprodservTableModelIGetValueAt;
 
 /**
  *
@@ -16,20 +15,6 @@ public class CClaveprodservsIGetValueAt implements IGetValueAt {
 
     @Override
     public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
-        
-        final CClaveprodserv CClaveprodserv = (CClaveprodserv) Object;
-        
-        String returnValue = "undefined";
-        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCClaveprodservsTableHeader().getC_CLAVEPRODSERV().getValue())==0){
-            returnValue = CClaveprodserv.getC_ClaveProdServ();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCClaveprodservsTableHeader().getDESCRIPTION().getValue())==0){
-            returnValue = CClaveprodserv.getDescription();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCClaveprodservsTableHeader().getENDVIGENCYDATE().getValue())==0){
-            returnValue = CClaveprodserv.getEndVigencyDate()==null?"":CClaveprodserv.getEndVigencyDate().toString();
-        }
-        
-        return returnValue;
+        return (String) new CClaveprodservTableModelIGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);
     }    
 }

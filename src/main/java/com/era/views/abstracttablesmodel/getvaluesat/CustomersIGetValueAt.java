@@ -5,8 +5,8 @@
  */
 package com.era.views.abstracttablesmodel.getvaluesat;
 
-import com.era.models.Company;
-import com.era.views.tables.headers.TableHeaderFactory;
+import com.era.views.tables.tablemodels.GetValueAts.CompanyTableModelGetValueAt;
+
 
 /**
  *
@@ -16,20 +16,6 @@ public class CustomersIGetValueAt implements IGetValueAt {
 
     @Override
     public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
-        
-        final Company Company = (Company) Object;
-        
-        String returnValue = "undefined";
-        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getNO().getValue())==0){
-            returnValue = Company.getCompanyCode();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getCODE().getValue())==0){
-            returnValue = Company.getNom();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
-            returnValue = Company.getRFC();
-        }
-        
-        return returnValue;
+        return (String) new CompanyTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);        
     }    
 }

@@ -5,8 +5,7 @@
  */
 package com.era.views.abstracttablesmodel.getvaluesat;
 
-import com.era.models.BasDats;
-import com.era.views.tables.headers.TableHeaderFactory;
+import com.era.views.tables.tablemodels.GetValueAts.BasDatsTableModelIGetValueAt;
 
 /**
  *
@@ -15,21 +14,7 @@ import com.era.views.tables.headers.TableHeaderFactory;
 public class BasdatsIGetValueAt1 implements IGetValueAt {
 
     @Override
-    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
-        
-        final BasDats BasDats = (BasDats) Object;
-        
-        String returnValue = "undefined";
-        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getCODEMP().getValue())==0){
-            returnValue = BasDats.getBd();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getBD().getValue())==0){
-            returnValue = BasDats.getCodemp();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getNOM().getValue())==0){
-            returnValue = BasDats.getNom();
-        }
-        
-        return returnValue;
+    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {        
+        return (String) new BasDatsTableModelIGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);
     }    
 }

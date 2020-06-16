@@ -5,8 +5,7 @@
  */
 package com.era.views.abstracttablesmodel.getvaluesat;
 
-import com.era.models.BasDats;
-import com.era.views.tables.headers.TableHeaderFactory;
+import com.era.views.tables.tablemodels.GetValueAts.SerieTableModelGetValueAt;
 
 /**
  *
@@ -16,20 +15,6 @@ public class SeriesCustomersIGetValueAt implements IGetValueAt {
 
     @Override
     public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
-        
-        final BasDats BasDats = (BasDats) Object;
-        
-        String returnValue = "undefined";
-        if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getNO().getValue())==0){
-            returnValue = BasDats.getBd();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getCODE().getValue())==0){
-            returnValue = BasDats.getNom();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
-            returnValue = BasDats.getCodemp();
-        }
-        
-        return returnValue;
+        return (String) new SerieTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);
     }    
 }

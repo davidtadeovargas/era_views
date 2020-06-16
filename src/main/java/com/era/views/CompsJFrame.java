@@ -205,7 +205,7 @@ public abstract class CompsJFrame extends BaseJFrame
             }
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTab.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTabKeyPressed(evt);
@@ -328,6 +328,7 @@ public abstract class CompsJFrame extends BaseJFrame
         jLabel7.setText("Descripción del producto:");
         jP1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 270, -1));
 
+        buttonAcept.setBackground(new java.awt.Color(255, 255, 255));
         buttonAcept.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         buttonAcept.setForeground(new java.awt.Color(0, 102, 0));
         buttonAcept.setText("Aceptar");
