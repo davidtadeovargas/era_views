@@ -25,7 +25,6 @@ public abstract class BajsMinJFrame extends BaseJFrame
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
-        jBVis = new javax.swing.JButton();
         jBActua = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -92,7 +91,7 @@ public abstract class BajsMinJFrame extends BaseJFrame
                 jBSalKeyPressed(evt);
             }
         });
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 90, 120, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 60, 120, 30));
 
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -171,7 +170,6 @@ public abstract class BajsMinJFrame extends BaseJFrame
         jBMosT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
         jBMosT.setText("Mostrar F4");
         jBMosT.setToolTipText("Mostrar Nuevamente todos los Registros");
-        jBMosT.setNextFocusableComponent(jBVis);
         jBMosT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBMosTMouseEntered(evt);
@@ -191,34 +189,6 @@ public abstract class BajsMinJFrame extends BaseJFrame
             }
         });
         jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 530, 140, 20));
-
-        jBVis.setBackground(new java.awt.Color(255, 255, 255));
-        jBVis.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBVis.setForeground(new java.awt.Color(0, 102, 0));
-        jBVis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/visor.png"))); // NOI18N
-        jBVis.setText("Reporte");
-        jBVis.setToolTipText("Reporte (Ctrl+R)");
-        jBVis.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBVis.setNextFocusableComponent(jBActua);
-        jBVis.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBVisMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBVisMouseExited(evt);
-            }
-        });
-        jBVis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBVisActionPerformed(evt);
-            }
-        });
-        jBVis.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBVisKeyPressed(evt);
-            }
-        });
-        jP1.add(jBVis, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 120, 30));
 
         jBActua.setBackground(new java.awt.Color(255, 255, 255));
         jBActua.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -246,7 +216,7 @@ public abstract class BajsMinJFrame extends BaseJFrame
                 jBActuaKeyPressed(evt);
             }
         });
-        jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 60, 120, 30));
+        jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 120, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -350,19 +320,7 @@ public abstract class BajsMinJFrame extends BaseJFrame
 
     
     
-    private void jBVisKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBVisKeyPressed
-        
-
-        
-    }//GEN-LAST:event_jBVisKeyPressed
-
     
-    private void jBVisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVisActionPerformed
-
-    
-        
-    }//GEN-LAST:event_jBVisActionPerformed
-
         
     private void jBActuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBActuaActionPerformed
 
@@ -424,12 +382,6 @@ public abstract class BajsMinJFrame extends BaseJFrame
     }//GEN-LAST:event_formWindowClosing
 
         
-    private void jBVisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVisMouseEntered
-        
-    
-        
-    }//GEN-LAST:event_jBVisMouseEntered
-
         
     private void jBActuaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseEntered
         
@@ -446,12 +398,6 @@ public abstract class BajsMinJFrame extends BaseJFrame
 
     
     
-    private void jBVisMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVisMouseExited
-        
-
-        
-    }//GEN-LAST:event_jBVisMouseExited
-
     
     private void jBActuaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseExited
         
@@ -495,7 +441,6 @@ public abstract class BajsMinJFrame extends BaseJFrame
     protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBMosT;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JButton jBVis;
     protected javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
     protected javax.swing.JScrollPane jScrollPane2;

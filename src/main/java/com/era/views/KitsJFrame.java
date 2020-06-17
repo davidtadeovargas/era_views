@@ -6,7 +6,7 @@ public abstract class KitsJFrame extends BaseJFrame
     
     public KitsJFrame(final String idTextTitleWindow) 
     {                                
-        super(idTextTitleWindow);
+        super(idTextTitleWindow);	
         
         initComponents();
                
@@ -21,14 +21,11 @@ public abstract class KitsJFrame extends BaseJFrame
         jLabel1 = new javax.swing.JLabel();
         jBSal = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.ProductTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
         jBAbr = new javax.swing.JButton();
-        jBDel = new javax.swing.JButton();
-        jBImp = new javax.swing.JButton();
-        jBExpor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -48,24 +45,16 @@ public abstract class KitsJFrame extends BaseJFrame
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBSal.setNextFocusableComponent(jTab);
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 150, 120, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, 120, 30));
 
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "No.", "Cod. Kit", "Descripción", "Producto", "Qty.", "Almacén", "última Modificación", "Precio1", "Precio2", "Precio3", "Precio4", "Precio5", "Precio6", "Precio7", "Precio8", "Precio9", "Precio10", "Sucursal", "Caja", "Usuario", "Nombre Usuario"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
-            };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
-        });
+        ));
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
         jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
@@ -91,47 +80,16 @@ public abstract class KitsJFrame extends BaseJFrame
         jBMostT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
         jBMostT.setText("Mostrar F4");
         jBMostT.setToolTipText("Mostrar Nuevamente todos los Registros");
-        jBMostT.setNextFocusableComponent(jBDel);
         jP1.add(jBMostT, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 320, 140, 20));
 
         jBAbr.setBackground(new java.awt.Color(255, 255, 255));
         jBAbr.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBAbr.setForeground(new java.awt.Color(0, 102, 0));
         jBAbr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/abr.png"))); // NOI18N
-        jBAbr.setText("Abrir");
+        jBAbr.setText("Ver");
         jBAbr.setToolTipText("Abrir Kit(s) (Ctrl+A)");
         jBAbr.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBAbr.setNextFocusableComponent(jBImp);
-        jP1.add(jBAbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, 120, 30));
-
-        jBDel.setBackground(new java.awt.Color(255, 255, 255));
-        jBDel.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDel.setForeground(new java.awt.Color(0, 102, 0));
-        jBDel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/del.png"))); // NOI18N
-        jBDel.setText("Borrar");
-        jBDel.setToolTipText("Borrar Kit(s) (Ctrl+SUPR)");
-        jBDel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDel.setNextFocusableComponent(jBAbr);
-        jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 30, 120, 30));
-
-        jBImp.setBackground(new java.awt.Color(255, 255, 255));
-        jBImp.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBImp.setForeground(new java.awt.Color(0, 102, 0));
-        jBImp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impexe.png"))); // NOI18N
-        jBImp.setText("Importar ");
-        jBImp.setToolTipText("Importar desde Excel el Catálogo de Kits (F7)");
-        jBImp.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBImp.setNextFocusableComponent(jBExpor);
-        jP1.add(jBImp, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 90, 120, 30));
-
-        jBExpor.setBackground(new java.awt.Color(255, 255, 255));
-        jBExpor.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBExpor.setForeground(new java.awt.Color(0, 102, 0));
-        jBExpor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/expexe.png"))); // NOI18N
-        jBExpor.setText("Exportar");
-        jBExpor.setToolTipText("Exportar a Excel (F8)");
-        jBExpor.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jP1.add(jBExpor, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 120, 120, 30));
+        jP1.add(jBAbr, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 30, 120, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,16 +118,13 @@ public abstract class KitsJFrame extends BaseJFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBAbr;
     protected javax.swing.JButton jBBusc;
-    protected javax.swing.JButton jBDel;
-    protected javax.swing.JButton jBExpor;
-    protected javax.swing.JButton jBImp;
     protected javax.swing.JButton jBMostT;
     protected javax.swing.JButton jBSal;
     protected javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.ProductTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

@@ -75,6 +75,7 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMMInvenImpor = new javax.swing.JMenu();
         jMInvenImpo = new javax.swing.JMenuItem();
         jMImpExistAlm = new javax.swing.JMenuItem();
+        importKitsMenItem = new javax.swing.JMenuItem();
         jMenMaxsMins = new javax.swing.JMenu();
         jMenItProdsBajMin = new javax.swing.JMenuItem();
         jMenItProdsArrMax = new javax.swing.JMenuItem();
@@ -479,6 +480,16 @@ public abstract class PrincipJFrame extends BaseJFrame {
         });
         jMMInvenImpor.add(jMImpExistAlm);
 
+        importKitsMenItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impexe.png"))); // NOI18N
+        importKitsMenItem.setMnemonic('p');
+        importKitsMenItem.setText("Importar kits desde excel");
+        importKitsMenItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                importKitsMenItemActionPerformed(evt);
+            }
+        });
+        jMMInvenImpor.add(importKitsMenItem);
+
         jMInven.add(jMMInvenImpor);
 
         jMenMaxsMins.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/maxmin.png"))); // NOI18N
@@ -667,11 +678,16 @@ public abstract class PrincipJFrame extends BaseJFrame {
     private void jMImpExistAlmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMImpExistAlmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMImpExistAlmActionPerformed
+
+    private void importKitsMenItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importKitsMenItemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_importKitsMenItemActionPerformed
                    
             
         
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JMenuItem clasificationsMenu;
+    protected javax.swing.JMenuItem importKitsMenItem;
     protected javax.swing.JButton jBComps;
     protected javax.swing.JButton jBCots;
     protected javax.swing.JButton jBEmps;
