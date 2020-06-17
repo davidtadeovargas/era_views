@@ -21,7 +21,7 @@ public abstract class BajsMinJFrame extends BaseJFrame
         jLabel1 = new javax.swing.JLabel();
         jBSal = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.ProductTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
@@ -93,30 +93,7 @@ public abstract class BajsMinJFrame extends BaseJFrame
         });
         jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 60, 120, 30));
 
-        jTab.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "No.", "Cod. Producto", "Cod. Op. 1", "Cod. Op. 2", "Descripción", "Información", "Cod. Almacén", "Cod. Anaquel", "Cod. Lugar", "Existencia", "Mínimo", "Máximo"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTab.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab.setNextFocusableComponent(jBBusc);
         jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jTab.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTabKeyPressed(evt);
-            }
-        });
         jScrollPane2.setViewportView(jTab);
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 1000, 500));
@@ -443,9 +420,9 @@ public abstract class BajsMinJFrame extends BaseJFrame
     protected javax.swing.JButton jBSal;
     protected javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
-    protected javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.ProductTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class BajsMin extends javax.swing.JFrame */

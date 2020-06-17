@@ -6,6 +6,7 @@
 package com.era.views.tables.tablemodels.GetValueAts;
 
 import com.era.models.Product;
+import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.headers.TableHeaderFactory;
 
 /**
@@ -15,7 +16,7 @@ import com.era.views.tables.headers.TableHeaderFactory;
 public class ProductTableModelGetValueAt implements IGetValueAt {
 
     @Override
-    public Object GetValueAt(int rowIndex, int columnIndex, String valueColumn, Object model) {
+    public Object GetValueAt(int rowIndex, int columnIndex, String valueColumn, Object model) throws Exception {
         
         final Product Product = (Product) model;
 
@@ -25,6 +26,13 @@ public class ProductTableModelGetValueAt implements IGetValueAt {
          }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getASKMAXMIN().getValue())==0){
             returnValue = String.valueOf(Product.getAskMaxMin());
+        }
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getGENERAL_EXISTENCE().getValue())==0){
+            
+            //Get the general existence
+            final float generalExistence = RepositoryFactory.getInstance().getExistalmasRepository().getGeneralExistenceFromProduct(Product.getCode());
+            
+            returnValue = String.valueOf(generalExistence);
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getASKSERIE().getValue())==0){
             returnValue = Product.isAskSerie()? "Si":"No";

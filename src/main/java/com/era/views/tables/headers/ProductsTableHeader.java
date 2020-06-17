@@ -17,6 +17,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ASKSERIE;
    }
 
+   private final ColumnTable GENERAL_EXISTENCE = new ColumnTable("Existencia general");
+   public ColumnTable getGENERAL_EXISTENCE() {
+       return this.GENERAL_EXISTENCE;
+   }
+   
    private final ColumnTable BRAND = new ColumnTable("BRAND");
    public ColumnTable getBRAND() {
        return this.BRAND;

@@ -22,11 +22,10 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
         jLabel1 = new javax.swing.JLabel();
         jBSal = new javax.swing.JButton();
         jSP1 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.ProductTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
-        jBMostT = new javax.swing.JButton();
-        jBVis = new javax.swing.JButton();
+        jBMostT = new javax.swing.JButton();        
         jBActua = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -177,8 +176,7 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
         jBMostT.setForeground(new java.awt.Color(0, 102, 0));
         jBMostT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
         jBMostT.setText("Mostrar F4");
-        jBMostT.setToolTipText("Mostrar Nuevamente todos los Registros");
-        jBMostT.setNextFocusableComponent(jBVis);
+        jBMostT.setToolTipText("Mostrar Nuevamente todos los Registros");        
         jBMostT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBMostTMouseEntered(evt);
@@ -198,34 +196,7 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
             }
         });
         jP1.add(jBMostT, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 530, 140, 20));
-
-        jBVis.setBackground(new java.awt.Color(255, 255, 255));
-        jBVis.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBVis.setForeground(new java.awt.Color(0, 102, 0));
-        jBVis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/visor.png"))); // NOI18N
-        jBVis.setText("Reporte");
-        jBVis.setToolTipText("Generar Reporte (Ctrl+R)");
-        jBVis.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBVis.setNextFocusableComponent(jBActua);
-        jBVis.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBVisMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBVisMouseExited(evt);
-            }
-        });
-        jBVis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBVisActionPerformed(evt);
-            }
-        });
-        jBVis.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBVisKeyPressed(evt);
-            }
-        });
-        jP1.add(jBVis, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 30, 120, 30));
+        
 
         jBActua.setBackground(new java.awt.Color(255, 255, 255));
         jBActua.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -349,17 +320,7 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
 
     
     
-    private void jBVisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVisActionPerformed
-        
-                
-    }//GEN-LAST:event_jBVisActionPerformed
-
     
-    private void jBVisKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBVisKeyPressed
-
-    
-    }//GEN-LAST:event_jBVisKeyPressed
-
         
     private void jBActuaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBActuaKeyPressed
 
@@ -398,12 +359,6 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
 
         
     
-    private void jSP1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jSP1KeyPressed
-        
-    
-        
-    }//GEN-LAST:event_jSP1KeyPressed
-
         
     private void jBBuscMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseEntered
         
@@ -429,12 +384,6 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
 
     
 
-    private void jBVisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVisMouseEntered
-        
-
-        
-    }//GEN-LAST:event_jBVisMouseEntered
-
         
     private void jBActuaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseEntered
         
@@ -457,12 +406,6 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBMostTMouseEntered
 
         
-    private void jBVisMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVisMouseExited
-        
-    
-        
-    }//GEN-LAST:event_jBVisMouseExited
-
         
     private void jBActuaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseExited
         
@@ -490,6 +433,10 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
     
 
     }//GEN-LAST:event_jTBuscFocusLost
+
+    private void jSP1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jSP1KeyPressed
+
+    }//GEN-LAST:event_jSP1KeyPressed
       
     
     
@@ -500,12 +447,11 @@ public abstract class AltsMaxsJFrame extends BaseJFrame
     protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBMostT;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JButton jBVis;
     protected javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jP1;
     protected javax.swing.JScrollPane jSP1;
     protected javax.swing.JTextField jTBusc;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.ProductTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

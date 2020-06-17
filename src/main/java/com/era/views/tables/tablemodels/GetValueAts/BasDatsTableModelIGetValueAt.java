@@ -15,7 +15,7 @@ import com.era.views.tables.headers.TableHeaderFactory;
 public class BasDatsTableModelIGetValueAt implements IGetValueAt {
 
     @Override
-    public Object GetValueAt(int rowIndex, int columnIndex, String valueColumn, Object model) {
+    public Object GetValueAt(int rowIndex, int columnIndex, String valueColumn, Object model) throws Exception {
         
         final BasDats BasDats = (BasDats) model;
 

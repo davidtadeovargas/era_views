@@ -10,5 +10,5 @@ package com.era.views.tables.tablemodels.GetValueAts;
  * @author PC
  */
 public interface IGetValueAt {
-    public Object GetValueAt(int rowIndex, int columnIndex, String valueColumn, final Object model);
+    public Object GetValueAt(int rowIndex, int columnIndex, String valueColumn, final Object model) throws Exception;
 }

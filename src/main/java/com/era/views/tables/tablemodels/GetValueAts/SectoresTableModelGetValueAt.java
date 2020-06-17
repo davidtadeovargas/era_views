@@ -15,7 +15,7 @@ import com.era.views.tables.headers.TableHeaderFactory;
 public class SectoresTableModelGetValueAt implements IGetValueAt {
 
     @Override
-    public Object GetValueAt(int rowIndex, int columnIndex, String valueColumn, Object model) {
+    public Object GetValueAt(int rowIndex, int columnIndex, String valueColumn, Object model) throws Exception {
      
         final Sectores Sectores = (Sectores) model;
 

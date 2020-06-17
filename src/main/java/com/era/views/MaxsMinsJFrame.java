@@ -20,16 +20,11 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
 
         jP1 = new javax.swing.JPanel();
         jBDel = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jBSal = new javax.swing.JButton();
         jBNew = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
-        jBBusc = new javax.swing.JButton();
-        jTBusc = new javax.swing.JTextField();
-        jBMostT = new javax.swing.JButton();
-        jTMin = new javax.swing.JTextField();
+        jTab = new com.era.views.tables.MaxminconfTable();
         jLabel4 = new javax.swing.JLabel();
         jTEsta = new javax.swing.JTextField();
         jBBus3 = new javax.swing.JButton();
@@ -96,10 +91,6 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
         });
         jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 110, 30));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("*Minútos:");
-        jP1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 90, -1));
-
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBSal.setForeground(new java.awt.Color(0, 102, 0));
@@ -165,11 +156,11 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
 
             },
             new String [] {
-                "No.", "Código", "Minútos"
+                "No.", "Código"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, true, true
+                false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -177,8 +168,7 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
             }
         });
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab.setNextFocusableComponent(jBBusc);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jTab.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTabKeyPressed(evt);
@@ -187,97 +177,6 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
         jScrollPane2.setViewportView(jTab);
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 470, 250));
-
-        jBBusc.setBackground(new java.awt.Color(255, 255, 255));
-        jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBBusc.setForeground(new java.awt.Color(0, 102, 0));
-        jBBusc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/busc5.png"))); // NOI18N
-        jBBusc.setText("Buscar F3");
-        jBBusc.setNextFocusableComponent(jTBusc);
-        jBBusc.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBBuscMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBBuscMouseExited(evt);
-            }
-        });
-        jBBusc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBBuscActionPerformed(evt);
-            }
-        });
-        jBBusc.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBBuscKeyPressed(evt);
-            }
-        });
-        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 140, 20));
-
-        jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTBusc.setNextFocusableComponent(jBMostT);
-        jTBusc.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTBuscFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTBuscFocusLost(evt);
-            }
-        });
-        jTBusc.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTBuscKeyPressed(evt);
-            }
-        });
-        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 190, 20));
-
-        jBMostT.setBackground(new java.awt.Color(255, 255, 255));
-        jBMostT.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBMostT.setForeground(new java.awt.Color(0, 102, 0));
-        jBMostT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
-        jBMostT.setText("Mostrar F4");
-        jBMostT.setToolTipText("Mostrar Nuevamente todos los Registros");
-        jBMostT.setNextFocusableComponent(jBDel);
-        jBMostT.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBMostTMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBMostTMouseExited(evt);
-            }
-        });
-        jBMostT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBMostTActionPerformed(evt);
-            }
-        });
-        jBMostT.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBMostTKeyPressed(evt);
-            }
-        });
-        jP1.add(jBMostT, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 140, 20));
-
-        jTMin.setText("1");
-        jTMin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTMin.setNextFocusableComponent(jBNew);
-        jTMin.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTMinFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTMinFocusLost(evt);
-            }
-        });
-        jTMin.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTMinKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTMinKeyTyped(evt);
-            }
-        });
-        jP1.add(jTMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 50, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("*Usuario:");
@@ -306,7 +205,6 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
         jBBus3.setBackground(new java.awt.Color(255, 255, 255));
         jBBus3.setText("...");
         jBBus3.setToolTipText("Buscar Usuario(s)");
-        jBBus3.setNextFocusableComponent(jTMin);
         jBBus3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBBus3MouseEntered(evt);
@@ -402,65 +300,15 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBNewActionPerformed
         
         
-    private void jBBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBBuscKeyPressed
-
         
-    }//GEN-LAST:event_jBBuscKeyPressed
-
-        
-    private void jTBuscFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBuscFocusGained
+    
     
         
-    }//GEN-LAST:event_jTBuscFocusGained
-
-    
-    private void jTBuscKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTBuscKeyPressed
-    
         
-    }//GEN-LAST:event_jTBuscKeyPressed
-
-    
-    private void jBMostTKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBMostTKeyPressed
-
-        
-    }//GEN-LAST:event_jBMostTKeyPressed
-
-        
-    private void jBMostTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMostTActionPerformed
             
-    }//GEN-LAST:event_jBMostTActionPerformed
-
-        
-    private void jBBuscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscActionPerformed
-                            
-        
-    }//GEN-LAST:event_jBBuscActionPerformed
-
-            
-    private void jTMinKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTMinKeyPressed
         
         
-    }//GEN-LAST:event_jTMinKeyPressed
-
-        
-    private void jTMinFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTMinFocusGained
-        
-        
-    }//GEN-LAST:event_jTMinFocusGained
-
-        
-    private void jTMinFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTMinFocusLost
     
-        
-    }//GEN-LAST:event_jTMinFocusLost
-
-    
-    private void jTMinKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTMinKeyTyped
-        
-   
-        
-    }//GEN-LAST:event_jTMinKeyTyped
-
        
     private void jTEstaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTEstaFocusGained
 
@@ -512,17 +360,7 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
        
     
         
-    private void jBBuscMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseEntered
-            
         
-    }//GEN-LAST:event_jBBuscMouseEntered
-
-        
-    private void jBBuscMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBuscMouseExited
-            
-        
-    }//GEN-LAST:event_jBBuscMouseExited
-
     
             
     
@@ -558,11 +396,6 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBSalMouseEntered
 
         
-    private void jBMostTMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseEntered
-        
-        
-    }//GEN-LAST:event_jBMostTMouseEntered
-
     
     private void jBBus3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBBus3MouseEntered
         
@@ -589,41 +422,26 @@ public abstract class MaxsMinsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBSalMouseExited
 
        
-    private void jBMostTMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBMostTMouseExited
-        
-        
-    }//GEN-LAST:event_jBMostTMouseExited
-
        
     private void jBNewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseExited
         
         
     }//GEN-LAST:event_jBNewMouseExited
 
-       
-    private void jTBuscFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTBuscFocusLost
-    
-        
-    }//GEN-LAST:event_jTBuscFocusLost
-              
+                     
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBBus3;
-    protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBDel;
-    protected javax.swing.JButton jBMostT;
     protected javax.swing.JButton jBNew;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JLabel jLabel1;
     protected javax.swing.JLabel jLabel2;
     protected javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jP1;
-    protected javax.swing.JScrollPane jScrollPane2;
-    protected javax.swing.JTextField jTBusc;
+    protected javax.swing.JPanel jP1;
+    private javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTEsta;
-    protected javax.swing.JTextField jTMin;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.MaxminconfTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */
