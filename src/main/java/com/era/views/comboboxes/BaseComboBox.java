@@ -24,6 +24,10 @@ public abstract class BaseComboBox<T> extends JComboBox {
     
     
     public void BaseComboBox(){
+    }
+
+    public void setChangeSelectionListener(ChangeSelectionListener ChangeSelectionListener) {
+        this.ChangeSelectionListener = ChangeSelectionListener;
         
         //Change selection listener
         this.addActionListener ((ActionEvent e) -> {
@@ -38,10 +42,6 @@ public abstract class BaseComboBox<T> extends JComboBox {
                 ChangeSelectionListener.onChangeSelection(Object);
             }
         });
-    }
-
-    public void setChangeSelectionListener(ChangeSelectionListener ChangeSelectionListener) {
-        this.ChangeSelectionListener = ChangeSelectionListener;
     }
         
     public void selectByObject(Object Object) throws Exception{

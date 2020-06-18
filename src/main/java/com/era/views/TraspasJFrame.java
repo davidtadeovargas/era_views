@@ -19,9 +19,8 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jLabel1 = new javax.swing.JLabel();
         jBSal = new javax.swing.JButton();
         jBTransfe = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.TraspasTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosTod = new javax.swing.JButton();
@@ -34,39 +33,20 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jLabel7 = new javax.swing.JLabel();
         jTConcep = new javax.swing.JTextField();
         jBConcep = new javax.swing.JButton();
-        jTDescripConcep = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         jTExist = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jComUnid = new javax.swing.JComboBox();
+        jComUnid = new com.era.views.comboboxes.UnidsCombobox();
         jLabel13 = new javax.swing.JLabel();
-        jTUnid = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jBPrec1 = new javax.swing.JButton();
         jLImg = new javax.swing.JLabel();
-        jComTall = new javax.swing.JComboBox();
-        jComColo = new javax.swing.JComboBox();
-        jTTall = new javax.swing.JTextField();
-        jTColo = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jComAlma = new javax.swing.JComboBox();
-        jTDescripAlma = new javax.swing.JTextField();
+        jComAlma = new com.era.views.comboboxes.WarehousesCombobox();
         jBExisAlma = new javax.swing.JButton();
-        jComAlma2 = new javax.swing.JComboBox();
-        jTDescripAlma2 = new javax.swing.JTextField();
-        jBExisAlma1 = new javax.swing.JButton();
-        jTComenSer = new javax.swing.JTextField();
+        jComAlma2 = new com.era.views.comboboxes.WarehousesCombobox();
         jPanel1 = new javax.swing.JPanel();
         jBconfirmar = new javax.swing.JButton();
         jSpinner1 = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jTUsr = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        btnUsuario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -75,7 +55,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Almacén A:");
-        jP1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 80, -1));
+        jP1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 80, -1));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -84,7 +64,7 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBSal.setNextFocusableComponent(jTProd);
+        jBSal.setNextFocusableComponent(jBBusc);
         jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 240, 120, 30));
 
         jBTransfe.setBackground(new java.awt.Color(255, 255, 255));
@@ -97,28 +77,16 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jBTransfe.setNextFocusableComponent(jBSal);
         jP1.add(jBTransfe, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 210, 120, 30));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Traspasos:");
-        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 160, -1));
-
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "No.", "Cod. Producto", "Cod. Almacén", "Unidad", "Cod. Concepto", "Cant. Saliente", "Cod. Almacén", "Cant. Entrante", "Fecha Traspaso", "Sucursal", "Caja", "Usuario", "Nombre Usuario"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true, true
-            };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
-        });
+        ));
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab.setNextFocusableComponent(jBBusc);
+        jTab.setNextFocusableComponent(jTProd);
         jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(jTab);
 
@@ -142,30 +110,31 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jBMosTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
         jBMosTod.setText("Mostrar F4");
         jBMosTod.setToolTipText("Mostrar Nuevamente todos los Registros");
-        jBMosTod.setNextFocusableComponent(jBTransfe);
+        jBMosTod.setNextFocusableComponent(jTab);
         jP1.add(jBMosTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 440, 140, 20));
 
         jTProd.setBackground(new java.awt.Color(255, 255, 153));
         jTProd.setToolTipText("Ctrl+B búsqueda avanzada");
         jTProd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTProd.setNextFocusableComponent(jBProd);
-        jP1.add(jTProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 120, 20));
+        jP1.add(jTProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 120, 20));
 
         jBProd.setBackground(new java.awt.Color(255, 255, 255));
         jBProd.setText("...");
         jBProd.setToolTipText("Buscar Producto(s)");
         jBProd.setNextFocusableComponent(jComAlma);
-        jP1.add(jBProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 30, 20));
+        jP1.add(jBProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 30, 20));
 
         jLabel5.setText("*Concepto:");
         jP1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, 100, -1));
 
         jTDescrip.setEditable(false);
         jTDescrip.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jP1.add(jTDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 230, 20));
+        jTDescrip.setNextFocusableComponent(jTExist);
+        jP1.add(jTDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 230, 20));
 
         jLabel6.setText("Almacén:");
-        jP1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 80, -1));
+        jP1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 80, -1));
 
         jTCant.setText("1");
         jTCant.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
@@ -182,107 +151,49 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jBConcep.setBackground(new java.awt.Color(255, 255, 255));
         jBConcep.setText("...");
         jBConcep.setToolTipText("Buscar Concepto(s)");
-        jBConcep.setNextFocusableComponent(jTab);
+        jBConcep.setNextFocusableComponent(jSpinner1);
         jP1.add(jBConcep, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 30, 30, 20));
-
-        jTDescripConcep.setEditable(false);
-        jTDescripConcep.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jP1.add(jTDescripConcep, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 70, 140, 20));
-
-        jLabel8.setText("Descripción:");
-        jP1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, 150, -1));
 
         jTExist.setEditable(false);
         jTExist.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jP1.add(jTExist, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 80, 20));
+        jTExist.setNextFocusableComponent(jComUnid);
+        jP1.add(jTExist, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 80, 20));
 
         jLabel10.setText("*Cod. Producto:");
-        jP1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, -1));
+        jP1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, -1));
 
-        jLabel11.setText("Descripción:");
-        jP1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 150, -1));
-
-        jComUnid.setNextFocusableComponent(jTUnid);
-        jP1.add(jComUnid, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 90, 20));
+        jComUnid.setNextFocusableComponent(jComAlma2);
+        jP1.add(jComUnid, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 170, 20));
 
         jLabel13.setText("Existencia:");
-        jP1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 90, -1));
-
-        jTUnid.setEditable(false);
-        jTUnid.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTUnid.setNextFocusableComponent(jComTall);
-        jP1.add(jTUnid, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 80, 20));
-
-        jLabel14.setText("Color:");
-        jP1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 60, -1));
-
-        jBPrec1.setBackground(new java.awt.Color(255, 255, 255));
-        jBPrec1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jBPrec1.setText("$");
-        jBPrec1.setToolTipText("Lista de Precios y Costeos");
-        jBPrec1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jBPrec1.setNextFocusableComponent(jComUnid);
-        jP1.add(jBPrec1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 80, 20));
+        jP1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 90, -1));
 
         jLImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/traspas2.png"))); // NOI18N
         jP1.add(jLImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 100, 70));
 
-        jComTall.setNextFocusableComponent(jTTall);
-        jP1.add(jComTall, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 90, 20));
-
-        jComColo.setNextFocusableComponent(jTColo);
-        jP1.add(jComColo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 90, 20));
-
-        jTTall.setEditable(false);
-        jTTall.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTTall.setNextFocusableComponent(jComColo);
-        jP1.add(jTTall, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 80, 20));
-
-        jTColo.setEditable(false);
-        jTColo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jP1.add(jTColo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 80, 20));
-
         jLabel15.setText("Unidad:");
-        jP1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 60, -1));
+        jP1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 60, -1));
 
-        jLabel16.setText("Talla:");
-        jP1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 60, -1));
-
-        jComAlma.setNextFocusableComponent(jTDescripAlma);
-        jP1.add(jComAlma, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 80, 20));
-
-        jTDescripAlma.setEditable(false);
-        jTDescripAlma.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTDescripAlma.setNextFocusableComponent(jBPrec1);
-        jP1.add(jTDescripAlma, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 100, 20));
+        jComAlma.setNextFocusableComponent(jBExisAlma);
+        jP1.add(jComAlma, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 80, 20));
 
         jBExisAlma.setBackground(new java.awt.Color(0, 153, 153));
         jBExisAlma.setToolTipText("Existencias por almacén del producto");
-        jP1.add(jBExisAlma, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 10, 20));
+        jBExisAlma.setNextFocusableComponent(jTDescrip);
+        jP1.add(jBExisAlma, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 10, 20));
 
-        jComAlma2.setNextFocusableComponent(jTDescripAlma2);
-        jP1.add(jComAlma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, 80, 20));
-
-        jTDescripAlma2.setEditable(false);
-        jTDescripAlma2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTDescripAlma2.setNextFocusableComponent(jTCant);
-        jP1.add(jTDescripAlma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 30, 90, 20));
-
-        jBExisAlma1.setBackground(new java.awt.Color(0, 153, 153));
-        jBExisAlma1.setToolTipText("Existencias por almacén del producto");
-        jP1.add(jBExisAlma1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, 10, 20));
-
-        jTComenSer.setEditable(false);
-        jTComenSer.setFocusable(false);
-        jP1.add(jTComenSer, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 90, 10, -1));
+        jComAlma2.setNextFocusableComponent(jTCant);
+        jP1.add(jComAlma2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 90, 20));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jBconfirmar.setBackground(new java.awt.Color(255, 255, 255));
         jBconfirmar.setText("confirmar");
+        jBconfirmar.setNextFocusableComponent(jBTransfe);
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 0, 1));
+        jSpinner1.setNextFocusableComponent(jBconfirmar);
 
         jLabel3.setText("Cantidad a recibir:");
 
@@ -290,15 +201,15 @@ public abstract class TraspasJFrame extends BaseJFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jBconfirmar)))
-                .addContainerGap())
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,23 +223,10 @@ public abstract class TraspasJFrame extends BaseJFrame {
                 .addContainerGap())
         );
 
-        jP1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 170, 70));
+        jP1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, 180, 70));
 
         jLabel4.setText("Recibir producto:");
-        jP1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, -1, -1));
-
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 102, 0));
-        jButton1.setText("GenerarReporte");
-        jP1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 270, 120, 30));
-        jP1.add(jTUsr, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 130, -1));
-
-        jLabel19.setText("Usuario:");
-        jP1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
-
-        btnUsuario.setText("...");
-        jP1.add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 40, 20));
+        jP1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -336,11 +234,15 @@ public abstract class TraspasJFrame extends BaseJFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 988, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jP1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -349,58 +251,38 @@ public abstract class TraspasJFrame extends BaseJFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JButton btnUsuario;
     protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBConcep;
     protected javax.swing.JButton jBExisAlma;
-    protected javax.swing.JButton jBExisAlma1;
     protected javax.swing.JButton jBMosTod;
-    protected javax.swing.JButton jBPrec1;
     protected javax.swing.JButton jBProd;
     protected javax.swing.JButton jBSal;
     protected javax.swing.JButton jBTransfe;
     protected javax.swing.JButton jBconfirmar;
-    protected javax.swing.JButton jButton1;
-    protected javax.swing.JComboBox jComAlma;
-    protected javax.swing.JComboBox jComAlma2;
-    protected javax.swing.JComboBox jComColo;
-    protected javax.swing.JComboBox jComTall;
-    protected javax.swing.JComboBox jComUnid;
+    protected com.era.views.comboboxes.WarehousesCombobox jComAlma;
+    protected com.era.views.comboboxes.WarehousesCombobox jComAlma2;
+    protected com.era.views.comboboxes.UnidsCombobox jComUnid;
     protected javax.swing.JLabel jLImg;
     protected javax.swing.JLabel jLabel1;
     protected javax.swing.JLabel jLabel10;
-    protected javax.swing.JLabel jLabel11;
     protected javax.swing.JLabel jLabel13;
-    protected javax.swing.JLabel jLabel14;
     protected javax.swing.JLabel jLabel15;
-    protected javax.swing.JLabel jLabel16;
-    protected javax.swing.JLabel jLabel19;
-    protected javax.swing.JLabel jLabel2;
     protected javax.swing.JLabel jLabel3;
     protected javax.swing.JLabel jLabel4;
     protected javax.swing.JLabel jLabel5;
     protected javax.swing.JLabel jLabel6;
     protected javax.swing.JLabel jLabel7;
-    protected javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jP1;
     protected javax.swing.JPanel jPanel1;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JSpinner jSpinner1;
     protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTCant;
-    protected javax.swing.JTextField jTColo;
-    protected javax.swing.JTextField jTComenSer;
     protected javax.swing.JTextField jTConcep;
     protected javax.swing.JTextField jTDescrip;
-    protected javax.swing.JTextField jTDescripAlma;
-    protected javax.swing.JTextField jTDescripAlma2;
-    protected javax.swing.JTextField jTDescripConcep;
     protected javax.swing.JTextField jTExist;
     protected javax.swing.JTextField jTProd;
-    protected javax.swing.JTextField jTTall;
-    protected javax.swing.JTextField jTUnid;
-    protected javax.swing.JTextField jTUsr;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.TraspasTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

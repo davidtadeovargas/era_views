@@ -7,8 +7,8 @@ import java.util.List;
 
 public class TraspasTable extends BaseJTable {
 
-   public TraspasTable(){
-       super();
+    public TraspasTable(){
+       super(RepositoryFactory.getInstance().getTraspassRepository());
     }
 
    @Override

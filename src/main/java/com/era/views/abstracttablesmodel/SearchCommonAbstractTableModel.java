@@ -10,6 +10,7 @@ import com.era.views.abstracttablesmodel.getvaluesat.BasdatsIGetValueAt1;
 import com.era.views.abstracttablesmodel.getvaluesat.CClaveprodservsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CCoinsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CPSIGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.ConcepsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CountriesIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CustomersIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.ExpeditionPlaceIGetValueAt;
@@ -69,6 +70,7 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                     break;
                     
                 case CONCEPTS:
+                    IGetValueAt = new ConcepsIGetValueAt();
                     break;
                     
                 case PAYMENT_TYPES:

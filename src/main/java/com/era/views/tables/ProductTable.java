@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ProductTable extends BaseJTable {
 
-   public ProductTable(){
+    public ProductTable(){
        super(RepositoryFactory.getInstance().getProductsRepository());
     }
 
