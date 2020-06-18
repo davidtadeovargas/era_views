@@ -31,7 +31,7 @@ public abstract class ImpsJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.TaxTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
@@ -313,7 +313,6 @@ public abstract class ImpsJFrame extends BaseJFrame
         jBActua.setBackground(new java.awt.Color(255, 255, 255));
         jBActua.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBActua.setForeground(new java.awt.Color(0, 102, 0));
-        jBActua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actualizar.png"))); // NOI18N
         jBActua.setText("Actualizar");
         jBActua.setToolTipText("Actualizar Registros (F5)");
         jBActua.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -336,10 +335,9 @@ public abstract class ImpsJFrame extends BaseJFrame
                 jBActuaKeyPressed(evt);
             }
         });
-        jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 120, -1));
+        jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 120, 30));
 
-        jCmbImpuestoXML.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Traslado IVA", "Traslado IEPS", "Retención IVA", "Retención ISR" }));
-        jP1.add(jCmbImpuestoXML, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 140, -1));
+        jP1.add(jCmbImpuestoXML, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("*Valor:");
@@ -649,7 +647,7 @@ public abstract class ImpsJFrame extends BaseJFrame
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTVal;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.TaxTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */
