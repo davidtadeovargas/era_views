@@ -14,7 +14,7 @@ import com.era.views.tables.tablemodels.GetValueAts.SerieTableModelGetValueAt;
 public class SeriesCustomersIGetValueAt implements IGetValueAt {
 
     @Override
-    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
+    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) throws Exception {
         return (String) new SerieTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);
     }    
 }

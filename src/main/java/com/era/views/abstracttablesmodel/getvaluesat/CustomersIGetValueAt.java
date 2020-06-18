@@ -15,7 +15,7 @@ import com.era.views.tables.tablemodels.GetValueAts.CompanyTableModelGetValueAt;
 public class CustomersIGetValueAt implements IGetValueAt {
 
     @Override
-    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
+    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) throws Exception {
         return (String) new CompanyTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);        
     }    
 }

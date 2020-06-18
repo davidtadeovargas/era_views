@@ -1,17 +1,15 @@
 package com.era.views;
 
 
-public abstract class MonsJFrame extends BaseJFrame
+public abstract class MonssJFrame extends BaseJFrame
 {    
-    public MonsJFrame(final String idTextTitleWindow) 
+    public MonssJFrame(final String idTextTitleWindow) 
     {
         super(idTextTitleWindow);
         
         initComponents();
         
         postInitComponents();
-        
-        this.getRootPane().setDefaultButton(jBNew);
         
         jTCod.grabFocus();
     }
@@ -25,17 +23,15 @@ public abstract class MonsJFrame extends BaseJFrame
         jLClaveSat = new javax.swing.JLabel();
         jBSal = new javax.swing.JButton();
         jTCod = new javax.swing.JTextField();
-        jBNew = new javax.swing.JButton();
         jTDescrip = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.CoinTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
         jBDol = new javax.swing.JButton();
-        jBActua = new javax.swing.JButton();
         jCMN = new javax.swing.JCheckBox();
         jBGua = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -43,6 +39,8 @@ public abstract class MonsJFrame extends BaseJFrame
         jTClaveSat = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jBClaveSat = new javax.swing.JButton();
+        jBNew = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -104,7 +102,7 @@ public abstract class MonsJFrame extends BaseJFrame
                 jBDelKeyPressed(evt);
             }
         });
-        jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 120, 30));
+        jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 120, 30));
 
         jLClaveSat.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLClaveSat.setText("*Clave Sat:");
@@ -136,7 +134,7 @@ public abstract class MonsJFrame extends BaseJFrame
                 jBSalKeyPressed(evt);
             }
         });
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 120, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, 120, 30));
 
         jTCod.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTCod.setNextFocusableComponent(jTDescrip);
@@ -157,33 +155,6 @@ public abstract class MonsJFrame extends BaseJFrame
             }
         });
         jP1.add(jTCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 140, 20));
-
-        jBNew.setBackground(new java.awt.Color(255, 255, 255));
-        jBNew.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBNew.setForeground(new java.awt.Color(0, 102, 0));
-        jBNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/agre.png"))); // NOI18N
-        jBNew.setText("Nuevo");
-        jBNew.setToolTipText("Nueva Moneda (Ctrl+N)");
-        jBNew.setNextFocusableComponent(jCMN);
-        jBNew.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBNewMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBNewMouseExited(evt);
-            }
-        });
-        jBNew.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNewActionPerformed(evt);
-            }
-        });
-        jBNew.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBNewKeyPressed(evt);
-            }
-        });
-        jP1.add(jBNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 100, 20));
 
         jTDescrip.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTDescrip.setNextFocusableComponent(jTSim);
@@ -210,6 +181,7 @@ public abstract class MonsJFrame extends BaseJFrame
         jLabel3.setText("*Código Moneda:");
         jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 140, -1));
 
+        jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -226,14 +198,8 @@ public abstract class MonsJFrame extends BaseJFrame
                 return canEdit [columnIndex];
             }
         });
-        jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
         jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        jTab.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTabKeyPressed(evt);
-            }
-        });
         jScrollPane2.setViewportView(jTab);
 
         jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 550, 240));
@@ -315,7 +281,6 @@ public abstract class MonsJFrame extends BaseJFrame
         jBDol.setText("T.Cambio");
         jBDol.setToolTipText("Tipo de cambio (F7)");
         jBDol.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDol.setNextFocusableComponent(jBActua);
         jBDol.setOpaque(false);
         jBDol.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -335,35 +300,7 @@ public abstract class MonsJFrame extends BaseJFrame
                 jBDolKeyPressed(evt);
             }
         });
-        jP1.add(jBDol, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 120, 30));
-
-        jBActua.setBackground(new java.awt.Color(255, 255, 255));
-        jBActua.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBActua.setForeground(new java.awt.Color(0, 102, 0));
-        jBActua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actualizar.png"))); // NOI18N
-        jBActua.setText("Actualizar");
-        jBActua.setToolTipText("Actualizar registros (F5)");
-        jBActua.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBActua.setNextFocusableComponent(jBSal);
-        jBActua.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBActuaMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBActuaMouseExited(evt);
-            }
-        });
-        jBActua.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBActuaActionPerformed(evt);
-            }
-        });
-        jBActua.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBActuaKeyPressed(evt);
-            }
-        });
-        jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 120, 30));
+        jP1.add(jBDol, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 120, 30));
 
         jCMN.setBackground(new java.awt.Color(255, 255, 255));
         jCMN.setText("Moneda nacional M.N.");
@@ -373,7 +310,7 @@ public abstract class MonsJFrame extends BaseJFrame
                 jCMNKeyPressed(evt);
             }
         });
-        jP1.add(jCMN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 140, -1));
+        jP1.add(jCMN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 190, -1));
 
         jBGua.setBackground(new java.awt.Color(255, 255, 255));
         jBGua.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -398,7 +335,7 @@ public abstract class MonsJFrame extends BaseJFrame
                 jBGuaKeyPressed(evt);
             }
         });
-        jP1.add(jBGua, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 120, 20));
+        jP1.add(jBGua, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 120, 20));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("*Descripción:");
@@ -422,7 +359,6 @@ public abstract class MonsJFrame extends BaseJFrame
         jP1.add(jTSim, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 80, 20));
 
         jTClaveSat.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTClaveSat.setNextFocusableComponent(jBNew);
         jTClaveSat.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTClaveSatFocusGained(evt);
@@ -457,6 +393,38 @@ public abstract class MonsJFrame extends BaseJFrame
             }
         });
         jP1.add(jBClaveSat, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, 40, 20));
+
+        jBNew.setBackground(new java.awt.Color(255, 255, 255));
+        jBNew.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jBNew.setForeground(new java.awt.Color(0, 102, 0));
+        jBNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/agre.png"))); // NOI18N
+        jBNew.setText("Nuevo");
+        jBNew.setToolTipText("Nueva Moneda (Ctrl+N)");
+        jBNew.setNextFocusableComponent(jCMN);
+        jBNew.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jBNewMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jBNewMouseExited(evt);
+            }
+        });
+        jBNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNewActionPerformed(evt);
+            }
+        });
+        jBNew.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jBNewKeyPressed(evt);
+            }
+        });
+        jP1.add(jBNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 100, 20));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jButton1.setText("Actualizar");
+        jP1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, 100, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -514,11 +482,6 @@ public abstract class MonsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBSalKeyPressed
 
         
-    private void jBNewKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBNewKeyPressed
-        
-        
-    }//GEN-LAST:event_jBNewKeyPressed
-
         
     private void jTCodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodKeyPressed
 
@@ -562,11 +525,6 @@ public abstract class MonsJFrame extends BaseJFrame
     }//GEN-LAST:event_jTDescripFocusLost
            
     
-    private void jBNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNewActionPerformed
-                                                         
-         
-    }//GEN-LAST:event_jBNewActionPerformed
-
     
     private void jTCodKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCodKeyTyped
             
@@ -624,17 +582,7 @@ public abstract class MonsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBDolKeyPressed
 
         
-    private void jBActuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBActuaActionPerformed
-
-    
-    }//GEN-LAST:event_jBActuaActionPerformed
-
         
-    private void jBActuaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBActuaKeyPressed
-
-    
-    }//GEN-LAST:event_jBActuaKeyPressed
-
         
     private void formMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_formMouseWheelMoved
         
@@ -694,11 +642,6 @@ public abstract class MonsJFrame extends BaseJFrame
     }//GEN-LAST:event_formWindowClosing
 
        
-    private void jBNewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseEntered
-        
-        
-    }//GEN-LAST:event_jBNewMouseEntered
-
         
     private void jBGuaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGuaMouseEntered
         
@@ -719,11 +662,6 @@ public abstract class MonsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBDolMouseEntered
 
         
-    private void jBActuaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseEntered
-        
-        
-    }//GEN-LAST:event_jBActuaMouseEntered
-
     
         
     private void jBSalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSalMouseEntered
@@ -739,11 +677,6 @@ public abstract class MonsJFrame extends BaseJFrame
 
     
     
-    private void jBNewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseExited
-        
-        
-    }//GEN-LAST:event_jBNewMouseExited
-
         
     private void jBGuaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBGuaMouseExited
         
@@ -764,11 +697,6 @@ public abstract class MonsJFrame extends BaseJFrame
     }//GEN-LAST:event_jBDolMouseExited
 
         
-    private void jBActuaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseExited
-        
-        
-    }//GEN-LAST:event_jBActuaMouseExited
-
 
         
     private void jBSalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSalMouseExited
@@ -826,11 +754,42 @@ public abstract class MonsJFrame extends BaseJFrame
     private void jBClaveSatKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBClaveSatKeyPressed
         
     }//GEN-LAST:event_jBClaveSatKeyPressed
+
+    private void jBActuaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBActuaKeyPressed
+
+    }//GEN-LAST:event_jBActuaKeyPressed
+
+    private void jBActuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBActuaActionPerformed
+
+    }//GEN-LAST:event_jBActuaActionPerformed
+
+    private void jBActuaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseExited
+
+    }//GEN-LAST:event_jBActuaMouseExited
+
+    private void jBActuaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseEntered
+
+    }//GEN-LAST:event_jBActuaMouseEntered
+
+    private void jBNewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBNewMouseEntered
+
+    private void jBNewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBNewMouseExited
+
+    private void jBNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBNewActionPerformed
+
+    private void jBNewKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBNewKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBNewKeyPressed
    
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JButton jBActua;
     protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBClaveSat;
     protected javax.swing.JButton jBDel;
@@ -839,6 +798,7 @@ public abstract class MonsJFrame extends BaseJFrame
     protected javax.swing.JButton jBMostT;
     protected javax.swing.JButton jBNew;
     protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jButton1;
     protected javax.swing.JCheckBox jCMN;
     protected javax.swing.JLabel jLClaveSat;
     protected javax.swing.JLabel jLabel2;
@@ -852,7 +812,7 @@ public abstract class MonsJFrame extends BaseJFrame
     protected javax.swing.JTextField jTCod;
     protected javax.swing.JTextField jTDescrip;
     protected javax.swing.JTextField jTSim;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.CoinTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

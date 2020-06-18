@@ -14,7 +14,7 @@ import com.era.views.tables.tablemodels.GetValueAts.ZonaTableModelGetValueAt;
 public class ZonesIGetValueAt implements IGetValueAt {
 
     @Override
-    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
+    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) throws Exception {
         return (String) new ZonaTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);        
     }    
 }

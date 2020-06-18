@@ -5,16 +5,16 @@
  */
 package com.era.views.abstracttablesmodel.getvaluesat;
 
-import com.era.views.tables.tablemodels.GetValueAts.CCodigoPostalTableModelGetValueAt;
+import com.era.views.tables.tablemodels.GetValueAts.CCoinsTableModelGetValueAt;
 
 /**
  *
  * @author PC
  */
-public class CPSIGetValueAt implements IGetValueAt {
+public class CCoinsIGetValueAt implements IGetValueAt {
 
     @Override
     public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) throws Exception {
-        return (String) new CCodigoPostalTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);
+        return (String) new CCoinsTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);
     }    
 }

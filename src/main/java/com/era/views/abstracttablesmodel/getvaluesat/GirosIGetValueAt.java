@@ -14,7 +14,7 @@ import com.era.views.tables.tablemodels.GetValueAts.GiroTableModelGetValueAt;
 public class GirosIGetValueAt implements IGetValueAt {
 
     @Override
-    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) {
+    public String getReturnValue(Object Object, int rowIndex, int columnIndex, final String valueColumn) throws Exception {
         return (String) new GiroTableModelGetValueAt().GetValueAt(rowIndex, columnIndex, valueColumn, Object);        
     }    
 }

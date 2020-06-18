@@ -208,23 +208,37 @@ public class JComponentUtils {
         });
     }
     
-    public void onlyDecimals(final JComponent JComponent){
+    public void onlyDecimals(final JTextComponent JTextComponent){
         
-        JComponent.addKeyListener(new java.awt.event.KeyAdapter() {
+        JTextComponent.addKeyListener(new java.awt.event.KeyAdapter() {
             @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 
-                if(JComponent instanceof JTextField){
-                    
-                    final JTextField JTextField_ = (JTextField)JComponent;
-                    
-                    if(!Character.isDigit(evt.getKeyChar())&&evt.getKeyChar()!='.'){
-                        evt.consume();
-                    }
-                    if(evt.getKeyChar()=='.' && JTextField_.getText().contains(".")){
-                        evt.consume();
-                    } 
+                if(!Character.isDigit(evt.getKeyChar())&&evt.getKeyChar()!='.'){
+                    evt.consume();
                 }
+                if(evt.getKeyChar()=='.' && JTextComponent.getText().contains(".")){
+                    evt.consume();
+                }
+            }
+        });
+        
+        JTextComponent.addFocusListener(new FocusListener(){
+            @Override
+            public void focusGained(FocusEvent e) {
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                
+                //Get the text
+                String text = JTextComponent.getText().trim();
+
+                //If is empty
+                if(text.isEmpty()){
+                    JTextComponent.setText("0.0");
+                }
+                
             }
         });
     }
