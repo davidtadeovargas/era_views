@@ -12,82 +12,82 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ESTAC;
    }
 
-   private final ColumnTable FALT = new ColumnTable("FALT");
+   private final ColumnTable FALT = new ColumnTable("F.Creación");
    public ColumnTable getFALT() {
        return this.FALT;
    }
 
-   private final ColumnTable FMOD = new ColumnTable("FMOD");
+   private final ColumnTable FMOD = new ColumnTable("F.Modificación");
    public ColumnTable getFMOD() {
        return this.FMOD;
    }
 
-   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   private final ColumnTable NOCAJ = new ColumnTable("Caja");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
    }
 
-   private final ColumnTable OTORGAPERMISOCXC = new ColumnTable("OTORGAPERMISOCXC");
+   private final ColumnTable OTORGAPERMISOCXC = new ColumnTable("Otorga Permiso CXC");
    public ColumnTable getOTORGAPERMISOCXC() {
        return this.OTORGAPERMISOCXC;
    }
 
-   private final ColumnTable OTORGAPERMISOSCLIENTES = new ColumnTable("OTORGAPERMISOSCLIENTES");
+   private final ColumnTable OTORGAPERMISOSCLIENTES = new ColumnTable("Otorga Permiso Clientes");
    public ColumnTable getOTORGAPERMISOSCLIENTES() {
        return this.OTORGAPERMISOSCLIENTES;
    }
 
-   private final ColumnTable OTORGAPERMISOSCOMPRAS = new ColumnTable("OTORGAPERMISOSCOMPRAS");
+   private final ColumnTable OTORGAPERMISOSCOMPRAS = new ColumnTable("Permiso Compras");
    public ColumnTable getOTORGAPERMISOSCOMPRAS() {
        return this.OTORGAPERMISOSCOMPRAS;
    }
 
-   private final ColumnTable OTORGAPERMISOSCONFIG = new ColumnTable("OTORGAPERMISOSCONFIG");
+   private final ColumnTable OTORGAPERMISOSCONFIG = new ColumnTable("Permiso Configuraciones");
    public ColumnTable getOTORGAPERMISOSCONFIG() {
        return this.OTORGAPERMISOSCONFIG;
    }
 
-   private final ColumnTable OTORGAPERMISOSCOTIZA = new ColumnTable("OTORGAPERMISOSCOTIZA");
+   private final ColumnTable OTORGAPERMISOSCOTIZA = new ColumnTable("Permisos Cotizaciones");
    public ColumnTable getOTORGAPERMISOSCOTIZA() {
        return this.OTORGAPERMISOSCOTIZA;
    }
 
-   private final ColumnTable OTORGAPERMISOSINVENTARIO = new ColumnTable("OTORGAPERMISOSINVENTARIO");
+   private final ColumnTable OTORGAPERMISOSINVENTARIO = new ColumnTable("Permisos Inventarios");
    public ColumnTable getOTORGAPERMISOSINVENTARIO() {
        return this.OTORGAPERMISOSINVENTARIO;
    }
 
-   private final ColumnTable OTORGAPERMISOSMODULOS = new ColumnTable("OTORGAPERMISOSMODULOS");
+   private final ColumnTable OTORGAPERMISOSMODULOS = new ColumnTable("Permisos Modulos");
    public ColumnTable getOTORGAPERMISOSMODULOS() {
        return this.OTORGAPERMISOSMODULOS;
    }
 
-   private final ColumnTable OTORGAPERMISOSPREVIO = new ColumnTable("OTORGAPERMISOSPREVIO");
+   private final ColumnTable OTORGAPERMISOSPREVIO = new ColumnTable("Permisos Previo");
    public ColumnTable getOTORGAPERMISOSPREVIO() {
        return this.OTORGAPERMISOSPREVIO;
    }
 
-   private final ColumnTable OTORGAPERMISOSPROVEE = new ColumnTable("OTORGAPERMISOSPROVEE");
+   private final ColumnTable OTORGAPERMISOSPROVEE = new ColumnTable("Permisos Proveedores");
    public ColumnTable getOTORGAPERMISOSPROVEE() {
        return this.OTORGAPERMISOSPROVEE;
    }
 
-   private final ColumnTable OTORGAPERMISOSSISTEMA = new ColumnTable("OTORGAPERMISOSSISTEMA");
+   private final ColumnTable OTORGAPERMISOSSISTEMA = new ColumnTable("Permisos Sistema");
    public ColumnTable getOTORGAPERMISOSSISTEMA() {
        return this.OTORGAPERMISOSSISTEMA;
    }
 
-   private final ColumnTable OTORGAPERMISOSVENTAS = new ColumnTable("OTORGAPERMISOSVENTAS");
+   private final ColumnTable OTORGAPERMISOSVENTAS = new ColumnTable("Permiso ventas");
    public ColumnTable getOTORGAPERMISOSVENTAS() {
        return this.OTORGAPERMISOSVENTAS;
    }
 
-   private final ColumnTable PERMISPRODUCTOSBORRAR = new ColumnTable("PERMISPRODUCTOSBORRAR");
+   private final ColumnTable PERMISPRODUCTOSBORRAR = new ColumnTable("Permiso Productos Borrar");
    public ColumnTable getPERMISPRODUCTOSBORRAR() {
        return this.PERMISPRODUCTOSBORRAR;
    }
 
-   private final ColumnTable PERMISPRODUCTOSCARGADOIMAGEN = new ColumnTable("PERMISPRODUCTOSCARGADOIMAGEN");
+   private final ColumnTable PERMISPRODUCTOSCARGADOIMAGEN = new ColumnTable("Permisos Ima");
    public ColumnTable getPERMISPRODUCTOSCARGADOIMAGEN() {
        return this.PERMISPRODUCTOSCARGADOIMAGEN;
    }
@@ -527,32 +527,32 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.PERMISOVENTASOBTENERXML;
    }
 
-   private final ColumnTable PERMISOVENTASPARCIAL = new ColumnTable("PERMISOVENTASPARCIAL");
+   private final ColumnTable PERMISOVENTASPARCIAL = new ColumnTable("Permiso Ventas Parcial");
    public ColumnTable getPERMISOVENTASPARCIAL() {
        return this.PERMISOVENTASPARCIAL;
    }
 
-   private final ColumnTable PERMISOVENTASTIMBRAR = new ColumnTable("PERMISOVENTASTIMBRAR");
+    private final ColumnTable PERMISOVENTASTIMBRAR = new ColumnTable("Permiso Timbrar");
    public ColumnTable getPERMISOVENTASTIMBRAR() {
        return this.PERMISOVENTASTIMBRAR;
    }
 
-   private final ColumnTable PERMISOVENTASVER = new ColumnTable("PERMISOVENTASVER");
+   private final ColumnTable PERMISOVENTASVER = new ColumnTable("Permiso Ventas Ver");
    public ColumnTable getPERMISOVENTASVER() {
        return this.PERMISOVENTASVER;
    }
 
-   private final ColumnTable PERMISOZONAS = new ColumnTable("PERMISOZONAS");
+   private final ColumnTable PERMISOZONAS = new ColumnTable("Permiso Zonas");
    public ColumnTable getPERMISOZONAS() {
        return this.PERMISOZONAS;
    }
 
-   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   private final ColumnTable SUCU = new ColumnTable("Sucursal");
    public ColumnTable getSUCU() {
        return this.SUCU;
    }
 
-   private final ColumnTable USERID = new ColumnTable("USERID");
+   private final ColumnTable USERID = new ColumnTable("Usuario ID");
    public ColumnTable getUSERID() {
        return this.USERID;
    }

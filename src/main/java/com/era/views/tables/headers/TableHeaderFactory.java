@@ -468,10 +468,6 @@ public class TableHeaderFactory {
         final PessTableHeader PessTableHeader = new PessTableHeader();return PessTableHeader;
     }
 
-    public PetissTableHeader getPetissTableHeader(){
-        final PetissTableHeader PetissTableHeader = new PetissTableHeader();return PetissTableHeader;
-    }
-
     public PrevcomprssTableHeader getPrevcomprssTableHeader(){
         final PrevcomprssTableHeader PrevcomprssTableHeader = new PrevcomprssTableHeader();return PrevcomprssTableHeader;
     }

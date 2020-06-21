@@ -12,6 +12,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ACTIVO;
    }
 
+   private final ColumnTable PRODUCT_DESCRIPTION = new ColumnTable("Descripción");
+   public ColumnTable getPRODUCT_DESCRIPTION() {
+       return this.PRODUCT_DESCRIPTION;
+   }
+   
    private final ColumnTable ALMA = new ColumnTable("ALMA");
    public ColumnTable getALMA() {
        return this.ALMA;

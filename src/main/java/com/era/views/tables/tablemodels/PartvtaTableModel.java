@@ -148,9 +148,6 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getSUCU().getValue())==0){
                returnValue = Partvta.getSucu();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getTALL().getValue())==0){
-               returnValue = Partvta.getTall();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getTIPCAM().getValue())==0){
                returnValue = Partvta.getTipcam().toString();
            }

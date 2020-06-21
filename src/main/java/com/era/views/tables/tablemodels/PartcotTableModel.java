@@ -31,9 +31,6 @@ public class PartcotTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcotsTableHeader().getCODIMPUE().getValue())==0){
                returnValue = Partcot.getCodimpue();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcotsTableHeader().getCOLO().getValue())==0){
-               returnValue = Partcot.getColo();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcotsTableHeader().getCOMENSER().getValue())==0){
                returnValue = Partcot.getComenser();
            }
@@ -129,9 +126,6 @@ public class PartcotTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcotsTableHeader().getSUCU().getValue())==0){
                returnValue = Partcot.getSucu();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcotsTableHeader().getTALL().getValue())==0){
-               returnValue = Partcot.getTall();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcotsTableHeader().getTIPCAM().getValue())==0){
                returnValue = String.valueOf(Partcot.getTipcam());

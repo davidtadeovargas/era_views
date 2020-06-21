@@ -8,7 +8,7 @@ import java.util.List;
 public class IngresosEncabTable extends BaseJTable {
 
    public IngresosEncabTable(){
-       super();
+       super(RepositoryFactory.getInstance().getIngresosEncabRepository());
     }
 
    @Override
@@ -26,14 +26,14 @@ public class IngresosEncabTable extends BaseJTable {
 
    @Override
    public void loadAllItemsInTable() throws Exception {
-       final List<IngresosEncab> items_ = (List<IngresosEncab>) RepositoryFactory.getInstance().getIngresosEncabsRepository().getAll();
+       final List<IngresosEncab> items_ = (List<IngresosEncab>) RepositoryFactory.getInstance().getIngresosEncabRepository().getAll();
        final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(items_,this.ShowColumns);
        this.setModel(IngresosEncabTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
-       final List<IngresosEncab> items_ = (List<IngresosEncab>) RepositoryFactory.getInstance().getIngresosEncabsRepository().getByLikeEncabezados(search);
+       final List<IngresosEncab> items_ = (List<IngresosEncab>) RepositoryFactory.getInstance().getIngresosEncabRepository().getByLikeEncabezados(search);
        final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(items_,this.ShowColumns);
        this.setModel(IngresosEncabTableModel);
    }

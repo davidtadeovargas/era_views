@@ -7,52 +7,52 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
-   private final ColumnTable ALMA = new ColumnTable("ALMA");
+   private final ColumnTable ALMA = new ColumnTable("Almacén");
    public ColumnTable getALMA() {
        return this.ALMA;
    }
 
-   private final ColumnTable COLO = new ColumnTable("COLO");
+   private final ColumnTable COLO = new ColumnTable("Colnia");
    public ColumnTable getCOLO() {
        return this.COLO;
    }
 
-   private final ColumnTable ESTAC = new ColumnTable("ESTAC");
+   private final ColumnTable ESTAC = new ColumnTable("Usuario");
    public ColumnTable getESTAC() {
        return this.ESTAC;
    }
 
-   private final ColumnTable EXIST = new ColumnTable("EXIST");
+   private final ColumnTable EXIST = new ColumnTable("Existencia");
    public ColumnTable getEXIST() {
        return this.EXIST;
    }
 
-   private final ColumnTable FALT = new ColumnTable("FALT");
+   private final ColumnTable FALT = new ColumnTable("Fecha Alta");
    public ColumnTable getFALT() {
        return this.FALT;
    }
 
-   private final ColumnTable FMOD = new ColumnTable("FMOD");
+   private final ColumnTable FMOD = new ColumnTable("Fecha Modificación");
    public ColumnTable getFMOD() {
        return this.FMOD;
    }
 
-   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   private final ColumnTable NOCAJ = new ColumnTable("Caja");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
    }
 
-   private final ColumnTable PROD = new ColumnTable("PROD");
+   private final ColumnTable PROD = new ColumnTable("Producto");
    public ColumnTable getPROD() {
        return this.PROD;
    }
 
-   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   private final ColumnTable SUCU = new ColumnTable("Sucursal");
    public ColumnTable getSUCU() {
        return this.SUCU;
    }
 
-   private final ColumnTable TALL = new ColumnTable("TALL");
+   private final ColumnTable TALL = new ColumnTable("Talla");
    public ColumnTable getTALL() {
        return this.TALL;
    }

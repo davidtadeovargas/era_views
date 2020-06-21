@@ -54,7 +54,7 @@ public abstract class BaseJFrame extends JFrame {
             if(idTextTitleWindow == null || idTextTitleWindow.isEmpty()){
                 titleWindow = "window_title_undefined";
             }
-            final Properties props = DialogPropertiesUitlity.getSingleton().getProperties();                        
+            final Properties props = DialogPropertiesUitlity.getSingleton().getProperties();
             this.titleWindow = props.getProperty(idTextTitleWindow);
 
             //Init
@@ -69,7 +69,7 @@ public abstract class BaseJFrame extends JFrame {
                 //Refresh the actual user            
                 String sessionString = UtilitiesFactory.getSingleton().getUsersUtility().getSessionString();
                 sessionString = titleWindow + ": " + sessionString;
-                setTitle(sessionString);                
+                setTitle(sessionString);
             };
 
             //When the jframe is visible

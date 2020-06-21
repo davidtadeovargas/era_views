@@ -133,9 +133,6 @@ public class PedidosPartsTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPedidosPartssTableHeader().getSUCU().getValue())==0){
                returnValue = PedidosParts.getSucu();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPedidosPartssTableHeader().getTALL().getValue())==0){
-               returnValue = PedidosParts.getTall();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPedidosPartssTableHeader().getTIPCAM().getValue())==0){
                returnValue = PedidosParts.getTipcam().toString();
            }

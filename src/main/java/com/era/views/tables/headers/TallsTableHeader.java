@@ -7,12 +7,12 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
-   private final ColumnTable COD = new ColumnTable("COD");
+   private final ColumnTable COD = new ColumnTable("Código");
    public ColumnTable getCOD() {
        return this.COD;
    }
 
-   private final ColumnTable DESCRIP = new ColumnTable("DESCRIP");
+   private final ColumnTable DESCRIP = new ColumnTable("Descripción");
    public ColumnTable getDESCRIP() {
        return this.DESCRIP;
    }
@@ -22,22 +22,22 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ESTAC;
    }
 
-   private final ColumnTable FALT = new ColumnTable("FALT");
+   private final ColumnTable FALT = new ColumnTable("Fecha Alta");
    public ColumnTable getFALT() {
        return this.FALT;
    }
 
-   private final ColumnTable FMOD = new ColumnTable("FMOD");
+   private final ColumnTable FMOD = new ColumnTable("Fecha Modificación");
    public ColumnTable getFMOD() {
        return this.FMOD;
    }
 
-   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   private final ColumnTable NOCAJ = new ColumnTable("Caja");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
    }
 
-   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   private final ColumnTable SUCU = new ColumnTable("Sucursal");
    public ColumnTable getSUCU() {
        return this.SUCU;
    }

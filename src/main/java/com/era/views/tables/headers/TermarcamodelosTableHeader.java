@@ -12,32 +12,32 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ESTAC;
    }
 
-   private final ColumnTable FALT = new ColumnTable("FALT");
+   private final ColumnTable FALT = new ColumnTable("F.Creación");
    public ColumnTable getFALT() {
        return this.FALT;
    }
 
-   private final ColumnTable FMOD = new ColumnTable("FMOD");
+   private final ColumnTable FMOD = new ColumnTable("F.Modificación");
    public ColumnTable getFMOD() {
        return this.FMOD;
    }
 
-   private final ColumnTable MARC = new ColumnTable("MARC");
+   private final ColumnTable MARC = new ColumnTable("Marca");
    public ColumnTable getMARC() {
        return this.MARC;
    }
 
-   private final ColumnTable MODEL = new ColumnTable("MODEL");
+   private final ColumnTable MODEL = new ColumnTable("Modelo");
    public ColumnTable getMODEL() {
        return this.MODEL;
    }
 
-   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   private final ColumnTable NOCAJ = new ColumnTable("Caja");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
    }
 
-   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   private final ColumnTable SUCU = new ColumnTable("Sucursal");
    public ColumnTable getSUCU() {
        return this.SUCU;
    }

@@ -114,7 +114,13 @@ public class DialogsFactory {
         ErrorOKDialog_.setPropertyText(propertyText);
         ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
         ErrorOKDialog_.show();
-    }        
+    }
+    public void showErrorCeroItemsOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("errors_cero_items");
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }
     public void showErrorRecordNotExistsOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText("errors_not_record_exists");

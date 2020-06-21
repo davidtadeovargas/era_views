@@ -40,9 +40,6 @@ public class PartprevcomprsTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartprevcomprssTableHeader().getCODIMPUE().getValue())==0){
                returnValue = Partprevcomprs.getCodimpue();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartprevcomprssTableHeader().getCOLO().getValue())==0){
-               returnValue = Partprevcomprs.getColo();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartprevcomprssTableHeader().getCOMENSER().getValue())==0){
                returnValue = Partprevcomprs.getComenser();
            }
@@ -120,9 +117,6 @@ public class PartprevcomprsTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartprevcomprssTableHeader().getSUCU().getValue())==0){
                returnValue = Partprevcomprs.getSucu();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartprevcomprssTableHeader().getTALL().getValue())==0){
-               returnValue = Partprevcomprs.getTall();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartprevcomprssTableHeader().getTIPCAM().getValue())==0){
                returnValue = String.valueOf(Partprevcomprs.getTipcam());

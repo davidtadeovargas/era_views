@@ -32,13 +32,13 @@ public class IngresTableModel  extends BaseAbstractTableModel {
                returnValue = String.valueOf(Ingres.getCant());
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngressTableHeader().getCANTSAL().getValue())==0){
-               returnValue = Ingres.getCantsal().toString();
+               returnValue = Ingres.getCantsal()==null?"0":Ingres.getCantsal().toString();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngressTableHeader().getCONCEP().getValue())==0){
                returnValue = Ingres.getConcep();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngressTableHeader().getCOSTO().getValue())==0){
-               returnValue = Ingres.getCosto();
+               returnValue = String.valueOf(Ingres.getCosto());
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngressTableHeader().getENTSAL().getValue())==0){
                returnValue = Ingres.isEntsal()? "Si":"No";

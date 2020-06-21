@@ -52,7 +52,7 @@ public class JComponentUtils {
     private boolean F4EventFired;
     private int f4EventsFired = 0;
     private boolean readOnly;
-    
+    private Container mainContainer;
     
     public void addComponentToKeyPress(Component Component){
         Component.addKeyListener(new KeyListener(){
@@ -77,6 +77,8 @@ public class JComponentUtils {
 
     public void setReadOnly(boolean readOnly) {
         this.readOnly = readOnly;
+        
+        readOnly(mainContainer);
     }
     
     public void setDisposeInEscapeEvent(boolean disposeInEscapeEvent) {
@@ -196,7 +198,12 @@ public class JComponentUtils {
                 String text = "";
                 try{
                     
-                    text = UtilitiesFactory.getSingleton().getNumbersUtility().toMoneyFormat(JTextComponent.getText());
+                    //Prevent empty string
+                    if(JTextComponent.getText().trim().isEmpty()){
+                        text = "0";
+                    }
+                    
+                    text = UtilitiesFactory.getSingleton().getNumbersUtility().toMoneyFormat(text);
                     
                 }catch(Exception ex){
                     JTextComponent.setText(text);
@@ -460,9 +467,24 @@ public class JComponentUtils {
     
     public void initAllComponents(final Container c){
         if(!componentsAlreadyInit){
-            initAllBaseComponents(c);
+            this.mainContainer = c;
+            initAllBaseComponents(c);            
             componentsAlreadyInit = true;
         }        
+    }
+    
+    private void readOnly(Container comp_){
+        
+        Component[] comps = comp_.getComponents();        
+        for (Component comp : comps) {
+            if (comp instanceof Container){                                                
+                readOnly((Container) comp);
+            }
+            
+            if(readOnly){ //Read only
+                comp.setEnabled(false);
+            }
+        }
     }
     
     private List<Component> initAllBaseComponents(final Container c){

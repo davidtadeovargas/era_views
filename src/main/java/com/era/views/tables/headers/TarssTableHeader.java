@@ -7,12 +7,12 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
-   private final ColumnTable CLI = new ColumnTable("CLI");
+   private final ColumnTable CLI = new ColumnTable("Cliente");
    public ColumnTable getCLI() {
        return this.CLI;
    }
 
-   private final ColumnTable ESTAC = new ColumnTable("ESTAC");
+   private final ColumnTable ESTAC = new ColumnTable("Usuario");
    public ColumnTable getESTAC() {
        return this.ESTAC;
    }
@@ -22,17 +22,17 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.EXTER;
    }
 
-   private final ColumnTable FACTUR = new ColumnTable("FACTUR");
+   private final ColumnTable FACTUR = new ColumnTable("Factura");
    public ColumnTable getFACTUR() {
        return this.FACTUR;
    }
 
-   private final ColumnTable FACTUYA = new ColumnTable("FACTUYA");
+   private final ColumnTable FACTUYA = new ColumnTable("Facturado");
    public ColumnTable getFACTUYA() {
        return this.FACTUYA;
    }
 
-   private final ColumnTable FALT = new ColumnTable("FALT");
+   private final ColumnTable FALT = new ColumnTable("F.Creación");
    public ColumnTable getFALT() {
        return this.FALT;
    }
@@ -42,7 +42,7 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.FFACTU;
    }
 
-   private final ColumnTable FMOD = new ColumnTable("FMOD");
+   private final ColumnTable FMOD = new ColumnTable("F.Modificación");
    public ColumnTable getFMOD() {
        return this.FMOD;
    }
@@ -52,7 +52,7 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.LOC;
    }
 
-   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   private final ColumnTable NOCAJ = new ColumnTable("Caja");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
    }
@@ -67,22 +67,22 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.PREPAG;
    }
 
-   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   private final ColumnTable SUCU = new ColumnTable("Sucursal");
    public ColumnTable getSUCU() {
        return this.SUCU;
    }
 
-   private final ColumnTable TAR = new ColumnTable("TAR");
+   private final ColumnTable TAR = new ColumnTable("Tarjeta");
    public ColumnTable getTAR() {
        return this.TAR;
    }
 
-   private final ColumnTable TARIF = new ColumnTable("TARIF");
+   private final ColumnTable TARIF = new ColumnTable("Tarifa");
    public ColumnTable getTARIF() {
        return this.TARIF;
    }
 
-   private final ColumnTable VTA = new ColumnTable("VTA");
+   private final ColumnTable VTA = new ColumnTable("Venta");
    public ColumnTable getVTA() {
        return this.VTA;
    }

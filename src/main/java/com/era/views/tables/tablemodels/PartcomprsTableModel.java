@@ -40,9 +40,6 @@ public class PartcomprsTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcomprssTableHeader().getCODIMPUE().getValue())==0){
                returnValue = Partcomprs.getCodimpue();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcomprssTableHeader().getCOLO().getValue())==0){
-               returnValue = Partcomprs.getColo();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcomprssTableHeader().getCOMENSER().getValue())==0){
                returnValue = Partcomprs.getComenser();
            }
@@ -126,9 +123,6 @@ public class PartcomprsTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcomprssTableHeader().getSUCU().getValue())==0){
                returnValue = Partcomprs.getSucu();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcomprssTableHeader().getTALL().getValue())==0){
-               returnValue = Partcomprs.getTall();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartcomprssTableHeader().getTIPCAM().getValue())==0){
                returnValue = Partcomprs.getTipcam().toString();

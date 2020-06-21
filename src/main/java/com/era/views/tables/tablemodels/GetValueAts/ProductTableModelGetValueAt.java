@@ -43,9 +43,6 @@ public class ProductTableModelGetValueAt implements IGetValueAt {
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getBRANDID().getValue())==0){
             returnValue = String.valueOf(Product.getBrandID());
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getCLASSJERARCHY().getValue())==0){
-            returnValue = Product.getClassJerarchy();
-        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getProductsTableHeader().getCODE().getValue())==0){
             returnValue = Product.getCode();
         }
