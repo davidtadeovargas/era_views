@@ -26,14 +26,14 @@ public class TaxTable extends BaseJTable {
 
    @Override
    public void loadAllItemsInTable() throws Exception {
-       final List<Tax> items_ = (List<Tax>) RepositoryFactory.getInstance().getTaxsRepository().getAll();
+       final List<Tax> items_ = (List<Tax>) RepositoryFactory.getInstance().getTaxesRepository().getAll();
        final TaxTableModel TaxTableModel = new TaxTableModel(items_,this.ShowColumns);
        this.setModel(TaxTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
-       final List<Tax> items_ = (List<Tax>) RepositoryFactory.getInstance().getTaxsRepository().getByLikeEncabezados(search);
+       final List<Tax> items_ = (List<Tax>) RepositoryFactory.getInstance().getTaxesRepository().getByLikeEncabezados(search);
        final TaxTableModel TaxTableModel = new TaxTableModel(items_,this.ShowColumns);
        this.setModel(TaxTableModel);
    }

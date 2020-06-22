@@ -24,28 +24,24 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jTCli = new javax.swing.JTextField();
         jTNomb = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.PartvtaTable();
         jBDel = new javax.swing.JButton();
         jB1 = new javax.swing.JButton();
         jBTecla = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
         jTQtyP = new javax.swing.JTextField();
         jTProd = new javax.swing.JTextField();
-        jTMon = new javax.swing.JTextField();
         jBProds = new javax.swing.JButton();
         jBNew = new javax.swing.JButton();
         jBCob = new javax.swing.JButton();
         jScrollPaneLin = new javax.swing.JScrollPane();
-        jPanelLin = new javax.swing.JPanel();
+        jPanelLin = new com.era.views.panels.LinesJPanel();
         jBCli = new javax.swing.JButton();
         jBNewEmp = new javax.swing.JButton();
         jScrollProds = new javax.swing.JScrollPane();
-        jPanProds = new javax.swing.JPanel();
-        jBBuscGral = new javax.swing.JButton();
-        jTBuscGral = new javax.swing.JTextField();
+        jPanProds = new com.era.views.panels.ProductsJPanel();
         jTDesc = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTSer = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -55,40 +51,13 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jBVeGran = new javax.swing.JButton();
         jPanImg = new javax.swing.JPanel();
         jLImg = new javax.swing.JLabel();
-        jTCodProd = new javax.swing.JTextField();
         jPCon = new javax.swing.JPanel();
         jBLed = new javax.swing.JButton();
-        jTColo = new javax.swing.JTextField();
-        jTAlma = new javax.swing.JTextField();
-        jTTall = new javax.swing.JTextField();
-        jTId = new javax.swing.JTextField();
-        jTLot = new javax.swing.JTextField();
-        jTPedimen = new javax.swing.JTextField();
-        jTCadu = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jTTotDesc = new javax.swing.JTextField();
-        jTComenSer = new javax.swing.JTextField();
-        jTSerProd = new javax.swing.JTextField();
-        jTGara = new javax.swing.JTextField();
-        jTTotCost = new javax.swing.JTextField();
         jTFec = new javax.swing.JTextField();
         jLTipVta = new javax.swing.JLabel();
-        jTCantLot = new javax.swing.JTextField();
-        jTList = new javax.swing.JTextField();
-        jComUnid = new javax.swing.JComboBox();
-        jTImpo = new javax.swing.JTextField();
-        jTRecib = new javax.swing.JTextField();
-        jTMarc = new javax.swing.JTextField();
-        jTMod = new javax.swing.JTextField();
-        jTColoAut = new javax.swing.JTextField();
-        jTPlacs = new javax.swing.JTextField();
-        jTNom = new javax.swing.JTextField();
-        jTTarCirc = new javax.swing.JTextField();
-        jTNumLic = new javax.swing.JTextField();
-        jTTel = new javax.swing.JTextField();
-        jTDirPart = new javax.swing.JTextField();
-        jTDirOfi = new javax.swing.JTextField();
-        jTTelOfi = new javax.swing.JTextField();
+        jComUnid = new com.era.views.comboboxes.UnidsCombobox();
         jBScann = new javax.swing.JButton();
         jTCant = new javax.swing.JTextField();
         jBSincronizar = new javax.swing.JButton();
@@ -152,6 +121,11 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/calcg.png"))); // NOI18N
         jB1.setToolTipText("Calculadora");
         jB1.setNextFocusableComponent(jBTecla);
+        jB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 100, 90));
 
         jBTecla.setBackground(new java.awt.Color(255, 255, 255));
@@ -185,10 +159,6 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jTProd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTProd.setNextFocusableComponent(jTCant);
         jPanel1.add(jTProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 490, 270, 50));
-
-        jTMon.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jTMon.setNextFocusableComponent(jComUnid);
-        jPanel1.add(jTMon, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 490, 50, 50));
 
         jBProds.setBackground(new java.awt.Color(255, 255, 255));
         jBProds.setText("...");
@@ -245,32 +215,16 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
 
         jPanel1.add(jScrollProds, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, 500, 660));
 
-        jBBuscGral.setBackground(new java.awt.Color(255, 255, 255));
-        jBBuscGral.setText("...");
-        jBBuscGral.setToolTipText("Buscar Catálogo General");
-        jBBuscGral.setNextFocusableComponent(jBNewEmp);
-        jPanel1.add(jBBuscGral, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 540, 60, 40));
-
-        jTBuscGral.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jTBuscGral.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTBuscGral.setNextFocusableComponent(jBBuscGral);
-        jPanel1.add(jTBuscGral, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 540, 170, 40));
-
         jTDesc.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         jTDesc.setForeground(new java.awt.Color(0, 0, 255));
         jTDesc.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTDesc.setText("0");
         jTDesc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTDesc.setNextFocusableComponent(jTBuscGral);
         jPanel1.add(jTDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 540, 70, 40));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         jLabel2.setText("DESCUENTO %");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, 210, -1));
-
-        jTSer.setEditable(false);
-        jTSer.setFocusable(false);
-        jPanel1.add(jTSer, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 710, 10, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         jLabel5.setText("SUBTOTAL:");
@@ -338,9 +292,6 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
 
         jPanel1.add(jPanImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 550, 200, 170));
 
-        jTCodProd.setEditable(false);
-        jPanel1.add(jTCodProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 710, 10, -1));
-
         jPCon.setBackground(new java.awt.Color(255, 255, 255));
         jPCon.setFocusable(false);
 
@@ -369,27 +320,6 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
 
         jPanel1.add(jPCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 610, 100, 50));
 
-        jTColo.setEditable(false);
-        jPanel1.add(jTColo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 710, 10, -1));
-
-        jTAlma.setEditable(false);
-        jPanel1.add(jTAlma, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 710, 10, -1));
-
-        jTTall.setEditable(false);
-        jPanel1.add(jTTall, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 710, 10, -1));
-
-        jTId.setEditable(false);
-        jPanel1.add(jTId, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 710, 10, -1));
-
-        jTLot.setEditable(false);
-        jPanel1.add(jTLot, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 710, 10, -1));
-
-        jTPedimen.setEditable(false);
-        jPanel1.add(jTPedimen, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 710, 10, -1));
-
-        jTCadu.setEditable(false);
-        jPanel1.add(jTCadu, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 710, 10, -1));
-
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 22)); // NOI18N
         jLabel8.setText("TOTAL:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 670, 220, 30));
@@ -404,22 +334,6 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jTTotDesc.setFocusable(false);
         jPanel1.add(jTTotDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 640, 300, 30));
 
-        jTComenSer.setEditable(false);
-        jTComenSer.setBackground(new java.awt.Color(255, 255, 255));
-        jTComenSer.setFocusable(false);
-        jPanel1.add(jTComenSer, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 710, 10, 20));
-
-        jTSerProd.setEditable(false);
-        jTSerProd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jPanel1.add(jTSerProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 710, 10, 20));
-
-        jTGara.setEditable(false);
-        jPanel1.add(jTGara, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 710, 10, -1));
-
-        jTTotCost.setEditable(false);
-        jTTotCost.setFocusable(false);
-        jPanel1.add(jTTotCost, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 710, 10, -1));
-
         jTFec.setEditable(false);
         jTFec.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jTFec.setBorder(null);
@@ -431,31 +345,11 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jLTipVta.setFocusable(false);
         jPanel1.add(jLTipVta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 10, 220, 40));
 
-        jTCantLot.setEditable(false);
-        jTCantLot.setText("0");
-        jPanel1.add(jTCantLot, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 710, 10, -1));
-
-        jTList.setEditable(false);
-        jPanel1.add(jTList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 710, 10, -1));
-
         jComUnid.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jComUnid.setToolTipText("Unidad de producto");
         jComUnid.setName(""); // NOI18N
         jComUnid.setNextFocusableComponent(jBProds);
-        jPanel1.add(jComUnid, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 490, 80, 50));
-        jPanel1.add(jTImpo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 730, 10, -1));
-        jPanel1.add(jTRecib, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 730, 10, -1));
-        jPanel1.add(jTMarc, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 730, 10, -1));
-        jPanel1.add(jTMod, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 730, 10, -1));
-        jPanel1.add(jTColoAut, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 730, 10, -1));
-        jPanel1.add(jTPlacs, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 730, 10, -1));
-        jPanel1.add(jTNom, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 730, 10, -1));
-        jPanel1.add(jTTarCirc, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 730, 10, -1));
-        jPanel1.add(jTNumLic, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 730, 10, -1));
-        jPanel1.add(jTTel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 730, 10, -1));
-        jPanel1.add(jTDirPart, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 730, 10, -1));
-        jPanel1.add(jTDirOfi, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 730, 10, -1));
-        jPanel1.add(jTTelOfi, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 730, 10, -1));
+        jPanel1.add(jComUnid, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 110, 50));
 
         jBScann.setBackground(new java.awt.Color(255, 255, 255));
         jBScann.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/activado-2.png"))); // NOI18N
@@ -467,8 +361,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jTCant.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTCant.setText("1");
         jTCant.setToolTipText("Cantidad a Vender");
-        jTCant.setNextFocusableComponent(jTMon);
-        jPanel1.add(jTCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 490, 50, 50));
+        jPanel1.add(jTCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 490, 70, 50));
 
         jBSincronizar.setBackground(new java.awt.Color(255, 255, 255));
         jBSincronizar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -483,12 +376,15 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jB1ActionPerformed
+
     
         
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jB1;
-    protected javax.swing.JButton jBBuscGral;
     protected javax.swing.JButton jBCli;
     protected javax.swing.JButton jBCob;
     protected javax.swing.JButton jBDel;
@@ -502,8 +398,8 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
     protected javax.swing.JButton jBSincronizar;
     protected javax.swing.JButton jBTecla;
     protected javax.swing.JButton jBVeGran;
-    protected javax.swing.JComboBox jComUnid;
-    private javax.swing.JLabel jLImg;
+    protected com.era.views.comboboxes.UnidsCombobox jComUnid;
+    protected javax.swing.JLabel jLImg;
     private javax.swing.JLabel jLTipVta;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
@@ -512,54 +408,24 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
     private javax.swing.JLabel jLabel8;
     protected javax.swing.JPanel jPCon;
     protected javax.swing.JPanel jPanImg;
-    protected javax.swing.JPanel jPanProds;
+    protected com.era.views.panels.ProductsJPanel jPanProds;
     private javax.swing.JPanel jPanel1;
-    protected javax.swing.JPanel jPanelLin;
+    protected com.era.views.panels.LinesJPanel jPanelLin;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPaneLin;
     private javax.swing.JScrollPane jScrollProds;
-    private javax.swing.JTextField jTAlma;
-    protected javax.swing.JTextField jTBuscGral;
-    private javax.swing.JTextField jTCadu;
     protected javax.swing.JTextField jTCant;
-    private javax.swing.JTextField jTCantLot;
     protected javax.swing.JTextField jTCli;
-    private javax.swing.JTextField jTCodProd;
-    private javax.swing.JTextField jTColo;
-    private javax.swing.JTextField jTColoAut;
-    private javax.swing.JTextField jTComenSer;
     protected javax.swing.JTextField jTDesc;
-    private javax.swing.JTextField jTDirOfi;
-    private javax.swing.JTextField jTDirPart;
     private javax.swing.JTextField jTFec;
-    private javax.swing.JTextField jTGara;
-    private javax.swing.JTextField jTId;
-    private javax.swing.JTextField jTImpo;
     protected javax.swing.JTextField jTImpue;
-    private javax.swing.JTextField jTList;
-    private javax.swing.JTextField jTLot;
-    private javax.swing.JTextField jTMarc;
-    private javax.swing.JTextField jTMod;
-    protected javax.swing.JTextField jTMon;
-    private javax.swing.JTextField jTNom;
     protected javax.swing.JTextField jTNomb;
-    private javax.swing.JTextField jTNumLic;
-    private javax.swing.JTextField jTPedimen;
-    private javax.swing.JTextField jTPlacs;
     protected javax.swing.JTextField jTProd;
-    private javax.swing.JTextField jTQtyP;
-    private javax.swing.JTextField jTRecib;
-    private javax.swing.JTextField jTSer;
-    private javax.swing.JTextField jTSerProd;
+    protected javax.swing.JTextField jTQtyP;
     protected javax.swing.JTextField jTSubTot;
-    private javax.swing.JTextField jTTall;
-    private javax.swing.JTextField jTTarCirc;
-    private javax.swing.JTextField jTTel;
-    private javax.swing.JTextField jTTelOfi;
     protected javax.swing.JTextField jTTot;
-    private javax.swing.JTextField jTTotCost;
     protected javax.swing.JTextField jTTotDesc;
-    protected javax.swing.JTable jTab;
+    protected com.era.views.tables.PartvtaTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class PtoVtaTou extends javax.swing.JFrame */

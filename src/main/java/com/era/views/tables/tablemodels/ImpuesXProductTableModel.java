@@ -27,7 +27,7 @@ public class ImpuesXProductTableModel  extends BaseAbstractTableModel {
                final String taxCode = ImpuesXProduct.getImpue();
                
                //Get the tax from db
-               final Tax Tax = RepositoryFactory.getInstance().getTaxesRepository().getByCodeImpue(taxCode);
+               final Tax Tax = (Tax)RepositoryFactory.getInstance().getTaxesRepository().getByCode(taxCode);
                
                //Set the tax value
                double taxValue = 0;

@@ -70,6 +70,7 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMInven = new javax.swing.JMenu();
         jMVProd = new javax.swing.JMenuItem();
         jMenItKits = new javax.swing.JMenuItem();
+        linesMenuItem = new javax.swing.JMenuItem();
         warehousesMenu = new javax.swing.JMenuItem();
         jMLotPed = new javax.swing.JMenuItem();
         jMMInvenImpor = new javax.swing.JMenu();
@@ -453,6 +454,10 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMenItKits.setText("Kits");
         jMInven.add(jMenItKits);
 
+        linesMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/30clasificaciones.png"))); // NOI18N
+        linesMenuItem.setText("Líneas");
+        jMInven.add(linesMenuItem);
+
         warehousesMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/kits.png"))); // NOI18N
         warehousesMenu.setMnemonic('i');
         warehousesMenu.setText("Almacenes");
@@ -776,6 +781,7 @@ public abstract class PrincipJFrame extends BaseJFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JPopupMenu jPopupMenu2;
+    protected javax.swing.JMenuItem linesMenuItem;
     protected javax.swing.JMenuItem reportsMenu;
     protected javax.swing.JMenuItem warehousesMenu;
     // End of variables declaration//GEN-END:variables
