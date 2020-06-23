@@ -202,6 +202,9 @@ public class JComponentUtils {
                     if(JTextComponent.getText().trim().isEmpty()){
                         text = "0";
                     }
+                    else{
+                        text = JTextComponent.getText().trim();
+                    }
                     
                     text = UtilitiesFactory.getSingleton().getNumbersUtility().toMoneyFormat(text);
                     

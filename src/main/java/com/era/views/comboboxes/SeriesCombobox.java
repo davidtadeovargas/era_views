@@ -100,7 +100,7 @@ public class SeriesCombobox extends BaseComboBox<Serie> {
         final Serie SerieMethod = (Serie)ObjectMethod;
         
         boolean  found = false;        
-        if(SerieItem.getCode() != null && SerieItem.getCode().compareTo(SerieMethod.getCode())==0){
+        if(SerieItem.getSer() != null && SerieItem.getSer().compareTo(SerieMethod.getSer())==0){
             found = true;
         }
         

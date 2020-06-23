@@ -32,14 +32,15 @@ public abstract class SeriesJFrame extends BaseJFrame
         jTConsec = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.SerieTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
         jTDescrip = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        cmbTipoDocumento = new javax.swing.JComboBox<DocumentOrigin>();
+        cmbTipoDocumento = new com.era.views.comboboxes.DocumentOriginCombobox();
         jLabel2 = new javax.swing.JLabel();
+        tipdocdescripJTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -320,11 +321,29 @@ public abstract class SeriesJFrame extends BaseJFrame
         jLabel4.setText("*Consecutivo:");
         jP1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 110, -1));
 
-        jP1.add(cmbTipoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 200, -1));
+        jP1.add(cmbTipoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 90, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("*Tipo Documento:");
         jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        tipdocdescripJTextField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        tipdocdescripJTextField.setEnabled(false);
+        tipdocdescripJTextField.setNextFocusableComponent(jBNew);
+        tipdocdescripJTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tipdocdescripJTextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                tipdocdescripJTextFieldFocusLost(evt);
+            }
+        });
+        tipdocdescripJTextField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                tipdocdescripJTextFieldKeyPressed(evt);
+            }
+        });
+        jP1.add(tipdocdescripJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 230, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -332,14 +351,14 @@ public abstract class SeriesJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 609, Short.MAX_VALUE)
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -607,11 +626,23 @@ public abstract class SeriesJFrame extends BaseJFrame
     
         
     }//GEN-LAST:event_jTBuscFocusLost
+
+    private void tipdocdescripJTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tipdocdescripJTextFieldFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tipdocdescripJTextFieldFocusGained
+
+    private void tipdocdescripJTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tipdocdescripJTextFieldFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tipdocdescripJTextFieldFocusLost
+
+    private void tipdocdescripJTextFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tipdocdescripJTextFieldKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tipdocdescripJTextFieldKeyPressed
        
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JComboBox<DocumentOrigin> cmbTipoDocumento;
+    protected com.era.views.comboboxes.DocumentOriginCombobox cmbTipoDocumento;
     protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBDel;
     protected javax.swing.JButton jBMostT;
@@ -627,7 +658,8 @@ public abstract class SeriesJFrame extends BaseJFrame
     protected javax.swing.JTextField jTConsec;
     protected javax.swing.JTextField jTDescrip;
     protected javax.swing.JTextField jTSer;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.SerieTable jTab;
+    protected javax.swing.JTextField tipdocdescripJTextField;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

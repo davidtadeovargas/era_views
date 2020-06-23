@@ -44,7 +44,6 @@ public abstract class CobroJFrame extends BaseJFrame
         jTTar = new javax.swing.JTextField();
         jTTarDescrip = new javax.swing.JTextField();
         jTTarCredCant = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTAObserv = new javax.swing.JTextArea();
         jRTic = new javax.swing.JRadioButton();
@@ -58,17 +57,6 @@ public abstract class CobroJFrame extends BaseJFrame
         jRNoPag = new javax.swing.JRadioButton();
         jRPagad = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
-        jTVend = new javax.swing.JTextField();
-        jBVend = new javax.swing.JButton();
-        jTActivo = new javax.swing.JTextField();
-        jBActivo = new javax.swing.JButton();
-        jTSubramo = new javax.swing.JTextField();
-        jBSubramo = new javax.swing.JButton();
-        jTSector = new javax.swing.JTextField();
-        jBSector = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -410,11 +398,6 @@ public abstract class CobroJFrame extends BaseJFrame
         });
         jP1.add(jTTarCredCant, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 150, 30));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel7.setText("Sector:");
-        jP1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 100, -1));
-
         jTAObserv.setColumns(20);
         jTAObserv.setLineWrap(true);
         jTAObserv.setRows(5);
@@ -530,191 +513,6 @@ public abstract class CobroJFrame extends BaseJFrame
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setText("Cambio:");
         jP1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 110, -1));
-
-        jTVend.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTVend.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTVendFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTVendFocusLost(evt);
-            }
-        });
-        jTVend.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTVendKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTVendKeyTyped(evt);
-            }
-        });
-        jP1.add(jTVend, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 120, 20));
-
-        jBVend.setBackground(new java.awt.Color(255, 255, 255));
-        jBVend.setText("...");
-        jBVend.setToolTipText("Buscar Vendedor(es)");
-        jBVend.setNextFocusableComponent(jTActivo);
-        jBVend.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBVendMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBVendMouseExited(evt);
-            }
-        });
-        jBVend.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBVendActionPerformed(evt);
-            }
-        });
-        jBVend.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBVendKeyPressed(evt);
-            }
-        });
-        jP1.add(jBVend, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, 30, 20));
-
-        jTActivo.setEditable(false);
-        jTActivo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTActivo.setNextFocusableComponent(jBActivo);
-        jTActivo.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTActivoFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTActivoFocusLost(evt);
-            }
-        });
-        jTActivo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTActivoKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTActivoKeyTyped(evt);
-            }
-        });
-        jP1.add(jTActivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 120, 20));
-
-        jBActivo.setBackground(new java.awt.Color(255, 255, 255));
-        jBActivo.setText("...");
-        jBActivo.setToolTipText("Buscar Vendedor(es)");
-        jBActivo.setNextFocusableComponent(jTSubramo);
-        jBActivo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBActivoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBActivoMouseExited(evt);
-            }
-        });
-        jBActivo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBActivoActionPerformed(evt);
-            }
-        });
-        jBActivo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBActivoKeyPressed(evt);
-            }
-        });
-        jP1.add(jBActivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 30, 20));
-
-        jTSubramo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTSubramo.setNextFocusableComponent(jBSubramo);
-        jTSubramo.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTSubramoFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTSubramoFocusLost(evt);
-            }
-        });
-        jTSubramo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTSubramoKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTSubramoKeyTyped(evt);
-            }
-        });
-        jP1.add(jTSubramo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 120, 20));
-
-        jBSubramo.setBackground(new java.awt.Color(255, 255, 255));
-        jBSubramo.setText("...");
-        jBSubramo.setToolTipText("Buscar Vendedor(es)");
-        jBSubramo.setNextFocusableComponent(jTSector);
-        jBSubramo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBSubramoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBSubramoMouseExited(evt);
-            }
-        });
-        jBSubramo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSubramoActionPerformed(evt);
-            }
-        });
-        jP1.add(jBSubramo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 30, 20));
-
-        jTSector.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTSector.setNextFocusableComponent(jBSector);
-        jTSector.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTSectorFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTSectorFocusLost(evt);
-            }
-        });
-        jTSector.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTSectorKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTSectorKeyTyped(evt);
-            }
-        });
-        jP1.add(jTSector, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 120, 20));
-
-        jBSector.setBackground(new java.awt.Color(255, 255, 255));
-        jBSector.setText("...");
-        jBSector.setToolTipText("Buscar Vendedor(es)");
-        jBSector.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBSectorMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBSectorMouseExited(evt);
-            }
-        });
-        jBSector.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSectorActionPerformed(evt);
-            }
-        });
-        jBSector.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBSectorKeyPressed(evt);
-            }
-        });
-        jP1.add(jBSector, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 30, 20));
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel9.setText("Vendedor:");
-        jP1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 100, -1));
-
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel10.setText("Activo:");
-        jP1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 100, -1));
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel11.setText("Subramo:");
-        jP1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, 100, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1241,154 +1039,13 @@ public abstract class CobroJFrame extends BaseJFrame
     private void jRRemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRRemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRRemActionPerformed
-
-    private void jTVendFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTVendFocusGained
-
-
-    }//GEN-LAST:event_jTVendFocusGained
-
-    private void jTVendFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTVendFocusLost
-
-
-    }//GEN-LAST:event_jTVendFocusLost
-
-    private void jTVendKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTVendKeyPressed
-
-
-    }//GEN-LAST:event_jTVendKeyPressed
-
-    private void jTVendKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTVendKeyTyped
-
-
-
-    }//GEN-LAST:event_jTVendKeyTyped
-
-    private void jBVendMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVendMouseEntered
-
-
-
-    }//GEN-LAST:event_jBVendMouseEntered
-
-    private void jBVendMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVendMouseExited
-
-
-
-    }//GEN-LAST:event_jBVendMouseExited
-
-    private void jBVendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVendActionPerformed
-
-
-    }//GEN-LAST:event_jBVendActionPerformed
-
-    private void jBVendKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBVendKeyPressed
-
-
-    }//GEN-LAST:event_jBVendKeyPressed
-
-    private void jTActivoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTActivoFocusGained
-
-    }//GEN-LAST:event_jTActivoFocusGained
-
-    private void jTActivoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTActivoFocusLost
-
-    }//GEN-LAST:event_jTActivoFocusLost
-
-    private void jTActivoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTActivoKeyPressed
-
-    }//GEN-LAST:event_jTActivoKeyPressed
-
-    private void jTActivoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTActivoKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTActivoKeyTyped
-
-    private void jBActivoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActivoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBActivoMouseEntered
-
-    private void jBActivoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActivoMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBActivoMouseExited
-
-    private void jBActivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBActivoActionPerformed
-            
-    }//GEN-LAST:event_jBActivoActionPerformed
-
-    private void jBActivoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBActivoKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBActivoKeyPressed
-
-    private void jTSubramoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTSubramoFocusGained
-        
-    }//GEN-LAST:event_jTSubramoFocusGained
-
-    private void jTSubramoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTSubramoFocusLost
-        
-    }//GEN-LAST:event_jTSubramoFocusLost
-
-    private void jTSubramoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSubramoKeyPressed
-        
-    }//GEN-LAST:event_jTSubramoKeyPressed
-
-    private void jTSubramoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSubramoKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTSubramoKeyTyped
-
-    private void jBSubramoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSubramoMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBSubramoMouseEntered
-
-    private void jBSubramoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSubramoMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBSubramoMouseExited
-
-    private void jBSubramoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSubramoActionPerformed
-        
-    }//GEN-LAST:event_jBSubramoActionPerformed
-
-    private void jTSectorFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTSectorFocusGained
-        
-    }//GEN-LAST:event_jTSectorFocusGained
-
-    private void jTSectorFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTSectorFocusLost
-        
-    }//GEN-LAST:event_jTSectorFocusLost
-
-    private void jTSectorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSectorKeyPressed
-        
-    }//GEN-LAST:event_jTSectorKeyPressed
-
-    private void jTSectorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSectorKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTSectorKeyTyped
-
-    private void jBSectorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSectorMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBSectorMouseEntered
-
-    private void jBSectorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSectorMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBSectorMouseExited
-
-    private void jBSectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSectorActionPerformed
-        
-    }//GEN-LAST:event_jBSectorActionPerformed
-
-    private void jBSectorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBSectorKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBSectorKeyPressed
         
         
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JButton jBActivo;
     protected javax.swing.JButton jBCob;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JButton jBSector;
-    protected javax.swing.JButton jBSubramo;
-    protected javax.swing.JButton jBVend;
-    protected javax.swing.JLabel jLabel10;
-    protected javax.swing.JLabel jLabel11;
     protected javax.swing.JLabel jLabel3;
     protected javax.swing.JLabel jLabel31;
     protected javax.swing.JLabel jLabel32;
@@ -1397,9 +1054,7 @@ public abstract class CobroJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel4;
     protected javax.swing.JLabel jLabel5;
     protected javax.swing.JLabel jLabel6;
-    protected javax.swing.JLabel jLabel7;
     protected javax.swing.JLabel jLabel8;
-    protected javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
     protected javax.swing.JRadioButton jRFac;
     protected javax.swing.JRadioButton jRNoPag;
@@ -1408,8 +1063,7 @@ public abstract class CobroJFrame extends BaseJFrame
     protected javax.swing.JRadioButton jRRem;
     protected javax.swing.JRadioButton jRTic;
     protected javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTAObserv;
-    protected javax.swing.JTextField jTActivo;
+    protected javax.swing.JTextArea jTAObserv;
     protected javax.swing.JTextField jTCamb;
     protected javax.swing.JTextField jTDeb;
     protected javax.swing.JTextField jTDebCant;
@@ -1418,13 +1072,10 @@ public abstract class CobroJFrame extends BaseJFrame
     protected javax.swing.JTextField jTEfeCant;
     protected javax.swing.JTextField jTEfeDescrip;
     protected javax.swing.JTextField jTSald;
-    protected javax.swing.JTextField jTSector;
-    protected javax.swing.JTextField jTSubramo;
     protected javax.swing.JTextField jTTar;
     protected javax.swing.JTextField jTTarCredCant;
     protected javax.swing.JTextField jTTarDescrip;
     protected javax.swing.JTextField jTTot;
-    protected javax.swing.JTextField jTVend;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */
