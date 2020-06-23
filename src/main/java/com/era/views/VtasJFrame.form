@@ -256,6 +256,7 @@
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Vtas_jTableVentas"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
                   </AuxValues>
                 </Component>
               </SubComponents>
@@ -409,22 +410,6 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JButton" name="jBAyu">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="0" type="rgb"/>
-            </Property>
-            <Property name="toolTipText" type="java.lang.String" value="Ayuda de b&#xfa;squeda avanzada"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
-          </AuxValues>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="650" y="230" width="10" height="20"/>
-            </Constraint>
-          </Constraints>
-        </Component>
         <Container class="javax.swing.JPanel" name="jPanel1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -524,7 +509,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBDirX"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -554,7 +539,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBDirZ"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -586,7 +571,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBDevP"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -616,7 +601,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonDirectorioNotaCredito"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -646,7 +631,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBNew"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -676,7 +661,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonDirectorioCFDI"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -706,7 +691,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonAbrir"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -737,7 +722,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonDirectorioTickets"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -767,7 +752,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBVer"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -797,7 +782,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBDirCan"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -827,7 +812,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonEnviar"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -857,7 +842,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBDirBack"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -887,7 +872,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBPDF"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -917,7 +902,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBDirDev"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -947,7 +932,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonActualizar"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -977,7 +962,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBDirDevP"/>
                 </Property>
-              </Properties>             
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1007,7 +992,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonTimbrar"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1037,7 +1022,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonDirectorioAcuses"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1068,7 +1053,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jBEntre"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1095,7 +1080,7 @@
                 <Property name="text" type="java.lang.String" value="Acuses"/>
                 <Property name="toolTipText" type="java.lang.String" value="Directorio de acuses"/>
                 <Property name="horizontalAlignment" type="int" value="2"/>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1125,7 +1110,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonComprobar"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1155,7 +1140,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonAcuse"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1185,7 +1170,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonObtenerXML"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1215,7 +1200,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonTicketsFacturados"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1242,7 +1227,7 @@
                 <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="jButtonDirectorioRemisiones"/>
                 </Property>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1432,7 +1417,7 @@
                   <Color blue="0" green="66" red="0" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Relacionar"/>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1445,7 +1430,7 @@
             <Component class="javax.swing.JButton" name="jBAbrNotCred">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Abrir Not. Cred."/>
-              </Properties>              
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -1644,7 +1629,10 @@
                     <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
-                  </Properties>                  
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -1755,7 +1743,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="160" y="230" width="490" height="20"/>
+              <AbsoluteConstraints x="160" y="230" width="500" height="20"/>
             </Constraint>
           </Constraints>
         </Component>

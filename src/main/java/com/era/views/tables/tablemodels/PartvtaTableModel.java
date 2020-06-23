@@ -31,9 +31,6 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANTENTRE().getValue())==0){
                returnValue = Partvta.getCantentre().toString();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCODIMPUE().getValue())==0){
-               returnValue = Partvta.getCodimpue();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCOLO().getValue())==0){
                returnValue = Partvta.getColo();
            }
@@ -43,17 +40,11 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCOST().getValue())==0){
                returnValue = Partvta.getCost().toString();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCOSTPROM().getValue())==0){
-               returnValue = Partvta.getCostprom().toString();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCUENTACONTABLE().getValue())==0){
                returnValue = Partvta.getCuentacontable();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getDESCRIP().getValue())==0){
                returnValue = Partvta.getDescrip();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getDESCRIPCIONOPCIONAL().getValue())==0){
-               returnValue = Partvta.getDescripcionOpcional();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getDESCU().getValue())==0){
                returnValue = Partvta.getDescu().toString();
@@ -91,15 +82,6 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getIDLOTPED().getValue())==0){
                returnValue = String.valueOf(Partvta.getIdlotped());
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getIDPEPS().getValue())==0){
-               returnValue = Partvta.getIdpeps();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getIDUEPS().getValue())==0){
-               returnValue = Partvta.getIdueps();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getIDULTCOST().getValue())==0){
-               returnValue = String.valueOf(Partvta.getIdultcost());
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getIMPO().getValue())==0){
                returnValue = Partvta.getImpo().toString();
            }
@@ -121,20 +103,11 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getMON().getValue())==0){
                returnValue = Partvta.getMon();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getMONEDAID().getValue())==0){
-               returnValue = String.valueOf(Partvta.getMonedaID());
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getNOCAJ().getValue())==0){
                returnValue = Partvta.getNocaj();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getPARTIDAIDORIGINAL().getValue())==0){
-               returnValue = String.valueOf(Partvta.getPartidaIdOriginal());
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getPEDIMEN().getValue())==0){
                returnValue = Partvta.getPedimen();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getPEPS().getValue())==0){
-               returnValue = Partvta.getPeps().toString();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getPRE().getValue())==0){
                returnValue = Partvta.getPre().toString();
@@ -150,12 +123,6 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getTIPCAM().getValue())==0){
                returnValue = Partvta.getTipcam().toString();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getTIPDOC().getValue())==0){
-               returnValue = Partvta.getTipdoc();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getUEPS().getValue())==0){
-               returnValue = Partvta.getUeps().toString();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getUNID().getValue())==0){
                returnValue = Partvta.getUnid();

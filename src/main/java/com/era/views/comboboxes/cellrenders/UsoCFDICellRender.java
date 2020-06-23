@@ -5,7 +5,7 @@
  */
 package com.era.views.comboboxes.cellrenders;
 
-import com.era.models.UsoCFDI;
+import com.era.models.CUsoCFDI;
 import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JList;
@@ -23,8 +23,8 @@ public class UsoCFDICellRender extends DefaultListCellRenderer {
                                    int index,
                                    boolean isSelected,
                                    boolean cellHasFocus) {
-        if (value instanceof UsoCFDI) {
-            value = ((UsoCFDI)value).getDescription();
+        if (value instanceof CUsoCFDI) {
+            value = ((CUsoCFDI)value).getCode();
         }
         super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
         return this;

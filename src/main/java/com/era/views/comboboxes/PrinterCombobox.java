@@ -6,12 +6,10 @@
 package com.era.views.comboboxes;
 
 import com.era.datamodels.PrinterDataModel;
-import com.era.models.UsoCFDI;
 import com.era.utilities.UtilitiesFactory;
 import com.era.views.comboboxes.cellrenders.PrinterListCellRender;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.ComboBoxModel;
 
 /**
  *

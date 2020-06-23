@@ -27,14 +27,14 @@ public class ConfgralTable extends BaseJTable {
 
    @Override
    public void loadAllItemsInTable() throws Exception {
-       final List<Confgral> items_ = (List<Confgral>) RepositoryFactory.getInstance().getConfgralsRepository().getAll();
+       final List<Confgral> items_ = (List<Confgral>) RepositoryFactory.getInstance().getConfgralRepository().getAll();
        final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(items_,this.ShowColumns);
        this.setModel(ConfgralTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
-       final List<Confgral> items_ = (List<Confgral>) RepositoryFactory.getInstance().getConfgralsRepository().getByLikeEncabezados(search);
+       final List<Confgral> items_ = (List<Confgral>) RepositoryFactory.getInstance().getConfgralRepository().getByLikeEncabezados(search);
        final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(items_,this.ShowColumns);
        this.setModel(ConfgralTableModel);
    }

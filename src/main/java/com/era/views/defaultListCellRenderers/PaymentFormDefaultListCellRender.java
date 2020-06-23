@@ -5,7 +5,7 @@
  */
 package com.era.views.defaultListCellRenderers;
 
-import com.era.models.PaymentForm;
+import com.era.models.CPaymentForm;
 import java.awt.Component;
 import java.util.List;
 import javax.swing.DefaultListCellRenderer;
@@ -18,8 +18,8 @@ import javax.swing.JList;
  */
 public class PaymentFormDefaultListCellRender extends DefaultListCellRenderer {
     
-    public PaymentFormDefaultListCellRender( List<PaymentForm> paymentForms,
-                                             JComboBox<PaymentForm> jcombobox){
+    public PaymentFormDefaultListCellRender( List<CPaymentForm> paymentForms,
+                                             JComboBox<CPaymentForm> jcombobox){
         paymentForms.stream().forEach((PaymentForm_) -> {
             jcombobox.addItem(PaymentForm_);
         });
@@ -28,9 +28,9 @@ public class PaymentFormDefaultListCellRender extends DefaultListCellRenderer {
     @Override
     public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
         super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-        if(value instanceof PaymentForm){
-            PaymentForm PaymentForm = (PaymentForm) value;
-            setText(PaymentForm.getDescription());
+        if(value instanceof CPaymentForm){
+            CPaymentForm PaymentForm = (CPaymentForm) value;
+            setText(PaymentForm.getC_FormaPago());
         }
         return this;
     }

@@ -23,7 +23,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jSTab1 = new javax.swing.JScrollPane();
-        jTableVentas = new javax.swing.JTable();
+        jTableVentas = new com.era.views.tables.SalesTable();
         jBBusc = new javax.swing.JButton();
         jBMosT = new javax.swing.JButton();
         jLabelRemisionFactura = new javax.swing.JLabel();
@@ -31,7 +31,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jLNot = new javax.swing.JLabel();
         jLNotCli = new javax.swing.JLabel();
         jLTimb = new javax.swing.JLabel();
-        jBAyu = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jBGenPDF = new javax.swing.JButton();
         jBCa = new javax.swing.JButton();
@@ -70,7 +69,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBAbrNotCred = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTab2 = new javax.swing.JTable();
+        jTab2 = new com.era.views.tables.PartvtaTable();
         jRadioBoxTipoDeVentas = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         label_total = new javax.swing.JLabel();
@@ -161,11 +160,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jLNotCli.setBounds(20, 250, 490, 20);
         jP1.add(jLTimb);
         jLTimb.setBounds(90, 600, 80, 20);
-
-        jBAyu.setBackground(new java.awt.Color(0, 153, 153));
-        jBAyu.setToolTipText("Ayuda de búsqueda avanzada");
-        jP1.add(jBAyu);
-        jBAyu.setBounds(650, 230, 10, 20);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -560,7 +554,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTBusc.setNextFocusableComponent(jBMosT);
         jP1.add(jTBusc);
-        jTBusc.setBounds(160, 230, 490, 20);
+        jTBusc.setBounds(160, 230, 500, 20);
 
         getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 540));
 
@@ -570,7 +564,6 @@ public abstract class VtasJFrame extends BaseJFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBAbrNotCred;
-    protected javax.swing.JButton jBAyu;
     protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBCa;
     protected javax.swing.JButton jBCli;
@@ -622,8 +615,8 @@ public abstract class VtasJFrame extends BaseJFrame {
     private javax.swing.JScrollPane jSTab1;
     private javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JTextField jTBusc;
-    private javax.swing.JTable jTab2;
-    private javax.swing.JTable jTableVentas;
+    protected com.era.views.tables.PartvtaTable jTab2;
+    protected com.era.views.tables.SalesTable jTableVentas;
     protected javax.swing.JLabel label_total;
     protected javax.swing.JPanel navegacion;
     // End of variables declaration//GEN-END:variables

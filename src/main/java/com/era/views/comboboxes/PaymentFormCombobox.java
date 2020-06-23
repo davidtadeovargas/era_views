@@ -5,7 +5,7 @@
  */
 package com.era.views.comboboxes;
 
-import com.era.models.PaymentForm;
+import com.era.models.CPaymentForm;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.comboboxes.cellrenders.PaymentFormCellRender;
 import java.util.ArrayList;
@@ -15,24 +15,24 @@ import java.util.List;
  *
  * @author PC
  */
-public class PaymentFormCombobox extends BaseComboBox<PaymentForm> {
+public class PaymentFormCombobox extends BaseComboBox<CPaymentForm> {
     
     public PaymentFormCombobox(){
         super(new PaymentFormCellRender());
     }
     
     @Override
-    List<PaymentForm> getItems() throws Exception {
+    List<CPaymentForm> getItems() throws Exception {
         
         //Emtpy model
-        final PaymentForm PaymentForm = new PaymentForm();
+        final CPaymentForm PaymentForm = new CPaymentForm();
         PaymentForm.setDescription("");
         
-        final List<PaymentForm> payments = new ArrayList<>();
+        final List<CPaymentForm> payments = new ArrayList<>();
         payments.add(PaymentForm); //Add the empty model
         
         //Get all the payment methods
-        List<PaymentForm> paymentForms = (List<PaymentForm>)RepositoryFactory.getInstance().getPaymentFormsRepository().getAll();
+        List<CPaymentForm> paymentForms = (List<CPaymentForm>)RepositoryFactory.getInstance().getPaymentFormsRepository().getAll();
         
         //Add them all to the list
         payments.addAll(paymentForms);
@@ -44,11 +44,11 @@ public class PaymentFormCombobox extends BaseComboBox<PaymentForm> {
     protected boolean foundModel(Object ObjectItem, Object ObjectMethod){
         
         //Cast the models
-        final PaymentForm PaymentFormItem = (PaymentForm)ObjectItem;
-        final PaymentForm PaymentFormMethod = (PaymentForm)ObjectMethod;
+        final CPaymentForm PaymentFormItem = (CPaymentForm)ObjectItem;
+        final CPaymentForm PaymentFormMethod = (CPaymentForm)ObjectMethod;
         
         boolean  found = false;        
-        if(PaymentFormItem.getCode() != null && PaymentFormItem.getCode().compareTo(PaymentFormMethod.getCode())==0){
+        if(PaymentFormItem.getC_FormaPago() != null && PaymentFormItem.getC_FormaPago().compareTo(PaymentFormMethod.getC_FormaPago())==0){
             found = true;
         }
         

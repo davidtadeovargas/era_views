@@ -2,7 +2,7 @@ package com.era.views.tables.tablemodels;
 
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
-import com.era.models.PaymentForm;
+import com.era.models.CPaymentForm;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 
@@ -13,14 +13,14 @@ public class PaymentFormTableModel  extends BaseAbstractTableModel {
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
-           final PaymentForm PaymentForm = (PaymentForm) model;
+           final CPaymentForm PaymentForm = (CPaymentForm) model;
 
            String returnValue = "";
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getCODE().getValue())==0){
-               returnValue = PaymentForm.getCode();
+               returnValue = PaymentForm.getC_FormaPago();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPaymentFormsTableHeader().getDESCRIPTION().getValue())==0){
                returnValue = PaymentForm.getDescription();

@@ -2,7 +2,7 @@ package com.era.views.tables.tablemodels;
 
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
-import com.era.models.UsoCFDI;
+import com.era.models.CUsoCFDI;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 
@@ -13,7 +13,7 @@ public class UsoCFDITableModel  extends BaseAbstractTableModel {
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
-           final UsoCFDI UsoCFDI = (UsoCFDI) model;
+           final CUsoCFDI UsoCFDI = (CUsoCFDI) model;
 
            String returnValue = "";
            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsoCFDIsTableHeader().getROWNUMBER().getValue())==0){
@@ -31,17 +31,8 @@ public class UsoCFDITableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsoCFDIsTableHeader().getFALT().getValue())==0){
                returnValue = UsoCFDI.getFalt().toString();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsoCFDIsTableHeader().getFISICPERSON().getValue())==0){
-               returnValue = UsoCFDI.isFisicPerson()? "Si":"No";
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsoCFDIsTableHeader().getFMOD().getValue())==0){
                returnValue = UsoCFDI.getFmod().toString();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsoCFDIsTableHeader().getINITVIGENCYDATE().getValue())==0){
-               returnValue = UsoCFDI.getInitVigencyDate().toString();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsoCFDIsTableHeader().getMORALPERSON().getValue())==0){
-               returnValue = UsoCFDI.isMoralPerson()? "Si":"No";
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsoCFDIsTableHeader().getNOCAJ().getValue())==0){
                returnValue = UsoCFDI.getNocaj();

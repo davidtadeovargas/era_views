@@ -37,9 +37,6 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCODECOTIZACION().getValue())==0){
                returnValue = Sales.getCodeCotizacion();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCOINID().getValue())==0){
-               returnValue = String.valueOf(Sales.getCoinID());
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getCOMPANYCODE().getValue())==0){
                returnValue = Sales.getCompanyCode();
            }
@@ -54,9 +51,6 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getDELIVERDATE().getValue())==0){
                returnValue = Sales.getDeliverDate().toString();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getDELIVEREMAIL1().getValue())==0){
-               returnValue = String.valueOf(Sales.getDeliverEmail1());
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getDOCUMENTTYPE().getValue())==0){
                returnValue = Sales.getDocumentType();
@@ -168,9 +162,6 @@ public class SalesTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getTAX().getValue())==0){
                returnValue = Sales.getTax().toString();
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getTICKET().getValue())==0){
-               returnValue = String.valueOf(Sales.getTicket());
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getTOTAL().getValue())==0){
                returnValue = Sales.getTotal().toString();

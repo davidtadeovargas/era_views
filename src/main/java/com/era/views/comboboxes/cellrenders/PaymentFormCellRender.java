@@ -5,7 +5,7 @@
  */
 package com.era.views.comboboxes.cellrenders;
 
-import com.era.models.PaymentForm;
+import com.era.models.CPaymentForm;
 import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JList;
@@ -23,8 +23,8 @@ public class PaymentFormCellRender extends DefaultListCellRenderer {
                                    int index,
                                    boolean isSelected,
                                    boolean cellHasFocus) {
-        if (value instanceof PaymentForm) {
-            value = ((PaymentForm)value).getDescription();
+        if (value instanceof CPaymentForm) {
+            value = ((CPaymentForm)value).getDescription();
         }
         super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
         return this;

@@ -5,9 +5,9 @@
  */
 package com.era.views.comboboxes;
 
-import com.era.models.UsoCFDI;
+import com.era.models.CUsoCFDI;
 import com.era.repositories.RepositoryFactory;
-import com.era.views.comboboxes.cellrenders.PrinterListCellRender;
+import com.era.views.comboboxes.cellrenders.UsoCFDICellRender;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -16,22 +16,22 @@ import java.util.List;
  *
  * @author PC
  */
-public class UsoCFDICombobox extends BaseComboBox<UsoCFDI> {
+public class UsoCFDICombobox extends BaseComboBox<CUsoCFDI> {
 
     public UsoCFDICombobox(){
-        super(new PrinterListCellRender());
+        super(new UsoCFDICellRender());
     }
     
     @Override
-    List<UsoCFDI> getItems() throws Exception {
+    List<CUsoCFDI> getItems() throws Exception {
         
         //Emtpy model
-        final UsoCFDI UsoCFDI = new UsoCFDI();
-        UsoCFDI.setDescription("");
+        final CUsoCFDI CUsoCFDI = new CUsoCFDI();
+        CUsoCFDI.setDescription("");
         
-        final List<UsoCFDI> usos = new ArrayList<>();
-        usos.add(UsoCFDI);
-        usos.addAll((Collection<? extends UsoCFDI>) RepositoryFactory.getInstance().getUsoCFDIsRepository().getAll());
+        final List<CUsoCFDI> usos = new ArrayList<>();
+        usos.add(CUsoCFDI);
+        usos.addAll((Collection<? extends CUsoCFDI>) RepositoryFactory.getInstance().getCUsoCFDIsRepository().getAll());
         
         return usos;
     }
@@ -40,11 +40,11 @@ public class UsoCFDICombobox extends BaseComboBox<UsoCFDI> {
     protected boolean foundModel(Object ObjectItem, Object ObjectMethod){
         
         //Cast the models
-        final UsoCFDI UsoCFDIItem = (UsoCFDI)ObjectItem;
-        final UsoCFDI UsoCFDIMethod = (UsoCFDI)ObjectMethod;
+        final CUsoCFDI CUsoCFDIItem = (CUsoCFDI)ObjectItem;
+        final CUsoCFDI CUsoCFDIMethod = (CUsoCFDI)ObjectMethod;
         
         boolean  found = false;        
-        if(UsoCFDIItem.getCode() != null && UsoCFDIItem.getCode().compareTo(UsoCFDIMethod.getCode())==0){
+        if(CUsoCFDIItem.getCode() != null && CUsoCFDIItem.getCode().compareTo(CUsoCFDIMethod.getCode())==0){
             found = true;
         }
         

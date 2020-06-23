@@ -8,7 +8,7 @@ import java.util.List;
 public class SalesTable extends BaseJTable {
 
    public SalesTable(){
-       super();
+       super(RepositoryFactory.getInstance().getSalessRepository());
     }
 
    @Override

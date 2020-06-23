@@ -72,6 +72,7 @@ public abstract class ClientJFrame extends BaseJFrame
         jLabel42 = new javax.swing.JLabel();
         jTVend = new javax.swing.JTextField();
         jBVend = new javax.swing.JButton();
+        usoCfdiDescription = new javax.swing.JTextField();
         pnlDireccion = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jTCall = new javax.swing.JTextField();
@@ -660,6 +661,26 @@ public abstract class ClientJFrame extends BaseJFrame
             }
         });
 
+        usoCfdiDescription.setEditable(false);
+        usoCfdiDescription.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        usoCfdiDescription.setNextFocusableComponent(jTCtaConta);
+        usoCfdiDescription.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                usoCfdiDescriptionFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                usoCfdiDescriptionFocusLost(evt);
+            }
+        });
+        usoCfdiDescription.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                usoCfdiDescriptionKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                usoCfdiDescriptionKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlDatosBancariosLayout = new javax.swing.GroupLayout(pnlDatosBancarios);
         pnlDatosBancarios.setLayout(pnlDatosBancariosLayout);
         pnlDatosBancariosLayout.setHorizontalGroup(
@@ -718,19 +739,23 @@ public abstract class ClientJFrame extends BaseJFrame
                                     .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLUsoCfdi, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTCta, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                    .addComponent(jTCtaConta)
-                                    .addComponent(jComUsoCfdi, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                    .addComponent(jComFormPag, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))))
-                        .addGap(0, 206, Short.MAX_VALUE))))
+                                .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jTCta, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComFormPag, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlDatosBancariosLayout.createSequentialGroup()
+                                        .addComponent(jComUsoCfdi, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(usoCfdiDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTCtaConta))))
+                        .addGap(0, 160, Short.MAX_VALUE))))
         );
         pnlDatosBancariosLayout.setVerticalGroup(
             pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDatosBancariosLayout.createSequentialGroup()
                 .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComUsoCfdi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLUsoCfdi))
+                    .addComponent(jLUsoCfdi)
+                    .addComponent(usoCfdiDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(pnlDatosBancariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel29)
@@ -785,7 +810,7 @@ public abstract class ClientJFrame extends BaseJFrame
                 .addContainerGap(189, Short.MAX_VALUE))
         );
 
-        jP1.add(pnlDatosBancarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 400, 540));
+        jP1.add(pnlDatosBancarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 440, 540));
 
         pnlDireccion.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1277,7 +1302,7 @@ public abstract class ClientJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 812, Short.MAX_VALUE)
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 830, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -2181,6 +2206,22 @@ public abstract class ClientJFrame extends BaseJFrame
     private void jComFormPagFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jComFormPagFocusLost
 
     }//GEN-LAST:event_jComFormPagFocusLost
+
+    private void usoCfdiDescriptionFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usoCfdiDescriptionFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usoCfdiDescriptionFocusGained
+
+    private void usoCfdiDescriptionFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usoCfdiDescriptionFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usoCfdiDescriptionFocusLost
+
+    private void usoCfdiDescriptionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usoCfdiDescriptionKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usoCfdiDescriptionKeyPressed
+
+    private void usoCfdiDescriptionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usoCfdiDescriptionKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usoCfdiDescriptionKeyTyped
             
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -2266,6 +2307,7 @@ public abstract class ClientJFrame extends BaseJFrame
     protected javax.swing.JPanel pnlDatosBancarios;
     protected javax.swing.JPanel pnlDireccion;
     protected javax.swing.JPanel pnlTelefonos;
+    protected javax.swing.JTextField usoCfdiDescription;
     // End of variables declaration//GEN-END:variables
    
 }
