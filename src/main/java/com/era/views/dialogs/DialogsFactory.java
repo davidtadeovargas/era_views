@@ -133,6 +133,13 @@ public class DialogsFactory {
         ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
         ErrorOKDialog_.show();
     }
+    public void showErrorInvalidFileExtensionOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("errors_invalid_file_extension");
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }
+            
     public void showErrorRecordExistsOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText("errors_record_exists");

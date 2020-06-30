@@ -26,14 +26,14 @@ public class PartvtaTable extends BaseJTable {
 
    @Override
    public void loadAllItemsInTable() throws Exception {
-       final List<Partvta> items_ = (List<Partvta>) RepositoryFactory.getInstance().getPartvtasRepository().getAll();
+       final List<Partvta> items_ = (List<Partvta>) RepositoryFactory.getInstance().getPartvtaRepository().getAll();
        final PartvtaTableModel PartvtaTableModel = new PartvtaTableModel(items_,this.ShowColumns);
        this.setModel(PartvtaTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
-       final List<Partvta> items_ = (List<Partvta>) RepositoryFactory.getInstance().getPartvtasRepository().getByLikeEncabezados(search);
+       final List<Partvta> items_ = (List<Partvta>) RepositoryFactory.getInstance().getPartvtaRepository().getByLikeEncabezados(search);
        final PartvtaTableModel PartvtaTableModel = new PartvtaTableModel(items_,this.ShowColumns);
        this.setModel(PartvtaTableModel);
    }

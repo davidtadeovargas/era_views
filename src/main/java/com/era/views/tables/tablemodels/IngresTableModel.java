@@ -3,6 +3,8 @@ package com.era.views.tables.tablemodels;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
 import com.era.models.Ingres;
+import com.era.models.Product;
+import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 
@@ -66,6 +68,13 @@ public class IngresTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngressTableHeader().getPROD().getValue())==0){
                returnValue = Ingres.getProd();
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngressTableHeader().getPRODUCT_DESCRIPTION().getValue())==0){
+               
+               //Get the product
+               final Product Product = (Product)RepositoryFactory.getInstance().getProductsRepository().getByCode(Ingres.getProd());
+               
+               returnValue = Product.getDescription();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngressTableHeader().getSUCU().getValue())==0){
                returnValue = Ingres.getSucu();
