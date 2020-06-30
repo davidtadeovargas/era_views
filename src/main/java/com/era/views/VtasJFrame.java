@@ -21,13 +21,9 @@ public abstract class VtasJFrame extends BaseJFrame {
     private void initComponents() {
 
         jP1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jSTab1 = new javax.swing.JScrollPane();
-        jTableVentas = new com.era.views.tables.SalesTable();
         jBBusc = new javax.swing.JButton();
         jBMosT = new javax.swing.JButton();
         jLabelRemisionFactura = new javax.swing.JLabel();
-        jBTod = new javax.swing.JButton();
         jLNot = new javax.swing.JLabel();
         jLNotCli = new javax.swing.JLabel();
         jLTimb = new javax.swing.JLabel();
@@ -76,6 +72,8 @@ public abstract class VtasJFrame extends BaseJFrame {
         navegacion = new javax.swing.JPanel(new FlowLayout(FlowLayout.RIGHT));
         jLabel4 = new javax.swing.JLabel();
         jTBusc = new javax.swing.JTextField();
+        panelTable = new javax.swing.JScrollPane();
+        jTableVentas = new com.era.views.tables.SalesTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -84,34 +82,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.setMinimumSize(new java.awt.Dimension(100, 100));
         jP1.setPreferredSize(new java.awt.Dimension(1080, 700));
         jP1.setLayout(null);
-
-        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
-
-        jTableVentas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "No.", "Venta", "Folio", "Serie", "Cliente", "Total", "Total Descuento", "Total Costo", "Fecha Creación", "Fecha Documento", "Última Modificación", "Vencimiento", "Asignada N.C.", "Pago N.C.", "Estado", "Usuario", "Motivo", "Tipo Documento", "Observaciones", "Sucursal", "No. Caja", "Nombre Usuario", "Timbrada", "Cod.Cotización", "Venta Devolución", "id", "Fol.Fiscal"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, true, false, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTableVentas.setGridColor(new java.awt.Color(255, 255, 255));
-        jTableVentas.setNextFocusableComponent(jBBusc);
-        jTableVentas.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        jSTab1.setViewportView(jTableVentas);
-
-        jPanel2.add(jSTab1);
-
-        jP1.add(jPanel2);
-        jPanel2.setBounds(20, 30, 780, 200);
 
         jBBusc.setBackground(new java.awt.Color(255, 255, 255));
         jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -137,15 +107,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jLabelRemisionFactura.setText("?");
         jP1.add(jLabelRemisionFactura);
         jLabelRemisionFactura.setBounds(480, 10, 190, 17);
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTableVentas);
-        jP1.add(jBTod);
-        jBTod.setBounds(670, 12, 130, 18);
 
         jLNot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLNot.setForeground(new java.awt.Color(204, 0, 0));
@@ -192,7 +153,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonDirectorioRemisiones.setToolTipText("Abrir directorio de remisiones");
         jButtonDirectorioRemisiones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonDirectorioRemisiones.setNextFocusableComponent(jBDirX);
-        jPanel1.add(jButtonDirectorioRemisiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 130, -1));
+        jPanel1.add(jButtonDirectorioRemisiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 130, 30));
 
         jBDirX.setBackground(new java.awt.Color(255, 255, 255));
         jBDirX.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -212,7 +173,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBDev.setToolTipText("Devolución completa de venta(s) (F2)");
         jBDev.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBDev.setNextFocusableComponent(jBDevP);
-        jPanel1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 140, -1));
+        jPanel1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 140, 30));
 
         jBDirZ.setBackground(new java.awt.Color(255, 255, 255));
         jBDirZ.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -486,7 +447,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonAbrir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonAbrir.setName(""); // NOI18N
         jButtonAbrir.setNextFocusableComponent(jButtonNotaCredito);
-        jPanel1.add(jButtonAbrir, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 140, -1));
+        jPanel1.add(jButtonAbrir, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 140, 30));
 
         jButtonRelacionar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRelacionar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -556,6 +517,22 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.add(jTBusc);
         jTBusc.setBounds(160, 230, 500, 20);
 
+        jTableVentas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        panelTable.setViewportView(jTableVentas);
+
+        jP1.add(panelTable);
+        panelTable.setBounds(20, 30, 780, 200);
+
         getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 540));
 
         pack();
@@ -581,7 +558,6 @@ public abstract class VtasJFrame extends BaseJFrame {
     protected javax.swing.JButton jBNew;
     protected javax.swing.JButton jBPDF;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JButton jBTod;
     protected javax.swing.JButton jBVer;
     protected javax.swing.JButton jButtonAbrir;
     protected javax.swing.JButton jButtonActualizar;
@@ -609,16 +585,15 @@ public abstract class VtasJFrame extends BaseJFrame {
     protected javax.swing.JLabel jLabelRemisionFactura;
     private javax.swing.JPanel jP1;
     protected javax.swing.JPanel jPanel1;
-    protected javax.swing.JPanel jPanel2;
     protected javax.swing.JPanel jPanel3;
     protected javax.swing.JComboBox jRadioBoxTipoDeVentas;
-    private javax.swing.JScrollPane jSTab1;
     private javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JTextField jTBusc;
     protected com.era.views.tables.PartvtaTable jTab2;
     protected com.era.views.tables.SalesTable jTableVentas;
     protected javax.swing.JLabel label_total;
     protected javax.swing.JPanel navegacion;
+    protected javax.swing.JScrollPane panelTable;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Empresas extends javax.swing.JFrame */

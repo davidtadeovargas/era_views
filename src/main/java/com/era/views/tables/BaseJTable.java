@@ -100,10 +100,17 @@ public abstract class BaseJTable extends JTable {
         final List<?> list = Repository.getAllByPage(0);
         final long count_ = Repository.getCount();
         setCount(count_);
-        setPagination(Repository.getPaginationSize());
+        setPagination(Repository.getPaginationSize());                
         
         this.initTable(list);
     }
+
+    public void setJScrollPane(JScrollPane JScrollPane) {
+        this.JScrollPane = JScrollPane;
+        
+        loadScrollPaneScrollListener(JScrollPane);
+    }
+    
     
     private void loadDataByPage(final int initialIndex) throws Exception{
         
@@ -196,11 +203,9 @@ public abstract class BaseJTable extends JTable {
     }
     
     
-    public void loadScrollpane(){
+    private void loadScrollPaneScrollListener(final JScrollPane JScrollPane){
         
-         JScrollPane = new JScrollPane(this);
-         
-         //Listener when the scrolls is at the end and start of the rows table
+        //Listener when the scrolls is at the end and start of the rows table
         JScrollPane.getVerticalScrollBar().addAdjustmentListener((AdjustmentEvent e) -> {
             
             try{
@@ -280,6 +285,13 @@ public abstract class BaseJTable extends JTable {
                 LoggerUtility.getSingleton().logError(BaseJTable.class, ex);
             }
         });
+    }
+    
+    public void loadScrollpane(){
+        
+        JScrollPane = new JScrollPane(this);
+         
+        loadScrollPaneScrollListener(JScrollPane);
     }
 
     public JScrollPane getJScrollPane() {

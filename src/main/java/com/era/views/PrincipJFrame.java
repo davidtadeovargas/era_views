@@ -96,7 +96,6 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMCXC = new javax.swing.JMenuItem();
         jMenItTouch = new javax.swing.JMenuItem();
         jMImpCliens = new javax.swing.JMenuItem();
-        seriesJMenuItem = new javax.swing.JMenuItem();
         clasificationsMenu = new javax.swing.JMenuItem();
         jMActivo = new javax.swing.JMenuItem();
         jMenItMons = new javax.swing.JMenuItem();
@@ -596,11 +595,6 @@ public abstract class PrincipJFrame extends BaseJFrame {
 
         jMenInvents.add(jMenVtas);
 
-        seriesJMenuItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/claslin.png"))); // NOI18N
-        seriesJMenuItem.setMnemonic('l');
-        seriesJMenuItem.setText("Series");
-        jMenInvents.add(seriesJMenuItem);
-
         clasificationsMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/claslin.png"))); // NOI18N
         clasificationsMenu.setMnemonic('l');
         clasificationsMenu.setText("Catálogo General");
@@ -789,7 +783,6 @@ public abstract class PrincipJFrame extends BaseJFrame {
     private javax.swing.JPopupMenu jPopupMenu2;
     protected javax.swing.JMenuItem linesMenuItem;
     protected javax.swing.JMenuItem reportsMenu;
-    protected javax.swing.JMenuItem seriesJMenuItem;
     protected javax.swing.JMenuItem warehousesMenu;
     // End of variables declaration//GEN-END:variables
    

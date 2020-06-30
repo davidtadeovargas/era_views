@@ -59,10 +59,8 @@ public abstract class UsrsJFrame extends BaseJFrame {
         jTNoInt = new javax.swing.JTextField();
         jTNoExt = new javax.swing.JTextField();
         jCAdmCaj = new javax.swing.JCheckBox();
-        jBTab1 = new javax.swing.JButton();
         jCVend = new javax.swing.JCheckBox();
         jBLim = new javax.swing.JButton();
-        jBTod = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jTCiu = new javax.swing.JTextField();
         jTComi = new javax.swing.JTextField();
@@ -721,20 +719,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
         });
         jP1.add(jCAdmCaj, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 110, -1));
 
-        jBTab1.setBackground(new java.awt.Color(0, 153, 153));
-        jBTab1.setToolTipText("Mostrar Tabla en Grande");
-        jBTab1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTab1ActionPerformed(evt);
-            }
-        });
-        jBTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTab1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBTab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 10, 20));
-
         jCVend.setBackground(new java.awt.Color(255, 255, 255));
         jCVend.setText("Vendedor");
         jCVend.setNextFocusableComponent(jCPto);
@@ -772,32 +756,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
             }
         });
         jP1.add(jBLim, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, 120, -1));
-
-        jBTod.setBackground(new java.awt.Color(255, 255, 255));
-        jBTod.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jBTod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/marct.png"))); // NOI18N
-        jBTod.setText("Marcar todo");
-        jBTod.setToolTipText("Marcar Todos los Registros de la Tabla (Alt+T)");
-        jBTod.setNextFocusableComponent(jTab);
-        jBTod.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBTodMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBTodMouseExited(evt);
-            }
-        });
-        jBTod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBTodActionPerformed(evt);
-            }
-        });
-        jBTod.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBTodKeyPressed(evt);
-            }
-        });
-        jP1.add(jBTod, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, 130, 18));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel14.setText("Almacen:");
@@ -1115,11 +1073,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
     }//GEN-LAST:event_jBVeKeyPressed
 
 
-    private void jScrollImgKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jScrollImgKeyPressed
-
-
-    }//GEN-LAST:event_jScrollImgKeyPressed
-
 
     private void formMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_formMouseWheelMoved
 
@@ -1307,19 +1260,7 @@ public abstract class UsrsJFrame extends BaseJFrame {
     }//GEN-LAST:event_jBLimKeyPressed
 
     
-    private void jBTodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTodActionPerformed
-
-        
-
-    }//GEN-LAST:event_jBTodActionPerformed
-
     
-    private void jBTodKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTodKeyPressed
-
-    
-
-    }//GEN-LAST:event_jBTodKeyPressed
-
     
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
 
@@ -1359,11 +1300,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
 
     }//GEN-LAST:event_jBLimMouseEntered
 
-
-    private void jBTodMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseEntered
-
-
-    }//GEN-LAST:event_jBTodMouseEntered
 
 
     private void jBNewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseEntered
@@ -1418,11 +1354,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
 
     }//GEN-LAST:event_jBLimMouseExited
 
-
-    private void jBTodMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTodMouseExited
-
-
-    }//GEN-LAST:event_jBTodMouseExited
 
 
     private void jBNewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNewMouseExited
@@ -1616,13 +1547,9 @@ public abstract class UsrsJFrame extends BaseJFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTCorreoKeyPressed
 
-    private void jBTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBTab1KeyPressed
+    private void jScrollImgKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jScrollImgKeyPressed
 
-    }//GEN-LAST:event_jBTab1KeyPressed
-
-    private void jBTab1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTab1ActionPerformed
-
-    }//GEN-LAST:event_jBTab1ActionPerformed
+    }//GEN-LAST:event_jScrollImgKeyPressed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JPasswordField JTContrasenia;
@@ -1635,8 +1562,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
     protected javax.swing.JButton jBMostT;
     protected javax.swing.JButton jBNew;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JButton jBTab1;
-    protected javax.swing.JButton jBTod;
     protected javax.swing.JButton jBVe;
     protected javax.swing.JButton jBtnAlmacen;
     protected javax.swing.JButton jButton1;
@@ -1663,7 +1588,7 @@ public abstract class UsrsJFrame extends BaseJFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
     protected javax.swing.JPanel jPanImg;
-    protected javax.swing.JScrollPane jScrollImg;
+    private javax.swing.JScrollPane jScrollImg;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTCP;
