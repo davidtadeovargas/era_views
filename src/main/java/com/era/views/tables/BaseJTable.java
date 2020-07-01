@@ -7,6 +7,7 @@ package com.era.views.tables;
 
 import com.era.logger.LoggerUtility;
 import com.era.repositories.Repository;
+import com.era.utilities.UtilitiesFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 import com.era.views.tables.headers.ColumnTable;
 import java.awt.event.AdjustmentEvent;
@@ -16,6 +17,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -35,6 +37,7 @@ public abstract class BaseJTable extends JTable {
     protected OnScrollEnd OnScrollBottom;
     protected OnInitScrolls OnInitScrolls;
     protected OnEndScrolls OnEndScrolls;
+    protected OnPaginationLabelUpdate OnPaginationLabelUpdate;
     private boolean scrollAtStartWhenEnd;
     private ITableRowSelected ITableRowSelected;
     private int prevRowIndex = 0;
@@ -87,6 +90,10 @@ public abstract class BaseJTable extends JTable {
         init();
     }
 
+    public void setOnPaginationLabelUpdate(OnPaginationLabelUpdate OnPaginationLabelUpdate) {
+        this.OnPaginationLabelUpdate = OnPaginationLabelUpdate;
+    }    
+    
     public void setRepository(Repository Repository) {
         this.Repository = Repository;
     }
@@ -112,15 +119,13 @@ public abstract class BaseJTable extends JTable {
     }
     
     
-    private void loadDataByPage(final int initialIndex) throws Exception{
+    private void loadDataByPage() throws Exception{
         
-        final int value = lastRowIndex + Repository.getPaginationSize();
+        final int value = lastRowIndex;
         
         setPrevRowIndex(value);
                 
         final int previusIndex = getPrevRowIndex();
-        
-        lastRowIndex = value;
         
         final List<?> rows = Repository.getAllByPage(previusIndex);
         
@@ -202,6 +207,12 @@ public abstract class BaseJTable extends JTable {
         model.fireTableDataChanged();
     }
     
+    private String getPaginationText() throws Exception {
+        
+        final Properties Properties = UtilitiesFactory.getSingleton().getDialogPropertiesUitlity().getProperties();
+        final String text = Properties.getProperty("visible_records") + " " + getLastRowIndex() + " " + Properties.getProperty("visible_records_visibles") + " " + getPagination() + " " + Properties.getProperty("visible_records_of") + " " + getCount();
+        return text;
+    }
     
     private void loadScrollPaneScrollListener(final JScrollPane JScrollPane){
         
@@ -234,8 +245,20 @@ public abstract class BaseJTable extends JTable {
                             
                             //If use pagination
                             if(usePagination){
+                                
+                                lastRowIndex = lastRowIndex + Repository.getPaginationSize();
+                                
                                 final int value = lastRowIndex;
-                                loadDataByPage(value);
+                                loadDataByPage();
+                                
+                                if(OnPaginationLabelUpdate != null){
+
+                                    //Create the pagination string                                   
+                                    final String text = getPaginationText();
+
+                                    //Callback to the user
+                                    OnPaginationLabelUpdate.onUpdate(text);
+                                }
                             }
                             
                             if(OnScrollMinimum!=null){
@@ -256,12 +279,29 @@ public abstract class BaseJTable extends JTable {
                         else if(val == extent){ //At the very beginning
 
                             //If pagination
-                            if(usePagination){
-                                final int value = prevRowIndex - pagination;
-                                if(value<0){
+                            if(usePagination){                                                                
+                                
+                                int value = prevRowIndex - Repository.getPaginationSize();
+                                value = value<0?value*-1:value;
+                                
+                                lastRowIndex = value;
+                                
+                                if(OnPaginationLabelUpdate != null){
+
+                                    //Create the pagination string
+                                    final String text = getPaginationText();
+
+                                    //Callback to the user
+                                    OnPaginationLabelUpdate.onUpdate(text);
+                                }
+                                
+                                if(prevRowIndex==0){
                                     return;
                                 }
-                                loadDataByPage(value);
+                                
+                                loadDataByPage();
+                                
+                                prevRowIndex = value;
                             }
                             
                             if(OnScrollBottom!=null){
@@ -511,6 +551,10 @@ public abstract class BaseJTable extends JTable {
     public interface IInsertNewObjectToTable {
         public void onPrevInsert(Object Object);
         public void onPostInsert(Object Object);
+    }
+    
+    public interface OnPaginationLabelUpdate {
+        public void onUpdate(String paginationUpdate);        
     }
     
     public boolean isTableInitialized() {

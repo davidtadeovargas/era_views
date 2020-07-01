@@ -2,11 +2,16 @@ package com.era.views.tables.headers;
 
 public class SalessTableHeader extends BaseTableHeader {
 
-private final ColumnTable ROWNUMBER = new ColumnTable("No");
-   public ColumnTable getROWNUMBER() {
-       return this.ROWNUMBER;
-   }
-
+    private final ColumnTable ROWNUMBER = new ColumnTable("No");
+    public ColumnTable getROWNUMBER() {
+        return this.ROWNUMBER;
+    }
+    
+    private final ColumnTable SALE_ID = new ColumnTable("Venta");
+    public ColumnTable getSALE_ID() {
+        return this.SALE_ID;
+    }
+    
    private final ColumnTable ACCOUNT = new ColumnTable("Cuenta");
    public ColumnTable getACCOUNT() {
        return this.ACCOUNT;

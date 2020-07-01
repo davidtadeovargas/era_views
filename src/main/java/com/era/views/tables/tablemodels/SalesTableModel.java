@@ -13,15 +13,18 @@ public class SalesTableModel  extends BaseAbstractTableModel {
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
-           final Sales Sales = (Sales) model;
+            final Sales Sales = (Sales) model;
 
-           String returnValue = "";
-           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getROWNUMBER().getValue())==0){
+            String returnValue = "";
+            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getACCOUNT().getValue())==0){
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getACCOUNT().getValue())==0){
                returnValue = Sales.getAccount();
-           }
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getSALE_ID().getValue())==0){
+               returnValue = String.valueOf(Sales.getId());
+            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSalessTableHeader().getACTIVE().getValue())==0){
                returnValue = Sales.getActive();
            }

@@ -24,8 +24,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBBusc = new javax.swing.JButton();
         jBMosT = new javax.swing.JButton();
         jLabelRemisionFactura = new javax.swing.JLabel();
-        jLNot = new javax.swing.JLabel();
-        jLNotCli = new javax.swing.JLabel();
         jLTimb = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jBGenPDF = new javax.swing.JButton();
@@ -74,6 +72,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jTBusc = new javax.swing.JTextField();
         panelTable = new javax.swing.JScrollPane();
         jTableVentas = new com.era.views.tables.SalesTable();
+        jLabelPagination = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -107,18 +106,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jLabelRemisionFactura.setText("?");
         jP1.add(jLabelRemisionFactura);
         jLabelRemisionFactura.setBounds(480, 10, 190, 17);
-
-        jLNot.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLNot.setForeground(new java.awt.Color(204, 0, 0));
-        jLNot.setFocusable(false);
-        jP1.add(jLNot);
-        jLNot.setBounds(190, 10, 260, 20);
-
-        jLNotCli.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLNotCli.setForeground(new java.awt.Color(204, 0, 0));
-        jLNotCli.setFocusable(false);
-        jP1.add(jLNotCli);
-        jLNotCli.setBounds(20, 250, 490, 20);
         jP1.add(jLTimb);
         jLTimb.setBounds(90, 600, 80, 20);
 
@@ -532,6 +519,8 @@ public abstract class VtasJFrame extends BaseJFrame {
 
         jP1.add(panelTable);
         panelTable.setBounds(20, 30, 780, 200);
+        jP1.add(jLabelPagination);
+        jLabelPagination.setBounds(20, 250, 290, 20);
 
         getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 540));
 
@@ -577,11 +566,10 @@ public abstract class VtasJFrame extends BaseJFrame {
     protected javax.swing.JButton jButtonTicketsFacturados;
     protected javax.swing.JButton jButtonTimbrar;
     protected javax.swing.JButton jButtonVerArchivos;
-    protected javax.swing.JLabel jLNot;
-    protected javax.swing.JLabel jLNotCli;
     private javax.swing.JLabel jLTimb;
     protected javax.swing.JLabel jLabel3;
     protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabelPagination;
     protected javax.swing.JLabel jLabelRemisionFactura;
     private javax.swing.JPanel jP1;
     protected javax.swing.JPanel jPanel1;
