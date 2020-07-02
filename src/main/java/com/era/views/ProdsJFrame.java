@@ -67,7 +67,6 @@ public abstract class ProdsJFrame extends BaseJFrame
         jLabel36 = new javax.swing.JLabel();
         jCServ = new javax.swing.JCheckBox();
         jBVeGran = new javax.swing.JButton();
-        jSImg = new javax.swing.JScrollPane();
         jPanImg = new javax.swing.JPanel();
         jLImg = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
@@ -330,6 +329,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         });
         jP1.add(jTMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 80, 20));
 
+        jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -346,19 +346,8 @@ public abstract class ProdsJFrame extends BaseJFrame
                 return canEdit [columnIndex];
             }
         });
-        jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
         jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        jTab.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTabMouseClicked(evt);
-            }
-        });
-        jTab.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTabKeyPressed(evt);
-            }
-        });
         jScrollPane3.setViewportView(jTab);
         if (jTab.getColumnModel().getColumnCount() > 0) {
             jTab.getColumnModel().getColumn(2).setMinWidth(480);
@@ -808,7 +797,7 @@ public abstract class ProdsJFrame extends BaseJFrame
         jP1.add(jBFTec, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 30, 20));
 
         jCNoSolMaxMin.setBackground(new java.awt.Color(255, 255, 255));
-        jCNoSolMaxMin.setText("No solicitar MN");
+        jCNoSolMaxMin.setText("Solicitar MaxMin");
         jCNoSolMaxMin.setToolTipText("No solicitar Máximos y Mínimos");
         jCNoSolMaxMin.setNextFocusableComponent(jCBajCost);
         jCNoSolMaxMin.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -867,8 +856,6 @@ public abstract class ProdsJFrame extends BaseJFrame
         });
         jP1.add(jBVeGran, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 420, 30, 20));
 
-        jSImg.setNextFocusableComponent(jBCargImg);
-
         jPanImg.setBackground(new java.awt.Color(255, 255, 204));
         jPanImg.setNextFocusableComponent(jBCargImg);
         jPanImg.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -884,26 +871,10 @@ public abstract class ProdsJFrame extends BaseJFrame
                 jPanImgKeyPressed(evt);
             }
         });
+        jPanImg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanImg.add(jLImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 160));
 
-        javax.swing.GroupLayout jPanImgLayout = new javax.swing.GroupLayout(jPanImg);
-        jPanImg.setLayout(jPanImgLayout);
-        jPanImgLayout.setHorizontalGroup(
-            jPanImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImgLayout.createSequentialGroup()
-                .addGap(184, 184, 184)
-                .addComponent(jLImg)
-                .addGap(0, 227, Short.MAX_VALUE))
-        );
-        jPanImgLayout.setVerticalGroup(
-            jPanImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImgLayout.createSequentialGroup()
-                .addComponent(jLImg)
-                .addContainerGap(251, Short.MAX_VALUE))
-        );
-
-        jSImg.setViewportView(jPanImg);
-
-        jP1.add(jSImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 180, 160));
+        jP1.add(jPanImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 180, 160));
 
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel44.setText("Proveedor:");
@@ -2162,7 +2133,6 @@ public abstract class ProdsJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel8;
     protected javax.swing.JPanel jP1;
     protected javax.swing.JPanel jPanImg;
-    protected javax.swing.JScrollPane jSImg;
     protected javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JScrollPane jScrollPane3;

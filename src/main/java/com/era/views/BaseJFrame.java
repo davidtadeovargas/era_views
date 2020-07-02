@@ -23,6 +23,7 @@ import com.era.views.tables.BaseJTable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 
 
@@ -38,7 +39,11 @@ public abstract class BaseJFrame extends JFrame {
     protected JComponentUtils JComponentUtils = new JComponentUtils();
     protected OnJFrameVisible OnJFrameVisible;
     protected PostInitComponents PostInitComponents;
-    protected BaseJTable BaseJTable;    
+    protected BaseJTable BaseJTable;
+    
+    //For images
+    protected javax.swing.JLabel jLabelImage;
+    protected javax.swing.JPanel jPanelImage;
     
     protected String titleWindow;
     
@@ -90,6 +95,36 @@ public abstract class BaseJFrame extends JFrame {
             } catch (Exception ex1) {
                 Logger.getLogger(BaseJFrame.class.getName()).log(Level.SEVERE, null, ex1);
             }
+        }
+    }
+    
+    protected void initImageControls(final javax.swing.JLabel jLabelImage, final javax.swing.JPanel jPanelImage){
+        this.jLabelImage = jLabelImage;
+        this.jPanelImage = jPanelImage;
+    }
+    
+    protected void hideImage(){
+        if(jLabelImage!=null){
+            jLabelImage.setIcon(null);
+            jLabelImage.setVisible(false);
+        }        
+    }
+    
+    protected void showImage(final String imagePath){
+        
+        if(jLabelImage!=null && jPanelImage!=null){
+            
+            //Get width and height
+            final int w = jPanelImage.getWidth();
+            final int h = jPanelImage.getHeight();
+
+            //Get imageicon from path
+            final ImageIcon ImageIcon = UtilitiesFactory.getSingleton().getImagesUtility().getImageIconScaledFromPath(imagePath, w, h);
+            //ImageIcon.getImage().flush();
+            
+            //Show image
+            jLabelImage.setVisible(true);
+            jLabelImage.setIcon(ImageIcon);
         }
     }
     

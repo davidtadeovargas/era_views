@@ -32,7 +32,7 @@ public class IngresosEncabTableModel  extends BaseAbstractTableModel {
                returnValue = IngresosEncab.getConcep();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngresosEncabsTableHeader().getENTSAL().getValue())==0){
-               returnValue = IngresosEncab.isEntsal()? "Si":"No";
+               returnValue = IngresosEncab.isEntsal()? "Salida":"Entrada";
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getIngresosEncabsTableHeader().getESTAC().getValue())==0){
                returnValue = IngresosEncab.getEstac();

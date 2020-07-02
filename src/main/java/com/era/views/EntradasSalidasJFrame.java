@@ -52,7 +52,7 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
 
             },
             new String [] {
-                "No.", "Id", "Tipo", "Fecha", "Serie", "Folio", "Almacen", "Concepto", "Usuario", "Sucursal", "Caja"
+
             }
         ));
         jScrollPane1.setViewportView(tblEncabezados);
@@ -147,7 +147,7 @@ public abstract class EntradasSalidasJFrame extends BaseJFrame {
 
             },
             new String [] {
-                "No.", "Producto", "Descripcion", "Cantidad", "Unidad", "Costo", "Activo", "Pedimento", "Lote", "Caducidad"
+
             }
         ));
         jScrollPane2.setViewportView(tblPartidas);

@@ -117,7 +117,6 @@ public abstract class EmpresasJFrame extends BaseJFrame {
         BTNPlantilla = new javax.swing.JButton();
         BTNCargaPais = new javax.swing.JButton();
         BTNCodigoPostal = new javax.swing.JButton();
-        jSImg1 = new javax.swing.JScrollPane();
         jPanImg1 = new javax.swing.JPanel();
         jLImg = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -514,12 +513,6 @@ public abstract class EmpresasJFrame extends BaseJFrame {
         });
         PNLCampos.add(BTNCodigoPostal, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 305, 29, 20));
 
-        jSImg1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jSImg1KeyPressed(evt);
-            }
-        });
-
         jPanImg1.setBackground(new java.awt.Color(255, 255, 204));
         jPanImg1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -534,25 +527,10 @@ public abstract class EmpresasJFrame extends BaseJFrame {
                 jPanImg1KeyPressed(evt);
             }
         });
+        jPanImg1.setLayout(new java.awt.BorderLayout());
+        jPanImg1.add(jLImg, java.awt.BorderLayout.CENTER);
 
-        javax.swing.GroupLayout jPanImg1Layout = new javax.swing.GroupLayout(jPanImg1);
-        jPanImg1.setLayout(jPanImg1Layout);
-        jPanImg1Layout.setHorizontalGroup(
-            jPanImg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImg1Layout.createSequentialGroup()
-                .addComponent(jLImg)
-                .addGap(0, 141, Short.MAX_VALUE))
-        );
-        jPanImg1Layout.setVerticalGroup(
-            jPanImg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImg1Layout.createSequentialGroup()
-                .addComponent(jLImg)
-                .addContainerGap(90, Short.MAX_VALUE))
-        );
-
-        jSImg1.setViewportView(jPanImg1);
-
-        PNLCampos.add(jSImg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 299, 160, 90));
+        PNLCampos.add(jPanImg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 299, 140, 90));
 
         jLabel5.setText("Logotipo");
         PNLCampos.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(622, 279, -1, -1));
@@ -720,10 +698,6 @@ public abstract class EmpresasJFrame extends BaseJFrame {
 
     }//GEN-LAST:event_jPanImg1KeyPressed
 
-    private void jSImg1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jSImg1KeyPressed
-
-    }//GEN-LAST:event_jSImg1KeyPressed
-
     private void jBCargImgMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBCargImgMouseEntered
         
     }//GEN-LAST:event_jBCargImgMouseEntered
@@ -840,7 +814,6 @@ public abstract class EmpresasJFrame extends BaseJFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     protected javax.swing.JPanel jPanImg1;
-    private javax.swing.JScrollPane jSImg1;
     protected com.era.views.tables.BasDatsTable jTabEmpresas;
     // End of variables declaration//GEN-END:variables
 }

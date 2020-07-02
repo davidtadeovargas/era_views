@@ -34,7 +34,6 @@ public abstract class LinesJFrame extends BaseJFrame
         jTBusc = new javax.swing.JTextField();
         jBMostT = new javax.swing.JButton();
         jBActua = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
         jPanImg = new javax.swing.JPanel();
         jLImg = new javax.swing.JLabel();
         jBVeGran = new javax.swing.JButton();
@@ -209,17 +208,9 @@ public abstract class LinesJFrame extends BaseJFrame
 
             },
             new String [] {
-                "No.", "Código", "Descripción"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true
-            };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
-        });
+        ));
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBBusc);
         jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
@@ -345,26 +336,10 @@ public abstract class LinesJFrame extends BaseJFrame
                 jPanImgKeyPressed(evt);
             }
         });
+        jPanImg.setLayout(new java.awt.BorderLayout());
+        jPanImg.add(jLImg, java.awt.BorderLayout.CENTER);
 
-        javax.swing.GroupLayout jPanImgLayout = new javax.swing.GroupLayout(jPanImg);
-        jPanImg.setLayout(jPanImgLayout);
-        jPanImgLayout.setHorizontalGroup(
-            jPanImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImgLayout.createSequentialGroup()
-                .addGap(184, 184, 184)
-                .addComponent(jLImg)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanImgLayout.setVerticalGroup(
-            jPanImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImgLayout.createSequentialGroup()
-                .addComponent(jLImg)
-                .addContainerGap(161, Short.MAX_VALUE))
-        );
-
-        jScrollPane1.setViewportView(jPanImg);
-
-        jP1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 150, 140));
+        jP1.add(jPanImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, 150, 140));
 
         jBVeGran.setBackground(new java.awt.Color(255, 255, 255));
         jBVeGran.setToolTipText("Ver imágen  de producto completa");
@@ -793,7 +768,6 @@ public abstract class LinesJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jP1;
     protected javax.swing.JPanel jPanImg;
-    private javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTCod;

@@ -274,21 +274,8 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jPanel1.add(jBVeGran, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 720, 200, 30));
 
         jPanImg.setBackground(new java.awt.Color(255, 255, 204));
-
-        javax.swing.GroupLayout jPanImgLayout = new javax.swing.GroupLayout(jPanImg);
-        jPanImg.setLayout(jPanImgLayout);
-        jPanImgLayout.setHorizontalGroup(
-            jPanImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImgLayout.createSequentialGroup()
-                .addComponent(jLImg)
-                .addGap(0, 200, Short.MAX_VALUE))
-        );
-        jPanImgLayout.setVerticalGroup(
-            jPanImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImgLayout.createSequentialGroup()
-                .addComponent(jLImg)
-                .addContainerGap(170, Short.MAX_VALUE))
-        );
+        jPanImg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanImg.add(jLImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel1.add(jPanImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 550, 200, 170));
 

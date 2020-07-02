@@ -35,9 +35,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
         jLabel4 = new javax.swing.JLabel();
         jCHabDesc = new javax.swing.JCheckBox();
         jBVe = new javax.swing.JButton();
-        jScrollImg = new javax.swing.JScrollPane();
-        jPanImg = new javax.swing.JPanel();
-        jLImg = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -72,6 +69,8 @@ public abstract class UsrsJFrame extends BaseJFrame {
         JTContrasenia = new javax.swing.JPasswordField();
         jLabel16 = new javax.swing.JLabel();
         jTCorreo = new javax.swing.JTextField();
+        jPanImg = new javax.swing.JPanel();
+        jLImg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -430,46 +429,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
             }
         });
         jP1.add(jBVe, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 500, 20, 20));
-
-        jScrollImg.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jScrollImgKeyPressed(evt);
-            }
-        });
-
-        jPanImg.setNextFocusableComponent(jBCargImg);
-        jPanImg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jPanImgMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jPanImgMouseExited(evt);
-            }
-        });
-        jPanImg.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jPanImgKeyPressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanImgLayout = new javax.swing.GroupLayout(jPanImg);
-        jPanImg.setLayout(jPanImgLayout);
-        jPanImgLayout.setHorizontalGroup(
-            jPanImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImgLayout.createSequentialGroup()
-                .addComponent(jLImg)
-                .addGap(0, 148, Short.MAX_VALUE))
-        );
-        jPanImgLayout.setVerticalGroup(
-            jPanImgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanImgLayout.createSequentialGroup()
-                .addComponent(jLImg)
-                .addContainerGap(188, Short.MAX_VALUE))
-        );
-
-        jScrollImg.setViewportView(jPanImg);
-
-        jP1.add(jScrollImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 350, 150, 150));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         jLabel5.setText("Teléfono:");
@@ -858,6 +817,25 @@ public abstract class UsrsJFrame extends BaseJFrame {
             }
         });
         jP1.add(jTCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 190, 20));
+
+        jPanImg.setNextFocusableComponent(jBCargImg);
+        jPanImg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPanImgMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanImgMouseExited(evt);
+            }
+        });
+        jPanImg.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPanImgKeyPressed(evt);
+            }
+        });
+        jPanImg.setLayout(new java.awt.BorderLayout());
+        jPanImg.add(jLImg, java.awt.BorderLayout.CENTER);
+
+        jP1.add(jPanImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 350, 150, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1546,10 +1524,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
     private void jTCorreoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCorreoKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTCorreoKeyPressed
-
-    private void jScrollImgKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jScrollImgKeyPressed
-
-    }//GEN-LAST:event_jScrollImgKeyPressed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JPasswordField JTContrasenia;
@@ -1588,7 +1562,6 @@ public abstract class UsrsJFrame extends BaseJFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
     protected javax.swing.JPanel jPanImg;
-    private javax.swing.JScrollPane jScrollImg;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTCP;
