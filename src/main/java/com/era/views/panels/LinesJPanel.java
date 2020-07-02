@@ -8,6 +8,7 @@ package com.era.views.panels;
 import com.era.models.Line;
 import com.era.repositories.RepositoryFactory;
 import com.era.utilities.UtilitiesFactory;
+import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -38,7 +39,8 @@ public class LinesJPanel extends BaseJPanel {
 
             //Create the button
             final JButton JButton = new JButton(Line.getDescription());
-            JButton.setLayout(new java.awt.BorderLayout());                                                           
+            JButton.setLayout(new java.awt.BorderLayout());
+            JButton.setMaximumSize(new Dimension(Integer.MAX_VALUE, 500));
             JButton.add(jLImg2);
                         
             //Return the button

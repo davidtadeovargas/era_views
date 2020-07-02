@@ -45,7 +45,11 @@ public class JComponentUtils {
     private JDialog JDialog;
     private EscapeEvent EscapeEvent;
     protected F2Event F2Event;
+    protected ALT_TEvent ALT_TEvent;
+    protected ALT_TEvent ALT_FEvent;
+    protected ALT_TEvent ALT_REvent;
     protected F4Event F4Event;
+    protected F11Event F11Event;
     protected EnterEvent EnterEvent;
     private boolean componentsAlreadyInit;
     private boolean F2EventFired;
@@ -80,7 +84,11 @@ public class JComponentUtils {
         
         readOnly(mainContainer);
     }
-    
+
+    public void setF11Event(F11Event F11Event) {
+        this.F11Event = F11Event;
+    }
+        
     public void setDisposeInEscapeEvent(boolean disposeInEscapeEvent) {
         this.disposeInEscapeEvent = disposeInEscapeEvent;
     }
@@ -104,6 +112,30 @@ public class JComponentUtils {
             if(EscapeEvent!=null){
                 EscapeEvent.onEvent();
             }
+        }
+        else if(evt.isAltDown() && evt.getKeyCode() == KeyEvent.VK_T){
+            
+            LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "ALT_TEvent pressed");
+            
+            if(ALT_TEvent!=null){                
+                ALT_TEvent.onEvent();
+            }            
+        }
+        else if(evt.isAltDown() && evt.getKeyCode() == KeyEvent.VK_F){
+            
+            LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "ALT_FEvent pressed");
+            
+            if(ALT_FEvent!=null){                
+                ALT_FEvent.onEvent();
+            }            
+        }
+        else if(evt.isAltDown() && evt.getKeyCode() == KeyEvent.VK_R){
+            
+            LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "ALT_REvent pressed");
+            
+            if(ALT_REvent!=null){                
+                ALT_REvent.onEvent();
+            }            
         }
         else if(evt.getKeyCode() == KeyEvent.VK_F2){
             
@@ -130,6 +162,14 @@ public class JComponentUtils {
                 }   
             }
         }
+        else if(evt.getKeyCode() == KeyEvent.VK_F11){
+            
+            LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "KeyEvent.VK_F11 pressed");
+            
+            if(F11Event!=null){
+                F11Event.onEvent();
+            }
+        }
         else if(evt.getKeyCode() == KeyEvent.VK_ENTER){
             
             LoggerUtility.getSingleton().logInfo(JComponentUtils.class, "KeyEvent.VK_ENTER pressed");
@@ -139,6 +179,15 @@ public class JComponentUtils {
             }
         }
     }
+
+    public void setALT_FEvent(ALT_TEvent ALT_FEvent) {
+        this.ALT_FEvent = ALT_FEvent;
+    }
+
+    public void setALT_REvent(ALT_TEvent ALT_REvent) {
+        this.ALT_REvent = ALT_REvent;
+    }
+    
     
     public boolean F2EventFired(){
         final boolean val = F2EventFired;
@@ -550,7 +599,19 @@ public class JComponentUtils {
     public interface F2Event {
         public void onEvent();
     }
+    public interface ALT_TEvent {
+        public void onEvent();
+    }
+    public interface ALT_REvent {
+        public void onEvent();
+    }
+    public interface ALT_FEvent {
+        public void onEvent();
+    }
     public interface F4Event {
+        public void onEvent();
+    }
+    public interface F11Event {
         public void onEvent();
     }
     public interface EnterEvent {
@@ -565,6 +626,10 @@ public class JComponentUtils {
         this.EscapeEvent = EscapeEvent;
     }
 
+    public void setALT_TEvent(ALT_TEvent ALT_TEvent) {
+        this.ALT_TEvent = ALT_TEvent;
+    }
+    
     public void setF2Event(F2Event F2Event) {
         this.F2Event = F2Event;
     }

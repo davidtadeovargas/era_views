@@ -1,5 +1,7 @@
 package com.era.views;
 
+import javax.swing.ButtonGroup;
+
 
 public abstract class CobroJFrame extends BaseJFrame
 {
@@ -12,13 +14,10 @@ public abstract class CobroJFrame extends BaseJFrame
         //Post inicialization
         postInitComponents();
         
-        this.getRootPane().setDefaultButton(jBCob);
-        
-        jTEfeCant.grabFocus();                
-        
-        jTSald.setText("$0.00");
-        
-        jTCamb.setText("$0.00");
+        ButtonGroup g = new ButtonGroup();
+        g.add(jRTic);
+        g.add(jRRem);
+        g.add(jRFac);
     }
         
     
@@ -49,10 +48,8 @@ public abstract class CobroJFrame extends BaseJFrame
         jRTic = new javax.swing.JRadioButton();
         jRRem = new javax.swing.JRadioButton();
         jRFac = new javax.swing.JRadioButton();
-        jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jRNot = new javax.swing.JRadioButton();
         jLabel34 = new javax.swing.JLabel();
         jRNoPag = new javax.swing.JRadioButton();
         jRPagad = new javax.swing.JRadioButton();
@@ -444,17 +441,12 @@ public abstract class CobroJFrame extends BaseJFrame
 
         jRFac.setBackground(new java.awt.Color(255, 255, 255));
         jRFac.setText("Factura");
-        jRFac.setNextFocusableComponent(jRNot);
         jRFac.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jRFacKeyPressed(evt);
             }
         });
         jP1.add(jRFac, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 90, -1));
-
-        jLabel31.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel31.setText("Altl+ N");
-        jP1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 80, 20));
 
         jLabel32.setForeground(new java.awt.Color(0, 0, 255));
         jLabel32.setText("Altl+ T");
@@ -463,17 +455,6 @@ public abstract class CobroJFrame extends BaseJFrame
         jLabel33.setForeground(new java.awt.Color(0, 0, 255));
         jLabel33.setText("Altl+ R");
         jP1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 80, 20));
-
-        jRNot.setBackground(new java.awt.Color(255, 255, 255));
-        jRNot.setText("Nota");
-        jRNot.setToolTipText("Es un ticket cancelado (solo como comprobante)");
-        jRNot.setNextFocusableComponent(jBCob);
-        jRNot.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jRNotKeyPressed(evt);
-            }
-        });
-        jP1.add(jRNot, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 90, -1));
 
         jLabel34.setForeground(new java.awt.Color(0, 0, 255));
         jLabel34.setText("Altl+ F");
@@ -992,12 +973,6 @@ public abstract class CobroJFrame extends BaseJFrame
 
     
 
-    private void jRNotKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jRNotKeyPressed
-        
-
-        
-    }//GEN-LAST:event_jRNotKeyPressed
-
     
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
@@ -1047,7 +1022,6 @@ public abstract class CobroJFrame extends BaseJFrame
     protected javax.swing.JButton jBCob;
     protected javax.swing.JButton jBSal;
     protected javax.swing.JLabel jLabel3;
-    protected javax.swing.JLabel jLabel31;
     protected javax.swing.JLabel jLabel32;
     protected javax.swing.JLabel jLabel33;
     protected javax.swing.JLabel jLabel34;
@@ -1058,7 +1032,6 @@ public abstract class CobroJFrame extends BaseJFrame
     private javax.swing.JPanel jP1;
     protected javax.swing.JRadioButton jRFac;
     protected javax.swing.JRadioButton jRNoPag;
-    protected javax.swing.JRadioButton jRNot;
     protected javax.swing.JRadioButton jRPagad;
     protected javax.swing.JRadioButton jRRem;
     protected javax.swing.JRadioButton jRTic;

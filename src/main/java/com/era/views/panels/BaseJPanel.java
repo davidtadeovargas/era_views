@@ -9,6 +9,8 @@ import com.era.repositories.Repository;
 import javax.swing.BoxLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.LayoutManager;
 import java.awt.event.ActionEvent;
 import java.util.List;
@@ -27,7 +29,7 @@ public class BaseJPanel extends JPanel {
     
     public void loadAllButtonsFromRepository() throws Exception {
         final List<Object> items = (List<Object>)Repository.getAll();
-        loadAllButtons(items,new BoxLayout(this, BoxLayout.Y_AXIS));
+        loadAllButtons(items,new BoxLayout(this, BoxLayout.PAGE_AXIS));
     }
     
     public void loadAllButtonsPageAxis(final List<?> items) throws Exception {        

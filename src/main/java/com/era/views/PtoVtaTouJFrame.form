@@ -126,9 +126,6 @@
           <SubComponents>
             <Component class="com.era.views.tables.PartvtaTable" name="jTab">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
-                </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="26" rowCount="0">
                     <Column editable="true" title="Qty." type="java.lang.Object"/>
@@ -292,6 +289,9 @@
                       <Renderer/>
                     </Column>
                   </TableColumnModel>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="14" style="1"/>
                 </Property>
                 <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -548,7 +548,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanelLin">
+            <Container class="com.era.views.panels.LinesJPanel" name="jPanelLin">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
               </AuxValues>
@@ -603,7 +603,7 @@
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollProds">
           <Properties>
-            <Property name="horizontalScrollBarPolicy" type="int" value="32"/>
+            <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="verticalScrollBarPolicy" type="int" value="22"/>
             <Property name="viewportBorder" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -624,7 +624,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanProds">
+            <Container class="com.era.views.panels.ProductsJPanel" name="jPanProds">
               <Properties>
                 <Property name="autoscrolls" type="boolean" value="true"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">

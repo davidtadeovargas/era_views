@@ -12,6 +12,11 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.CODE;
    }
 
+   private final ColumnTable SERIE = new ColumnTable("Serie");
+   public ColumnTable getSERIE() {
+       return this.SERIE;
+   }
+   
    private final ColumnTable CONSECUTIVE = new ColumnTable("Consecutivo");
    public ColumnTable getCONSECUTIVE() {
        return this.CONSECUTIVE;

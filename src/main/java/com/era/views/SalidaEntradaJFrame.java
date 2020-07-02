@@ -89,7 +89,7 @@ public abstract class SalidaEntradaJFrame extends BaseJFrame {
         jScrollPane1.setViewportView(tblPartidas);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(20, 410, 650, 90);
+        jScrollPane1.setBounds(20, 410, 650, 130);
 
         jBtnAceptar.setBackground(new java.awt.Color(255, 255, 255));
         jBtnAceptar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -97,7 +97,7 @@ public abstract class SalidaEntradaJFrame extends BaseJFrame {
         jBtnAceptar.setText("Guardar");
         jBtnAceptar.setNextFocusableComponent(jBtnSalir);
         jPanel1.add(jBtnAceptar);
-        jBtnAceptar.setBounds(490, 500, 85, 30);
+        jBtnAceptar.setBounds(490, 540, 85, 30);
 
         jBtnSalir.setBackground(new java.awt.Color(255, 255, 255));
         jBtnSalir.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -105,7 +105,7 @@ public abstract class SalidaEntradaJFrame extends BaseJFrame {
         jBtnSalir.setLabel("Salir");
         jBtnSalir.setNextFocusableComponent(txtConcepto);
         jPanel1.add(jBtnSalir);
-        jBtnSalir.setBounds(580, 500, 90, 30);
+        jBtnSalir.setBounds(580, 540, 90, 30);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Encabezado"));
@@ -267,7 +267,7 @@ public abstract class SalidaEntradaJFrame extends BaseJFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 547, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

@@ -26,6 +26,9 @@ public class SerieTableModelGetValueAt implements IGetValueAt {
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getCODE().getValue())==0){
             returnValue = Serie.getCode();
         }
+        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getSERIE().getValue())==0){
+            returnValue = Serie.getSer();
+        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSeriesTableHeader().getCONSECUTIVE().getValue())==0){
             returnValue = String.valueOf(Serie.getConsecutive());
         }

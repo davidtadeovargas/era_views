@@ -8,6 +8,7 @@ package com.era.views.panels;
 import com.era.models.Product;
 import com.era.repositories.RepositoryFactory;
 import com.era.utilities.UtilitiesFactory;
+import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -20,7 +21,7 @@ public class ProductsJPanel extends BaseJPanel {
     public ProductsJPanel(){
     
         this.Repository = RepositoryFactory.getInstance().getLinesRepository();
-        
+                
         OnIteration = (Object Object) -> {
             
             //Cast the model
@@ -35,10 +36,11 @@ public class ProductsJPanel extends BaseJPanel {
             //Asign image
             javax.swing.JLabel jLImg2 = new javax.swing.JLabel();
             jLImg2.setIcon(ImageIcon);
-
+                        
             //Create the button
             final JButton JButton = new JButton(Product.getDescription());
-            JButton.setLayout(new java.awt.BorderLayout());                                                           
+            JButton.setLayout(new java.awt.BorderLayout());
+            JButton.setMaximumSize(new Dimension(Integer.MAX_VALUE, 500));
             JButton.add(jLImg2);
                         
             //Return the button

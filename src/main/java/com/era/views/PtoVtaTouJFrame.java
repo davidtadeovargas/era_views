@@ -88,7 +88,6 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jTNomb.setFocusable(false);
         jPanel1.add(jTNomb, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 460, 40));
 
-        jTab.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -105,6 +104,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
                 return canEdit [columnIndex];
             }
         });
+        jTab.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setRowHeight(25);
         jScrollPane1.setViewportView(jTab);
@@ -200,7 +200,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jBNewEmp.setNextFocusableComponent(jBCli);
         jPanel1.add(jBNewEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, 60, 40));
 
-        jScrollProds.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollProds.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollProds.setToolTipText("");
         jScrollProds.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         jScrollProds.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
