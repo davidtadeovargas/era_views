@@ -204,6 +204,7 @@ public abstract class LPrecsJFrame extends BaseJFrame
         jTPre10.setNextFocusableComponent(jTUti10);
         jP1.add(jTPre10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 150, 20));
 
+        jTextFieldUltimoCosto.setEditable(false);
         jTextFieldUltimoCosto.setText("$0.00");
         jTextFieldUltimoCosto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTextFieldUltimoCosto.addActionListener(new java.awt.event.ActionListener() {
