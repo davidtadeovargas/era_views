@@ -1054,7 +1054,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Solicitar MaxMin"/>
-            <Property name="toolTipText" type="java.lang.String" value="No solicitar M&#xe1;ximos y M&#xed;nimos"/>
+            <Property name="toolTipText" type="java.lang.String" value="Solicitar M&#xe1;ximos y M&#xed;nimos"/>
             <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
               <ComponentRef name="jCBajCost"/>
             </Property>

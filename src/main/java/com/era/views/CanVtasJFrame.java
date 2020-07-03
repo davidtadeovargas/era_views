@@ -24,15 +24,16 @@ public class CanVtasJFrame extends BaseJFrame
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.SalesTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
         jTMot = new javax.swing.JTextField();
+        jLabelPagination = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -45,7 +46,7 @@ public class CanVtasJFrame extends BaseJFrame
         jBCancel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBCancel.setName(""); // NOI18N
         jBCancel.setNextFocusableComponent(jBSal);
-        jP1.add(jBCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 70, 120, 30));
+        jP1.add(jBCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, 120, 30));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -55,11 +56,11 @@ public class CanVtasJFrame extends BaseJFrame
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBSal.setNextFocusableComponent(jBBusc);
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 100, 120, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 120, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Ventas:");
-        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 160, -1));
+        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 160, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("*Motivo:");
@@ -78,7 +79,7 @@ public class CanVtasJFrame extends BaseJFrame
         jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
         jScrollPane2.setViewportView(jTab);
 
-        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 740, 250));
+        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 740, 250));
 
         jBBusc.setBackground(new java.awt.Color(255, 255, 255));
         jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -87,11 +88,11 @@ public class CanVtasJFrame extends BaseJFrame
         jBBusc.setText("Buscar F3");
         jBBusc.setToolTipText("Se busca por los campos: tipo de documento, folio, serie, nombre de cliente, usuario, nombre de usuario");
         jBBusc.setNextFocusableComponent(jTBusc);
-        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 140, 19));
+        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 140, 19));
 
         jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTBusc.setNextFocusableComponent(jBMosT);
-        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 460, 20));
+        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 460, 20));
 
         jBMosT.setBackground(new java.awt.Color(255, 255, 255));
         jBMosT.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -100,11 +101,12 @@ public class CanVtasJFrame extends BaseJFrame
         jBMosT.setText("Mostrar F4");
         jBMosT.setToolTipText("Mostrar Nuevamente todos los Registros");
         jBMosT.setNextFocusableComponent(jTab);
-        jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, 140, 19));
+        jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, 140, 19));
 
         jTMot.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTMot.setNextFocusableComponent(jBCancel);
         jP1.add(jTMot, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 570, 20));
+        jP1.add(jLabelPagination, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 54, 330, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,10 +119,10 @@ public class CanVtasJFrame extends BaseJFrame
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,11 +137,12 @@ public class CanVtasJFrame extends BaseJFrame
     protected javax.swing.JButton jBSal;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabelPagination;
     private javax.swing.JPanel jP1;
-    private javax.swing.JScrollPane jScrollPane2;
+    protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTMot;
-    protected javax.swing.JTable jTab;
+    protected com.era.views.tables.SalesTable jTab;
     // End of variables declaration//GEN-END:variables
 
     @Override

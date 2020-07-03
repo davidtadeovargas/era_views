@@ -798,7 +798,7 @@ public abstract class ProdsJFrame extends BaseJFrame
 
         jCNoSolMaxMin.setBackground(new java.awt.Color(255, 255, 255));
         jCNoSolMaxMin.setText("Solicitar MaxMin");
-        jCNoSolMaxMin.setToolTipText("No solicitar Máximos y Mínimos");
+        jCNoSolMaxMin.setToolTipText("Solicitar Máximos y Mínimos");
         jCNoSolMaxMin.setNextFocusableComponent(jCBajCost);
         jCNoSolMaxMin.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {

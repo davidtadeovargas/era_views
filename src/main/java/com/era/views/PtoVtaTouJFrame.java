@@ -55,12 +55,12 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jBLed = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jTTotDesc = new javax.swing.JTextField();
-        jTFec = new javax.swing.JTextField();
         jLTipVta = new javax.swing.JLabel();
         jComUnid = new com.era.views.comboboxes.UnidsCombobox();
         jBScann = new javax.swing.JButton();
         jTCant = new javax.swing.JTextField();
         jBSincronizar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -208,7 +208,6 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jScrollProds.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
 
         jPanProds.setAutoscrolls(true);
-        jPanProds.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanProds.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jPanProds.setLayout(new java.awt.GridLayout(5, 3));
         jScrollProds.setViewportView(jPanProds);
@@ -321,12 +320,6 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jTTotDesc.setFocusable(false);
         jPanel1.add(jTTotDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 640, 300, 30));
 
-        jTFec.setEditable(false);
-        jTFec.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jTFec.setBorder(null);
-        jTFec.setFocusable(false);
-        jPanel1.add(jTFec, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 10, 310, 40));
-
         jLTipVta.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
         jLTipVta.setText("VENTA DE CONTADO");
         jLTipVta.setFocusable(false);
@@ -358,6 +351,11 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jBSincronizar.setNextFocusableComponent(jTProd);
         jPanel1.add(jBSincronizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 100, 80));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setText("OPCIONES F11");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, 280, 40));
+
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
         pack();
@@ -388,6 +386,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
     protected com.era.views.comboboxes.UnidsCombobox jComUnid;
     protected javax.swing.JLabel jLImg;
     private javax.swing.JLabel jLTipVta;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -404,7 +403,6 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
     protected javax.swing.JTextField jTCant;
     protected javax.swing.JTextField jTCli;
     protected javax.swing.JTextField jTDesc;
-    private javax.swing.JTextField jTFec;
     protected javax.swing.JTextField jTImpue;
     protected javax.swing.JTextField jTNomb;
     protected javax.swing.JTextField jTProd;
