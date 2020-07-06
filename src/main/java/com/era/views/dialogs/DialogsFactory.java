@@ -121,6 +121,18 @@ public class DialogsFactory {
         ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
         ErrorOKDialog_.show();
     }
+    public void showErrorInvalidLoginOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("users_invalid_login");
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }    
+    public void showErrorStopByConfigOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("errors_stop_by_config");
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }
     public void showErrorRecordNotExistsOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText("errors_not_record_exists");

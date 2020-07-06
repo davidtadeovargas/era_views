@@ -386,7 +386,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
     protected com.era.views.comboboxes.UnidsCombobox jComUnid;
     protected javax.swing.JLabel jLImg;
     private javax.swing.JLabel jLTipVta;
-    private javax.swing.JLabel jLabel1;
+    protected javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -398,8 +398,8 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
     private javax.swing.JPanel jPanel1;
     protected com.era.views.panels.LinesJPanel jPanelLin;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPaneLin;
-    private javax.swing.JScrollPane jScrollProds;
+    protected javax.swing.JScrollPane jScrollPaneLin;
+    protected javax.swing.JScrollPane jScrollProds;
     protected javax.swing.JTextField jTCant;
     protected javax.swing.JTextField jTCli;
     protected javax.swing.JTextField jTDesc;
