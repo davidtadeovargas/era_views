@@ -20,6 +20,7 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import com.era.views.interfaces.OnJFrameVisible;
 import com.era.views.tables.BaseJTable;
+import java.awt.Cursor;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -130,7 +131,7 @@ public abstract class BaseJFrame extends JFrame {
     
     public void addMouseListenerClicked(final JComponent JComponent, final MouseListenerClicked MouseListenerClicked){
         
-        addMouseListener(new java.awt.event.MouseAdapter() {
+        JComponent.addMouseListener(new java.awt.event.MouseAdapter() {
                 @Override
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
                     if(MouseListenerClicked != null){
@@ -144,6 +145,26 @@ public abstract class BaseJFrame extends JFrame {
                 @Override
                 public void mouseExited(java.awt.event.MouseEvent evt) {
                     
+                }
+            });
+    }
+    
+    public void showHandCursorWhenComponent(final JComponent JComponent){
+        
+        JComponent.addMouseListener(new java.awt.event.MouseAdapter() {
+                @Override
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    
+                }
+                @Override
+                public void mouseEntered(java.awt.event.MouseEvent evt) {
+                    System.out.println("mouseEntered in component");
+                    JComponent.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                }
+                @Override
+                public void mouseExited(java.awt.event.MouseEvent evt) {
+                    System.out.println("mouseExitedin component");
+                    JComponent.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
                 }
             });
     }

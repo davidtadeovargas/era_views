@@ -1,21 +1,19 @@
 package com.era.views;
 
+import java.util.List;
 
-public abstract class DevPVtaPtoJFrame extends BaseJFrame 
+public class DevVtaPtoJFrame extends BaseJFrame
 {
-    public DevPVtaPtoJFrame(final String idTextTitleWindow) 
-    {
+    public DevVtaPtoJFrame(final String idTextTitleWindow) {
+        
         super(idTextTitleWindow);
         
         initComponents();
         
         postInitComponents();
-        
-        this.getRootPane().setDefaultButton(jBDev);
     }
 
-        
-            
+    
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -23,12 +21,15 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jP1 = new javax.swing.JPanel();
         jBDev = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.SalesTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jTMot = new javax.swing.JTextField();
+        jLabelPagination = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -39,20 +40,23 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jBDev.setBackground(new java.awt.Color(255, 255, 255));
         jBDev.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBDev.setForeground(new java.awt.Color(0, 102, 0));
-        jBDev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/devpar.png"))); // NOI18N
-        jBDev.setText("Dev.Parcial");
-        jBDev.setToolTipText("Devolución parcial de venta(s)");
+        jBDev.setText("Devolución");
+        jBDev.setToolTipText("Devolver venta(s)");
         jBDev.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jP1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 50, 150, 30));
+        jP1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 60, 110, 30));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBSal.setForeground(new java.awt.Color(0, 102, 0));
-        jBSal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sal.png"))); // NOI18N
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, 150, 30));
+        jBSal.setNextFocusableComponent(jTMot);
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, 110, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Motivo:");
+        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 100, -1));
 
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -67,7 +71,7 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
         jScrollPane2.setViewportView(jTab);
 
-        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 740, 270));
+        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 740, 270));
 
         jBBusc.setBackground(new java.awt.Color(255, 255, 255));
         jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -76,11 +80,11 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jBBusc.setText("Buscar F3");
         jBBusc.setToolTipText("Se busca por los campos: tipo de documento, folio, serie, nombre de cliente, usuario, nombre de usuario");
         jBBusc.setNextFocusableComponent(jTBusc);
-        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 140, 19));
+        jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 140, 20));
 
         jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTBusc.setNextFocusableComponent(jBMosT);
-        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 460, 20));
+        jP1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 460, 20));
 
         jBMosT.setBackground(new java.awt.Color(255, 255, 255));
         jBMosT.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -89,11 +93,16 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jBMosT.setText("Mostrar F4");
         jBMosT.setToolTipText("Mostrar Nuevamente todos los Registros");
         jBMosT.setNextFocusableComponent(jBDev);
-        jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, 140, 19));
+        jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 330, 140, 19));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Ventas:");
-        jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 160, -1));
+        jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 160, -1));
+
+        jTMot.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        jTMot.setNextFocusableComponent(jTab);
+        jP1.add(jTMot, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 640, 20));
+        jP1.add(jLabelPagination, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 430, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,14 +110,14 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -124,11 +133,29 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
     protected javax.swing.JButton jBDev;
     protected javax.swing.JButton jBMosT;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    protected javax.swing.JLabel jLabelPagination;
     private javax.swing.JPanel jP1;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
-    private javax.swing.JTable jTab;
+    protected javax.swing.JTextField jTMot;
+    protected com.era.views.tables.SalesTable jTab;
     // End of variables declaration//GEN-END:variables
 
-}/*Fin de public class Clientes extends javax.swing.JFrame */
+    @Override
+    public List<?> getItemsToLoadInTable() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void clearFields() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void loadModelInFields(Object ObjectModel) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+}

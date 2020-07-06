@@ -53,7 +53,7 @@ public class CortszxTableModel  extends BaseAbstractTableModel {
                returnValue = String.valueOf(Cortszx.getNumcort());
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCortszxsTableHeader().getREGIS().getValue())==0){
-               returnValue = String.valueOf(Cortszx.getRegis());
+               returnValue = String.valueOf(Cortszx.isRegis());
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCortszxsTableHeader().getSUCU().getValue())==0){
                returnValue = Cortszx.getSucu();
