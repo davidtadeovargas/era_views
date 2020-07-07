@@ -25,13 +25,12 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
         jBImpVtas = new javax.swing.JButton();
         jBCanVtas = new javax.swing.JButton();
         jBVtas = new javax.swing.JButton();
-        jBCompa = new javax.swing.JButton();
         jBDevP = new javax.swing.JButton();
         jBDev = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
-        
+
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -78,7 +77,7 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
         jBCanVtas.setText("Cancelar");
         jBCanVtas.setToolTipText("Cancelar venta(s) ");
         jBCanVtas.setNextFocusableComponent(jBDev);
-        jP1.add(jBCanVtas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 50));
+        jP1.add(jBCanVtas, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 150, 50));
 
         jBVtas.setBackground(new java.awt.Color(255, 255, 255));
         jBVtas.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -86,17 +85,8 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
         jBVtas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/vtas.png"))); // NOI18N
         jBVtas.setText("Ventas");
         jBVtas.setToolTipText("Ver ventas");
-        jBVtas.setNextFocusableComponent(jBCompa);
+        jBVtas.setNextFocusableComponent(jBCanVtas);
         jP1.add(jBVtas, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 150, 50));
-
-        jBCompa.setBackground(new java.awt.Color(255, 255, 255));
-        jBCompa.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBCompa.setForeground(new java.awt.Color(0, 102, 0));
-        jBCompa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/compa.png"))); // NOI18N
-        jBCompa.setText("Comp.");
-        jBCompa.setToolTipText("Compatibilidades de productos");
-        jBCompa.setNextFocusableComponent(jBCanVtas);
-        jP1.add(jBCompa, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 150, 50));
 
         jBDevP.setBackground(new java.awt.Color(255, 255, 255));
         jBDevP.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -105,7 +95,7 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
         jBDevP.setText("Dev.Parcial");
         jBDevP.setToolTipText("Devolución parcial ventas");
         jBDevP.setNextFocusableComponent(jBSal);
-        jP1.add(jBDevP, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 150, 50));
+        jP1.add(jBDevP, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 150, 50));
 
         jBDev.setBackground(new java.awt.Color(255, 255, 255));
         jBDev.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -114,7 +104,7 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
         jBDev.setText("Devolución");
         jBDev.setToolTipText("Devolución ventas");
         jBDev.setNextFocusableComponent(jBDevP);
-        jP1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 150, 50));
+        jP1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,7 +132,6 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBCanVtas;
-    protected javax.swing.JButton jBCompa;
     protected javax.swing.JButton jBCortX;
     protected javax.swing.JButton jBCortZ;
     protected javax.swing.JButton jBDev;

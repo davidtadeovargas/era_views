@@ -1,34 +1,34 @@
 package com.era.views;
 
+import java.util.List;
 
-public abstract class DevPVtaPtoJFrame extends BaseJFrame 
+
+public class ImprVtasJFrame extends BaseJFrame
 {
-    public DevPVtaPtoJFrame(final String idTextTitleWindow) 
+    
+    public ImprVtasJFrame(final String idTextTitleWindow) 
     {
         super(idTextTitleWindow);
         
         initComponents();
         
         postInitComponents();
-        
-        this.getRootPane().setDefaultButton(jBDev);
     }
 
-        
-            
+                
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jP1 = new javax.swing.JPanel();
-        jBDev = new javax.swing.JButton();
+        jBImp = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTab = new com.era.views.tables.SalesTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jLabelPagination = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -37,14 +37,14 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jP1.setBackground(new java.awt.Color(255, 255, 255));
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jBDev.setBackground(new java.awt.Color(255, 255, 255));
-        jBDev.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDev.setForeground(new java.awt.Color(0, 102, 0));
-        jBDev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/devpar.png"))); // NOI18N
-        jBDev.setText("Dev.Parcial");
-        jBDev.setToolTipText("Devolución parcial de venta(s)");
-        jBDev.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jP1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 50, 150, 30));
+        jBImp.setBackground(new java.awt.Color(255, 255, 255));
+        jBImp.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jBImp.setForeground(new java.awt.Color(0, 102, 0));
+        jBImp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impres.png"))); // NOI18N
+        jBImp.setText("Imprimir");
+        jBImp.setToolTipText("Imprimir Venta(s)  (Ctrl+P)");
+        jBImp.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jP1.add(jBImp, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 30, 110, 30));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -53,7 +53,11 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, 150, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 60, 110, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("Ventas:");
+        jP1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, -1));
 
         jTab.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -68,14 +72,13 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jTab.setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
         jScrollPane2.setViewportView(jTab);
 
-        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 740, 270));
+        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 740, 290));
 
         jBBusc.setBackground(new java.awt.Color(255, 255, 255));
         jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBBusc.setForeground(new java.awt.Color(0, 102, 0));
         jBBusc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/busc5.png"))); // NOI18N
         jBBusc.setText("Buscar F3");
-        jBBusc.setToolTipText("Se busca por los campos: tipo de documento, folio, serie, nombre de cliente, usuario, nombre de usuario");
         jBBusc.setNextFocusableComponent(jTBusc);
         jP1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 140, 19));
 
@@ -88,14 +91,9 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
         jBMosT.setForeground(new java.awt.Color(0, 102, 0));
         jBMosT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
         jBMosT.setText("Mostrar F4");
-        jBMosT.setToolTipText("Mostrar Nuevamente todos los Registros");
-        jBMosT.setNextFocusableComponent(jBDev);
+        jBMosT.setNextFocusableComponent(jBImp);
         jP1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 320, 140, 19));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Ventas:");
-        jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 160, -1));
-        jP1.add(jLabelPagination, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 270, 20));
+        jP1.add(jLabelPagination, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 300, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,8 +101,8 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 886, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,22 +114,34 @@ public abstract class DevPVtaPtoJFrame extends BaseJFrame
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    
-    
-    
+          
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBBusc;
-    protected javax.swing.JButton jBDev;
+    protected javax.swing.JButton jBImp;
     protected javax.swing.JButton jBMosT;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
     protected javax.swing.JLabel jLabelPagination;
     private javax.swing.JPanel jP1;
     protected javax.swing.JScrollPane jScrollPane2;
     protected javax.swing.JTextField jTBusc;
     protected com.era.views.tables.SalesTable jTab;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public List<?> getItemsToLoadInTable() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void clearFields() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void loadModelInFields(Object ObjectModel) throws Exception {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

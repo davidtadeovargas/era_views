@@ -24,6 +24,7 @@ import javax.swing.JTable;
 import javax.swing.SwingConstants;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -50,10 +51,13 @@ public abstract class BaseJTable extends JTable {
     protected Repository Repository;
     private OnScrollsChanges OnScrollsChanges;
     
+    protected List<Integer> editablesColumnsIndexes = new ArrayList<>();
+    protected List<String> editablesColumns = new ArrayList<>();
+    
     protected IDeleteObjectInTable IDeleteObjectInTable; 
     protected IDeleteAllItemsInTable IDeleteAllItemsInTable;
     protected IInsertNewObjectToTable IInsertNewObjectToTable;
-    
+        
     protected List<ColumnTable> ShowColumns = new ArrayList<>();
     
     public abstract void initTable(final List<?> items);
@@ -67,9 +71,35 @@ public abstract class BaseJTable extends JTable {
         init();
     }
 
+    public void addEditableColumn(final String columnName){
+        editablesColumns.add(columnName);
+    }
+    
+    private void loadEditableColumns(){
+        if(editablesColumns!=null){
+            for(String editableColumn:editablesColumns){
+                final int columnIndex = getColumnIndex(editableColumn);        
+                editablesColumnsIndexes.add(columnIndex);
+            }
+        }        
+    }
+    
+    @Override
+    public boolean isCellEditable(int row, int column) {
+        return editablesColumnsIndexes.contains(column);            
+    }
+    
     public void setOnScrollsChanges(OnScrollsChanges OnScrollsChanges) {
         this.OnScrollsChanges = OnScrollsChanges;
     }
+
+    @Override
+    public void setModel(TableModel dataModel) {
+        super.setModel(dataModel); //To change body of generated methods, choose Tools | Templates.
+        
+        loadEditableColumns();
+    }    
+    
     
     public void setColumnWidth(int indexColumn, int width){
         getColumnModel().getColumn(indexColumn).setPreferredWidth(width);
@@ -145,6 +175,19 @@ public abstract class BaseJTable extends JTable {
         
         //Reload the table
         this.initTable(items);
+    }
+    
+    public int getColumnIndex(final String columnName){
+        
+        final int columnsCount = this.getColumnCount();
+        for(int x = 0; x < columnsCount; x++){
+            final String columnName_ = this.getColumnName(x);
+            if(columnName_.equals(columnName)){
+                return x;                
+            }
+        }
+        
+        return -1;
     }
     
     public boolean objectExists(final Object Object){

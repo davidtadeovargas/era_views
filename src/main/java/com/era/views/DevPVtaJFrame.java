@@ -20,7 +20,7 @@ public abstract class DevPVtaJFrame extends BaseJFrame
         jP1 = new javax.swing.JPanel();
         jBSal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
+        jTab = new com.era.views.tables.PartvtaTable();
         jPEnca = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -70,17 +70,9 @@ public abstract class DevPVtaJFrame extends BaseJFrame
 
             },
             new String [] {
-                "No.", "Producto", "Cantidad", "Unidad", "Almacén", "Lista", "Descripción", "Costo", "Descuento", "Impuesto", "Moneda", "Importe", "Devueltos", "Cant. Devolución", "Talla", "Color", "Lote", "Pedimento", "Caducidad", "Backorder", "ID", "Entregados", "Cod. Opcional"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, true, false
-            };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
-        });
+        ));
         jTab.setGridColor(new java.awt.Color(255, 255, 255));
         jTab.setNextFocusableComponent(jBGuar);
         jScrollPane1.setViewportView(jTab);
@@ -275,7 +267,7 @@ public abstract class DevPVtaJFrame extends BaseJFrame
     protected javax.swing.JTextField jTTipDoc;
     protected javax.swing.JTextField jTTot;
     protected javax.swing.JTextField jTVta;
-    private javax.swing.JTable jTab;
+    protected com.era.views.tables.PartvtaTable jTab;
     // End of variables declaration//GEN-END:variables
 
 }

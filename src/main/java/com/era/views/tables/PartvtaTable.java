@@ -7,10 +7,11 @@ import java.util.List;
 
 public class PartvtaTable extends BaseJTable {
 
-   public PartvtaTable(){
+    public PartvtaTable(){
        super();
     }
 
+   
    @Override
    public void initTable(List<?> items) {
        final PartvtaTableModel PartvtaTableModel = new PartvtaTableModel(items,this.ShowColumns);

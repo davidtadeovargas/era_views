@@ -25,6 +25,12 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getALMA().getValue())==0){
                returnValue = Partvta.getAlma();
            }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANT_DEV().getValue())==0){
+               returnValue = String.valueOf(Partvta.getCant().subtract(Partvta.getDevs()));
+           }
+           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANT_DEV_ORI().getValue())==0){
+               returnValue = String.valueOf(Partvta.getDevs());
+           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANT().getValue())==0){
                returnValue = Partvta.getCant().toString();
            }

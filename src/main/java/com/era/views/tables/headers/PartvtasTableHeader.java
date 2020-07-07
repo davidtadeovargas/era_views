@@ -17,11 +17,21 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ALMA;
    }
 
-   private final ColumnTable CANT = new ColumnTable("Cantdad");
+   private final ColumnTable CANT = new ColumnTable("Cant");
    public ColumnTable getCANT() {
        return this.CANT;
    }
 
+   private final ColumnTable CANT_DEV = new ColumnTable("Cant.Dev");
+   public ColumnTable getCANT_DEV() {
+       return this.CANT_DEV;
+   }
+   
+   private final ColumnTable CANT_DEV_ORI = new ColumnTable("Cant.Dev.Ori");
+   public ColumnTable getCANT_DEV_ORI() {
+       return this.CANT_DEV_ORI;
+   }
+   
    private final ColumnTable CANTENTRE = new ColumnTable("Cantidad Entregada");
    public ColumnTable getCANTENTRE() {
        return this.CANTENTRE;
