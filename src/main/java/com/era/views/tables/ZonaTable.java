@@ -13,7 +13,7 @@ public class ZonaTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ZonaTableModel ZonaTableModel = new ZonaTableModel(items,this.ShowColumns);
+       final ZonaTableModel ZonaTableModel = new ZonaTableModel(this,items,this.ShowColumns);
         this.setModel(ZonaTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ZonaTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Zona> items_ = (List<Zona>) RepositoryFactory.getInstance().getZonasRepository().getAll();
-       final ZonaTableModel ZonaTableModel = new ZonaTableModel(items_,this.ShowColumns);
+       final ZonaTableModel ZonaTableModel = new ZonaTableModel(this,items_,this.ShowColumns);
        this.setModel(ZonaTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Zona> items_ = (List<Zona>) RepositoryFactory.getInstance().getZonasRepository().getByLikeEncabezados(search);
-       final ZonaTableModel ZonaTableModel = new ZonaTableModel(items_,this.ShowColumns);
+       final ZonaTableModel ZonaTableModel = new ZonaTableModel(this,items_,this.ShowColumns);
        this.setModel(ZonaTableModel);
    }
 

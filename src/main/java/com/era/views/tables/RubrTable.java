@@ -13,7 +13,7 @@ public class RubrTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final RubrTableModel RubrTableModel = new RubrTableModel(items,this.ShowColumns);
+       final RubrTableModel RubrTableModel = new RubrTableModel(this,items,this.ShowColumns);
         this.setModel(RubrTableModel);
    }
 
@@ -27,14 +27,14 @@ public class RubrTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Rubr> items_ = (List<Rubr>) RepositoryFactory.getInstance().getRubrsRepository().getAll();
-       final RubrTableModel RubrTableModel = new RubrTableModel(items_,this.ShowColumns);
+       final RubrTableModel RubrTableModel = new RubrTableModel(this,items_,this.ShowColumns);
        this.setModel(RubrTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Rubr> items_ = (List<Rubr>) RepositoryFactory.getInstance().getRubrsRepository().getByLikeEncabezados(search);
-       final RubrTableModel RubrTableModel = new RubrTableModel(items_,this.ShowColumns);
+       final RubrTableModel RubrTableModel = new RubrTableModel(this,items_,this.ShowColumns);
        this.setModel(RubrTableModel);
    }
    

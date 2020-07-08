@@ -13,7 +13,7 @@ public class SectoresTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final SectoresTableModel SectoresTableModel = new SectoresTableModel(items,this.ShowColumns);
+       final SectoresTableModel SectoresTableModel = new SectoresTableModel(this,items,this.ShowColumns);
         this.setModel(SectoresTableModel);
    }
 
@@ -27,14 +27,14 @@ public class SectoresTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Sectores> items_ = (List<Sectores>) RepositoryFactory.getInstance().getSectoressRepository().getAll();
-       final SectoresTableModel SectoresTableModel = new SectoresTableModel(items_,this.ShowColumns);
+       final SectoresTableModel SectoresTableModel = new SectoresTableModel(this,items_,this.ShowColumns);
        this.setModel(SectoresTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Sectores> items_ = (List<Sectores>) RepositoryFactory.getInstance().getSectoressRepository().getByLikeEncabezados(search);
-       final SectoresTableModel SectoresTableModel = new SectoresTableModel(items_,this.ShowColumns);
+       final SectoresTableModel SectoresTableModel = new SectoresTableModel(this,items_,this.ShowColumns);
        this.setModel(SectoresTableModel);
    }
    

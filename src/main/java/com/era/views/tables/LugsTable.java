@@ -13,7 +13,7 @@ public class LugsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final LugsTableModel LugsTableModel = new LugsTableModel(items,this.ShowColumns);
+       final LugsTableModel LugsTableModel = new LugsTableModel(this,items,this.ShowColumns);
         this.setModel(LugsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class LugsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Lugs> items_ = (List<Lugs>) RepositoryFactory.getInstance().getLugssRepository().getAll();
-       final LugsTableModel LugsTableModel = new LugsTableModel(items_,this.ShowColumns);
+       final LugsTableModel LugsTableModel = new LugsTableModel(this,items_,this.ShowColumns);
        this.setModel(LugsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Lugs> items_ = (List<Lugs>) RepositoryFactory.getInstance().getLugssRepository().getByLikeEncabezados(search);
-       final LugsTableModel LugsTableModel = new LugsTableModel(items_,this.ShowColumns);
+       final LugsTableModel LugsTableModel = new LugsTableModel(this,items_,this.ShowColumns);
        this.setModel(LugsTableModel);
    }
    

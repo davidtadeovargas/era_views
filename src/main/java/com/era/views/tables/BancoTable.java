@@ -13,7 +13,7 @@ public class BancoTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final BancoTableModel BancoTableModel = new BancoTableModel(items,this.ShowColumns);
+       final BancoTableModel BancoTableModel = new BancoTableModel(this,items,this.ShowColumns);
         this.setModel(BancoTableModel);
    }
 
@@ -27,14 +27,14 @@ public class BancoTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Banco> items_ = (List<Banco>) RepositoryFactory.getInstance().getBancosRepository().getAll();
-       final BancoTableModel BancoTableModel = new BancoTableModel(items_,this.ShowColumns);
+       final BancoTableModel BancoTableModel = new BancoTableModel(this,items_,this.ShowColumns);
        this.setModel(BancoTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Banco> items_ = (List<Banco>) RepositoryFactory.getInstance().getBancosRepository().getByLikeEncabezados(search);
-       final BancoTableModel BancoTableModel = new BancoTableModel(items_,this.ShowColumns);
+       final BancoTableModel BancoTableModel = new BancoTableModel(this,items_,this.ShowColumns);
        this.setModel(BancoTableModel);
    }
    

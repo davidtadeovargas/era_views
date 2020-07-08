@@ -13,7 +13,7 @@ public class AnaqsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final AnaqsTableModel AnaqsTableModel = new AnaqsTableModel(items,this.ShowColumns);
+       final AnaqsTableModel AnaqsTableModel = new AnaqsTableModel(this,items,this.ShowColumns);
         this.setModel(AnaqsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class AnaqsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Anaqs> items_ = (List<Anaqs>) RepositoryFactory.getInstance().getAnaqssRepository().getAll();
-       final AnaqsTableModel AnaqsTableModel = new AnaqsTableModel(items_,this.ShowColumns);
+       final AnaqsTableModel AnaqsTableModel = new AnaqsTableModel(this,items_,this.ShowColumns);
        this.setModel(AnaqsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Anaqs> items_ = (List<Anaqs>) RepositoryFactory.getInstance().getAnaqssRepository().getByLikeEncabezados(search);
-       final AnaqsTableModel AnaqsTableModel = new AnaqsTableModel(items_,this.ShowColumns);
+       final AnaqsTableModel AnaqsTableModel = new AnaqsTableModel(this,items_,this.ShowColumns);
        this.setModel(AnaqsTableModel);
    }
    

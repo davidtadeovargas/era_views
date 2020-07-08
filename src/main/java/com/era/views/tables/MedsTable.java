@@ -13,7 +13,7 @@ public class MedsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final MedsTableModel MedsTableModel = new MedsTableModel(items,this.ShowColumns);
+       final MedsTableModel MedsTableModel = new MedsTableModel(this,items,this.ShowColumns);
         this.setModel(MedsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class MedsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Meds> items_ = (List<Meds>) RepositoryFactory.getInstance().getMedssRepository().getAll();
-       final MedsTableModel MedsTableModel = new MedsTableModel(items_,this.ShowColumns);
+       final MedsTableModel MedsTableModel = new MedsTableModel(this,items_,this.ShowColumns);
        this.setModel(MedsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Meds> items_ = (List<Meds>) RepositoryFactory.getInstance().getMedssRepository().getByLikeEncabezados(search);
-       final MedsTableModel MedsTableModel = new MedsTableModel(items_,this.ShowColumns);
+       final MedsTableModel MedsTableModel = new MedsTableModel(this,items_,this.ShowColumns);
        this.setModel(MedsTableModel);
    }
    

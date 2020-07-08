@@ -13,7 +13,7 @@ public class MaxminconfTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final MaxminconfTableModel MaxminconfTableModel = new MaxminconfTableModel(items,this.ShowColumns);
+       final MaxminconfTableModel MaxminconfTableModel = new MaxminconfTableModel(this,items,this.ShowColumns);
         this.setModel(MaxminconfTableModel);
    }
 
@@ -27,14 +27,14 @@ public class MaxminconfTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Maxminconf> items_ = (List<Maxminconf>) RepositoryFactory.getInstance().getMaxminconfsRepository().getAll();
-       final MaxminconfTableModel MaxminconfTableModel = new MaxminconfTableModel(items_,this.ShowColumns);
+       final MaxminconfTableModel MaxminconfTableModel = new MaxminconfTableModel(this,items_,this.ShowColumns);
        this.setModel(MaxminconfTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Maxminconf> items_ = (List<Maxminconf>) RepositoryFactory.getInstance().getMaxminconfsRepository().getByLikeEncabezados(search);
-       final MaxminconfTableModel MaxminconfTableModel = new MaxminconfTableModel(items_,this.ShowColumns);
+       final MaxminconfTableModel MaxminconfTableModel = new MaxminconfTableModel(this,items_,this.ShowColumns);
        this.setModel(MaxminconfTableModel);
    }
    

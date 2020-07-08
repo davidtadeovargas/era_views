@@ -13,7 +13,7 @@ public class ResplogTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ResplogTableModel ResplogTableModel = new ResplogTableModel(items,this.ShowColumns);
+       final ResplogTableModel ResplogTableModel = new ResplogTableModel(this,items,this.ShowColumns);
         this.setModel(ResplogTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ResplogTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Resplog> items_ = (List<Resplog>) RepositoryFactory.getInstance().getResplogsRepository().getAll();
-       final ResplogTableModel ResplogTableModel = new ResplogTableModel(items_,this.ShowColumns);
+       final ResplogTableModel ResplogTableModel = new ResplogTableModel(this,items_,this.ShowColumns);
        this.setModel(ResplogTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Resplog> items_ = (List<Resplog>) RepositoryFactory.getInstance().getResplogsRepository().getByLikeEncabezados(search);
-       final ResplogTableModel ResplogTableModel = new ResplogTableModel(items_,this.ShowColumns);
+       final ResplogTableModel ResplogTableModel = new ResplogTableModel(this,items_,this.ShowColumns);
        this.setModel(ResplogTableModel);
    }
    

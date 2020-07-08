@@ -13,7 +13,7 @@ public class SupplierTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final SupplierTableModel SupplierTableModel = new SupplierTableModel(items,this.ShowColumns);
+       final SupplierTableModel SupplierTableModel = new SupplierTableModel(this,items,this.ShowColumns);
         this.setModel(SupplierTableModel);
    }
 
@@ -27,14 +27,14 @@ public class SupplierTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Supplier> items_ = (List<Supplier>) RepositoryFactory.getInstance().getSuppliersRepository().getAll();
-       final SupplierTableModel SupplierTableModel = new SupplierTableModel(items_,this.ShowColumns);
+       final SupplierTableModel SupplierTableModel = new SupplierTableModel(this,items_,this.ShowColumns);
        this.setModel(SupplierTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Supplier> items_ = (List<Supplier>) RepositoryFactory.getInstance().getSuppliersRepository().getByLikeEncabezados(search);
-       final SupplierTableModel SupplierTableModel = new SupplierTableModel(items_,this.ShowColumns);
+       final SupplierTableModel SupplierTableModel = new SupplierTableModel(this,items_,this.ShowColumns);
        this.setModel(SupplierTableModel);
    }
    

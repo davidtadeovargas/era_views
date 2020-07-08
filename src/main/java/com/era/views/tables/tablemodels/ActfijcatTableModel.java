@@ -5,11 +5,12 @@ import java.util.List;
 import com.era.models.Actfijcat;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import javax.swing.JTable;
 
 public class ActfijcatTableModel  extends BaseAbstractTableModel {
 
-   public ActfijcatTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public ActfijcatTableModel(final JTable JTable, List<?> items, final List<ColumnTable> header){
+       super(JTable, items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 

@@ -13,7 +13,7 @@ public class TarsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final TarsTableModel TarsTableModel = new TarsTableModel(items,this.ShowColumns);
+       final TarsTableModel TarsTableModel = new TarsTableModel(this,items,this.ShowColumns);
         this.setModel(TarsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class TarsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Tars> items_ = (List<Tars>) RepositoryFactory.getInstance().getTarssRepository().getAll();
-       final TarsTableModel TarsTableModel = new TarsTableModel(items_,this.ShowColumns);
+       final TarsTableModel TarsTableModel = new TarsTableModel(this,items_,this.ShowColumns);
        this.setModel(TarsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Tars> items_ = (List<Tars>) RepositoryFactory.getInstance().getTarssRepository().getByLikeEncabezados(search);
-       final TarsTableModel TarsTableModel = new TarsTableModel(items_,this.ShowColumns);
+       final TarsTableModel TarsTableModel = new TarsTableModel(this,items_,this.ShowColumns);
        this.setModel(TarsTableModel);
    }
    

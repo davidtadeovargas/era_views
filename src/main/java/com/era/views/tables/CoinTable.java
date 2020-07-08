@@ -13,7 +13,7 @@ public class CoinTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CoinTableModel CoinTableModel = new CoinTableModel(items,this.ShowColumns);
+       final CoinTableModel CoinTableModel = new CoinTableModel(this,items,this.ShowColumns);
         this.setModel(CoinTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CoinTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Coin> items_ = (List<Coin>) RepositoryFactory.getInstance().getCoinsRepository().getAll();
-       final CoinTableModel CoinTableModel = new CoinTableModel(items_,this.ShowColumns);
+       final CoinTableModel CoinTableModel = new CoinTableModel(this,items_,this.ShowColumns);
        this.setModel(CoinTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Coin> items_ = (List<Coin>) RepositoryFactory.getInstance().getCoinsRepository().getByLikeEncabezados(search);
-       final CoinTableModel CoinTableModel = new CoinTableModel(items_,this.ShowColumns);
+       final CoinTableModel CoinTableModel = new CoinTableModel(this,items_,this.ShowColumns);
        this.setModel(CoinTableModel);
    }
    

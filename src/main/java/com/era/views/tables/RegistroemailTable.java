@@ -13,7 +13,7 @@ public class RegistroemailTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final RegistroemailTableModel RegistroemailTableModel = new RegistroemailTableModel(items,this.ShowColumns);
+       final RegistroemailTableModel RegistroemailTableModel = new RegistroemailTableModel(this,items,this.ShowColumns);
         this.setModel(RegistroemailTableModel);
    }
 
@@ -27,14 +27,14 @@ public class RegistroemailTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Registroemail> items_ = (List<Registroemail>) RepositoryFactory.getInstance().getRegistroemailsRepository().getAll();
-       final RegistroemailTableModel RegistroemailTableModel = new RegistroemailTableModel(items_,this.ShowColumns);
+       final RegistroemailTableModel RegistroemailTableModel = new RegistroemailTableModel(this,items_,this.ShowColumns);
        this.setModel(RegistroemailTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Registroemail> items_ = (List<Registroemail>) RepositoryFactory.getInstance().getRegistroemailsRepository().getByLikeEncabezados(search);
-       final RegistroemailTableModel RegistroemailTableModel = new RegistroemailTableModel(items_,this.ShowColumns);
+       final RegistroemailTableModel RegistroemailTableModel = new RegistroemailTableModel(this,items_,this.ShowColumns);
        this.setModel(RegistroemailTableModel);
    }
    

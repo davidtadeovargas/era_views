@@ -13,7 +13,7 @@ public class EREjerciciosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final EREjerciciosTableModel EREjerciciosTableModel = new EREjerciciosTableModel(items,this.ShowColumns);
+       final EREjerciciosTableModel EREjerciciosTableModel = new EREjerciciosTableModel(this,items,this.ShowColumns);
         this.setModel(EREjerciciosTableModel);
    }
 
@@ -27,14 +27,14 @@ public class EREjerciciosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<EREjercicios> items_ = (List<EREjercicios>) RepositoryFactory.getInstance().getEREjerciciossRepository().getAll();
-       final EREjerciciosTableModel EREjerciciosTableModel = new EREjerciciosTableModel(items_,this.ShowColumns);
+       final EREjerciciosTableModel EREjerciciosTableModel = new EREjerciciosTableModel(this,items_,this.ShowColumns);
        this.setModel(EREjerciciosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<EREjercicios> items_ = (List<EREjercicios>) RepositoryFactory.getInstance().getEREjerciciossRepository().getByLikeEncabezados(search);
-       final EREjerciciosTableModel EREjerciciosTableModel = new EREjerciciosTableModel(items_,this.ShowColumns);
+       final EREjerciciosTableModel EREjerciciosTableModel = new EREjerciciosTableModel(this,items_,this.ShowColumns);
        this.setModel(EREjerciciosTableModel);
    }
    

@@ -13,7 +13,7 @@ public class TaxTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final TaxTableModel TaxTableModel = new TaxTableModel(items,this.ShowColumns);
+       final TaxTableModel TaxTableModel = new TaxTableModel(this,items,this.ShowColumns);
         this.setModel(TaxTableModel);
    }
 
@@ -27,14 +27,14 @@ public class TaxTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Tax> items_ = (List<Tax>) RepositoryFactory.getInstance().getTaxesRepository().getAll();
-       final TaxTableModel TaxTableModel = new TaxTableModel(items_,this.ShowColumns);
+       final TaxTableModel TaxTableModel = new TaxTableModel(this,items_,this.ShowColumns);
        this.setModel(TaxTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Tax> items_ = (List<Tax>) RepositoryFactory.getInstance().getTaxesRepository().getByLikeEncabezados(search);
-       final TaxTableModel TaxTableModel = new TaxTableModel(items_,this.ShowColumns);
+       final TaxTableModel TaxTableModel = new TaxTableModel(this,items_,this.ShowColumns);
        this.setModel(TaxTableModel);
    }
    

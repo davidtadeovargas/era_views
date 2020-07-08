@@ -13,7 +13,7 @@ public class PartcotTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PartcotTableModel PartcotTableModel = new PartcotTableModel(items,this.ShowColumns);
+       final PartcotTableModel PartcotTableModel = new PartcotTableModel(this,items,this.ShowColumns);
         this.setModel(PartcotTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PartcotTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Partcot> items_ = (List<Partcot>) RepositoryFactory.getInstance().getPartcotsRepository().getAll();
-       final PartcotTableModel PartcotTableModel = new PartcotTableModel(items_,this.ShowColumns);
+       final PartcotTableModel PartcotTableModel = new PartcotTableModel(this,items_,this.ShowColumns);
        this.setModel(PartcotTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Partcot> items_ = (List<Partcot>) RepositoryFactory.getInstance().getPartcotsRepository().getByLikeEncabezados(search);
-       final PartcotTableModel PartcotTableModel = new PartcotTableModel(items_,this.ShowColumns);
+       final PartcotTableModel PartcotTableModel = new PartcotTableModel(this,items_,this.ShowColumns);
        this.setModel(PartcotTableModel);
    }
    

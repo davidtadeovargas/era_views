@@ -13,7 +13,7 @@ public class AsientosContablesTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final AsientosContablesTableModel AsientosContablesTableModel = new AsientosContablesTableModel(items,this.ShowColumns);
+       final AsientosContablesTableModel AsientosContablesTableModel = new AsientosContablesTableModel(this,items,this.ShowColumns);
         this.setModel(AsientosContablesTableModel);
    }
 
@@ -27,14 +27,14 @@ public class AsientosContablesTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<AsientosContables> items_ = (List<AsientosContables>) RepositoryFactory.getInstance().getAsientosContablessRepository().getAll();
-       final AsientosContablesTableModel AsientosContablesTableModel = new AsientosContablesTableModel(items_,this.ShowColumns);
+       final AsientosContablesTableModel AsientosContablesTableModel = new AsientosContablesTableModel(this,items_,this.ShowColumns);
        this.setModel(AsientosContablesTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<AsientosContables> items_ = (List<AsientosContables>) RepositoryFactory.getInstance().getAsientosContablessRepository().getByLikeEncabezados(search);
-       final AsientosContablesTableModel AsientosContablesTableModel = new AsientosContablesTableModel(items_,this.ShowColumns);
+       final AsientosContablesTableModel AsientosContablesTableModel = new AsientosContablesTableModel(this,items_,this.ShowColumns);
        this.setModel(AsientosContablesTableModel);
    }
 

@@ -13,7 +13,7 @@ public class TipactfijTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final TipactfijTableModel TipactfijTableModel = new TipactfijTableModel(items,this.ShowColumns);
+       final TipactfijTableModel TipactfijTableModel = new TipactfijTableModel(this,items,this.ShowColumns);
         this.setModel(TipactfijTableModel);
    }
 
@@ -27,14 +27,14 @@ public class TipactfijTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Tipactfij> items_ = (List<Tipactfij>) RepositoryFactory.getInstance().getTipactfijsRepository().getAll();
-       final TipactfijTableModel TipactfijTableModel = new TipactfijTableModel(items_,this.ShowColumns);
+       final TipactfijTableModel TipactfijTableModel = new TipactfijTableModel(this,items_,this.ShowColumns);
        this.setModel(TipactfijTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Tipactfij> items_ = (List<Tipactfij>) RepositoryFactory.getInstance().getTipactfijsRepository().getByLikeEncabezados(search);
-       final TipactfijTableModel TipactfijTableModel = new TipactfijTableModel(items_,this.ShowColumns);
+       final TipactfijTableModel TipactfijTableModel = new TipactfijTableModel(this,items_,this.ShowColumns);
        this.setModel(TipactfijTableModel);
    }
    

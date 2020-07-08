@@ -13,7 +13,7 @@ public class PushNotificationTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PushNotificationTableModel PushNotificationTableModel = new PushNotificationTableModel(items,this.ShowColumns);
+       final PushNotificationTableModel PushNotificationTableModel = new PushNotificationTableModel(this,items,this.ShowColumns);
         this.setModel(PushNotificationTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PushNotificationTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<PushNotification> items_ = (List<PushNotification>) RepositoryFactory.getInstance().getPushNotificationsRepository().getAll();
-       final PushNotificationTableModel PushNotificationTableModel = new PushNotificationTableModel(items_,this.ShowColumns);
+       final PushNotificationTableModel PushNotificationTableModel = new PushNotificationTableModel(this,items_,this.ShowColumns);
        this.setModel(PushNotificationTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<PushNotification> items_ = (List<PushNotification>) RepositoryFactory.getInstance().getPushNotificationsRepository().getByLikeEncabezados(search);
-       final PushNotificationTableModel PushNotificationTableModel = new PushNotificationTableModel(items_,this.ShowColumns);
+       final PushNotificationTableModel PushNotificationTableModel = new PushNotificationTableModel(this,items_,this.ShowColumns);
        this.setModel(PushNotificationTableModel);
    }
    

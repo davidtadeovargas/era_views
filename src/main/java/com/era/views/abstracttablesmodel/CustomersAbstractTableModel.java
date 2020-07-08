@@ -8,6 +8,7 @@ package com.era.views.abstracttablesmodel;
 import com.era.models.Company;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.util.List;
  */
 public class CustomersAbstractTableModel extends BaseAbstractTableModel {
 
-    public CustomersAbstractTableModel(List<Company> deliveries, List<ColumnTable> header) {
-        super(deliveries,header);
+    public CustomersAbstractTableModel(final JTable jTable, List<Company> deliveries, List<ColumnTable> header) {
+        super(jTable,deliveries,header);
     }
 }

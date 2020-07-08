@@ -5,11 +5,12 @@ import java.util.List;
 import com.era.models.Costs;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import javax.swing.JTable;
 
 public class CostsTableModel  extends BaseAbstractTableModel {
 
-   public CostsTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public CostsTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
+       super(jTable,items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 

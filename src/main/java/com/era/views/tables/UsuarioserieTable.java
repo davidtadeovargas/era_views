@@ -13,7 +13,7 @@ public class UsuarioserieTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-        final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(items,this.ShowColumns);
+        final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(this,items,this.ShowColumns);
         this.setModel(UsuarioserieTableModel);
    }
 
@@ -27,14 +27,14 @@ public class UsuarioserieTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Usuarioserie> items_ = (List<Usuarioserie>) RepositoryFactory.getInstance().getUsuarioseriesRepository().getAll();
-       final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(items_,this.ShowColumns);
+       final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(this,items_,this.ShowColumns);
        this.setModel(UsuarioserieTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Usuarioserie> items_ = (List<Usuarioserie>) RepositoryFactory.getInstance().getUsuarioseriesRepository().getByLikeEncabezados(search);
-       final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(items_,this.ShowColumns);
+       final UsuarioserieTableModel UsuarioserieTableModel = new UsuarioserieTableModel(this,items_,this.ShowColumns);
        this.setModel(UsuarioserieTableModel);
    }
    

@@ -13,7 +13,7 @@ public class CorrselecTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CorrselecTableModel CorrselecTableModel = new CorrselecTableModel(items,this.ShowColumns);
+       final CorrselecTableModel CorrselecTableModel = new CorrselecTableModel(this,items,this.ShowColumns);
         this.setModel(CorrselecTableModel);
    }
 
@@ -26,15 +26,15 @@ public class CorrselecTable extends BaseJTable {
 
    @Override
    public void loadAllItemsInTable() throws Exception {
-       final List<Corrselec> items_ = (List<Corrselec>) RepositoryFactory.getInstance().getCorrselecsRepository().getAll();
-       final CorrselecTableModel CorrselecTableModel = new CorrselecTableModel(items_,this.ShowColumns);
+       final List<Corrselec> items_ = (List<Corrselec>) RepositoryFactory.getInstance().getCorrselecRepository().getAll();
+       final CorrselecTableModel CorrselecTableModel = new CorrselecTableModel(this,items_,this.ShowColumns);
        this.setModel(CorrselecTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
-       final List<Corrselec> items_ = (List<Corrselec>) RepositoryFactory.getInstance().getCorrselecsRepository().getByLikeEncabezados(search);
-       final CorrselecTableModel CorrselecTableModel = new CorrselecTableModel(items_,this.ShowColumns);
+       final List<Corrselec> items_ = (List<Corrselec>) RepositoryFactory.getInstance().getCorrselecRepository().getByLikeEncabezados(search);
+       final CorrselecTableModel CorrselecTableModel = new CorrselecTableModel(this,items_,this.ShowColumns);
        this.setModel(CorrselecTableModel);
    }
    

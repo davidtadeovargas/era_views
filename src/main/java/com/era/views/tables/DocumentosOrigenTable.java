@@ -13,7 +13,7 @@ public class DocumentosOrigenTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final DocumentosOrigenTableModel DocumentosOrigenTableModel = new DocumentosOrigenTableModel(items,this.ShowColumns);
+       final DocumentosOrigenTableModel DocumentosOrigenTableModel = new DocumentosOrigenTableModel(this,items,this.ShowColumns);
         this.setModel(DocumentosOrigenTableModel);
    }
 
@@ -27,14 +27,14 @@ public class DocumentosOrigenTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<DocumentosOrigen> items_ = (List<DocumentosOrigen>) RepositoryFactory.getInstance().getDocumentosOrigensRepository().getAll();
-       final DocumentosOrigenTableModel DocumentosOrigenTableModel = new DocumentosOrigenTableModel(items_,this.ShowColumns);
+       final DocumentosOrigenTableModel DocumentosOrigenTableModel = new DocumentosOrigenTableModel(this,items_,this.ShowColumns);
        this.setModel(DocumentosOrigenTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<DocumentosOrigen> items_ = (List<DocumentosOrigen>) RepositoryFactory.getInstance().getDocumentosOrigensRepository().getByLikeEncabezados(search);
-       final DocumentosOrigenTableModel DocumentosOrigenTableModel = new DocumentosOrigenTableModel(items_,this.ShowColumns);
+       final DocumentosOrigenTableModel DocumentosOrigenTableModel = new DocumentosOrigenTableModel(this,items_,this.ShowColumns);
        this.setModel(DocumentosOrigenTableModel);
    }
    

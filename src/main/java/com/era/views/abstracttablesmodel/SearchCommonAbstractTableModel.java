@@ -26,6 +26,7 @@ import com.era.views.abstracttablesmodel.getvaluesat.WarehousesIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.ZonesIGetValueAt;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -33,8 +34,8 @@ import java.util.List;
  */
 public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
         
-    public SearchCommonAbstractTableModel(List<?> deliveries, List<ColumnTable> header, final SearchCommonTypeEnum SearchCommonTypeEnum) {
-        super(deliveries,header);
+    public SearchCommonAbstractTableModel(final JTable jTable, List<?> deliveries, List<ColumnTable> header, final SearchCommonTypeEnum SearchCommonTypeEnum) {
+        super(jTable,deliveries,header);
         
         this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, Object model) -> {
             

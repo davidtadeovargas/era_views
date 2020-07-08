@@ -13,7 +13,7 @@ public class CotsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CotsTableModel CotsTableModel = new CotsTableModel(items,this.ShowColumns);
+       final CotsTableModel CotsTableModel = new CotsTableModel(this,items,this.ShowColumns);
         this.setModel(CotsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CotsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Cots> items_ = (List<Cots>) RepositoryFactory.getInstance().getCotssRepository().getAll();
-       final CotsTableModel CotsTableModel = new CotsTableModel(items_,this.ShowColumns);
+       final CotsTableModel CotsTableModel = new CotsTableModel(this,items_,this.ShowColumns);
        this.setModel(CotsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Cots> items_ = (List<Cots>) RepositoryFactory.getInstance().getCotssRepository().getByLikeEncabezados(search);
-       final CotsTableModel CotsTableModel = new CotsTableModel(items_,this.ShowColumns);
+       final CotsTableModel CotsTableModel = new CotsTableModel(this,items_,this.ShowColumns);
        this.setModel(CotsTableModel);
    }
    

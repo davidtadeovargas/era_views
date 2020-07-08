@@ -14,7 +14,7 @@ public class ConceppagTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ConceppagTableModel ConceppagTableModel = new ConceppagTableModel(items,this.ShowColumns);
+       final ConceppagTableModel ConceppagTableModel = new ConceppagTableModel(this,items,this.ShowColumns);
         this.setModel(ConceppagTableModel);
    }
 
@@ -28,14 +28,14 @@ public class ConceppagTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Conceppag> items_ = (List<Conceppag>) RepositoryFactory.getInstance().getConceppagsRepository().getAll();
-       final ConceppagTableModel ConceppagTableModel = new ConceppagTableModel(items_,this.ShowColumns);
+       final ConceppagTableModel ConceppagTableModel = new ConceppagTableModel(this,items_,this.ShowColumns);
        this.setModel(ConceppagTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Conceppag> items_ = (List<Conceppag>) RepositoryFactory.getInstance().getConceppagsRepository().getByLikeEncabezados(search);
-       final ConceppagTableModel ConceppagTableModel = new ConceppagTableModel(items_,this.ShowColumns);
+       final ConceppagTableModel ConceppagTableModel = new ConceppagTableModel(this,items_,this.ShowColumns);
        this.setModel(ConceppagTableModel);
    }
    

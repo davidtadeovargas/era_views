@@ -13,7 +13,7 @@ public class CTipoRelacionTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CTipoRelacionTableModel CTipoRelacionTableModel = new CTipoRelacionTableModel(items,this.ShowColumns);
+       final CTipoRelacionTableModel CTipoRelacionTableModel = new CTipoRelacionTableModel(this,items,this.ShowColumns);
         this.setModel(CTipoRelacionTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CTipoRelacionTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CTipoRelacion> items_ = (List<CTipoRelacion>) RepositoryFactory.getInstance().getCTipoRelacionsRepository().getAll();
-       final CTipoRelacionTableModel CTipoRelacionTableModel = new CTipoRelacionTableModel(items_,this.ShowColumns);
+       final CTipoRelacionTableModel CTipoRelacionTableModel = new CTipoRelacionTableModel(this,items_,this.ShowColumns);
        this.setModel(CTipoRelacionTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CTipoRelacion> items_ = (List<CTipoRelacion>) RepositoryFactory.getInstance().getCTipoRelacionsRepository().getByLikeEncabezados(search);
-       final CTipoRelacionTableModel CTipoRelacionTableModel = new CTipoRelacionTableModel(items_,this.ShowColumns);
+       final CTipoRelacionTableModel CTipoRelacionTableModel = new CTipoRelacionTableModel(this,items_,this.ShowColumns);
        this.setModel(CTipoRelacionTableModel);
    }
    

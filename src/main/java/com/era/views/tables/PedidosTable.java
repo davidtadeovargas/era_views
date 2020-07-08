@@ -14,7 +14,7 @@ public class PedidosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PedidosTableModel PedidosTableModel = new PedidosTableModel(items,this.ShowColumns);
+       final PedidosTableModel PedidosTableModel = new PedidosTableModel(this,items,this.ShowColumns);
         this.setModel(PedidosTableModel);
    }
 
@@ -28,14 +28,14 @@ public class PedidosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Pedidos> items_ = (List<Pedidos>) RepositoryFactory.getInstance().getPedidossRepository().getAll();
-       final PedidosTableModel PedidosTableModel = new PedidosTableModel(items_,this.ShowColumns);
+       final PedidosTableModel PedidosTableModel = new PedidosTableModel(this,items_,this.ShowColumns);
        this.setModel(PedidosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Pedidos> items_ = (List<Pedidos>) RepositoryFactory.getInstance().getPedidossRepository().getByLikeEncabezados(search);
-       final PedidosTableModel PedidosTableModel = new PedidosTableModel(items_,this.ShowColumns);
+       final PedidosTableModel PedidosTableModel = new PedidosTableModel(this,items_,this.ShowColumns);
        this.setModel(PedidosTableModel);
    }
    

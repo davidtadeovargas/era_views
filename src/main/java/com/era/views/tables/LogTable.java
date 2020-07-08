@@ -14,7 +14,7 @@ public class LogTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final LogTableModel LogTableModel = new LogTableModel(items,this.ShowColumns);
+       final LogTableModel LogTableModel = new LogTableModel(this,items,this.ShowColumns);
         this.setModel(LogTableModel);
    }
 
@@ -28,14 +28,14 @@ public class LogTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Log> items_ = (List<Log>) RepositoryFactory.getInstance().getLogsRepository().getAll();
-       final LogTableModel LogTableModel = new LogTableModel(items_,this.ShowColumns);
+       final LogTableModel LogTableModel = new LogTableModel(this,items_,this.ShowColumns);
        this.setModel(LogTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Log> items_ = (List<Log>) RepositoryFactory.getInstance().getLogsRepository().getByLikeEncabezados(search);
-       final LogTableModel LogTableModel = new LogTableModel(items_,this.ShowColumns);
+       final LogTableModel LogTableModel = new LogTableModel(this,items_,this.ShowColumns);
        this.setModel(LogTableModel);
    }
    
@@ -63,7 +63,7 @@ public class LogTable extends BaseJTable {
         }
         
         //Set items and model
-        final LogTableModel LogTableModel = new LogTableModel(items_,this.ShowColumns);
+        final LogTableModel LogTableModel = new LogTableModel(this,items_,this.ShowColumns);
         this.setModel(LogTableModel);
     }
    

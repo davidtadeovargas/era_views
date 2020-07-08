@@ -13,7 +13,7 @@ public class CompanyTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CompanyTableModel CompanyTableModel = new CompanyTableModel(items,this.ShowColumns);
+       final CompanyTableModel CompanyTableModel = new CompanyTableModel(this,items,this.ShowColumns);
         this.setModel(CompanyTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CompanyTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Company> items_ = (List<Company>) RepositoryFactory.getInstance().getCompanysRepository().getAll();
-       final CompanyTableModel CompanyTableModel = new CompanyTableModel(items_,this.ShowColumns);
+       final CompanyTableModel CompanyTableModel = new CompanyTableModel(this,items_,this.ShowColumns);
        this.setModel(CompanyTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Company> items_ = (List<Company>) RepositoryFactory.getInstance().getCompanysRepository().getByLikeEncabezados(search);
-       final CompanyTableModel CompanyTableModel = new CompanyTableModel(items_,this.ShowColumns);
+       final CompanyTableModel CompanyTableModel = new CompanyTableModel(this,items_,this.ShowColumns);
        this.setModel(CompanyTableModel);
    }
    

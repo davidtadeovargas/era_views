@@ -5,11 +5,12 @@ import java.util.List;
 import com.era.models.Marcs;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import javax.swing.JTable;
 
 public class MarcsTableModel  extends BaseAbstractTableModel {
 
-   public MarcsTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public MarcsTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
+       super(jTable,items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 

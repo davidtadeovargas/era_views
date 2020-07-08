@@ -13,7 +13,7 @@ public class MovimientosAsientosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final MovimientosAsientosTableModel MovimientosAsientosTableModel = new MovimientosAsientosTableModel(items,this.ShowColumns);
+       final MovimientosAsientosTableModel MovimientosAsientosTableModel = new MovimientosAsientosTableModel(this,items,this.ShowColumns);
         this.setModel(MovimientosAsientosTableModel);
    }
 
@@ -27,14 +27,14 @@ public class MovimientosAsientosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<MovimientosAsientos> items_ = (List<MovimientosAsientos>) RepositoryFactory.getInstance().getMovimientosAsientossRepository().getAll();
-       final MovimientosAsientosTableModel MovimientosAsientosTableModel = new MovimientosAsientosTableModel(items_,this.ShowColumns);
+       final MovimientosAsientosTableModel MovimientosAsientosTableModel = new MovimientosAsientosTableModel(this,items_,this.ShowColumns);
        this.setModel(MovimientosAsientosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<MovimientosAsientos> items_ = (List<MovimientosAsientos>) RepositoryFactory.getInstance().getMovimientosAsientossRepository().getByLikeEncabezados(search);
-       final MovimientosAsientosTableModel MovimientosAsientosTableModel = new MovimientosAsientosTableModel(items_,this.ShowColumns);
+       final MovimientosAsientosTableModel MovimientosAsientosTableModel = new MovimientosAsientosTableModel(this,items_,this.ShowColumns);
        this.setModel(MovimientosAsientosTableModel);
    }
    

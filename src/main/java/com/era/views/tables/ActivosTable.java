@@ -13,7 +13,7 @@ public class ActivosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ActivosTableModel ActivosTableModel = new ActivosTableModel(items,this.ShowColumns);
+       final ActivosTableModel ActivosTableModel = new ActivosTableModel(this,items,this.ShowColumns);
         this.setModel(ActivosTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ActivosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Activos> items_ = (List<Activos>) RepositoryFactory.getInstance().getActivossRepository().getAll();
-       final ActivosTableModel ActivosTableModel = new ActivosTableModel(items_,this.ShowColumns);
+       final ActivosTableModel ActivosTableModel = new ActivosTableModel(this,items_,this.ShowColumns);
        this.setModel(ActivosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Activos> items_ = (List<Activos>) RepositoryFactory.getInstance().getActivossRepository().getByLikeEncabezados(search);
-       final ActivosTableModel ActivosTableModel = new ActivosTableModel(items_,this.ShowColumns);
+       final ActivosTableModel ActivosTableModel = new ActivosTableModel(this,items_,this.ShowColumns);
        this.setModel(ActivosTableModel);
    }
    

@@ -13,7 +13,7 @@ public class BasDatsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final BasDatsTableModel BasDatsTableModel = new BasDatsTableModel(items,this.ShowColumns);
+       final BasDatsTableModel BasDatsTableModel = new BasDatsTableModel(this,items,this.ShowColumns);
         this.setModel(BasDatsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class BasDatsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<BasDats> items_ = (List<BasDats>) RepositoryFactory.getInstance().getBasDatssRepository().getAll();
-       final BasDatsTableModel BasDatsTableModel = new BasDatsTableModel(items_,this.ShowColumns);
+       final BasDatsTableModel BasDatsTableModel = new BasDatsTableModel(this,items_,this.ShowColumns);
        this.setModel(BasDatsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<BasDats> items_ = (List<BasDats>) RepositoryFactory.getInstance().getBasDatssRepository().getByLikeEncabezados(search);
-       final BasDatsTableModel BasDatsTableModel = new BasDatsTableModel(items_,this.ShowColumns);
+       final BasDatsTableModel BasDatsTableModel = new BasDatsTableModel(this,items_,this.ShowColumns);
        this.setModel(BasDatsTableModel);
    }
    

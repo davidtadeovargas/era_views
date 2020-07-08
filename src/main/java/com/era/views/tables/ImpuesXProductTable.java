@@ -14,7 +14,7 @@ public class ImpuesXProductTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-        final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(items,this.ShowColumns);
+        final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(this,items,this.ShowColumns);
         this.setModel(ImpuesXProductTableModel);
    }
 
@@ -42,14 +42,14 @@ public class ImpuesXProductTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<ImpuesXProduct> items_ = (List<ImpuesXProduct>) RepositoryFactory.getInstance().getImpuesXProductRepository().getAll();
-       final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(items_,this.ShowColumns);
+       final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(this,items_,this.ShowColumns);
        this.setModel(ImpuesXProductTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<ImpuesXProduct> items_ = (List<ImpuesXProduct>) RepositoryFactory.getInstance().getImpuesXProductRepository().getByLikeEncabezados(search);
-       final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(items_,this.ShowColumns);
+       final ImpuesXProductTableModel ImpuesXProductTableModel = new ImpuesXProductTableModel(this,items_,this.ShowColumns);
        this.setModel(ImpuesXProductTableModel);
    }
 

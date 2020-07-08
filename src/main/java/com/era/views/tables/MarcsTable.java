@@ -13,7 +13,7 @@ public class MarcsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final MarcsTableModel MarcsTableModel = new MarcsTableModel(items,this.ShowColumns);
+       final MarcsTableModel MarcsTableModel = new MarcsTableModel(this,items,this.ShowColumns);
         this.setModel(MarcsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class MarcsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Marcs> items_ = (List<Marcs>) RepositoryFactory.getInstance().getMarcssRepository().getAll();
-       final MarcsTableModel MarcsTableModel = new MarcsTableModel(items_,this.ShowColumns);
+       final MarcsTableModel MarcsTableModel = new MarcsTableModel(this,items_,this.ShowColumns);
        this.setModel(MarcsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Marcs> items_ = (List<Marcs>) RepositoryFactory.getInstance().getMarcssRepository().getByLikeEncabezados(search);
-       final MarcsTableModel MarcsTableModel = new MarcsTableModel(items_,this.ShowColumns);
+       final MarcsTableModel MarcsTableModel = new MarcsTableModel(this,items_,this.ShowColumns);
        this.setModel(MarcsTableModel);
    }
    

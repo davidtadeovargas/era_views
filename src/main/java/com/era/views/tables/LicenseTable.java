@@ -13,7 +13,7 @@ public class LicenseTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final LicenseTableModel LicenseTableModel = new LicenseTableModel(items,this.ShowColumns);
+       final LicenseTableModel LicenseTableModel = new LicenseTableModel(this,items,this.ShowColumns);
         this.setModel(LicenseTableModel);
    }
 
@@ -27,14 +27,14 @@ public class LicenseTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<License> items_ = (List<License>) RepositoryFactory.getInstance().getLicensesRepository().getAll();
-       final LicenseTableModel LicenseTableModel = new LicenseTableModel(items_,this.ShowColumns);
+       final LicenseTableModel LicenseTableModel = new LicenseTableModel(this,items_,this.ShowColumns);
        this.setModel(LicenseTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<License> items_ = (List<License>) RepositoryFactory.getInstance().getLicensesRepository().getByLikeEncabezados(search);
-       final LicenseTableModel LicenseTableModel = new LicenseTableModel(items_,this.ShowColumns);
+       final LicenseTableModel LicenseTableModel = new LicenseTableModel(this,items_,this.ShowColumns);
        this.setModel(LicenseTableModel);
    }
    

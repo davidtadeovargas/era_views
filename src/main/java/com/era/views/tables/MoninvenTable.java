@@ -13,7 +13,7 @@ public class MoninvenTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final MoninvenTableModel MoninvenTableModel = new MoninvenTableModel(items,this.ShowColumns);
+       final MoninvenTableModel MoninvenTableModel = new MoninvenTableModel(this,items,this.ShowColumns);
         this.setModel(MoninvenTableModel);
    }
 
@@ -27,14 +27,14 @@ public class MoninvenTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Moninven> items_ = (List<Moninven>) RepositoryFactory.getInstance().getMoninvensRepository().getAll();
-       final MoninvenTableModel MoninvenTableModel = new MoninvenTableModel(items_,this.ShowColumns);
+       final MoninvenTableModel MoninvenTableModel = new MoninvenTableModel(this,items_,this.ShowColumns);
        this.setModel(MoninvenTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Moninven> items_ = (List<Moninven>) RepositoryFactory.getInstance().getMoninvensRepository().getByLikeEncabezados(search);
-       final MoninvenTableModel MoninvenTableModel = new MoninvenTableModel(items_,this.ShowColumns);
+       final MoninvenTableModel MoninvenTableModel = new MoninvenTableModel(this,items_,this.ShowColumns);
        this.setModel(MoninvenTableModel);
    }
    

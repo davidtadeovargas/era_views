@@ -13,7 +13,7 @@ public class KitsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final KitsTableModel KitsTableModel = new KitsTableModel(items,this.ShowColumns);
+       final KitsTableModel KitsTableModel = new KitsTableModel(this,items,this.ShowColumns);
         this.setModel(KitsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class KitsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Kits> items_ = (List<Kits>) RepositoryFactory.getInstance().getKitssRepository().getAll();
-       final KitsTableModel KitsTableModel = new KitsTableModel(items_,this.ShowColumns);
+       final KitsTableModel KitsTableModel = new KitsTableModel(this,items_,this.ShowColumns);
        this.setModel(KitsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Kits> items_ = (List<Kits>) RepositoryFactory.getInstance().getKitssRepository().getByLikeEncabezados(search);
-       final KitsTableModel KitsTableModel = new KitsTableModel(items_,this.ShowColumns);
+       final KitsTableModel KitsTableModel = new KitsTableModel(this,items_,this.ShowColumns);
        this.setModel(KitsTableModel);
    }
    

@@ -13,7 +13,7 @@ public class ComprsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ComprsTableModel ComprsTableModel = new ComprsTableModel(items,this.ShowColumns);
+       final ComprsTableModel ComprsTableModel = new ComprsTableModel(this,items,this.ShowColumns);
         this.setModel(ComprsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ComprsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Comprs> items_ = (List<Comprs>) RepositoryFactory.getInstance().getComprssRepository().getAll();
-       final ComprsTableModel ComprsTableModel = new ComprsTableModel(items_,this.ShowColumns);
+       final ComprsTableModel ComprsTableModel = new ComprsTableModel(this,items_,this.ShowColumns);
        this.setModel(ComprsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Comprs> items_ = (List<Comprs>) RepositoryFactory.getInstance().getComprssRepository().getByLikeEncabezados(search);
-       final ComprsTableModel ComprsTableModel = new ComprsTableModel(items_,this.ShowColumns);
+       final ComprsTableModel ComprsTableModel = new ComprsTableModel(this,items_,this.ShowColumns);
        this.setModel(ComprsTableModel);
    }
    

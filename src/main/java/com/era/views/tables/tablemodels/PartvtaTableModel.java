@@ -5,11 +5,13 @@ import java.util.List;
 import com.era.models.Partvta;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import java.math.BigDecimal;
+import javax.swing.JTable;
 
 public class PartvtaTableModel  extends BaseAbstractTableModel {
 
-   public PartvtaTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public PartvtaTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
+       super(jTable,items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 
@@ -26,7 +28,12 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
                returnValue = Partvta.getAlma();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANT_DEV().getValue())==0){
-               returnValue = String.valueOf(Partvta.getCant().subtract(Partvta.getDevs()));
+               
+               if(Partvta.getToDevs()==null||Partvta.getToDevs().compareTo(BigDecimal.ZERO)==0){
+                   Partvta.setToDevs(Partvta.getCant().subtract(Partvta.getDevs()));
+               }
+               
+               returnValue = String.valueOf(Partvta.getToDevs());
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANT_DEV_ORI().getValue())==0){
                returnValue = String.valueOf(Partvta.getDevs());
@@ -137,6 +144,15 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
                returnValue = String.valueOf(Partvta.getVta());
            }
            return returnValue;
+       };
+       
+       this.SetValueAt = (Object newValue, int rowIndex, int columnIndex, String columnName, Object model) -> {
+           
+            final Partvta Partvta_ = (Partvta)model;
+            
+            if(columnName.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANT_DEV().getValue())==0){
+                Partvta_.setToDevs(new BigDecimal((String)newValue));               
+            }
        };
    }
 }

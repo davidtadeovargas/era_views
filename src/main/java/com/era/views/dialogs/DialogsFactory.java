@@ -98,7 +98,7 @@ public class DialogsFactory {
             ErrorOKDialog = new ErrorOKDialog(JFrame);
         }
         return ErrorOKDialog;
-    }    
+    }
     public void showErrorOKDialog(final JFrame JFrame, final String propertyText) throws Exception {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText(propertyText);
@@ -112,6 +112,18 @@ public class DialogsFactory {
     public void showErrorOKCallbackDialog(final JFrame JFrame, final String propertyText, final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
         final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
         ErrorOKDialog_.setPropertyText(propertyText);
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }   
+    public void showErrorInvalidSelectionOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("errors_invalid_selection");
+        ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
+        ErrorOKDialog_.show();
+    }
+    public void showErrorInvalidAmountOKDialog(final JFrame JFrame,final com.era.views.dialogs.OKDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final ErrorOKDialog ErrorOKDialog_ = this.getErrorOKDialog(JFrame);
+        ErrorOKDialog_.setPropertyText("errors_invalid_amount");
         ErrorOKDialog_.setOKDialogInterface(OKDialogInterface);
         ErrorOKDialog_.show();
     }

@@ -13,7 +13,7 @@ public class SucursalTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final SucursalTableModel SucursalTableModel = new SucursalTableModel(items,this.ShowColumns);
+       final SucursalTableModel SucursalTableModel = new SucursalTableModel(this,items,this.ShowColumns);
         this.setModel(SucursalTableModel);
    }
 
@@ -27,14 +27,14 @@ public class SucursalTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Sucursal> items_ = (List<Sucursal>) RepositoryFactory.getInstance().getSucursalsRepository().getAll();
-       final SucursalTableModel SucursalTableModel = new SucursalTableModel(items_,this.ShowColumns);
+       final SucursalTableModel SucursalTableModel = new SucursalTableModel(this,items_,this.ShowColumns);
        this.setModel(SucursalTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Sucursal> items_ = (List<Sucursal>) RepositoryFactory.getInstance().getSucursalsRepository().getByLikeEncabezados(search);
-       final SucursalTableModel SucursalTableModel = new SucursalTableModel(items_,this.ShowColumns);
+       final SucursalTableModel SucursalTableModel = new SucursalTableModel(this,items_,this.ShowColumns);
        this.setModel(SucursalTableModel);
    }
    

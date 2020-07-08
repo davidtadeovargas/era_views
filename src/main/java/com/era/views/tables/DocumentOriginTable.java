@@ -13,7 +13,7 @@ public class DocumentOriginTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final DocumentOriginTableModel DocumentOriginTableModel = new DocumentOriginTableModel(items,this.ShowColumns);
+       final DocumentOriginTableModel DocumentOriginTableModel = new DocumentOriginTableModel(this,items,this.ShowColumns);
         this.setModel(DocumentOriginTableModel);
    }
 
@@ -27,14 +27,14 @@ public class DocumentOriginTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<DocumentOrigin> items_ = (List<DocumentOrigin>) RepositoryFactory.getInstance().getDocumentOriginRepository().getAll();
-       final DocumentOriginTableModel DocumentOriginTableModel = new DocumentOriginTableModel(items_,this.ShowColumns);
+       final DocumentOriginTableModel DocumentOriginTableModel = new DocumentOriginTableModel(this,items_,this.ShowColumns);
        this.setModel(DocumentOriginTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<DocumentOrigin> items_ = (List<DocumentOrigin>) RepositoryFactory.getInstance().getDocumentOriginRepository().getByLikeEncabezados(search);
-       final DocumentOriginTableModel DocumentOriginTableModel = new DocumentOriginTableModel(items_,this.ShowColumns);
+       final DocumentOriginTableModel DocumentOriginTableModel = new DocumentOriginTableModel(this,items_,this.ShowColumns);
        this.setModel(DocumentOriginTableModel);
    }
    

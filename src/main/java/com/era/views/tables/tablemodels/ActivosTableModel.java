@@ -5,11 +5,12 @@ import java.util.List;
 import com.era.models.Activos;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import javax.swing.JTable;
 
 public class ActivosTableModel  extends BaseAbstractTableModel {
 
-   public ActivosTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public ActivosTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
+       super(jTable,items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 

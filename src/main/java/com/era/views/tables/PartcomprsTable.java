@@ -13,7 +13,7 @@ public class PartcomprsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PartcomprsTableModel PartcomprsTableModel = new PartcomprsTableModel(items,this.ShowColumns);
+       final PartcomprsTableModel PartcomprsTableModel = new PartcomprsTableModel(this,items,this.ShowColumns);
         this.setModel(PartcomprsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PartcomprsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Partcomprs> items_ = (List<Partcomprs>) RepositoryFactory.getInstance().getPartcomprssRepository().getAll();
-       final PartcomprsTableModel PartcomprsTableModel = new PartcomprsTableModel(items_,this.ShowColumns);
+       final PartcomprsTableModel PartcomprsTableModel = new PartcomprsTableModel(this,items_,this.ShowColumns);
        this.setModel(PartcomprsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Partcomprs> items_ = (List<Partcomprs>) RepositoryFactory.getInstance().getPartcomprssRepository().getByLikeEncabezados(search);
-       final PartcomprsTableModel PartcomprsTableModel = new PartcomprsTableModel(items_,this.ShowColumns);
+       final PartcomprsTableModel PartcomprsTableModel = new PartcomprsTableModel(this,items_,this.ShowColumns);
        this.setModel(PartcomprsTableModel);
    }
    

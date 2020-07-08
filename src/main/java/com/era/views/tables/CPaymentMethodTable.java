@@ -13,7 +13,7 @@ public class CPaymentMethodTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CPaymentMethodTableModel CPaymentMethodTableModel = new CPaymentMethodTableModel(items,this.ShowColumns);
+       final CPaymentMethodTableModel CPaymentMethodTableModel = new CPaymentMethodTableModel(this,items,this.ShowColumns);
         this.setModel(CPaymentMethodTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CPaymentMethodTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CPaymentMethod> items_ = (List<CPaymentMethod>) RepositoryFactory.getInstance().getCPaymentMethodsRepository().getAll();
-       final CPaymentMethodTableModel CPaymentMethodTableModel = new CPaymentMethodTableModel(items_,this.ShowColumns);
+       final CPaymentMethodTableModel CPaymentMethodTableModel = new CPaymentMethodTableModel(this,items_,this.ShowColumns);
        this.setModel(CPaymentMethodTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CPaymentMethod> items_ = (List<CPaymentMethod>) RepositoryFactory.getInstance().getCPaymentMethodsRepository().getByLikeEncabezados(search);
-       final CPaymentMethodTableModel CPaymentMethodTableModel = new CPaymentMethodTableModel(items_,this.ShowColumns);
+       final CPaymentMethodTableModel CPaymentMethodTableModel = new CPaymentMethodTableModel(this,items_,this.ShowColumns);
        this.setModel(CPaymentMethodTableModel);
    }
    

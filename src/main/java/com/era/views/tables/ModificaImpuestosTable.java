@@ -13,7 +13,7 @@ public class ModificaImpuestosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ModificaImpuestosTableModel ModificaImpuestosTableModel = new ModificaImpuestosTableModel(items,this.ShowColumns);
+       final ModificaImpuestosTableModel ModificaImpuestosTableModel = new ModificaImpuestosTableModel(this,items,this.ShowColumns);
         this.setModel(ModificaImpuestosTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ModificaImpuestosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<ModificaImpuestos> items_ = (List<ModificaImpuestos>) RepositoryFactory.getInstance().getModificaImpuestossRepository().getAll();
-       final ModificaImpuestosTableModel ModificaImpuestosTableModel = new ModificaImpuestosTableModel(items_,this.ShowColumns);
+       final ModificaImpuestosTableModel ModificaImpuestosTableModel = new ModificaImpuestosTableModel(this,items_,this.ShowColumns);
        this.setModel(ModificaImpuestosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<ModificaImpuestos> items_ = (List<ModificaImpuestos>) RepositoryFactory.getInstance().getModificaImpuestossRepository().getByLikeEncabezados(search);
-       final ModificaImpuestosTableModel ModificaImpuestosTableModel = new ModificaImpuestosTableModel(items_,this.ShowColumns);
+       final ModificaImpuestosTableModel ModificaImpuestosTableModel = new ModificaImpuestosTableModel(this,items_,this.ShowColumns);
        this.setModel(ModificaImpuestosTableModel);
    }
    

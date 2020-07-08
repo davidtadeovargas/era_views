@@ -7,11 +7,12 @@ import com.era.models.Warehouse;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import javax.swing.JTable;
 
 public class ExistalmaTableModel  extends BaseAbstractTableModel {
 
-   public ExistalmaTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public ExistalmaTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
+       super(jTable,items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 

@@ -13,7 +13,7 @@ public class CUsoCFDITable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CUsoCFDITableModel CUsoCFDITableModel = new CUsoCFDITableModel(items,this.ShowColumns);
+       final CUsoCFDITableModel CUsoCFDITableModel = new CUsoCFDITableModel(this,items,this.ShowColumns);
         this.setModel(CUsoCFDITableModel);
    }
 
@@ -27,14 +27,14 @@ public class CUsoCFDITable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CUsoCFDI> items_ = (List<CUsoCFDI>) RepositoryFactory.getInstance().getCUsoCFDIsRepository().getAll();
-       final CUsoCFDITableModel CUsoCFDITableModel = new CUsoCFDITableModel(items_,this.ShowColumns);
+       final CUsoCFDITableModel CUsoCFDITableModel = new CUsoCFDITableModel(this,items_,this.ShowColumns);
        this.setModel(CUsoCFDITableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CUsoCFDI> items_ = (List<CUsoCFDI>) RepositoryFactory.getInstance().getCUsoCFDIsRepository().getByLikeEncabezados(search);
-       final CUsoCFDITableModel CUsoCFDITableModel = new CUsoCFDITableModel(items_,this.ShowColumns);
+       final CUsoCFDITableModel CUsoCFDITableModel = new CUsoCFDITableModel(this,items_,this.ShowColumns);
        this.setModel(CUsoCFDITableModel);
    }
    

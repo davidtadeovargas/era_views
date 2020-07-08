@@ -13,7 +13,7 @@ public class CortszxTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CortszxTableModel CortszxTableModel = new CortszxTableModel(items,this.ShowColumns);
+       final CortszxTableModel CortszxTableModel = new CortszxTableModel(this,items,this.ShowColumns);
         this.setModel(CortszxTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CortszxTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Cortszx> items_ = (List<Cortszx>) RepositoryFactory.getInstance().getCortszxsRepository().getAll();
-       final CortszxTableModel CortszxTableModel = new CortszxTableModel(items_,this.ShowColumns);
+       final CortszxTableModel CortszxTableModel = new CortszxTableModel(this,items_,this.ShowColumns);
        this.setModel(CortszxTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Cortszx> items_ = (List<Cortszx>) RepositoryFactory.getInstance().getCortszxsRepository().getByLikeEncabezados(search);
-       final CortszxTableModel CortszxTableModel = new CortszxTableModel(items_,this.ShowColumns);
+       final CortszxTableModel CortszxTableModel = new CortszxTableModel(this,items_,this.ShowColumns);
        this.setModel(CortszxTableModel);
    }
    

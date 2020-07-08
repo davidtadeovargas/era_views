@@ -13,7 +13,7 @@ public class PrevcomprsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PrevcomprsTableModel PrevcomprsTableModel = new PrevcomprsTableModel(items,this.ShowColumns);
+       final PrevcomprsTableModel PrevcomprsTableModel = new PrevcomprsTableModel(this,items,this.ShowColumns);
         this.setModel(PrevcomprsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PrevcomprsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Prevcomprs> items_ = (List<Prevcomprs>) RepositoryFactory.getInstance().getPrevcomprssRepository().getAll();
-       final PrevcomprsTableModel PrevcomprsTableModel = new PrevcomprsTableModel(items_,this.ShowColumns);
+       final PrevcomprsTableModel PrevcomprsTableModel = new PrevcomprsTableModel(this,items_,this.ShowColumns);
        this.setModel(PrevcomprsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Prevcomprs> items_ = (List<Prevcomprs>) RepositoryFactory.getInstance().getPrevcomprssRepository().getByLikeEncabezados(search);
-       final PrevcomprsTableModel PrevcomprsTableModel = new PrevcomprsTableModel(items_,this.ShowColumns);
+       final PrevcomprsTableModel PrevcomprsTableModel = new PrevcomprsTableModel(this,items_,this.ShowColumns);
        this.setModel(PrevcomprsTableModel);
    }
    

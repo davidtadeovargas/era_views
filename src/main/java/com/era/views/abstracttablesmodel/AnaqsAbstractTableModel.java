@@ -8,6 +8,7 @@ package com.era.views.abstracttablesmodel;
 import com.era.models.Anaqs;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.util.List;
  */
 public class AnaqsAbstractTableModel extends BaseAbstractTableModel {
 
-    public AnaqsAbstractTableModel(List<Anaqs> deliveries, List<ColumnTable> header) {
-        super(deliveries,header);        
+    public AnaqsAbstractTableModel(final JTable jTable, List<Anaqs> deliveries, List<ColumnTable> header) {
+        super(jTable,deliveries,header);        
     }
 }

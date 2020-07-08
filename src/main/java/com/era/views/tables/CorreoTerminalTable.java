@@ -13,7 +13,7 @@ public class CorreoTerminalTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CorreoTerminalTableModel CorreoTerminalTableModel = new CorreoTerminalTableModel(items,this.ShowColumns);
+       final CorreoTerminalTableModel CorreoTerminalTableModel = new CorreoTerminalTableModel(this,items,this.ShowColumns);
         this.setModel(CorreoTerminalTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CorreoTerminalTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CorreoTerminal> items_ = (List<CorreoTerminal>) RepositoryFactory.getInstance().getCorreoTerminalsRepository().getAll();
-       final CorreoTerminalTableModel CorreoTerminalTableModel = new CorreoTerminalTableModel(items_,this.ShowColumns);
+       final CorreoTerminalTableModel CorreoTerminalTableModel = new CorreoTerminalTableModel(this,items_,this.ShowColumns);
        this.setModel(CorreoTerminalTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CorreoTerminal> items_ = (List<CorreoTerminal>) RepositoryFactory.getInstance().getCorreoTerminalsRepository().getByLikeEncabezados(search);
-       final CorreoTerminalTableModel CorreoTerminalTableModel = new CorreoTerminalTableModel(items_,this.ShowColumns);
+       final CorreoTerminalTableModel CorreoTerminalTableModel = new CorreoTerminalTableModel(this,items_,this.ShowColumns);
        this.setModel(CorreoTerminalTableModel);
    }
    

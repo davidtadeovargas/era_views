@@ -13,7 +13,7 @@ public class ConsecTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ConsecTableModel ConsecTableModel = new ConsecTableModel(items,this.ShowColumns);
+       final ConsecTableModel ConsecTableModel = new ConsecTableModel(this,items,this.ShowColumns);
         this.setModel(ConsecTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ConsecTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Consec> items_ = (List<Consec>) RepositoryFactory.getInstance().getConsecsRepository().getAll();
-       final ConsecTableModel ConsecTableModel = new ConsecTableModel(items_,this.ShowColumns);
+       final ConsecTableModel ConsecTableModel = new ConsecTableModel(this,items_,this.ShowColumns);
        this.setModel(ConsecTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Consec> items_ = (List<Consec>) RepositoryFactory.getInstance().getConsecsRepository().getByLikeEncabezados(search);
-       final ConsecTableModel ConsecTableModel = new ConsecTableModel(items_,this.ShowColumns);
+       final ConsecTableModel ConsecTableModel = new ConsecTableModel(this,items_,this.ShowColumns);
        this.setModel(ConsecTableModel);
    }
    

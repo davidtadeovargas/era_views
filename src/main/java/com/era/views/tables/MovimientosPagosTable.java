@@ -13,7 +13,7 @@ public class MovimientosPagosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final MovimientosPagosTableModel MovimientosPagosTableModel = new MovimientosPagosTableModel(items,this.ShowColumns);
+       final MovimientosPagosTableModel MovimientosPagosTableModel = new MovimientosPagosTableModel(this,items,this.ShowColumns);
         this.setModel(MovimientosPagosTableModel);
    }
 
@@ -27,14 +27,14 @@ public class MovimientosPagosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<MovimientosPagos> items_ = (List<MovimientosPagos>) RepositoryFactory.getInstance().getMovimientosPagossRepository().getAll();
-       final MovimientosPagosTableModel MovimientosPagosTableModel = new MovimientosPagosTableModel(items_,this.ShowColumns);
+       final MovimientosPagosTableModel MovimientosPagosTableModel = new MovimientosPagosTableModel(this,items_,this.ShowColumns);
        this.setModel(MovimientosPagosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<MovimientosPagos> items_ = (List<MovimientosPagos>) RepositoryFactory.getInstance().getMovimientosPagossRepository().getByLikeEncabezados(search);
-       final MovimientosPagosTableModel MovimientosPagosTableModel = new MovimientosPagosTableModel(items_,this.ShowColumns);
+       final MovimientosPagosTableModel MovimientosPagosTableModel = new MovimientosPagosTableModel(this,items_,this.ShowColumns);
        this.setModel(MovimientosPagosTableModel);
    }
    

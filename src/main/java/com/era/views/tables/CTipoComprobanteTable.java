@@ -13,7 +13,7 @@ public class CTipoComprobanteTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CTipoComprobanteTableModel CTipoComprobanteTableModel = new CTipoComprobanteTableModel(items,this.ShowColumns);
+       final CTipoComprobanteTableModel CTipoComprobanteTableModel = new CTipoComprobanteTableModel(this,items,this.ShowColumns);
         this.setModel(CTipoComprobanteTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CTipoComprobanteTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CTipoComprobante> items_ = (List<CTipoComprobante>) RepositoryFactory.getInstance().getCTipoComprobantesRepository().getAll();
-       final CTipoComprobanteTableModel CTipoComprobanteTableModel = new CTipoComprobanteTableModel(items_,this.ShowColumns);
+       final CTipoComprobanteTableModel CTipoComprobanteTableModel = new CTipoComprobanteTableModel(this,items_,this.ShowColumns);
        this.setModel(CTipoComprobanteTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CTipoComprobante> items_ = (List<CTipoComprobante>) RepositoryFactory.getInstance().getCTipoComprobantesRepository().getByLikeEncabezados(search);
-       final CTipoComprobanteTableModel CTipoComprobanteTableModel = new CTipoComprobanteTableModel(items_,this.ShowColumns);
+       final CTipoComprobanteTableModel CTipoComprobanteTableModel = new CTipoComprobanteTableModel(this,items_,this.ShowColumns);
        this.setModel(CTipoComprobanteTableModel);
    }
    

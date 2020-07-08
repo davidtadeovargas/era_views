@@ -13,7 +13,7 @@ public class FabsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final FabsTableModel FabsTableModel = new FabsTableModel(items,this.ShowColumns);
+       final FabsTableModel FabsTableModel = new FabsTableModel(this,items,this.ShowColumns);
         this.setModel(FabsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class FabsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Fabs> items_ = (List<Fabs>) RepositoryFactory.getInstance().getFabssRepository().getAll();
-       final FabsTableModel FabsTableModel = new FabsTableModel(items_,this.ShowColumns);
+       final FabsTableModel FabsTableModel = new FabsTableModel(this,items_,this.ShowColumns);
        this.setModel(FabsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Fabs> items_ = (List<Fabs>) RepositoryFactory.getInstance().getFabssRepository().getByLikeEncabezados(search);
-       final FabsTableModel FabsTableModel = new FabsTableModel(items_,this.ShowColumns);
+       final FabsTableModel FabsTableModel = new FabsTableModel(this,items_,this.ShowColumns);
        this.setModel(FabsTableModel);
    }
    

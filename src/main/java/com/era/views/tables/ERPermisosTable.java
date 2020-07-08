@@ -13,7 +13,7 @@ public class ERPermisosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ERPermisosTableModel ERPermisosTableModel = new ERPermisosTableModel(items,this.ShowColumns);
+       final ERPermisosTableModel ERPermisosTableModel = new ERPermisosTableModel(this,items,this.ShowColumns);
         this.setModel(ERPermisosTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ERPermisosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<ERPermisos> items_ = (List<ERPermisos>) RepositoryFactory.getInstance().getERPermisossRepository().getAll();
-       final ERPermisosTableModel ERPermisosTableModel = new ERPermisosTableModel(items_,this.ShowColumns);
+       final ERPermisosTableModel ERPermisosTableModel = new ERPermisosTableModel(this,items_,this.ShowColumns);
        this.setModel(ERPermisosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<ERPermisos> items_ = (List<ERPermisos>) RepositoryFactory.getInstance().getERPermisossRepository().getByLikeEncabezados(search);
-       final ERPermisosTableModel ERPermisosTableModel = new ERPermisosTableModel(items_,this.ShowColumns);
+       final ERPermisosTableModel ERPermisosTableModel = new ERPermisosTableModel(this,items_,this.ShowColumns);
        this.setModel(ERPermisosTableModel);
    }
    

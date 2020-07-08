@@ -13,7 +13,7 @@ public class SubramosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final SubramosTableModel SubramosTableModel = new SubramosTableModel(items,this.ShowColumns);
+       final SubramosTableModel SubramosTableModel = new SubramosTableModel(this,items,this.ShowColumns);
         this.setModel(SubramosTableModel);
    }
 
@@ -27,14 +27,14 @@ public class SubramosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Subramos> items_ = (List<Subramos>) RepositoryFactory.getInstance().getSubramossRepository().getAll();
-       final SubramosTableModel SubramosTableModel = new SubramosTableModel(items_,this.ShowColumns);
+       final SubramosTableModel SubramosTableModel = new SubramosTableModel(this,items_,this.ShowColumns);
        this.setModel(SubramosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Subramos> items_ = (List<Subramos>) RepositoryFactory.getInstance().getSubramossRepository().getByLikeEncabezados(search);
-       final SubramosTableModel SubramosTableModel = new SubramosTableModel(items_,this.ShowColumns);
+       final SubramosTableModel SubramosTableModel = new SubramosTableModel(this,items_,this.ShowColumns);
        this.setModel(SubramosTableModel);
    }
 

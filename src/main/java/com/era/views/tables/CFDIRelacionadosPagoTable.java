@@ -13,7 +13,7 @@ public class CFDIRelacionadosPagoTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CFDIRelacionadosPagoTableModel CFDIRelacionadosPagoTableModel = new CFDIRelacionadosPagoTableModel(items,this.ShowColumns);
+       final CFDIRelacionadosPagoTableModel CFDIRelacionadosPagoTableModel = new CFDIRelacionadosPagoTableModel(this,items,this.ShowColumns);
         this.setModel(CFDIRelacionadosPagoTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CFDIRelacionadosPagoTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CFDIRelacionadosPago> items_ = (List<CFDIRelacionadosPago>) RepositoryFactory.getInstance().getCFDIRelacionadosPagosRepository().getAll();
-       final CFDIRelacionadosPagoTableModel CFDIRelacionadosPagoTableModel = new CFDIRelacionadosPagoTableModel(items_,this.ShowColumns);
+       final CFDIRelacionadosPagoTableModel CFDIRelacionadosPagoTableModel = new CFDIRelacionadosPagoTableModel(this,items_,this.ShowColumns);
        this.setModel(CFDIRelacionadosPagoTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CFDIRelacionadosPago> items_ = (List<CFDIRelacionadosPago>) RepositoryFactory.getInstance().getCFDIRelacionadosPagosRepository().getByLikeEncabezados(search);
-       final CFDIRelacionadosPagoTableModel CFDIRelacionadosPagoTableModel = new CFDIRelacionadosPagoTableModel(items_,this.ShowColumns);
+       final CFDIRelacionadosPagoTableModel CFDIRelacionadosPagoTableModel = new CFDIRelacionadosPagoTableModel(this,items_,this.ShowColumns);
        this.setModel(CFDIRelacionadosPagoTableModel);
    }
    

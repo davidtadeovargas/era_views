@@ -5,11 +5,12 @@ import java.util.List;
 import com.era.models.Partcomprs;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import javax.swing.JTable;
 
 public class PartcomprsTableModel  extends BaseAbstractTableModel {
 
-   public PartcomprsTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public PartcomprsTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
+       super(jTable,items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 

@@ -13,7 +13,7 @@ public class ImpuesxpartidapedTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ImpuesxpartidapedTableModel ImpuesxpartidapedTableModel = new ImpuesxpartidapedTableModel(items,this.ShowColumns);
+       final ImpuesxpartidapedTableModel ImpuesxpartidapedTableModel = new ImpuesxpartidapedTableModel(this,items,this.ShowColumns);
         this.setModel(ImpuesxpartidapedTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ImpuesxpartidapedTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Impuesxpartidaped> items_ = (List<Impuesxpartidaped>) RepositoryFactory.getInstance().getImpuesxpartidapedsRepository().getAll();
-       final ImpuesxpartidapedTableModel ImpuesxpartidapedTableModel = new ImpuesxpartidapedTableModel(items_,this.ShowColumns);
+       final ImpuesxpartidapedTableModel ImpuesxpartidapedTableModel = new ImpuesxpartidapedTableModel(this,items_,this.ShowColumns);
        this.setModel(ImpuesxpartidapedTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Impuesxpartidaped> items_ = (List<Impuesxpartidaped>) RepositoryFactory.getInstance().getImpuesxpartidapedsRepository().getByLikeEncabezados(search);
-       final ImpuesxpartidapedTableModel ImpuesxpartidapedTableModel = new ImpuesxpartidapedTableModel(items_,this.ShowColumns);
+       final ImpuesxpartidapedTableModel ImpuesxpartidapedTableModel = new ImpuesxpartidapedTableModel(this,items_,this.ShowColumns);
        this.setModel(ImpuesxpartidapedTableModel);
    }
    

@@ -13,7 +13,7 @@ public class PesTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PesTableModel PesTableModel = new PesTableModel(items,this.ShowColumns);
+       final PesTableModel PesTableModel = new PesTableModel(this,items,this.ShowColumns);
         this.setModel(PesTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PesTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Pes> items_ = (List<Pes>) RepositoryFactory.getInstance().getPessRepository().getAll();
-       final PesTableModel PesTableModel = new PesTableModel(items_,this.ShowColumns);
+       final PesTableModel PesTableModel = new PesTableModel(this,items_,this.ShowColumns);
        this.setModel(PesTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Pes> items_ = (List<Pes>) RepositoryFactory.getInstance().getPessRepository().getByLikeEncabezados(search);
-       final PesTableModel PesTableModel = new PesTableModel(items_,this.ShowColumns);
+       final PesTableModel PesTableModel = new PesTableModel(this,items_,this.ShowColumns);
        this.setModel(PesTableModel);
    }
    

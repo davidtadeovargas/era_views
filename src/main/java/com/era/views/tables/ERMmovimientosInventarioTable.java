@@ -13,7 +13,7 @@ public class ERMmovimientosInventarioTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ERMmovimientosInventarioTableModel ERMmovimientosInventarioTableModel = new ERMmovimientosInventarioTableModel(items,this.ShowColumns);
+       final ERMmovimientosInventarioTableModel ERMmovimientosInventarioTableModel = new ERMmovimientosInventarioTableModel(this,items,this.ShowColumns);
         this.setModel(ERMmovimientosInventarioTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ERMmovimientosInventarioTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<ERMmovimientosInventario> items_ = (List<ERMmovimientosInventario>) RepositoryFactory.getInstance().getERMmovimientosInventariosRepository().getAll();
-       final ERMmovimientosInventarioTableModel ERMmovimientosInventarioTableModel = new ERMmovimientosInventarioTableModel(items_,this.ShowColumns);
+       final ERMmovimientosInventarioTableModel ERMmovimientosInventarioTableModel = new ERMmovimientosInventarioTableModel(this,items_,this.ShowColumns);
        this.setModel(ERMmovimientosInventarioTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<ERMmovimientosInventario> items_ = (List<ERMmovimientosInventario>) RepositoryFactory.getInstance().getERMmovimientosInventariosRepository().getByLikeEncabezados(search);
-       final ERMmovimientosInventarioTableModel ERMmovimientosInventarioTableModel = new ERMmovimientosInventarioTableModel(items_,this.ShowColumns);
+       final ERMmovimientosInventarioTableModel ERMmovimientosInventarioTableModel = new ERMmovimientosInventarioTableModel(this,items_,this.ShowColumns);
        this.setModel(ERMmovimientosInventarioTableModel);
    }
    

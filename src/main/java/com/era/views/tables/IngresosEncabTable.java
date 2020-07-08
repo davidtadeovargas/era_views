@@ -13,7 +13,7 @@ public class IngresosEncabTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(items,this.ShowColumns);
+       final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(this,items,this.ShowColumns);
         this.setModel(IngresosEncabTableModel);
    }
 
@@ -27,14 +27,14 @@ public class IngresosEncabTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<IngresosEncab> items_ = (List<IngresosEncab>) RepositoryFactory.getInstance().getIngresosEncabRepository().getAll();
-       final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(items_,this.ShowColumns);
+       final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(this,items_,this.ShowColumns);
        this.setModel(IngresosEncabTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<IngresosEncab> items_ = (List<IngresosEncab>) RepositoryFactory.getInstance().getIngresosEncabRepository().getByLikeEncabezados(search);
-       final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(items_,this.ShowColumns);
+       final IngresosEncabTableModel IngresosEncabTableModel = new IngresosEncabTableModel(this,items_,this.ShowColumns);
        this.setModel(IngresosEncabTableModel);
    }
    

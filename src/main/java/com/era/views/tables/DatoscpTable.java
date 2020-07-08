@@ -13,7 +13,7 @@ public class DatoscpTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final DatoscpTableModel DatoscpTableModel = new DatoscpTableModel(items,this.ShowColumns);
+       final DatoscpTableModel DatoscpTableModel = new DatoscpTableModel(this,items,this.ShowColumns);
         this.setModel(DatoscpTableModel);
    }
 
@@ -27,14 +27,14 @@ public class DatoscpTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Datoscp> items_ = (List<Datoscp>) RepositoryFactory.getInstance().getDatoscpsRepository().getAll();
-       final DatoscpTableModel DatoscpTableModel = new DatoscpTableModel(items_,this.ShowColumns);
+       final DatoscpTableModel DatoscpTableModel = new DatoscpTableModel(this,items_,this.ShowColumns);
        this.setModel(DatoscpTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Datoscp> items_ = (List<Datoscp>) RepositoryFactory.getInstance().getDatoscpsRepository().getByLikeEncabezados(search);
-       final DatoscpTableModel DatoscpTableModel = new DatoscpTableModel(items_,this.ShowColumns);
+       final DatoscpTableModel DatoscpTableModel = new DatoscpTableModel(this,items_,this.ShowColumns);
        this.setModel(DatoscpTableModel);
    }
    

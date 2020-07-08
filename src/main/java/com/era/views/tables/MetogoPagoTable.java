@@ -13,7 +13,7 @@ public class MetogoPagoTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final MetogoPagoTableModel MetogoPagoTableModel = new MetogoPagoTableModel(items,this.ShowColumns);
+       final MetogoPagoTableModel MetogoPagoTableModel = new MetogoPagoTableModel(this,items,this.ShowColumns);
         this.setModel(MetogoPagoTableModel);
    }
 
@@ -27,14 +27,14 @@ public class MetogoPagoTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<MetogoPago> items_ = (List<MetogoPago>) RepositoryFactory.getInstance().getMetogoPagosRepository().getAll();
-       final MetogoPagoTableModel MetogoPagoTableModel = new MetogoPagoTableModel(items_,this.ShowColumns);
+       final MetogoPagoTableModel MetogoPagoTableModel = new MetogoPagoTableModel(this,items_,this.ShowColumns);
        this.setModel(MetogoPagoTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<MetogoPago> items_ = (List<MetogoPago>) RepositoryFactory.getInstance().getMetogoPagosRepository().getByLikeEncabezados(search);
-       final MetogoPagoTableModel MetogoPagoTableModel = new MetogoPagoTableModel(items_,this.ShowColumns);
+       final MetogoPagoTableModel MetogoPagoTableModel = new MetogoPagoTableModel(this,items_,this.ShowColumns);
        this.setModel(MetogoPagoTableModel);
    }
    

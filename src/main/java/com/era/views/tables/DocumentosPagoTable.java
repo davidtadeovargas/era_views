@@ -13,7 +13,7 @@ public class DocumentosPagoTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final DocumentosPagoTableModel DocumentosPagoTableModel = new DocumentosPagoTableModel(items,this.ShowColumns);
+       final DocumentosPagoTableModel DocumentosPagoTableModel = new DocumentosPagoTableModel(this,items,this.ShowColumns);
         this.setModel(DocumentosPagoTableModel);
    }
 
@@ -27,14 +27,14 @@ public class DocumentosPagoTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<DocumentosPago> items_ = (List<DocumentosPago>) RepositoryFactory.getInstance().getDocumentosPagosRepository().getAll();
-       final DocumentosPagoTableModel DocumentosPagoTableModel = new DocumentosPagoTableModel(items_,this.ShowColumns);
+       final DocumentosPagoTableModel DocumentosPagoTableModel = new DocumentosPagoTableModel(this,items_,this.ShowColumns);
        this.setModel(DocumentosPagoTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<DocumentosPago> items_ = (List<DocumentosPago>) RepositoryFactory.getInstance().getDocumentosPagosRepository().getByLikeEncabezados(search);
-       final DocumentosPagoTableModel DocumentosPagoTableModel = new DocumentosPagoTableModel(items_,this.ShowColumns);
+       final DocumentosPagoTableModel DocumentosPagoTableModel = new DocumentosPagoTableModel(this,items_,this.ShowColumns);
        this.setModel(DocumentosPagoTableModel);
    }
    

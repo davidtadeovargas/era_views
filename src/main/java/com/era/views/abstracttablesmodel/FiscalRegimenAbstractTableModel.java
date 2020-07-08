@@ -9,6 +9,7 @@ import com.era.models.CCodigopostal;
 import com.era.models.CRegimenfiscal;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -16,8 +17,8 @@ import java.util.List;
  */
 public class FiscalRegimenAbstractTableModel extends BaseAbstractTableModel {
         
-    public FiscalRegimenAbstractTableModel(List<CCodigopostal> deliveries, List<ColumnTable> header) {
-        super(deliveries,header);
+    public FiscalRegimenAbstractTableModel(final JTable jTable, List<CCodigopostal> deliveries, List<ColumnTable> header) {
+        super(jTable,deliveries,header);
     }
 
     @Override

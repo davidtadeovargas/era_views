@@ -13,7 +13,7 @@ public class SerieTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final SerieTableModel SerieTableModel = new SerieTableModel(items,this.ShowColumns);
+       final SerieTableModel SerieTableModel = new SerieTableModel(this,items,this.ShowColumns);
         this.setModel(SerieTableModel);
    }
 
@@ -27,14 +27,14 @@ public class SerieTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Serie> items_ = (List<Serie>) RepositoryFactory.getInstance().getSeriesRepository().getAll();
-       final SerieTableModel SerieTableModel = new SerieTableModel(items_,this.ShowColumns);
+       final SerieTableModel SerieTableModel = new SerieTableModel(this,items_,this.ShowColumns);
        this.setModel(SerieTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Serie> items_ = (List<Serie>) RepositoryFactory.getInstance().getSeriesRepository().getByLikeEncabezados(search);
-       final SerieTableModel SerieTableModel = new SerieTableModel(items_,this.ShowColumns);
+       final SerieTableModel SerieTableModel = new SerieTableModel(this,items_,this.ShowColumns);
        this.setModel(SerieTableModel);
    }
    

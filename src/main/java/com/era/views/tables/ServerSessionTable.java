@@ -13,7 +13,7 @@ public class ServerSessionTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ServerSessionTableModel ServerSessionTableModel = new ServerSessionTableModel(items,this.ShowColumns);
+       final ServerSessionTableModel ServerSessionTableModel = new ServerSessionTableModel(this,items,this.ShowColumns);
         this.setModel(ServerSessionTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ServerSessionTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<ServerSession> items_ = (List<ServerSession>) RepositoryFactory.getInstance().getServerSessionsRepository().getAll();
-       final ServerSessionTableModel ServerSessionTableModel = new ServerSessionTableModel(items_,this.ShowColumns);
+       final ServerSessionTableModel ServerSessionTableModel = new ServerSessionTableModel(this,items_,this.ShowColumns);
        this.setModel(ServerSessionTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<ServerSession> items_ = (List<ServerSession>) RepositoryFactory.getInstance().getServerSessionsRepository().getByLikeEncabezados(search);
-       final ServerSessionTableModel ServerSessionTableModel = new ServerSessionTableModel(items_,this.ShowColumns);
+       final ServerSessionTableModel ServerSessionTableModel = new ServerSessionTableModel(this,items_,this.ShowColumns);
        this.setModel(ServerSessionTableModel);
    }
    

@@ -13,7 +13,7 @@ public class PartordsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PartordsTableModel PartordsTableModel = new PartordsTableModel(items,this.ShowColumns);
+       final PartordsTableModel PartordsTableModel = new PartordsTableModel(this,items,this.ShowColumns);
         this.setModel(PartordsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PartordsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Partords> items_ = (List<Partords>) RepositoryFactory.getInstance().getPartordssRepository().getAll();
-       final PartordsTableModel PartordsTableModel = new PartordsTableModel(items_,this.ShowColumns);
+       final PartordsTableModel PartordsTableModel = new PartordsTableModel(this,items_,this.ShowColumns);
        this.setModel(PartordsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Partords> items_ = (List<Partords>) RepositoryFactory.getInstance().getPartordssRepository().getByLikeEncabezados(search);
-       final PartordsTableModel PartordsTableModel = new PartordsTableModel(items_,this.ShowColumns);
+       final PartordsTableModel PartordsTableModel = new PartordsTableModel(this,items_,this.ShowColumns);
        this.setModel(PartordsTableModel);
    }
    

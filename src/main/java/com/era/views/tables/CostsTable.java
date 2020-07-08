@@ -13,7 +13,7 @@ public class CostsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CostsTableModel CostsTableModel = new CostsTableModel(items,this.ShowColumns);
+       final CostsTableModel CostsTableModel = new CostsTableModel(this,items,this.ShowColumns);
         this.setModel(CostsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CostsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Costs> items_ = (List<Costs>) RepositoryFactory.getInstance().getCostssRepository().getAll();
-       final CostsTableModel CostsTableModel = new CostsTableModel(items_,this.ShowColumns);
+       final CostsTableModel CostsTableModel = new CostsTableModel(this,items_,this.ShowColumns);
        this.setModel(CostsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Costs> items_ = (List<Costs>) RepositoryFactory.getInstance().getCostssRepository().getByLikeEncabezados(search);
-       final CostsTableModel CostsTableModel = new CostsTableModel(items_,this.ShowColumns);
+       final CostsTableModel CostsTableModel = new CostsTableModel(this,items_,this.ShowColumns);
        this.setModel(CostsTableModel);
    }
    

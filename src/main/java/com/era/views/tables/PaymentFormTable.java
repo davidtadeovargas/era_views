@@ -13,7 +13,7 @@ public class PaymentFormTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PaymentFormTableModel PaymentFormTableModel = new PaymentFormTableModel(items,this.ShowColumns);
+       final PaymentFormTableModel PaymentFormTableModel = new PaymentFormTableModel(this,items,this.ShowColumns);
         this.setModel(PaymentFormTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PaymentFormTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CPaymentForm> items_ = (List<CPaymentForm>) RepositoryFactory.getInstance().getPaymentFormsRepository().getAll();
-       final PaymentFormTableModel PaymentFormTableModel = new PaymentFormTableModel(items_,this.ShowColumns);
+       final PaymentFormTableModel PaymentFormTableModel = new PaymentFormTableModel(this,items_,this.ShowColumns);
        this.setModel(PaymentFormTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CPaymentForm> items_ = (List<CPaymentForm>) RepositoryFactory.getInstance().getPaymentFormsRepository().getByLikeEncabezados(search);
-       final PaymentFormTableModel PaymentFormTableModel = new PaymentFormTableModel(items_,this.ShowColumns);
+       final PaymentFormTableModel PaymentFormTableModel = new PaymentFormTableModel(this,items_,this.ShowColumns);
        this.setModel(PaymentFormTableModel);
    }
    

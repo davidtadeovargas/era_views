@@ -13,7 +13,7 @@ public class PartprevcomprsTmpTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PartprevcomprsTmpTableModel PartprevcomprsTmpTableModel = new PartprevcomprsTmpTableModel(items,this.ShowColumns);
+       final PartprevcomprsTmpTableModel PartprevcomprsTmpTableModel = new PartprevcomprsTmpTableModel(this,items,this.ShowColumns);
         this.setModel(PartprevcomprsTmpTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PartprevcomprsTmpTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<PartprevcomprsTmp> items_ = (List<PartprevcomprsTmp>) RepositoryFactory.getInstance().getPartprevcomprsTmpsRepository().getAll();
-       final PartprevcomprsTmpTableModel PartprevcomprsTmpTableModel = new PartprevcomprsTmpTableModel(items_,this.ShowColumns);
+       final PartprevcomprsTmpTableModel PartprevcomprsTmpTableModel = new PartprevcomprsTmpTableModel(this,items_,this.ShowColumns);
        this.setModel(PartprevcomprsTmpTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<PartprevcomprsTmp> items_ = (List<PartprevcomprsTmp>) RepositoryFactory.getInstance().getPartprevcomprsTmpsRepository().getByLikeEncabezados(search);
-       final PartprevcomprsTmpTableModel PartprevcomprsTmpTableModel = new PartprevcomprsTmpTableModel(items_,this.ShowColumns);
+       final PartprevcomprsTmpTableModel PartprevcomprsTmpTableModel = new PartprevcomprsTmpTableModel(this,items_,this.ShowColumns);
        this.setModel(PartprevcomprsTmpTableModel);
    }
    

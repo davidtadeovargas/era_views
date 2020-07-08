@@ -13,7 +13,7 @@ public class HistAntiguedaddesaldoTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final HistAntiguedaddesaldoTableModel HistAntiguedaddesaldoTableModel = new HistAntiguedaddesaldoTableModel(items,this.ShowColumns);
+       final HistAntiguedaddesaldoTableModel HistAntiguedaddesaldoTableModel = new HistAntiguedaddesaldoTableModel(this,items,this.ShowColumns);
         this.setModel(HistAntiguedaddesaldoTableModel);
    }
 
@@ -27,14 +27,14 @@ public class HistAntiguedaddesaldoTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<HistAntiguedaddesaldo> items_ = (List<HistAntiguedaddesaldo>) RepositoryFactory.getInstance().getHistAntiguedaddesaldosRepository().getAll();
-       final HistAntiguedaddesaldoTableModel HistAntiguedaddesaldoTableModel = new HistAntiguedaddesaldoTableModel(items_,this.ShowColumns);
+       final HistAntiguedaddesaldoTableModel HistAntiguedaddesaldoTableModel = new HistAntiguedaddesaldoTableModel(this,items_,this.ShowColumns);
        this.setModel(HistAntiguedaddesaldoTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<HistAntiguedaddesaldo> items_ = (List<HistAntiguedaddesaldo>) RepositoryFactory.getInstance().getHistAntiguedaddesaldosRepository().getByLikeEncabezados(search);
-       final HistAntiguedaddesaldoTableModel HistAntiguedaddesaldoTableModel = new HistAntiguedaddesaldoTableModel(items_,this.ShowColumns);
+       final HistAntiguedaddesaldoTableModel HistAntiguedaddesaldoTableModel = new HistAntiguedaddesaldoTableModel(this,items_,this.ShowColumns);
        this.setModel(HistAntiguedaddesaldoTableModel);
    }
    

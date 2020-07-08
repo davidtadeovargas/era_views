@@ -13,7 +13,7 @@ public class CortesTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CortesTableModel CortesTableModel = new CortesTableModel(items,this.ShowColumns);
+       final CortesTableModel CortesTableModel = new CortesTableModel(this,items,this.ShowColumns);
         this.setModel(CortesTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CortesTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Cortes> items_ = (List<Cortes>) RepositoryFactory.getInstance().getCortessRepository().getAll();
-       final CortesTableModel CortesTableModel = new CortesTableModel(items_,this.ShowColumns);
+       final CortesTableModel CortesTableModel = new CortesTableModel(this,items_,this.ShowColumns);
        this.setModel(CortesTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Cortes> items_ = (List<Cortes>) RepositoryFactory.getInstance().getCortessRepository().getByLikeEncabezados(search);
-       final CortesTableModel CortesTableModel = new CortesTableModel(items_,this.ShowColumns);
+       final CortesTableModel CortesTableModel = new CortesTableModel(this,items_,this.ShowColumns);
        this.setModel(CortesTableModel);
    }
    

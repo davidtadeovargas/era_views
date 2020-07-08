@@ -13,7 +13,7 @@ public class PersTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final PersTableModel PersTableModel = new PersTableModel(items,this.ShowColumns);
+       final PersTableModel PersTableModel = new PersTableModel(this,items,this.ShowColumns);
         this.setModel(PersTableModel);
    }
 
@@ -27,14 +27,14 @@ public class PersTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Pers> items_ = (List<Pers>) RepositoryFactory.getInstance().getPerssRepository().getAll();
-       final PersTableModel PersTableModel = new PersTableModel(items_,this.ShowColumns);
+       final PersTableModel PersTableModel = new PersTableModel(this,items_,this.ShowColumns);
        this.setModel(PersTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Pers> items_ = (List<Pers>) RepositoryFactory.getInstance().getPerssRepository().getByLikeEncabezados(search);
-       final PersTableModel PersTableModel = new PersTableModel(items_,this.ShowColumns);
+       final PersTableModel PersTableModel = new PersTableModel(this,items_,this.ShowColumns);
        this.setModel(PersTableModel);
    }
    

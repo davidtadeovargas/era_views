@@ -13,7 +13,7 @@ public class AuxiliarTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final AuxiliarTableModel AuxiliarTableModel = new AuxiliarTableModel(items,this.ShowColumns);
+       final AuxiliarTableModel AuxiliarTableModel = new AuxiliarTableModel(this,items,this.ShowColumns);
         this.setModel(AuxiliarTableModel);
    }
 
@@ -27,14 +27,14 @@ public class AuxiliarTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Auxiliar> items_ = (List<Auxiliar>) RepositoryFactory.getInstance().getAuxiliarsRepository().getAll();
-       final AuxiliarTableModel AuxiliarTableModel = new AuxiliarTableModel(items_,this.ShowColumns);
+       final AuxiliarTableModel AuxiliarTableModel = new AuxiliarTableModel(this,items_,this.ShowColumns);
        this.setModel(AuxiliarTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Auxiliar> items_ = (List<Auxiliar>) RepositoryFactory.getInstance().getAuxiliarsRepository().getByLikeEncabezados(search);
-       final AuxiliarTableModel AuxiliarTableModel = new AuxiliarTableModel(items_,this.ShowColumns);
+       final AuxiliarTableModel AuxiliarTableModel = new AuxiliarTableModel(this,items_,this.ShowColumns);
        this.setModel(AuxiliarTableModel);
    }
    

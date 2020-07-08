@@ -8,6 +8,7 @@ package com.era.views.abstracttablesmodel;
 import com.era.models.Clasificacion;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.util.List;
  */
 public class ClasificationsAbstractTableModel extends BaseAbstractTableModel {
 
-    public ClasificationsAbstractTableModel(List<Clasificacion> deliveries, List<ColumnTable> header) {
-        super(deliveries,header);
+    public ClasificationsAbstractTableModel(final JTable jTable, List<Clasificacion> deliveries, List<ColumnTable> header) {
+        super(jTable,deliveries,header);
     }
 }

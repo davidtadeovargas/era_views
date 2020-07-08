@@ -13,7 +13,7 @@ public class TipscambTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final TipscambTableModel TipscambTableModel = new TipscambTableModel(items,this.ShowColumns);
+       final TipscambTableModel TipscambTableModel = new TipscambTableModel(this,items,this.ShowColumns);
         this.setModel(TipscambTableModel);
    }
 
@@ -27,14 +27,14 @@ public class TipscambTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Tipscamb> items_ = (List<Tipscamb>) RepositoryFactory.getInstance().getTipscambsRepository().getAll();
-       final TipscambTableModel TipscambTableModel = new TipscambTableModel(items_,this.ShowColumns);
+       final TipscambTableModel TipscambTableModel = new TipscambTableModel(this,items_,this.ShowColumns);
        this.setModel(TipscambTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Tipscamb> items_ = (List<Tipscamb>) RepositoryFactory.getInstance().getTipscambsRepository().getByLikeEncabezados(search);
-       final TipscambTableModel TipscambTableModel = new TipscambTableModel(items_,this.ShowColumns);
+       final TipscambTableModel TipscambTableModel = new TipscambTableModel(this,items_,this.ShowColumns);
        this.setModel(TipscambTableModel);
    }
    

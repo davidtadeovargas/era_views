@@ -13,7 +13,7 @@ public class FlujactTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final FlujactTableModel FlujactTableModel = new FlujactTableModel(items,this.ShowColumns);
+       final FlujactTableModel FlujactTableModel = new FlujactTableModel(this,items,this.ShowColumns);
         this.setModel(FlujactTableModel);
    }
 
@@ -27,14 +27,14 @@ public class FlujactTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Flujact> items_ = (List<Flujact>) RepositoryFactory.getInstance().getFlujactsRepository().getAll();
-       final FlujactTableModel FlujactTableModel = new FlujactTableModel(items_,this.ShowColumns);
+       final FlujactTableModel FlujactTableModel = new FlujactTableModel(this,items_,this.ShowColumns);
        this.setModel(FlujactTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Flujact> items_ = (List<Flujact>) RepositoryFactory.getInstance().getFlujactsRepository().getByLikeEncabezados(search);
-       final FlujactTableModel FlujactTableModel = new FlujactTableModel(items_,this.ShowColumns);
+       final FlujactTableModel FlujactTableModel = new FlujactTableModel(this,items_,this.ShowColumns);
        this.setModel(FlujactTableModel);
    }
    

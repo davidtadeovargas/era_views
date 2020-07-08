@@ -14,7 +14,7 @@ public class ConfgralTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(items,this.ShowColumns);
+       final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(this,items,this.ShowColumns);
         this.setModel(ConfgralTableModel);
    }
 
@@ -28,14 +28,14 @@ public class ConfgralTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Confgral> items_ = (List<Confgral>) RepositoryFactory.getInstance().getConfgralRepository().getAll();
-       final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(items_,this.ShowColumns);
+       final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(this,items_,this.ShowColumns);
        this.setModel(ConfgralTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Confgral> items_ = (List<Confgral>) RepositoryFactory.getInstance().getConfgralRepository().getByLikeEncabezados(search);
-       final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(items_,this.ShowColumns);
+       final ConfgralTableModel ConfgralTableModel = new ConfgralTableModel(this,items_,this.ShowColumns);
        this.setModel(ConfgralTableModel);
    }
    

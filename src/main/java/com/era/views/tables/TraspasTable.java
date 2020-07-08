@@ -13,7 +13,7 @@ public class TraspasTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final TraspasTableModel TraspasTableModel = new TraspasTableModel(items,this.ShowColumns);
+       final TraspasTableModel TraspasTableModel = new TraspasTableModel(this,items,this.ShowColumns);
         this.setModel(TraspasTableModel);
    }
 
@@ -27,14 +27,14 @@ public class TraspasTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Traspas> items_ = (List<Traspas>) RepositoryFactory.getInstance().getTraspassRepository().getAll();
-       final TraspasTableModel TraspasTableModel = new TraspasTableModel(items_,this.ShowColumns);
+       final TraspasTableModel TraspasTableModel = new TraspasTableModel(this,items_,this.ShowColumns);
        this.setModel(TraspasTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Traspas> items_ = (List<Traspas>) RepositoryFactory.getInstance().getTraspassRepository().getByLikeEncabezados(search);
-       final TraspasTableModel TraspasTableModel = new TraspasTableModel(items_,this.ShowColumns);
+       final TraspasTableModel TraspasTableModel = new TraspasTableModel(this,items_,this.ShowColumns);
        this.setModel(TraspasTableModel);
    }
    

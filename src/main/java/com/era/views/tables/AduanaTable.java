@@ -13,7 +13,7 @@ public class AduanaTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final AduanaTableModel AduanaTableModel = new AduanaTableModel(items,this.ShowColumns);
+       final AduanaTableModel AduanaTableModel = new AduanaTableModel(this,items,this.ShowColumns);
         this.setModel(AduanaTableModel);
    }
 
@@ -27,14 +27,14 @@ public class AduanaTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Aduana> items_ = (List<Aduana>) RepositoryFactory.getInstance().getAduanasRepository().getAll();
-       final AduanaTableModel AduanaTableModel = new AduanaTableModel(items_,this.ShowColumns);
+       final AduanaTableModel AduanaTableModel = new AduanaTableModel(this,items_,this.ShowColumns);
        this.setModel(AduanaTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Aduana> items_ = (List<Aduana>) RepositoryFactory.getInstance().getAduanasRepository().getByLikeEncabezados(search);
-       final AduanaTableModel AduanaTableModel = new AduanaTableModel(items_,this.ShowColumns);
+       final AduanaTableModel AduanaTableModel = new AduanaTableModel(this,items_,this.ShowColumns);
        this.setModel(AduanaTableModel);
    }
    

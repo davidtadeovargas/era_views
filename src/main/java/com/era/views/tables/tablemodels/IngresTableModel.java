@@ -7,11 +7,12 @@ import com.era.models.Product;
 import com.era.repositories.RepositoryFactory;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import javax.swing.JTable;
 
 public class IngresTableModel  extends BaseAbstractTableModel {
 
-   public IngresTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public IngresTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
+       super(jTable,items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 

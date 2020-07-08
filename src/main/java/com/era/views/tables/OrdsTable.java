@@ -13,7 +13,7 @@ public class OrdsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final OrdsTableModel OrdsTableModel = new OrdsTableModel(items,this.ShowColumns);
+       final OrdsTableModel OrdsTableModel = new OrdsTableModel(this,items,this.ShowColumns);
         this.setModel(OrdsTableModel);
    }
 
@@ -27,14 +27,14 @@ public class OrdsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Ords> items_ = (List<Ords>) RepositoryFactory.getInstance().getOrdssRepository().getAll();
-       final OrdsTableModel OrdsTableModel = new OrdsTableModel(items_,this.ShowColumns);
+       final OrdsTableModel OrdsTableModel = new OrdsTableModel(this,items_,this.ShowColumns);
        this.setModel(OrdsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Ords> items_ = (List<Ords>) RepositoryFactory.getInstance().getOrdssRepository().getByLikeEncabezados(search);
-       final OrdsTableModel OrdsTableModel = new OrdsTableModel(items_,this.ShowColumns);
+       final OrdsTableModel OrdsTableModel = new OrdsTableModel(this,items_,this.ShowColumns);
        this.setModel(OrdsTableModel);
    }
    

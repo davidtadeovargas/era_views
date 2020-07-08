@@ -13,7 +13,7 @@ public class CClaveprodservTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CClaveprodservTableModel CClaveprodservTableModel = new CClaveprodservTableModel(items,this.ShowColumns);
+       final CClaveprodservTableModel CClaveprodservTableModel = new CClaveprodservTableModel(this,items,this.ShowColumns);
         this.setModel(CClaveprodservTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CClaveprodservTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CClaveprodserv> items_ = (List<CClaveprodserv>) RepositoryFactory.getInstance().getCClaveprodservsRepository().getAll();
-       final CClaveprodservTableModel CClaveprodservTableModel = new CClaveprodservTableModel(items_,this.ShowColumns);
+       final CClaveprodservTableModel CClaveprodservTableModel = new CClaveprodservTableModel(this,items_,this.ShowColumns);
        this.setModel(CClaveprodservTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CClaveprodserv> items_ = (List<CClaveprodserv>) RepositoryFactory.getInstance().getCClaveprodservsRepository().getByLikeEncabezados(search);
-       final CClaveprodservTableModel CClaveprodservTableModel = new CClaveprodservTableModel(items_,this.ShowColumns);
+       final CClaveprodservTableModel CClaveprodservTableModel = new CClaveprodservTableModel(this,items_,this.ShowColumns);
        this.setModel(CClaveprodservTableModel);
    }
    

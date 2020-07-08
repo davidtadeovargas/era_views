@@ -14,7 +14,7 @@ public class TipsTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final TipsTableModel TipsTableModel = new TipsTableModel(items,this.ShowColumns);
+       final TipsTableModel TipsTableModel = new TipsTableModel(this,items,this.ShowColumns);
        this.setModel(TipsTableModel);
    }
 
@@ -28,14 +28,14 @@ public class TipsTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Tips> items_ = (List<Tips>) RepositoryFactory.getInstance().getTipssRepository().getAll();
-       final TipsTableModel TipsTableModel = new TipsTableModel(items_,this.ShowColumns);
+       final TipsTableModel TipsTableModel = new TipsTableModel(this,items_,this.ShowColumns);
        this.setModel(TipsTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Tips> items_ = (List<Tips>) RepositoryFactory.getInstance().getTipssRepository().getByLikeEncabezados(search);
-       final TipsTableModel TipsTableModel = new TipsTableModel(items_,this.ShowColumns);
+       final TipsTableModel TipsTableModel = new TipsTableModel(this,items_,this.ShowColumns);
        this.setModel(TipsTableModel);
    }
    

@@ -13,7 +13,7 @@ public class UserPermissionTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final UserPermissionTableModel UserPermissionTableModel = new UserPermissionTableModel(items,this.ShowColumns);
+       final UserPermissionTableModel UserPermissionTableModel = new UserPermissionTableModel(this,items,this.ShowColumns);
         this.setModel(UserPermissionTableModel);
    }
 
@@ -27,14 +27,14 @@ public class UserPermissionTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<UserPermission> items_ = (List<UserPermission>) RepositoryFactory.getInstance().getUserPermissionsRepository().getAll();
-       final UserPermissionTableModel UserPermissionTableModel = new UserPermissionTableModel(items_,this.ShowColumns);
+       final UserPermissionTableModel UserPermissionTableModel = new UserPermissionTableModel(this,items_,this.ShowColumns);
        this.setModel(UserPermissionTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<UserPermission> items_ = (List<UserPermission>) RepositoryFactory.getInstance().getUserPermissionsRepository().getByLikeEncabezados(search);
-       final UserPermissionTableModel UserPermissionTableModel = new UserPermissionTableModel(items_,this.ShowColumns);
+       final UserPermissionTableModel UserPermissionTableModel = new UserPermissionTableModel(this,items_,this.ShowColumns);
        this.setModel(UserPermissionTableModel);
    }
 

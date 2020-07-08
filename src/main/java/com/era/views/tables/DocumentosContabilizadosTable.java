@@ -13,7 +13,7 @@ public class DocumentosContabilizadosTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final DocumentosContabilizadosTableModel DocumentosContabilizadosTableModel = new DocumentosContabilizadosTableModel(items,this.ShowColumns);
+       final DocumentosContabilizadosTableModel DocumentosContabilizadosTableModel = new DocumentosContabilizadosTableModel(this,items,this.ShowColumns);
         this.setModel(DocumentosContabilizadosTableModel);
    }
 
@@ -27,14 +27,14 @@ public class DocumentosContabilizadosTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<DocumentosContabilizados> items_ = (List<DocumentosContabilizados>) RepositoryFactory.getInstance().getDocumentosContabilizadossRepository().getAll();
-       final DocumentosContabilizadosTableModel DocumentosContabilizadosTableModel = new DocumentosContabilizadosTableModel(items_,this.ShowColumns);
+       final DocumentosContabilizadosTableModel DocumentosContabilizadosTableModel = new DocumentosContabilizadosTableModel(this,items_,this.ShowColumns);
        this.setModel(DocumentosContabilizadosTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<DocumentosContabilizados> items_ = (List<DocumentosContabilizados>) RepositoryFactory.getInstance().getDocumentosContabilizadossRepository().getByLikeEncabezados(search);
-       final DocumentosContabilizadosTableModel DocumentosContabilizadosTableModel = new DocumentosContabilizadosTableModel(items_,this.ShowColumns);
+       final DocumentosContabilizadosTableModel DocumentosContabilizadosTableModel = new DocumentosContabilizadosTableModel(this,items_,this.ShowColumns);
        this.setModel(DocumentosContabilizadosTableModel);
    }
    

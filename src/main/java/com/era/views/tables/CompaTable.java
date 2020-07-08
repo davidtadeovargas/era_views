@@ -13,7 +13,7 @@ public class CompaTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CompaTableModel CompaTableModel = new CompaTableModel(items,this.ShowColumns);
+       final CompaTableModel CompaTableModel = new CompaTableModel(this,items,this.ShowColumns);
         this.setModel(CompaTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CompaTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Compa> items_ = (List<Compa>) RepositoryFactory.getInstance().getCompasRepository().getAll();
-       final CompaTableModel CompaTableModel = new CompaTableModel(items_,this.ShowColumns);
+       final CompaTableModel CompaTableModel = new CompaTableModel(this,items_,this.ShowColumns);
        this.setModel(CompaTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Compa> items_ = (List<Compa>) RepositoryFactory.getInstance().getCompasRepository().getByLikeEncabezados(search);
-       final CompaTableModel CompaTableModel = new CompaTableModel(items_,this.ShowColumns);
+       final CompaTableModel CompaTableModel = new CompaTableModel(this,items_,this.ShowColumns);
        this.setModel(CompaTableModel);
    }
    

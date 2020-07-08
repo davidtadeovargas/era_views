@@ -9,6 +9,7 @@ import com.era.logger.LoggerUtility;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JTable;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -20,10 +21,13 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
     protected List<?> items = new ArrayList<>();
     protected List<ColumnTable> header;
     protected GetValueAt GetValueAt;
+    protected SetValueAt SetValueAt;
+    protected JTable jTable;
     
     
     
-    public BaseAbstractTableModel(final List<?> items, final List<ColumnTable> header) {
+    public BaseAbstractTableModel(final JTable jTable, final List<?> items, final List<ColumnTable> header) {
+        this.jTable = jTable;
         this.header = header;
         this.items = items;        
     }
@@ -40,14 +44,28 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
     }
         
     @Override
+    public void setValueAt(Object newValue, int rowIndex, int columnIndex) {
+                        
+        //Get the row model
+        final Object Object_ = this.items.get(rowIndex);
+        
+        //Get the columna name
+        final String columnName = this.jTable.getColumnName(columnIndex);
+                
+        if(SetValueAt != null){
+            SetValueAt.setValueAt(newValue, rowIndex, columnIndex, columnName, Object_);
+        }
+    }
+
+    @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         
         try{
          
             final ColumnTable ColumnTable = this.header.get(columnIndex);
             final String value = ColumnTable.getValue();
-            final Object Object = this.items.get(rowIndex);  
-
+            final Object Object = this.items.get(rowIndex);
+            
             if(GetValueAt != null){
                 return GetValueAt.getValueAt(rowIndex, columnIndex, value, Object);            
             }
@@ -60,6 +78,7 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
             return null;
         }
     }
+    
     
     @Override
     public String getColumnName(int col) {
@@ -92,5 +111,9 @@ public abstract class BaseAbstractTableModel extends AbstractTableModel{
     
     public interface GetValueAt{        
         public Object getValueAt(int rowIndex, int columnIndex, final String valueColumn, final Object model) throws Exception;
+    }
+    
+    public interface SetValueAt{
+        public void setValueAt(Object newValue, int rowIndex, int columnIndex, final String columnName, final Object model);
     }
 }

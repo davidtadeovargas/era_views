@@ -13,7 +13,7 @@ public class CxpTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CxpTableModel CxpTableModel = new CxpTableModel(items,this.ShowColumns);
+       final CxpTableModel CxpTableModel = new CxpTableModel(this,items,this.ShowColumns);
         this.setModel(CxpTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CxpTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Cxp> items_ = (List<Cxp>) RepositoryFactory.getInstance().getCxpsRepository().getAll();
-       final CxpTableModel CxpTableModel = new CxpTableModel(items_,this.ShowColumns);
+       final CxpTableModel CxpTableModel = new CxpTableModel(this,items_,this.ShowColumns);
        this.setModel(CxpTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Cxp> items_ = (List<Cxp>) RepositoryFactory.getInstance().getCxpsRepository().getByLikeEncabezados(search);
-       final CxpTableModel CxpTableModel = new CxpTableModel(items_,this.ShowColumns);
+       final CxpTableModel CxpTableModel = new CxpTableModel(this,items_,this.ShowColumns);
        this.setModel(CxpTableModel);
    }
    

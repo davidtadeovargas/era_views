@@ -10,6 +10,7 @@ import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 import com.era.views.tables.headers.ColumnTable;
 import com.era.views.tables.headers.TableHeaderFactory;
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -17,8 +18,8 @@ import java.util.List;
  */
 public class UsersTableModel extends BaseAbstractTableModel {
     
-    public UsersTableModel(List<?> items, final List<ColumnTable> header) {
-        super(items,header);
+    public UsersTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header) {
+        super(jTable,items,header);
         
         this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
             

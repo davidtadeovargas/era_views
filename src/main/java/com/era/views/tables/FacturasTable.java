@@ -13,7 +13,7 @@ public class FacturasTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final FacturasTableModel FacturasTableModel = new FacturasTableModel(items,this.ShowColumns);
+       final FacturasTableModel FacturasTableModel = new FacturasTableModel(this,items,this.ShowColumns);
         this.setModel(FacturasTableModel);
    }
 
@@ -27,14 +27,14 @@ public class FacturasTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Facturas> items_ = (List<Facturas>) RepositoryFactory.getInstance().getFacturassRepository().getAll();
-       final FacturasTableModel FacturasTableModel = new FacturasTableModel(items_,this.ShowColumns);
+       final FacturasTableModel FacturasTableModel = new FacturasTableModel(this,items_,this.ShowColumns);
        this.setModel(FacturasTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Facturas> items_ = (List<Facturas>) RepositoryFactory.getInstance().getFacturassRepository().getByLikeEncabezados(search);
-       final FacturasTableModel FacturasTableModel = new FacturasTableModel(items_,this.ShowColumns);
+       final FacturasTableModel FacturasTableModel = new FacturasTableModel(this,items_,this.ShowColumns);
        this.setModel(FacturasTableModel);
    }
    

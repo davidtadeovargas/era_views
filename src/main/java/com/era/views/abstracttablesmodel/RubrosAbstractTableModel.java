@@ -8,6 +8,7 @@ package com.era.views.abstracttablesmodel;
 import com.era.models.Rubr;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.util.List;
  */
 public class RubrosAbstractTableModel extends BaseAbstractTableModel {
 
-    public RubrosAbstractTableModel(List<Rubr> deliveries, List<ColumnTable> header) {
-        super(deliveries,header);
+    public RubrosAbstractTableModel(final JTable jTable, List<Rubr> deliveries, List<ColumnTable> header) {
+        super(jTable,deliveries,header);
     }
 }

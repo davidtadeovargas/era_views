@@ -13,7 +13,7 @@ public class ProductTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ProductTableModel ProductTableModel = new ProductTableModel(items,this.ShowColumns);
+       final ProductTableModel ProductTableModel = new ProductTableModel(this,items,this.ShowColumns);
         this.setModel(ProductTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ProductTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Product> items_ = (List<Product>) RepositoryFactory.getInstance().getProductsRepository().getAll();
-       final ProductTableModel ProductTableModel = new ProductTableModel(items_,this.ShowColumns);
+       final ProductTableModel ProductTableModel = new ProductTableModel(this,items_,this.ShowColumns);
        this.setModel(ProductTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Product> items_ = (List<Product>) RepositoryFactory.getInstance().getProductsRepository().getByLikeEncabezados(search);
-       final ProductTableModel ProductTableModel = new ProductTableModel(items_,this.ShowColumns);
+       final ProductTableModel ProductTableModel = new ProductTableModel(this,items_,this.ShowColumns);
        this.setModel(ProductTableModel);
    }
    

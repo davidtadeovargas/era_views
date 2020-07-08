@@ -13,7 +13,7 @@ public class UnidTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final UnidTableModel UnidTableModel = new UnidTableModel(items,this.ShowColumns);
+       final UnidTableModel UnidTableModel = new UnidTableModel(this,items,this.ShowColumns);
         this.setModel(UnidTableModel);
    }
 
@@ -27,14 +27,14 @@ public class UnidTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Unid> items_ = (List<Unid>) RepositoryFactory.getInstance().getUnidsRepository().getAll();
-       final UnidTableModel UnidTableModel = new UnidTableModel(items_,this.ShowColumns);
+       final UnidTableModel UnidTableModel = new UnidTableModel(this,items_,this.ShowColumns);
        this.setModel(UnidTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Unid> items_ = (List<Unid>) RepositoryFactory.getInstance().getUnidsRepository().getByLikeEncabezados(search);
-       final UnidTableModel UnidTableModel = new UnidTableModel(items_,this.ShowColumns);
+       final UnidTableModel UnidTableModel = new UnidTableModel(this,items_,this.ShowColumns);
        this.setModel(UnidTableModel);
    }
    

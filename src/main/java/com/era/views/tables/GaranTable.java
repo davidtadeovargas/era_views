@@ -13,7 +13,7 @@ public class GaranTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final GaranTableModel GaranTableModel = new GaranTableModel(items,this.ShowColumns);
+       final GaranTableModel GaranTableModel = new GaranTableModel(this,items,this.ShowColumns);
         this.setModel(GaranTableModel);
    }
 
@@ -27,14 +27,14 @@ public class GaranTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Garan> items_ = (List<Garan>) RepositoryFactory.getInstance().getGaransRepository().getAll();
-       final GaranTableModel GaranTableModel = new GaranTableModel(items_,this.ShowColumns);
+       final GaranTableModel GaranTableModel = new GaranTableModel(this,items_,this.ShowColumns);
        this.setModel(GaranTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Garan> items_ = (List<Garan>) RepositoryFactory.getInstance().getGaransRepository().getByLikeEncabezados(search);
-       final GaranTableModel GaranTableModel = new GaranTableModel(items_,this.ShowColumns);
+       final GaranTableModel GaranTableModel = new GaranTableModel(this,items_,this.ShowColumns);
        this.setModel(GaranTableModel);
    }
    

@@ -13,7 +13,7 @@ public class ConcepnotTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ConcepnotTableModel ConcepnotTableModel = new ConcepnotTableModel(items,this.ShowColumns);
+       final ConcepnotTableModel ConcepnotTableModel = new ConcepnotTableModel(this,items,this.ShowColumns);
         this.setModel(ConcepnotTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ConcepnotTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Concepnot> items_ = (List<Concepnot>) RepositoryFactory.getInstance().getConcepnotsRepository().getAll();
-       final ConcepnotTableModel ConcepnotTableModel = new ConcepnotTableModel(items_,this.ShowColumns);
+       final ConcepnotTableModel ConcepnotTableModel = new ConcepnotTableModel(this,items_,this.ShowColumns);
        this.setModel(ConcepnotTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Concepnot> items_ = (List<Concepnot>) RepositoryFactory.getInstance().getConcepnotsRepository().getByLikeEncabezados(search);
-       final ConcepnotTableModel ConcepnotTableModel = new ConcepnotTableModel(items_,this.ShowColumns);
+       final ConcepnotTableModel ConcepnotTableModel = new ConcepnotTableModel(this,items_,this.ShowColumns);
        this.setModel(ConcepnotTableModel);
    }
    

@@ -5,11 +5,12 @@ import java.util.List;
 import com.era.models.Partflujact;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
+import javax.swing.JTable;
 
 public class PartflujactTableModel  extends BaseAbstractTableModel {
 
-   public PartflujactTableModel(List<?> items, final List<ColumnTable> header){
-       super(items,header);
+   public PartflujactTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
+       super(jTable,items,header);
 
        this.GetValueAt = (int rowIndex, int columnIndex, String valueColumn, final Object model) -> {
 

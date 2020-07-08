@@ -13,7 +13,7 @@ public class TerprodcompaTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final TerprodcompaTableModel TerprodcompaTableModel = new TerprodcompaTableModel(items,this.ShowColumns);
+       final TerprodcompaTableModel TerprodcompaTableModel = new TerprodcompaTableModel(this,items,this.ShowColumns);
         this.setModel(TerprodcompaTableModel);
    }
 
@@ -27,14 +27,14 @@ public class TerprodcompaTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Terprodcompa> items_ = (List<Terprodcompa>) RepositoryFactory.getInstance().getTerprodcompasRepository().getAll();
-       final TerprodcompaTableModel TerprodcompaTableModel = new TerprodcompaTableModel(items_,this.ShowColumns);
+       final TerprodcompaTableModel TerprodcompaTableModel = new TerprodcompaTableModel(this,items_,this.ShowColumns);
        this.setModel(TerprodcompaTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Terprodcompa> items_ = (List<Terprodcompa>) RepositoryFactory.getInstance().getTerprodcompasRepository().getByLikeEncabezados(search);
-       final TerprodcompaTableModel TerprodcompaTableModel = new TerprodcompaTableModel(items_,this.ShowColumns);
+       final TerprodcompaTableModel TerprodcompaTableModel = new TerprodcompaTableModel(this,items_,this.ShowColumns);
        this.setModel(TerprodcompaTableModel);
    }
    

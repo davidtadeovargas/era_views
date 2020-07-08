@@ -13,7 +13,7 @@ public class ControlexportarTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ControlexportarTableModel ControlexportarTableModel = new ControlexportarTableModel(items,this.ShowColumns);
+       final ControlexportarTableModel ControlexportarTableModel = new ControlexportarTableModel(this,items,this.ShowColumns);
         this.setModel(ControlexportarTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ControlexportarTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Controlexportar> items_ = (List<Controlexportar>) RepositoryFactory.getInstance().getControlexportarsRepository().getAll();
-       final ControlexportarTableModel ControlexportarTableModel = new ControlexportarTableModel(items_,this.ShowColumns);
+       final ControlexportarTableModel ControlexportarTableModel = new ControlexportarTableModel(this,items_,this.ShowColumns);
        this.setModel(ControlexportarTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Controlexportar> items_ = (List<Controlexportar>) RepositoryFactory.getInstance().getControlexportarsRepository().getByLikeEncabezados(search);
-       final ControlexportarTableModel ControlexportarTableModel = new ControlexportarTableModel(items_,this.ShowColumns);
+       final ControlexportarTableModel ControlexportarTableModel = new ControlexportarTableModel(this,items_,this.ShowColumns);
        this.setModel(ControlexportarTableModel);
    }
    

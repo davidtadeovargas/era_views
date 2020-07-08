@@ -455,17 +455,9 @@ public abstract class VtasJFrame extends BaseJFrame {
 
             },
             new String [] {
-                "No.", "Venta", "Qty", "Entregados", "Producto", "Desripción", "Devueltos", "Kit", "Unidad", "Almacén", "Moneda", "Precio", "Descuento", "Importe", "Impuesto", "Fecha", "Talla", "Color", "Lote", "Pedimento", "Caducidad", "Backorder", "Serie Producto", "Comentario Serie", "Activo"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
-            };
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
             }
-        });
+        ));
         jTab2.setGridColor(new java.awt.Color(255, 255, 255));
         jTab2.setNextFocusableComponent(jBGenPDF);
         jTab2.setRequestFocusEnabled(false);

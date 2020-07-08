@@ -13,7 +13,7 @@ public class CuentasContablesTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CuentasContablesTableModel CuentasContablesTableModel = new CuentasContablesTableModel(items,this.ShowColumns);
+       final CuentasContablesTableModel CuentasContablesTableModel = new CuentasContablesTableModel(this,items,this.ShowColumns);
         this.setModel(CuentasContablesTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CuentasContablesTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CuentasContables> items_ = (List<CuentasContables>) RepositoryFactory.getInstance().getCuentasContablessRepository().getAll();
-       final CuentasContablesTableModel CuentasContablesTableModel = new CuentasContablesTableModel(items_,this.ShowColumns);
+       final CuentasContablesTableModel CuentasContablesTableModel = new CuentasContablesTableModel(this,items_,this.ShowColumns);
        this.setModel(CuentasContablesTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CuentasContables> items_ = (List<CuentasContables>) RepositoryFactory.getInstance().getCuentasContablessRepository().getByLikeEncabezados(search);
-       final CuentasContablesTableModel CuentasContablesTableModel = new CuentasContablesTableModel(items_,this.ShowColumns);
+       final CuentasContablesTableModel CuentasContablesTableModel = new CuentasContablesTableModel(this,items_,this.ShowColumns);
        this.setModel(CuentasContablesTableModel);
    }
    

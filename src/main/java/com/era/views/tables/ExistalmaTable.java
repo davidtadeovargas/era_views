@@ -13,7 +13,7 @@ public class ExistalmaTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ExistalmaTableModel ExistalmaTableModel = new ExistalmaTableModel(items,this.ShowColumns);
+       final ExistalmaTableModel ExistalmaTableModel = new ExistalmaTableModel(this,items,this.ShowColumns);
         this.setModel(ExistalmaTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ExistalmaTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Existalma> items_ = (List<Existalma>) RepositoryFactory.getInstance().getExistalmasRepository().getAll();
-       final ExistalmaTableModel ExistalmaTableModel = new ExistalmaTableModel(items_,this.ShowColumns);
+       final ExistalmaTableModel ExistalmaTableModel = new ExistalmaTableModel(this,items_,this.ShowColumns);
        this.setModel(ExistalmaTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Existalma> items_ = (List<Existalma>) RepositoryFactory.getInstance().getExistalmasRepository().getByLikeEncabezados(search);
-       final ExistalmaTableModel ExistalmaTableModel = new ExistalmaTableModel(items_,this.ShowColumns);
+       final ExistalmaTableModel ExistalmaTableModel = new ExistalmaTableModel(this,items_,this.ShowColumns);
        this.setModel(ExistalmaTableModel);
    }
    

@@ -13,7 +13,7 @@ public class CCoinTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final CCoinTableModel CCoinTableModel = new CCoinTableModel(items,this.ShowColumns);
+       final CCoinTableModel CCoinTableModel = new CCoinTableModel(this,items,this.ShowColumns);
         this.setModel(CCoinTableModel);
    }
 
@@ -27,14 +27,14 @@ public class CCoinTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<CCoin> items_ = (List<CCoin>) RepositoryFactory.getInstance().getCCoinsRepository().getAll();
-       final CCoinTableModel CCoinTableModel = new CCoinTableModel(items_,this.ShowColumns);
+       final CCoinTableModel CCoinTableModel = new CCoinTableModel(this,items_,this.ShowColumns);
        this.setModel(CCoinTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<CCoin> items_ = (List<CCoin>) RepositoryFactory.getInstance().getCCoinsRepository().getByLikeEncabezados(search);
-       final CCoinTableModel CCoinTableModel = new CCoinTableModel(items_,this.ShowColumns);
+       final CCoinTableModel CCoinTableModel = new CCoinTableModel(this,items_,this.ShowColumns);
        this.setModel(CCoinTableModel);
    }
    

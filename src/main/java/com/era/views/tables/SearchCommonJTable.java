@@ -25,7 +25,7 @@ public class SearchCommonJTable extends BaseJTable {
     @Override
     public void initTable(final List<?> items) {
         
-        final SearchCommonAbstractTableModel SearchCommonAbstractTableModel = new SearchCommonAbstractTableModel(items,this.ShowColumns,SearchCommonTypeEnum);
+        final SearchCommonAbstractTableModel SearchCommonAbstractTableModel = new SearchCommonAbstractTableModel(this,items,this.ShowColumns,SearchCommonTypeEnum);
         this.setModel(SearchCommonAbstractTableModel);
     }
 

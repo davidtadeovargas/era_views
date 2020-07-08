@@ -13,7 +13,7 @@ public class GeneralConfigTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final GeneralConfigTableModel GeneralConfigTableModel = new GeneralConfigTableModel(items,this.ShowColumns);
+       final GeneralConfigTableModel GeneralConfigTableModel = new GeneralConfigTableModel(this,items,this.ShowColumns);
         this.setModel(GeneralConfigTableModel);
    }
 
@@ -27,14 +27,14 @@ public class GeneralConfigTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<GeneralConfig> items_ = (List<GeneralConfig>) RepositoryFactory.getInstance().getGeneralConfigsRepository().getAll();
-       final GeneralConfigTableModel GeneralConfigTableModel = new GeneralConfigTableModel(items_,this.ShowColumns);
+       final GeneralConfigTableModel GeneralConfigTableModel = new GeneralConfigTableModel(this,items_,this.ShowColumns);
        this.setModel(GeneralConfigTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<GeneralConfig> items_ = (List<GeneralConfig>) RepositoryFactory.getInstance().getGeneralConfigsRepository().getByLikeEncabezados(search);
-       final GeneralConfigTableModel GeneralConfigTableModel = new GeneralConfigTableModel(items_,this.ShowColumns);
+       final GeneralConfigTableModel GeneralConfigTableModel = new GeneralConfigTableModel(this,items_,this.ShowColumns);
        this.setModel(GeneralConfigTableModel);
    }
    

@@ -8,6 +8,7 @@ package com.era.views.abstracttablesmodel;
 import com.era.models.CCodigopostal;
 import com.era.views.tables.headers.ColumnTable;
 import java.util.List;
+import javax.swing.JTable;
 
 /**
  *
@@ -15,8 +16,8 @@ import java.util.List;
  */
 public class CPSAbstractTableModel extends BaseAbstractTableModel {
         
-    public CPSAbstractTableModel(List<CCodigopostal> deliveries, List<ColumnTable> header) {
-        super(deliveries,header);
+    public CPSAbstractTableModel(final JTable jTable, List<CCodigopostal> deliveries, List<ColumnTable> header) {
+        super(jTable,deliveries,header);
     }
 
     @Override

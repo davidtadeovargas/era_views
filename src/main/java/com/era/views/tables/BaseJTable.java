@@ -5,19 +5,26 @@
  */
 package com.era.views.tables;
 
+import java.math.BigDecimal;
+import com.era.views.tables.utils.TableCellListener;
+import javax.swing.Action;
 import com.era.logger.LoggerUtility;
 import com.era.repositories.Repository;
 import com.era.utilities.UtilitiesFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 import com.era.views.tables.headers.ColumnTable;
+import java.awt.event.ActionEvent;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import javax.swing.AbstractAction;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -51,6 +58,8 @@ public abstract class BaseJTable extends JTable {
     protected Repository Repository;
     private OnScrollsChanges OnScrollsChanges;
     
+    private int iContCellEd = 1;
+    
     protected List<Integer> editablesColumnsIndexes = new ArrayList<>();
     protected List<String> editablesColumns = new ArrayList<>();
     
@@ -76,12 +85,13 @@ public abstract class BaseJTable extends JTable {
     }
     
     private void loadEditableColumns(){
+        
         if(editablesColumns!=null){
             for(String editableColumn:editablesColumns){
                 final int columnIndex = getColumnIndex(editableColumn);        
                 editablesColumnsIndexes.add(columnIndex);
             }
-        }        
+        }
     }
     
     @Override
@@ -447,6 +457,44 @@ public abstract class BaseJTable extends JTable {
                 
             }
             
+        });
+        
+        //When a column is edited, remain the value in the same cell
+        addPropertyChangeListener((PropertyChangeEvent event) -> {
+            
+            String pro = event.getPropertyName();
+             
+            if("tableCellEditor".equals(pro))
+            {
+                if(getSelectedRow()==-1)
+                    return;
+                 
+                final int selectedRow = getSelectedRow();
+                final int selectedColun = getEditingColumn();
+                Object selectedObject;
+                if(iContCellEd==1)
+                {                    
+                    String beforeEditing;
+                    selectedObject = getValueAt(selectedRow, 3);
+                    if(selectedObject!=null){
+                        beforeEditing = selectedObject.toString();
+                    }
+                                        
+                    ++iContCellEd;
+                }                
+                else
+                {
+                    iContCellEd = 1;
+                    
+                    String afterEditing;
+                    selectedObject = getValueAt(selectedRow, 3);
+                    if(selectedObject!=null){
+                        afterEditing = selectedObject.toString();
+                        
+                        this.setValueAt(afterEditing, selectedRow, selectedColun);
+                    }
+                }
+            }
         });
     }
 

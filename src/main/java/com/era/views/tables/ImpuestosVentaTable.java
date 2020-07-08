@@ -13,7 +13,7 @@ public class ImpuestosVentaTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final ImpuestosVentaTableModel ImpuestosVentaTableModel = new ImpuestosVentaTableModel(items,this.ShowColumns);
+       final ImpuestosVentaTableModel ImpuestosVentaTableModel = new ImpuestosVentaTableModel(this,items,this.ShowColumns);
         this.setModel(ImpuestosVentaTableModel);
    }
 
@@ -27,14 +27,14 @@ public class ImpuestosVentaTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<ImpuestosVenta> items_ = (List<ImpuestosVenta>) RepositoryFactory.getInstance().getImpuestosVentasRepository().getAll();
-       final ImpuestosVentaTableModel ImpuestosVentaTableModel = new ImpuestosVentaTableModel(items_,this.ShowColumns);
+       final ImpuestosVentaTableModel ImpuestosVentaTableModel = new ImpuestosVentaTableModel(this,items_,this.ShowColumns);
        this.setModel(ImpuestosVentaTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<ImpuestosVenta> items_ = (List<ImpuestosVenta>) RepositoryFactory.getInstance().getImpuestosVentasRepository().getByLikeEncabezados(search);
-       final ImpuestosVentaTableModel ImpuestosVentaTableModel = new ImpuestosVentaTableModel(items_,this.ShowColumns);
+       final ImpuestosVentaTableModel ImpuestosVentaTableModel = new ImpuestosVentaTableModel(this,items_,this.ShowColumns);
        this.setModel(ImpuestosVentaTableModel);
    }
 

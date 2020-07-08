@@ -13,7 +13,7 @@ public class TermarcamodeloTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final TermarcamodeloTableModel TermarcamodeloTableModel = new TermarcamodeloTableModel(items,this.ShowColumns);
+       final TermarcamodeloTableModel TermarcamodeloTableModel = new TermarcamodeloTableModel(this,items,this.ShowColumns);
         this.setModel(TermarcamodeloTableModel);
    }
 
@@ -27,14 +27,14 @@ public class TermarcamodeloTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Termarcamodelo> items_ = (List<Termarcamodelo>) RepositoryFactory.getInstance().getTermarcamodelosRepository().getAll();
-       final TermarcamodeloTableModel TermarcamodeloTableModel = new TermarcamodeloTableModel(items_,this.ShowColumns);
+       final TermarcamodeloTableModel TermarcamodeloTableModel = new TermarcamodeloTableModel(this,items_,this.ShowColumns);
        this.setModel(TermarcamodeloTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Termarcamodelo> items_ = (List<Termarcamodelo>) RepositoryFactory.getInstance().getTermarcamodelosRepository().getByLikeEncabezados(search);
-       final TermarcamodeloTableModel TermarcamodeloTableModel = new TermarcamodeloTableModel(items_,this.ShowColumns);
+       final TermarcamodeloTableModel TermarcamodeloTableModel = new TermarcamodeloTableModel(this,items_,this.ShowColumns);
        this.setModel(TermarcamodeloTableModel);
    }
    

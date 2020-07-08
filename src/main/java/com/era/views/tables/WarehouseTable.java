@@ -13,7 +13,7 @@ public class WarehouseTable extends BaseJTable {
 
    @Override
    public void initTable(List<?> items) {
-       final WarehouseTableModel WarehouseTableModel = new WarehouseTableModel(items,this.ShowColumns);
+       final WarehouseTableModel WarehouseTableModel = new WarehouseTableModel(this,items,this.ShowColumns);
         this.setModel(WarehouseTableModel);
    }
 
@@ -27,14 +27,14 @@ public class WarehouseTable extends BaseJTable {
    @Override
    public void loadAllItemsInTable() throws Exception {
        final List<Warehouse> items_ = (List<Warehouse>) RepositoryFactory.getInstance().getWarehousesRepository().getAll();
-       final WarehouseTableModel WarehouseTableModel = new WarehouseTableModel(items_,this.ShowColumns);
+       final WarehouseTableModel WarehouseTableModel = new WarehouseTableModel(this,items_,this.ShowColumns);
        this.setModel(WarehouseTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
        final List<Warehouse> items_ = (List<Warehouse>) RepositoryFactory.getInstance().getWarehousesRepository().getByLikeEncabezados(search);
-       final WarehouseTableModel WarehouseTableModel = new WarehouseTableModel(items_,this.ShowColumns);
+       final WarehouseTableModel WarehouseTableModel = new WarehouseTableModel(this,items_,this.ShowColumns);
        this.setModel(WarehouseTableModel);
    }
    
