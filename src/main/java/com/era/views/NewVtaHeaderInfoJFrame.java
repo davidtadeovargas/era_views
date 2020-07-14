@@ -55,7 +55,6 @@ public abstract class NewVtaHeaderInfoJFrame extends BaseJFrame
         jCCartaP = new javax.swing.JCheckBox();
         jLabel26 = new javax.swing.JLabel();
         jTextFieldVendedor = new javax.swing.JTextField();
-        jBVend = new javax.swing.JButton();
         jRPagad = new javax.swing.JRadioButton();
         jRNoPag = new javax.swing.JRadioButton();
 
@@ -192,13 +191,9 @@ public abstract class NewVtaHeaderInfoJFrame extends BaseJFrame
         jLabel26.setText("Vendedor:");
         jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 90, 20));
 
+        jTextFieldVendedor.setEditable(false);
         jTextFieldVendedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jPanel1.add(jTextFieldVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 30, 120, 20));
-
-        jBVend.setBackground(new java.awt.Color(255, 255, 255));
-        jBVend.setText("...");
-        jBVend.setToolTipText("Buscar Vendedor(es)");
-        jPanel1.add(jBVend, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 30, 30, 20));
 
         jRPagad.setBackground(new java.awt.Color(255, 255, 255));
         jRPagad.setSelected(true);
@@ -241,7 +236,6 @@ public abstract class NewVtaHeaderInfoJFrame extends BaseJFrame
     protected javax.swing.JButton jBFilt;
     protected javax.swing.JButton jBSal;
     protected javax.swing.JButton jBTipoRelacion;
-    protected javax.swing.JButton jBVend;
     protected javax.swing.JButton jButton1;
     protected javax.swing.JCheckBox jCCartaP;
     protected javax.swing.JCheckBox jCImp;
