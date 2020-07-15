@@ -157,6 +157,7 @@ public abstract class NewVtaCustomerInfoJFrame extends BaseJFrame
         jCGDats.setBackground(new java.awt.Color(255, 255, 255));
         jCGDats.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jCGDats.setText("Mod. datos del cliente F11");
+        jCGDats.setActionCommand("Mod. datos del cliente");
         jPClien.add(jCGDats, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 170, -1));
 
         jTCo3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
@@ -205,6 +206,7 @@ public abstract class NewVtaCustomerInfoJFrame extends BaseJFrame
         jCConta.setBackground(new java.awt.Color(255, 255, 255));
         jCConta.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jCConta.setText("Contado F8");
+        jCConta.setActionCommand("Contado");
         jPClien.add(jCConta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 90, -1));
 
         jTListEmp.setEditable(false);

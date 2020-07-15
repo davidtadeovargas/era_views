@@ -48,6 +48,7 @@ public abstract class BaseJFrame extends JFrame {
     
     protected String titleWindow;
     
+    protected Properties props;
     
     
     public BaseJFrame(final String idTextTitleWindow) {                
@@ -60,7 +61,7 @@ public abstract class BaseJFrame extends JFrame {
             if(idTextTitleWindow == null || idTextTitleWindow.isEmpty()){
                 titleWindow = "window_title_undefined";
             }
-            final Properties props = DialogPropertiesUitlity.getSingleton().getProperties();
+            props = DialogPropertiesUitlity.getSingleton().getProperties();
             this.titleWindow = props.getProperty(idTextTitleWindow);
 
             //Init

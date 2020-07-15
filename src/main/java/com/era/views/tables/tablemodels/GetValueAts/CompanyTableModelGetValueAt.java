@@ -120,7 +120,7 @@ public class CompanyTableModelGetValueAt implements IGetValueAt{
             returnValue = String.valueOf(Company.getDescu());
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getDIACRED().getValue())==0){
-            returnValue = Company.getDiacred();
+            returnValue = String.valueOf(Company.getDiacred());
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getDIAPAG().getValue())==0){
             returnValue = String.valueOf(Company.getDiapag());
