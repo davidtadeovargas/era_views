@@ -20,59 +20,69 @@ public abstract class VtasJFrame extends BaseJFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jP1 = new javax.swing.JPanel();
+        javax.swing.JPanel jP1 = new javax.swing.JPanel();
         jBBusc = new javax.swing.JButton();
         jBMosT = new javax.swing.JButton();
         jLabelRemisionFactura = new javax.swing.JLabel();
-        jLTimb = new javax.swing.JLabel();
+        javax.swing.JLabel jLTimb = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jBGenPDF = new javax.swing.JButton();
         jBCa = new javax.swing.JButton();
-        jButtonDirectorioRemisiones = new javax.swing.JButton();
-        jBDirX = new javax.swing.JButton();
         jBDev = new javax.swing.JButton();
-        jBDirZ = new javax.swing.JButton();
         jBDevP = new javax.swing.JButton();
-        jButtonDirectorioNotaCredito = new javax.swing.JButton();
         jBNew = new javax.swing.JButton();
-        jButtonDirectorioCFDI = new javax.swing.JButton();
         jButtonNotaCredito = new javax.swing.JButton();
-        jButtonDirectorioTickets = new javax.swing.JButton();
         jBVer = new javax.swing.JButton();
-        jBDirCan = new javax.swing.JButton();
         jButtonEnviar = new javax.swing.JButton();
-        jBDirBack = new javax.swing.JButton();
         jBPDF = new javax.swing.JButton();
-        jBDirDev = new javax.swing.JButton();
-        jButtonActualizar = new javax.swing.JButton();
-        jBDirDevP = new javax.swing.JButton();
         jButtonTimbrar = new javax.swing.JButton();
-        jButtonDirectorioAcuses = new javax.swing.JButton();
-        jBEntre = new javax.swing.JButton();
         jButtonComprobar = new javax.swing.JButton();
         jButtonAcuse = new javax.swing.JButton();
         jButtonObtenerXML = new javax.swing.JButton();
-        jButtonTicketsFacturados = new javax.swing.JButton();
-        jButtonBorrarDocumento = new javax.swing.JButton();
-        jButtonVerArchivos = new javax.swing.JButton();
-        jButtonCargar = new javax.swing.JButton();
-        jBCli = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
         jButtonAbrir = new javax.swing.JButton();
-        jButtonRelacionar = new javax.swing.JButton();
-        jBAbrNotCred = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTab2 = new com.era.views.tables.PartvtaTable();
         jRadioBoxTipoDeVentas = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         label_total = new javax.swing.JLabel();
         navegacion = new javax.swing.JPanel(new FlowLayout(FlowLayout.RIGHT));
         jLabel4 = new javax.swing.JLabel();
         jTBusc = new javax.swing.JTextField();
-        panelTable = new javax.swing.JScrollPane();
-        jTableVentas = new com.era.views.tables.SalesTable();
         jLabelPagination = new javax.swing.JLabel();
+        jLabelTipDoc = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTab2 = new com.era.views.tables.PartvtaTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableVentas = new com.era.views.tables.SalesTable();
+        javax.swing.JMenuBar jMenuBar1 = new javax.swing.JMenuBar();
+        javax.swing.JMenu jMenuGeneral = new javax.swing.JMenu();
+        javax.swing.JMenuItem jMenuItemGralNew = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemGralOpen = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemGralView = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemGralSend = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemGralViewPDF = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemGralGeneratePDF = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemGralCancel = new javax.swing.JMenuItem();
+        javax.swing.JMenu jMenuSales = new javax.swing.JMenu();
+        javax.swing.JMenuItem jMenuItemSalesNew = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemSalesDev = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemSalesDevP = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemSalesFacTick = new javax.swing.JMenuItem();
+        javax.swing.JMenu jMenuDocuSAT = new javax.swing.JMenu();
+        javax.swing.JMenuItem jMenuItemDocuSatCheck = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemDocuSatRing = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemDocuSatAcuse = new javax.swing.JMenuItem();
+        javax.swing.JMenu jMenuFolders = new javax.swing.JMenu();
+        javax.swing.JMenuItem jMenuItemFoldersRems = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersCortX = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersCortZ = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersCreditNot = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersCFDI = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersTicks = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersCancels = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersDevs = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersDevsP = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemFoldersAcuses = new javax.swing.JMenuItem();
+        javax.swing.JMenuItem jMenuItemDocuSatGetXML = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -99,7 +109,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBMosT.setToolTipText("Mostrar nuevamente todos los Registros");
         jBMosT.setNextFocusableComponent(jTab2);
         jP1.add(jBMosT);
-        jBMosT.setBounds(660, 230, 140, 19);
+        jBMosT.setBounds(800, 230, 140, 19);
 
         jLabelRemisionFactura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelRemisionFactura.setForeground(new java.awt.Color(51, 102, 255));
@@ -120,7 +130,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBGenPDF.setToolTipText("Generar PDF de venta");
         jBGenPDF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBGenPDF.setNextFocusableComponent(jBCa);
-        jPanel1.add(jBGenPDF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 140, 30));
+        jPanel1.add(jBGenPDF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 30));
 
         jBCa.setBackground(new java.awt.Color(255, 255, 255));
         jBCa.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -130,27 +140,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBCa.setToolTipText("Cancelar venta(s) (Ctrl+SUPR)");
         jBCa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBCa.setNextFocusableComponent(jBDev);
-        jPanel1.add(jBCa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 140, 30));
-
-        jButtonDirectorioRemisiones.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonDirectorioRemisiones.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonDirectorioRemisiones.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonDirectorioRemisiones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dirrem.png"))); // NOI18N
-        jButtonDirectorioRemisiones.setText("Remisión");
-        jButtonDirectorioRemisiones.setToolTipText("Abrir directorio de remisiones");
-        jButtonDirectorioRemisiones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonDirectorioRemisiones.setNextFocusableComponent(jBDirX);
-        jPanel1.add(jButtonDirectorioRemisiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 130, 30));
-
-        jBDirX.setBackground(new java.awt.Color(255, 255, 255));
-        jBDirX.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDirX.setForeground(new java.awt.Color(0, 102, 0));
-        jBDirX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dircortx.png"))); // NOI18N
-        jBDirX.setText("Corte X");
-        jBDirX.setToolTipText("Abrir directorio de cortes X");
-        jBDirX.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDirX.setNextFocusableComponent(jBDirZ);
-        jPanel1.add(jBDirX, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 130, 30));
+        jPanel1.add(jBCa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 140, 30));
 
         jBDev.setBackground(new java.awt.Color(255, 255, 255));
         jBDev.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -160,17 +150,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBDev.setToolTipText("Devolución completa de venta(s) (F2)");
         jBDev.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBDev.setNextFocusableComponent(jBDevP);
-        jPanel1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 140, 30));
-
-        jBDirZ.setBackground(new java.awt.Color(255, 255, 255));
-        jBDirZ.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDirZ.setForeground(new java.awt.Color(0, 102, 0));
-        jBDirZ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dircortz.png"))); // NOI18N
-        jBDirZ.setText("Corte Z");
-        jBDirZ.setToolTipText("Abrir directorio de cortes Z");
-        jBDirZ.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDirZ.setNextFocusableComponent(jButtonDirectorioNotaCredito);
-        jPanel1.add(jBDirZ, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 130, 30));
+        jPanel1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 140, 30));
 
         jBDevP.setBackground(new java.awt.Color(255, 255, 255));
         jBDevP.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -180,17 +160,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBDevP.setToolTipText("Devolución paracial de venta(s) (F3)");
         jBDevP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBDevP.setNextFocusableComponent(jBNew);
-        jPanel1.add(jBDevP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 140, 30));
-
-        jButtonDirectorioNotaCredito.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonDirectorioNotaCredito.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonDirectorioNotaCredito.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonDirectorioNotaCredito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dir.png"))); // NOI18N
-        jButtonDirectorioNotaCredito.setText("N.Crédito");
-        jButtonDirectorioNotaCredito.setToolTipText("Directorio de las Notas de crédito");
-        jButtonDirectorioNotaCredito.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonDirectorioNotaCredito.setNextFocusableComponent(jButtonDirectorioCFDI);
-        jPanel1.add(jButtonDirectorioNotaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 130, 30));
+        jPanel1.add(jBDevP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 140, 30));
 
         jBNew.setBackground(new java.awt.Color(255, 255, 255));
         jBNew.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -200,18 +170,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBNew.setToolTipText("Nueva factura o Remisión (Ctrl+N). Presionando (Alt y este Botón) Puedes Tomar la Venta Seleccionada como Machote para una Nueva Factura o remisión");
         jBNew.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBNew.setNextFocusableComponent(jButtonAbrir);
-        jPanel1.add(jBNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 140, 30));
-
-        jButtonDirectorioCFDI.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonDirectorioCFDI.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonDirectorioCFDI.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonDirectorioCFDI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dircfd.png"))); // NOI18N
-        jButtonDirectorioCFDI.setText(" CFDI");
-        jButtonDirectorioCFDI.setToolTipText("Directorio de PDF CFDI");
-        jButtonDirectorioCFDI.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonDirectorioCFDI.setName(""); // NOI18N
-        jButtonDirectorioCFDI.setNextFocusableComponent(jButtonDirectorioTickets);
-        jPanel1.add(jButtonDirectorioCFDI, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 130, 30));
+        jPanel1.add(jBNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 140, 30));
 
         jButtonNotaCredito.setBackground(new java.awt.Color(255, 255, 255));
         jButtonNotaCredito.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -221,17 +180,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonNotaCredito.setToolTipText("Generar una nueva nota de crédito. Presionando (Alt y este botón) puedes tomar la nota de crédito seleccionada como machote para una nueva nota de crédito");
         jButtonNotaCredito.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonNotaCredito.setNextFocusableComponent(jBVer);
-        jPanel1.add(jButtonNotaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 140, 30));
-
-        jButtonDirectorioTickets.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonDirectorioTickets.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonDirectorioTickets.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonDirectorioTickets.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dirpdftic.png"))); // NOI18N
-        jButtonDirectorioTickets.setText("Tickets");
-        jButtonDirectorioTickets.setToolTipText("Directorio de PDF tickets");
-        jButtonDirectorioTickets.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonDirectorioTickets.setNextFocusableComponent(jBDirCan);
-        jPanel1.add(jButtonDirectorioTickets, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 130, 30));
+        jPanel1.add(jButtonNotaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 140, 30));
 
         jBVer.setBackground(new java.awt.Color(255, 255, 255));
         jBVer.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -241,17 +190,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBVer.setToolTipText("Ver venta(s) en otra vista");
         jBVer.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBVer.setNextFocusableComponent(jButtonEnviar);
-        jPanel1.add(jBVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 140, 30));
-
-        jBDirCan.setBackground(new java.awt.Color(255, 255, 255));
-        jBDirCan.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDirCan.setForeground(new java.awt.Color(0, 102, 0));
-        jBDirCan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dirvtacan.png"))); // NOI18N
-        jBDirCan.setText("Cancelados");
-        jBDirCan.setToolTipText("Directorio de ventas canceladas");
-        jBDirCan.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDirCan.setNextFocusableComponent(jBDirBack);
-        jPanel1.add(jBDirCan, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 130, 30));
+        jPanel1.add(jBVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 140, 30));
 
         jButtonEnviar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonEnviar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -261,17 +200,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonEnviar.setToolTipText("Reenviar factura(s)");
         jButtonEnviar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonEnviar.setNextFocusableComponent(jBPDF);
-        jPanel1.add(jButtonEnviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 140, 30));
-
-        jBDirBack.setBackground(new java.awt.Color(255, 255, 255));
-        jBDirBack.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDirBack.setForeground(new java.awt.Color(0, 102, 0));
-        jBDirBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/direntback.png"))); // NOI18N
-        jBDirBack.setText("Backorders");
-        jBDirBack.setToolTipText("Direcotio de entregas de backorders");
-        jBDirBack.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDirBack.setNextFocusableComponent(jBDirDev);
-        jPanel1.add(jBDirBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 130, 30));
+        jPanel1.add(jButtonEnviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 140, 30));
 
         jBPDF.setBackground(new java.awt.Color(255, 255, 255));
         jBPDF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -280,38 +209,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBPDF.setText("Ver PDF");
         jBPDF.setToolTipText("Ver PDF (Alt+F)");
         jBPDF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBPDF.setNextFocusableComponent(jButtonActualizar);
-        jPanel1.add(jBPDF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 140, 30));
-
-        jBDirDev.setBackground(new java.awt.Color(255, 255, 255));
-        jBDirDev.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDirDev.setForeground(new java.awt.Color(0, 102, 0));
-        jBDirDev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dirdevp.png"))); // NOI18N
-        jBDirDev.setText("Devoluciones");
-        jBDirDev.setToolTipText("Direcotio de devoluciones");
-        jBDirDev.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDirDev.setNextFocusableComponent(jBDirDevP);
-        jPanel1.add(jBDirDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 130, 30));
-
-        jButtonActualizar.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonActualizar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonActualizar.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actualizar.png"))); // NOI18N
-        jButtonActualizar.setText("Actualizar");
-        jButtonActualizar.setToolTipText("Actualizar registros (F5)");
-        jButtonActualizar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonActualizar.setNextFocusableComponent(jButtonTimbrar);
-        jPanel1.add(jButtonActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 140, 30));
-
-        jBDirDevP.setBackground(new java.awt.Color(255, 255, 255));
-        jBDirDevP.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBDirDevP.setForeground(new java.awt.Color(0, 102, 0));
-        jBDirDevP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dirdevp.png"))); // NOI18N
-        jBDirDevP.setText("Dev.Parcial");
-        jBDirDevP.setToolTipText("Direcotio de devoluciones parciales");
-        jBDirDevP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBDirDevP.setNextFocusableComponent(jButtonDirectorioAcuses);
-        jPanel1.add(jBDirDevP, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 130, 30));
+        jPanel1.add(jBPDF, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 140, 30));
 
         jButtonTimbrar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonTimbrar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -321,27 +219,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonTimbrar.setToolTipText("Timbrar factura(s)");
         jButtonTimbrar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonTimbrar.setName(""); // NOI18N
-        jButtonTimbrar.setNextFocusableComponent(jBEntre);
-        jPanel1.add(jButtonTimbrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 140, 30));
-
-        jButtonDirectorioAcuses.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonDirectorioAcuses.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonDirectorioAcuses.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonDirectorioAcuses.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dir.png"))); // NOI18N
-        jButtonDirectorioAcuses.setText("Acuses");
-        jButtonDirectorioAcuses.setToolTipText("Directorio de acuses");
-        jButtonDirectorioAcuses.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jPanel1.add(jButtonDirectorioAcuses, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 130, 30));
-
-        jBEntre.setBackground(new java.awt.Color(255, 255, 255));
-        jBEntre.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBEntre.setForeground(new java.awt.Color(0, 102, 0));
-        jBEntre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/entmerc.png"))); // NOI18N
-        jBEntre.setText("Entregar");
-        jBEntre.setToolTipText("Entregar backorders de la venta");
-        jBEntre.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBEntre.setNextFocusableComponent(jButtonComprobar);
-        jPanel1.add(jBEntre, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 140, 30));
+        jPanel1.add(jButtonTimbrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 140, 30));
 
         jButtonComprobar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonComprobar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -351,7 +229,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonComprobar.setToolTipText("Comprobar si esta timbrada la venta o no");
         jButtonComprobar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonComprobar.setNextFocusableComponent(jButtonAcuse);
-        jPanel1.add(jButtonComprobar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 140, 30));
+        jPanel1.add(jButtonComprobar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 140, 30));
 
         jButtonAcuse.setBackground(new java.awt.Color(255, 255, 255));
         jButtonAcuse.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -361,7 +239,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonAcuse.setToolTipText("Obtener acuse de venta(s)");
         jButtonAcuse.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonAcuse.setNextFocusableComponent(jButtonObtenerXML);
-        jPanel1.add(jButtonAcuse, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 140, 30));
+        jPanel1.add(jButtonAcuse, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 140, 30));
 
         jButtonObtenerXML.setBackground(new java.awt.Color(255, 255, 255));
         jButtonObtenerXML.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -370,50 +248,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonObtenerXML.setText("Obtener XML");
         jButtonObtenerXML.setToolTipText("Obtener el XML de una venta timbrada");
         jButtonObtenerXML.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonObtenerXML.setNextFocusableComponent(jButtonTicketsFacturados);
-        jPanel1.add(jButtonObtenerXML, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 140, 30));
-
-        jButtonTicketsFacturados.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonTicketsFacturados.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonTicketsFacturados.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonTicketsFacturados.setText("Tickets Facturados");
-        jButtonTicketsFacturados.setToolTipText("Mostrar tickets facturados");
-        jButtonTicketsFacturados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonTicketsFacturados.setNextFocusableComponent(jButtonDirectorioRemisiones);
-        jPanel1.add(jButtonTicketsFacturados, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 130, 30));
-
-        jButtonBorrarDocumento.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonBorrarDocumento.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
-        jButtonBorrarDocumento.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonBorrarDocumento.setText("Borrar");
-        jButtonBorrarDocumento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jPanel1.add(jButtonBorrarDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, -1, -1));
-
-        jButtonVerArchivos.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonVerArchivos.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonVerArchivos.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonVerArchivos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/verarch.png"))); // NOI18N
-        jButtonVerArchivos.setText("Archivo(s)");
-        jButtonVerArchivos.setToolTipText("Ver archivos asociados a la venta");
-        jButtonVerArchivos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonVerArchivos.setNextFocusableComponent(jButtonCargar);
-        jPanel1.add(jButtonVerArchivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 130, 30));
-
-        jButtonCargar.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonCargar.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
-        jButtonCargar.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonCargar.setText("Cargar");
-        jButtonCargar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonCargar.setNextFocusableComponent(jButtonBorrarDocumento);
-        jPanel1.add(jButtonCargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, -1, 20));
-
-        jBCli.setBackground(new java.awt.Color(255, 255, 255));
-        jBCli.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBCli.setForeground(new java.awt.Color(0, 102, 0));
-        jBCli.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/fac.png"))); // NOI18N
-        jBCli.setText("Facturar");
-        jBCli.setToolTipText("Facturar ventas ya sean remisiones o tickets");
-        jPanel1.add(jBCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 130, 30));
+        jPanel1.add(jButtonObtenerXML, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 140, 30));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -422,8 +257,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBSal.setNextFocusableComponent(jButtonDirectorioRemisiones);
-        jPanel1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, 130, 30));
+        jPanel1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 140, 30));
 
         jButtonAbrir.setBackground(new java.awt.Color(255, 255, 255));
         jButtonAbrir.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -434,43 +268,14 @@ public abstract class VtasJFrame extends BaseJFrame {
         jButtonAbrir.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButtonAbrir.setName(""); // NOI18N
         jButtonAbrir.setNextFocusableComponent(jButtonNotaCredito);
-        jPanel1.add(jButtonAbrir, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 140, 30));
-
-        jButtonRelacionar.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonRelacionar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jButtonRelacionar.setForeground(new java.awt.Color(0, 102, 0));
-        jButtonRelacionar.setText("Relacionar");
-        jPanel1.add(jButtonRelacionar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 130, 30));
-
-        jBAbrNotCred.setText("Abrir Not. Cred.");
-        jPanel1.add(jBAbrNotCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 140, -1));
+        jPanel1.add(jButtonAbrir, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
 
         jP1.add(jPanel1);
-        jPanel1.setBounds(800, 0, 270, 520);
-
-        jPanel3.setLayout(new java.awt.GridLayout(1, 0));
-
-        jTab2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
-        jTab2.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab2.setNextFocusableComponent(jBGenPDF);
-        jTab2.setRequestFocusEnabled(false);
-        jScrollPane1.setViewportView(jTab2);
-
-        jPanel3.add(jScrollPane1);
-
-        jP1.add(jPanel3);
-        jPanel3.setBounds(20, 290, 780, 210);
+        jPanel1.setBounds(940, 40, 140, 450);
 
         jRadioBoxTipoDeVentas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Todo", "Facturas", "Notas crédito", "Devoluciones Ventas", "Tickets" }));
         jP1.add(jRadioBoxTipoDeVentas);
-        jRadioBoxTipoDeVentas.setBounds(80, 5, 100, 20);
+        jRadioBoxTipoDeVentas.setBounds(90, 10, 100, 20);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Partidas:");
@@ -494,7 +299,30 @@ public abstract class VtasJFrame extends BaseJFrame {
         jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTBusc.setNextFocusableComponent(jBMosT);
         jP1.add(jTBusc);
-        jTBusc.setBounds(160, 230, 500, 20);
+        jTBusc.setBounds(160, 230, 640, 20);
+        jP1.add(jLabelPagination);
+        jLabelPagination.setBounds(20, 250, 290, 20);
+
+        jLabelTipDoc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelTipDoc.setText("Remisiones");
+        jP1.add(jLabelTipDoc);
+        jLabelTipDoc.setBounds(220, 10, 170, 20);
+
+        jTab2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(jTab2);
+
+        jP1.add(jScrollPane1);
+        jScrollPane1.setBounds(20, 290, 920, 240);
 
         jTableVentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -507,33 +335,117 @@ public abstract class VtasJFrame extends BaseJFrame {
 
             }
         ));
-        panelTable.setViewportView(jTableVentas);
+        jScrollPane2.setViewportView(jTableVentas);
 
-        jP1.add(panelTable);
-        panelTable.setBounds(20, 30, 780, 200);
-        jP1.add(jLabelPagination);
-        jLabelPagination.setBounds(20, 250, 290, 20);
+        jP1.add(jScrollPane2);
+        jScrollPane2.setBounds(20, 40, 920, 190);
 
         getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 540));
+
+        jMenuGeneral.setText("General");
+        jMenuGeneral.setToolTipText("");
+
+        jMenuItemGralNew.setText("Nueva");
+        jMenuGeneral.add(jMenuItemGralNew);
+
+        jMenuItemGralOpen.setText("Abrir");
+        jMenuGeneral.add(jMenuItemGralOpen);
+
+        jMenuItemGralView.setText("Ver");
+        jMenuGeneral.add(jMenuItemGralView);
+
+        jMenuItemGralSend.setText("Enviar");
+        jMenuGeneral.add(jMenuItemGralSend);
+
+        jMenuItemGralViewPDF.setText("Ver PDF");
+        jMenuGeneral.add(jMenuItemGralViewPDF);
+
+        jMenuItemGralGeneratePDF.setText("Generar PDF");
+        jMenuGeneral.add(jMenuItemGralGeneratePDF);
+
+        jMenuItemGralCancel.setText("Cancelar");
+        jMenuGeneral.add(jMenuItemGralCancel);
+
+        jMenuBar1.add(jMenuGeneral);
+
+        jMenuSales.setText("Ventas");
+
+        jMenuItemSalesNew.setText("Nueva");
+        jMenuSales.add(jMenuItemSalesNew);
+
+        jMenuItemSalesDev.setText("Devolución");
+        jMenuSales.add(jMenuItemSalesDev);
+
+        jMenuItemSalesDevP.setText("Dev. Parcial");
+        jMenuSales.add(jMenuItemSalesDevP);
+
+        jMenuItemSalesFacTick.setText("Facturar Tickets");
+        jMenuSales.add(jMenuItemSalesFacTick);
+
+        jMenuBar1.add(jMenuSales);
+
+        jMenuDocuSAT.setText("Documentos SAT");
+
+        jMenuItemDocuSatCheck.setText("Comprobar");
+        jMenuDocuSAT.add(jMenuItemDocuSatCheck);
+
+        jMenuItemDocuSatRing.setText("Timbrar");
+        jMenuDocuSAT.add(jMenuItemDocuSatRing);
+
+        jMenuItemDocuSatAcuse.setText("Acuse");
+        jMenuDocuSAT.add(jMenuItemDocuSatAcuse);
+
+        jMenuBar1.add(jMenuDocuSAT);
+
+        jMenuFolders.setText("Folders");
+
+        jMenuItemFoldersRems.setText("Remisiones");
+        jMenuFolders.add(jMenuItemFoldersRems);
+
+        jMenuItemFoldersCortX.setText("Cortes X");
+        jMenuFolders.add(jMenuItemFoldersCortX);
+
+        jMenuItemFoldersCortZ.setText("Cortes Z");
+        jMenuFolders.add(jMenuItemFoldersCortZ);
+
+        jMenuItemFoldersCreditNot.setText("Notas de Crédito");
+        jMenuFolders.add(jMenuItemFoldersCreditNot);
+
+        jMenuItemFoldersCFDI.setText("CFDI");
+        jMenuFolders.add(jMenuItemFoldersCFDI);
+
+        jMenuItemFoldersTicks.setText("Tickets");
+        jMenuFolders.add(jMenuItemFoldersTicks);
+
+        jMenuItemFoldersCancels.setText("Cancelados");
+        jMenuFolders.add(jMenuItemFoldersCancels);
+
+        jMenuItemFoldersDevs.setText("Devoluciones");
+        jMenuFolders.add(jMenuItemFoldersDevs);
+
+        jMenuItemFoldersDevsP.setText("Dev. Parciales");
+        jMenuFolders.add(jMenuItemFoldersDevsP);
+
+        jMenuItemFoldersAcuses.setText("Acuses");
+        jMenuItemFoldersAcuses.setToolTipText("");
+        jMenuFolders.add(jMenuItemFoldersAcuses);
+
+        jMenuItemDocuSatGetXML.setText("Obtener XML");
+        jMenuFolders.add(jMenuItemDocuSatGetXML);
+
+        jMenuBar1.add(jMenuFolders);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JButton jBAbrNotCred;
     protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBCa;
-    protected javax.swing.JButton jBCli;
     protected javax.swing.JButton jBDev;
     protected javax.swing.JButton jBDevP;
-    protected javax.swing.JButton jBDirBack;
-    protected javax.swing.JButton jBDirCan;
-    protected javax.swing.JButton jBDirDev;
-    protected javax.swing.JButton jBDirDevP;
-    protected javax.swing.JButton jBDirX;
-    protected javax.swing.JButton jBDirZ;
-    protected javax.swing.JButton jBEntre;
     protected javax.swing.JButton jBGenPDF;
     protected javax.swing.JButton jBMosT;
     protected javax.swing.JButton jBNew;
@@ -541,39 +453,27 @@ public abstract class VtasJFrame extends BaseJFrame {
     protected javax.swing.JButton jBSal;
     protected javax.swing.JButton jBVer;
     protected javax.swing.JButton jButtonAbrir;
-    protected javax.swing.JButton jButtonActualizar;
     protected javax.swing.JButton jButtonAcuse;
-    protected javax.swing.JButton jButtonBorrarDocumento;
-    protected javax.swing.JButton jButtonCargar;
     protected javax.swing.JButton jButtonComprobar;
-    protected javax.swing.JButton jButtonDirectorioAcuses;
-    protected javax.swing.JButton jButtonDirectorioCFDI;
-    protected javax.swing.JButton jButtonDirectorioNotaCredito;
-    protected javax.swing.JButton jButtonDirectorioRemisiones;
-    protected javax.swing.JButton jButtonDirectorioTickets;
     protected javax.swing.JButton jButtonEnviar;
     protected javax.swing.JButton jButtonNotaCredito;
     protected javax.swing.JButton jButtonObtenerXML;
-    protected javax.swing.JButton jButtonRelacionar;
-    protected javax.swing.JButton jButtonTicketsFacturados;
     protected javax.swing.JButton jButtonTimbrar;
-    protected javax.swing.JButton jButtonVerArchivos;
-    private javax.swing.JLabel jLTimb;
     protected javax.swing.JLabel jLabel3;
     protected javax.swing.JLabel jLabel4;
     protected javax.swing.JLabel jLabelPagination;
     protected javax.swing.JLabel jLabelRemisionFactura;
-    private javax.swing.JPanel jP1;
+    protected javax.swing.JLabel jLabelTipDoc;
     protected javax.swing.JPanel jPanel1;
-    protected javax.swing.JPanel jPanel3;
     protected javax.swing.JComboBox jRadioBoxTipoDeVentas;
-    private javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JTextField jTBusc;
-    protected com.era.views.tables.PartvtaTable jTab2;
-    protected com.era.views.tables.SalesTable jTableVentas;
     protected javax.swing.JLabel label_total;
     protected javax.swing.JPanel navegacion;
-    protected javax.swing.JScrollPane panelTable;
+	protected com.era.views.tables.PartvtaTable jTab2;
+    protected com.era.views.tables.SalesTable jTableVentas;
+	protected javax.swing.JScrollPane jScrollPane2;
+	protected javax.swing.JScrollPane jScrollPane1;
+	
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Empresas extends javax.swing.JFrame */

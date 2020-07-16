@@ -26,14 +26,14 @@ public class CxcTable extends BaseJTable {
 
    @Override
    public void loadAllItemsInTable() throws Exception {
-       final List<Cxc> items_ = (List<Cxc>) RepositoryFactory.getInstance().getCxcsRepository().getAll();
+       final List<Cxc> items_ = (List<Cxc>) RepositoryFactory.getInstance().getCxcRepository().getAll();
        final CxcTableModel CxcTableModel = new CxcTableModel(this,items_,this.ShowColumns);
        this.setModel(CxcTableModel);
    }
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
-       final List<Cxc> items_ = (List<Cxc>) RepositoryFactory.getInstance().getCxcsRepository().getByLikeEncabezados(search);
+       final List<Cxc> items_ = (List<Cxc>) RepositoryFactory.getInstance().getCxcRepository().getByLikeEncabezados(search);
        final CxcTableModel CxcTableModel = new CxcTableModel(this,items_,this.ShowColumns);
        this.setModel(CxcTableModel);
    }

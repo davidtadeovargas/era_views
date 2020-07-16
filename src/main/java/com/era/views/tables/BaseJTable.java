@@ -53,7 +53,7 @@ public abstract class BaseJTable extends JTable {
     private int pagination = 0;    
     private long count = 0;
     protected boolean tableInitialized;
-    private boolean usePagination;
+    protected boolean usePagination;
     protected JTableEnterKeyPressed JTableEnterKeyPressed;
     protected Repository Repository;
     private OnScrollsChanges OnScrollsChanges;

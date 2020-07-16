@@ -89,6 +89,8 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMMClien = new javax.swing.JMenuItem();
         jMenItVtas = new javax.swing.JMenuItem();
         jMenuItemRemisiones = new javax.swing.JMenuItem();
+        jMenuItemTickets = new javax.swing.JMenuItem();
+        jMenuItemInvoices = new javax.swing.JMenuItem();
         jMenCotsT = new javax.swing.JMenuItem();
         jMenuItemPedidos = new javax.swing.JMenuItem();
         jMenItTipsPags = new javax.swing.JMenuItem();
@@ -552,11 +554,17 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMenItVtas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, 0));
         jMenItVtas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/vtas.png"))); // NOI18N
         jMenItVtas.setMnemonic('v');
-        jMenItVtas.setText("Ventas");
+        jMenItVtas.setText("Todas las Ventas");
         jMenVtas.add(jMenItVtas);
 
         jMenuItemRemisiones.setText("Remisiones");
         jMenVtas.add(jMenuItemRemisiones);
+
+        jMenuItemTickets.setText("Tickets");
+        jMenVtas.add(jMenuItemTickets);
+
+        jMenuItemInvoices.setText("Facturas");
+        jMenVtas.add(jMenuItemInvoices);
 
         jMenCotsT.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, 0));
         jMenCotsT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cots.png"))); // NOI18N
@@ -775,8 +783,10 @@ public abstract class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenuItem jMenuItem5;
     protected javax.swing.JMenuItem jMenuItem6;
     protected javax.swing.JMenuItem jMenuItem7;
+    protected javax.swing.JMenuItem jMenuItemInvoices;
     protected javax.swing.JMenuItem jMenuItemPedidos;
     protected javax.swing.JMenuItem jMenuItemRemisiones;
+    protected javax.swing.JMenuItem jMenuItemTickets;
     private javax.swing.JPanel jP1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
@@ -785,6 +795,7 @@ public abstract class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenuItem reportsMenu;
     protected javax.swing.JMenuItem warehousesMenu;
     // End of variables declaration//GEN-END:variables
-   
+
+    
 }
 
