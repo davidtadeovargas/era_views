@@ -4,6 +4,7 @@ import com.era.datamodels.enums.DocumentType;
 import com.era.models.Sales;
 import com.era.repositories.RepositoryFactory;
 import com.era.repositories.SalessRepository;
+import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.tables.tablemodels.SalesTableModel;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,20 @@ public class SalesTable extends BaseJTable {
         this.DocumentType = DocumentType;
     }
     
+    public void showCommonColumns(){
+        
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getSALE_ID());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getCOMPANYCODE());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getRAZON());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getESTATUS());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getEMISIONDATE());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getFACTURADO());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getOBSERVATION());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getPAYMENTFORM());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getSUBTOTAL());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getTAX());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getTOTAL());
+    }
    
     @Override
     public void initTable(List<?> items) {
@@ -59,6 +74,16 @@ public class SalesTable extends BaseJTable {
         return rems;
     }
     
+    public List<Sales> getAllNotcByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllNotscWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
+    
     public List<Sales> getAllSalesByPage(final int pageNumber) throws Exception {
         
         //Get the records
@@ -91,6 +116,10 @@ public class SalesTable extends BaseJTable {
             case SALES:
                 list = getAllSalesByPage(0);
                 break;
+            
+            case NOTC:
+                list = getAllNotcByPage(0);
+                break;
         }
         
         //Save globally flag for pagination
@@ -120,7 +149,32 @@ public class SalesTable extends BaseJTable {
 
    @Override
    public void getByLikeEncabezados(final String search) throws Exception {
-       final List<Sales> items_ = (List<Sales>) RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezados(search);
+       
+       List<Sales> items_ = new ArrayList<>();
+        
+        switch(DocumentType){
+            
+            case REMISION:
+                items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosRems(search);
+                break;
+                
+            case INVOICE:
+                items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosInvoices(search);
+                break;
+              
+            case TICKETS:
+                items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosTickets(search);
+                break;
+                
+            case SALES:
+                items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezados(search);
+                break;
+                
+            case NOTC:
+                items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosNotsc(search);
+                break;
+        }
+               
        final SalesTableModel SalesTableModel = new SalesTableModel(this,items_,this.ShowColumns);
        this.setModel(SalesTableModel);
    }

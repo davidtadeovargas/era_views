@@ -628,9 +628,6 @@
                     <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
                       <KeyStroke key="V"/>
                     </Property>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/imgs/vtas.png"/>
-                    </Property>
                     <Property name="mnemonic" type="int" value="118"/>
                     <Property name="text" type="java.lang.String" value="Todas las Ventas"/>
                   </Properties>
@@ -657,6 +654,14 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItemInvoices">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Facturas"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItemNotc">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Notas Cr&#xe9;dito"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>

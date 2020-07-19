@@ -27,6 +27,7 @@ public class MetodoPagoCombobox extends BaseComboBox<MetogoPago> {
         //Emtpy model
         final MetogoPago MetogoPago = new MetogoPago();
         MetogoPago.setCode("");
+        MetogoPago.setDescription("");
         
         final List<MetogoPago> metodos = new ArrayList<>();
         metodos.add(MetogoPago); //Add the empty model

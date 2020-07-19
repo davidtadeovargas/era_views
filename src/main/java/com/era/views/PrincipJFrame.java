@@ -91,6 +91,7 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMenuItemRemisiones = new javax.swing.JMenuItem();
         jMenuItemTickets = new javax.swing.JMenuItem();
         jMenuItemInvoices = new javax.swing.JMenuItem();
+        jMenuItemNotc = new javax.swing.JMenuItem();
         jMenCotsT = new javax.swing.JMenuItem();
         jMenuItemPedidos = new javax.swing.JMenuItem();
         jMenItTipsPags = new javax.swing.JMenuItem();
@@ -552,7 +553,6 @@ public abstract class PrincipJFrame extends BaseJFrame {
         jMenVtas.add(jMMClien);
 
         jMenItVtas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, 0));
-        jMenItVtas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/vtas.png"))); // NOI18N
         jMenItVtas.setMnemonic('v');
         jMenItVtas.setText("Todas las Ventas");
         jMenVtas.add(jMenItVtas);
@@ -565,6 +565,9 @@ public abstract class PrincipJFrame extends BaseJFrame {
 
         jMenuItemInvoices.setText("Facturas");
         jMenVtas.add(jMenuItemInvoices);
+
+        jMenuItemNotc.setText("Notas Crédito");
+        jMenVtas.add(jMenuItemNotc);
 
         jMenCotsT.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, 0));
         jMenCotsT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cots.png"))); // NOI18N
@@ -784,6 +787,7 @@ public abstract class PrincipJFrame extends BaseJFrame {
     protected javax.swing.JMenuItem jMenuItem6;
     protected javax.swing.JMenuItem jMenuItem7;
     protected javax.swing.JMenuItem jMenuItemInvoices;
+    protected javax.swing.JMenuItem jMenuItemNotc;
     protected javax.swing.JMenuItem jMenuItemPedidos;
     protected javax.swing.JMenuItem jMenuItemRemisiones;
     protected javax.swing.JMenuItem jMenuItemTickets;

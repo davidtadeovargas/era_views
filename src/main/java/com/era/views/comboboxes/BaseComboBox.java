@@ -94,6 +94,13 @@ public abstract class BaseComboBox<T> extends JComboBox {
         }
     }
     
+    public void loadItems(List<T> items_) throws Exception {
+                
+        for(T Item : items_){
+            this.addItem(Item);
+        }
+    }
+    
     public boolean isSelectedObject(){
         return this.getSelectedItem()!=null;
     }

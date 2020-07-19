@@ -33,6 +33,7 @@ public class SeriesCombobox extends BaseComboBox<Serie> {
         
         //Emtpy model
         final Serie Serie = new Serie();
+        Serie.setCode("");
         Serie.setDescription("");
         
         final List<Serie> series = new ArrayList<>();
