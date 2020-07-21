@@ -24,6 +24,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jBBusc = new javax.swing.JButton();
         jBMosT = new javax.swing.JButton();
         jLabelRemisionFactura = new javax.swing.JLabel();
+		jLabelTypeSale = new javax.swing.JLabel();
         jLTimb = new javax.swing.JLabel();
         jRadioBoxTipoDeVentas = new com.era.views.comboboxes.DocumentOriginCombobox();
         jLabel3 = new javax.swing.JLabel();
@@ -67,8 +68,9 @@ public abstract class VtasJFrame extends BaseJFrame {
         jMenuItemFoldersDevsP = new javax.swing.JMenuItem();
         jMenuItemFoldersAcuses = new javax.swing.JMenuItem();
         jMenuItemDocuSatGetXML = new javax.swing.JMenuItem();
-		jMenuItemGetXML = new javax.swing.JMenuItem();		
-
+		jMenuItemGetXML = new javax.swing.JMenuItem();
+		jMenuItemTicketsFacturados = new javax.swing.JMenuItem();
+		
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -104,6 +106,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.add(jLTimb);
         jLTimb.setBounds(90, 600, 80, 20);
 
+        jRadioBoxTipoDeVentas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Todo", "Facturas", "Notas crédito", "Devoluciones Ventas", "Tickets" }));
         jP1.add(jRadioBoxTipoDeVentas);
         jRadioBoxTipoDeVentas.setBounds(90, 10, 100, 20);
 
@@ -170,6 +173,11 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.add(jScrollPane3);
         jScrollPane3.setBounds(20, 40, 1040, 180);
 
+        jLabelTypeSale.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelTypeSale.setForeground(new java.awt.Color(102, 102, 255));
+        jP1.add(jLabelTypeSale);
+        jLabelTypeSale.setBounds(880, 4, 170, 30);
+
         getContentPane().add(jP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 540));
 
         jMenuGeneral.setText("General");
@@ -211,6 +219,9 @@ public abstract class VtasJFrame extends BaseJFrame {
 
         jMenuItemSalesFacTick.setText("Facturar Tickets");
         jMenuSales.add(jMenuItemSalesFacTick);
+
+        jMenuItemTicketsFacturados.setText("Tickets Facturados");
+        jMenuSales.add(jMenuItemTicketsFacturados);
 
         jMenuBar1.add(jMenuSales);
 
@@ -320,7 +331,9 @@ public abstract class VtasJFrame extends BaseJFrame {
 	protected javax.swing.JMenuItem jMenuItemFoldersDevsP;
 	protected javax.swing.JMenuItem jMenuItemFoldersAcuses;
 	protected javax.swing.JMenuItem jMenuItemDocuSatGetXML;
-	protected javax.swing.JMenuItem jMenuItemGetXML;	
+	protected javax.swing.JMenuItem jMenuItemGetXML;
+	protected javax.swing.JLabel jLabelTypeSale;
+	protected javax.swing.JMenuItem jMenuItemTicketsFacturados;
 	
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables

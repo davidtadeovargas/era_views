@@ -10,7 +10,9 @@ import com.era.utilities.UtilitiesFactory;
 import com.era.views.BaseJFrame;
 import com.era.views.keysubscriptions.EnterKeyListener;
 import java.awt.Component;
+import javax.swing.ButtonModel;
 import java.awt.Container;
+import javax.swing.AbstractButton;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.FocusEvent;
@@ -29,9 +31,11 @@ import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
+import javax.swing.event.ChangeEvent;
 import javax.swing.text.JTextComponent;
 
 /**
@@ -323,6 +327,29 @@ public class JComponentUtils {
             });
     }
     
+    
+    public void onRadioButtonChangeListener(JRadioButton JRadioButton, final OnRadioButtonChange OnRadioButtonChange){
+        
+        JRadioButton.addChangeListener((ChangeEvent e) -> {
+            
+            AbstractButton aButton = (AbstractButton)e.getSource();
+            ButtonModel aModel = aButton.getModel();
+            boolean armed = aModel.isArmed();
+            boolean pressed = aModel.isPressed();
+            boolean selected = aModel.isSelected();
+            
+            if(selected){
+                if(OnRadioButtonChange!=null){
+                    OnRadioButtonChange.onChecked();
+                }
+            }
+            else{
+                if(OnRadioButtonChange!=null){
+                    OnRadioButtonChange.onUncheked();
+                }
+            }
+        });
+    }
     
     public void addJTextFieldsWhenEnterKeyIsPressed(List<JTextField> JTextFields,JToggleButton JButton){
         
@@ -646,5 +673,8 @@ public class JComponentUtils {
         this.JDialog = JDialog;
     }
     
-    
+    public interface OnRadioButtonChange{
+        void onChecked();
+        void onUncheked();
+    }
 }

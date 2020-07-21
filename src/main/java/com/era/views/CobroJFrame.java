@@ -1,6 +1,5 @@
 package com.era.views;
 
-import javax.swing.ButtonGroup;
 
 
 public abstract class CobroJFrame extends BaseJFrame
@@ -12,12 +11,7 @@ public abstract class CobroJFrame extends BaseJFrame
         initComponents();
         
         //Post inicialization
-        postInitComponents();
-        
-        ButtonGroup g = new ButtonGroup();
-        g.add(jRTic);
-        g.add(jRRem);
-        g.add(jRFac);
+        postInitComponents();                
     }
         
     
@@ -51,9 +45,9 @@ public abstract class CobroJFrame extends BaseJFrame
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        jRNoPag = new javax.swing.JRadioButton();
-        jRPagad = new javax.swing.JRadioButton();
         jLabel8 = new javax.swing.JLabel();
+        jRadioButtonCash = new javax.swing.JRadioButton();
+        jRadioButtonCredit = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -460,40 +454,17 @@ public abstract class CobroJFrame extends BaseJFrame
         jLabel34.setText("Altl+ F");
         jP1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 80, 20));
 
-        jRNoPag.setBackground(new java.awt.Color(255, 255, 255));
-        jRNoPag.setText("No pagada");
-        jRNoPag.setNextFocusableComponent(jBCob);
-        jRNoPag.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRNoPagActionPerformed(evt);
-            }
-        });
-        jRNoPag.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jRNoPagKeyPressed(evt);
-            }
-        });
-        jP1.add(jRNoPag, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
-
-        jRPagad.setBackground(new java.awt.Color(255, 255, 255));
-        jRPagad.setSelected(true);
-        jRPagad.setText("Pagada");
-        jRPagad.setNextFocusableComponent(jBCob);
-        jRPagad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRPagadActionPerformed(evt);
-            }
-        });
-        jRPagad.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jRPagadKeyPressed(evt);
-            }
-        });
-        jP1.add(jRPagad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, -1));
-
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setText("Cambio:");
         jP1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 110, -1));
+
+        jRadioButtonCash.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButtonCash.setText("Contado");
+        jP1.add(jRadioButtonCash, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 150, -1));
+
+        jRadioButtonCredit.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButtonCredit.setText("Crédito");
+        jP1.add(jRadioButtonCredit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 150, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -983,33 +954,11 @@ public abstract class CobroJFrame extends BaseJFrame
 
     
 
-    private void jRPagadKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jRPagadKeyPressed
-        
-        
-    }//GEN-LAST:event_jRPagadKeyPressed
+    
 
     
 
-    private void jRNoPagKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jRNoPagKeyPressed
-        
-
-        
-    }//GEN-LAST:event_jRNoPagKeyPressed
-
     
-
-    private void jRPagadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRPagadActionPerformed
-        
-
-        
-    }//GEN-LAST:event_jRPagadActionPerformed
-
-    
-
-    private void jRNoPagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRNoPagActionPerformed
-        
-        
-    }//GEN-LAST:event_jRNoPagActionPerformed
 
     private void jRRemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRRemActionPerformed
         // TODO add your handling code here:
@@ -1031,10 +980,10 @@ public abstract class CobroJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jP1;
     protected javax.swing.JRadioButton jRFac;
-    protected javax.swing.JRadioButton jRNoPag;
-    protected javax.swing.JRadioButton jRPagad;
     protected javax.swing.JRadioButton jRRem;
     protected javax.swing.JRadioButton jRTic;
+    protected javax.swing.JRadioButton jRadioButtonCash;
+    protected javax.swing.JRadioButton jRadioButtonCredit;
     protected javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JTextArea jTAObserv;
     protected javax.swing.JTextField jTCamb;

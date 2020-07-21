@@ -1,7 +1,7 @@
 package com.era.views;
 
-public abstract class TicketsFacturadosJFrame extends BaseJFrame {
-    
+
+public abstract class TicketsFacturadosJFrame extends BaseJFrame {        
     
     public TicketsFacturadosJFrame(final String idTextTitleWindow) {
         
@@ -23,7 +23,7 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table_tickets = new javax.swing.JTable();
+        table_tickets = new com.era.views.tables.SalesTable();
         jPanel2 = new javax.swing.JPanel();
         txtSerie = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -51,22 +51,6 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        table_tickets.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Venta", "Fecha", "Serie", "Folio", "Cliente", "Total", "Observaciones", "Usuario", "Caja", "Sucursal"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
         table_tickets.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         jScrollPane1.setViewportView(table_tickets);
 
@@ -247,8 +231,7 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    
+   
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -265,7 +248,7 @@ public abstract class TicketsFacturadosJFrame extends BaseJFrame {
     private javax.swing.JPanel jPanel1;
     protected javax.swing.JPanel jPanel2;
     protected javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable table_tickets;
+    protected com.era.views.tables.SalesTable table_tickets;
     protected javax.swing.JTextField txtCaja;
     protected javax.swing.JTextField txtCliente;
     protected javax.swing.JTextField txtFecha;
