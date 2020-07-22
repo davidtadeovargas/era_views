@@ -5,26 +5,20 @@
  */
 package com.era.views.tables;
 
-import java.math.BigDecimal;
-import com.era.views.tables.utils.TableCellListener;
-import javax.swing.Action;
 import com.era.logger.LoggerUtility;
 import com.era.repositories.Repository;
 import com.era.utilities.UtilitiesFactory;
 import com.era.views.abstracttablesmodel.BaseAbstractTableModel;
 import com.era.views.tables.headers.ColumnTable;
-import java.awt.event.ActionEvent;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import javax.swing.AbstractAction;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -103,6 +97,10 @@ public abstract class BaseJTable extends JTable {
         this.OnScrollsChanges = OnScrollsChanges;
     }
 
+    public void showCommonColumns(){
+        
+    }
+    
     @Override
     public void setModel(TableModel dataModel) {
         super.setModel(dataModel); //To change body of generated methods, choose Tools | Templates.

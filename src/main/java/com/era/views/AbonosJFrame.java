@@ -2,6 +2,7 @@ package com.era.views;
 
 
 public abstract class AbonosJFrame extends BaseJFrame {
+
     
     
     protected AbonosJFrame(final String idTextTitleWindow) {
@@ -26,9 +27,8 @@ public abstract class AbonosJFrame extends BaseJFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jBSal = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        table_pagos = new javax.swing.JTable();
+        table_pagos = new com.era.views.tables.DocumentosPagoTable();
         jScrollPane1 = new javax.swing.JScrollPane();
         table_partidas = new javax.swing.JTable();
 
@@ -46,31 +46,12 @@ public abstract class AbonosJFrame extends BaseJFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jBSal.setBackground(new java.awt.Color(255, 255, 255));
-        jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBSal.setForeground(new java.awt.Color(0, 102, 0));
-        jBSal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sal.png"))); // NOI18N
-        jBSal.setText("Salir");
-        jBSal.setToolTipText("Salir (ESC)");
-        jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBSal.setName(""); // NOI18N
-        jBSal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBSalActionPerformed(evt);
-            }
-        });
-
-        table_pagos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Id", "Fecha", "Serie", "Folio", "Cliente", "Cuenta Bancaria", "Concepto", "Importe", "Pendiente"
-            }
-        ));
         table_pagos.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         jScrollPane3.setViewportView(table_pagos);
+
+        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 650, 169));
 
         jScrollPane1.setAutoscrolls(true);
 
@@ -79,40 +60,13 @@ public abstract class AbonosJFrame extends BaseJFrame {
 
             },
             new String [] {
-                "Id", "Serie", "Folio", "Total", "Abono", "Pendiente"
+
             }
         ));
         table_partidas.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         jScrollPane1.setViewportView(table_partidas);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jBSal, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jBSal)))
-                .addContainerGap())
-        );
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 191, 650, 157));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,18 +88,13 @@ public abstract class AbonosJFrame extends BaseJFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBSalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalActionPerformed
-    
-    }//GEN-LAST:event_jBSalActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    protected javax.swing.JButton jBSal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     protected javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTable table_pagos;
-    private javax.swing.JTable table_partidas;
+    protected com.era.views.tables.DocumentosPagoTable table_pagos;
+    protected javax.swing.JTable table_partidas;
     // End of variables declaration//GEN-END:variables
 }

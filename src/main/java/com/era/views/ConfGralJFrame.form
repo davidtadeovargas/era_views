@@ -428,9 +428,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Vender sobre l&#xed;mite de cr&#xe9;dito en facturas"/>
                     <Property name="name" type="java.lang.String" value="vtas_slimcredfac" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -448,9 +445,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Vender solo en moneda nacional"/>
                     <Property name="name" type="java.lang.String" value="vtas_otramon" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -468,9 +462,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Se pueden cancelar/devolver facturas en el punto de venta"/>
                     <Property name="name" type="java.lang.String" value="vtas_canfacpto" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -528,9 +519,6 @@
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>
                     </Property>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -554,6 +542,26 @@
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="20" y="150" width="130" height="20"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCTestSystem">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="10" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Sistema en prueba"/>
+                    <Property name="name" type="java.lang.String" value="vtas_minfac" noResource="true"/>
+                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                      <ComponentRef name="jTMinFac"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+                  </AuxValues>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="10" y="170" width="140" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -602,9 +610,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Vender sin existencias en cotizaci&#xf3;n"/>
                     <Property name="name" type="java.lang.String" value="cots_vendsinexistcot" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -622,9 +627,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Cotizar solo en moneda nacional"/>
                     <Property name="name" type="java.lang.String" value="cots_otramon" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -975,9 +977,6 @@
             <Container class="javax.swing.JPanel" name="jPComp">
               <Properties>
                 <Property name="name" type="java.lang.String" value="tab05" noResource="true"/>
-                <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                  <ComponentRef name="default"/>
-                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
@@ -998,9 +997,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Solo comprar en moneda nacional"/>
                     <Property name="name" type="java.lang.String" value="comps_otramon" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -1176,9 +1172,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Dar de alta nuevos clientes en punto de venta"/>
                     <Property name="name" type="java.lang.String" value="vtas_empspto" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -1196,9 +1189,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Pedir clave de administrador al cancelar/devolver ventas en punto de venta"/>
                     <Property name="name" type="java.lang.String" value="vtas_admcanvtas" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -1351,9 +1341,6 @@
                     <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection code="&quot;Buscar Almac&#xe9;n(es)&quot;" type="code"/>
                     </Property>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -1387,9 +1374,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Devoluciones parciales de ventas en punto de venta"/>
                     <Property name="name" type="java.lang.String" value="vtas_devvtaspto" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -1445,9 +1429,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Vender sobre l&#xed;mite de cr&#xe9;dito en remisiones"/>
                     <Property name="name" type="java.lang.String" value="vtas_slimcredrem" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -1465,9 +1446,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Se pueden cancelar/devolver remisiones en el punto de venta"/>
                     <Property name="name" type="java.lang.String" value="vtas_canrempto" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
@@ -1503,9 +1481,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Se pueden cancelar/devolver tickets en el punto de venta"/>
                     <Property name="name" type="java.lang.String" value="vtas_canticpto" noResource="true"/>
-                    <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                      <ComponentRef name="default"/>
-                    </Property>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>

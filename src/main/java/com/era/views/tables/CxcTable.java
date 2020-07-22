@@ -2,6 +2,7 @@ package com.era.views.tables;
 
 import com.era.models.Cxc;
 import com.era.repositories.RepositoryFactory;
+import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.tables.tablemodels.CxcTableModel;
 import java.util.List;
 
@@ -17,6 +18,28 @@ public class CxcTable extends BaseJTable {
         this.setModel(CxcTableModel);
    }
 
+   @Override
+   public void showCommonColumns(){
+        
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getROWNUMBER());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getID_VENTA());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getEMPRE());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getCARG());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getABON());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getMONEDAID());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getNOREFER());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getSER());        
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getCONCEP());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getCONCEPPAG());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getESTADO());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getCOMEN());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getSUBTOT());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getIMPUE());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getTOT());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getESTAC());
+        addShowColumn(TableHeaderFactory.getSigleton().getCxcsTableHeader().getFALT());            
+    }
+   
    @Override
    public List<?> getAllItemsInTable() throws Exception {
        final CxcTableModel CxcTableModel = (CxcTableModel)this.getModel();

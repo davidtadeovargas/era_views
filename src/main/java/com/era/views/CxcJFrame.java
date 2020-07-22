@@ -28,31 +28,23 @@ public abstract class CxcJFrame extends BaseJFrame
         jBAbon = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTab1 = new javax.swing.JTable();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTab2 = new javax.swing.JTable();
         jCPe = new javax.swing.JCheckBox();
         jCCo = new javax.swing.JCheckBox();
         jBVerA = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         jTCli = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTNom = new javax.swing.JTextField();
         jBCli = new javax.swing.JButton();
         jCVen = new javax.swing.JCheckBox();
-        jBActua = new javax.swing.JButton();
         jBVis = new javax.swing.JButton();
-        jBRec3 = new javax.swing.JButton();
-        jBRec1 = new javax.swing.JButton();
-        jBRec2 = new javax.swing.JButton();
         jTDia = new javax.swing.JTextField();
-        jTClas = new javax.swing.JTextField();
-        jBClas = new javax.swing.JButton();
-        jTClasDescrip = new javax.swing.JTextField();
         jTCond = new javax.swing.JTextField();
-        jBLib = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jCalendarFrom = new com.toedter.calendar.JCalendar();
+        jCalendarUntil = new com.toedter.calendar.JCalendar();
+        jBSearch = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTabCXC = new com.era.views.tables.CxcTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -114,7 +106,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jBAbonKeyPressed(evt);
             }
         });
-        jP1.add(jBAbon, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 110, 120, 30));
+        jP1.add(jBAbon, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 180, 120, 30));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -143,72 +135,11 @@ public abstract class CxcJFrame extends BaseJFrame
                 jBSalKeyPressed(evt);
             }
         });
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 320, 120, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 270, 120, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("A:");
-        jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 40, -1));
-
-        jTab1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "No.", "Folio", "Serie", "Cliente", "Nombre", "Subtotal", "Impuesto", "Total", "Total Abonos", "Pendiente Liquidar", "Fecha", "Fecha Vencimiento", "Sucursal", "Caja", "Usuario", "Nombre Usuario", "Estado", "id"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTab1.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab1.setNextFocusableComponent(jTab2);
-        jTab1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTab1KeyPressed(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jTab1);
-        if (jTab1.getColumnModel().getColumnCount() > 0) {
-            jTab1.getColumnModel().getColumn(13).setResizable(false);
-            jTab1.getColumnModel().getColumn(15).setResizable(false);
-            jTab1.getColumnModel().getColumn(16).setResizable(false);
-        }
-
-        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 830, 230));
-
-        jTab2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "No.", "Fecha", "Venta", "Tipo Doc", "Producto", "Qty", "Unidad", "Descripción", "Descuento", "Moneda", "Impuesto", "Precio", "Importe"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTab2.setColumnSelectionAllowed(true);
-        jTab2.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab2.setNextFocusableComponent(jBLib);
-        jTab2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTab2KeyPressed(evt);
-            }
-        });
-        jScrollPane1.setViewportView(jTab2);
-        jTab2.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-
-        jP1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 950, 170));
+        jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 40, -1));
 
         jCPe.setBackground(new java.awt.Color(255, 255, 255));
         jCPe.setSelected(true);
@@ -225,7 +156,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jCPeKeyPressed(evt);
             }
         });
-        jP1.add(jCPe, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 20, 80, -1));
+        jP1.add(jCPe, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 80, -1));
 
         jCCo.setBackground(new java.awt.Color(255, 255, 255));
         jCCo.setText("CO");
@@ -240,7 +171,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jCCoKeyPressed(evt);
             }
         });
-        jP1.add(jCCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 40, 80, -1));
+        jP1.add(jCCo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 80, -1));
 
         jBVerA.setBackground(new java.awt.Color(255, 255, 255));
         jBVerA.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -249,7 +180,6 @@ public abstract class CxcJFrame extends BaseJFrame
         jBVerA.setText("Abonos");
         jBVerA.setToolTipText("Ver Todos los Abonos de Compra(s) (F2)");
         jBVerA.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBVerA.setNextFocusableComponent(jBActua);
         jBVerA.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBVerAMouseEntered(evt);
@@ -268,11 +198,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jBVerAKeyPressed(evt);
             }
         });
-        jP1.add(jBVerA, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 140, 120, 30));
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Clasificación:");
-        jP1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 80, -1));
+        jP1.add(jBVerA, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 210, 120, 30));
 
         jTCli.setBackground(new java.awt.Color(204, 255, 204));
         jTCli.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
@@ -306,7 +232,6 @@ public abstract class CxcJFrame extends BaseJFrame
 
         jTNom.setEditable(false);
         jTNom.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTNom.setNextFocusableComponent(jTClas);
         jTNom.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTNomFocusGained(evt);
@@ -359,35 +284,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jCVenKeyPressed(evt);
             }
         });
-        jP1.add(jCVen, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, 90, 20));
-
-        jBActua.setBackground(new java.awt.Color(255, 255, 255));
-        jBActua.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBActua.setForeground(new java.awt.Color(0, 102, 0));
-        jBActua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actualizar.png"))); // NOI18N
-        jBActua.setText("Actualizar");
-        jBActua.setToolTipText("Actualizar Registros (F5)");
-        jBActua.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBActua.setNextFocusableComponent(jBVis);
-        jBActua.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBActuaMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBActuaMouseExited(evt);
-            }
-        });
-        jBActua.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBActuaActionPerformed(evt);
-            }
-        });
-        jBActua.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBActuaKeyPressed(evt);
-            }
-        });
-        jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 170, 120, 30));
+        jP1.add(jCVen, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 90, 20));
 
         jBVis.setBackground(new java.awt.Color(255, 255, 255));
         jBVis.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -396,7 +293,6 @@ public abstract class CxcJFrame extends BaseJFrame
         jBVis.setText("Reporte");
         jBVis.setToolTipText("Reporte (F6)");
         jBVis.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBVis.setNextFocusableComponent(jBRec1);
         jBVis.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBVisMouseEntered(evt);
@@ -415,96 +311,12 @@ public abstract class CxcJFrame extends BaseJFrame
                 jBVisKeyPressed(evt);
             }
         });
-        jP1.add(jBVis, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 200, 120, 30));
-
-        jBRec3.setBackground(new java.awt.Color(255, 255, 255));
-        jBRec3.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBRec3.setForeground(new java.awt.Color(0, 102, 0));
-        jBRec3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/rec3.png"))); // NOI18N
-        jBRec3.setText("Correo");
-        jBRec3.setToolTipText("Enviar Correo Electrónico de Recordatorio 3");
-        jBRec3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBRec3.setNextFocusableComponent(jBSal);
-        jBRec3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBRec3MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBRec3MouseExited(evt);
-            }
-        });
-        jBRec3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBRec3ActionPerformed(evt);
-            }
-        });
-        jBRec3.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBRec3KeyPressed(evt);
-            }
-        });
-        jP1.add(jBRec3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 290, 120, 30));
-
-        jBRec1.setBackground(new java.awt.Color(255, 255, 255));
-        jBRec1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBRec1.setForeground(new java.awt.Color(0, 102, 0));
-        jBRec1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/rec1.png"))); // NOI18N
-        jBRec1.setText("Correo");
-        jBRec1.setToolTipText("Enviar Correo Electrónico de Recordatorio 1");
-        jBRec1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBRec1.setNextFocusableComponent(jBRec2);
-        jBRec1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBRec1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBRec1MouseExited(evt);
-            }
-        });
-        jBRec1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBRec1ActionPerformed(evt);
-            }
-        });
-        jBRec1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBRec1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBRec1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 230, 120, 30));
-
-        jBRec2.setBackground(new java.awt.Color(255, 255, 255));
-        jBRec2.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBRec2.setForeground(new java.awt.Color(0, 102, 0));
-        jBRec2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/rec2.png"))); // NOI18N
-        jBRec2.setText("Correo");
-        jBRec2.setToolTipText("Enviar Correo Electrónico de Recordatorio 2");
-        jBRec2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBRec2.setNextFocusableComponent(jBRec3);
-        jBRec2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBRec2MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBRec2MouseExited(evt);
-            }
-        });
-        jBRec2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBRec2ActionPerformed(evt);
-            }
-        });
-        jBRec2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBRec2KeyPressed(evt);
-            }
-        });
-        jP1.add(jBRec2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 260, 120, 30));
+        jP1.add(jBVis, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 240, 120, 30));
 
         jTDia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTDia.setText("30");
         jTDia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTDia.setNextFocusableComponent(jTab1);
+        jTDia.setNextFocusableComponent(jTabCXC);
         jTDia.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTDiaFocusGained(evt);
@@ -521,69 +333,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jTDiaKeyTyped(evt);
             }
         });
-        jP1.add(jTDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 20, 30, 20));
-
-        jTClas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTClas.setNextFocusableComponent(jBClas);
-        jTClas.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTClasFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTClasFocusLost(evt);
-            }
-        });
-        jTClas.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTClasKeyPressed(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTClasKeyTyped(evt);
-            }
-        });
-        jP1.add(jTClas, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 120, 20));
-
-        jBClas.setBackground(new java.awt.Color(255, 255, 255));
-        jBClas.setText("...");
-        jBClas.setToolTipText("Buscar Clasificación(es)");
-        jBClas.setNextFocusableComponent(jTClasDescrip);
-        jBClas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBClasMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBClasMouseExited(evt);
-            }
-        });
-        jBClas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBClasActionPerformed(evt);
-            }
-        });
-        jBClas.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBClasKeyPressed(evt);
-            }
-        });
-        jP1.add(jBClas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 30, 20));
-
-        jTClasDescrip.setEditable(false);
-        jTClasDescrip.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTClasDescrip.setNextFocusableComponent(jTCond);
-        jTClasDescrip.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jTClasDescripFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jTClasDescripFocusLost(evt);
-            }
-        });
-        jTClasDescrip.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTClasDescripKeyPressed(evt);
-            }
-        });
-        jP1.add(jTClasDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 230, 20));
+        jP1.add(jTDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 30, 20));
 
         jTCond.setEditable(false);
         jTCond.setBackground(new java.awt.Color(255, 255, 204));
@@ -604,38 +354,43 @@ public abstract class CxcJFrame extends BaseJFrame
                 jTCondKeyPressed(evt);
             }
         });
-        jP1.add(jTCond, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, 380, 20));
-
-        jBLib.setBackground(new java.awt.Color(255, 255, 255));
-        jBLib.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBLib.setForeground(new java.awt.Color(0, 102, 0));
-        jBLib.setText("Liberar");
-        jBLib.setToolTipText("Liberar saldo del (los) cliente(s)");
-        jBLib.setName(""); // NOI18N
-        jBLib.setNextFocusableComponent(jBAbon);
-        jBLib.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBLibMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBLibMouseExited(evt);
-            }
-        });
-        jBLib.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBLibActionPerformed(evt);
-            }
-        });
-        jBLib.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBLibKeyPressed(evt);
-            }
-        });
-        jP1.add(jBLib, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 60, 80, -1));
+        jP1.add(jTCond, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 380, 20));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Cliente:");
         jP1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 80, -1));
+        jP1.add(jCalendarFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, -1, -1));
+        jP1.add(jCalendarUntil, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 20, -1, -1));
+
+        jBSearch.setBackground(new java.awt.Color(255, 255, 255));
+        jBSearch.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jBSearch.setForeground(new java.awt.Color(0, 102, 0));
+        jBSearch.setText("Buscar");
+        jBSearch.setToolTipText("Abonar a Venta");
+        jBSearch.setNextFocusableComponent(jBVerA);
+        jBSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jBSearchMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jBSearchMouseExited(evt);
+            }
+        });
+        jBSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSearchActionPerformed(evt);
+            }
+        });
+        jBSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jBSearchKeyPressed(evt);
+            }
+        });
+        jP1.add(jBSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 90, 30));
+
+        jScrollPane1.setViewportView(jTabCXC);
+
+        jP1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 840, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -643,14 +398,15 @@ public abstract class CxcJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 990, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE))
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -707,11 +463,11 @@ public abstract class CxcJFrame extends BaseJFrame
     
         
     
-    private void jTab1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTab1KeyPressed
+    private void jTabCXCKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTabCXCKeyPressed
         
     
         
-    }//GEN-LAST:event_jTab1KeyPressed
+    }//GEN-LAST:event_jTabCXCKeyPressed
     
     
                     
@@ -725,12 +481,6 @@ public abstract class CxcJFrame extends BaseJFrame
 
     
     
-    private void jTab2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTab2KeyPressed
-        
-    
-        
-    }//GEN-LAST:event_jTab2KeyPressed
-
     
     
     private void jCPeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jCPeKeyPressed
@@ -868,19 +618,7 @@ public abstract class CxcJFrame extends BaseJFrame
 
     
 
-    private void jBActuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBActuaActionPerformed
-
-
-
-    }//GEN-LAST:event_jBActuaActionPerformed
-
     
-
-    private void jBActuaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBActuaKeyPressed
-
-
-
-    }//GEN-LAST:event_jBActuaKeyPressed
 
     
 
@@ -970,12 +708,6 @@ public abstract class CxcJFrame extends BaseJFrame
 
     
     
-    private void jBActuaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseEntered
-        
-    
-        
-    }//GEN-LAST:event_jBActuaMouseEntered
-
     
     
     private void jBVisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVisMouseEntered
@@ -1020,12 +752,6 @@ public abstract class CxcJFrame extends BaseJFrame
 
     
     
-    private void jBActuaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBActuaMouseExited
-        
-    
-        
-    }//GEN-LAST:event_jBActuaMouseExited
-
     
    
     private void jBVisMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBVisMouseExited
@@ -1052,99 +778,28 @@ public abstract class CxcJFrame extends BaseJFrame
 
     
    
-    private void jBRec3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBRec3KeyPressed
-        
-   
-        
-    }//GEN-LAST:event_jBRec3KeyPressed
-
     
    
-    private void jBRec3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBRec3MouseEntered
-        
-   
-        
-    }//GEN-LAST:event_jBRec3MouseEntered
-
     
    
-    private void jBRec3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBRec3MouseExited
-        
-   
-        
-    }//GEN-LAST:event_jBRec3MouseExited
-
     
    
-    private void jBRec3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRec3ActionPerformed
-        
-   
-        
-    }//GEN-LAST:event_jBRec3ActionPerformed
-
     
    
-    private void jBRec1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBRec1MouseEntered
-   
-        
-    }//GEN-LAST:event_jBRec1MouseEntered
-
     
    
-    private void jBRec1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBRec1MouseExited
-        
-   
-        
-    }//GEN-LAST:event_jBRec1MouseExited
-
 
    
-    private void jBRec1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRec1ActionPerformed
-        
-   
-        
-    }//GEN-LAST:event_jBRec1ActionPerformed
-
     
    
-    private void jBRec1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBRec1KeyPressed
-        
-   
-        
-    }//GEN-LAST:event_jBRec1KeyPressed
-
     
    
-    private void jBRec2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBRec2MouseEntered
-        
-   
-        
-    }//GEN-LAST:event_jBRec2MouseEntered
-
     
    
-    private void jBRec2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBRec2MouseExited
-        
-   
-        
-    }//GEN-LAST:event_jBRec2MouseExited
-
     
    
-    private void jBRec2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRec2ActionPerformed
-        
-   
-        
-    }//GEN-LAST:event_jBRec2ActionPerformed
-
     
    
-    private void jBRec2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBRec2KeyPressed
-        
-   
-        
-    }//GEN-LAST:event_jBRec2KeyPressed
-
     
    
     private void jTDiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDiaKeyTyped
@@ -1179,84 +834,24 @@ public abstract class CxcJFrame extends BaseJFrame
 
     
    
-    private void jTClasFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasFocusGained
-
-   
-
-    }//GEN-LAST:event_jTClasFocusGained
-
     
    
-    private void jTClasFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasFocusLost
-
-   
-
-    }//GEN-LAST:event_jTClasFocusLost
-
     
    
-    private void jTClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasKeyPressed
-
-   
-
-    }//GEN-LAST:event_jTClasKeyPressed
-
     
    
-    private void jTClasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasKeyTyped
-
-   
-
-    }//GEN-LAST:event_jTClasKeyTyped
-
     
    
-    private void jBClasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBClasMouseEntered
-
-   
-
-    }//GEN-LAST:event_jBClasMouseEntered
-
     
    
-    private void jBClasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBClasMouseExited
-
-   
-
-    }//GEN-LAST:event_jBClasMouseExited
-
    
    
-    private void jBClasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBClasActionPerformed
-
-   
-
-    }//GEN-LAST:event_jBClasActionPerformed
-
     
    
-    private void jBClasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBClasKeyPressed
-
-   
-
-    }//GEN-LAST:event_jBClasKeyPressed
-
     
    
-    private void jTClasDescripFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasDescripFocusGained
-
-   
-
-    }//GEN-LAST:event_jTClasDescripFocusGained
-
     
    
-    private void jTClasDescripFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTClasDescripFocusLost
-
-   
-        
-    }//GEN-LAST:event_jTClasDescripFocusLost
-
     
     
     
@@ -1303,44 +898,14 @@ public abstract class CxcJFrame extends BaseJFrame
 
     
     
-    private void jTClasDescripKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTClasDescripKeyPressed
-        
-    
-        
-    }//GEN-LAST:event_jTClasDescripKeyPressed
-
     
     
-    private void jBLibKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBLibKeyPressed
-        
-    
-        
-    }//GEN-LAST:event_jBLibKeyPressed
-
     
     
-    private void jBLibMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBLibMouseEntered
-        
-    
-        
-    }//GEN-LAST:event_jBLibMouseEntered
-
     
     
-    private void jBLibMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBLibMouseExited
-        
-    
-        
-    }//GEN-LAST:event_jBLibMouseExited
-
     
     
-    private void jBLibActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLibActionPerformed
-        
-        
-        
-    }//GEN-LAST:event_jBLibActionPerformed
-
     
     
     
@@ -1398,40 +963,48 @@ public abstract class CxcJFrame extends BaseJFrame
     private void jTCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCliActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTCliActionPerformed
+
+    private void jBSearchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSearchMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBSearchMouseEntered
+
+    private void jBSearchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSearchMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBSearchMouseExited
+
+    private void jBSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBSearchActionPerformed
+
+    private void jBSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBSearchKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBSearchKeyPressed
     
     
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBAbon;
-    protected javax.swing.JButton jBActua;
-    protected javax.swing.JButton jBClas;
     protected javax.swing.JButton jBCli;
-    protected javax.swing.JButton jBLib;
-    protected javax.swing.JButton jBRec1;
-    protected javax.swing.JButton jBRec2;
-    protected javax.swing.JButton jBRec3;
     protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBSearch;
     protected javax.swing.JButton jBVerA;
     protected javax.swing.JButton jBVis;
     protected javax.swing.JCheckBox jCCo;
     protected javax.swing.JCheckBox jCPe;
     protected javax.swing.JCheckBox jCVen;
+    protected com.toedter.calendar.JCalendar jCalendarFrom;
+    protected com.toedter.calendar.JCalendar jCalendarUntil;
     protected javax.swing.JLabel jLabel3;
-    protected javax.swing.JLabel jLabel5;
     protected javax.swing.JLabel jLabel6;
     protected javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jP1;
-    protected javax.swing.JScrollPane jScrollPane1;
-    protected javax.swing.JScrollPane jScrollPane2;
-    protected javax.swing.JTextField jTClas;
-    protected javax.swing.JTextField jTClasDescrip;
+    private javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JTextField jTCli;
     protected javax.swing.JTextField jTCond;
     protected javax.swing.JTextField jTDia;
     protected javax.swing.JTextField jTNom;
-    private javax.swing.JTable jTab1;
-    private javax.swing.JTable jTab2;
+    protected com.era.views.tables.CxcTable jTabCXC;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

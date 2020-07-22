@@ -23,6 +23,7 @@ public class SalesTable extends BaseJTable {
         this.DocumentType = DocumentType;
     }
     
+    @Override
     public void showCommonColumns(){
         
         addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getSALE_ID());

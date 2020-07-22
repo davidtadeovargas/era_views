@@ -15,6 +15,7 @@ import java.awt.Container;
 import javax.swing.AbstractButton;
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.event.ChangeListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyAdapter;
@@ -26,6 +27,7 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JDialog;
@@ -351,6 +353,32 @@ public class JComponentUtils {
         });
     }
     
+    public void onCheckboxChangeListener(JCheckBox JCheckBox, final OnCheckboxChange OnCheckboxChange){
+        
+        // Define ChangeListener
+        ChangeListener changeListener = (ChangeEvent changeEvent) -> {
+            AbstractButton abstractButton =
+                    (AbstractButton)changeEvent.getSource();
+            ButtonModel buttonModel = abstractButton.getModel();
+            boolean armed = buttonModel.isArmed();
+            boolean pressed = buttonModel.isPressed();
+            boolean selected = buttonModel.isSelected();
+            
+            if(selected){
+                if(OnCheckboxChange!=null){
+                    OnCheckboxChange.onChecked();
+                }
+            }
+            else{
+                if(OnCheckboxChange!=null){
+                    OnCheckboxChange.onUncheked();
+                }
+            }
+            
+        };        
+        JCheckBox.addChangeListener(changeListener);
+    }
+    
     public void addJTextFieldsWhenEnterKeyIsPressed(List<JTextField> JTextFields,JToggleButton JButton){
         
         final EnterKeyListener EnterKeyListener_ = EnterKeyListener.getSingleton();
@@ -674,6 +702,11 @@ public class JComponentUtils {
     }
     
     public interface OnRadioButtonChange{
+        void onChecked();
+        void onUncheked();
+    }
+    
+    public interface OnCheckboxChange{
         void onChecked();
         void onUncheked();
     }

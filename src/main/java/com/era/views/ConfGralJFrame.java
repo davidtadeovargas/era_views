@@ -63,6 +63,7 @@ public abstract class ConfGralJFrame extends BaseJFrame
         jTMinFac = new javax.swing.JTextField();
         jComSerFac = new com.era.views.comboboxes.SeriesCombobox();
         jLabel30 = new javax.swing.JLabel();
+        jCTestSystem = new javax.swing.JCheckBox();
         jPCot = new javax.swing.JPanel();
         jCMMECot = new javax.swing.JCheckBox();
         jCVSinExistCot = new javax.swing.JCheckBox();
@@ -246,6 +247,12 @@ public abstract class ConfGralJFrame extends BaseJFrame
         jLabel30.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel30.setText("Serie de facturas fija:");
         jPFac.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 130, 20));
+
+        jCTestSystem.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jCTestSystem.setText("Sistema en prueba");
+        jCTestSystem.setName("vtas_minfac"); // NOI18N
+        jCTestSystem.setNextFocusableComponent(jTMinFac);
+        jPFac.add(jCTestSystem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 140, -1));
 
         jTBP.addTab("tab2", jPFac);
 
@@ -658,6 +665,7 @@ public abstract class ConfGralJFrame extends BaseJFrame
     protected javax.swing.JCheckBox jCPLEPvta;
     protected javax.swing.JCheckBox jCPListCFac;
     protected javax.swing.JCheckBox jCSerRep;
+    protected javax.swing.JCheckBox jCTestSystem;
     protected javax.swing.JCheckBox jCTraspasExis;
     protected javax.swing.JCheckBox jCVSinExistCot;
     protected javax.swing.JCheckBox jCVSinExistPvta;
@@ -665,7 +673,7 @@ public abstract class ConfGralJFrame extends BaseJFrame
     protected javax.swing.JCheckBox jCVendSinExistFac;
     protected com.era.views.comboboxes.SeriesCombobox jComSerF;
     protected com.era.views.comboboxes.SeriesCombobox jComSerFac;
-    protected com.era.views.comboboxes.SeriesCombobox jComSerR;
+    protected com.era.views.comboboxes.SeriesCombobox jComSerR;	
     protected com.era.views.comboboxes.SeriesCombobox jComSerT;
     protected javax.swing.JLabel jLabel1;
     protected javax.swing.JLabel jLabel2;
