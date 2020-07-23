@@ -80,40 +80,8 @@ public class TableHeaderFactory {
         final CFDIRelacionadosPagosTableHeader CFDIRelacionadosPagosTableHeader = new CFDIRelacionadosPagosTableHeader();return CFDIRelacionadosPagosTableHeader;
     }
 
-    public ClasempsTableHeader getClasempsTableHeader(){
-        final ClasempsTableHeader ClasempsTableHeader = new ClasempsTableHeader();return ClasempsTableHeader;
-    }
-
-    public ClasificacionsTableHeader getClasificacionsTableHeader(){
-        final ClasificacionsTableHeader ClasificacionsTableHeader = new ClasificacionsTableHeader();return ClasificacionsTableHeader;
-    }
-
-    public ClasjeraclisTableHeader getClasjeraclisTableHeader(){
-        final ClasjeraclisTableHeader ClasjeraclisTableHeader = new ClasjeraclisTableHeader();return ClasjeraclisTableHeader;
-    }
-
-    public ClasjeraprodsTableHeader getClasjeraprodsTableHeader(){
-        final ClasjeraprodsTableHeader ClasjeraprodsTableHeader = new ClasjeraprodsTableHeader();return ClasjeraprodsTableHeader;
-    }
-
-    public ClasjeraprovsTableHeader getClasjeraprovsTableHeader(){
-        final ClasjeraprovsTableHeader ClasjeraprovsTableHeader = new ClasjeraprovsTableHeader();return ClasjeraprovsTableHeader;
-    }
-
-    public ClasprodsTableHeader getClasprodsTableHeader(){
-        final ClasprodsTableHeader ClasprodsTableHeader = new ClasprodsTableHeader();return ClasprodsTableHeader;
-    }
-
-    public ClasprovsTableHeader getClasprovsTableHeader(){
-        final ClasprovsTableHeader ClasprovsTableHeader = new ClasprovsTableHeader();return ClasprovsTableHeader;
-    }
-
     public CoinsTableHeader getCoinsTableHeader(){
         final CoinsTableHeader CoinsTableHeader = new CoinsTableHeader();return CoinsTableHeader;
-    }
-
-    public ColossTableHeader getColossTableHeader(){
-        final ColossTableHeader ColossTableHeader = new ColossTableHeader();return ColossTableHeader;
     }
 
     public CompanysTableHeader getCompanysTableHeader(){
@@ -150,10 +118,6 @@ public class TableHeaderFactory {
 
     public ConsecsTableHeader getConsecsTableHeader(){
         final ConsecsTableHeader ConsecsTableHeader = new ConsecsTableHeader();return ConsecsTableHeader;
-    }
-
-    public ContrassTableHeader getContrassTableHeader(){
-        final ContrassTableHeader ContrassTableHeader = new ContrassTableHeader();return ContrassTableHeader;
     }
 
     public ControlexportarsTableHeader getControlexportarsTableHeader(){
@@ -202,10 +166,6 @@ public class TableHeaderFactory {
 
     public CuentasContablessTableHeader getCuentasContablessTableHeader(){
         final CuentasContablessTableHeader CuentasContablessTableHeader = new CuentasContablessTableHeader();return CuentasContablessTableHeader;
-    }
-
-    public CumplesTableHeader getCumplesTableHeader(){
-        final CumplesTableHeader CumplesTableHeader = new CumplesTableHeader();return CumplesTableHeader;
     }
 
     public CUsoCFDIsTableHeader getCUsoCFDIsTableHeader(){
@@ -550,14 +510,6 @@ public class TableHeaderFactory {
 
     public TableHeaderFactory getTableHeaderFactory(){
         final TableHeaderFactory TableHeaderFactory = new TableHeaderFactory();return TableHeaderFactory;
-    }
-
-    public TallcolosTableHeader getTallcolosTableHeader(){
-        final TallcolosTableHeader TallcolosTableHeader = new TallcolosTableHeader();return TallcolosTableHeader;
-    }
-
-    public TallsTableHeader getTallsTableHeader(){
-        final TallsTableHeader TallsTableHeader = new TallsTableHeader();return TallsTableHeader;
     }
 
     public TarssTableHeader getTarssTableHeader(){

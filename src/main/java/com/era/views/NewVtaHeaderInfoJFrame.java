@@ -54,9 +54,7 @@ public abstract class NewVtaHeaderInfoJFrame extends BaseJFrame
         JTFecha = new javax.swing.JTextField();
         jCCartaP = new javax.swing.JCheckBox();
         jLabel26 = new javax.swing.JLabel();
-        jTextFieldVendedor = new javax.swing.JTextField();
-        jRPagad = new javax.swing.JRadioButton();
-        jRNoPag = new javax.swing.JRadioButton();
+        jTextFieldVendedor = new javax.swing.JTextField();                
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -194,16 +192,7 @@ public abstract class NewVtaHeaderInfoJFrame extends BaseJFrame
         jTextFieldVendedor.setEditable(false);
         jTextFieldVendedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jPanel1.add(jTextFieldVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 30, 120, 20));
-
-        jRPagad.setBackground(new java.awt.Color(255, 255, 255));
-        jRPagad.setSelected(true);
-        jRPagad.setText("Pagada");
-        jPanel1.add(jRPagad, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 70, -1));
-
-        jRNoPag.setBackground(new java.awt.Color(255, 255, 255));
-        jRNoPag.setText("No pagada");
-        jPanel1.add(jRNoPag, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, -1, -1));
-
+        
         jP1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 840, 260));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -259,9 +248,7 @@ public abstract class NewVtaHeaderInfoJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel7;
     protected javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jP1;
-    protected javax.swing.JPanel jPanel1;
-    protected javax.swing.JRadioButton jRNoPag;
-    protected javax.swing.JRadioButton jRPagad;
+    protected javax.swing.JPanel jPanel1;    
     protected javax.swing.JScrollPane jSObserv;
     protected javax.swing.JTextArea jTAObserv;
     protected javax.swing.JTextField jTCta;

@@ -62,9 +62,6 @@ public class BasDatsTableModelIGetValueAt implements IGetValueAt {
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getFMOD().getValue())==0){
             returnValue = BasDats.getFmod().toString();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getLADAEN().getValue())==0){
-            returnValue = BasDats.getLadaen();
-        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getLUGEXP().getValue())==0){
             returnValue = BasDats.getLugexp();
         }
@@ -76,9 +73,6 @@ public class BasDatsTableModelIGetValueAt implements IGetValueAt {
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getNOEXT().getValue())==0){
             returnValue = BasDats.getNoext();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getNOEXTEN().getValue())==0){
-            returnValue = BasDats.getNoexten();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBasDatssTableHeader().getNOINT().getValue())==0){
             returnValue = BasDats.getNoint();

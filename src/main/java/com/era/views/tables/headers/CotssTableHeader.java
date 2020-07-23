@@ -7,177 +7,152 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
-   private final ColumnTable MONEDAID = new ColumnTable("MONEDAID");
+   private final ColumnTable MONEDAID = new ColumnTable("Moneda ID");
    public ColumnTable getMONEDAID() {
        return this.MONEDAID;
    }
 
-   private final ColumnTable CODCOT = new ColumnTable("CODCOT");
+   private final ColumnTable CODCOT = new ColumnTable("Cod.Cot");
    public ColumnTable getCODCOT() {
        return this.CODCOT;
    }
 
-   private final ColumnTable CODEMP = new ColumnTable("CODEMP");
+   private final ColumnTable CODEMP = new ColumnTable("Cod.Cliente");
    public ColumnTable getCODEMP() {
        return this.CODEMP;
    }
 
-   private final ColumnTable DESCRIP = new ColumnTable("DESCRIP");
+   private final ColumnTable DESCRIP = new ColumnTable("Descripción");
    public ColumnTable getDESCRIP() {
        return this.DESCRIP;
    }
 
-   private final ColumnTable ESTAC = new ColumnTable("ESTAC");
+   private final ColumnTable ESTAC = new ColumnTable("Usuario");
    public ColumnTable getESTAC() {
        return this.ESTAC;
    }
 
-   private final ColumnTable ESTAD = new ColumnTable("ESTAD");
+   private final ColumnTable ESTAD = new ColumnTable("Estatus");
    public ColumnTable getESTAD() {
        return this.ESTAD;
    }
 
-   private final ColumnTable FALT = new ColumnTable("FALT");
+   private final ColumnTable FALT = new ColumnTable("F.Creación");
    public ColumnTable getFALT() {
        return this.FALT;
    }
 
-   private final ColumnTable FDOC = new ColumnTable("FDOC");
+   private final ColumnTable FDOC = new ColumnTable("F.Documento");
    public ColumnTable getFDOC() {
        return this.FDOC;
    }
 
-   private final ColumnTable FENTRE = new ColumnTable("FENTRE");
+   private final ColumnTable FENTRE = new ColumnTable("F.Entrega");
    public ColumnTable getFENTRE() {
        return this.FENTRE;
    }
 
-   private final ColumnTable FMOD = new ColumnTable("FMOD");
+   private final ColumnTable FMOD = new ColumnTable("F.Modificación");
    public ColumnTable getFMOD() {
        return this.FMOD;
    }
 
-   private final ColumnTable FVENC = new ColumnTable("FVENC");
+   private final ColumnTable FVENC = new ColumnTable("F.Vencimiento");
    public ColumnTable getFVENC() {
        return this.FVENC;
    }
 
-   private final ColumnTable IMPUE = new ColumnTable("IMPUE");
+   private final ColumnTable IMPUE = new ColumnTable("Impuesto");
    public ColumnTable getIMPUE() {
        return this.IMPUE;
    }
 
-   private final ColumnTable MANOBR = new ColumnTable("MANOBR");
+   private final ColumnTable MANOBR = new ColumnTable("Mano Obra");
    public ColumnTable getMANOBR() {
        return this.MANOBR;
    }
 
-   private final ColumnTable MON = new ColumnTable("MON");
+   private final ColumnTable MON = new ColumnTable("Moneda");
    public ColumnTable getMON() {
        return this.MON;
    }
 
-   private final ColumnTable MOTIV = new ColumnTable("MOTIV");
+   private final ColumnTable MOTIV = new ColumnTable("Motivo");
    public ColumnTable getMOTIV() {
        return this.MOTIV;
    }
 
-   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   private final ColumnTable NOCAJ = new ColumnTable("Caja");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
    }
 
-   private final ColumnTable NOREFER = new ColumnTable("NOREFER");
+   private final ColumnTable NOREFER = new ColumnTable("Referencia");
    public ColumnTable getNOREFER() {
        return this.NOREFER;
    }
 
-   private final ColumnTable NOSER = new ColumnTable("NOSER");
+   private final ColumnTable NOSER = new ColumnTable("Serie");
    public ColumnTable getNOSER() {
        return this.NOSER;
    }
 
-   private final ColumnTable NOSERVTA = new ColumnTable("NOSERVTA");
+   private final ColumnTable NOSERVTA = new ColumnTable("No.Ser.Venta");
    public ColumnTable getNOSERVTA() {
        return this.NOSERVTA;
    }
 
-   private final ColumnTable OBSERV = new ColumnTable("OBSERV");
+   private final ColumnTable OBSERV = new ColumnTable("Observaciones");
    public ColumnTable getOBSERV() {
        return this.OBSERV;
    }
 
-   private final ColumnTable PROY = new ColumnTable("PROY");
-   public ColumnTable getPROY() {
-       return this.PROY;
-   }
-
-   private final ColumnTable SER = new ColumnTable("SER");
+   private final ColumnTable SER = new ColumnTable("Serie");
    public ColumnTable getSER() {
        return this.SER;
    }
 
-   private final ColumnTable SUBTOT = new ColumnTable("SUBTOT");
+   private final ColumnTable SUBTOT = new ColumnTable("Subtotal");
    public ColumnTable getSUBTOT() {
        return this.SUBTOT;
    }
 
-   private final ColumnTable SUBTOTGRAL = new ColumnTable("SUBTOTGRAL");
-   public ColumnTable getSUBTOTGRAL() {
-       return this.SUBTOTGRAL;
-   }
-
-   private final ColumnTable SUBTOTGRAL2 = new ColumnTable("SUBTOTGRAL2");
-   public ColumnTable getSUBTOTGRAL2() {
-       return this.SUBTOTGRAL2;
-   }
-
-   private final ColumnTable SUBTOTMAT = new ColumnTable("SUBTOTMAT");
-   public ColumnTable getSUBTOTMAT() {
-       return this.SUBTOTMAT;
-   }
-
-   private final ColumnTable SUBTOTMAT2 = new ColumnTable("SUBTOTMAT2");
-   public ColumnTable getSUBTOTMAT2() {
-       return this.SUBTOTMAT2;
-   }
-
-   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   private final ColumnTable SUCU = new ColumnTable("Sucursal");
    public ColumnTable getSUCU() {
        return this.SUCU;
    }
 
-   private final ColumnTable TIPCAM = new ColumnTable("TIPCAM");
+   private final ColumnTable TIPCAM = new ColumnTable("Tipo Cambio");
    public ColumnTable getTIPCAM() {
        return this.TIPCAM;
    }
 
-   private final ColumnTable TOT = new ColumnTable("TOT");
+   private final ColumnTable TOT = new ColumnTable("Total");
    public ColumnTable getTOT() {
        return this.TOT;
    }
 
-   private final ColumnTable TOTAL_RETENCION = new ColumnTable("TOTAL_RETENCION");
+   private final ColumnTable TOTAL_RETENCION = new ColumnTable("Total Retención");
    public ColumnTable getTOTAL_RETENCION() {
        return this.TOTAL_RETENCION;
    }
 
-   private final ColumnTable TOTAL_TRASLADO = new ColumnTable("TOTAL_TRASLADO");
+   private final ColumnTable TOTAL_TRASLADO = new ColumnTable("Total Traslado");
    public ColumnTable getTOTAL_TRASLADO() {
        return this.TOTAL_TRASLADO;
    }
 
-   private final ColumnTable TOTCOST = new ColumnTable("TOTCOST");
+   private final ColumnTable TOTCOST = new ColumnTable("Total Costo");
    public ColumnTable getTOTCOST() {
        return this.TOTCOST;
    }
 
-   private final ColumnTable TOTDESCU = new ColumnTable("TOTDESCU");
+   private final ColumnTable TOTDESCU = new ColumnTable("Total Descuento");
    public ColumnTable getTOTDESCU() {
        return this.TOTDESCU;
    }
 
-   private final ColumnTable VTA = new ColumnTable("VTA");
+   private final ColumnTable VTA = new ColumnTable("Venta");
    public ColumnTable getVTA() {
        return this.VTA;
    }

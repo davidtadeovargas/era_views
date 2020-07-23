@@ -27,6 +27,8 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
         jBVtas = new javax.swing.JButton();
         jBDevP = new javax.swing.JButton();
         jBDev = new javax.swing.JButton();
+        jBChangeLogin = new javax.swing.JButton();
+        jBRingInvoices = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -106,6 +108,22 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
         jBDev.setNextFocusableComponent(jBDevP);
         jP1.add(jBDev, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 50));
 
+        jBChangeLogin.setBackground(new java.awt.Color(255, 255, 255));
+        jBChangeLogin.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jBChangeLogin.setForeground(new java.awt.Color(0, 102, 0));
+        jBChangeLogin.setText("Login");
+        jBChangeLogin.setToolTipText("");
+        jBChangeLogin.setNextFocusableComponent(jBRingInvoices);
+        jP1.add(jBChangeLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 150, 50));
+
+        jBRingInvoices.setBackground(new java.awt.Color(255, 255, 255));
+        jBRingInvoices.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jBRingInvoices.setForeground(new java.awt.Color(0, 102, 0));
+        jBRingInvoices.setText("Timbrar Facturas");
+        jBRingInvoices.setToolTipText("");
+        jBRingInvoices.setNextFocusableComponent(jBSal);
+        jP1.add(jBRingInvoices, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 60, 150, 50));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -132,11 +150,13 @@ public abstract class OptPtoVtaJFrame extends BaseJFrame
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBCanVtas;
+    protected javax.swing.JButton jBChangeLogin;
     protected javax.swing.JButton jBCortX;
     protected javax.swing.JButton jBCortZ;
     protected javax.swing.JButton jBDev;
     protected javax.swing.JButton jBDevP;
     protected javax.swing.JButton jBImpVtas;
+    protected javax.swing.JButton jBRingInvoices;
     protected javax.swing.JButton jBSal;
     protected javax.swing.JButton jBVtas;
     private javax.swing.JPanel jP1;

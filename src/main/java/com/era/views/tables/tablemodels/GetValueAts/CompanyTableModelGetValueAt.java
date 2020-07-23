@@ -29,12 +29,6 @@ public class CompanyTableModelGetValueAt implements IGetValueAt{
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getRFC().getValue())==0){
             returnValue = Company.getRFC();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getAGRADFEC().getValue())==0){
-            returnValue = Company.getAgradfec().toString();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getANIO().getValue())==0){
-            returnValue = Company.getAnio();
-        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getBANC().getValue())==0){
             returnValue = Company.getBanc();
         }
@@ -62,9 +56,6 @@ public class CompanyTableModelGetValueAt implements IGetValueAt{
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCIU().getValue())==0){
             returnValue = Company.getCiu();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCLASJERA().getValue())==0){
-            returnValue = Company.getClasjera();
-        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCLAVBANC().getValue())==0){
             returnValue = Company.getClavbanc();
         }
@@ -77,23 +68,11 @@ public class CompanyTableModelGetValueAt implements IGetValueAt{
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCO3().getValue())==0){
             returnValue = Company.getCo3();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCODCLAS().getValue())==0){
-            returnValue = Company.getCodclas();
-        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCOL().getValue())==0){
             returnValue = Company.getCol();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCOMPANYCODE().getValue())==0){
             returnValue = Company.getCompanyCode();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC().getValue())==0){
-            returnValue = Company.getContac();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTAC6().getValue())==0){
-            returnValue = Company.getContac6();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTACT2().getValue())==0){
-            returnValue = Company.getContact2();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCONTRIBUYENTTYPE().getValue())==0){
             returnValue = Company.getContribuyentType();
@@ -107,14 +86,8 @@ public class CompanyTableModelGetValueAt implements IGetValueAt{
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCTAPRED().getValue())==0){
             returnValue = Company.getCtapred();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCUMPLE().getValue())==0){
-            returnValue = Company.getCumple();
-        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getCURP().getValue())==0){
             returnValue = Company.getCurp();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getDEPOSIT().getValue())==0){
-            returnValue = String.valueOf(Company.getDeposit());
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getDESCU().getValue())==0){
             returnValue = String.valueOf(Company.getDescu());
@@ -122,65 +95,8 @@ public class CompanyTableModelGetValueAt implements IGetValueAt{
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getDIACRED().getValue())==0){
             returnValue = String.valueOf(Company.getDiacred());
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getDIAPAG().getValue())==0){
-            returnValue = String.valueOf(Company.getDiapag());
-        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENCALL().getValue())==0){
             returnValue = Company.getEncall();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENCEL().getValue())==0){
-            returnValue = Company.getEncel();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENCIU().getValue())==0){
-            returnValue = Company.getEnciu();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENCO1().getValue())==0){
-            returnValue = Company.getEnco1();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENCO2().getValue())==0){
-            returnValue = Company.getEnco2();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENCO3().getValue())==0){
-            returnValue = Company.getEnco3();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENCOL().getValue())==0){
-            returnValue = Company.getEncol();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENCP().getValue())==0){
-            returnValue = Company.getEncp();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENEMAIL().getValue())==0){
-            returnValue = Company.getEnemail();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENESTAD().getValue())==0){
-            returnValue = Company.getEnestad();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENLADA().getValue())==0){
-            returnValue = Company.getEnlada();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENNOEXT().getValue())==0){
-            returnValue = Company.getEnnoext();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENNOEXTEN().getValue())==0){
-            returnValue = Company.getEnnoexten();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENNOINT().getValue())==0){
-            returnValue = Company.getEnnoint();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENPAGWEB().getValue())==0){
-            returnValue = Company.getEnpagweb();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENPAI().getValue())==0){
-            returnValue = Company.getEnpai();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENTEL1().getValue())==0){
-            returnValue = Company.getEntel1();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENTEL2().getValue())==0){
-            returnValue = Company.getEntel2();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getENTEL3().getValue())==0){
-            returnValue = Company.getEntel3();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getESTAC().getValue())==0){
             returnValue = Company.getEstac();
@@ -269,20 +185,11 @@ public class CompanyTableModelGetValueAt implements IGetValueAt{
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getPUEST2().getValue())==0){
             returnValue = Company.getPuest2();
         }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getREVIS().getValue())==0){
-            returnValue = Company.getRevis();
-        }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getSUCU().getValue())==0){
             returnValue = Company.getSucu();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTEL().getValue())==0){
             returnValue = Company.getTel();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER1().getValue())==0){
-            returnValue = Company.getTelper1();
-        }
-        else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTELPER2().getValue())==0){
-            returnValue = Company.getTelper2();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCompanysTableHeader().getTEMPLATE().getValue())==0){
             returnValue = Company.getTemplate();

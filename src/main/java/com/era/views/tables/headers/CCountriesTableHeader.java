@@ -22,7 +22,7 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.VALIDACION_DEL_REGISTRO_DE_IDENTIDAD_TRIBUTARIA;
    }
 
-   private final ColumnTable C_PAIS = new ColumnTable("c_Pais");
+   private final ColumnTable C_PAIS = new ColumnTable("País");
    public ColumnTable getC_PAIS() {
        return this.C_PAIS;
    }
@@ -32,22 +32,22 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.DESCRIPTION;
    }
 
-   private final ColumnTable FORMATO_DE_CODIGO_POSTAL = new ColumnTable("Formato_de_código_postal");
+   private final ColumnTable FORMATO_DE_CODIGO_POSTAL = new ColumnTable("Formato CP");
    public ColumnTable getFORMATO_DE_CODIGO_POSTAL() {
        return this.FORMATO_DE_CODIGO_POSTAL;
    }
    
-   private final ColumnTable FMOD = new ColumnTable("FMOD");
+   private final ColumnTable FMOD = new ColumnTable("F.Modificación");
    public ColumnTable getFMOD() {
        return this.FMOD;
    }
 
-   private final ColumnTable NOCAJ = new ColumnTable("NOCAJ");
+   private final ColumnTable NOCAJ = new ColumnTable("Caja");
    public ColumnTable getNOCAJ() {
        return this.NOCAJ;
    }
 
-   private final ColumnTable SUCU = new ColumnTable("SUCU");
+   private final ColumnTable SUCU = new ColumnTable("Sucursal");
    public ColumnTable getSUCU() {
        return this.SUCU;
    }

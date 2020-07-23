@@ -19,8 +19,8 @@ public abstract class VtasJFrame extends BaseJFrame {
         
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
-        jP1 = new javax.swing.JPanel();
+	
+		jP1 = new javax.swing.JPanel();
         jBBusc = new javax.swing.JButton();
         jBMosT = new javax.swing.JButton();
         jLabelRemisionFactura = new javax.swing.JLabel();
@@ -70,6 +70,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jMenuItemDocuSatGetXML = new javax.swing.JMenuItem();
 		jMenuItemGetXML = new javax.swing.JMenuItem();
 		jMenuItemTicketsFacturados = new javax.swing.JMenuItem();
+		jMenuItemInvoicesNotRinged = new javax.swing.JMenuItem();
 		
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -223,6 +224,9 @@ public abstract class VtasJFrame extends BaseJFrame {
         jMenuItemTicketsFacturados.setText("Tickets Facturados");
         jMenuSales.add(jMenuItemTicketsFacturados);
 
+        jMenuItemInvoicesNotRinged.setText("Facturas no Timbradas");
+        jMenuSales.add(jMenuItemInvoicesNotRinged);
+
         jMenuBar1.add(jMenuSales);
 
         jMenuDocuSAT.setText("Documentos SAT");
@@ -331,6 +335,7 @@ public abstract class VtasJFrame extends BaseJFrame {
 	protected javax.swing.JMenuItem jMenuItemFoldersDevsP;
 	protected javax.swing.JMenuItem jMenuItemFoldersAcuses;
 	protected javax.swing.JMenuItem jMenuItemDocuSatGetXML;
+	protected javax.swing.JMenuItem jMenuItemInvoicesNotRinged;	
 	protected javax.swing.JMenuItem jMenuItemGetXML;
 	protected javax.swing.JLabel jLabelTypeSale;
 	protected javax.swing.JMenuItem jMenuItemTicketsFacturados;

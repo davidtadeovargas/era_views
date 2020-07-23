@@ -80,26 +80,11 @@ public class CotsTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getOBSERV().getValue())==0){
                returnValue = Cots.getObserv();
            }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getPROY().getValue())==0){
-               returnValue = Cots.getProy();
-           }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getSER().getValue())==0){
                returnValue = Cots.getSer();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getSUBTOT().getValue())==0){
                returnValue = String.valueOf(Cots.getSubtot());
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getSUBTOTGRAL().getValue())==0){
-               returnValue = String.valueOf(Cots.getSubtotgral());
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getSUBTOTGRAL2().getValue())==0){
-               returnValue = String.valueOf(Cots.getSubtotgral2());
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getSUBTOTMAT().getValue())==0){
-               returnValue = String.valueOf(Cots.getSubtotmat());
-           }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getSUBTOTMAT2().getValue())==0){
-               returnValue = String.valueOf(Cots.getSubtotmat2());
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCotssTableHeader().getSUCU().getValue())==0){
                returnValue = Cots.getSucu();

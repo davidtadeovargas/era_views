@@ -7,22 +7,22 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
        return this.ROWNUMBER;
    }
 
-   private final ColumnTable ACTIVO = new ColumnTable("ACTIVO");
+   private final ColumnTable ACTIVO = new ColumnTable("Activo");
    public ColumnTable getACTIVO() {
        return this.ACTIVO;
    }
 
-   private final ColumnTable ALMA = new ColumnTable("ALMA");
+   private final ColumnTable ALMA = new ColumnTable("Almácen");
    public ColumnTable getALMA() {
        return this.ALMA;
    }
 
-   private final ColumnTable APLIC = new ColumnTable("APLIC");
+   private final ColumnTable APLIC = new ColumnTable("Aplicado");
    public ColumnTable getAPLIC() {
        return this.APLIC;
    }
 
-   private final ColumnTable CANT = new ColumnTable("CANT");
+   private final ColumnTable CANT = new ColumnTable("Qty");
    public ColumnTable getCANT() {
        return this.CANT;
    }

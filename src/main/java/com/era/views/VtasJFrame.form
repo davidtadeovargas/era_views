@@ -77,6 +77,11 @@
                 <Property name="text" type="java.lang.String" value="Tickets Facturados"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemInvoicesNotRinged">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Facturas no Timbradas"/>
+              </Properties>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenuDocuSAT">

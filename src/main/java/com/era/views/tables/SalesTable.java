@@ -65,6 +65,16 @@ public class SalesTable extends BaseJTable {
         return rems;
     }
     
+    public List<Sales> getAllInvoicesNotRingedAndConfirmedByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllInvoicesNotRingedAndConfirmedWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
+    
     public List<Sales> getAllTicketsByPage(final int pageNumber) throws Exception {
         
         //Get the records
@@ -75,6 +85,7 @@ public class SalesTable extends BaseJTable {
         return rems;
     }
     
+    //getAllInvoicesNotRingedAndConfirmedWithPagination
     public List<Sales> getAllNotcByPage(final int pageNumber) throws Exception {
         
         //Get the records
@@ -83,7 +94,7 @@ public class SalesTable extends BaseJTable {
         
         //Return them
         return rems;
-    }
+    }        
     
     public List<Sales> getAllSalesByPage(final int pageNumber) throws Exception {
         
@@ -120,6 +131,10 @@ public class SalesTable extends BaseJTable {
             
             case NOTC:
                 list = getAllNotcByPage(0);
+                break;
+                
+            case INVOICE_NOT_RINGED_CONFIRMED:
+                list = getAllInvoicesNotRingedAndConfirmedByPage(0);
                 break;
         }
         
@@ -173,6 +188,10 @@ public class SalesTable extends BaseJTable {
                 
             case NOTC:
                 items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosNotsc(search);
+                break;
+                
+            case INVOICE_NOT_RINGED_CONFIRMED:
+                items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosInvoicesRingedAndConfirmed(search);
                 break;
         }
                
