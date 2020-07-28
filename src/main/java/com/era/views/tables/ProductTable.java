@@ -31,13 +31,19 @@ public class ProductTable extends BaseJTable {
        this.setModel(ProductTableModel);
    }
 
-   @Override
-   public void getByLikeEncabezados(final String search) throws Exception {
-       final List<Product> items_ = (List<Product>) RepositoryFactory.getInstance().getProductsRepository().getByLikeEncabezados(search);
-       final ProductTableModel ProductTableModel = new ProductTableModel(this,items_,this.ShowColumns);
-       this.setModel(ProductTableModel);
-   }
+    @Override
+    public void getByLikeEncabezados(final String search) throws Exception {
+        final List<Product> items_ = (List<Product>) RepositoryFactory.getInstance().getProductsRepository().getByLikeEncabezados(search);
+        final ProductTableModel ProductTableModel = new ProductTableModel(this,items_,this.ShowColumns);
+        this.setModel(ProductTableModel);
+    }
    
+    public void getByLikeEncabezadosBasic(final String search) throws Exception {
+        final List<Product> items_ = (List<Product>) RepositoryFactory.getInstance().getProductsRepository().getByLikeEncabezadosBasic(search);
+        final ProductTableModel ProductTableModel = new ProductTableModel(this,items_,this.ShowColumns);
+        this.setModel(ProductTableModel);
+    }
+    
     @Override
     public boolean equal(Object ObjectIteration, Object ObjectToCompare) {
         

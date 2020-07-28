@@ -54,6 +54,7 @@ public abstract class BaseJTable extends JTable {
     
     private int iContCellEd = 1;
     
+    private IOnEditableColumn IOnEditableColumn;
     protected List<Integer> editablesColumnsIndexes = new ArrayList<>();
     protected List<String> editablesColumns = new ArrayList<>();
     
@@ -87,7 +88,11 @@ public abstract class BaseJTable extends JTable {
             }
         }
     }
-    
+
+    public void setIOnEditableColumn(IOnEditableColumn IOnEditableColumn) {
+        this.IOnEditableColumn = IOnEditableColumn;
+    }        
+
     @Override
     public boolean isCellEditable(int row, int column) {
         return editablesColumnsIndexes.contains(column);            
@@ -418,15 +423,28 @@ public abstract class BaseJTable extends JTable {
         
         //Listener for row selection
         getSelectionModel().addListSelectionListener((ListSelectionEvent lse) -> {
-            if(ITableRowSelected!=null){
-                
-                //Get the selected model
-                final int selectedRow = this.getSelectedRow();
-                if(selectedRow != -1){
-                    BaseAbstractTableModel BaseAbstractTableModel = (BaseAbstractTableModel) this.getModel();
-                    final Object Object = BaseAbstractTableModel.getItems().get(selectedRow);
+            
+            //Get the selected model
+            final int selectedRow = this.getSelectedRow();
+            if(selectedRow != -1){
 
-                    //Callback
+                BaseAbstractTableModel BaseAbstractTableModel = (BaseAbstractTableModel) this.getModel();
+                final Object Object = BaseAbstractTableModel.getItems().get(selectedRow);
+
+                //Loop all the 
+                for(Integer columnIndex: editablesColumnsIndexes){
+
+                    //Get the new edited value
+                    final Object newObjectValue = getValueAt(getSelectedRow(), columnIndex).toString();
+
+                    //Callback to return the new value
+                    if(IOnEditableColumn!=null){
+                        IOnEditableColumn.onChanged(selectedRow, columnIndex, Object, newObjectValue);
+                    }
+                }
+
+                //Callback
+                if(ITableRowSelected!=null){
                     ITableRowSelected.onRowSelected(lse,Object);
                 }                
             }
@@ -640,6 +658,10 @@ public abstract class BaseJTable extends JTable {
     public interface IInsertNewObjectToTable {
         public void onPrevInsert(Object Object);
         public void onPostInsert(Object Object);
+    }
+    
+    public interface IOnEditableColumn {
+        public void onChanged(int row, int columnIndex, Object modelObject, Object newObjectValue);
     }
     
     public interface OnPaginationLabelUpdate {

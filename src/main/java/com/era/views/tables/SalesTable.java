@@ -38,7 +38,21 @@ public class SalesTable extends BaseJTable {
         addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getTAX());
         addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getTOTAL());
     }
-   
+       
+    public void showCommonColumnsWithRingedInformation(){
+        
+        //Base columns
+        showCommonColumns();
+                
+        //Ringed columns
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getCADORI());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getCERTSAT());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getFISCALFOLIO());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getSELL());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getSELLSAT());
+        addShowColumn(TableHeaderFactory.getSigleton().getSalessTableHeader().getTRANSACTIONID());
+    }
+    
     @Override
     public void initTable(List<?> items) {
         final SalesTableModel SalesTableModel = new SalesTableModel(this,items,this.ShowColumns);

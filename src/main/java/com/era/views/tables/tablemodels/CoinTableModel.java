@@ -21,7 +21,7 @@ public class CoinTableModel  extends BaseAbstractTableModel {
                returnValue = String.valueOf(rowIndex + 1);
             }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getC_MONEDA().getValue())==0){
-               returnValue = Coin.getC_moneda();
+               returnValue = Coin.getCode();
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCoinsTableHeader().getCODE().getValue())==0){
                returnValue = Coin.getCode();

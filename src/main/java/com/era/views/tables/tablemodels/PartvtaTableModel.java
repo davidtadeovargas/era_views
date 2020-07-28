@@ -29,8 +29,8 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANT_DEV().getValue())==0){
                
-               if(Partvta.getToDevs()==null||Partvta.getToDevs().compareTo(BigDecimal.ZERO)==0){
-                   Partvta.setToDevs(Partvta.getCant().subtract(Partvta.getDevs()));
+               if(Partvta.getToDevs()==null){
+                   Partvta.setToDevs(BigDecimal.ZERO);
                }
                
                returnValue = String.valueOf(Partvta.getToDevs());
@@ -151,7 +151,15 @@ public class PartvtaTableModel  extends BaseAbstractTableModel {
             final Partvta Partvta_ = (Partvta)model;
             
             if(columnName.compareTo(TableHeaderFactory.getSigleton().getPartvtasTableHeader().getCANT_DEV().getValue())==0){
-                Partvta_.setToDevs(new BigDecimal((String)newValue));               
+                
+                BigDecimal decimal;
+                try{
+                    decimal = new BigDecimal((String)newValue);
+                }catch(Exception e){
+                    decimal = BigDecimal.ZERO;
+                }
+                
+                Partvta_.setToDevs(decimal);
             }
        };
    }
