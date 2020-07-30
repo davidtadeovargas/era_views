@@ -1,9 +1,9 @@
 package com.era.views.tables;
 
-import com.era.datamodels.enums.DocumentType;
 import com.era.models.Sales;
 import com.era.repositories.RepositoryFactory;
 import com.era.repositories.SalessRepository;
+import com.era.repositories.datamodels.DocumentTypeFilter;
 import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.tables.tablemodels.SalesTableModel;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class SalesTable extends BaseJTable {
 
-    private DocumentType DocumentType;
+    private DocumentTypeFilter DocumentTypeFilter;
     
     
     
@@ -19,8 +19,8 @@ public class SalesTable extends BaseJTable {
        super(RepositoryFactory.getInstance().getSalessRepository());
     }
 
-    public void setDocumentType(DocumentType DocumentType) {
-        this.DocumentType = DocumentType;
+    public void setDocumentTypeFilter(DocumentTypeFilter DocumentTypeFilter) {
+        this.DocumentTypeFilter = DocumentTypeFilter;
     }
     
     @Override
@@ -89,6 +89,16 @@ public class SalesTable extends BaseJTable {
         return rems;
     }
     
+    public List<Sales> getAllJustConfirmedSalesByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllInvoicesNotRingedAndConfirmedWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
+    
     public List<Sales> getAllTicketsByPage(final int pageNumber) throws Exception {
         
         //Get the records
@@ -125,29 +135,33 @@ public class SalesTable extends BaseJTable {
                 
         List<Sales> list = new ArrayList<>();
         
-        switch(DocumentType){
+        switch(DocumentTypeFilter){
             
-            case REMISION:
+            case JUST_REM:
                 list = getAllRemisionsByPage(0);
                 break;
                 
-            case INVOICE:
+            case JUST_INVOICES:
                 list = getAllInvoicesByPage(0);
                 break;
               
-            case TICKETS:
+            case JUST_TICKET:
                 list = getAllTicketsByPage(0);
                 break;
                 
-            case SALES:
+            case ALL_SALES:
                 list = getAllSalesByPage(0);
                 break;
             
-            case NOTC:
+            case JUST_NOTCS:
                 list = getAllNotcByPage(0);
                 break;
                 
             case INVOICE_NOT_RINGED_CONFIRMED:
+                list = getAllInvoicesNotRingedAndConfirmedByPage(0);
+                break;
+                
+            case CANCELED_SALES:
                 list = getAllInvoicesNotRingedAndConfirmedByPage(0);
                 break;
         }
@@ -182,32 +196,36 @@ public class SalesTable extends BaseJTable {
        
        List<Sales> items_ = new ArrayList<>();
         
-        switch(DocumentType){
+       switch(DocumentTypeFilter){
             
-            case REMISION:
+            case JUST_REM:
                 items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosRems(search);
                 break;
                 
-            case INVOICE:
+            case JUST_INVOICES:
                 items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosInvoices(search);
                 break;
               
-            case TICKETS:
+            case JUST_TICKET:
                 items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosTickets(search);
                 break;
                 
-            case SALES:
+            case ALL_SALES:
                 items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezados(search);
                 break;
-                
-            case NOTC:
+            
+            case JUST_NOTCS:
                 items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosNotsc(search);
                 break;
                 
             case INVOICE_NOT_RINGED_CONFIRMED:
                 items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosInvoicesRingedAndConfirmed(search);
                 break;
-        }
+                
+            case CANCELED_SALES:
+                items_ = RepositoryFactory.getInstance().getSalessRepository().getByLikeEncabezadosAllSalesCanceled(search);
+                break;
+        }               
                
        final SalesTableModel SalesTableModel = new SalesTableModel(this,items_,this.ShowColumns);
        this.setModel(SalesTableModel);
