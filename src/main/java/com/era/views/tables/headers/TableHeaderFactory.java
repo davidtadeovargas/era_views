@@ -8,8 +8,12 @@ public class TableHeaderFactory {
     }
    
     
-   public CCodigoPostalsTableHeader getCCodigoPostalsTableHeader(){
+    public CCodigoPostalsTableHeader getCCodigoPostalsTableHeader(){
        final CCodigoPostalsTableHeader CCodigoPostalsTableHeader = new CCodigoPostalsTableHeader();return CCodigoPostalsTableHeader;
+    }
+    
+    public ProductPriceListTableHeader getProductPriceListTableHeader(){
+        final ProductPriceListTableHeader ProductPriceListTableHeader = new ProductPriceListTableHeader();return ProductPriceListTableHeader;
     }
     
     public CCountriesTableHeader getCCountriesTableHeader(){

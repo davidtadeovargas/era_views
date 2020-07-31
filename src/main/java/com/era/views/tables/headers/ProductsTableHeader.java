@@ -10,8 +10,8 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    private final ColumnTable ASKMAXMIN = new ColumnTable("Maximos Mínimos");
    public ColumnTable getASKMAXMIN() {
        return this.ASKMAXMIN;
-   }
-
+   }  
+   
    private final ColumnTable ASKSERIE = new ColumnTable("Pedir Serie");
    public ColumnTable getASKSERIE() {
        return this.ASKSERIE;

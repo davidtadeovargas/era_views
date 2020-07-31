@@ -107,7 +107,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.add(jLTimb);
         jLTimb.setBounds(90, 600, 80, 20);
 
-        jRadioBoxTipoDeVentas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Todo", "Facturas", "Notas crédito", "Devoluciones Ventas", "Tickets" }));
         jP1.add(jRadioBoxTipoDeVentas);
         jRadioBoxTipoDeVentas.setBounds(90, 10, 100, 20);
 
@@ -158,17 +157,6 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 290, 1040, 240);
 
-        jTableVentas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
         jScrollPane3.setViewportView(jTableVentas);
 
         jP1.add(jScrollPane3);

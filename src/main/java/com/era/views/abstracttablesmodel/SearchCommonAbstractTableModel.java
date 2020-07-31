@@ -16,6 +16,7 @@ import com.era.views.abstracttablesmodel.getvaluesat.CustomersIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.ExpeditionPlaceIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.GirosIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.IGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.ProductPriceListIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.ProductsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.RegimenFiscalIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.SectoresIGetValueAt;
@@ -61,6 +62,10 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                 
                 case CLAVES_PROD_SAT:
                     IGetValueAt = new CClaveprodservsIGetValueAt();
+                    break;
+                    
+                case PRODUCTO_PRICE_LIST:
+                    IGetValueAt = new ProductPriceListIGetValueAt();
                     break;
                     
                 case USERS:

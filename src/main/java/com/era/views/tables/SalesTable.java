@@ -68,12 +68,49 @@ public class SalesTable extends BaseJTable {
         //Return them
         return rems;
     }
+    public List<Sales> getAllRemisionsConfirmedByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllRemsConfirmedWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
+    public List<Sales> getAllRemisionsConfirmedAndDevpByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllRemsConfirmedAndDevpWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
     
     public List<Sales> getAllInvoicesByPage(final int pageNumber) throws Exception {
         
         //Get the records
         final SalessRepository SalessRepository_ = (SalessRepository)Repository;
         final List<Sales> rems = SalessRepository_.getAllInvoicesWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
+    
+    public List<Sales> getAllInvoicesConfirmedByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllInvoicesConfirmedWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
+    public List<Sales> getAllInvoicesConfirmedAndDevpByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllInvoicesConfirmedAndDevPWithPagination(pageNumber);
         
         //Return them
         return rems;
@@ -108,6 +145,24 @@ public class SalesTable extends BaseJTable {
         //Return them
         return rems;
     }
+    public List<Sales> getAllTicketsConfirmedByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllTicketsConfirmedWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
+    public List<Sales> getAllTicketsConfirmedAndDevPByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = SalessRepository_.getAllTicketsConfirmedAndDevPWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
     
     //getAllInvoicesNotRingedAndConfirmedWithPagination
     public List<Sales> getAllNotcByPage(final int pageNumber) throws Exception {
@@ -124,7 +179,25 @@ public class SalesTable extends BaseJTable {
         
         //Get the records
         final SalessRepository SalessRepository_ = (SalessRepository)Repository;
-        final List<Sales> rems = (List<Sales>)SalessRepository_.getAllByPage(pageNumber);
+        final List<Sales> rems = (List<Sales>)SalessRepository_.getAllSalesWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }
+    public List<Sales> getAllSalesConfirmedByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = (List<Sales>)SalessRepository_.getAllSalesConfirmedWithPagination(pageNumber);
+        
+        //Return them
+        return rems;
+    }    
+    public List<Sales> getAllSalesConfirmedAndDevPByPage(final int pageNumber) throws Exception {
+        
+        //Get the records
+        final SalessRepository SalessRepository_ = (SalessRepository)Repository;
+        final List<Sales> rems = (List<Sales>)SalessRepository_.getAllSalesConfirmedAndDevpWithPagination(pageNumber);
         
         //Return them
         return rems;
@@ -163,6 +236,38 @@ public class SalesTable extends BaseJTable {
                 
             case CANCELED_SALES:
                 list = getAllInvoicesNotRingedAndConfirmedByPage(0);
+                break;
+                                                
+            case JUST_REM_CO:
+                list = getAllRemisionsConfirmedByPage(0);
+                break;
+                
+            case JUST_INVOICES_CO:
+                list = getAllInvoicesConfirmedByPage(0);
+                break;
+              
+            case JUST_TICKET_CO:
+                list = getAllTicketsConfirmedByPage(0);
+                break;
+                
+            case ALL_SALES_CO:
+                list = getAllSalesConfirmedByPage(0);
+                break;
+                                                                
+            case JUST_REM_CO_DEVP:
+                list = getAllRemisionsConfirmedAndDevpByPage(0);
+                break;
+                
+            case JUST_INVOICES_CO_DEVP:
+                list = getAllInvoicesConfirmedAndDevpByPage(0);
+                break;
+              
+            case JUST_TICKET_CO_DEVP:
+                list = getAllTicketsConfirmedAndDevPByPage(0);
+                break;
+                
+            case ALL_SALES_CO_DEVP:
+                list = getAllSalesConfirmedAndDevPByPage(0);
                 break;
         }
         
