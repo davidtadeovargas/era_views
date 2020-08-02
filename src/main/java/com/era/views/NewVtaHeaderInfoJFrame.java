@@ -97,17 +97,17 @@ public abstract class NewVtaHeaderInfoJFrame extends BaseJFrame
         jCMand.setBackground(new java.awt.Color(255, 255, 255));
         jCMand.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jCMand.setSelected(true);
-        jCMand.setText("Mandar correo F4");
+        jCMand.setText("Mandar correo");
         jPanel1.add(jCMand, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 130, -1));
 
         jCImp.setBackground(new java.awt.Color(255, 255, 255));
         jCImp.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCImp.setText("Imprimir F5");
+        jCImp.setText("Imprimir");
         jPanel1.add(jCImp, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 110, -1));
 
         jCMostA.setBackground(new java.awt.Color(255, 255, 255));
         jCMostA.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCMostA.setText("Mostrar archivo F6");
+        jCMostA.setText("Mostrar archivo");
         jPanel1.add(jCMostA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 110, -1));
 
         jCheckboxTimbrar.setBackground(new java.awt.Color(255, 255, 255));

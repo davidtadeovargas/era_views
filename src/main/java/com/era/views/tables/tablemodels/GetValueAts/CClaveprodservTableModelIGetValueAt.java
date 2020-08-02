@@ -30,7 +30,7 @@ public class CClaveprodservTableModelIGetValueAt implements IGetValueAt {
             returnValue = CClaveprodserv.getDescription();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCClaveprodservsTableHeader().getENDVIGENCYDATE().getValue())==0){
-            returnValue = CClaveprodserv.getEndVigencyDate().toString();
+            returnValue = CClaveprodserv.getEndVigencyDate()!=null?CClaveprodserv.getEndVigencyDate().toString():"";
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getCClaveprodservsTableHeader().getESTAC().getValue())==0){
             returnValue = CClaveprodserv.getEstac();

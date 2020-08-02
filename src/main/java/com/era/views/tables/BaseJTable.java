@@ -155,6 +155,26 @@ public abstract class BaseJTable extends JTable {
         this.initTable(list);
     }
 
+    public void initTableWithPaginationSearchFilter(final String search) throws Exception {
+                
+        //Save globally flag for pagination
+        this.usePagination = true;
+        
+        //Get the repository items by pagination
+        final List<?> list = Repository.getAllByPageWithSearchFilter(search,0,Repository.getPaginationSize());
+        final long count_ = list.size();
+        setCount(count_);
+        setPagination(Repository.getPaginationSize());
+        
+        this.initTable(list);
+    }
+    
+    public void initTableBySearchFilter(final String search) throws Exception {
+                        
+        final List<?> list = Repository.getAllBySearchFilter(search);        
+        this.initTable(list);
+    }
+    
     public void setJScrollPane(JScrollPane JScrollPane) {
         this.JScrollPane = JScrollPane;
         

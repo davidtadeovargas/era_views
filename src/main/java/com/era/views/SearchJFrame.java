@@ -22,9 +22,11 @@ public abstract class SearchJFrame extends BaseJFrame {
         jP1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         labelLoading = new javax.swing.JLabel();
+        labelPaginacion = new javax.swing.JLabel();
         jBCarg = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
-        labelPaginacion = new javax.swing.JLabel();
+        jTextFieldSearch = new javax.swing.JTextField();
+        jBtnSearch = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -65,19 +67,23 @@ public abstract class SearchJFrame extends BaseJFrame {
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelLoading.setBackground(new java.awt.Color(255, 255, 255));
         labelLoading.setMaximumSize(new java.awt.Dimension(10, 10));
         labelLoading.setMinimumSize(new java.awt.Dimension(10, 10));
-        jPanel2.add(labelLoading);
+        jPanel2.add(labelLoading, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, -1, -1));
+
+        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, -1, -1));
+
+        labelPaginacion.setText("Paginación:");
+        jP1.add(labelPaginacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, -1));
 
         jBCarg.setBackground(new java.awt.Color(255, 255, 255));
         jBCarg.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBCarg.setForeground(new java.awt.Color(0, 102, 0));
-        jBCarg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/carg.png"))); // NOI18N
         jBCarg.setText("Aceptar");
         jBCarg.setToolTipText("Aceptar (ENTER)");
-        jBCarg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBCarg.setNextFocusableComponent(jBSal);
         jBCarg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -97,15 +103,13 @@ public abstract class SearchJFrame extends BaseJFrame {
                 jBCargKeyPressed(evt);
             }
         });
-        jPanel2.add(jBCarg);
+        jP1.add(jBCarg, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBSal.setForeground(new java.awt.Color(0, 102, 0));
-        jBSal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sal.png"))); // NOI18N
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
-        jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jBSal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBSalMouseEntered(evt);
@@ -124,12 +128,12 @@ public abstract class SearchJFrame extends BaseJFrame {
                 jBSalKeyPressed(evt);
             }
         });
-        jPanel2.add(jBSal);
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 70, -1));
+        jP1.add(jTextFieldSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 200, -1));
 
-        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, -1, -1));
-
-        labelPaginacion.setText("Paginación:");
-        jP1.add(labelPaginacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, -1));
+        jBtnSearch.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnSearch.setText("...");
+        jP1.add(jBtnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 30, 20));
 
         getContentPane().add(jP1, java.awt.BorderLayout.PAGE_END);
 
@@ -196,9 +200,11 @@ public abstract class SearchJFrame extends BaseJFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton jBCarg;
     protected javax.swing.JButton jBSal;
+    protected javax.swing.JButton jBtnSearch;
     protected javax.swing.JPanel jP1;
     private javax.swing.JPanel jPanel2;
     protected javax.swing.JPanel jPanelTable;
+    protected javax.swing.JTextField jTextFieldSearch;
     protected javax.swing.JLabel labelLoading;
     protected javax.swing.JLabel labelPaginacion;
     // End of variables declaration//GEN-END:variables
