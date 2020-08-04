@@ -20,8 +20,6 @@ public abstract class SearchJFrame extends BaseJFrame {
 
         jPanelTable = new javax.swing.JPanel();
         jP1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        labelLoading = new javax.swing.JLabel();
         labelPaginacion = new javax.swing.JLabel();
         jBCarg = new javax.swing.JButton();
         jBSal = new javax.swing.JButton();
@@ -65,16 +63,6 @@ public abstract class SearchJFrame extends BaseJFrame {
             }
         });
         jP1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        labelLoading.setBackground(new java.awt.Color(255, 255, 255));
-        labelLoading.setMaximumSize(new java.awt.Dimension(10, 10));
-        labelLoading.setMinimumSize(new java.awt.Dimension(10, 10));
-        jPanel2.add(labelLoading, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, -1, -1));
-
-        jP1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, -1, -1));
 
         labelPaginacion.setText("Paginación:");
         jP1.add(labelPaginacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, -1));
@@ -202,10 +190,8 @@ public abstract class SearchJFrame extends BaseJFrame {
     protected javax.swing.JButton jBSal;
     protected javax.swing.JButton jBtnSearch;
     protected javax.swing.JPanel jP1;
-    private javax.swing.JPanel jPanel2;
     protected javax.swing.JPanel jPanelTable;
     protected javax.swing.JTextField jTextFieldSearch;
-    protected javax.swing.JLabel labelLoading;
     protected javax.swing.JLabel labelPaginacion;
     // End of variables declaration//GEN-END:variables
         

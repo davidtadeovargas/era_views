@@ -69,6 +69,8 @@ public abstract class BaseJTable extends JTable {
     public abstract List<?> getAllItemsInTable() throws Exception;        
     public abstract void getByLikeEncabezados(final String search) throws Exception;
     
+    private String search;
+    
     public BaseJTable(AbstractTableModel AbstractTableModel){
         super(AbstractTableModel);
         
@@ -160,6 +162,8 @@ public abstract class BaseJTable extends JTable {
         //Save globally flag for pagination
         this.usePagination = true;
         
+        this.search = search;
+        
         //Get the repository items by pagination
         final List<?> list = Repository.getAllByPageWithSearchFilter(search,0,Repository.getPaginationSize());
         final long count_ = list.size();
@@ -190,7 +194,7 @@ public abstract class BaseJTable extends JTable {
                 
         final int previusIndex = getPrevRowIndex();
         
-        final List<?> rows = Repository.getAllByPage(previusIndex);
+        final List<?> rows = Repository.getAllByPageWithSearchFilter(search,previusIndex,Repository.getPaginationSize());
         
         clearRows();
 
@@ -283,11 +287,15 @@ public abstract class BaseJTable extends JTable {
         model.fireTableDataChanged();
     }
     
-    private String getPaginationText() throws Exception {
+    public String getPaginationText() throws Exception {
         
         final Properties Properties = UtilitiesFactory.getSingleton().getDialogPropertiesUitlity().getProperties();
-        final String text = Properties.getProperty("visible_records") + " " + getLastRowIndex() + " " + Properties.getProperty("visible_records_visibles") + " " + getPagination() + " " + Properties.getProperty("visible_records_of") + " " + getCount();
+        final String text = Properties.getProperty("visible_records") + " " + getLastRowIndex() + " " + Properties.getProperty("visible_records_visibles") + " " + getPagination();
         return text;
+    }
+    
+    public void resetPaginationText() {
+        lastRowIndex = Repository.getPaginationSize();
     }
     
     private void loadScrollPaneScrollListener(final JScrollPane JScrollPane){
@@ -324,7 +332,6 @@ public abstract class BaseJTable extends JTable {
                                 
                                 lastRowIndex = lastRowIndex + Repository.getPaginationSize();
                                 
-                                final int value = lastRowIndex;
                                 loadDataByPage();
                                 
                                 if(OnPaginationLabelUpdate != null){
