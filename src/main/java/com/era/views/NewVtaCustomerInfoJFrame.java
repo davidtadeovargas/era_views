@@ -60,8 +60,6 @@ public abstract class NewVtaCustomerInfoJFrame extends BaseJFrame
         jLabel47 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
-        jButtonBuscarPedidos = new javax.swing.JButton();
-        jButtonBuscarRemisiones = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setResizable(false);
@@ -156,7 +154,7 @@ public abstract class NewVtaCustomerInfoJFrame extends BaseJFrame
 
         jCGDats.setBackground(new java.awt.Color(255, 255, 255));
         jCGDats.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCGDats.setText("Mod. datos del cliente F11");
+        jCGDats.setText("Mod. datos del cliente");
         jCGDats.setActionCommand("Mod. datos del cliente");
         jPClien.add(jCGDats, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 170, -1));
 
@@ -205,7 +203,7 @@ public abstract class NewVtaCustomerInfoJFrame extends BaseJFrame
 
         jCConta.setBackground(new java.awt.Color(255, 255, 255));
         jCConta.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jCConta.setText("Contado F8");
+        jCConta.setText("Contado");
         jCConta.setActionCommand("Contado");
         jPClien.add(jCConta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 90, -1));
 
@@ -223,16 +221,6 @@ public abstract class NewVtaCustomerInfoJFrame extends BaseJFrame
 
         jLabel35.setText("Fecha entrega:");
         jPClien.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 90, -1));
-
-        jButtonBuscarPedidos.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonBuscarPedidos.setText("...");
-        jButtonBuscarPedidos.setToolTipText("Buscar Pedido");
-        jPClien.add(jButtonBuscarPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 30, 20));
-
-        jButtonBuscarRemisiones.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonBuscarRemisiones.setText("...");
-        jButtonBuscarRemisiones.setToolTipText("Buscar Remisiones");
-        jPClien.add(jButtonBuscarRemisiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 30, 20));
 
         jP1.add(jPClien, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 750, 183));
 
@@ -264,8 +252,6 @@ public abstract class NewVtaCustomerInfoJFrame extends BaseJFrame
     protected javax.swing.JButton jBAcept;
     protected javax.swing.JButton jBSal;
     protected javax.swing.JButton jButtonBuscarCliente;
-    protected javax.swing.JButton jButtonBuscarPedidos;
-    protected javax.swing.JButton jButtonBuscarRemisiones;
     protected javax.swing.JCheckBox jCCo1;
     protected javax.swing.JCheckBox jCCo2;
     protected javax.swing.JCheckBox jCCo3;
