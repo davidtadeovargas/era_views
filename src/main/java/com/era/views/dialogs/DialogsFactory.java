@@ -86,6 +86,12 @@ public class DialogsFactory {
         QuestionDialog_.setOKDialogInterface(OKDialogInterface);
         QuestionDialog_.show();
     }
+    public void showQuestionDialogCallback(final JFrame JFrame, final String propertyText, final com.era.views.dialogs.QuestionDialog.OKDialogInterface OKDialogInterface) throws Exception {
+        final QuestionDialog QuestionDialog_ = this.getQuestionDialog(JFrame);
+        QuestionDialog_.setPropertyText(propertyText);
+        QuestionDialog_.setOKDialogInterface(OKDialogInterface);
+        QuestionDialog_.show();
+    }
     public void showQuestionExitDialog(final JFrame JFrame, final com.era.views.dialogs.QuestionDialog.OKDialogInterface OKDialogInterface) throws Exception {
         final QuestionDialog QuestionDialog_ = this.getQuestionDialog(JFrame);
         QuestionDialog_.setPropertyText("question_exit");

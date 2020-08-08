@@ -19,8 +19,8 @@ public abstract class VtasJFrame extends BaseJFrame {
         
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-	
-		jP1 = new javax.swing.JPanel();
+
+        jP1 = new javax.swing.JPanel();
         jBBusc = new javax.swing.JButton();
         jBMosT = new javax.swing.JButton();
         jLabelRemisionFactura = new javax.swing.JLabel();
@@ -71,7 +71,7 @@ public abstract class VtasJFrame extends BaseJFrame {
 		jMenuItemGetXML = new javax.swing.JMenuItem();
 		jMenuItemTicketsFacturados = new javax.swing.JMenuItem();
 		jMenuItemInvoicesNotRinged = new javax.swing.JMenuItem();
-		
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -107,6 +107,7 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.add(jLTimb);
         jLTimb.setBounds(90, 600, 80, 20);
 
+        jRadioBoxTipoDeVentas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Todo", "Facturas", "Notas crédito", "Devoluciones Ventas", "Tickets" }));
         jP1.add(jRadioBoxTipoDeVentas);
         jRadioBoxTipoDeVentas.setBounds(90, 10, 100, 20);
 
@@ -157,6 +158,17 @@ public abstract class VtasJFrame extends BaseJFrame {
         jP1.add(jScrollPane1);
         jScrollPane1.setBounds(20, 290, 1040, 240);
 
+        jTableVentas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
         jScrollPane3.setViewportView(jTableVentas);
 
         jP1.add(jScrollPane3);
@@ -174,9 +186,6 @@ public abstract class VtasJFrame extends BaseJFrame {
 
         jMenuItemGralNew.setText("Nueva");
         jMenuGeneral.add(jMenuItemGralNew);
-
-        jMenuItemGralOpen.setText("Abrir");
-        jMenuGeneral.add(jMenuItemGralOpen);
 
         jMenuItemGralView.setText("Ver");
         jMenuGeneral.add(jMenuItemGralView);

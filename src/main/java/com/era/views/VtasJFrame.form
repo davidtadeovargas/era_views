@@ -15,11 +15,6 @@
                 <Property name="text" type="java.lang.String" value="Nueva"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemGralOpen">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Abrir"/>
-              </Properties>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemGralView">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ver"/>
