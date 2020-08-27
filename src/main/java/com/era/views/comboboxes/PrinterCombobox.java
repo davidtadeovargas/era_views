@@ -42,9 +42,11 @@ public class PrinterCombobox extends BaseComboBox<PrinterDataModel> {
         final PrinterDataModel PrinterDataModelItem = (PrinterDataModel)ObjectItem;
         final PrinterDataModel PrinterDataModelMethod = (PrinterDataModel)ObjectMethod;
         
-        boolean  found = false;        
-        if(PrinterDataModelItem.getName() != null && PrinterDataModelItem.getName().compareTo(PrinterDataModelMethod.getName())==0){
-            found = true;
+        boolean  found = false;
+        if(PrinterDataModelItem!=null && PrinterDataModelMethod != null && PrinterDataModelItem.getName() != null && PrinterDataModelMethod.getName() != null){
+            if(PrinterDataModelItem.getName() != null && PrinterDataModelItem.getName().compareTo(PrinterDataModelMethod.getName())==0){
+                found = true;
+            }
         }
         
         return found;
