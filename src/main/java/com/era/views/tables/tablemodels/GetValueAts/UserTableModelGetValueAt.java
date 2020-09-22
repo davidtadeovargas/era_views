@@ -45,7 +45,7 @@ public class UserTableModelGetValueAt implements IGetValueAt{
             returnValue = String.valueOf(User.getCommission());
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsersTableHeader().getCORT().getValue())==0){
-            returnValue = User.getCort();
+            returnValue = User.isCort()?"Si":"No";
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsersTableHeader().getCOUNTRY().getValue())==0){
             returnValue = User.getCountry();
