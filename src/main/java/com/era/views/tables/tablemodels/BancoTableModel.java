@@ -16,13 +16,16 @@ public class BancoTableModel  extends BaseAbstractTableModel {
 
            final Banco Banco = (Banco) model;
 
-           String returnValue = "";
-           if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBancosTableHeader().getROWNUMBER().getValue())==0){
+            String returnValue = "";
+            if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBanksTableHeader().getROWNUMBER().getValue())==0){
                returnValue = String.valueOf(rowIndex + 1);
             }
-           else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBancosTableHeader().getCUENTABANCO().getValue())==0){
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBancosTableHeader().getCUENTABANCO().getValue())==0){
                returnValue = Banco.getCuentabanco();
-           }
+            }
+            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBancosTableHeader().getBANCO().getValue())==0){
+               returnValue = Banco.getBanco();
+            }
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBancosTableHeader().getDESCRIP().getValue())==0){
                returnValue = Banco.getDescrip();
            }
@@ -41,6 +44,7 @@ public class BancoTableModel  extends BaseAbstractTableModel {
            else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getBancosTableHeader().getSUCU().getValue())==0){
                returnValue = Banco.getSucu();
            }
+                      
            return returnValue;
        };
    }

@@ -8,7 +8,7 @@ public abstract class CatalBancosJFrame extends BaseJFrame
     {        
         super(idTextTitleWindow);
         
-        initComponents();                
+        initComponents();
         
         //Post inicialization
         postInitComponents();
@@ -31,17 +31,15 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         jBNew = new javax.swing.JButton();
         jTDescrip = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTab = new javax.swing.JTable();
         jBBusc = new javax.swing.JButton();
         jTBusc = new javax.swing.JTextField();
         jBMosT = new javax.swing.JButton();
         jBActua = new javax.swing.JButton();
-        jBImportar = new javax.swing.JButton();
-        jBNew1 = new javax.swing.JButton();
-        jCBancos = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
-        jTrfc = new javax.swing.JTextField();
+        jTDescripBank = new javax.swing.JTextField();
+        banksCombobox = new com.era.views.comboboxes.BanksCombobox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        bancoTable = new com.era.views.tables.BancoTable();
 
         jLabel2.setText("jLabel2");
 
@@ -82,7 +80,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         jBDel.setBackground(new java.awt.Color(255, 255, 255));
         jBDel.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBDel.setForeground(new java.awt.Color(0, 102, 0));
-        jBDel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/del5.png"))); // NOI18N
         jBDel.setText("Borrar");
         jBDel.setToolTipText("Borrar ");
         jBDel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -105,7 +102,7 @@ public abstract class CatalBancosJFrame extends BaseJFrame
                 jBDelKeyPressed(evt);
             }
         });
-        jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 160, 30));
+        jP1.add(jBDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 90, 30));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("*Banco:");
@@ -114,7 +111,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBSal.setForeground(new java.awt.Color(0, 102, 0));
-        jBSal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sal.png"))); // NOI18N
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
         jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -138,7 +134,7 @@ public abstract class CatalBancosJFrame extends BaseJFrame
                 jBSalKeyPressed(evt);
             }
         });
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 160, -1));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 90, 30));
 
         jTCod.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTCod.setNextFocusableComponent(jTDescrip);
@@ -163,11 +159,9 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         jBNew.setBackground(new java.awt.Color(255, 255, 255));
         jBNew.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBNew.setForeground(new java.awt.Color(0, 102, 0));
-        jBNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/agre.png"))); // NOI18N
         jBNew.setText("Nuevo");
         jBNew.setToolTipText("Nuevo ");
         jBNew.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBNew.setNextFocusableComponent(jTab);
         jBNew.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBNewMouseEntered(evt);
@@ -186,7 +180,7 @@ public abstract class CatalBancosJFrame extends BaseJFrame
                 jBNewKeyPressed(evt);
             }
         });
-        jP1.add(jBNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 90, 20));
+        jP1.add(jBNew, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 90, 30));
 
         jTDescrip.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
         jTDescrip.setNextFocusableComponent(jBNew);
@@ -214,34 +208,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         jLabel3.setText("*N°.Cuenta");
         jP1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 150, -1));
         jLabel3.getAccessibleContext().setAccessibleName("No.Cuenta:");
-
-        jTab.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "No.", "No. Cuenta", "Banco", "RFC"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jTab.setGridColor(new java.awt.Color(255, 255, 255));
-        jTab.setNextFocusableComponent(jBBusc);
-        jTab.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jTab.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTabKeyPressed(evt);
-            }
-        });
-        jScrollPane2.setViewportView(jTab);
-
-        jP1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 470, 250));
 
         jBBusc.setBackground(new java.awt.Color(255, 255, 255));
         jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -316,7 +282,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         jBActua.setBackground(new java.awt.Color(255, 255, 255));
         jBActua.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBActua.setForeground(new java.awt.Color(0, 102, 0));
-        jBActua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actualizar.png"))); // NOI18N
         jBActua.setText("Actualizar");
         jBActua.setToolTipText("Actualizar ");
         jBActua.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -339,77 +304,33 @@ public abstract class CatalBancosJFrame extends BaseJFrame
                 jBActuaKeyPressed(evt);
             }
         });
-        jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 160, 30));
-
-        jBImportar.setBackground(new java.awt.Color(255, 255, 255));
-        jBImportar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBImportar.setForeground(new java.awt.Color(0, 102, 0));
-        jBImportar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/212import.png"))); // NOI18N
-        jBImportar.setText("Importar");
-        jBImportar.setToolTipText("Importar");
-        jBImportar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBImportar.setNextFocusableComponent(jBActua);
-        jBImportar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBImportarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBImportarMouseExited(evt);
-            }
-        });
-        jBImportar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBImportarActionPerformed(evt);
-            }
-        });
-        jBImportar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBImportarKeyPressed(evt);
-            }
-        });
-        jP1.add(jBImportar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 160, 30));
-
-        jBNew1.setBackground(new java.awt.Color(255, 255, 255));
-        jBNew1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
-        jBNew1.setForeground(new java.awt.Color(0, 102, 0));
-        jBNew1.setText("Configuración");
-        jBNew1.setToolTipText("Configuración");
-        jBNew1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jBNew1.setNextFocusableComponent(jTab);
-        jBNew1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jBNew1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jBNew1MouseExited(evt);
-            }
-        });
-        jBNew1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBNew1ActionPerformed(evt);
-            }
-        });
-        jBNew1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                jBNew1KeyPressed(evt);
-            }
-        });
-        jP1.add(jBNew1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 160, 20));
-
-        jCBancos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCBancosActionPerformed(evt);
-            }
-        });
-        jP1.add(jCBancos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 150, -1));
+        jP1.add(jBActua, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 90, 30));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("*Nombre:");
         jP1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 170, -1));
 
-        jTrfc.setEnabled(false);
-        jTrfc.setFocusable(false);
-        jP1.add(jTrfc, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 270, -1));
+        jTDescripBank.setEditable(false);
+        jTDescripBank.setBackground(new java.awt.Color(255, 255, 255));
+        jTDescripBank.setEnabled(false);
+        jTDescripBank.setFocusable(false);
+        jP1.add(jTDescripBank, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 270, -1));
+        jP1.add(banksCombobox, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 140, -1));
+
+        bancoTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(bancoTable);
+
+        jP1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 460, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -417,15 +338,15 @@ public abstract class CatalBancosJFrame extends BaseJFrame
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 655, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jP1, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -492,11 +413,6 @@ public abstract class CatalBancosJFrame extends BaseJFrame
     }//GEN-LAST:event_jTDescripKeyPressed
 
         
-    private void jTabKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTabKeyPressed
-        
-        
-    }//GEN-LAST:event_jTabKeyPressed
-
         
     private void jTDescripFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTDescripFocusGained
         
@@ -687,70 +603,31 @@ public abstract class CatalBancosJFrame extends BaseJFrame
         
     }//GEN-LAST:event_jTBuscFocusLost
 
-    private void jBImportarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBImportarMouseEntered
-        
-    }//GEN-LAST:event_jBImportarMouseEntered
-
-    private void jBImportarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBImportarMouseExited
-        
-    }//GEN-LAST:event_jBImportarMouseExited
-
-    private void jBImportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBImportarActionPerformed
-        
-       
-    }//GEN-LAST:event_jBImportarActionPerformed
-
-    private void jBImportarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBImportarKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBImportarKeyPressed
-
     private void jTDescripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDescripActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTDescripActionPerformed
-
-    private void jBNew1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNew1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBNew1MouseEntered
-
-    private void jBNew1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBNew1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBNew1MouseExited
-
-    private void jBNew1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNew1ActionPerformed
-                      
-    }//GEN-LAST:event_jBNew1ActionPerformed
-
-    private void jBNew1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jBNew1KeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBNew1KeyPressed
-
-    private void jCBancosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBancosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCBancosActionPerformed
     
                        
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    protected com.era.views.tables.BancoTable bancoTable;
+    protected com.era.views.comboboxes.BanksCombobox banksCombobox;
     protected javax.swing.JButton jBActua;
     protected javax.swing.JButton jBBusc;
     protected javax.swing.JButton jBDel;
-    protected javax.swing.JButton jBImportar;
     protected javax.swing.JButton jBMosT;
     protected javax.swing.JButton jBNew;
-    protected javax.swing.JButton jBNew1;
     protected javax.swing.JButton jBSal;
-    protected javax.swing.JComboBox jCBancos;
     protected javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     protected javax.swing.JLabel jLabel3;
     protected javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jP1;
-    protected javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane1;
     protected javax.swing.JTextField jTBusc;
     protected javax.swing.JTextField jTCod;
     protected javax.swing.JTextField jTDescrip;
-    protected javax.swing.JTable jTab;
-    protected javax.swing.JTextField jTrfc;
+    protected javax.swing.JTextField jTDescripBank;
     // End of variables declaration//GEN-END:variables
 
 }/*Fin de public class Clientes extends javax.swing.JFrame */

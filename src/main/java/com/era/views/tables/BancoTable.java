@@ -2,6 +2,7 @@ package com.era.views.tables;
 
 import com.era.models.Banco;
 import com.era.repositories.RepositoryFactory;
+import com.era.views.tables.headers.TableHeaderFactory;
 import com.era.views.tables.tablemodels.BancoTableModel;
 import java.util.List;
 
@@ -17,6 +18,14 @@ public class BancoTable extends BaseJTable {
         this.setModel(BancoTableModel);
    }
 
+   @Override
+    public void showCommonColumns(){
+        
+        addShowColumn(TableHeaderFactory.getSigleton().getBancosTableHeader().getBANCO());        
+        addShowColumn(TableHeaderFactory.getSigleton().getBancosTableHeader().getCUENTABANCO());
+        addShowColumn(TableHeaderFactory.getSigleton().getBancosTableHeader().getDESCRIP());
+    }
+    
    @Override
    public List<?> getAllItemsInTable() throws Exception {
        final BancoTableModel BancoTableModel = (BancoTableModel)this.getModel();

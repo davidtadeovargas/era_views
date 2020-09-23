@@ -43,7 +43,7 @@ public class UsersTableModel extends BaseAbstractTableModel {
                 returnValue = User.getInvoicePrinter();
             }
             else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsersTableHeader().getCORT().getValue())==0){
-                returnValue = User.getCort();
+                returnValue = User.isCort()?"Si":"No";
             }
             else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getUsersTableHeader().getM52().getValue())==0){
                 returnValue = User.isM52()? "Si":"No";            

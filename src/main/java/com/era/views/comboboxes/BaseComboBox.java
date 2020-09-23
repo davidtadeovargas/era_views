@@ -23,9 +23,6 @@ public abstract class BaseComboBox<T> extends JComboBox {
     
     
     
-    public void BaseComboBox(){
-    }
-
     public void setChangeSelectionListener(ChangeSelectionListener ChangeSelectionListener) {
         this.ChangeSelectionListener = ChangeSelectionListener;
         

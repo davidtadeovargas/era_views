@@ -6,8 +6,11 @@ public class TableHeaderFactory {
     public static TableHeaderFactory getSigleton(){
        if(TableHeaderFactory==null){TableHeaderFactory = new TableHeaderFactory();}return TableHeaderFactory;
     }
-   
-    
+       
+    public BanksTableHeader getBanksTableHeader(){
+       final BanksTableHeader BanksTableHeader = new BanksTableHeader();return BanksTableHeader;
+    }
+            
     public CCodigoPostalsTableHeader getCCodigoPostalsTableHeader(){
        final CCodigoPostalsTableHeader CCodigoPostalsTableHeader = new CCodigoPostalsTableHeader();return CCodigoPostalsTableHeader;
     }
