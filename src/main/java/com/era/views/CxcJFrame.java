@@ -106,7 +106,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jBAbonKeyPressed(evt);
             }
         });
-        jP1.add(jBAbon, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 200, 120, 30));
+        jP1.add(jBAbon, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 180, 120, 30));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -135,7 +135,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jBSalKeyPressed(evt);
             }
         });
-        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 290, 120, 30));
+        jP1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 270, 120, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("A:");
@@ -198,7 +198,7 @@ public abstract class CxcJFrame extends BaseJFrame
                 jBVerAKeyPressed(evt);
             }
         });
-        jP1.add(jBVerA, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 230, 120, 30));
+        jP1.add(jBVerA, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 210, 120, 30));
 
         jTCli.setBackground(new java.awt.Color(204, 255, 204));
         jTCli.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
@@ -311,12 +311,11 @@ public abstract class CxcJFrame extends BaseJFrame
                 jBVisKeyPressed(evt);
             }
         });
-        jP1.add(jBVis, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 260, 120, 30));
+        jP1.add(jBVis, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 240, 120, 30));
 
         jTDia.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTDia.setText("30");
         jTDia.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        jTDia.setNextFocusableComponent(jTabCXC);
         jTDia.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTDiaFocusGained(evt);
@@ -388,9 +387,20 @@ public abstract class CxcJFrame extends BaseJFrame
         });
         jP1.add(jBSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 90, 30));
 
+        jTabCXC.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
         jScrollPane1.setViewportView(jTabCXC);
 
-        jP1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 840, 230));
+        jP1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 830, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

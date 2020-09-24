@@ -21,7 +21,7 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>era_logger</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.netbeans.external</groupId>
@@ -35,6 +35,12 @@
             <scope>test</scope>
             <type>jar</type>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -45,13 +51,13 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>era_models</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>era_utilities</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -69,7 +75,7 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>era_repositories</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
     </dependencies>
     
@@ -100,7 +106,7 @@
                             <target>1.8</target>
                     </configuration>
             </plugin> -->
-            <!--<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.1</version>
@@ -121,7 +127,7 @@
                     </execution>
                 </executions>
 
-            </plugin>-->
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>

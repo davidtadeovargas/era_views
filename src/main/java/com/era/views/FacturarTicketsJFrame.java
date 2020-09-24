@@ -45,10 +45,12 @@ public abstract class FacturarTicketsJFrame extends BaseJFrame {
         jDayChooserFrom = new com.toedter.calendar.JCalendar();
         jDayChooserUntil = new com.toedter.calendar.JCalendar();
         jLabelTotal = new javax.swing.JLabel();
-        jComSerie = new com.era.views.comboboxes.SeriesCombobox();
-        jComMetodoPago = new com.era.views.comboboxes.MetodoPagoCombobox();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableSales = new com.era.views.tables.SalesTable();
+        jComSerie = new com.era.views.comboboxes.SeriesCombobox();
+        jComMetodoPago = new com.era.views.comboboxes.MetodoPagoCombobox();
+        formaPagoDescrip = new javax.swing.JTextField();
+        lugarExpedicionDescrip = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Facturar Tickets");
@@ -65,7 +67,7 @@ public abstract class FacturarTicketsJFrame extends BaseJFrame {
         getContentPane().add(jBtnCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(524, 12, 31, 20));
 
         jTxtNomCliente.setEditable(false);
-        getContentPane().add(jTxtNomCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 12, 430, -1));
+        getContentPane().add(jTxtNomCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 12, 430, -1));
 
         btnBuscar.setBackground(new java.awt.Color(255, 255, 255));
         btnBuscar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -81,20 +83,25 @@ public abstract class FacturarTicketsJFrame extends BaseJFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("*Serie:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 105, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 10, 105, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel4.setText("*Forma Pago:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, 105, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 105, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("*Lugar Expedicion:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(734, 159, 157, -1));
-        getContentPane().add(txtLugarExp, new org.netbeans.lib.awtextra.AbsoluteConstraints(734, 179, 123, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 130, 157, -1));
+        getContentPane().add(txtLugarExp, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 150, 130, -1));
 
         btnLugExp.setBackground(new java.awt.Color(255, 255, 255));
         btnLugExp.setText("...");
-        getContentPane().add(btnLugExp, new org.netbeans.lib.awtextra.AbsoluteConstraints(857, 179, 30, 20));
+        btnLugExp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLugExpActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnLugExp, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 150, 30, 20));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("Observaciones:");
@@ -119,28 +126,47 @@ public abstract class FacturarTicketsJFrame extends BaseJFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("Hasta:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 60, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 60, -1));
 
         label_total.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         label_total.setText("Total: ");
         getContentPane().add(label_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 80, 80, -1));
         getContentPane().add(jDayChooserFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
-        getContentPane().add(jDayChooserUntil, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, -1, -1));
+        getContentPane().add(jDayChooserUntil, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
 
         jLabelTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelTotal.setText("$0.00");
         getContentPane().add(jLabelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 110, 100, -1));
-        
-        getContentPane().add(jComSerie, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, 160, -1));
 
-        getContentPane().add(jComMetodoPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 130, 160, -1));
+        jTableSales.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
 
+            }
+        ));
         jScrollPane1.setViewportView(jTableSales);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 710, 190));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 720, 190));
+        getContentPane().add(jComSerie, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 160, -1));
+        getContentPane().add(jComMetodoPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 80, 160, 20));
+
+        formaPagoDescrip.setEditable(false);
+        getContentPane().add(formaPagoDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 102, 160, -1));
+
+        lugarExpedicionDescrip.setEditable(false);
+        getContentPane().add(lugarExpedicionDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, 160, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLugExpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLugExpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLugExpActionPerformed
 
 
 
@@ -148,6 +174,7 @@ public abstract class FacturarTicketsJFrame extends BaseJFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JButton btnBuscar;
     protected javax.swing.JButton btnLugExp;
+    protected javax.swing.JTextField formaPagoDescrip;
     protected javax.swing.JButton jBtnCliente;
     protected javax.swing.JButton jBtnFacturar;
     protected javax.swing.JCheckBox jCBEnviarCorreo;
@@ -169,6 +196,7 @@ public abstract class FacturarTicketsJFrame extends BaseJFrame {
     protected javax.swing.JTextArea jTxtArObservaciones;
     protected javax.swing.JTextField jTxtNomCliente;
     protected javax.swing.JLabel label_total;
+    protected javax.swing.JTextField lugarExpedicionDescrip;
     protected javax.swing.JTextField txtLugarExp;
     // End of variables declaration//GEN-END:variables
 }
