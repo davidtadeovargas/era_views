@@ -24,10 +24,10 @@ public class RegimenFiscalTableModelGetValueAt implements IGetValueAt {
             returnValue = String.valueOf(CRegimenfiscal.getC_RegimenFiscal());
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getCODE().getValue())==0){
-            returnValue = CRegimenfiscal.getDescription();
+            returnValue = CRegimenfiscal.getC_RegimenFiscal();
         }
         else if(valueColumn.compareTo(TableHeaderFactory.getSigleton().getSearchTableHeader().getDESCRIPTION().getValue())==0){
-            returnValue = CRegimenfiscal.getFecha_de_inicio_de_vigencia().toString();
+            returnValue = CRegimenfiscal.getDescription();
         }
         
         return returnValue;

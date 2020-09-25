@@ -122,6 +122,8 @@ public abstract class EmpresasJFrame extends BaseJFrame {
         jLabel5 = new javax.swing.JLabel();
         jBCargImg = new javax.swing.JButton();
         jBDelImg = new javax.swing.JButton();
+        expeditionPlaceDescrip = new javax.swing.JTextField();
+        fiscalRegimenDescrip = new javax.swing.JTextField();
         JPTabla = new javax.swing.JScrollPane();
         jTabEmpresas = new com.era.views.tables.BasDatsTable();
 
@@ -266,10 +268,10 @@ public abstract class EmpresasJFrame extends BaseJFrame {
         PNLCampos.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 169, 105, -1));
 
         JTLugarDeExpedicion.setNextFocusableComponent(JTRegimenFiscal);
-        PNLCampos.add(JTLugarDeExpedicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 33, 300, -1));
+        PNLCampos.add(JTLugarDeExpedicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 33, 90, -1));
 
         JTRegimenFiscal.setNextFocusableComponent(JTRutaCertificado);
-        PNLCampos.add(JTRegimenFiscal, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 59, 300, -1));
+        PNLCampos.add(JTRegimenFiscal, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 59, 90, -1));
 
         JTRutaKey.setNextFocusableComponent(JTPasswordCertificado);
         PNLCampos.add(JTRutaKey, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 111, 300, -1));
@@ -287,7 +289,7 @@ public abstract class EmpresasJFrame extends BaseJFrame {
                 JTFechaAltaActionPerformed(evt);
             }
         });
-        PNLCampos.add(JTFechaAlta, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 220, 200, 20));
+        PNLCampos.add(JTFechaAlta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 200, 20));
 
         jLabel29.setText("Fecha Modificación");
         PNLCampos.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 120, -1));
@@ -444,7 +446,7 @@ public abstract class EmpresasJFrame extends BaseJFrame {
                 BTNCargaRegimenFiscalActionPerformed(evt);
             }
         });
-        PNLCampos.add(BTNCargaRegimenFiscal, new org.netbeans.lib.awtextra.AbsoluteConstraints(768, 59, 29, 20));
+        PNLCampos.add(BTNCargaRegimenFiscal, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 59, 29, 20));
 
         BTNCargaCDS.setText("jButton3");
         BTNCargaCDS.addActionListener(new java.awt.event.ActionListener() {
@@ -460,7 +462,7 @@ public abstract class EmpresasJFrame extends BaseJFrame {
                 BTNCargaLugarExpedicionActionPerformed(evt);
             }
         });
-        PNLCampos.add(BTNCargaLugarExpedicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(768, 33, 29, 20));
+        PNLCampos.add(BTNCargaLugarExpedicion, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 33, 29, 20));
 
         BTNCargaKey.setText("jButton5");
         BTNCargaKey.addActionListener(new java.awt.event.ActionListener() {
@@ -575,6 +577,24 @@ public abstract class EmpresasJFrame extends BaseJFrame {
             }
         });
         PNLCampos.add(jBDelImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(698, 395, 70, 30));
+
+        expeditionPlaceDescrip.setEditable(false);
+        expeditionPlaceDescrip.setNextFocusableComponent(JTFechaModificacion);
+        expeditionPlaceDescrip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                expeditionPlaceDescripActionPerformed(evt);
+            }
+        });
+        PNLCampos.add(expeditionPlaceDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 33, 200, 20));
+
+        fiscalRegimenDescrip.setEditable(false);
+        fiscalRegimenDescrip.setNextFocusableComponent(JTFechaModificacion);
+        fiscalRegimenDescrip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fiscalRegimenDescripActionPerformed(evt);
+            }
+        });
+        PNLCampos.add(fiscalRegimenDescrip, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 59, 200, 20));
 
         JPTabla.setAutoscrolls(true);
         JPTabla.setPreferredSize(new java.awt.Dimension(1000, 400));
@@ -726,6 +746,14 @@ public abstract class EmpresasJFrame extends BaseJFrame {
         
     }//GEN-LAST:event_jBDelImgActionPerformed
 
+    private void expeditionPlaceDescripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expeditionPlaceDescripActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_expeditionPlaceDescripActionPerformed
+
+    private void fiscalRegimenDescripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiscalRegimenDescripActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fiscalRegimenDescripActionPerformed
+
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -780,6 +808,8 @@ public abstract class EmpresasJFrame extends BaseJFrame {
     private javax.swing.JPanel PNLBusqueda;
     private javax.swing.JPanel PNLCampos;
     protected javax.swing.JButton btnRutaAplicacion;
+    protected javax.swing.JTextField expeditionPlaceDescrip;
+    protected javax.swing.JTextField fiscalRegimenDescrip;
     protected javax.swing.JButton jBCargImg;
     protected javax.swing.JButton jBDelImg;
     protected javax.swing.JLabel jLImg;

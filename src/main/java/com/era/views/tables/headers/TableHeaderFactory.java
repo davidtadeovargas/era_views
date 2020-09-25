@@ -15,6 +15,10 @@ public class TableHeaderFactory {
        final CCodigoPostalsTableHeader CCodigoPostalsTableHeader = new CCodigoPostalsTableHeader();return CCodigoPostalsTableHeader;
     }
     
+    public CRegimenFiscalTableHeader getCRegimenFiscalTableHeader(){
+       final CRegimenFiscalTableHeader CRegimenFiscalTableHeader = new CRegimenFiscalTableHeader();return CRegimenFiscalTableHeader;
+    }    
+            
     public ProductPriceListTableHeader getProductPriceListTableHeader(){
         final ProductPriceListTableHeader ProductPriceListTableHeader = new ProductPriceListTableHeader();return ProductPriceListTableHeader;
     }
