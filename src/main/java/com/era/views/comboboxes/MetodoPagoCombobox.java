@@ -5,9 +5,9 @@
  */
 package com.era.views.comboboxes;
 
-import com.era.models.MetogoPago;
+import com.era.models.CPaymentForm;
 import com.era.repositories.RepositoryFactory;
-import com.era.views.comboboxes.cellrenders.MetodoPagoCellRender;
+import com.era.views.comboboxes.cellrenders.CPaymentFormCellRender;
 import java.util.ArrayList;
 import java.util.List;
         
@@ -15,25 +15,25 @@ import java.util.List;
  *
  * @author PC
  */
-public class MetodoPagoCombobox extends BaseComboBox<MetogoPago> {
+public class MetodoPagoCombobox extends BaseComboBox<CPaymentForm> {
     
     public MetodoPagoCombobox(){
-        super(new MetodoPagoCellRender());
+        super(new CPaymentFormCellRender());
     }
 
     @Override
-    List<MetogoPago> getItems() throws Exception {
+    List<CPaymentForm> getItems() throws Exception {
         
         //Emtpy model
-        final MetogoPago MetogoPago = new MetogoPago();
-        MetogoPago.setCode("");
-        MetogoPago.setDescription("");
+        final CPaymentForm CPaymentForm = new CPaymentForm();
+        CPaymentForm.setC_FormaPago("");
+        CPaymentForm.setDescription("");
         
-        final List<MetogoPago> metodos = new ArrayList<>();
-        metodos.add(MetogoPago); //Add the empty model
+        final List<CPaymentForm> metodos = new ArrayList<>();
+        metodos.add(CPaymentForm); //Add the empty model
         
         //Get the list of series depending the type
-        List<MetogoPago> metodos_ = (List<MetogoPago>)RepositoryFactory.getInstance().getMetogoPagosRepository().getAll();
+        List<CPaymentForm> metodos_ = (List<CPaymentForm>)RepositoryFactory.getInstance().getCPaymentFormsRepository().getAll();
         
         //Add them all to the list
         metodos.addAll(metodos_);
@@ -45,11 +45,11 @@ public class MetodoPagoCombobox extends BaseComboBox<MetogoPago> {
     protected boolean foundModel(Object ObjectItem, Object ObjectMethod){
         
         //Cast the models
-        final MetogoPago MetogoPagoItem = (MetogoPago)ObjectItem;
-        final MetogoPago MetogoPagoMethod = (MetogoPago)ObjectMethod;
+        final CPaymentForm MetogoPagoItem = (CPaymentForm)ObjectItem;
+        final CPaymentForm MetogoPagoMethod = (CPaymentForm)ObjectMethod;
         
         boolean  found = false;        
-        if(MetogoPagoItem.getCode() != null && MetogoPagoItem.getCode().compareTo(MetogoPagoMethod.getCode())==0){
+        if(MetogoPagoItem.getC_FormaPago()!= null && MetogoPagoItem.getC_FormaPago().compareTo(MetogoPagoMethod.getC_FormaPago())==0){
             found = true;
         }
         
