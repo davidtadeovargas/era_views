@@ -50,8 +50,10 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Listado de pagos");
-        
+        setResizable(false);
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTabPagos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -82,20 +84,25 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jTabPagos.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTabPagos);
 
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 44, 650, 138));
+
         jBBusc.setBackground(new java.awt.Color(255, 255, 255));
         jBBusc.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBBusc.setForeground(new java.awt.Color(0, 102, 0));
         jBBusc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/busc5.png"))); // NOI18N
         jBBusc.setText("Buscar F3");
-        
+        jPanel1.add(jBBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 183, 112, 19));
+
         jTBusc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
-        
+        jPanel1.add(jTBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 182, 399, 20));
+
         jBMosT.setBackground(new java.awt.Color(255, 255, 255));
         jBMosT.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBMosT.setForeground(new java.awt.Color(0, 102, 0));
         jBMosT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/mostt.png"))); // NOI18N
         jBMosT.setText("Mostrar F4");
         jBMosT.setToolTipText("Mostrar nuevamente todos los Registros");
+        jPanel1.add(jBMosT, new org.netbeans.lib.awtextra.AbsoluteConstraints(522, 182, 139, 20));
 
         jBGenPDF.setBackground(new java.awt.Color(255, 255, 255));
         jBGenPDF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -104,7 +111,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBGenPDF.setText("Generar PDF");
         jBGenPDF.setToolTipText("Generar PDF de venta");
         jBGenPDF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jPanel1.add(jBGenPDF, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 146, 30));
+
         jBCa.setBackground(new java.awt.Color(255, 255, 255));
         jBCa.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jBCa.setForeground(new java.awt.Color(0, 102, 0));
@@ -112,7 +120,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBCa.setText("Cancelar");
         jBCa.setToolTipText("Cancelar venta(s) (Ctrl+SUPR)");
         jBCa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        
+        jPanel1.add(jBCa, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 100, 146, 30));
+
         jButtonTimbrar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonTimbrar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jButtonTimbrar.setForeground(new java.awt.Color(0, 102, 0));
@@ -120,7 +129,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jButtonTimbrar.setText("Timbrar");
         jButtonTimbrar.setToolTipText("Timbrar factura(s)");
         jButtonTimbrar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButtonTimbrar.setName(""); // NOI18N        
+        jButtonTimbrar.setName(""); // NOI18N
+        jPanel1.add(jButtonTimbrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 130, 146, 30));
 
         jBSal.setBackground(new java.awt.Color(255, 255, 255));
         jBSal.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -128,7 +138,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBSal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/sal.png"))); // NOI18N
         jBSal.setText("Salir");
         jBSal.setToolTipText("Salir (ESC)");
-        jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+        jBSal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(jBSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 340, 146, 30));
 
         jBAbon.setBackground(new java.awt.Color(255, 255, 255));
         jBAbon.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -136,7 +147,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBAbon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/abona.png"))); // NOI18N
         jBAbon.setText("Abonar");
         jBAbon.setToolTipText("Abonar a Venta");
-        jBAbon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+        jBAbon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(jBAbon, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 40, 146, 30));
 
         jTabPartidas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -148,12 +160,16 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         ));
         jScrollPane2.setViewportView(jTabPartidas);
 
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 650, 138));
+
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("Cliente:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 373, 27));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 255));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(437, 11, 107, 27));
 
         jBCarpetaPagos.setBackground(new java.awt.Color(255, 255, 255));
         jBCarpetaPagos.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -161,7 +177,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBCarpetaPagos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/dir.png"))); // NOI18N
         jBCarpetaPagos.setText("Pagos");
         jBCarpetaPagos.setToolTipText("Salir (ESC)");
-        jBCarpetaPagos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+        jBCarpetaPagos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(jBCarpetaPagos, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 160, 146, 30));
 
         jBEnvCorr.setBackground(new java.awt.Color(255, 255, 255));
         jBEnvCorr.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -169,7 +186,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBEnvCorr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/corrs.png"))); // NOI18N
         jBEnvCorr.setText("Enviar");
         jBEnvCorr.setToolTipText("Enviar por correo");
-        jBEnvCorr.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+        jBEnvCorr.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(jBEnvCorr, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 250, 146, 30));
 
         jBPDF.setBackground(new java.awt.Color(255, 255, 255));
         jBPDF.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -177,7 +195,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBPDF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/pdf.png"))); // NOI18N
         jBPDF.setText("Ver PDF");
         jBPDF.setToolTipText("Ver PDF (Alt+F)");
-        jBPDF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+        jBPDF.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(jBPDF, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 190, 146, 30));
 
         jBActualizar.setBackground(new java.awt.Color(255, 255, 255));
         jBActualizar.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -185,7 +204,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/actualizar.png"))); // NOI18N
         jBActualizar.setText("Actualizar");
         jBActualizar.setToolTipText("Actualizar");
-        jBActualizar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+        jBActualizar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(jBActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 220, 146, 30));
 
         jBGenPDF1.setBackground(new java.awt.Color(255, 255, 255));
         jBGenPDF1.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -193,7 +213,8 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBGenPDF1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/impres.png"))); // NOI18N
         jBGenPDF1.setText("Imprimir Ticket");
         jBGenPDF1.setToolTipText("Generar PDF de venta");
-        jBGenPDF1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
+        jBGenPDF1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(jBGenPDF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, 146, 30));
 
         jBVerTicket.setBackground(new java.awt.Color(255, 255, 255));
         jBVerTicket.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
@@ -201,93 +222,16 @@ public abstract class ListadoPagosJFrame extends BaseJFrame {
         jBVerTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ojo.gif"))); // NOI18N
         jBVerTicket.setText("Ver Ticket");
         jBVerTicket.setToolTipText("Salir (ESC)");
-        jBVerTicket.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);        
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(437, 437, 437)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jBBusc)
-                        .addGap(0, 0, 0)
-                        .addComponent(jTBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBMosT, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBEnvCorr, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBGenPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonTimbrar, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBAbon, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBCarpetaPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBSal, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBGenPDF1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBVerTicket, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 20, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jBBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBMosT, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jBAbon, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBGenPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBCa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jButtonTimbrar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBCarpetaPagos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)
-                        .addComponent(jBPDF, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBEnvCorr, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBGenPDF1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBVerTicket, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jBSal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
-        );
+        jBVerTicket.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(jBVerTicket, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 310, 146, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(

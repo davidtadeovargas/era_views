@@ -35,7 +35,7 @@
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="6.3"/>
     <property name="user.home" value="C:\Users\DavidTadeo.....Progr"/>
-    <property name="user.timezone" value="America/Chihuahua"/>
+    <property name="user.timezone" value="America/Mexico_City"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1252"/>
