@@ -55,6 +55,12 @@ public class ReportsSecondLevelCombobox extends BaseComboBox<ReportsSecondLevel>
     public void loadVentasItems() throws Exception {        
         
         final List<ReportsSecondLevel> items = new ArrayList<>();
+        
+        ReportsSecondLevel ReportsSecondLevel = new ReportsSecondLevel();
+        ReportsSecondLevel.setCode("CLIENTES");
+        ReportsSecondLevel.setValue("Reporte de clientes");
+        items.add(ReportsSecondLevel);
+        
         this.loadItems(items);
     }
     
@@ -76,6 +82,18 @@ public class ReportsSecondLevelCombobox extends BaseComboBox<ReportsSecondLevel>
         this.loadItems(items);
     }
         
+    public void loadInventariosItems() throws Exception {        
+        
+        final List<ReportsSecondLevel> items = new ArrayList<>();
+        
+        ReportsSecondLevel ReportsSecondLevel = new ReportsSecondLevel();
+        ReportsSecondLevel.setCode("ALMAS");
+        ReportsSecondLevel.setValue("Almacenes");
+        items.add(ReportsSecondLevel);
+        
+        this.loadItems(items);
+    }
+    
     @Override
     protected boolean foundModel(Object ObjectItem, Object ObjectMethod){
         

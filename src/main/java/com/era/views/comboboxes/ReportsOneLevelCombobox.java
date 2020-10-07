@@ -61,6 +61,11 @@ public class ReportsOneLevelCombobox extends BaseComboBox<ReportsOneLevel> {
         ReportsOneLevel.setCode("PRODUCTOS");
         items.add(ReportsOneLevel);
         
+        ReportsOneLevel = new ReportsOneLevel();
+        ReportsOneLevel.setValue("Inventarios");
+        ReportsOneLevel.setCode("INVENTARIOS");
+        items.add(ReportsOneLevel);
+        
         return items;
     }
     
