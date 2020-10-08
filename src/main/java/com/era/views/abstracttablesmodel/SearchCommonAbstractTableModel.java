@@ -6,10 +6,12 @@
 package com.era.views.abstracttablesmodel;
 
 import com.era.datamodels.enums.SearchCommonTypeEnum;
+import com.era.views.abstracttablesmodel.getvaluesat.BancosIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.BasdatsIGetValueAt1;
 import com.era.views.abstracttablesmodel.getvaluesat.CClaveprodservsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CCoinsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CPSIGetValueAt;
+import com.era.views.abstracttablesmodel.getvaluesat.CPaymentFormsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.ConcepsIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CountriesIGetValueAt;
 import com.era.views.abstracttablesmodel.getvaluesat.CustomersIGetValueAt;
@@ -60,6 +62,14 @@ public class SearchCommonAbstractTableModel extends BaseAbstractTableModel {
                     IGetValueAt = new SuppliersIGetValueAt();
                     break;
                 
+                case BANCOS:
+                    IGetValueAt = new BancosIGetValueAt();
+                    break;
+                    
+                case PAYMENT_METHOD:
+                    IGetValueAt = new CPaymentFormsIGetValueAt();
+                    break;
+                    
                 case CLAVES_PROD_SAT:
                     IGetValueAt = new CClaveprodservsIGetValueAt();
                     break;

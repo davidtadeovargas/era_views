@@ -6,7 +6,12 @@ private final ColumnTable ROWNUMBER = new ColumnTable("No");
    public ColumnTable getROWNUMBER() {
        return this.ROWNUMBER;
    }
-
+   
+   private final ColumnTable CODE = new ColumnTable("Código");
+   public ColumnTable getCODE() {
+       return this.CODE;
+   }
+   
    private final ColumnTable DESCRIPTION = new ColumnTable("Descripción");
    public ColumnTable getDESCRIPTION() {
        return this.DESCRIPTION;
