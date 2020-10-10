@@ -72,6 +72,7 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
         jBAbon.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel1.add(jBAbon, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 120, 30));
 
+        jCTimbrar.setSelected(true);
         jCTimbrar.setText("Timbrar");
         jPanel1.add(jCTimbrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
@@ -84,7 +85,7 @@ public abstract class FormPagoJFrame extends BaseJFrame  {
         jPanel1.add(jForImporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(668, 38, 100, -1));
 
         jCImprimir.setText("Imprimir Ticket");
-        jPanel1.add(jCImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
+        jPanel1.add(jCImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, -1, -1));
 
         txtCustomerName.setEditable(false);
         jPanel1.add(txtCustomerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 290, -1));
