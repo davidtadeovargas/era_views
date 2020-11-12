@@ -61,6 +61,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jTCant = new javax.swing.JTextField();
         jBSincronizar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabelCred = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -356,6 +357,10 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
         jLabel1.setText("OPCIONES F11");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, 280, 40));
 
+        jLabelCred.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabelCred.setForeground(new java.awt.Color(0, 153, 51));
+        jPanel1.add(jLabelCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 710, 480, 30));
+
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
         pack();
@@ -392,6 +397,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    protected javax.swing.JLabel jLabelCred;
     protected javax.swing.JPanel jPCon;
     protected javax.swing.JPanel jPanImg;
     protected com.era.views.panels.ProductsJPanel jPanProds;

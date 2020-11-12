@@ -49,7 +49,7 @@ public class JComponentUtils {
     private boolean disposeInEscapeEvent;
     private JFrame JFrame;
     private JDialog JDialog;
-    private EscapeEvent EscapeEvent;
+    private EscapeEvent EscapeEvent;    
     protected F2Event F2Event;
     protected ALT_TEvent ALT_TEvent;
     protected ALT_TEvent ALT_FEvent;
@@ -95,7 +95,8 @@ public class JComponentUtils {
         this.F11Event = F11Event;
     }
         
-    public void setDisposeInEscapeEvent(boolean disposeInEscapeEvent) {
+    public void setDisposeInEscapeEvent(final JFrame jFrame, boolean disposeInEscapeEvent) {
+        this.JFrame = jFrame;
         this.disposeInEscapeEvent = disposeInEscapeEvent;
     }
         
@@ -391,12 +392,26 @@ public class JComponentUtils {
         EnterKeyListener_.register();
     }
     
+    public void interceptWindowClosingEvent(final WindowClosingEvent WindowClosingEvent){
+        
+        JFrame.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                if(WindowClosingEvent!=null){
+                    WindowClosingEvent.onEvent();
+                }
+            }
+        });
+    }
+    
     public void interceptWindowClosingToButton(JButton JButton){
         
         JFrame.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent evt) {
-                    JButton.doClick();
+                    if(JButton!=null){
+                        JButton.doClick();
+                    }
                 }
             });
     }
@@ -649,6 +664,9 @@ public class JComponentUtils {
     }
     
     public interface EscapeEvent {
+        public void onEvent();
+    }
+    public interface WindowClosingEvent {
         public void onEvent();
     }
     public interface F2Event {
