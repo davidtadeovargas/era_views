@@ -359,6 +359,7 @@ public abstract class PtoVtaTouJFrame extends BaseJFrame
 
         jLabelCred.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabelCred.setForeground(new java.awt.Color(0, 153, 51));
+        jLabelCred.setText("Contado");
         jPanel1.add(jLabelCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 710, 480, 30));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);

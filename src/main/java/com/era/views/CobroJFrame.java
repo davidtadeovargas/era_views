@@ -48,6 +48,7 @@ public abstract class CobroJFrame extends BaseJFrame
         jLabel8 = new javax.swing.JLabel();
         jRadioButtonCash = new javax.swing.JRadioButton();
         jRadioButtonCredit = new javax.swing.JRadioButton();
+        jLabelCred = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -465,6 +466,10 @@ public abstract class CobroJFrame extends BaseJFrame
         jRadioButtonCredit.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButtonCredit.setText("Crédito");
         jP1.add(jRadioButtonCredit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, 150, -1));
+
+        jLabelCred.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        jLabelCred.setForeground(new java.awt.Color(0, 153, 51));
+        jP1.add(jLabelCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 240, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -978,6 +983,7 @@ public abstract class CobroJFrame extends BaseJFrame
     protected javax.swing.JLabel jLabel5;
     protected javax.swing.JLabel jLabel6;
     protected javax.swing.JLabel jLabel8;
+    protected java.awt.Label jLabelCred;
     private javax.swing.JPanel jP1;
     protected javax.swing.JRadioButton jRFac;
     protected javax.swing.JRadioButton jRRem;
