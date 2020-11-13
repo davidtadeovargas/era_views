@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BasDatsTable extends BaseJTable {
 
-   public BasDatsTable(){
+   public BasDatsTable(){//BasDatsTable
        super();
     }
 

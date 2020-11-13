@@ -8,6 +8,7 @@ import javax.swing.JTable;
 
 public class BasDatsTableModel  extends BaseAbstractTableModel {
 
+    //BasDatsTableModel
    public BasDatsTableModel(final JTable jTable, List<?> items, final List<ColumnTable> header){
        super(jTable,items,header);
 
